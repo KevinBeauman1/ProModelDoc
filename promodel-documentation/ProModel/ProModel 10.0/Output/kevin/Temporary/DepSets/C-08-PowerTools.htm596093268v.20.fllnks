@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-08-Customize.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-08-Customize.htm#C-08_1964285664_1092130" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1092189" />
+    <Anchor
+      Name="C-08_1964285664_86924" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Power Tools"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

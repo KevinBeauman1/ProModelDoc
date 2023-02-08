@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Target for HTML5 output"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/OVSkinHTML5.flskn"
+  MasterToc="/Project/TOCs/Master4Print.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/Promodel.css"
+  ConditionTagExpression="exclude[&quot;PM-PCS Conditionals.PM&quot; or &quot;Print-Online Conditionals.PrintOnly&quot;] "
+  GenerateWebSafeImages="true"
+  WebSafeFileExtension="png"
+  DisableAutoSync="true"></CatapultTarget>

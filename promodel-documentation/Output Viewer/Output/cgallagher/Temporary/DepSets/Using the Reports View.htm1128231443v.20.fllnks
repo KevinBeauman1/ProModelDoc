@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/dashboard1.png" />
+    <Link
+      Url="Content/Resources/Images/zoommode1.png" />
+    <Link
+      Url="Content/Layout.htm" />
+    <Link
+      Url="Content/Resources/Images/addnewreport.png" />
+    <Link
+      Url="Content/Resources/Images/closetab.png" />
+    <Link
+      Url="Content/Resources/Images/accessingreports.png" />
+    <Link
+      Url="Content/Resources/Images/changetitle2.png" />
+    <Link
+      Url="Content/Resources/Images/tabrightclick.png" />
+    <Link
+      Url="Content/Resources/Images/fullscreen.png" />
+    <Link
+      Url="Content/Resources/Images/move11.png" />
+    <Link
+      Url="Content/Resources/Images/move22.png" />
+    <Link
+      Url="Content/Resources/Images/move31.png" />
+    <Link
+      Url="Content/Resources/Images/movingcharts12.png" />
+    <Link
+      Url="Content/Resources/Images/movingcharts1b.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/dashboard1.png" />
+    <Link
+      Url="Content/Resources/Images/zoommode1.png" />
+    <Link
+      Url="Content/Layout.htm" />
+    <Link
+      Url="Content/Resources/Images/addnewreport.png" />
+    <Link
+      Url="Content/Resources/Images/closetab.png" />
+    <Link
+      Url="Content/Resources/Images/accessingreports.png" />
+    <Link
+      Url="Content/Resources/Images/changetitle2.png" />
+    <Link
+      Url="Content/Resources/Images/tabrightclick.png" />
+    <Link
+      Url="Content/Resources/Images/fullscreen.png" />
+    <Link
+      Url="Content/Resources/Images/move11.png" />
+    <Link
+      Url="Content/Resources/Images/move22.png" />
+    <Link
+      Url="Content/Resources/Images/move31.png" />
+    <Link
+      Url="Content/Resources/Images/movingcharts12.png" />
+    <Link
+      Url="Content/Resources/Images/movingcharts1b.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="report view"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="report view"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="using report view"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="report view"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="using report view"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="adding reports"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="report view"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="using report view"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="adding reports"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="add new report to the viewer"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="deleting reports"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="accessing reports"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="report view"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="using report view"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="adding reports"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="add new report to the viewer"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="deleting reports"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="deleting reports from the viewer"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="accessing reports"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="reports access"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="naming reports"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+    <IndexCacheEntry
+      Term="maximize report view"
+      Conditions=""
+      LocalConditions=""
+      Position="47" />
+    <IndexCacheEntry
+      Term="maximize report view"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+    <IndexCacheEntry
+      Term="full screen mode"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+    <IndexCacheEntry
+      Term="removing charts from report view"
+      Conditions=""
+      LocalConditions=""
+      Position="55" />
+    <IndexCacheEntry
+      Term="moving charts in report view"
+      Conditions=""
+      LocalConditions=""
+      Position="55" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

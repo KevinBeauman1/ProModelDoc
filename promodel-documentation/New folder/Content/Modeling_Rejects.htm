@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="558" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>Modeling Rejects</h3>
+        <p class="p">A percentage of entities are rejected after an activity (due to defects or other criteria) and are removed from the system.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Create a new entity type to represent the rejected entities, otherwise they will count in the output statistics as entities that were accepted.</li>
+            <li class="li_1">Create a percentage routing (representing the acceptable entities) from the activity to the next appropriate activity and specify the percentage of time entities are acceptable.</li>
+            <li class="li_1">Create a second percentage routing (representing the rejected entities) from the activity to a blank space on the layout (represents a “route to exit”) and specify the percentage of entities that are rejected.</li>
+            <li class="li_1">In the New Name field for the reject routing, enter the name of the new entity type you defined for rejected entities.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">At a final inspection station in a printed circuit (PC) board assembly line, ten percent of the time the board is defective and is removed from the system (i.e., 10% of the boards are simply scrapped). Otherwise the completed board goes on to packaging.</p>
+        <p class="p">
+            <img src="Resources/Images/modelingrejectsexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/modelingrejectssolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">A new entity was created called Reject. A route to exit is defined from the Inspection activity with the Percentage set at 10% and Reject selected as the New Name for the entity.</p>
+    </body>
+</html>

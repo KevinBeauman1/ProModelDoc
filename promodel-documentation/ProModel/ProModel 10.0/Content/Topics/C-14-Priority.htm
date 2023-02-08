@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="631" MadCap:lastWidth="1389" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106340"></a>Priority</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:logic statements:PRIORITY;PRIORITY" />Shift and Break Logic Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Priority &lt;expression&gt;</p>
+        <p class="Syntax_body">Priority 199</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">This statement is used to change the priority of the off-line state of the location or resource. If the priority is less than the value set previously, the system will check if the location or resource can be preempted.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Shift and break main logic only.  This statement is not valid in pre-off shift or pre-break logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">Any expression that yields a value between 0 and 999. Standard <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> priority levels apply.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose you want to insure that the resource is non-preemptable for the first four hours it is off-shift. Simply enter a high (e.g., 999) off-shift priority value in the priority dialog in the Shift Assignments module.  Enter the following off-shift logic to lower the priority (to 99) four hours into the off-shift period:</p>
+        <p class="Syntax_body">Wait 4 hr<br />Priority 99<br />Wait 4 hr<br />Skip</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-07-ShiftandBreakLogic.htm#C-07_3886599965_1089612" target="" title="" alt="">Shift and Break Logic on page 1</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Streams">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Stream Example</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-StreamExample.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-Streams.htm#C-06_1157716610_1086820">Streams</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Stream Example</span>
+        </div>
+        <h3><a name="C-06_1157716610_1086940"></a>Stream Example<a name="kanchor1240"></a></h3>
+        <p class="p">The following example shows one reason why multiple streams are useful.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Two machines, Mach1 and Mach2, are to go down approximately every 4 hours for servicing. To model this, the frequency or time between failures is defined by a normal distribution with a mean value of 240 minutes and a standard deviation of 15 minutes, N(240,15). (For more information on distributions, see <a class="lowercase_see MCXref xref xreflowercase_see" href="C-06-UserDefinedDistributions.htm#C-06_1157716610_1086504" title="" alt="">User Defined Distributions</a>). The machines will go down for 10 minutes. Because no stream is specified in the normal distribution, ProModel uses stream number one to generate sample values for both machines. So if the next two numbers in stream number one result in sample values of 218.37 and 264.69, Mach1 will receive 218.37 and Mach2 will receive 264.69. Therefore, the two machines will go down at different times, Mach1 after almost four hours and Mach2 after somewhat more than four hours.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Suppose, however, that the resource to service the machines must service them both at the same time.  The machines would have to go down at the same time.  Stream number one will not bring them down at the same time because stream number one sends the machine’s distributions two different numbers.  Using two streams (in the example below numbered ten and eleven) with the same initial seed will ensure that the machines receive the same random number every time.  The two streams have the same starting seed value so they will produce exactly the same sequence of random numbers.  The first number of stream ten will be exactly the same as the first number of stream eleven; the second numbers will be the same; indeed, every number will be the same.</p>
+        <p class="p">The Streams window below shows streams ten and eleven with the same seed values.</p>
+        <p class="Graphic">
+            <img src="pm-c6-260-1.jpg" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">By assigning stream ten to Mach1 and eleven to Mach2, both machines will go down at exactly the same time.</p>
+        <p class="Graphic">
+            <img src="pm-c6-260-2.png" />
+        </p>
+        <p>
+            <img src="pm-c6-260-3.png" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">This first clock downtime for each machine will occur at the beginning of the simulation.  After that, the first downtime occurs at 218.37 minutes for both machines.  Defining different seed values for the streams would produce different sequences and therefore different downtimes.  Using the same stream number for the clock downtimes would also produce different values.  But two different streams with the same seed value will bring both machines down at the same times. </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Note that if a third machine were to use one of the streams, for example if Mach3 were to use stream eleven, the two machines would no longer go down together.  Mach1 would use the first value from stream ten; Mach2 would use the first value from stream eleven; and Mach3 would use the second value from stream eleven.  The first time Mach1 and Mach2 went down, they would go down at the same time because the first number in streams ten and eleven is the same. But thereafter they would not.  The second time they would go down at different times because Mach1 would receive the second value from stream ten, Mach2 would receive the third value from stream eleven, and Mach3 would receive the fourth value from stream eleven.</p>
+        <p class="p_10">Stream Notes: 1. 	If a stream value is not specified for a distribution, the stream is assumed to be stream one.  Stream #1 does not automatically reset after each replication.  2. 	The stream parameter is always the last parameter specified in a distribution unless a location parameter is also specified. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-13-DistributionFunctions.htm#C-13_1919394185_1091849" style="font-style: italic;" title="" alt="">Distribution Functions</a> for details.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/9-7-1-1.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/9-7-1-1.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_4289884492_1092588" />
+    <Anchor
+      Name="C-04_4289884492_27608" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="View:menu:commands"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Commands"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Refresh layout"
+      Conditions=""
+      LocalConditions=""
+      Position="12" />
+    <IndexCacheEntry
+      Term="View:menu:refresh layout"
+      Conditions=""
+      LocalConditions=""
+      Position="12" />
+    <IndexCacheEntry
+      Term="Reset window positions"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="View:menu:reset window positions"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

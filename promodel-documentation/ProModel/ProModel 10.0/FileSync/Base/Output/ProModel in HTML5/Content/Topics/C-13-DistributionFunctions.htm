@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Logic Elements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Distribution Functions</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-13-DistributionFunctions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-13-LogicElements.htm#C-13_1919394185_1035124">Logic Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Distribution Functions</span>
+        </div>
+        <h2><a name="C-13_1919394185_1091849"></a>
+            <MadCap:keyword term="Distribution functions;Logic elements:distribution functions" /><a name="C-13_1919394185_10185"></a>Distribution Functions</h2>
+        <p class="p">Distribution functions are built-in functions which, in conjunction with streams, return random values according to a statistical distribution. The following table is a summary of available distribution functions. They are valid in any numeric expression.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="108px" class="Column-Column1" />
+            <col width="120px" class="Column-Column2" />
+            <col width="324px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Distribution </p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Syntax</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Individual Components</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Distribution functions:beta;Beta distribution" />Beta </p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">B(a,b,c,d{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">a=shape value 1, b=shape value 2, c=lower boundary, d=upper boundary</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Distribution functions:binomial;Binomial distribution" />Binomial </p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">BI(a,b{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">a=batch size, b=probability of “success”</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Distribution functions:Erlang;Erlang distribution" />Erlang </p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">ER(a,b{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">a=mean, b=integer shape parameter</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Distribution functions:exponential;Exponential distribution" />Exponential </p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">E(a{,&lt;s&gt;,&lt;ax&gt;})</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">a=mean</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Gamma distribution;Distribution functions:gamma" />Gamma </p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">G(a,b{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">a=shape value, b=scale value</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Geometric distribution;Distribution functions:geometric" />Geometric </p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">GEO(a{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">a=probability of “success”</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Inverse Gaussian distribution;Distribution functions:inverse Gaussian" />Inverse Gaussian </p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">IG(a,b{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">a=shape value, b=scale value </p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Lognormal distribution;Distribution functions:lognormal" />Lognormal </p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">L(a,b{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">a=mean, b=standard deviation</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Normal distribution;Distribution functions:normal" />Normal </p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">N(a,b{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">a=mean, b=standard deviation</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Pearson5 distribution;Distribution functions:Pearson5" />Pearson5 </p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">P5(a,b{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">a=shape value, b=scale value</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Pearson6 distribution;Distribution functions:Pearson6" />Pearson6 </p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">P6(a,b,c{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">a=shape value 1, b=shape value 2, c=scale value</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Poisson distribution;Distribution functions:Poisson" />Poisson </p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">P(a{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">a=quantity</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Triangular distribution;Distribution functions:triangular" />Triangular </p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">T(a,b,c{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">a=minimum, b=mode, c=maximum</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Uniform distribution;Distribution functions:uniform" />Uniform </p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">U(a,b{,&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">a=mean, b=half range, </p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">
+                            <MadCap:keyword term="User-defined distribution;Distribution functions:user-defined" />User-defined </p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">&lt;name&gt;({&lt;s&gt;}) </p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">Name of a user-defined distribution as defined in the User Distribution section</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">
+                            <MadCap:keyword term="Weibull distribution;Distribution functions:Weibull" />Weibull </p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">W(a,b{,&lt;s&gt;,&lt;ax&gt;}) </p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">
+                        <p class="CellBody">a=shape value, b=scale value</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>
+            <MadCap:keyword term="Distribution functions:general components;Logic elements:distribution functions:general components" />General Components</h3>
+        <p class="p"><span class="Bold">&lt;s&gt;</span><span class="Helv_Bold" style="line-height: 12pt;">  <![CDATA[ ]]></span>  The optional <MadCap:keyword term="Distribution functions:stream, optional;Logic elements:distribution functions:stream, optional;Stream, distributions" />stream to use in conjunction with the distribution’s probabilities. If this option is omitted, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will use stream one. For more information on streams, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Streams.htm#C-06_1157716610_1086820" title="" alt="" xrefformat="{paratext}">Streams</a>.</p>
+        <p class="p"><span class="Bold">&lt;ax&gt;</span><span class="Helv_Bold" style="line-height: 12pt;">  <![CDATA[ ]]></span>  An optional <MadCap:keyword term="Distribution functions:axis shift, optional;Logic elements:distribution functions:axis shift, optional;Axis shift" />axis shift. The distributions, E, G, W, L, IG, P5, and P6 all normally have a minimum value of zero. Use an axis shift to alter the distribution’s minimum value and at the same time shift the entire distribution. Any time an axis shift is specified, a stream must be specified also.</p>
+        <p class="p">Any negative value returned by a distribution that is used for a time expression will be automatically converted to zero.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

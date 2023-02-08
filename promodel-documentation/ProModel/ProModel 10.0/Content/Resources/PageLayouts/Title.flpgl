@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="title">
+        <Frame Flow="body" ColumnCount="1" ColumnDivider="Solid 1pt Black" Width="6.0in" Height="7in" Right="-46px" Bottom="0px" X="-50px" Y="0px" Anchors="">
+        </Frame>
+    </Page>
+    <Page Name="Copy of Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="empty">
+    </Page>
+</PageStyles>

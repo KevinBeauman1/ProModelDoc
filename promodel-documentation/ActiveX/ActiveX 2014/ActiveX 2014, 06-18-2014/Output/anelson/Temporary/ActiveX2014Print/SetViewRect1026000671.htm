@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="324" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Application Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>SetViewRect</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="SetViewRect"><a MadCap:generatedBookmark="TOC" name="SetViewRect"></a><a name="C-01_2914010915_490674"></a><a name="C-01_2914010915_SetViewRect"></a>
+            <MadCap:keyword term="SetViewRect;ProModel Application Object:SetViewRect" />SetViewRect</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SetViewRect <span class="_Override" style="color: #0000ff;">Left, Top, Right, Bottom</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Zooms and pans the layout to allow the rectangle defined by the input coordinates to fill the layout window. Note: The x,y dimensions are always scaled equally.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Left</span> (Double)  The left boundary.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Top</span> (Double)  The top boundary.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Right</span><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>	(Double)  The right boundary.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Bottom</span><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>	(Double).  The bottom boundary.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, then sets the layout window to show the section from x-y coordinates (30, 40) to (100, 200).</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub NewPosition()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.SetViewRect <span class="_Override" style="color: #0000ff;">30, 40, 100, 200</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

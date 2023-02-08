@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1120532" />
+    <Anchor
+      Name="C-06_1157716610_59982" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Graphics:customizing"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Customizing graphics:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Graphics:background"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Background graphics:CAD"
+      Conditions=""
+      LocalConditions=""
+      Position="12" />
+    <IndexCacheEntry
+      Term="Importing:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Graphics:customizing:importing"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Graphics:customizing:front of grid"
+      Conditions=""
+      LocalConditions=""
+      Position="27" />
+    <IndexCacheEntry
+      Term="Front of grid"
+      Conditions=""
+      LocalConditions=""
+      Position="27" />
+    <IndexCacheEntry
+      Term="Graphics:customizing:behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Background graphics:BMP"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="Background graphics:WMF"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

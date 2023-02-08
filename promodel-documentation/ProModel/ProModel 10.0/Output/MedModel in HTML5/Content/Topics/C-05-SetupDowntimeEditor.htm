@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Locations|Location Downtimes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Setup Downtime Editor</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-SetupDowntimeEditor.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Locations.htm#C-05_2723800551_1085243">Locations</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-LocationDowntimes.htm">Location Downtimes</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Setup Downtime Editor</span>
+        </div>
+        <h4>Setup Downtime Editor<a name="kanchor691"></a></h4>
+        <p class="p">Setup downtimes should be used to model situations where a location can process different types of entities, but needs to be setup to do so. Setup downtimes will not overlap but will preempt other downtimes in a manner similar to that of an entity. Setup downtimes are only available for single capacity locations. </p>
+        <p class="p">Note that a setup downtime is assumed to occur only when an entity arrives at a location and is different from the previous entity to arrive at the location. Consequently, the word All in the prior entity field means all except the same entity type.</p>
+        <p class="p">The Setup Downtime Editor consists of the edit table shown below. It contains fields for defining location downtimes based on the arrival of a new entity type.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-104-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p"><b>Entity</b> The incoming entity for which the setup occurs. If the setup time for all entity types is identical when shifting from the same prior entity, the reserved word All may be entered.</p>
+        <p class="p"><b>Prior Entity</b> The entity preceding the entity for which the setup occurs. If the setup is the same regardless of the preceding entity, you may enter the reserved word All.</p>
+        <p class="p"><b>Logic</b> Enter any logic statements to be processed when the downtime occurs. Click on the heading button to open a larger edit window.</p>
+        <p class="p"><b>Disable</b> Select YES to temporarily disable the downtime without deleting it from the table.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">This example shows that X-Ray Room 1 will close for 20 minutes every time there is a change in the type of patient being treated. </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

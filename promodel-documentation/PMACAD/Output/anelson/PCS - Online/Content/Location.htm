@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Functions|System Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Location</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Functions.htm">Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Functions.htm">System Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Location</span>
+        </div>
+        <h1>Location</h1>
+        <h5><a name="kanchor131"></a>Function</h5>
+        <h2>Syntax samples</h2>
+        <p>Location()</p>
+        <p>Attr1 = Location()<br />If Location() = ApprovalActivity Then Wait 4 min</p>
+        <h2>Description</h2>
+        <p>Returns the current activity’s name-index number. This function is especially useful in subroutines that vary depending on which activity’s logic calls them. By using a Location() function with an If Then statement, the subroutine can act differently depending on the activity that called it. Also, the same technique can be used to determine which activity is carrying out a process when multiple entities go through it.</p>
+        <h2>Valid In</h2>
+        <p> Activity, arrival and route logic.</p>
+        <h2>Example</h2>
+        <p>
+            You may want to track the cycle time of a specific entity at each activity in its path through the process. To do this you need to add a check at the end of activity logic, for the entity's specific ObjectID and, if it matches, write out to an external text file the activity's name and the entity's cycle time.</p>
+        <p class="p_11">If ObjectID() = 21 Then<br />{</p>
+        <p class="p_12">aCycleTime = Clock() - aCycleTime<br />Writeline File1, "Activity: " $ Loc(Location()) $ ", " $ aCycleTime</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p>Loc and <a href="Entity.htm" class="a_11">Entity</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

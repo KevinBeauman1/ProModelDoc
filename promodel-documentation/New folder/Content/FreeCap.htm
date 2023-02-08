@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1010" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>FreeCap</h1>
+        <h5>
+            <MadCap:keyword term="functions:freecap;freecap" />Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p>FreeCap(&lt;activity&gt;)</p>
+        <p>Send FreeCap(Review) Form To Review</p>
+        <h2>Description</h2>
+        <p>Returns the available capacity of an activity. This function returns an integer.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;activity&gt;</b>
+        </p>
+        <p>The name of the activity to examine. The Loc() function may also be used here.</p>
+        <h2>Example</h2>
+        <p>Suppose you are running low on inventory of Folder entities and you need to determine how many folders you need to order to fill it up. You could use the following logic:</p>
+        <p class="p_11">If FreeCap(Bin) &gt; 50 Then</p>
+        <p class="p_12">Order FreeCap(Bin) Folder To Bin</p>
+        <h5>See Also</h5>
+        <p>Cap </p>
+    </body>
+</html>

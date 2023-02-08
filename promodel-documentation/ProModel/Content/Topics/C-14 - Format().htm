@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="651" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103829"></a>Format()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Strings:functions:FORMAT();FORMAT()" />String Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Format(&lt;expression&gt;, &lt;total number of characters in expression&gt; {,&lt;digits after decimal&gt;})</p>
+        <p class="Syntax_body">Display “The value of Var1 is” $ Format(Var1, 5)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Converts a number to a string in the format specified. Format() should most often be used with the concatenation operator (“$”) and another string, as in the syntax example above. Format is often used in conjunction with the <MadCap:keyword term="XWRITE" />Xwrite statement to produce formatted output.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any string expression.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">This expression will be evaluated and converted to a string. If the expression results in an integer, it will be converted to a real.</p>
+        <p class="Component">&lt;total number of characters in expression&gt; </p>
+        <p class="p">This expression formats the number so that it occupies a total space equal to the number of digits before + number of digits after the decimal + one character for the decimal point.  For example if you were to do the following logic:    Xwrite file1  Format (10.0  4  1)  Xwrite file1  Format (1.0  4  1), it will show up in the file as 10.0   1.0 with a space before the 1.0.</p>
+        <p class="Component">&lt;digits after decimal&gt;  </p>
+        <p class="p">An expression that evaluates to the maximum number of digits to the right of the decimal. If there are more digits to the right of the decimal than this number,  the excess digits will be truncated. If there are fewer digits, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will pad the number with zeros.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below writes formatted output to a file with Xwrite and Format.</p>
+        <p class="Syntax_body">Xwrite File1, “The variable Var1 is” $ Format(Var1,5,2)</p>
+        <p class="p">In this example, if the value of Var1 is 378.87654, it would be written to the file as: </p>
+        <p class="p">&#160;</p>
+        <p class="p">The variable Var1 is  378.87</p>
+        <p class="p">&#160;</p>
+        <p class="p" style="text-align: center;">
+            <img src="17_7.jpg" />(Two spaces)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Write and Writeline.</p>
+    </body>
+</html>

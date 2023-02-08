@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/filteroptions.png" />
+    <Link
+      Url="Content/Filtering Scenarios.htm" />
+    <Link
+      Url="Content/Filtering Data Display.htm" />
+    <Link
+      Url="Content/Filtering Items.htm" />
+    <Link
+      Url="Content/Filtering Columns.htm" />
+    <Link
+      Url="Content/Filtering Statistics.htm" />
+    <Link
+      Url="Content/Filtering Options.htm" />
+    <Link
+      Url="Content/Filtering States.htm" />
+    <Link
+      Url="Content/Resources/Images/minimizefilter.png" />
+    <Link
+      Url="Content/Resources/Images/maximizefilter.png" />
+    <Link
+      Url="Content/Resources/Images/splitterbar2.png" />
+    <Link
+      Url="Content/Resources/Images/sortandfilter.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/filteroptions.png" />
+    <Link
+      Url="Content/Filtering Scenarios.htm" />
+    <Link
+      Url="Content/Filtering Data Display.htm" />
+    <Link
+      Url="Content/Filtering Items.htm" />
+    <Link
+      Url="Content/Filtering Columns.htm" />
+    <Link
+      Url="Content/Filtering Statistics.htm" />
+    <Link
+      Url="Content/Filtering Options.htm" />
+    <Link
+      Url="Content/Filtering States.htm" />
+    <Link
+      Url="Content/Resources/Images/minimizefilter.png" />
+    <Link
+      Url="Content/Resources/Images/maximizefilter.png" />
+    <Link
+      Url="Content/Resources/Images/splitterbar2.png" />
+    <Link
+      Url="Content/Resources/Images/sortandfilter.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="filter options"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="options, filter"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="panel, filter options"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="filter options"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="options, filter"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="minimize filter options panel"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="maximize filter options panel"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="splitter bar"
+      Conditions=""
+      LocalConditions=""
+      Position="40" />
+    <IndexCacheEntry
+      Term="sort and filter"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

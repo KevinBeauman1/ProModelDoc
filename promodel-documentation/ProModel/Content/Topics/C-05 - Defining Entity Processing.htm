@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="596" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1087198"></a>
+            <MadCap:keyword term="Entity:processing:define;Processing:entity" />Defining Entity Processing</h3>
+        <p class="How_to_title">How to define entity processing graphically<MadCap:keyword term="Processing:define:graphically"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Select an entity from the entity list in the Tools window. The selected entity will appear in the edit field at the top of the list—this entity will come into the location, it is not the entity that results from the process.</li>
+            <li class="li_1_how_to_step">Select the desired editing mode: New Process or Add Routing.</li>
+            <li class="li_1_how_to_step">Click on the first location where the entity will process. A rubber-banding routing line appears. If you select Add Routing, the rubber-banding routing arrow automatically appears from the current location.</li>
+            <li class="li_1_how_to_step">To choose a different entity as the output entity, select the desired output entity in the tools window. </li>
+            <li class="li_1_how_to_step">Click the destination location.</li>
+        </ol>
+        <p class="p_10">Please Note: <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">In the example below, we first clicked on Loc1A and then on Loc2. The records in the Process and Routing edit tables were entered automatically.</MadCap:conditionalText>In the example below, we first clicked on the location “Enter” and then on the location “Waiting.” The records in the Process and Routing edit tables were entered automatically.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-143-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-144-1.png" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-146-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <ol MadCap:continue="true">
+            <li class="li_1_how_to_step">Repeat this process until the flow of entities has been completely defined except for exiting the system.</li>
+            <li class="li_1_how_to_step">From the final processing location route an entity to Exit by clicking on the “Route to Exit” button in the Tools window.</li>
+            <li class="li_1_how_to_step">Once all routings have been defined, enter the processing logic in the operation field of the Process edit table.</li>
+        </ol>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-144-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-145-1.png" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-117-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="p">The figure above shows the completed routings for the example model. Note that the operations (for example, Join 1 <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">EntB</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Med_rcrd</MadCap:conditionalText>) have been entered manually in the operation column. These operations could also have been entered by way of the Logic Builder, documented at the end of this section.</p>
+    </body>
+</html>

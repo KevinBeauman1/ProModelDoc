@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="463.5" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1108369"></a><a name="C-14_4292047180_41144"></a>Warmup</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:WARMUP;WARMUP" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Warmup</p>
+        <p class="Syntax_body">Warmup</p>
+        <p class="Syntax_body">If thruput = 50 Then Warmup</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Instructs the simulation to end the warmup period by resetting all the statistics and erasing relevant time series files.  Only one Warmup statement may be used in the simulation.</p>
+        <p class="p_10">Please Note: If multiple Warmup statements are encountered or a Warmup statement is used in addition to the warmup time specified in the Run Options dialog, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will generate a warning to inform you that this has occurred. Only the first warmup encountered (the statement or the Run Options setting) will actually be executed. While the statement will be encountered within the logic, the Run Options setting will be executed at the specific time indicated in the dialog.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose you want to base the warmup period on 2,000 entities being processed rather than on a lapse of time. You could increment a variable (e.g., Total_Processed) whenever an entity exited the system. Enter the following logic in an independent subroutine activated from the initialization logic:</p>
+        <p class="Syntax_body">Wait Until Total_Processed = 2000</p>
+        <p class="Syntax_body">Warmup</p>
+        <p class="_rules">See Also</p>
+        <p class="p">See <MadCap:xref class="lowercase_no_see" href="C-09-CustomizedReporting.htm#C-09_398201723_1090828" target="" title="" alt="">Customized Reporting on page 1</MadCap:xref> for more information on warm-up periods.</p>
+    </body>
+</html>

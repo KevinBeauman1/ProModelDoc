@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2442" MadCap:lastWidth="921">
+    <head>
+    </head>
+    <body>
+        <h1>Options</h1>
+        <MadCap:keyword term="options, filter;options tab" />
+        <p class="p">Click the Options tab and the following ribbon appears.</p>
+        <p>
+            <img src="Resources/Images/optionsribbon.png" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <p class="p">Output Viewer makes it quick and easy to change what is displayed in your charts. For example, if you add or remove a scenario for a chart, it is also added or removed for all other charts in the Report. In essence, the Filter Options are linked between charts. </p>
+        <p class="p">The Filter Tools - Options tab presents the options that affect whether the items in the Filter Options panel are linked when there is more than one chart in a Report. The options with checkboxes represent these common items. By default, scenarios for all charts in a Report are linked. </p>
+        <p class="p">To link the Items list for one chart with other charts in the Report, check the "Items" option in the Options tab. To unlink a chart from others in the Report, first select a chart so it appears highlighted and then uncheck one or more of the Linked Filter Items options. To apply the same linking options to all charts in the Report, select the <b>Synchronize Links</b> button. </p>
+        <p class="p">In the Report below there are two charts, <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> Utilization and Single Capacity <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> States. By default, the Scenarios option in the Filter Tools – Options tab is checked and therefore data about the Scenarios is displayed in both charts. In contrast, the Items option is unchecked, so the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> that both charts have in common, like “NC Lathe1” and “NC Lathe2”, are not linked. Notice that the Lathe <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> are not displayed in the Utilization chart but are in the States chart.</p>
+        <p>
+            <img src="Resources/Images/OptionsFilteredItems1.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/OptionsFilteredItems1-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p">To link the list of items common between the charts, select one of the charts to make it active, like the Single Capacity <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> States chart. In the Filter Tools – Options tab, check the Items option and then click the <b>Synchronize Links</b> button. Notice in the screenshot below, this caused the Lathe <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> to be displayed in the Utilization chart as well. Now when <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> (common between the charts) are added or removed from one chart, they will be added or removed from both charts.</p>
+        <p>
+            <img src="Resources/Images/optionsfiltereditems2.png" />
+        </p>
+        <p class="p">The <b>Synchronize Links</b><MadCap:keyword term="synchronize links" /> button makes it easy to link all charts together in a Report. Rather than changing the options for each chart, simply change the Linked Filter Items options for one chart, click the <b>Synchronize Links</b> button, and those options will be applied to all charts in the Report.</p>
+        <p>
+            <img src="Resources/Images/optionssynchronizelinks.png" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Modeling Tips">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Displaying Statistics On Screen</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-06-DisplayingStatisticsonScreen.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-ModelingTips.htm">Modeling Tips</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Displaying Statistics On Screen</span>
+        </div>
+        <h3><a name="C-06_1157716610_1120658"></a><a name="kanchor1364"></a><a name="C-06_1157716610_35461"></a>Displaying Statistics On Screen</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Effective use of statistics lends meaning and credibility to simulation models.  This section is designed to show ways of displaying statistics on screen while the simulation is running.  It also provides examples you can incorporate into any model.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Displaying on-screen statistics is valuable for adding model clarity as well as providing a way to keep track of what is happening in the model. The technique used for displaying statistics is to define variables within your model, perform certain functions on those variables (e.g., addition, subtraction, etc.), and then display those variables on the screen.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">ProModel defines variables as symbols (e.g., x, y, and var1) that hold numeric values. They are defined in the Variables edit table. When defining variables, you must include the following information:</p>
+        <ul>
+            <li class="li_1" value="1"><a name="kanchor1365"></a><b>Name</b> (may be alphanumeric combination)</li>
+            <li class="li_1" value="2"><a name="kanchor1366"></a><b>Type</b> (real or integer)</li>
+            <li class="li_1" value="3"><a name="kanchor1367"></a><b>Initial value</b> (may be any value)</li>
+        </ul>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">After defining a variable, you may display it anywhere on the layout screen by simply clicking with your mouse in the desired position with the variable highlighted in the edit table.  </p>
+        <p class="How_to_title">How to show <a name="kanchor1368"></a>system throughput on the screen:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Define the variable “thruput.”</li>
+            <li class="li_1_how_to_step" value="2">Display the variable on the screen.</li>
+            <li class="li_1_how_to_step" value="3">In the processing edit table, increment the variable by one each time an entity leaves the system.  </li>
+        </ol>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Another common, on-screen statistic is work in process (<a name="kanchor1369"></a>WIP).  To show this statistic on the screen, follow the first two steps above.  To accurately indicate the WIP in your model, increment a variable as entities enter the system and use the decrement statement as they exit the system.</p>
+        <p class="How_to_title">How to display the <a name="kanchor1370"></a>total system time for entities:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Assign the simulation clock time to an entity attribute at the beginning of your simulation.</li>
+            <li class="li_1_how_to_step" value="2">Subtract that attribute from the current clock time at the ending location and assign it to a variable you can display.</li>
+        </ol>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">For example, to display total system time for entities in the system, define a variable and an attribute.  The entity attribute, Input_Time, records the time an entity entered the system.  The variable, Sys_Time, records the elapsed time each entity spent in the system (clock-input time).  By displaying the variable on the layout, you will have a dynamic value showing system time of the exiting entity.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

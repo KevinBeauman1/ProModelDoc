@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2521" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086999"></a><a name="C-05_2723800551_21144"></a>Resource Specifications Dialog Box<MadCap:keyword term="Resources:specifications" /></h3>
+        <p class="p">The Specifications dialog box contains information for defining the operating characteristics of each resource in the system. Many of the items pertain only to dynamic resources (i.e., resources with path networks). If the resource is static (i.e., not assigned to a path network) many of the options will be disabled. The Resource Specifications dialog box includes the following fields:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-139-3.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MedModel 2014, Specifications dialog box.png" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }" style="max-width: 5.00in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/ProModel 2014, Specifications dialog box.png" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }" style="max-width: 5.00in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Resources:path network;Path networks:resource;Network:resource path network" /><b>Path Network</b></span> The name of the path network along which the resource travels. This should be “none” for a static resource.</p>
+        <p class="p"><b>Home</b>
+            <MadCap:keyword term="Resources:home node" />   If a path network has been assigned, this is the name of the home node where the resource is positioned at the beginning of the simulation.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Return home if idle;Idle:return home if;Home:return if idle;Node:home" /><b>Return Home If Idle</b></span>If a path network has been assigned, check this box to return the resource to the home node when no other tasks are waiting to be performed and no park searches are defined.</p>
+        <p class="p"><span class="Bold"><b>Off Shift</b><MadCap:keyword term="Resources:shift &amp; break nodes;Node:off shift;Off-shift:node" /></span>  If the resource is assigned to a path network and shift, this is the node to which the resource travels to go off shift.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Breaks;Node:break"></MadCap:keyword><b>Break</b></span>   If the resource is assigned to a path network and shift, this is the node to which the resource travels to go on break.</p>
+        <p class="p"><span class="Bold"><b>Resource Search</b><MadCap:keyword term="Resources:search:rules;Search:resource search rules:closest;Search:resource search rules:least utilized;Search:resource search rules:longest idle"></MadCap:keyword></span><span class="Helv_Bold" style="line-height: 12pt;"> <![CDATA[ ]]></span>  When an entity that needs a resource must select between several available resource units, it follows this rule. This only applies to multi-unit resources. The following rules may be specified:</p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Resources:closest"></MadCap:keyword>Closest Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Resources:least utilized"></MadCap:keyword>Least Utilized Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Resources:longest idle"></MadCap:keyword>Longest Idle Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Resources:longest idle" />First Available Resource</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: For a non-passing path network, only the Closest Resource rule is allowed since the other rules could cause the network to jam. Static resources only allow Least Utilized and Longest Idle rules since there is no traveling to be done.</p>
+        <p class="p"><span class="Bold"><b>Entity Search</b><MadCap:keyword term="Resources:entity search rules;Search:entity search rules:longest waiting;Search:entity search rules:closest;Search:entity search rules:with minimum value;Search:entity search rules:maximum value"></MadCap:keyword></span><span class="Element" style="line-height: 12pt;">   When two or more entities of equal priority request a resource at the same time, the resource follows this rule to choose the one to service. The resource first checks for any entities waiting at locations listed in a work search before defaulting to this rule and, if an </span><span class="Element" style="font-style: italic;">exclusive</span><span class="Element"> work search has been defined, the default entity search rule is not used. The following rules may be specified:</span>
+        </p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold">Longest waiting entity (with highest priority)</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold">Closest entity (with highest priority)</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold">Entity with the minimum value of a specified attribute</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold">Entity with the maximum value of a specified attribute</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: Entities look for resources to move them after they capture a location. If several entities are waiting to be transported to one location by a resource and you want the entity with the minimum attribute value to arrive next at the location, you must use the Locations edit table to define the rule at the location for incoming entities as minimum attribute value. The Closest entity rule applies to dynamic resources only. <br style="font-style: italic;"></br><br style="font-style: italic;"></br>If the path network that the dynamic resource is using is time-based, the closest entity is the entity with the least number of nodes from the resource. If the path network is defined by speed and distance, the closest entity is the entity the shortest distance from the resource.</p>
+        <p class="p"><span class="Bold">Motion<MadCap:keyword term="Resources:motion;Move:along path network"></MadCap:keyword></span>   If a path network has been assigned, the motion fields define the speeds and times required for basic resource movement and contain the following information:</p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Speed:traveling empty/full"></MadCap:keyword>Speed traveling empty/full*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Acceleration rate"></MadCap:keyword>Acceleration rate*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Deceleration rate"></MadCap:keyword>Deceleration rate*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Pickup time"></MadCap:keyword>Pickup time</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;"><span class="Bold"><MadCap:keyword term="Deposit time"></MadCap:keyword>Deposit time</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: Resource Specification Notes:1.  The units to the side of these fields change automatically from feet to meters (and vice-versa) depending on the default distance units selected in the General Information dialog box. 2.  Pickup and deposit times for resources are included as transit time in the output statistics.</p>
+    </body>
+</html>

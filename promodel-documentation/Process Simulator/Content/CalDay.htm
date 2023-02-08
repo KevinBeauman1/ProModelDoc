@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="980" MadCap:lastWidth="1003">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>CalDay</h1>
+        <h5>
+            <MadCap:keyword term="functions:calday;calday" />Function</h5>
+        <h2>Syntax samples
+        </h2>
+        <p>CalDay()</p>
+        <h2>Description
+        </h2>
+        <p>The CalDay() function corresponds to the weekday of the calendar date you defined as part of the warm-up period or simulation begin date under simulation options. Since CalDay() resets with the advent of a new week, every weekday will return the same value (i.e. Wednesday will always return a value of 3).</p>
+        <h2>Valid In
+        </h2>
+        <p>Any logic.</p>
+        <p class="p_10">Please Note: <i>CalDay()</i> <i>works only when you select calendar date in the simulation options dialog.</i></p>
+        <h2>Example</h2>
+        <p>Suppose that shipment arrival types vary from day to day. Since Monday’s Shipment_Type_A arrival patterns are unique, you will need to use a distribution specific to those patterns.</p>
+        <p class="p_11">If CalDay() = 1 Then<br />{</p>
+        <p class="p_12">Shipment_Type_A = 		Monday_Distribution_A<br />Use Forklift For Unload_Time</p>
+        <p class="p_11">}</p>
+        <h5>See Also
+        </h5>
+        <p><a href="caldoM.htm" class="a_11">CalDOM</a>, <a href="calhour.htm" class="a_11">CalHour</a>, <a href="calmin.htm" class="a_11">CalMin</a>, <a href="calmonth.htm" class="a_11">CalMonth</a>, and <a href="calyear.htm" class="a_11">CalYear</a></p>
+    </body>
+</html>

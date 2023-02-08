@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1332" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>GroupQty</h1>
+        <h5>
+            <MadCap:keyword term="functions:groupqty;groupqty" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>GroupQty({&lt;entity name&gt;})</p>
+        <p>Order GroupQty(Part1) Part2 To Act1<br />If GroupQty(Part1) &gt; 5 Then...</p>
+        <h2>Description</h2>
+        <p>Returns the number of entities of a specified type in a batched or attached entity. If no name is specified, it returns the entire group quantity. If it is an attached entity, it will only return the number of temporarily attached entities, not the base entity. For example, if four Castings are temporarily loaded onto a Pallet, the GroupQty() will return the number of Castings (i.e., 4), which does not include the base entity Pallet. </p>
+        <p>In the case of hybrid nested groups with several mixed and nested levels of batches and attached entities, GroupQty() returns the number of entities in the uppermost level only.</p>
+        <p>If multiple attaches have occurred (no batches), either of different entities or at multiple activities, GroupQty() returns the combined total of all attached entities.</p>
+        <h2>Valid In</h2>
+        <p>Activity, arrival, and route logic. This function returns an integer.</p>
+        <h2>Components</h2>
+        <p><b>&lt;entity name&gt;</b>
+        </p>
+        <p>The optional specific type of entity to search for in the group.</p>
+        <h2>Example</h2>
+        <p>
+            A batch of documents called Case arrives at the Secretary in-box and is processed for some amount of time according to a Normal distribution. If the batch contains three or more documents it is routed to Legal Assistant #1, otherwise it is routed to Legal Assistant #2.
+</p>
+        <p class="p_11">If GroupQty() &gt; 2 Then</p>
+        <p class="p_12">aDest = LegalAsssistant1</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">aDest = LegalAssistant2</p>
+        <h5>See Also</h5>
+        <p><a href="Attach.htm" class="a_11">Attach</a>, <a href="activityProperties.htm#Batching" class="a_11">Batch</a>, and Group</p>
+    </body>
+</html>

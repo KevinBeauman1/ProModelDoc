@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/9_42.jpg" />
+    <Link
+      Url="Content/Topics/9_45.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/9_42.jpg" />
+    <Link
+      Url="Content/Topics/9_45.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086469" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Table:functions:editor"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Table:functions:examples"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

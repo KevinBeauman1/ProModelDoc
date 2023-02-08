@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="536" MadCap:lastWidth="1178">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Terminating a Process</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Terminating a Process</h1>
+        <p>There are two ways to terminate a process or designate an activity as 
+ the last one in an activity sequence.</p>
+        <ol>
+            <li>Simply do not define a routing from an 
+ activity. If an activity has one or more routing connections coming into 
+ it but none going out from it, it is considered to be a terminating activity 
+ and entities simply exit the system after completing the activity.</li>
+            <li>An alternative and more visual way to represent a 
+ terminating activity is to define a routing from the activity that terminates to 
+ anywhere on  the layout (i.e. it does not connect to any 
+ other activity). A label called “Exit” will display on the route. 
+ During simulation, two statistics will be displayed at the end of the connection; one showing the number of exits 
+ that have occurred from that exit routing and the other showing 
+ the average cycle time of those exits.</li>
+        </ol>
+        <p class="p_2">
+            <img src="Resources/Images/ExitVariable.gif" style="height: 113px;width: 307px;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" width="307" height="113" border="0" class="img_4" />
+        </p>
+        <p>The exit and average cycle time statistics
+ are also available for analysis in Output 
+ Viewer. The statistics are collected as variables. For example, Total Exits is a variable named "vTotalExits_&lt;activity 
+ name&gt;_&lt;number&gt;. &#160;The &lt;number&gt; is simply added in case more than one route to exit for 
+ the activity is defined. &#160;Any text 
+ added to the connection would be included in the variable name and replace 
+ the &lt;number&gt;. For example, if Activity 1 had a route to exit with 
+ the text "Reject" added to the connection, the variable name 
+ would be vTotalExits_Activity_1_Reject.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

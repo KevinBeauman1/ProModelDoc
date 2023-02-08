@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="789" MadCap:lastWidth="946">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3><a name="C-11_756594771_1095062"></a>
+            <MadCap:keyword term="Strings:expressions;Expressions:string" /><a name="C-11_756594771_18883"></a>String Expressions</h3>
+        <p class="p">Any text to be written to a file or displayed on the screen is created with a string expression. String expressions are created from a combination of the following: </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col width="176px" class="Column-Column1" />
+            <col width="88px" class="Column-Column2" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="Normal">
+                            <MadCap:keyword term="Strings:expressions:character strings;Expressions:string;Character strings" />Character strings</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <MadCap:keyword term="ENT();Strings:expressions:ENT();Expressions:string:ENT()" />Ent()</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <MadCap:keyword term="Strings:expressions:concatenation operators;Expressions:string;Concatenation operators;Special Characters" />Concatenation operators "$"</td>
+                    <td class="BodyD-Column2-Body2">
+                        <MadCap:keyword term="LOC();Strings:expressions:LOC();Expressions:string:LOC()" />Loc()</td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <MadCap:keyword term="Strings:expressions:numeric expressions;Expressions:string:numeric" />Numeric Expressions</td>
+                    <td class="BodyD-Column2-Body3">
+                        <MadCap:keyword term="RES();Strings:expressions:RES();Expressions:string:RES()" />Res()</td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <MadCap:keyword term="Strings:expressions:CHAR();Expressions:string:CHAR();CHAR()" />Char()</td>
+                    <td class="BodyA-Column2-Body4">
+                        <MadCap:keyword term="FORMAT();Strings:expressions:FORMAT();Expressions:string:FORMAT()" />Format()</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">A string expression must begin with a concatenation operator ($) or with a string constant in quotes (i.e., “...”). The concatenation operator combines components together, and must be between all components of a string expression. For example, if Attr1 is 7.83, then the expression <span class="Helv_Reg" style="font-family: Arial;">“STRING1”$ ATTR1 $ “STRING2”</span> evaluates to “String17.83String2.”</p>
+        <p class="p">&#160;</p>
+        <p class="p">To output the name of a location, entity, or resource, use the appropriate function inside a string expression: Loc() for locations, Ent() for entities, and Res() for resources. For example, the following logic checks the first ten locations in a model and displays the name of any location that is completely full. </p>
+        <p class="Component">Display name of full location </p>
+        <p class="Syntax_body"><span class="Helv_Reg">Var1 = 1</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Reg">While Var1 &lt;= 10 Do</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Reg">	Begin		If FreeCap(Loc(Var1)) = 0 Then			Display Loc(Var1) $ “is full.”		Inc Var1	End</span>
+        </p>
+        <p class="p">String expressions are valid only as part of the following statements and functions: Display, Pause, Prompt, Stop, Write, Writeline, Trace, Xsub(), and Xwrite.</p>
+        <p class="Component">String expressions</p>
+        <p class="p">If a model had been running for six days, the statement </p>
+        <p class="p">&#160;</p>
+        <p class="p_11">
+            <MadCap:keyword term="DISPLAY" />Display “The simulation ran \n” $ <MadCap:keyword term="CLOCK()" />Clock(<MadCap:keyword term="DAY" />day) $ “days.”</p>
+        <p class="p">&#160;</p>
+        <p class="p">would display the following dialog box.</p>
+        <p class="Graphic">
+            <img src="mm-c14-397-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+    </body>
+</html>

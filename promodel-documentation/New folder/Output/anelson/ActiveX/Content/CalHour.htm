@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>CalHour</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>CalHour</h1>
+        <h5><a name="kanchor183"></a>Function</h5>
+        <h2>Syntax samples</h2>
+        <p>CalHour()</p>
+        <h2>Description</h2>
+        <p>The CalHour() function corresponds to the hour of the calendar date you defined as part of the warm-up period or simulation begin date under simulation options. Since this function ties directly to the 24-hour clock displayed on the screen during simulation, CalHour() will never return a value higher than 23.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <p class="p_10">Please Note: CalHour() works only when you select calendar date in the simulation options dialog.</p>
+        <h2>Example</h2>
+        <p>The following example implements a change in personnel used to perform an operation. After the simulation runs for 18 hours, the technician becomes available to perform the activity.</p>
+        <p class="p_11">If CalHour() &gt; 18 Then</p>
+        <p class="p_12">Use Worker For N(10,.4)</p>
+        <p class="p_11">Else</p>
+        <p class="p_12"> Use Technician For N(8,.2)</p>
+        <h5>See Also</h5>
+        <p>CalDay, CalDOM, CalMin, CalMonth, and CalYear</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

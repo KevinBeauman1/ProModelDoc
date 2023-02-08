@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="301" MadCap:lastWidth="1518">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-07_3886599965_1089606"></a>
+            <MadCap:keyword term="Logic:routing move:statement processing;Move:logic:statements:processing" />Statement Processing</h3>
+        <p class="p">Statements executed before a Move related statement are processed after the entity claims the next location but before the entity actually departs from the current location.</p>
+        <p class="p">Statements executed after a Move related statement are processed after the move has been completed but before the entity enters the location.  If there is no move logic, the entity continues processing until it encounters an implicit Wait.  However, if “Move For 0” is placed in the move logic, the event list is broken and other processes scheduled to occur at the same time are executed.  Once these processes are executed, the entity enters the destination location.</p>
+        <p class="p">This processing sequence allows you to Get or Jointly Get one or more resources before the move and optionally Free one or more resources at the end of the move. Please note that if a move related statement is not encountered in the logic, an implied Move will be assumed and executed at the end of the logic.</p>
+    </body>
+</html>

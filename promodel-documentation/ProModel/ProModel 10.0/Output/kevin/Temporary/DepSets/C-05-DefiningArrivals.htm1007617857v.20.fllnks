@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/mm-c5-157-1.jpg" />
+    <Link
+      Url="Content/Topics/5-6-4.jpg" />
+    <Link
+      Url="Content/Topics/C-05-IndependentArrivals.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/mm-c5-157-1.jpg" />
+    <Link
+      Url="Content/Topics/5-6-4.jpg" />
+    <Link
+      Url="Content/Topics/C-05-IndependentArrivals.htm#C-05_2723800551_1087985" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1087962" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Arrivals:define"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Arrivals:define:graphically"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Arrivals:define:manually"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

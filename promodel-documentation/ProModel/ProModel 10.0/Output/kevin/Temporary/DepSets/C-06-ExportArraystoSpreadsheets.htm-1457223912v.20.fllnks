@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/Array Export File - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Export Arrays - sheet names.png" />
+    <Link
+      Url="Content/Topics/sm-c6-233-3.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/Array Export File - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Export Arrays - sheet names.png" />
+    <Link
+      Url="Content/Topics/sm-c6-233-3.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1141599" />
+    <Anchor
+      Name="C-06_1157716610_72873" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

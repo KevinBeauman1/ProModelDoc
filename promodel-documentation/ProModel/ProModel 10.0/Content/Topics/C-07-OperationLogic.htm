@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1179" MadCap:lastWidth="1178">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-07_3886599965_1089472"></a>
+            <MadCap:keyword term="Logic:operation" /><a name="C-07_3886599965_20007"></a>Operation Logic</h2>
+        <p class="p">Operation logic defines what happens to an entity when it enters a location. Operation logic is optional, but typically contains at least a <MadCap:keyword term="WAIT" />Wait statement for the amount of time the entity should spend at the location. For modeling purposes, the exact nature of the operation (joining, grouping, etc.) is irrelevant. What is essential is to know what happens in terms of the time consumed, the resources used, and any other logic that impacts system performance. For operations requiring more than a time and resource designation, detailed logic may need to be defined using <MadCap:keyword term="IF...THEN" />If...Then or action statements.</p>
+        <p class="p">Special operation statements are provided to define the activities that are to occur.  By using operation logic, any of the following activities can be defined:</p>
+        <ul>
+            <li class="li_1">Detain an entity for a specified length of time while an activity is performed.</li>
+            <li class="li_1">Detain an entity until one or more resources are obtained.</li>
+            <li class="li_1">Detain an entity until one or more additional entities are joined to it.</li>
+            <li class="li_1">Detach one or more entities from the current entity.</li>
+            <li class="li_1">Consolidate one or more entities into a group.</li>
+            <li class="li_1">Separate an entity into two or more entities.</li>
+            <li class="li_1">Detain an entity until a particular system condition is reached.</li>
+            <li class="li_1">Destroy an entity.</li>
+            <li class="li_1">Create one or more new entities.</li>
+            <li class="li_1">Execute a block of logic (assignment of variables, etc.).</li>
+            <li class="li_1">Signal the start of some other action in the system (e.g., place an order).</li>
+            <li class="li_1">Make some decision about further routing.</li>
+        </ul>
+        <p class="p">Statements can be typed directly into the operation field, or inside a larger logic window after double-clicking in the field or clicking on the Operation button. Alternatively, the Logic Builder can help build logic and is accessed by clicking the right mouse button inside the operation field or logic window. All statements, functions, and distributions available in the operation field are discussed in detail, including examples, in <MadCap:xref class="lowercase_no_see" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" target="" title="" alt="">Statements and Functions on page 1</MadCap:xref>. </p>
+        <h5>Example</h5>
+        <p class="p">Each entity processes the operation statements defined for it at a particular location, independent of other operations performed on other entities at the same location. The following example presents the operation logic for an entity joining an entity, EntB, and renaming the entity as EntC.</p>
+        <p class="Graphic" style="margin-top: 2pt;margin-bottom: 2pt;font-family: 'Times New Roman';font-size: 9pt;">
+            <img src="../Resources/Images/Operation Logic - Operation logic window.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5in;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

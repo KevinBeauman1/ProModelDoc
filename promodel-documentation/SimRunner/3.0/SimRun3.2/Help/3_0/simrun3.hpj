@@ -1,0 +1,69 @@
+
+[OPTIONS]
+CITATION=SimRunner 3.0 Help. ®2001  PROMODEL Corporation
+COPYRIGHT=SimRunner 3.0 Help. ®2001  PROMODEL Corporation
+TITLE=SimRunner Help
+CNT=SIMRUN3.CNT
+CONTENTS=HLP_CONTENTS
+LCID=0x0409 0x0 0x0
+COMPRESS=0xc
+ERRORLOG=simrun3.err
+
+BMROOT=SCREENS
+[WINDOWS]
+main=,(133,102,768,819),,,,0
+; window=,(133,102,768,819),0x6c00,,,0
+; before=,(133,102,768,819),0x6c00,,,0
+; in thi=,(133,102,768,819),0x6c00,,,0
+; =,(133,102,768,819),0x6c00,,,0
+;gloss="Glossary",(102,102,348,348),,(255,255,255),(255,255,255),0
+
+[CONFIG-; window]
+
+[CONFIG-; before]
+
+[CONFIG-; in thi]
+
+[CONFIG-; ]
+
+[CONFIG-;gloss]
+
+[MACROS]
+
+[FILES]
+simrun3.rtf
+
+[ALIAS]
+
+[MAP]
+#include <SIMRUN.HH>
+#define Button_bar	53262
+#define HLP_Input_factors	56342
+#define HLP_Objective_function	56343
+#define Max_No_of_Generations	58401
+#define Maximize	56345
+#define Min_No_of_Generations	58402
+#define Minimize	56346
+#define Model_name	51208
+#define Number_of_replications_per_experiment	58416
+#define Number_of_test_replications	58417
+#define Objective_Function_Precision	58409
+#define Objective_function_terms_selected	51210
+#define Optimization_Profile	58408
+#define Optimize	53270
+#define Start_Optimization	57351
+#define Weight	56353
+#define Weighting	56344
+
+[BAGGAGE]
+
+[CONFIG]
+BrowseButtons ()
+RR("inetwh32.dll", "Internet", "S")
+RR("inetwh32.dll", "Inet", "S")
+RR("inetwh32.dll", "INETWH_Initialize", "")
+INETWH_Initialize ()
+RR("inetwh32.dll", "Internet", "S")
+RR("inetwh32.dll", "Inet", "S")
+RR("inetwh32.dll", "INETWH_Initialize", "")
+INETWH_Initialize ()

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/mm-c5-155-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-156-2.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/mm-c5-155-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-156-2.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1087925" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Arrivals:editor"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Edit:arrivals"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

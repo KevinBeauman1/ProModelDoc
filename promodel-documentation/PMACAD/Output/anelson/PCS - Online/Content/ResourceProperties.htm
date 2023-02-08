@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining a Process|Defining Shape Properties">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Resource Dialog</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningAProcess.htm">Defining a Process</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DefiningShapeProperties.htm">Defining Shape Properties</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resource Properties</span>
+        </div>
+        <h1>Resource Properties</h1><a name="kanchor25"></a>
+        <p>Right-click on a Resource shape, select Properties, and the <b>Resource</b> properties window displays.</p>
+        <p>There are Four sections in the <b>Resource</b> properties window.</p>
+        <ul>
+            <li value="1"><a href="#Availability" class="a_11 selected">Availability</a>
+            </li>
+            <li value="2"><a href="#Downtimes" class="a_11 selected">Downtimes</a>
+            </li>
+            <li value="3"><a href="#Notes" class="a_11 selected">Notes</a>
+            </li>
+            <li value="4"><a href="#Advanced" class="a_11 selected">Advanced</a>
+            </li>
+        </ul>
+        <p style="text-align: left;">
+            <img src="Resources/Images/ResourceProperties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Name</b> This is the simulation-friendly name of the resource and should be used when referenced in logic. It is synched with the text of the resource shape in the layout. It replaces any special characters or spaces with underscores _. This name and the shape text can be unsynched through the option in the Advanced section.</p>
+        <p><strong class="strong_1">Units</strong> The quantity or number of units for this particular resource.</p>
+        <p><strong class="strong_1">Display Graphically</strong> Checking this box will add resource graphics to the layout equal to the number of resource units. All resource graphics displayed this way will have the same name, but have the unit number appended to the name.</p>
+        <p><strong class="strong_1">Hourly cost</strong> The cost (dollars, pounds, etc.) added to the entity for each hour this resource is used.</p>
+        <p><strong class="strong_1">Per Use</strong> The cost (dollars, pounds, etc.) added to the entity each time this resource is used.</p>
+        <h2><a name="Availability"></a>Availability</h2>
+        <p>
+            <img src="Resources/Images/ResourceAvailability.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><strong class="strong_1">Percentage</strong> Enter the percentage of time that the resource is available to perform tasks. If the percent is less than 100, interruptions will occur randomly with an average duration of five minutes each.</p>
+        <p><strong class="strong_1">Calendar(s)</strong> A shift calendar can also be assigned to this resource. If a shift calendar is assigned, the resource will only be available during the time defined. Use <b>Calendar Editor</b> to define your shift calendar (.pmcal) file. Separate shift calendars can be assigned to specific units of the resource. Click the Add button to add a new calendar for the resource. Fill out the details for each shift like choosing the calendar file.</p>
+        <ul>
+            <li value="1"><strong class="strong_1">File</strong>&#160;&#160;Enter the file name in the field or browse and select one from your computer.</li>
+            <li value="2"><strong class="strong_1">Interrupt</strong> Check this option to interrupt the resource from its current task when it is time to go on break or off shift.</li>
+            <li value="3"><b>Units</b> Enter the unit numbers for the resource to which this calendar will apply. Numbers and number macros are permitted entries in this field (e.g. 1; 1-3; 1, 4; and Mac1)  A zero can be entered so that no resources use the shift, which is helpful if different scenarios use different calendars. When choosing which resources are assigned to shifts with the Scenario Manager, all numbers for the assignment need to be 0 to disable the shift.  If this column is left blank, all units of the resource will use the calendar.</li>
+        </ul>
+        <h3>Resource Shift Carryover<a name="kanchor26"></a></h3>
+        <p>Resource shift carryover occurs when a resource is interrupted to go off shift. Rather than requiring the exact unit of that resource to return and complete the work, the entity will automatically make a request for another unit of the resource to continue the work. This allows, for example, another unit assigned to a second shift to take over the work started by the resource on the first shift. In this case a shift carryover occurs for the entity utilizing a new resource unit to perform a task. If there is only one unit defined for the resource, it will simply resume working on the entity when it comes back on shift.</p>
+        <p>For more information, see <a href="CalendarEditor.htm" title="" alt="" class="text_page_in_parenthesis MCXref xref xreftext_page_in_parenthesis">Calendar Editor</a> <![CDATA[ ]]></p>
+        <h2><a name="Downtimes"></a>Downtimes</h2>
+        <p>Downtimes are used to model interruptions of resources in use by entities. Downtimes may represent scheduled interruptions such as shifts, breaks, or scheduled maintenance. Or, they may represent unscheduled, random interruptions such as equipment failures or other generic tasks. The amount of time the resource is down and the timing for going down are defined in this tab.</p>
+        <p>
+            <img src="Resources/Images/ResourceDowntimes.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Basis</b> Three types of downtimes are available:</p>
+        <ul>
+            <li value="1"><b>Scheduled:</b> A scheduled downtime is one that is planned for, and thus taken into account in the output statistics as such. The time spent in a scheduled downtime will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</li>
+            <li value="2"><b>Unscheduled:</b> Unscheduled downtimes are not planned for and will appear as such in the output statistics.</li>
+            <li value="3"><b>Usage:</b> Usage downtimes are used to model downtimes that occur after being in use for a certain amount of time, such as if a copier fails due to wear after so many hours of operation. Usage downtimes are different from scheduled and unscheduled downtimes because usage downtimes are based on in-use time, which does not include idle time. Scheduled and unscheduled downtimes are based on total elapsed simulation time (in-use time and idle time).</li>
+        </ul>
+        <p><b>Units</b> Resource Units assigned to the downtime. if left blank, all resources are applied to the downtime.</p>
+        <p><b>Frequency</b> The clock time (in-use time for usage downtimes) between the start of successive downtime occurrences. This option may be an expression. This field is evaluated as the simulation progresses, so the time between downtimes can vary.</p>
+        <p><b>First Time</b> The time of the first downtime occurrence. If this field is left blank, the first downtime will occur according to the time in the Frequency field.</p>
+        <p><b>Interruptive</b> If this box is checked, a resources being used will be preempted for the duration of the downtime.  If left unchecked, the downtime will begin as soon as the resource completes its task. </p>
+        <p><b>Time</b> The duration of the downtime.</p>
+        <p><b>Resource</b> Optionally, select a different resource that is required to work on the resource during its downtime. For example, a worker is needed to fix a copier. </p>
+        <p><b>Priority</b> If you have chosen a resource to use for the downtime, you may optionally choose a priority to capture that resource. When the downtime occurs for a resource, it will attempt to capture the optional resource using this priority. If the priority is set to Interrupt, the optional resource will be preempted from the task it is performing to execute the downtime for this resource.</p>
+        <p><b>Disable</b> Check this box to disable the downtime during simulation. This is useful for ignoring the downtime without deleting it from the list.</p>
+        <h2><a name="Notes"></a>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the resource. </p>
+        <h2><a name="Path Networks"></a>Path Networks <span style="font-size: 20pt; font-style: italic;">(Available in the Material Handling Edition)</span></h2>
+        <p>With the <b>Process Simulator - Material Handling Edition</b>, you can model resource movement on path networks. You can now model travel, pick up, and deposit time.</p>
+        <p>
+            <img src="Resources/Images/path network.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>To access path networks you will go to More Elements select the More Elements drop down:</p>
+        <p>
+            <img src="Resources/Images/more elements.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>
+            <img src="Resources/Images/path network window.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <div>
+            <p><b>Nodes</b> – decisions points of a path network</p>
+            <ul>
+                <li value="1">Set limits</li>
+                <li value="2">Flexible connectors – allow for travel of resources to any part of your Visio file where the resource is requested.</li>
+            </ul>
+            <p><b>Path Network Connector</b> – connections between nodes</p>
+            <ul>
+                <li value="1">Distance is automatically configured by the scale or the model, but can be manually set.</li>
+            </ul>
+            <p><b>Interfaces</b> – connections from nodes to activities or stations. This is how you can control where resources go to interact with an activity/station.</p>
+            <h4>Resource Path Network Section</h4>
+            <ul>
+                <li value="1">Choose the path network the resource can move on</li>
+                <li value="2">Control starting, off-shift, and break node.</li>
+                <li value="3">Speed</li>
+                <li value="4">Deposit times</li>
+                <li value="5">Node logic for better control of resources.</li>
+            </ul>
+            <p>
+                <img src="Resources/Images/path network selection.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+            </p>
+        </div>
+        <h2><a name="Advanced"></a>Advanced</h2>
+        <p><strong class="strong_1">Statistics</strong> Check to collect statistics for this resource.</p>
+        <p><b>Sync Name</b> When checked, the shape text and simulation-friendly Name (in General section) are connected and can only be changed by editing the shape text in the layout. When unchecked, they are disconnected, which allows you to have more descriptive shape text while keeping the simulation-friendly name (used in logic) more simple and concise. </p>
+        <p><b>Show Text</b> Checking this option shows the shape text in the layout, while unchecking this option hides the shape text.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1521" MadCap:lastWidth="1141" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106402"></a>Rand()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Math functions:RAND();RAND()" />Math Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Rand(&lt;expression&gt;)</p>
+        <p class="Syntax_body">Rand(10) min</p>
+        <p class="Syntax_body">Order Rand(10) EntA TO Loc1</p>
+        <p class="Syntax_body">If Rand(100) &gt; 45 Then Route 1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns a random value n between 0 and X (0 &lt;= n &lt; X) where X is the result of the expression. </p>
+        <p class="p">&#160;</p>
+        <p class="p">To generate random numbers between the expression and a number other than zero use the expression as the range between the maximum and minimum values. Then add the minimum to the random number. For example, the statement Attr1 = 2+Rand(3) generates a random number from two up to, but not including, five. An alternate method is to use a uniform distribution. Note that the Rand() function works very similar to a uniform distribution. For more information on Distributions, see <MadCap:xref class="lowercase_no_see" href="C-13 - Distribution Functions.htm#C-13_1919394185_1091849" target="" title="" alt="">Distribution Functions on page 1</MadCap:xref>.</p>
+        <p class="p">&#160;</p>
+        <p class="p">This function returns a real number, although the real value may be converted to an integer. To have the Rand() function generate random integer values between zero and some upper bound, use the formula, Integer_Value = Rand(X+1), where X is the greatest integer that should be returned by the function.  For example, to generate a random integer value between zero and six, use the formula, Integer_Value = Rand(7).  The Rand(7) part of this formula will actually generate a real value between 0 and 6.999, but will be truncated to a whole number between 0 and 6 when assigned to an integer value.  Therefore, when generating integer values, make sure that the result of the Rand() function is assigned to an integer value, or is used in an expression where it will be truncated to an integer.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any expression. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The upper limit of the random value to return.  This value will never be returned.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Calls arrive at a customer service center.  Approximately 10 percent of the calls require a Spanish-speaking operator.  Operator 1 can speak both Spanish and English and Operator 2 can speak only English.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Two ETR physicians, MD1 and MD2, may be called on to provide the same treatment for any given patient. Because MD1 works in the Fast-Track clinic as well as the ETR, he is only used 30% of the time. The other 70% of the time, MD2 provides the required care.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Two resources, Oper_1 and Oper_2, perform the same task at a location, Press. Oper_1 works at several other locations. As a result, Press only uses him 30% of the time. The other 70% of the time, Oper_2 performs the task.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" style="width: 186px;" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Call</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">CustSvc</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">If Rand(100) &lt; 30 Then</p>
+                        <p class="Syntax_body">    Use Oper_1    For U (3,.5)</p>
+                        <p class="CellBody">Else </p>
+                        <p class="Syntax_body">Use Oper_1    For U(3,.5)</p>
+                        <p class="Syntax_body"> Or    Oper_2 For U(3,.5)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Process Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" style="width: 192px;" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">ETR</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">If Rand(100) &lt; 30 Then</p>
+                        <p class="Syntax_body">Get MD1</p>
+                        <p class="CellBody">Else</p>
+                        <p class="Syntax_body"> Get MD2</p>
+                        <p class="CellBody">Wait N(30,5)</p>
+                        <p class="CellBody">Free All</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Axle</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Press</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">If Rand(100) &lt; 30 Then</p>
+                        <p class="syntax_body_indent">    Use Oper_1</p>
+                        <p class="CellBody">Else Use Oper_2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Call</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">EXIT</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Registrar</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Axle</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Lather</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 3</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-06 - Streams.htm#C-06_1157716610_1086820" target="" title="" alt="">Streams on page 1</MadCap:xref>.</p>
+    </body>
+</html>

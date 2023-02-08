@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1417" MadCap:lastWidth="1127" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1107668"></a><a name="C-14_4292047180_30171"></a>Ungroup</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related operation statements:UNGROUP;UNGROUP" />Entity-Related Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Ungroup {LIFO}</p>
+        <p class="Syntax_body">Ungroup</p>
+        <p class="Syntax_body">Ungroup LIFO</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Separates entities that were grouped with the <MadCap:keyword term="GROUP" />Group statement. Each of the resulting entities searches ahead in the process list and then from the beginning of the list until a process is found that has been defined for that entity type at the current location. The first entity processed from the group takes any resources the group owns. If a grouped entity has members that are also grouped entities, only the top level group is ungrouped with an Ungroup statement. An additional Ungroup will ungroup any member groups.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The operation column of process edit tables only. You may not use Ungroup on conveyors nor at the end of a queue. Ungroup may not be used in combination with <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="CREATE" />Create, <MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, Split As or other Ungroup statements in a processing logic. It may follow a Group statement no more than once in the same processing logic to allow batch processing.</p>
+        <p class="p_10">Please Note: If you are trying to ungroup an entity that has never been grouped, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> ignores the Ungroup statement.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">
+            <MadCap:keyword term="LIFO" />LIFO</p>
+        <p class="p">Last In, First Out. Starts the ungrouped entities processing from last to first, rather than from first to last. If this option is not specified, the ungrouped entities will be processed <MadCap:keyword term="FIFO" />FIFO, or First In, First Out.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">With an Ungroup, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> dissolves the temporary shell and divides costs among the ungrouped entities (ungrouped entities may include smaller clusters of grouped entities). </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">The example below is the continuation of the Group statement example where Men, Women and Children were grouped to form Grp_A. Now the people are ungrouped at Floor2 with all of their original attributes. (See the Group statement example.)</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">The example below is the continuation of the Group statement example where EntA, EntB and EntC were grouped to form Grp_A. Now the entities are ungrouped with all of their original properties. (See the Group statement example.)</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Grp_A</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Floor2</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Ungroup</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Man</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Floor2</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Woman</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Floor2</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Child</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Floor2</p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Grp_A</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Ungroup</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Man</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">WaitingRm</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Woman</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">WaitingRm</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Child</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">WaitingRm</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body4">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Loc5</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">Loc6</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body4">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Group, Load, Join, Combine, and Split As. See <MadCap:xref class="lowercase_no_see" href="C-06 - Attributes and the GROUP UNGROUP Statement1.htm#C-06_1157716610_1085220" target="" title="" alt="">Attributes and the Group/Ungroup Statements on page 1</MadCap:xref> for more information.</p>
+    </body>
+</html>

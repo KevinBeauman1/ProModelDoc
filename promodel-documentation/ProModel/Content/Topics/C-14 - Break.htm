@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="456" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102588"></a>Break</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General control statements:BREAK;BREAK" />General Control Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Break</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Exits the innermost <MadCap:keyword term="WHILE...DO" />While...Do, <MadCap:keyword term="DO...WHILE" />Do...While, or<MadCap:keyword term="DO...UNTIL" /> Do...Until loop. The next statement to be executed will be the one immediately following the <MadCap:keyword term="END" />End statement associated with the innermost loop. If a Break is encountered outside any loop, then <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> exits the entire logic.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Normally, a While...Do loop repeats a statement block until a certain condition becomes false. This example shows the use of a Break statement to exit the loop based on a condition not included in the While...Do loop. As long as the variable V1 is less than three and the variable V3 is less than or equal to five, both the three-minute wait and the five-minute wait will be executed for a total of eight minutes. However, if V3 becomes greater than five, the total wait will be six minutes: three minutes in the main part of the loop and another three minutes inside the <MadCap:keyword term="IF...THEN" />If...Then statement block. The five minute wait will not be executed because the Break statement exits the loop entirely. </p>
+        <p class="p">&#160;</p>
+        <p class="p">The line “//Break to here” is a comment that marks the next line of logic executed after the Break.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" style="width: 119px;" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Claim</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Station1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="p">While V1 &lt; 3 Do</p>
+                        <p class="p">{</p>
+                        <p class="Syntax_body">      Wait 3 min</p>
+                        <p class="Syntax_body">      If V3 &lt;= 5 Then</p>
+                        <p class="Syntax_body">         {</p>
+                        <p class="syntax_body_indent">            Wait 3 min</p>
+                        <p class="syntax_body_indent">            Break</p>
+                        <p class="Syntax_body">         }</p>
+                        <p class="Syntax_body">      Wait 5 min</p>
+                        <p class="p">   }</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Station2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">BreakBlk.</p>
+    </body>
+</html>

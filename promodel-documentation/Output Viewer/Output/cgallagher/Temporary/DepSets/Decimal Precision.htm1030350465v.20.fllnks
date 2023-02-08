@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/decimalprecision.png" />
+    <Link
+      Url="Content/Resources/Images/defaultdecimal.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecision2.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecdecreased.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/decimalprecision.png" />
+    <Link
+      Url="Content/Resources/Images/defaultdecimal.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecision2.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecdecreased.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="decimal precision"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

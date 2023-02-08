@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1977" MadCap:lastWidth="1141">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h4><a name="C-05_2723800551_1085757"></a><a name="C-05_2723800551_12264"></a>Location Priorities and Preemption<MadCap:keyword term="Locations:priorities;Locations:preemption;Priorities:locations;Preemption:locations" /></h4>
+        <p class="p">Priorities determine which entity or downtime uses a location when more than one entity or downtime is contending for it. Priorities may be any value or expression between 0 and 999, with higher values having higher priority. For simple prioritizing, you should use priorities from 0 to 99. Priorities greater than 99 are used for preempting (bumping or displacing) entities or downtimes currently occupying a location.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Priority values are divided into ten levels (0 to 99, 100 to 199, ..., 900 to 999), with values beyond 99 used for preempting entities or downtimes of a lower priority level. Multiple preemptive levels make it possible to preempt entities or downtimes that are themselves preemptive. This means that an entity, EntA, with a priority of 99 can be preempted by another entity, EntB, with a higher priority level of 199. In turn, another entity, EntC, with a priority of 299 can preempt EntB at the same location.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To preempt an entity currently using a location, a preempting entity or downtime must have a priority at least one level higher than the entity currently at the location. To preempt a downtime in effect at a location, a preempting entity must have a priority at least two levels higher than the current downtime. Since all overlapping location downtimes are processed concurrently (except setup downtimes), a downtime cannot, in effect, preempt another downtime.</p>
+        <p class="p">&#160;</p>
+        <p class="p">A preempted entity will resume processing where it left off unless the location was in the middle of a setup downtime. If the entity initiated a setup downtime before being preempted, it will begin processing the setup logic from the beginning when it resumes.</p>
+        <h5><a name="C-05_2723800551_13816"></a>Assigning priorities<MadCap:keyword term="Priorities:locations;Locations:priorities;Priorities:assign" /></h5>
+        <p class="p">An entity or downtime accesses a location based on its priority. An entity is assigned a priority for accessing a location in the Destination column of the Routing edit table. A downtime is assigned a priority in the appropriate Downtime edit table. The first of the following examples shows a priority of 100 assigned to EntA as it tries to claim Loc2. This priority is high enough to preempt any entity at the location having a priority less than 100. It is not high enough, however, to preempt any downtimes at the location. </p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Use Res1 For N(3,.1)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2, 100</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">This example shows a priority of 200 assigned to a usage-based downtime at Loc4. This priority can preempt any entity at the location with a priority less than 200.</p>
+        <p class="Graphic">
+            <img src="mm-c5-106-1.jpg" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="p">The following table shows the minimum priority level requirements for an incoming entity or an upcoming downtime to preempt the current entity or downtime at the location. </p>
+        <h5>Minimum Required Priority Levels for Preempting at a Location</h5>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellHeading">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellHeading">To preempt the Current Entity<br /></p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellHeading">To preempt the Current downtime</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellHeading" style="text-align: left;">Incoming Entity</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">1 priority level higher</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">2 priority levels higher</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellHeading" style="text-align: left;">Upcoming Downtime</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">1 priority level higher</p>
+                    </td>
+                    <td class="BodyA-Column3-Body3">
+                        <p class="CellBody">Downtimes overlap</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="li_1">The upper left quadrant shows that for an entity to gain access to a location already processing another entity, the incoming entity must have a priority at least one level higher than the current entity's priority.</li>
+            <li class="li_1">The upper right quadrant shows that for an incoming entity to gain access to a location where a downtime is currently in effect, the entity must have a priority at least two levels higher than the downtime's priority.</li>
+            <li class="li_1">The lower left quadrant shows that a for a downtime to preempt an entity currently processing, the downtime must have a priority one level higher than the currently processing entity.</li>
+            <li class="li_1">The lower right quadrant shows that all location downtimes (except setup) are concurrent or overlapping. Setup downtimes preempt as if they were entities.</li>
+        </ul>
+        <p class="p">The following examples demonstrate the explanations above in greater detail.</p>
+        <table style="margin-left: 0; margin-right: auto;">
+            <col style="width: 3in;" />
+            <col style="width: 3in;" />
+            <thead>
+                <tr>
+                    <th>
+                        <h4 style="text-align: left;">Example 1<MadCap:keyword term="Locations:preemption"></MadCap:keyword></h4>
+                        <p class="p" style="text-align: left;"><span style="font-weight: normal;">The following example demonstrates what happens when Ent 1 with a priority of 99 is preempted by Ent 2 which has a priority of 100 or greater.</span>
+                        </p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_30.jpg" style="width: 146px;height: 146px;" />
+                        </p>
+                    </th>
+                    <th>
+                        <h4 style="text-align: left;">Example 4</h4>
+                        <p class="p" style="text-align: left;"><span style="font-weight: normal;">This example illustrates how, regardless of the downtime priority values, downtimes will overlap. The exception is setup downtimes, which preempt downtimes exactly like entities (see Example 5).</span>
+                        </p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_33.jpg" style="width: 141px;height: 128px;" />
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <h4>Example 2</h4>
+                        <p class="p">This example demonstrates what happens when a downtime having a priority of 99 is preempted by an entity having a priority of 200 or greater.</p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_31.jpg" style="width: 147px;height: 142px;" />
+                        </p>
+                    </th>
+                    <th>
+                        <h4>Example 5</h4>
+                        <p class="p">This example demonstrates what happens when a setup downtime with a priority of 99 is preempted by a normal downtime having a priority of 100 or greater.</p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_34.jpg" style="width: 151px;height: 147px;" />
+                        </p>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Example 3</h4>
+                        <p class="p">This example demonstrates the behavior when an entity with a priority of 99 is preempted by a downtime with a priority value of 100 or greater.</p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_32.jpg" style="width: 139px;height: 132px;" />
+                        </p>
+                    </th>
+                    <th>
+                        <h4>Example 6</h4>
+                        <p class="p">This example demonstrates what happens when Ent 1 setup downtime with a priority of 99 is preempted by Ent 2 having a priority of 100 or greater.</p>
+                        <p class="p" style="text-align: center;">
+                            <img src="8_35.jpg" style="width: 137px;height: 127px;" />
+                        </p>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

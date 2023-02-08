@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1383" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1108217"></a><a name="C-14_4292047180_34242"></a>View</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:VIEW;VIEW" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">View “view name”</p>
+        <p class="Syntax_body">View “Cell5”</p>
+        <p class="Syntax_body">View “View10”</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Use this statement to change the view in the Layout window from within your logic. Once the view has been defined from the View menu in main menu, you can use it in the logic.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">All logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;view name&gt;</p>
+        <p class="p">The name of the view defined in the Views dialog. Enclose the name in quotation marks.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">You are giving a presentation on the use of simulation for airport design.  Two hours into the model run, you want to zoom in on the baggage area to show the activity there.  Three hours into the simulation, you want to zoom out to show the entire airport.<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">You are giving a presentation using simulation to management at the orthopedic clinic. Two hours into the simulation, you want to zoom in on a particular area of the clinic to show the activity there. Three hours into the simulation, you want to zoom out to show the entire clinic</MadCap:conditionalText>.<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">You are giving a presentation to management on the factory floor using simulation. Two hours into the simulation, you want to zoom in on a particular cell in the factory to show the activity there. Three hours into the simulation, you want to zoom out to show the entire factory</MadCap:conditionalText>.</p>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">To do this, define two views called Baggage and Terminal using the Views editor on the View menu. Define an independent subroutine and call it in the initialization logic using the <MadCap:keyword term="ACTIVATE" />Activate statement. Enter the following logic in the subroutine:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">To do this, define two views called Exam1 and OrthoClinic using the Views editor on the Options menu. Define an independent subroutine and call it in the initialization logic using the <MadCap:keyword term="ACTIVATE" />Activate statement. Enter the following logic in the subroutine:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">To do this, define two views called Cell1 and Factory using the Views editor on the View menu. Define an independent subroutine and call it in the initialization logic using the <MadCap:keyword term="ACTIVATE" />Activate statement. Enter the following logic in the subroutine:</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">Int X=1</p>
+        <p class="Syntax_body">While X=1 Do</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">If Clock(hr) = 2 Then View “<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">BAGGAGE</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Exam1</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Cell1</MadCap:conditionalText>”<br />If Clock(hr) = 3 Then View “<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">TERMINAL</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">OrthoClinic</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Factory</MadCap:conditionalText>”<br />Wait 1 hr</p>
+        <p class="Syntax_body">}</p>
+    </body>
+</html>

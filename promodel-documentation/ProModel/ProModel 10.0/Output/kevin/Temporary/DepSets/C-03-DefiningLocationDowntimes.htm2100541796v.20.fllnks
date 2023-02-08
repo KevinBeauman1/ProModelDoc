@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/6_37.png" />
+    <Link
+      Url="Content/Topics/C-05-LocationDowntimes.htm" />
+    <Link
+      Url="Content/Topics/6_53.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/6_37.png" />
+    <Link
+      Url="Content/Topics/C-05-LocationDowntimes.htm#C-05_2723800551_1085676" />
+    <Link
+      Url="Content/Topics/6_53.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Downtimes:define resource downtimes"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Define:resource downtimes"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Resources:downtimes:define"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Downtimes:define location downtimes"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Define:location downtimes"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Locations:downtimes:define"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="13" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

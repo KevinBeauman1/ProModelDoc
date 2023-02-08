@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MadCapLog Protocol="2" Description="MadBuild V12 Generated MyWebHelp.fltar" Date="2020-01-14T12:16:09.0415271-07:00">
+    <Messages>Compiling target MyWebHelp...
+Removing previously generated content...
+Loading skin info...
+Build failed: Compiler: The target's type is "WebHelp" but there are no compatible skins in the project.
+
+A "Standard" skin must be created prior to compiling.
+Saving log to "C:\_git\ProModel.Documentation\ActiveX\ActiveX 2014\ActiveX 2014, 06-18-2014\Output\anelson\MyWebHelp\MyWebHelp.mclog"
+</Messages>
+    <Warnings />
+    <Errors>
+        <LogEntry File="../../../Project/Targets/MyWebHelp.fltar" Message="Build failed: Compiler: The target's type is &quot;WebHelp&quot; but there are no compatible skins in the project.&#xD;&#xA;&#xD;&#xA;A &quot;Standard&quot; skin must be created prior to compiling.&#xA;" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="MyWebHelp" ErrorID="10086" />
+    </Errors>
+</MadCapLog>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="772" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_461475"></a>
+            <MadCap:keyword term="InputTextPrompt;PMEventsHandler:InputTextPrompt" />InputTextPrompt</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span><span class="_Override" style="font-style: italic;">ObjectVariable</span>_InputTextPrompt(<span class="_Override" style="color: #0000ff;">ByVal Message As String, ByVal Default As String, Value As String, ByVal Flags As Long</span>) As Long</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>The <span class="_Override" style="font-variant: small-caps;">prompt</span> statement in ProModel can be defined either as a simple prompt/response dialog box or as a list of options to choose from.  This event fires whenever a simple <span class="_Override" style="font-variant: small-caps;">prompt</span> statement is encountered in the model logic.  Use the ListSelectPrompt event to handle <span class="_Override" style="font-variant: small-caps;">prompt </span>statements defined as choice lists.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Message</span>	 (String) – Message to the user, describing the meaning and asking for a value</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Default</span> 	(String) – Text shown in the edit field of the dialog (before user changes it)</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Value</span> 	(String) – Variable to hold value given by user</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Flags</span> 	 (Long) – Not Used</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>
+        </p>
+        <p class="objects">0 = Use the default value</p>
+        <p class="objects">1 = Set the variable to the value in <span class="_Override" style="font-style: italic;">Value</span> parameter</p>
+        <p class="objects">2 = Show the prompt dialog and let the user enter a value</p>
+        <p class="objects">3 = Abort the simulation</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>In the following example we start with the form shown below:</p>
+        <p class="p">
+            <img src="3_2.png" style="width: 320.64px;height: 240px;" />
+        </p>
+        <p class="Example">&#160;</p>
+        <p class="p">Private Function pmEventsObject_InputTextPrompt(ByVal <span class="_Override" style="font-style: italic;">Message</span> As String, _</p>
+        <p class="p">ByVal <span class="_Override" style="font-style: italic;">Default</span> As String, <span class="_Override" style="font-style: italic;">Value</span> As String, ByVal Flags As Long) As Long</p>
+        <p class="objects">	Label1.Caption = "Prompt: " &amp; <span class="_Override" style="font-style: italic;">Message</span></p>
+        <p class="objects">	Textbox1.Text = <span class="_Override" style="font-style: italic;">Default</span></p>
+        <p class="objects">	If OptionButton(0).Value = True Then</p>
+        <p class="objects2">		pmEventsObject_InputTextPrompt = 0  						'Use default</p>
+        <p class="objects">	ElseIf OptionButton(1).Value = True Then</p>
+        <p class="objects2"><span class="_Override" style="font-style: italic;">Value</span> = Textbox2.Text</p>
+        <p class="objects2">		pmEventsObject_InputTextPrompt = 1 						'Use value from textbox2</p>
+        <p class="objects">	ElseIf OptionButton(2).Value = True Then</p>
+        <p class="objects2">		pmEventsObject_InputTextPrompt = 2 						'Show standard prompt</p>
+        <p class="objects">	Else</p>
+        <p class="objects2">		pmEventsObject_InputTextPrompt = 3						'Abort simulation</p>
+        <p class="objects">	End If</p>
+        <p class="p">End Function</p>
+    </body>
+</html>

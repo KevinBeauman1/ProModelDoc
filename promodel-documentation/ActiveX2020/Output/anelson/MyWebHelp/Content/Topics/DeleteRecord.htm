@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Data Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>DeleteRecord</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_462763"></a><a name="kanchor57"></a>DeleteRecord</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>DeleteRecord <span class="_Override" style="color: #0000ff;">RecordType</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Deletes the currently selected record from the specified table.  Be very careful when using this method, because it will delete records without any data integrity checking.  This means that even if the record is referenced by a record in another table, it will be deleted and make the other record invalid.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> 	(Long)  The Record Type (Table Number) of the table you wish to delete a record from.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:		</span>The following example deletes all records from the Locations table in the mfg_cost model.  Be careful with this one, or you could disable the mfg_cost demo model if you then save it.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub EmptyLocs()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim rec_count As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 1, rec_count</p>
+        <p class="objects2">	For x = 1 To rec_count</p>
+        <p class="objects3">		pmDataObject.SelectMainRecordByIndex 1, 1</p>
+        <p class="objects3" style="font-weight: bold;">		pmDataObject.DeleteRecord <span class="_Override" style="color: #0000ff;">1</span></p>
+        <p class="objects2">	Next x</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+        <p class="Example">&#160;</p>
+    </body>
+</html>

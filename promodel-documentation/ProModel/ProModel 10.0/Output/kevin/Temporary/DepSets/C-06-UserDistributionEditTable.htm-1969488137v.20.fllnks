@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c6-251-2.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c6-251-2.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086514" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="User:distributions:edit table"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="User:distributions:type (discrete or continuous)"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="User:distributions:cumulative"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="User:distributions:table"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

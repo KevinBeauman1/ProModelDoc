@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="547" MadCap:lastWidth="559" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086199"></a><a name="C-05_2723800551_30141"></a>Preemptive Entities<MadCap:keyword term="Entity:preemptive;Preemption:entities" /></h3>
+        <p class="p">Often during a simulation, it is desirable to have an entity preempt an activity at a location or resource in order to gain access to that location or resource. These situations can be modeled using preemptive priorities. An entity with a high enough priority can take over a location processing an entity or a location that is down. An entity with high enough priority can also take over a resource when it is being used by another entity or when it is off shift. When an entity takes over a location that was down or in use by another entity, the entity has preempted the downtime or the other entity. </p>
+        <p class="p">&#160;</p>
+        <p class="p">In a multi-capacity location, the occupying entity will be preempted only if there is no more capacity at the location and the occupying entity is undergoing an operation time. Further, the occupying entity cannot be one that has been split, created, grouped, combined, ungrouped, or unloaded at the location.</p>
+        <p class="p">&#160;</p>
+        <p class="p">An entity must have a priority one level higher than an occupying entity to preempt the occupying entity. An entity must have a priority that is two levels higher than a downtime to preempt the downtime. If an entity does not have a high enough priority to preempt another entity or downtime at a location, it waits in line (oldest by priority) to access the location (see <MadCap:xref class="lowercase_no_see" href="C-05 - Location Priorities and Preemption.htm#C-05_2723800551_1085757" target="" title="" alt="">Location Priorities and Preemption on page 1</MadCap:xref>).</p>
+        <p class="p">&#160;</p>
+        <p class="p">Note that the priority of an entity is not defined for the entity itself. For claiming a location, it is defined in the destination field of the routing. For capturing a resource it is defined as part of the <MadCap:keyword term="GET" />Get, <MadCap:keyword term="JOINTLY GET" />Jointly Get, or <MadCap:keyword term="USE" />Use statement. A priority may, however, be assigned to an attribute of a referenced entity when it attempts to access a resource or location. </p>
+        <h4>
+            <MadCap:keyword term="Entity:preemptive:example" />Example of Preemptive Entities</h4>
+        <p class="p">In this example entity (EntA) arrives at location Loc1. Immediately upon arrival it requests to use resource Res1 for a normally distributed amount of time. The priority for obtaining the resource is 99, which means that it is a non-preemptive request. When Res1 becomes available, EntA will be first in line because it has the highest non-preemptive priority possible. When processing is complete for this entity, it is routed to Loc2 with priority 200. This means that it can preempt another entity or a downtime that may already be in process at Loc2. (See <MadCap:xref href="C-05 - Location Downtimes.htm#C-05_2723800551_1085676" target="" title="" alt="">Location Downtimes</MadCap:xref> and <MadCap:xref class="lowercase_see" href="C-05 - Resources.htm#C-05_2723800551_1086660" target="" title="" alt="">Resource Downtimes</MadCap:xref> for more details on entity preemption.)</p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Use Res1,99 For N(3,.1)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2,200</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 2.5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

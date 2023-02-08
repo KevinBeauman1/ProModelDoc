@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1090841" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Graphic editor:edit:library graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

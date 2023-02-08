@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-01_754432083_1105926" />
+    <Anchor
+      Name="C-01_754432083_1035380" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Assembly lines"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Job shops"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Transfer lines"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="JIT systems"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="KANBAN systems"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="Flexible manufacturing systems"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Supply chains &amp; logistics"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="27" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

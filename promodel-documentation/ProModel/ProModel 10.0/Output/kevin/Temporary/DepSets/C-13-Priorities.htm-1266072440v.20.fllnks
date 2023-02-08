@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm" />
+    <Link
+      Url="Content/Topics/C-05-ResourceShiftDowntimePriorities.htm" />
+    <Link
+      Url="Content/Topics/C-05-PreemptiveEntities.htm" />
+    <Link
+      Url="Content/Topics/C-07-PreemptionProcessLogic.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm#C-05_2723800551_1085757" />
+    <Link
+      Url="Content/Topics/C-05-ResourceShiftDowntimePriorities.htm#C-05_2723800551_1086774" />
+    <Link
+      Url="Content/Topics/C-05-PreemptiveEntities.htm#C-05_2723800551_1086199" />
+    <Link
+      Url="Content/Topics/C-07-PreemptionProcessLogic.htm#C-07_3886599965_1089500" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-13_1919394185_1091981" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Priorities"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Logic elements:priorities"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="USE"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="SEND"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

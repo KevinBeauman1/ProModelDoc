@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1089" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Attributes</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="initialization logic;termination logic;model elements" />Initialization and Termination Logic</h1>
+        <p style="text-align: left;">
+            <img src="Resources/Images/InitTermLogic.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2>Initialization Logic</h2>
+        <p>Initialization logic occurs at the very start of simulation and allows you to initialize arrays, variables, and other elements.  Other common uses of initialization logic include:</p>
+        <ul>
+            <li>Displaying messages</li>
+            <li>Prompting for values</li>
+            <li>Activating subroutines that process logic based on a timer</li>
+        </ul>
+        <h2>Termination Logic</h2>
+        <p>Termination logic occurs at the very end of simulation and allows you to summarize data collection or write special statistics to an array. Another common use of termination logic is displaying messages.</p>
+        <h3>
+            <MadCap:keyword term="initialization logic;termination logic" />Execution of Initialization and Termination Logic</h3>
+        <p>It is important to understand exactly when initialization and termination logic are executed. When you run a simulation, the following things occur in the order listed:</p>
+        <ol>
+            <li>Arrays are initialized based upon the defined import specifications.</li>
+            <li>Variables are initialized to the values specified in the variables table.</li>
+            <li>Macros and scenario parameters are set to their user-specified values.</li>
+            <li>Initialization logic is performed.</li>
+            <li>Simulation begins. Initial arrivals and downtimes are scheduled and simulation processes begin.</li>
+            <li>Simulation ends.</li>
+            <li>Termination logic is performed.</li>
+            <li>Statistics are compiled.</li>
+        </ol>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3224" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h4><a name="C-05_2723800551_1085629"></a>Capacities and Units</h4>
+        <h5>Capacities<MadCap:keyword term="Locations:capacity;Capacity:location" /></h5>
+        <p class="p">A location <span class="_Override" style="font-style: italic; font-weight: bold;">capacity</span> is the maximum number of entities it can hold at any one time. In general, multi-capacity locations are used to model locations such as queues, waiting areas, or any other type of location where multiple entities may be held or processed concurrently. Consider the following multi-capacity location:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-100-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-100-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h5>Units<MadCap:keyword term="Locations:units;Units:location" /></h5>
+        <p class="p">A location <span class="_Override" style="font-style: italic; font-weight: bold;">unit</span> is defined as an independently operating station. When multiple, independently operating stations all perform the same operation and are interchangeable, they form a multi-unit location. Consider the following multi-unit location:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-100-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-100-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h5><a name="C-05_2723800551_1085643"></a><a name="C-05_2723800551_18866"></a>Multi-Capacity, Multi-Unit, and Multiple Locations<MadCap:keyword term="Locations:multi-capacity vs. multi-unit;Multi-unit:locations;Multiple capacity location" /></h5>
+        <p class="p">Sometimes it can be unclear whether to use multi-capacity, multi-unit, or multiple locations when defining parallel workstations. Suppose, for example, we have three parallel stations, each performing the same operation as shown below. There are three possibilities for defining the machines: (1) as a multi-capacity location, (2) as a multi-unit location, or (3) as multiple locations. The method you choose to define the locations depends on your application.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-100-3.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="5-1-13.jpg" />
+        </p>
+        <p class="p">For many situations modeling parallel stations as a multi-capacity location works fine. By placing an additional graphic for each station, both the logic and visual effects of having parallel stations can be achieved. However, you should use a multi-unit location instead of a multi-capacity location when any of the following situations exist:</p>
+        <ul>
+            <li class="li_1">Individual units have independent downtimes.</li>
+            <li class="li_1">It is important to collect individual statistics on each unit. </li>
+            <li class="li_1">It is important, for visual effect, to see entities select individual units by a routing rule other than First Available (e.g., By Turn, Fewest Entries, Longest Empty, etc.).</li>
+            <li class="li_1">It is important, for visual effect, to have a status light assigned to each unit. </li>
+        </ul>
+        <p class="p">In some situations, it may even be desirable to model multi-unit locations as totally separate locations. Multiple locations should be used instead of multi-unit locations when:</p>
+        <ul>
+            <li class="li_1">A path network is defined but each location must interface with a different node on the network.</li>
+            <li class="li_1">Different units have different processing times.</li>
+            <li class="li_1">The input for each unit comes from different sources.</li>
+            <li class="li_1">The routing is different for each unit.</li>
+        </ul>
+        <h4 class="Heading4">Defining a Multi-Unit Location<MadCap:keyword term="Locations:define:multi-unit locations"></MadCap:keyword></h4>
+        <p class="p">To create a multi-unit location, enter a number greater than one as the number of units for a location. A corresponding number of locations will be copied below the multi-unit location record in the Location edit table, each with a numeric extension designating the unit number of that location. Successive graphics, representing individual units will be drawn to the right of the original location, but may be moved normally.</p>
+        <p class="p">The original location record becomes the prototype for the unit records. Each unit will have the prototype's characteristics unless the individual unit's characteristics are changed. In the table below, each unit of the location has a clock-based downtime defined because the parent location, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Loc2</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">warmer bassinet</MadCap:conditionalText>, was assigned a clock-based downtime. However, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Loc2.1</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">warmer bassinet.1</MadCap:conditionalText> has an additional entry-based downtime and <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Loc2.2</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">warmer bassinet.2</MadCap:conditionalText> has an additional usage-based downtime. Any other characteristic, including the icon, can be changed as if the unit were an independent location.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-101-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="sm-c5-103-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">If the number of units is changed, the individual unit location records are automatically created or destroyed accordingly.</p>
+        <p class="p">Individual units of a multi-unit location can be selected to process an entity according to the Selecting Incoming Entities option in the Rules dialog box. (See the discussion regarding the Rules dialog box later in this section.)</p>
+        <p class="p">In the output report, scheduled hours for the parent location will be the sum of the scheduled hours for the individual units.</p>
+        <p class="p_10">Please Note: 1.	It is not possible to create a path network to interface with each unit of a multi-unit location. You must define the locations individually and use multiple locations as discussed above. 2.	It is not possible to route an entity to a specific unit of a multi-unit location. For example, typing Loc2.3 in the destination field of the Routing edit table is not allowed.</p>
+    </body>
+</html>

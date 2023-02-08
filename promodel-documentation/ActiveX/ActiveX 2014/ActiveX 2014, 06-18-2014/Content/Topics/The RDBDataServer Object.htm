@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="497" MadCap:lastWidth="628">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1><a name="C-01_2914010915_463585"></a>
+            <br />The <MadCap:keyword term="RDBDataServer Object" />RDBDataServer Object</h1>
+        <p class="p">To use the RDBDataServer object it must be registered, which should have done automatically during installation. This library is listed as RDBSrv in the references in your VB Editor.</p>
+        <p class="p">&#160;</p>
+        <p class="p">As you work with the RDBDataServer, keep in mind that you are working with a database, not a text file or spreadsheet.  This means that there is some information that you cannot get directly from the .rdb file.  For example, when you have multiple replications, periods, or scenarios, you can’t get the averages, standard deviations or totals using only the RDBDataServer methods.  You must get the same data elements from each replication, period or scenario, then perform the calculations in your spreadsheet or other program.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When talking about tables, each section of the standard output statistics report corresponds to a table in the .rdb file.  There are some tables that may or may not be available, depending upon whether that type of data is collected for the specific model (like Logs).  However, the table numbers are pre-defined, so each number will always reference the same table, whether or not it is in use.</p>
+        <p class="p">&#160;</p>
+        <p class="p">If you want to get the names of the records (i.e. – Location or Resource Names), you will need to get the data for field number 0 (zero).  The zero column in each table has the Record ID from the model.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The RDBDataServer uses the following methods:</p>
+        <ul>
+            <li class="li_1">CloseFile</li>
+            <li class="li_1">FieldName</li>
+            <li class="li_1">GetPositionInfo</li>
+            <li class="li_1">GetValue</li>
+            <li class="li_1">OpenFile</li>
+            <li class="li_1">PeriodName</li>
+            <li class="li_1">PositionIsValid</li>
+            <li class="li_1">RecordName</li>
+            <li class="li_1">ReplicationNumber</li>
+            <li class="li_1">ScenarioName</li>
+            <li class="li_1">SelectData</li>
+            <li class="li_1">TableName</li>
+        </ul>
+    </body>
+</html>

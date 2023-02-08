@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Material Handling Systems">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Crane Systems</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-CraneSystems.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-MaterialHandlingSystems.htm">Material Handling Systems</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Crane Systems</span>
+        </div>
+        <h3><a name="C-06_1157716610_1319505"></a><a name="C-06_1157716610_97524"></a>Crane Systems</h3>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">To implement cranes in ProModel, the Path Network module allows three types of networks: non-passing, passing, and cranes. From this module, you can lay down and orient a <a name="kanchor1285"></a>crane envelope, define the bridge separation distance, and define the graphics for rails and bridges in the bay. Additionally, the Resources module allows you to define <a name="kanchor1286"></a>bridge and hoist speeds, and hoist graphics for one or more cranes operating in the same bay.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="C-06_1157716610_32230"></a>Creating Mu<a name="kanchor1287"></a>lti-Bridge Crane Systems</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Modeling <a name="kanchor1288"></a>multiple cranes operating in the same bay has never been so easy!</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">User defined bridge separation distances, extensions to regular dynamic resource usage statements, and a set of new priority rules have been introduced in order to let you manage conflicting movements in the same envelope zone.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1289"></a><b>Crane Envelope</b> The parallelogram-shaped area represented by a crane type path network, bounded by two rails and the lines connecting the endpoints of those rails. The lines connecting the endpoints of rails are effectively the two extreme positions of the center-lines of any bridges operating within the envelope. ProModel uses the end of one of the rails as the envelope origin to serve as a reference point for all logical distance calculations within the envelope.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1290"></a><b>Bridge Separation</b> The minimum distance you want to maintain between center-lines of two neighboring bridges. This distance is not related to how close a bridge center-line can get to one of the extreme endpoints of the envelope. Caution: if bridge B tries to move to a node N that lies very close to the left end of the envelope, and bridge A is to the left of bridge B, a run-time error will occur if the space remaining between node N and bridge A is less than the bridge separation distance. To avoid such problems, define the crane envelope wide enough to allow sufficient space beyond any <a name="kanchor1291"></a>serviceable nodes.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="C-06_1157716610_13251"></a>Crane Priorities, Preemption &amp; Bridge Bump-Away</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">ProModel associates two types of priorities with the operation of crane resources: (1) <a name="kanchor1292"></a>resource request priority, and (2) <a name="kanchor1293"></a>crane move priority.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1294"></a><b>Resource Request</b> Priorities used to resolve any conflicts that arise between multiple tasks requesting the same resource at the same time. This priority scale follows the rules that regular dynamic resource priorities do (i.e., 10 levels of 100). Use this priority to preempt crane resources from lower priority tasks to serve higher priority tasks.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1295"></a><b>Crane Move Priorities</b> Used for multiple bridges operating in the same envelope, to decide which crane bridge has priority over another while moving. This priority scale is also in the range [0...999], but does not have any preemption levels. Any higher value has overriding priority over a lower value. You can assign priorities to crane resources temporarily, on a task-by-task basis via extra parameters in the <a name="kanchor1296"></a>Get, <a name="kanchor1297"></a>Jointly Get, <a name="kanchor1298"></a>Use, and <a name="kanchor1299"></a>Move With statements.  Moving to downtime, off-shift or break nodes has the default (0) move priority. Moving to park has the lowest move priority (the same as an idle crane).</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">You can further sub-divide crane move priorities into three categories:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1300"></a><b>Task Move Priority</b> Assigned by the modeler via parameters passed to resource usage statements (<a name="kanchor1301"></a>Get, <a name="kanchor1302"></a>Move With, etc.). Used as the base move priority for travel to pick up and travel to deposit.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1303"></a><b>Claim Priority</b> If crane A’s bridge is headed towards its ultimate (task) destination, the claim priority is equal to the task move priority of crane A. Otherwise (if crane A’s bridge is moving under the influence of crane B), claim priority is equal to the claim priority of the claim inducer bridge (bridge B).</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1304"></a><b>Effective Claim Priority</b> Applies only to envelopes with three or more cranes. If multiple crane bridges are moving in the same direction with overlapping claims, the effective claim priority of any bridge in the overlapping region is the maximum of all the claim priorities of those bridges.</li>
+        </ul>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1305"></a><a name="C-06_1157716610_21874"></a>Crane Operations</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The operation of cranes in ProModel has been designed to closely resemble the real-life operation of cranes. Under most circumstances, you need not be concerned with how ProModel handles crane movements. The following operational specifications are intended as a reference only and are not essential in order to model cranes using ProModel.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Crane Animation</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">During a simulation run, entities picked up by a crane appear graphically on the entity spot for the hoist.  The hoist graphic appears above the entity graphic and the bridge of the crane appears on top of the entity and hoist graphics.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Crane Specifications</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">When you define cranes for your model, consider the following: </p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Crane Graphics</b>   In the Resources module, the selected graphic represents the hoist. You may define, edit, and size multiple graphics for the same hoist the same way you create multiple graphics for other resources.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Units &amp; Multiple Cranes</b>   Crane resources limit you to one unit. When you define multiple cranes operating in the same envelope, define them as separate resources—each assigned to the same crane network. </li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Downtimes</b>   In addition to the clock and usage downtimes you may define for cranes, you can assign cranes to shifts in the same way you assign other resources. When a crane goes down, it moves to the downtime node specified in the DTs dialog. If you do not associate a node with the crane downtime, the crane goes down at its current position.</li>
+            <li class="li_1" value="4" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Specifications   Cranes</b> require separate values for bridge and hoist speed and acceleration. You must enter Speed (Empty), Speed (Full), and Accelerate and Decelerate values for bridge movement along the rails and hoist movement across the bridge. In each field, the format is Bridge Value, Hoist Value (e.g., if you enter “150, 20” in the speed field, the bridge moves at 150 and the hoist at 20 feet per minute). Although you must enter speed values, acceleration and deceleration values are optional (if you leave them blank, ProModel assumes the crane to have an infinite acceleration and deceleration capability. (Hint: this provides better run-time computational efficiency).</li>
+            <li class="li_1" value="5" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Crane Searches</b>  Define Work and Park searches in the same way you define searches for other resources.</li>
+            <li class="li_1" value="6" data-mc-conditions="PM-MM Conditionals.ProModel"><b>Node Logic</b>   Define entry and exit logic for cranes at nodes in the same way you define node logic for other resources.</li>
+        </ul>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Handling <a name="kanchor1306"></a>Zone Claims In Multi-Crane Envelopes</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If a crane is in one of the following states, it will be referred to as “immovable at a node.” No other crane will be able to push this crane away, regardless of its priority.</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">Picking up or depositing an entity.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">Being used at a location.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">Having a downtime, off-shift time, or break time.</li>
+        </ul>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1307"></a>Extended Movement Zone The net zone that it needs to traverse ± <a name="kanchor1308"></a>bridge separation distance (± depending on the direction that it will go).</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Before starting to move, any &lt;crane A&gt; attempts to claim its extended movement zone (zone A) for the entire movement duration.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">ProModel can reject the <a name="kanchor1309"></a>claim attempt of crane A for zone A for several reasons:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">If there are immovable cranes in zone A</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">If there are any cranes in zone A with move priorities greater than or equal to<a href="javascript:void(0);" class="MCTextPopup popup popupHead" style="font-size: 0.9em; vertical-align: super">1<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody"><span class="MCTextPopupArrow"></span>Special case treatment not “&gt;=” but strictly “&gt;” if all of the following conditions hold: (1) if the bridge that A is trying to oppose is stationary, (2) unless crane A is trying to move just to park (if A has a task or if it is trying to move out of the way of another bridge), (3) if the one A is trying to push is idle or its bridge was blocked before reaching its destination.</span></a> the move priority of crane A, if they are going in the opposite direction, or they are going in the same direction with conflicting destinations.<a href="javascript:void(0);" class="MCTextPopup popup popupHead" style="font-size: 0.9em; vertical-align: super">2<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody"><span class="MCTextPopupArrow"></span>Destination Conflict Test: If sign (B' - A' - sign(existing claim)*(bridge_separation)) = sign (existing claim) then not conflicting.</span></a></li>
+        </ul>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Case Examples of <a name="kanchor1310"></a>Zone Claims</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The following cases illustrate specific situations with examples:</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Case 1</h5>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_113.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Bridge B starts moving first, from [B] to [B'] and claims the zone [B'~B] in the ¨ direction. Bridge A wants to move from [A] to [A'] in the opposite direction. If the move priority of A is less than or equal to the move priority of B, we let bridge A start moving towards [B' - bridge separation] only. If A has a higher move priority, B is stopped immediately and sent back to [A' + bridge separation]. In the latter case, A may queue up behind B.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Case 2</h5>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_114.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Bridge B starts moving first, from [B] to [B'], then bridge A wants to move from [A] to [A']. Bridge B claims zone [B~B'] in the Æ direction. Since bridge A wants to move in the same direction and their destinations do not conflict (assuming that B'-A' is greater than the bridge separation), bridge A moves all the way. If B has already cleared the zone [A~(A' + bridge separation)] by the time A wants to start moving, A moves independently. Otherwise, A may queue up behind B. (If the distance B'-A' is less than the given bridge separation and the move priority of A is greater than the move priority of B, bridge A will push away bridge B, and crane B will not respond to the request while passing over [B']).</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Case 3</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_115.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Bridge B starts moving first, from [B] to [B'], then bridge A wants to move from [A] to [A']. Bridge B claims the zone [B~B'] in the Æ direction. Since bridge A wants to move in the same direction and their destinations do conflict, priorities will be considered. If the move priority of A is not greater<a href="javascript:void(0);" class="MCTextPopup popup popupHead" style="font-size: 0.9em; vertical-align: super">3<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody"><span class="MCTextPopupArrow"></span>In this special case, bridge A’s claim priority competes with the task move priority of bridge B.</span></a> than the move priority of B, bridge A starts moving towards [A'' = B' - bridge separation] only. Otherwise, A will push B away, and B will not respond to the request while passing over [B']. In both cases, A may queue up behind B.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Case 4</h5>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_116.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Bridge B starts moving first from [B] to [B'], claiming zone [B~B'] in the Æ direction. Bridge A wants to move from A to A' and starts moving behind B. Bridge C wants to move in the opposite direction with a higher move priority than both of the other bridges. ProModel interrupts bridges A and B and lays a new course for both bridge B [B'' = C' - bridge separation] and bridge A [A'' = B'' - bridge separation]. In this case, B may queue up behind A, and C behind B.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Case 5</h5>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_117.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">This is an extension of Case 4. Assume that the move priorities for crane bridges A, B, and C are 3, 1, and 2 respectively. When bridge C tries to claim zone [C'~C] in the ¨ direction, it faces an “e<a name="kanchor1311"></a>ffective priority” of 3 and is unsuccessful in its original claim, so it starts moving towards [B' + bridge separation]. Bridge B goes outside the effect of bridge A in the second part of its movement, [(A' + bridge separation) ~ B'] at time t0. However, bridge C does not override bridge B and start moving towards [A' + 2 * bridge separation] until the first “<a name="kanchor1312"></a>reclaim trigger event<a href="javascript:void(0);" class="MCTextPopup popup popupHead" style="font-size: 0.9em; vertical-align: super">4<span class="MCTextPopupBody MCTextPopupBody_Closed needs-pie popupBody"><span class="MCTextPopupArrow"></span>Discussed later in this section.</span></a>” after time t0.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If ProModel rejects the original claim of crane A, crane A claims the largest available portion of the original zone, and implements the procedure described below to move its bridge through the subset zone. The crane waits until a “reclaim trigger event” occurs, and then repeats the claim attempt to let its bridge traverse the remaining distance. The hoist, on the other hand, moves directly to its relative destination on the bridge, independent of the bridge zone claim results. In case of bridge interruption, the hoist does not stop moving. Therefore, for any particular crane move, the combined trajectory of hoist and bridge may change depending on zone availability at the time of the claim.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If crane A accepts the claim attempt, all cranes inside the claimed extended zone bump away at the time of the claim. This claim also prevents any other cranes with move priority less than or equal to the move priority of A from entering the claimed zone in conflicting directions.</p>
+        <p class="p_10" style="font-style: italic;" data-mc-conditions="PM-MM Conditionals.ProModel">Zone Claim Notes: A crane cannot do a pickup or deposit while another crane pushes it away, even though the request might be on its way. When you interrupt a crane bridge and ask it to make a new claim (or update its claim), its <a name="kanchor1313"></a>speed is reset to zero and ProModel re-evaluates its mobility characteristics. ProModel recalculates the move time with these new parameters. This rule also applies to bridges that are moving when a bridge behind them with a higher priority and a conflicting destination makes a new claim to go in the same direction. See Case 3 (when priority of A is greater than priority of B) for an example.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Treatment of Potential <a name="kanchor1314"></a>Queue-Up Situations</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">For all bridge claims with the potential of having two bridges queue up after one another (mentioned in the example cases above), the following rule applies:</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The <a name="kanchor1315"></a>acceleration rate (a), <a name="kanchor1316"></a>maximum speed (s) and <a name="kanchor1317"></a>deceleration rate (d) of the <a name="kanchor1318"></a>following bridge (F) are compared with the a, s, and d of the <a name="kanchor1319"></a>leading bridge (L). If all of the following conditions are true, bridge F moves independent of bridge L.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel">Conditions for <a name="kanchor1320"></a>No Queue-Up</h5>
+        <ol>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">aF &lt;= aL	  The following bridge cannot accelerate faster than the leading bridge.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">sF &lt;= sL  The following bridge’s maximum speed cannot be greater than the leading bridge.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">dF &gt;= dL	  The following bridge can decelerate equally or faster than the leading bridge.</li>
+        </ol>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If any one of the above conditions fail, bridge F moves at the same speed as bridge L, maintaining the distance that existed between them at the time F started moving.</p>
+        <p class="p_10" data-mc-conditions="PM-MM Conditionals.ProModel">Please Note: Condition 3 usually creates a deviation from the typical real life situation, but it is necessary to avoid time consuming computations that can adversely affect the run-time performance of models with crane resources. To avoid unrealistic <a name="kanchor1321"></a>queue-ups when modeling multiple bridges with different mobility characteristics in the same crane envelope, make either no bridge deceleration entry (<a name="kanchor1322"></a>infinite deceleration), or use the same overall average deceleration rate for all crane bridges in that envelope.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1323"></a>Bridge Motion after Queue-Up</h5>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_119.png" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If bridge A is queued up behind bridge B, bridge A goes through up to two stages of movement. The first stage occurs throughout the movement of bridge B. Bridge A mimics bridge B’s motion, maintaining its original distance from bridge B.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The second stage occurs after bridge B stops. Bridge A continues traveling with the former average speed of bridge B until it reaches its destination.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If bridge B is moving to accomplish its own task (as opposed to just moving out of A’s zone), then bridge A might stop earlier, without going through the second stage. In this case, the total traveling time for bridge A is calculated as if bridge A were traveling with bridge B’s average speed.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">When a bridge arrives at its destination, it triggers a chain queue-up re-evaluation that penetrates the crane envelope in the opposite direction that the stopped bridge was moving. This chain re-evaluation handles cases in which there were <a name="kanchor1324"></a>multiple bridges queued up behind the stopped bridge.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Moving Idle Cranes can <a name="kanchor1325"></a>Respond to Resource Requests</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">A crane can be idle and moving at the same time (moving to park or being pushed away by another). Independent of its current position and movement direction, the crane still has the capability to respond to resource requests coming from anywhere in the envelope. If allocated to a task with high enough travel-to-pickup move priority, the crane may reverse direction or terminate its move early, bumping other crane bridges on its way.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Whenever a crane bridge changes its claim, it checks to see if there are any bridges behind it that are going in the same direction with overlapping claims. If there are any, the newly claiming crane triggers a chain queue-up re-evaluation towards the following cranes. The following example demonstrates this case.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="9_122.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">At time t0, crane A is called for a task and starts moving to [A'] with move priority mpA, pushing idle bridge B to [B' = A' + bridge separation]. At time t1 (bridge A and B are still moving), a request for crane B comes from [B" (1 or 2)] with move priority mpB. Bridge B is allocated to the task immediately since it is available at the time.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If the new destination of bridge B is [B"1], the new claim of bridge B does not conflict with the existing claim of bridge A, so the move priorities are not significant. ProModel re-evaluates all motion values for crane B (acceleration, deceleration, empty and full speeds for both the hoist and the bridge) and crane B starts moving to its new destination. If the bridge motion expressions for crane B have changed their values between t0 and t1, the queue-up status between bridges B and A (and any others behind A) may change, so ProModel performs a chain queue-up re-evaluation.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">If the new destination of bridge B is [B"2], the new claim of bridge B conflicts with the existing claim of bridge A, so ProModel considers the move priorities:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">If mpB &lt;= mpA, then B does not have enough priority to stop A before A gets to its destination.  Bridge B will have to go on moving until [B'] and wait until it can claim the region [B"2 ~ B'] in the Æ direction.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">If mpB &gt; mpA, then B does have overriding priority over A. Bridge B stops bridge A at [B"2 - bridge separation], starting a chain move termination which tells bridge A to stop any other followers with the appropriate bridge separation distances between each.  In this case, bridge A (and other possible followers) will have to wait until the next reclaim trigger event to attempt reaching their original destinations.</li>
+        </ul>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1326"></a>Reclaim Trigger Events</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Unsuccessful claims of all crane bridges in an envelope are re-attempted when a reclaim trigger event occurs in that envelope. The following events are considered to be triggers for claim re-evaluations in the related envelope:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">The duration of a <a name="kanchor1327"></a>Use &lt;crane&gt; statement expires.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">You free a crane using the <a name="kanchor1328"></a>Free statement.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">A crane completes a deposit (unless you specify the <a name="kanchor1329"></a>KEEP option).</li>
+            <li class="li_1" value="4" data-mc-conditions="PM-MM Conditionals.ProModel">A crane completes a pickup and the crane is about to start moving to deliver.</li>
+            <li class="li_1" value="5" data-mc-conditions="PM-MM Conditionals.ProModel">A crane downtime ends.</li>
+            <li class="li_1" value="6" data-mc-conditions="PM-MM Conditionals.ProModel">You preempt a crane resource.</li>
+            <li class="li_1" value="7" data-mc-conditions="PM-MM Conditionals.ProModel">A bridge arrives at its task destination (before elapsing pickup/deposit time).</li>
+            <li class="li_1" value="8" data-mc-conditions="PM-MM Conditionals.ProModel">There are no moving task bridges left (for envelopes with 3 or more cranes only).</li>
+        </ul>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">In the first six cases, a crane changes state from “<a name="kanchor1330"></a>immovable” to a <a name="kanchor1331"></a>finite move priority. The seventh case may change the “effective move priorities” of other cranes. ProModel requires the eighth case for envelopes with three or more bridges with overlapping operation zones: It ensures that two or more unsatisfied, opposing claims with the same move priority will resolve their conflict based on earlier task assignment time instead of locking up the crane system. Hence, all of the above cases create a potential to realize previously unsuccessful claims.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The reclaim trigger events for each envelope echo in the trace together with the triggering reason for model debugging purposes. The results of reclaim attempts for each crane resource and its effects on other crane resources in the same envelope are also displayed.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1332"></a>Other Crane Operation Rules</h4>
+        <ol>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">If an entity currently possesses a crane, all move logic for the entity must use a <a name="kanchor1333"></a>Move With statement (until you free the crane)—the entity cannot move without the crane.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">Although an entity cannot possess more than one crane at a time, the entity may possess a crane and a resource of another type.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">If a crane is in one of the following states, another crane cannot push it away.</li>
+        </ol>
+        <blockquote>
+            <ol>
+                <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">	Picking up or depositing an entity.</li>
+                <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">	Being used at a location.</li>
+                <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">	Experiencing a downtime, off-shift time, or break time.</li>
+            </ol>
+        </blockquote>
+        <ol start="4">
+            <li class="li_1" value="4" data-mc-conditions="PM-MM Conditionals.ProModel">	The hoist moves to its relative destination on the bridge independent of the bridge zone claim attempt outcomes.  The hoist does not stop for bridge interruption so, for any particular crane move, the combined <a name="kanchor1334"></a>trajectory of hoist and bridge may change depending on zone availability at the time of the claim.</li>
+            <li class="li_1" value="5" data-mc-conditions="PM-MM Conditionals.ProModel">When a crane pushes away an <a name="kanchor1335"></a>idle crane, the idle crane comes under the control of the work and park search lists defined for the node closest to its bridge.</li>
+        </ol>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel">Crane <a name="kanchor1336"></a>Operations Notes</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">ProModel allows definition of resource points for crane resources on envelope nodes to achieve the three dimensional look for “<a name="kanchor1337"></a>lowering the hoist” upon arriving at a node. Since cranes can only have one unit, only the first resource point for any crane at any node is meaningful. Also, ProModel only uses the resource points if the crane resource arrives at the node to perform a task. In other words, the hoist does not lower if the crane arrives at a node to park or just ends up there after a bump.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">In general, once ProModel makes a match between a resource request and a resource of the requested type, the resource is allocated for that job and the simulation engine does not go on looking for other matches that can actually reach to the requester sooner. Since cranes blocking other crane resources is a common phenomenon in <a name="kanchor1338"></a>multi-bridge envelopes, extra care should be used while designing the <a name="kanchor1339"></a>active operation zones and <a name="kanchor1340"></a>resource request logic in such models.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1341"></a><a name="C-06_1157716610_36159"></a>Nodes, Work, and Park Searches</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">ProModel “registers” all cranes to their home nodes at the beginning of a simulation run. When a crane starts to move, ProModel erases registration, and re-establishes it when the crane stops, according to the following rules:</p>
+        <ol>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">	Cranes assigned to a task (pick up, drop off, down) remain unregistered throughout intermediate stops and register to the task destination node upon arrival.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1342"></a>Idle cranes that are bumped away, or cranes that were unsuccessful in claiming the entire bridge region to go parking register themselves to the node closest to their bridge when they stop.  If there are multiple nodes closest to the bridge, ties are broken by the minimum distance to the hoist and then the order of appearance in the nodes edit table.  If the hoist is still moving at the time the bridge stops, the registry procedure executes by considering the destination of the hoist.</li>
+        </ol>
+        <p class="p_10" data-mc-conditions="PM-MM Conditionals.ProModel">Please Note: Only users can instruct cranes to park on nodes. However, as a result of <a name="kanchor1343"></a>bump-aways, a crane can end up standing still at positions that do not necessarily correspond to nodes. In any case, ProModel registers an idle stationary crane to a node and places it under the control of work and park searches of that node.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Cranes follow the same rules as regular <a name="kanchor1344"></a>dynamic resources while searching for assignments (returning to preempted jobs, <a name="kanchor1345"></a>exclusive &amp; non-exclusive work searches, requests coming from nodes not included in the work search, etc.). There are some additional steps to handle interactions with other cranes operating in the same envelope. Upon completion of its task, a crane goes through these extra steps:</p>
+        <ol>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">	Lets other cranes in the same envelope re-attempt their claims, possibly generating an induced claim on its bridge.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">	Even though other cranes might bump away its bridge, the crane executes the work search defined for it at its current <a name="kanchor1346"></a>node. (If requests are waiting at different locations of the same work search record, ProModel takes the <a name="kanchor1347"></a>resource request priorities into consideration.)</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">	If it was not allocated to a task or bumped away, the crane executes the park search defined for it at its current node, or attempts going home if <a name="kanchor1348"></a>return home is checked.</li>
+        </ol>
+        <p class="p_10" data-mc-conditions="PM-MM Conditionals.ProModel">Please Note: A crane bridge moving to park cannot bump other idle bridges out of its way.  In such a case, the bridge goes as far as it can towards its destination and registers itself to the closest node upon stopping (using the rules discussed above).</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="C-06_1157716610_69784"></a>Crane <a name="kanchor1349"></a>Resource Statistics</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The statistics reported for cranes are very similar to regular dynamic resource statistics. The following definitions highlight the differences in the interpretations.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1350"></a><b>In Use</b> Includes the following states:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">	Stationary use at a location via <a name="kanchor1351"></a>Get, <a name="kanchor1352"></a>Jointly Get, and <a name="kanchor1353"></a>Use statements.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">	Gross move time while delivering — actually carrying an entity from one location to another.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">	Pickup and deposit times before and after the move to deliver.</li>
+        </ul>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1354"></a><b>Travel To</b> Use is the gross move time to start being used — traveling to respond to a request for either stationary use or use to pickup and deliver an entity to another location.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1355"></a><b>Gross Move Time</b> May include the following times:</p>
+        <ul>
+            <li class="li_1" value="1" data-mc-conditions="PM-MM Conditionals.ProModel">		Moving towards the actual destination.</li>
+            <li class="li_1" value="2" data-mc-conditions="PM-MM Conditionals.ProModel">	Possibly moving away from the destination, when bumped away by a higher priority bridge in the same envelope.</li>
+            <li class="li_1" value="3" data-mc-conditions="PM-MM Conditionals.ProModel">	Stationary blockage times during which the bridge is waiting for a higher move priority bridge in the same envelope to lower its move priority.</li>
+        </ul>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1356"></a><b>Blocked Time</b> Tally blocked time by subtracting the internally computed, hypothetical net traveling time from the actual incurred gross move time. ProModel defines the net time as the time a crane would have taken to get to its destination if it were the only bridge in its envelope.</p>
+        <p class="p_10" data-mc-conditions="PM-MM Conditionals.ProModel">Please Note: The first component of gross travel time (moving towards the actual destination) may be greater than the net travel time, since it may include going back towards the destination after another crane bumps it away.  It may also involve deviations from the bridge’s original motion values when queued-up behind slower bridges.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor1357"></a>Special Case—Blocked Time Accrual for Moving to Park</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Remember that an idle crane registers itself to the closest node whenever its bridge stops. If the hoist is still moving, ProModel uses the destination of the hoist to break any ties between nodes that are equidistant to the bridge position.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">In case of an unsuccessful claim attempt to move to park, the crane bridge needs to stop before reaching the instructed park node, and ProModel ignores the hoist travel for statistics purposes. The “travel to park” statistic terminates at the time the bridge stops, not when bridge or hoist stop time reaches its maximum value. In this case, the net moving time to park computes as the bridge move time from current position to the endpoint of the claim, using original bridge motion values for the crane resource. Blocked time can accrue if this bridge queues up after a slower bridge that is already moving (remember that a crane moving to park cannot bump another crane).</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

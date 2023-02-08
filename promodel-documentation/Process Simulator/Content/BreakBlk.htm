@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1220" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>BreakBlk</h1>
+        <h5>
+            <MadCap:keyword term="statements:breakblk;breakblk" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>BreakBlk</p>
+        <h2>Description</h2>
+        <p>Exits from the innermost statement block. The next statement to be executed will be the one immediately following the end bracket of the innermost statement block. If a BreakBlk is executed outside any statement block, Process Simulator will exit the logic completely. </p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Example</h2>
+        <p>
+            This example uses BreakBlk in the logic for a shipping department that handles two types of entities, Letters and Packages. Both packages and letters need to be addressed, but packages may need to be wrapped before they are addressed. When a package arrives, shipping increments the variable No_of_Pkg to keep track of the number of packages it ships. Attr1 is then checked to see if the package has been wrapped. If the package has been wrapped (if Attr1 = 1), the BreakBlk statement exits the statement block that wraps packages. If the package has not been wrapped, a resource, Wrapper, wraps the package. Finally, all entities that Shipping processes are addressed by the same statement and routed to the Post_Office. The line “//&#160;Breakblk to here” is a comment which marks the next statement executed after the BreakBlk.
+            <br /></p>
+        <p class="p_11">If Entity() = Letter Then</p>
+        <p class="p_12">Inc No_of_Letters</p>
+        <p class="p_11">If Entity() = Pkg Then<br />{</p>
+        <p class="p_12">Inc No_of_Pkg<br />If Attr1 = 1 Then</p>
+        <p class="p_13">BreakBlk</p>
+        <p class="p_12">Use Wrapper For 8 min<br />Attr = 1</p>
+        <p class="p_11">}<br />//BreakBlk to here<br />Use Addresser For 3 min</p>
+        <h5>See Also</h5>
+        <p><a href="Break.htm" class="a_11">Break</a>, <a href="IfThenElse.htm" class="a_11">If Then Else</a></p>
+    </body>
+</html>

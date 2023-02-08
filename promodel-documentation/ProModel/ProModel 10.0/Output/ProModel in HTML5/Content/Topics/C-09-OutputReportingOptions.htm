@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Running the Model|Simulation Options">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Output Reporting Options</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-09-OutputReportingOptions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-09-RunningtheModel.htm">Running the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-09-SimulationOptions.htm">Simulation Options</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Output Reporting Options</span>
+        </div>
+        <h3><a name="C-09_398201723_1090987"></a><a name="kanchor1557"></a>Output Reporting Options</h3>
+        <p class="Graphic">
+            <img src="pm-c9-340-1.jpg" />
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor1558"></a><b>Standard</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  When you select Standard output reporting, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> collects output statistics for one or more replications. No interval length can be specified when using this option. From the output program, statistics can be viewed for each replication; although, by default they are displayed as an average over all the replications.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1559"></a><b>Batch Mean</b></span>   The method of batch means, or interval batching, is a way to collect independent samples when simulating steady-state systems as an alternative to running multiple replications. The advantage over running multiple replications is that the warm-up period runs only once. When you select Batch Mean output reporting, the output statistics are collected for each time interval indicated in the Interval Length field. The number of intervals is determined by dividing the run length by the interval length. 	 The interval length may be an expression but will only be evaluated once at model translation, so it is always a fixed interval. The Number of Replications edit field is not used when this option is selected since it replaces the need for running multiple replications.</p>
+        <h5>Example</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The Time Plot graph below shows that the contents of Lathe varied throughout the simulation. The interval length was set to 0.5 hours and the simulation ran 72 intervals. </p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="cc-c9-337-1.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor1560"></a><b>Periodic</b></span>   Useful primarily in terminating or non-steady state simulations where you are interested in the system behavior during different periods (e.g., peak or lull periods) of activity. </p>
+        <p class="p">When you select Periodic output reporting, the output statistics are collected by period where the length of a period is defined in the interval length field. The interval length may be an expression but will only be evaluated once at model translation, so it is always a fixed interval. To define unequal intervals, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-09-CustomizedReporting.htm#C-09_398201723_1091055" title="" alt="">Customized Reporting</a>.</p>
+        <p class="p">You may gather statistics for a periodic report over multiple replications. From the output program, you can view each replication averaged over the periods, each period averaged over the replications, or the pooled average (the average for each period averaged over all of the replications).</p>
+        <h5>Example</h5>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">The content history table below shows how the contents of Lathe1 varied throughout the simulation and from one replication to the other.  The interval length was set to 0.5 hours and the simulation ran a little over 3 periods (11/2 hours) with two replications.  The results are shown below</MadCap:conditionalText>.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="94px" class="Column-Column1" />
+            <col width="57px" class="Column-Column2" />
+            <col width="57px" class="Column-Column3" />
+            <col width="57px" class="Column-Column4" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Periodic Output</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Period 1</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Period 2</p>
+                    </td>
+                    <td class="HeadD-Column4-Header1">
+                        <p class="CellHeading">Period 3</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Replication 1 Avg.</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">2.70</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">3.09</p>
+                    </td>
+                    <td class="BodyD-Column4-Body1">
+                        <p class="CellBody">3.15</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Replication 2 Avg.</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">2.20</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">3.13</p>
+                    </td>
+                    <td class="BodyD-Column4-Body2">
+                        <p class="CellBody">3.01</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Pooled Average</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">2.45</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">3.11</p>
+                    </td>
+                    <td class="BodyA-Column4-Body3">
+                        <p class="CellBody">3.08</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p"><span class="Bold"><a name="kanchor1561"></a><b>Interval Length</b></span>   Enter the interval length as the number of time units for each interval or period. The interval length may be an expression but will only be evaluated once at model translation, so it is always a fixed interval. To define unequal intervals, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-09-CustomizedReporting.htm#C-09_398201723_1091055" title="" alt="">Customized Reporting</a>. The time unit is defined in the General Information dialog. The interval length need only be specified when using Batch Mean or Periodic reporting.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1562"></a><b>Number of Replications</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Enter the number of replications you want the simulation to run in this field. Number of replications only needs to be specified when using Standard or Periodic reporting.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

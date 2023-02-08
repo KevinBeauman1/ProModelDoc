@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Modeling Environment|Home Tab">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Expression Search</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-08-ExpressionSearch.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-04-ModelingEnvironment.htm#C-04_4289884492_1035124">Modeling Environment</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-04-HomeTab.htm">Home Tab</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Expression Search</span>
+        </div>
+        <h2><a name="C-08_1964285664_1136269"></a>
+            <MadCap:keyword term="Expression search" />Expression Search</h2>
+        <p class="p">
+            <MadCap:keyword term="Expression search:definition" />The Expression Search capability is accessed from the Home ribbon tab and is used to find or replace text entered into logic windows and expression fields, such as location downtime logic or location capacity. Name fields can be found, but not replaced. Reference fields can be found and replaced. However, when the name of a location, resource, or entity is changed, the user will be prompted to automatically change all references to the new name. There are three types of searches: Find expression, Replace expression, and Find Next expression.</p>
+        <p class="p">
+            <img src="sm-c8-292-1.jpg" />
+        </p>
+        <h3>
+            <MadCap:keyword term="Expression search:find" />Find
+        </h3>
+        <p class="p">A dialog box gives you the following options after choosing Find:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Modules to Search</span>   Check the modules you want to search. “Other” includes all other edit tables and some dialog boxes where text is entered for defining the model, such as attributes or arrays.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Search Notes</span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"> <![CDATA[ ]]></span>  Check this box to include Notes fields in the text search.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Whole Words Only</span>   Check this box to search for only whole words or groups of whole words that match the text to find. For example, searching for “Attr” without the Whole Word. Only box checked will find “Attr1” and “Attr2” whereas a search with the box checked would find neither.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Text to Find</span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"> <![CDATA[ ]]></span>  Enter the text expression you want to find.</p>
+        <h3>
+            <MadCap:keyword term="Expression search:replace" />Replace
+        </h3>
+        <p class="p">Choosing replace gives you these options in addition to the find options:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Prompt on Replace</span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"> <![CDATA[ ]]></span>  Check this box if each time <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> finds a match, you want <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> to ask if you want that particular match changed to the replacement text. The prompt will give you the option to replace that particular match, skip that particular match, or to cancel the search altogether.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">New Text</span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"> <![CDATA[ ]]></span>  Enter the text you want to replace the search text.</p>
+        <h3>
+            <MadCap:keyword term="Expression search:search next" />Find Next
+        </h3>
+        <p class="p">Choosing Find Next will resume the most recently canceled or interrupted search. For example, suppose you begin a search and then break out of the search to adjust something in the model. If you want to continue the original search, you can select Find Next and <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will start the search again at the place you stopped searching.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

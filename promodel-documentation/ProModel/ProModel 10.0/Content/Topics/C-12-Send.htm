@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="629" MadCap:lastWidth="561" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-12_3485478126_1093463"></a>Send</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">
+            <MadCap:keyword term="SEND;Routing rules:SEND" />Send {&lt;expression&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Causes an entity to remain at the current location until one of the listed destinations issues a Send. Once a location has been selected, capacity must be available at that location before the routing actually takes place. Multiple alternative Send destinations may be specified in a block. </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The rule field of the Routing edit table only.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The total entities output from the process. This expression is valid only for the first routing of a routing block. For more information on this expression, see <MadCap:xref class="lowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" target="" title="" alt="">Processing on page 1</MadCap:xref>.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Purchase Orders (PO’s) are held at a holding location until final approval is received.  Once a Send request has been generated at some other location in the system, the PO is sent to the appropriate vendor.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">PO</p>
+                    </td>
+                    <td rowspan="3" class="BodyE-Column2-Body1">
+                        <p class="CellBody">Holding</p>
+                    </td>
+                    <td rowspan="3" class="BodyD-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" />
+                <tr class="Body-Body3" />
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">PO</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">VendorA</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Send 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 48 Hr</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">PO</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">VendorB</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">Send</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 48 Hr</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">PO</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">VendorC</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">Send</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">Move For 48 Hr</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p>
+            <MadCap:xref href="C-05-Processing.htm" target="" title="" alt="" class="lowercase_no_see">Processing on page 1</MadCap:xref>
+        </p>
+    </body>
+</html>

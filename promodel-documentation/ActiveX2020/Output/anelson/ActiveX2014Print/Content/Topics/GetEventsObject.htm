@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Application Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>GetEventsObject</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490200"></a><a name="kanchor4"></a>GetEventsObject</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetEventsObject</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Use this method to initialize the ProModel Events object.  For further instructions see the Events Handler section.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:  </span>None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Event Handler object.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example is incomplete, but the code given shows how to use the GetEventsObject method.  This must be executed before using the Events Handler.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub GenericSub()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmEventObject As PMCPLib.PMEvents</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects3" style="font-weight: bold;">		Set pmEventObject = pmObject.GetEventsObject</p>
+        <p class="objects3">		**<span class="_Override" style="font-style: italic;">More Code</span>…</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

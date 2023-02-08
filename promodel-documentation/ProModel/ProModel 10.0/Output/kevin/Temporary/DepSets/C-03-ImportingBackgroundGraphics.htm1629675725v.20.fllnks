@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/2-3-7-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c3-49-2.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/2-3-7-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c3-49-2.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Background graphics:importing"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Import:background graphics"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Graphics:background:import"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Background graphics:importing"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Import:background graphics"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Graphics:background:import"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="10" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

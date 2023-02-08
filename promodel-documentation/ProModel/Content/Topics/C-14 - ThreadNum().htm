@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1009" MadCap:lastWidth="1193" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1107438"></a>ThreadNum()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:THREADNUM();THREADNUM()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">ThreadNum()</p>
+        <p class="Syntax_body">If ThreadNum()=215 Then Debug</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Every time any logic is executed, it is executed by a thread which is assigned a unique number. ThreadNum returns the number of the thread that called the function. This function is most useful in conjunction with the <MadCap:keyword term="IF...THEN" />If...Then and <MadCap:keyword term="DEBUG" />Debug statements to bring up the debugger at a certain process. See below for a detailed example. Note that if the model does not change between simulation runs, every thread will have the same number from run to run, but not from replication to replication. Also, most changes in a model will cause threads to have different numbers on subsequent runs.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">For example, suppose that when the 50th entity of a certain type arrives at a certain location, the model always crashes. A Debug statement at the beginning of the processing logic would be cumbersome because the debugger would come up forty-nine times before it was needed. However, when the error occurs, the debugger displays the process and logic that caused the error.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Threadnum - Debugger window.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;" />
+        </p>
+        <p class="p">By adding a statement similar to “If ThreadNum() &gt;= 1 Then Debug” before the statement that causes the error, the simulation will run until the proper process and then bring up the debugger. The debugger can then be used to step through the process to find the particular statement causing the error.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Debug. </p>
+    </body>
+</html>

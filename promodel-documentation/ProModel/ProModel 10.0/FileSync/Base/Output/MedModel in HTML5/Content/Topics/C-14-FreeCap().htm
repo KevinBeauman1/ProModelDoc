@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>FreeCap()</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-14-FreeCap().htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">FreeCap()</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1103944"></a>FreeCap()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:FREECAP();FREECAP()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">FreeCap(<i>&lt;location&gt;</i>)</p>
+        <p class="Syntax_body">Send FreeCap(Loc1) EntA TO Loc1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the available capacity of a location. This function returns an integer.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic and any field except those fields evaluated only at translation time. For a list of fields evaluated only at translation time, see  <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" title="" alt="" xrefformat="{paratext}">Appendix</a>.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;location&gt;</p>
+        <p class="p">The name of the location to examine. The <MadCap:keyword term="LOC()" />Loc() function may also be used here.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">In the following example, a patient is “sent” to a disaster staging area only if there is capacity available to handle the casualty. The logic for Patient at Staging is as follows:</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">If FreeCap(Staging) = 1 Then</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">	Send 1 <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Patient</MadCap:conditionalText> TO <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Staging</MadCap:conditionalText></p>
+        <p class="_rules">See Also</p>
+        <p class="p">Cap(). </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

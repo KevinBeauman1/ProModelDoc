@@ -1,0 +1,25 @@
+Microsoft (R) Help Compiler
+HCRTF 4.03.0002
+Copyright (c) Microsoft Corp 1990 - 1995. All rights reserved.
+simrun3.hpj
+    HC1013: Note: simrun3.hpj : 
+	The "[CONFIG-" section is missing a right bracket.
+    HC1013: Note: simrun3.hpj : 
+	The "[CONFIG-" section is missing a right bracket.
+    HC1013: Note: simrun3.hpj : 
+	The "[CONFIG-" section is missing a right bracket.
+    HC1013: Note: simrun3.hpj : 
+	The "[CONFIG-" section is missing a right bracket.
+    HC1013: Note: simrun3.hpj : 
+	The "[CONFIG-" section is missing a right bracket.
+35	Topics
+40	Jumps
+101	Keywords
+40	Bitmaps
+
+
+Created C:\Projects\SimRunner\SimRunSTD\Help\3_0\simrun3.hlp, 294,448 bytes
+Bitmaps: 251,698 bytes
+Hall+Zeck compression decreased help file by 18,031 bytes.
+Compile time: 0 minutes, 21 seconds
+5 notes, 0 warnings

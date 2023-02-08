@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="http://www.promodel.com/onlinehelp/ActiveX/100/Default.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="http://www.promodel.com/onlinehelp/ActiveX/100/Default.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1092481" />
+    <Anchor
+      Name="C-08_1964285664_64263" />
+    <Anchor
+      Name="C-08_1964285664_17845" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="ProActiveX"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

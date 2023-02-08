@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/11_20.jpg" />
+    <Link
+      Url="Content/Topics/11_21.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-306-1.jpg" />
+    <Link
+      Url="Content/Topics/11_23.jpg" />
+    <Link
+      Url="Content/Topics/11_24.jpg" />
+    <Link
+      Url="Content/Topics/11_25.jpg" />
+    <Link
+      Url="Content/Topics/11_26.jpg" />
+    <Link
+      Url="Content/Topics/11_27.jpg" />
+    <Link
+      Url="Content/Topics/11_28.jpg" />
+    <Link
+      Url="Content/Topics/11_29.jpg" />
+    <Link
+      Url="Content/Topics/11_30.jpg" />
+    <Link
+      Url="Content/Topics/11_31.jpg" />
+    <Link
+      Url="Content/Topics/11_32.jpg" />
+    <Link
+      Url="Content/Topics/11_34.jpg" />
+    <Link
+      Url="Content/Topics/11_33.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-312-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-313-1.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/11_20.jpg" />
+    <Link
+      Url="Content/Topics/11_21.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-306-1.jpg" />
+    <Link
+      Url="Content/Topics/11_23.jpg" />
+    <Link
+      Url="Content/Topics/11_24.jpg" />
+    <Link
+      Url="Content/Topics/11_25.jpg" />
+    <Link
+      Url="Content/Topics/11_26.jpg" />
+    <Link
+      Url="Content/Topics/11_27.jpg" />
+    <Link
+      Url="Content/Topics/11_28.jpg" />
+    <Link
+      Url="Content/Topics/11_29.jpg" />
+    <Link
+      Url="Content/Topics/11_30.jpg" />
+    <Link
+      Url="Content/Topics/11_31.jpg" />
+    <Link
+      Url="Content/Topics/11_32.jpg" />
+    <Link
+      Url="Content/Topics/11_34.jpg" />
+    <Link
+      Url="Content/Topics/11_33.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-312-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-313-1.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1090551" />
+    <Anchor
+      Name="C-08_1964285664_38741" />
+    <Anchor
+      Name="C-08_1964285664_1090594" />
+    <Anchor
+      Name="C-08_1964285664_13117" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Graphic editor:graphic tools button bar"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphic editor:selector"
+      Conditions=""
+      LocalConditions=""
+      Position="60" />
+    <IndexCacheEntry
+      Term="Graphic editor:text tool"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Graphic editor:line:tool"
+      Conditions=""
+      LocalConditions=""
+      Position="94" />
+    <IndexCacheEntry
+      Term="Draw:lines"
+      Conditions=""
+      LocalConditions=""
+      Position="99" />
+    <IndexCacheEntry
+      Term="Line:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="99" />
+    <IndexCacheEntry
+      Term="Graphic editor:arc tool"
+      Conditions=""
+      LocalConditions=""
+      Position="108" />
+    <IndexCacheEntry
+      Term="Draw:arc"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Arc:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Graphic editor:triangle tool"
+      Conditions=""
+      LocalConditions=""
+      Position="121" />
+    <IndexCacheEntry
+      Term="Draw:triangle"
+      Conditions=""
+      LocalConditions=""
+      Position="127" />
+    <IndexCacheEntry
+      Term="Triangle:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="127" />
+    <IndexCacheEntry
+      Term="Graphic editor:square tool"
+      Conditions=""
+      LocalConditions=""
+      Position="134" />
+    <IndexCacheEntry
+      Term="Graphic editor:rectangle tool"
+      Conditions=""
+      LocalConditions=""
+      Position="134" />
+    <IndexCacheEntry
+      Term="Draw:rectangle"
+      Conditions=""
+      LocalConditions=""
+      Position="140" />
+    <IndexCacheEntry
+      Term="Rectangle:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="140" />
+    <IndexCacheEntry
+      Term="Draw:square"
+      Conditions=""
+      LocalConditions=""
+      Position="147" />
+    <IndexCacheEntry
+      Term="Square:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="147" />
+    <IndexCacheEntry
+      Term="Graphic editor:circle tool"
+      Conditions=""
+      LocalConditions=""
+      Position="152" />
+    <IndexCacheEntry
+      Term="Graphic editor:ellipse tool"
+      Conditions=""
+      LocalConditions=""
+      Position="152" />
+    <IndexCacheEntry
+      Term="Draw:ellipse"
+      Conditions=""
+      LocalConditions=""
+      Position="158" />
+    <IndexCacheEntry
+      Term="Ellipse:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="158" />
+    <IndexCacheEntry
+      Term="Draw:circle"
+      Conditions=""
+      LocalConditions=""
+      Position="165" />
+    <IndexCacheEntry
+      Term="Circle:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="165" />
+    <IndexCacheEntry
+      Term="Graphic editor:chord tool"
+      Conditions=""
+      LocalConditions=""
+      Position="169" />
+    <IndexCacheEntry
+      Term="Graphic editor:pie tool"
+      Conditions=""
+      LocalConditions=""
+      Position="169" />
+    <IndexCacheEntry
+      Term="Draw:chord"
+      Conditions=""
+      LocalConditions=""
+      Position="175" />
+    <IndexCacheEntry
+      Term="Chord:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="175" />
+    <IndexCacheEntry
+      Term="Draw:circular chord"
+      Conditions=""
+      LocalConditions=""
+      Position="182" />
+    <IndexCacheEntry
+      Term="Chord:circular"
+      Conditions=""
+      LocalConditions=""
+      Position="182" />
+    <IndexCacheEntry
+      Term="Graphic editor:polygon tool"
+      Conditions=""
+      LocalConditions=""
+      Position="192" />
+    <IndexCacheEntry
+      Term="Draw:polygon"
+      Conditions=""
+      LocalConditions=""
+      Position="198" />
+    <IndexCacheEntry
+      Term="Polygon:draw"
+      Conditions=""
+      LocalConditions=""
+      Position="198" />
+    <IndexCacheEntry
+      Term="Graphic editor:positioning spot"
+      Conditions=""
+      LocalConditions=""
+      Position="206" />
+    <IndexCacheEntry
+      Term="Positioning spot:place on an icon"
+      Conditions=""
+      LocalConditions=""
+      Position="213" />
+    <IndexCacheEntry
+      Term="Locations:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="219" />
+    <IndexCacheEntry
+      Term="Graphics:location"
+      Conditions=""
+      LocalConditions=""
+      Position="219" />
+    <IndexCacheEntry
+      Term="Entity:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="223" />
+    <IndexCacheEntry
+      Term="Graphics:entity"
+      Conditions=""
+      LocalConditions=""
+      Position="223" />
+    <IndexCacheEntry
+      Term="Resources:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="227" />
+    <IndexCacheEntry
+      Term="Graphics:resource"
+      Conditions=""
+      LocalConditions=""
+      Position="227" />
+    <IndexCacheEntry
+      Term="Graphic editor:status light"
+      Conditions=""
+      LocalConditions=""
+      Position="230" />
+    <IndexCacheEntry
+      Term="Status:light:place on icon"
+      Conditions=""
+      LocalConditions=""
+      Position="235" />
+    <IndexCacheEntry
+      Term="Graphic editor:flip:buttons"
+      Conditions=""
+      LocalConditions=""
+      Position="241" />
+    <IndexCacheEntry
+      Term="Graphic editor:rotate:button"
+      Conditions=""
+      LocalConditions=""
+      Position="241" />
+    <IndexCacheEntry
+      Term="Flip object"
+      Conditions=""
+      LocalConditions=""
+      Position="247" />
+    <IndexCacheEntry
+      Term="Rotate:object"
+      Conditions=""
+      LocalConditions=""
+      Position="247" />
+    <IndexCacheEntry
+      Term="Cut"
+      Conditions=""
+      LocalConditions=""
+      Position="256" />
+    <IndexCacheEntry
+      Term="Copy"
+      Conditions=""
+      LocalConditions=""
+      Position="257" />
+    <IndexCacheEntry
+      Term="Graphic editor:cut button"
+      Conditions=""
+      LocalConditions=""
+      Position="258" />
+    <IndexCacheEntry
+      Term="Graphic editor:copy:button"
+      Conditions=""
+      LocalConditions=""
+      Position="258" />
+    <IndexCacheEntry
+      Term="Graphic editor:paste:button"
+      Conditions=""
+      LocalConditions=""
+      Position="258" />
+    <IndexCacheEntry
+      Term="Paste"
+      Conditions=""
+      LocalConditions=""
+      Position="258" />
+    <IndexCacheEntry
+      Term="Step:back"
+      Conditions=""
+      LocalConditions=""
+      Position="275" />
+    <IndexCacheEntry
+      Term="Graphic editor:step back &amp; front buttons"
+      Conditions=""
+      LocalConditions=""
+      Position="276" />
+    <IndexCacheEntry
+      Term="Step:front"
+      Conditions=""
+      LocalConditions=""
+      Position="276" />
+    <IndexCacheEntry
+      Term="Move:object:behind"
+      Conditions=""
+      LocalConditions=""
+      Position="282" />
+    <IndexCacheEntry
+      Term="Move:object:in front"
+      Conditions=""
+      LocalConditions=""
+      Position="282" />
+    <IndexCacheEntry
+      Term="Graphic editor:line:color:button"
+      Conditions=""
+      LocalConditions=""
+      Position="289" />
+    <IndexCacheEntry
+      Term="Graphic editor:fill:color button"
+      Conditions=""
+      LocalConditions=""
+      Position="289" />
+    <IndexCacheEntry
+      Term="Line:color:define"
+      Conditions=""
+      LocalConditions=""
+      Position="294" />
+    <IndexCacheEntry
+      Term="Color:line"
+      Conditions=""
+      LocalConditions=""
+      Position="294" />
+    <IndexCacheEntry
+      Term="Fill:color:define"
+      Conditions=""
+      LocalConditions=""
+      Position="295" />
+    <IndexCacheEntry
+      Term="Color:fill"
+      Conditions=""
+      LocalConditions=""
+      Position="295" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

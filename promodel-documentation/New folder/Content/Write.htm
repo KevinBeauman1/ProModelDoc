@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1572" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Write</h1>
+        <h5>
+            <MadCap:keyword term="statements:write;write" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Write &lt;file ID&gt;, &lt;string or numeric expression&gt; {,&lt;maximum digits before decimal&gt;, &lt;digits after decimal&gt;}</p>
+        <p>Write File1, "Avg Cycle Time"<br />Write File1, CycleTimeVar, 5, 2</p>
+        <h2>Description</h2>
+        <p>Writes information to a text file. The next item written to the file will appear immediately after this item. Write always appends to the file unless the file is Reset. This holds true for multiple replications as well as single, independent runs. Any file that is written to with Write automatically becomes a text file and will have an end of file marker attached automatically to the end when it is closed. For more flexible Write capability, use <a href="xwrite.htm" class="a_11">Xwrite</a>.</p>
+        <p>Write and Writeline automatically separate values with commas.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;file ID&gt;</b>
+        </p>
+        <p>The name of the file as previously defined in the External Files grid.</p>
+        <p><b>&lt;string or numeric expression&gt;</b>
+        </p>
+        <p>The string or numeric expression to be written to the file.</p>
+        <p><b>&lt;maximum digits before decimal&gt;</b> <![CDATA[ ]]></p>
+        <p>The maximum number of digits before the decimal. This value is used to line up any numeric values into columns on the decimal point. This value may be any numeric expression.</p>
+        <p><b>&lt;digits after decimal&gt;</b>
+        </p>
+        <p>The number of spaces to save after the decimal point. Use this option to line up any labels appearing after numbers.</p>
+        <p class="p_10">Please Note: The sum of the maximum digits before and after the decimal must be less than 20.</p>
+        <h2>Example</h2>
+        <p>The following example uses both Write and Writeline to record the time when EntA completes processing at Act1 in a write file called Rpt.</p>
+        <p class="p_11">Wait N(7.3, .4)<br />Write Rpt, "EntA complete at:"<br />Writeline Rpt, Clock(min), 3, 2</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="xwrite.htm" class="a_11">Xwrite</a>, <a href="writeline.htm" class="a_11">Writeline</a>, Reset, <a href="read.htm" class="a_11">Read</a>, and Format. Also see <MadCap:xref class="lowercase_no_see" href="ExternalFiles.htm" target="" title="" alt="">External Files</MadCap:xref>.</p>
+    </body>
+</html>

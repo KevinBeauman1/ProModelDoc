@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Pre-defined Tank Subroutines">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Pre-defined Data Elements</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-Subroutines-PredefinedDataElements.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Pre-definedTankSubroutines.htm">Pre-defined Tank Subroutines</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Pre-defined Data Elements</span>
+        </div>
+        <h3 class="tanks"><a name="C-05_2723800551_1089533"></a><a name="C-05_2723800551_Pre-defined data elements;Data elements, pre-defined"></a>Pre-defined Data Elements</h3>
+        <p class="p">The <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> tank submodel provides the following data elements for modeling tanks. Unless otherwise specified, all arrays are single-dimensional and of type integer. Initially, these arrays are 100 elements in size to allow for up to 100 locations. If you define more than 100 locations, you will need to enlarge the array or place tanks toward the beginning of the location list (within the first 100 locations). </p>
+        <p class="p"><a name="C-05_2723800551_TANK_LEVEL array;Array"></a>Tank_Level array   Stores the level of each tank. Since the values in this array directly control the tank gauge and tank statistics, the array MUST be present in every tank model. </p>
+        <p class="p"><a name="C-05_2723800551_TANK_STATE array;Array"></a>Tank_State array   Tracks the state of the tank. </p>
+        <p class="p"><a name="C-05_2723800551_TANK_PRODUCT array;Array"></a>Tank_Product array   An optional array used to record or test the product currently at a tank.</p>
+        <p class="p"><a name="C-05_2723800551_TANK_STATISTICS array;Array"></a>Tank_Statistics array   A two-dimensional array of type real used to record tank level statistics whenever the level changes. Generally, you will never need to reference this array since values automatically update when you use the pre-defined Tank subroutines. All times are in time units defined in the General Information dialog. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> always gathers these statistics but reports them only if you check Basic or Time Series statistics for the tank location. </p>
+        <table style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;width: 100%;" class="TableStyle-Process_Table" cellspacing="0">
+            <col width="48px" class="Column-Column1" />
+            <col width="108px" class="Column-Column2" />
+            <col width="108px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Column</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Description</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Reset After Warm-up</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Last level</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">NC</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Last change time</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Current time in time units defined in the General Information dialog</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">3</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time-weighted level</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">4</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Entries</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">Value of column 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">5</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Max contents</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Value of column 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">6</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Last State Change</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Current time in time units defined in the General Information dialog</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">7</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time Idle</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">8</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Cum time Operation</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">9</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Cum time Setup</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">10</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Cum time Filling</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">11</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time Emptying</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">12</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Cum time Blocked</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">13</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Cum time Down</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">14</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Current downtime count</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">NC</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">As shown in the previous table, the statistics collected in the Tank_Statistics array automatically reset after any warm-up period. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> reports output statistics under Location statistics and Location States by Percentage. When reporting Location statistics for tanks, note the following:</p>
+        <ul>
+            <li class="li_1" value="1">Total Entries   The number of units (e.g., gallons, pounds) to enter the tank.</li>
+            <li class="li_1" value="2">Avg Minutes Per Entry   Left blank since there is no individual entry for a tank.</li>
+        </ul>
+        <p class="p"><a name="C-05_2723800551_TANK_FILLS array;Array"></a>Tank_Fills array<a name="C-05_2723800551_ACTIVATE"></a>   An optional array used to track the number of transfers to a tank. This is especially useful when you activate multiple Tank_Fill or Tank_Transfer subroutines for a tank and you wish to know when the fills are complete. The user sets the value of Tank_Fills to zero before activating the subroutines, then defines a Wait Until statement after the Activate statement. The Tank_Fills array increments automatically when a Tank_Fill or a Tank_Transfer subroutine executes. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Tanks.htm#C-05_2723800551_1088785" title="" alt="">Tanks</a> for additional information.</p>
+        <h4><a name="C-05_2723800551_Statistics"></a>Statistics</h4>
+        <p class="p_10">Please Note: TS = Tank_Statistics array<br />n = Location index number of tank</p>
+        <h5>Calculating Location Statistics for Tanks</h5>
+        <p class="Syntax_body">Entries = TS [n, 4]</p>
+        <p class="Syntax_body">Avg. Time per Entry = (not applicable)</p>
+        <p class="Syntax_body">Avg. Contents = TS[n,3] / Scheduled Time</p>
+        <p class="Syntax_body">Max Contents = TS [n,5]</p>
+        <p class="Syntax_body">Current Contents = TS [n,1]</p>
+        <p class="Syntax_body">Utilization=100 x TS[n,3] / (Capacity x Scheduled Time)</p>
+        <h5>Calculating Location State Statistics for Tanks</h5>
+        <p class="Syntax_body">%Operation = 100 x TS[n, 8] / Scheduled Time</p>
+        <p class="Syntax_body">%Setup = 100 x TS[n, 9] / Scheduled Time</p>
+        <p class="Syntax_body">%Idle = 100 x TS[n, 7] / Scheduled Time </p>
+        <p class="Syntax_body">%Waiting = 100 - Sum of other percentages</p>
+        <p class="Syntax_body">%Blocked = 100 x TS[n, 12] / Scheduled Time</p>
+        <p class="Syntax_body">%Down = 100 x TS[n, 13] / Scheduled Time</p>
+        <p class="p">To gather statistics on how much of a particular product was processed, you may define variables to record product processing during the simulation.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

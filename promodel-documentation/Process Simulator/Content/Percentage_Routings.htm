@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1450" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3>Percentage Routings </h3>
+        <p class="p">Route to one of several different activities randomly based on a percentage of the output being routed.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=EBBHTTGN8-k&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=16&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Connect the FROM activity to two or more TO activities that represent the percentage routings. (A connection may also be made to a blank space on the layout to represent exiting the system.)</li>
+            <li class="li_1">In the Routing properties dialog for each of the routing connections, select Percentage as the Route Type (which is already the default) and enter the Percent value which defines the percentage of time the TO activity is to be selected.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Customer orders for nutritional supplements are received by an Order Entry person and then routed to one of three different supply areas (A, B and C) areas for order fulfillment depending on the type (A, B or C) of order. 20% of the orders are of type A, 30% type B, and 50 % type C.</p>
+        <p class="p">
+            <img src="Resources/Images/percentageroutingexample1.png" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/percentageroutingsolutiona.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Notice that only a single entity type (Order) needed to be defined for this model since the three different types of orders are modeling by their percentage of occurrence rather than by testing the actual entity type itself as in a conditional routing (see Conditional Routings). Of course, a new entity name (A, B or C) could have been assigned in each of the routings defined if separate statistics are to be collected based on entity type.</p>
+    </body>
+</html>

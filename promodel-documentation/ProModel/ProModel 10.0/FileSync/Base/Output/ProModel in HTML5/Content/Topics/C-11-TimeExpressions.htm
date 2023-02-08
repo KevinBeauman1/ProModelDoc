@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Language Elements and Expressions|Expressions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Time Expressions</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-11-TimeExpressions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-11-LanguageElementsandExpressions.htm#C-11_756594771_1035124">Language Elements and Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-11-Expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Time Expressions</span>
+        </div>
+        <h3><a name="C-11_756594771_1095008"></a>
+            <MadCap:keyword term="Expressions:time;Time:expressions" /><a name="C-11_756594771_11013"></a>Time Expressions</h3>
+        <p class="p">A time expression is a numeric expression followed optionally by a time unit (<MadCap:keyword term="WK;Weeks" />wk, <MadCap:keyword term="DAY" />day, <MadCap:keyword term="HR;Hours" />hr, <MadCap:keyword term="MIN;Minutes" />min, <MadCap:keyword term="SEC;Seconds" />sec) which defines a duration. If no time unit is specified, the default time unit specified in the General Information dialog box is assumed. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> knows whether an expression is a time expression based on the context. Time expressions are not valid within a function call. For example, E(10 sec) is invalid, while E(10) sec is valid. If a negative value is used for a time expression, it is automatically converted to zero.</p>
+        <p class="Component">Syntax for time expressions</p>
+        <p class="Syntax_body">&lt;numeric expression&gt;{&lt;time units&gt;}</p>
+        <h5>Examples</h5>
+        <p class="Syntax_body">2 hrE(10) minVar1+40.25 min<br /><br /></p>
+        <p class="p">Note that time units cannot be mixed (e.g., 3 min 21 sec), unless you use colon notation.</p>
+        <h4>
+            <MadCap:keyword term="Expressions:time:colon notation;Time:expressions:colon notation;Colon notation;Notation:colon" />Colon Notation for Time Values</h4>
+        <p class="p">Colon notation allows for more complex time expressions. You may use colon notation in the following manner to express time values.</p>
+        <p class="Component">Colon notation</p>
+        <p class="Syntax_body">&lt;<MadCap:keyword term="Hours;Minutes;Seconds" />hours expression&gt;:&lt;minutes expression&gt;:&lt;seconds expression&gt;</p>
+        <p class="p">Colon notated time expressions evaluate from right to left as illustrated in the following examples:</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="83px" class="Column-Column1" />
+            <col width="181px" class="Column-Column2" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Example</p>
+                    </td>
+                    <td class="HeadD-Column2-Header1">
+                        <p class="CellHeading">Meaning</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">:05</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">5 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">5:00: or 5::</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">5 hours</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">5:00 or 5:</p>
+                    </td>
+                    <td class="BodyD-Column2-Body3">
+                        <p class="CellBody">5 minutes</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">2:40: </p>
+                    </td>
+                    <td class="BodyD-Column2-Body4">
+                        <p class="CellBody">2 hours and 40 minutes</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">15:02:05</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">15 hours, 2 minutes and 5 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">3:25</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">3 minutes and 25 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Attr1::Var2</p>
+                    </td>
+                    <td class="BodyA-Column2-Body3">
+                        <p class="CellBody">Attr1 hours and Var2 seconds</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="280" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088717"></a>S<MadCap:keyword term="Cost:special cost handling" />pecial Cost Handling</h3>
+        <ul>
+            <li class="li_1">As soon as you acquire a resource, it begins to accrue cost.</li>
+            <li class="li_1">Unless obtained in the move logic, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> charges the “Cost per use” for a resource to the location that obtained it. Resources obtained in the move logic do not charge a “per use” cost to any location.</li>
+            <li class="li_1">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does not charge any resource time used during move logic to any location.</li>
+            <li class="li_1">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> adds initial entity costs defined in the cost module only as entity costs, not location costs.</li>
+            <li class="li_1">If a location uses a resource during a downtime, the location accrues that resource’s cost.</li>
+            <li class="li_1">The <MadCap:keyword term="USE"></MadCap:keyword>Use statement counts as operation and resource cost.</li>
+            <li class="li_1">When you <MadCap:keyword term="CREATE"></MadCap:keyword>Create a new entity, it begins with new time statistics and an initial cost.</li>
+            <li class="li_1">If you <MadCap:keyword term="RENAME"></MadCap:keyword>Rename an entity, previous time statistics and costs continue with the entity.</li>
+            <li class="li_1">The <MadCap:keyword term="SPLIT AS" />Split As statement divides the cost of the original entity between all entities. Each <span class="Emphasis">new</span> entity begins with new time statistics.</li>
+        </ul>
+    </body>
+</html>

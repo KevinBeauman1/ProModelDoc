@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1202" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>FreeUnits()</h1>
+        <h5>
+            <MadCap:keyword term="functions:freeunits;freeunits" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>FreeUnits(&lt;activity&gt; or &lt;resource&gt;)</p>
+        <p>Use (FreeUnits(Res1)) Res1 For 5 min</p>
+        <h2>Description</h2>
+        <p>Returns the free units of an activity or resource.</p>
+        <h2>Valid In </h2>
+        <p>Any logic</p>
+        <h2>Components</h2>
+        <p><b>&lt;activity&gt;</b> <![CDATA[ ]]></p>
+        <p>The name of the activity to examine.</p>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>The name of the resource to examine.</p>
+        <h2>Example</h2>
+        <p>
+            This example uses FreeUnits() to assign a team of Specialists to rework a problem. The size of the team, stored in the local variable T_Size, is determined by all the free Specialist units. TeamTime is a subroutine that varies the amount of time it takes to solve a problem (the amount of time in the Use statement) based on the number of units on the team.
+</p>
+        <p class="p_11">Int T_Size = FreeUnits(Specialist)<br />If T_Size = 0 Then</p>
+        <p class="p_12">T_Size = 1</p>
+        <p class="p_11">Use T_Size Specialist For TeamTime(T_Size) hr</p>
+        <h5>See Also</h5>
+        <p>Units, Res, and Loc</p>
+    </body>
+</html>

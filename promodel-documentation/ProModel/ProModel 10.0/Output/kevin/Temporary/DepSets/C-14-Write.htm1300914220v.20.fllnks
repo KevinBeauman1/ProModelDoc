@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-06-FileTypes.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-06-FileTypes.htm#General2" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-14_4292047180_1108417" />
+    <Anchor
+      Name="C-14_4292047180_25979" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="General operation statements:WRITE"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="WRITE"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="RESET"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="XWRITE"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

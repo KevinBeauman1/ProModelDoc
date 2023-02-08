@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="637" MadCap:lastWidth="561" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-12_3485478126_1093733"></a>User Condition</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">&lt;Boolean expression&gt; {&lt;expression&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Selects one of several locations listed in a routing block based upon a user-defined condition. Several User-Condition routings usually are used in the same routing block. At least one of the user-defined conditions in a block must be true or an error message will appear and the simulation will terminate. Capacity must be available at the location before the routing actually takes place. Unlike most primary routing rules, an <MadCap:keyword term="ALTERNATE" />ALTERNATE or <MadCap:keyword term="BACKUP" />Backup routing may be specified after each <MadCap:keyword term="USER CONDITION;Routing rules:USER CONDITION" />USER CONDITION routing in the same routing block. </p>
+        <p class="Body">
+            <img src="pm-c12-426-1.jpg" MadCap:mediastyle="@media print { max-width: 2.5in; }" />
+        </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The rule field of the Routing edit table only.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Boolean expression&gt;</p>
+        <p class="p">Any expression which evaluates to TRUE or FALSE.</p>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The total entities output from the process. This expression is valid only for the first routing of a routing block. For more information on this expression, see <MadCap:xref class="lowercase_no_see" href="C-05 - Processing.htm#C-05_2723800551_1087167" target="" title="" alt="">Processing on page 1</MadCap:xref>.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Customers bring their cars to a local service station for emissions testing and state inspection.  After each car completes a 10-minute inspection operation at location Inspect, they are put in the proper service bay depending on the car’s engine type.  Late-model (post-1975) cars are tested in Bays 1 and 2, pre-1975 cars are tested in Bay3, and diesel engine cars are tested in Bay4.  If Bay1 is selected but not available, an alternate location (Bay2) is selected.  If both Bay1 and Bay2 are down, a backup location (Bay3) is selected.  Bay3 also has an alternate location (Bay4) in case it is unavailable, but has no backup location.  Bay4 has neither an alternate location nor a backup location.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td rowspan="6" class="BodyE-Column1-Body1">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td rowspan="6" class="BodyE-Column2-Body1">
+                        <p class="CellBody">Inspect</p>
+                    </td>
+                    <td rowspan="6" class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 10</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" />
+                <tr class="Body-Body3" />
+                <tr class="Body-Body4" />
+                <tr class="Body-Body1" />
+                <tr class="Body-Body2" />
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td rowspan="6" class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Bay1</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">If Type=1 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Bay2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">ALT</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Bay3</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">Backup</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyE-Column3-Body4">
+                        <p class="CellBody">Bay3</p>
+                    </td>
+                    <td class="BodyE-Column4-Body4">
+                        <p class="CellBody">If Type=2</p>
+                    </td>
+                    <td class="BodyD-Column1-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Bay4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">ALT</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">CAR</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Bay4</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">If Type=3</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Processing.htm#C-05_2723800551_1087167" target="" title="" alt="">Processing on page 1</MadCap:xref>.</p>
+    </body>
+</html>

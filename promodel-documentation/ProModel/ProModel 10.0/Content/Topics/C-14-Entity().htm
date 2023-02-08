@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1932" MadCap:lastWidth="1466" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103671"></a>Entity()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-specific system functions:ENTITY();ENTITY()" />Entity-Specific System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Entity({&lt;expression&gt;})</p>
+        <p class="Syntax_body">Entity()</p>
+        <p class="Syntax_body">Entity(Var1)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the name-index number of the current entity or a particular entity in an entity group. This function is especially useful in macros and subroutines that vary depending on which entity calls them. Use Entity() to determine what type of entity is processing when an entity type of <MadCap:keyword term="ALL" />All is specified at a location. For example, if a common area handles several different parts with essentially the same process, use an <MadCap:keyword term="IF...THEN" />If...Then statement in conjunction with an Entity() to have individual statement blocks handle the details of the operation. This function returns an integer.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Speed fields, traveling time fields, conveyor speed fields, Resource fields, operation logic, routing fields, arrival logic, debug user-condition field. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The number of the entity in a group to inspect. For example, Entity(3) returns the name-index number of the third entity in the group. If this option is omitted, the name-index number of the calling entity is returned.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">All cars from the motor pool must be washed after use. All cars except vans require ten minutes to wash, and vans require an additional ten minutes. The logic below models this situation.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">All patients entering triage take approximately ten minutes to interview. Geriatric patients (GER) require an additional 5 minutes. The logic below models this situation.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Wash1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait 10 min</p>
+                        <p class="CellBody">If Entity() = Van Then</p>
+                        <p class="Syntax_body">   Wait 10 min </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Process Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Triage</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait N(10,2,1) min</p>
+                        <p class="CellBody">If Entity() = GER Then</p>
+                        <p class="Syntax_body">   Wait 5 min </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Parking</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 30</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Waiting_Rm</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 3</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Ent() and Location().</p>
+    </body>
+</html>

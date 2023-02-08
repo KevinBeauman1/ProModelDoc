@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="634" MadCap:lastWidth="562" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-12_3485478126_1093109"></a>Most Available</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">
+            <MadCap:keyword term="MOST" />Most {&lt;expression&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Selects one of the locations listed in a block of routings based on which has the most available capacity. If no capacity is available at any of the locations listed, the first one that becomes available is selected. Use the Most routing rule to equalize queues in front of workers.  This rule is useful in cases where inventory levels need to be balanced among several downstream queues.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The rule field of the Routing edit table only.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The total entities output from the process. This expression is valid only for the first routing of a routing block. For more information on this expression, see <MadCap:xref class="lowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" target="" title="" alt="">Processing on page 1</MadCap:xref>.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Clients entering a bank immediately choose a teller depending on which queue has the most available capacity (fewest customers in line) at the current time.  The variable, InSys, simply keeps track of the number of Clients in the bank at any time.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">After EntA completes a 4 minute operation at Loc1, it is routed to Loc2, Loc3 or Loc4 depending on which location has the most available capacity at the current time.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td rowspan="3" class="BodyE-Column2-Body1">
+                        <p class="CellBody">Entrance</p>
+                    </td>
+                    <td rowspan="3" class="BodyD-Column3-Body1">
+                        <p class="CellBody">Inc InSys </p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel" />
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ServiceModel" />
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td rowspan="3" class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td rowspan="3" class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 4</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel" />
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel" />
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Teller1Q</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Most 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Teller2Q</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">Most</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">Teller3Q</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">Most</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+                    <td rowspan="3" class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Most 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">Most</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">Most</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" target="" title="" alt="">Processing on page 1</MadCap:xref>.</p>
+    </body>
+</html>

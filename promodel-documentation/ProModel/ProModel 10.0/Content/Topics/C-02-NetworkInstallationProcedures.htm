@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="605" MadCap:lastWidth="600">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-02_3483315438_1023154"></a><a name="C-02_3483315438_89742"></a>Network Installation Procedures<MadCap:keyword term="Setup and installation:network version;Network:version:installation procedure" /></h2>
+        <h3 class="NewClass"><a name="C-02_3483315438_75682"></a><span class="_Override" style="font-weight: bold;font-size: 14pt;line-height: 16pt;">Overview</span>
+        </h3>
+        <p class="p"> ProModel Corporation offers a network edition of <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> that allows a single machine to control license usage (via a network connection) for several users. To use this method of license tracking, you must install a network edition of <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>. The network edition  includes the <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> client program, a hardware security key and the license manager application you will use to control license usage at your site.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The network edition consists of the following:</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <ul>
+                <li>
+                    <MadCap:xref href="C-02-NetworkLicenseServerSetup.htm">Network License Server Setup</MadCap:xref>
+                </li>
+                <li>
+                    <MadCap:xref href="C-02-NetworkClientInstallaqtionProcedure.htm">Network Client Installation</MadCap:xref>
+                </li>
+            </ul>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p">When you install and run the  network client edition of <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>, it searches your network for a license key server, rather than checking its own USB port for a security key. Once it locates the license key server, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> asks the license manager application (running on the key server) if a license is available. If a license is available, the license manager will assign a license to the client computer. When you exit <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>, the license assigned to you is freed and becomes available to another user.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The license server consists of the security key that plugs into the license server’s USB port, and the license manager software. When installed, the license server responds to <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> client license requests and allows computers to run either a full version (if sufficient licenses are available) or a limited run-time version (if no license is available). The license server can run on Windows 10, 8.1 or 7 and Windows Server 2008 and listens for incoming license requests over any of the following network protocols: IPX, TCP/IP, and NetBEUI. If the license server is not functioning, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> will start as a limited run-time version.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Check the support web page for periodic updates to the installation procedures, software versions, and the license server components.</p>
+    </body>
+</html>

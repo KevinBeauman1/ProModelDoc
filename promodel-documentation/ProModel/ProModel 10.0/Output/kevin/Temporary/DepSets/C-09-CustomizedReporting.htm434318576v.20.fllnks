@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-14-Report.htm" />
+    <Link
+      Url="Content/Topics/C-14-ResetStats.htm" />
+    <Link
+      Url="Content/Topics/C-14-Warmup.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/C-14-Report.htm#C-14_4292047180_1106713" />
+    <Link
+      Url="Content/Topics/C-14-ResetStats.htm#C-14_4292047180_1106798" />
+    <Link
+      Url="Content/Topics/C-14-Warmup.htm#C-14_4292047180_1108369" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1091055" />
+    <Anchor
+      Name="C-09_398201723_31648" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Custom:reporting"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Simulation:options:customized reporting"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="REPORT"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="RESET STATS"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="WARMUP"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="WAIT UNTIL"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

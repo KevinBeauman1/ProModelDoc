@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="649" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103130"></a>Create</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related operation statements:CREATE;CREATE" />Entity-Related Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Create &lt;expression1&gt; {As &lt;entity name&gt;}</p>
+        <p class="syntax_body_indent">{TAKE {&lt;expression2&gt;} &lt;resource&gt;,...}</p>
+        <p class="Syntax_body">Create 10 As EntX</p>
+        <p class="Syntax_body">Create 2 As EntB <MadCap:keyword term="TAKE" />TAKE 1 Res1, 2 Res2</p>
+        <p class="Syntax_body">Create Var1 As Ent(Var2) TAKE Var3 Res(Var4)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Creates a specified number of entities in addition to the original entity and copies all attributes of the original entity to each new entity. The first entity created can optionally take any of the resources owned by the parent entity. The newly created entities require no additional capacity at the location and are processed immediately.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Create statement can simulate the creation of paperwork that needs to be hand-carried to another location to be approved while the base entity continues to process. Before the base entity can exit the location, the paperwork must be approved and routed back to the original location where it is joined to the base entity. </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The operation column of process edit tables only. Create may not be used in combination with <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, <MadCap:keyword term="GROUP" />Group, <MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="SPLIT AS" />Split As, or other Create statements in the same processing logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression1&gt;  </p>
+        <p class="p">The number of new entities to create. This expression is evaluated every time the create statement is encountered. </p>
+        <p class="Component">AS &lt;entity name&gt; </p>
+        <p class="p">The name of the new entities. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will search the process list for the new entity type and begin processing them before it finishes processing the entity that created them. If omitted, the entities will be named the same as the currently processing entity. </p>
+        <p class="Component">TAKE &lt;expression2&gt; </p>
+        <p class="p">The first created entity will take any resources listed here from the parent entity. This component is optional. The second syntax example above creates two EntB’s. The first of the two will own one unit of Res1 and two units of Res2.</p>
+        <p class="Component">&lt;resource&gt;</p>
+        <p class="p">The name of the resource whose ownership should be transferred to the first new entity. Using the keyword <MadCap:keyword term="ALL" />All here will take all resources owned by the parent entity.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">The Create statement forms a new entity with new statistical information and cost. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> adds an initial cost to explicitly created entities (i.e., entities created with the Create statement).</p>
+        <h5 class="_rules_statements">I<MadCap:keyword term="Entity:actions:implicit" />mplicit Entity Actions</h5>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows you to use the Create statement implicitly as part of the routing definition.  To do this, define a route block and check the New Entity option. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does NOT add an initial cost to implicitly created entities. </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The following  shows how one entity, Record, creates two new entities.  Note that there is no routing defined in this process for the new entities, Copy.  The new entities are handled according to the logic defined in the subsequent process.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Record</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Station1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait N(8,.3)</p>
+                        <p class="CellBody">Create 2 As Copy</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Copy</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Station1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Wait U(3,.3)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Record</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Station2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Copy</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">File_Cab</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p"> Order, Split As, Ent(), and Res().</p>
+    </body>
+</html>

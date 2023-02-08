@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="568" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>GetIntFieldValue</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="GetIntFieldValue"><a MadCap:generatedBookmark="TOC" name="GetIntFieldValue"></a><a name="C-01_2914010915_462819"></a>
+            <MadCap:keyword term="GetIntFieldValue;ProModel Data Object:GetIntFieldValue" />GetIntFieldValue</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetIntFieldValue <span class="_Override" style="color: #0000ff;">RecordType, FieldNumber, FieldValue</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the value of the specified integer field from the selected record.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> 	 (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldNumber</span><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>	(Long)  The field (column) number in the specified table from which you want to return a value.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldValue</span> (Long)  Data value contained in the specified field for the selected record. This must be a variable.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example gets the value of the Default Time units from the mfg_cost model, then displays a message with that information.</p>
+        <p class="objects">Sub GetTimeUnits()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim TimeUnit As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.SelectMainRecordByIndex 18, 1</p>
+        <p class="objects2">	pmDataObject.GetIntFieldValue <span class="_Override" style="color: #0000ff;">18, 2, TimeUnit</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Select Case TimeUnit</p>
+        <p class="objects3">		Case 1:</p>
+        <p class="objects4">			pmObject.MsgBox ("Default Time Units:  Seconds")</p>
+        <p class="objects3">		Case 2:</p>
+        <p class="objects4">			pmObject.MsgBox ("Default Time Units:  Minutes")</p>
+        <p class="objects3">		Case 3:</p>
+        <p class="objects4">			pmObject.MsgBox ("Default Time Units:  Hours")</p>
+        <p class="objects3">		Case 4:</p>
+        <p class="objects4">			pmObject.MsgBox ("Default Time Units:  Days")</p>
+        <p class="objects3">		Case Else:</p>
+        <p class="objects4">			pmObject.MsgBox ("Error")</p>
+        <p class="objects2">	End Select</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="711" MadCap:lastWidth="1447" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h4>Functions and Statements<MadCap:keyword term="Shift:assignments:shift &amp; break:logic:functions &amp; statements" /></h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> uses several functions and statements specifically for shift and break logic: <MadCap:keyword term="SKIP" />Skip, <MadCap:keyword term="PRIORITY" />Priority, <MadCap:keyword term="DTLEFT()" />DTLeft(), <MadCap:keyword term="DTLENGTH()" />DTLength(), <MadCap:keyword term="FORLOCATION()" />ForLocation(), and <MadCap:keyword term="FORRESOURCE()" />ForResource(). Following is a brief description of each. For more details, see <MadCap:xref class="lowercase_no_see" href="C-14 - Statements and Functions.htm#C-14_4292047180_1035124" target="" title="" alt="">Statements and Functions on page 1</MadCap:xref>.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="SKIP" />Skip If used in pre-logic, it causes the off-shift or break time (including any off-shift or break logic) to be skipped so a location or resource never goes off line. If used in the off-shift or break logic, it causes the off-line time defined in the Calendar Editor to be skipped. This allows you to specify a <MadCap:keyword term="WAIT" />Wait statement for the off-line time and skip the off-line time defined in the Calendar Editor.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="PRIORITY" />Priority This statement provides an alternative way to specify off-shift or break priorities. It also allows the priority to be changed after some time being off-shift or on break. If the priority is changed to a value lower than the current value, the system will check to see if any preemption may occur at that time. This statement is not allowed in off-shift or break pre-start logic.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="DTLEFT()" />DTLeft() This function returns the remaining off-shift time based on when the location or resource is scheduled to go back on shift as defined in the shift file. It may be used in off-shift and break logic to adjust the actual time the location or resource is off-line.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="DTLENGTH()" />DTLength() This function returns the full length of the off-shift or break time for a location or resource before it resumes normal activities.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="FORLOCATION()" />ForLocation() This function returns TRUE if the member for which the shift or break logic being executed is a location. This may be followed by a test using the Location() function to determine the precise location.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="FORRESOURCE()" />ForResource() This function returns TRUE if the member for which the shift or break logic being executed is a resource. The Resource() function may then be used to determine the precise resource if multiple resources are listed as members.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="RESOURCE()" />Resource() This returns the name-index number of the resource currently processing the off-shift or break logic.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To illustrate how ForLocation() and ForResource() might be used, consider the following example: Suppose you have locations and resources as members in a shift file assignment and you want to wait until variable Applications is equal to zero before allowing a particular resource called Loan_Officer to go off shift. You would enter the following pre-off shift logic:</p>
+        <p class="p">&#160;</p>
+        <p class="p">Pre-off shift logic</p>
+        <p class="p">&#160;</p>
+        <p class="p">If ForResource() Then</p>
+        <p class="p">{</p>
+        <p class="syntax_body_indent">If Resource() = Loan_Officer Then</p>
+        <p class="syntax_body_indent">		{</p>
+        <p class="syntax_indent_3">		Wait Until Applications = 0</p>
+        <p class="syntax_body_indent">	}</p>
+        <p class="p">}</p>
+        <p class="p">In addition to these functions, <MadCap:keyword term="DTDELAY()" />DTDelay() may also be called at the beginning of the off-shift or break logic to determine how much time has elapsed between the time the shift downtime was scheduled to start and when it actually started. The length of the shift downtime defined in the shift file would be the sum of <MadCap:keyword term="DTDELAY()" />DTDelay() and <MadCap:keyword term="DTLEFT()" />DTLeft().</p>
+    </body>
+</html>

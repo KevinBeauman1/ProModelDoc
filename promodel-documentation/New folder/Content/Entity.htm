@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1162" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Entity</h1>
+        <h5>
+            <MadCap:keyword term="functions:entity;entity" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>Entity({&lt;expression&gt;})</p>
+        <p>Entity()<br />Entity(Var1)</p>
+        <h2>Description</h2>
+        <p>Returns the name-index number of the current entity or a particular entity in an entity group. This function is especially useful in logic or subroutines that vary depending on which entity calls them. Use Entity() to determine what type of entity is processing. For example, if a common area handles several different parts with essentially the same process, use an If Then statement in conjunction with the Entity() function in the condition to have individual statement blocks handle the details of the separate operations. This function returns an integer.</p>
+        <h2>Valid In</h2>
+        <p>Activity, arrival and route logic</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The number of the entity in a group to inspect. For example, Entity(3) returns the name-index number of the third entity in the group. If this option is omitted, the name-index number of the entity executing the logic is returned.</p>
+        <h2>Example</h2>
+        <p>
+            All cars from the motor pool must be washed after use. All cars except vans require ten minutes to wash, and vans require an additional ten minutes. The logic below models this situation.
+</p>
+        <p class="p_11">Wait 10 min<br />If Entity() = Van Then</p>
+        <p class="p_12">Wait 10 min</p>
+        <h5>See Also</h5>
+        <p>Ent and <a href="location.htm" class="a_11">Location</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1482" MadCap:lastWidth="1127" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102960"></a><a name="C-14_4292047180_42534"></a>Combine</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related operation statements:COMBINE;COMBINE" />Entity-Related Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Combine &lt;expression&gt; {As &lt;new entity name&gt;}</p>
+        <p class="Syntax_body">Combine Var1</p>
+        <p class="Syntax_body">Combine 3 As EntQ</p>
+        <p class="Syntax_body">Combine Var1 as Ent(Attr1)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Accumulates and consolidates a specified quantity of entities into an entity, optionally with a different name. Unlike the <MadCap:keyword term="GROUP" />Group statement, combined entities lose their identities and attributes and cannot be ungrouped later. Use Combine when several entities need to be combined, such as when eight spark plugs are combined in a box. Note that after several entities have been combined at a location, no additional statistics will be collected for any of the combined entities at that location.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When specifying Combine &lt;expression&gt; AS &lt;new entity name&gt; in the operation logic, there must be another operating block at the same location. In this case, the incoming entity at the new operating block is the new entity name specified in the Combine statement.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Operation logic only. Combine may not be used in combination with <MadCap:keyword term="CREATE" />Create, <MadCap:keyword term="GROUP" />Group, <MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, <MadCap:keyword term="SPLIT AS" />Split As, or other combine statements in the same process logic. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The number of entities to combine. Negative values generate an error message. If this expression evaluates to zero, it is ignored. If it evaluates to one, then no entities are actually combined, but the entity that encountered the combine statement is renamed (if the As option has been specified).</p>
+        <p class="p">&#160;</p>
+        <p class="p">This expression is evaluated every time an entity encounters the Combine statement, so the amount of entities to be combined can vary as the simulation progresses. If an entity arrives that changes this expression to a number lower than the number of entities already waiting to be combined, all of the entities waiting to be combined are combined, including the entity that just arrived.</p>
+        <p class="Component">AS &lt;new entity name&gt;  </p>
+        <p class="p">The optional name of the resulting entity. If left off, the new entity will have the same name as the last combined entity or the output entity name.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">	Combine passes cost on to new entities but not statistical information. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> counts combined entities as exits.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">A copy center copies and binds software manuals.  Once the manuals are bound and ready for delivery, they are combined into sets of twenty to be distributed to customers.  A Combine statement will work well for this example, because the individual manuals are not recognized again. At the binding location, manuals are grouped into boxes of twenty, and the boxes are routed to the delivery location.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">In a disaster planning model, patients are divided into ambulatory and not-ambulatory categories. Once examined for fitness to travel, they are grouped into bus loads of 35 patients. They are then moved, as a group (BusLoad), to the departure point (Depart) to await transportation. A Combine statement works well in this case if the individual patients simply leave the model once they depart on the bus. If patients are to be processed individually at their destination, you may want to use a Group statement to gather a bus load. If patients get on the bus as they are identified rather than waiting for a full load of 35, you may want to use the Load statement to fill the bus.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">A manufacturing plant makes computer motherboards. After manufacture and inspection, when the motherboards are ready for shipping, workers combine them into sets of twenty to distribute to the company’s customers. A Combine statement will work well for this example, because workers do not inspect or use the individual motherboards again. At the final assembly location, workers group motherboards into totes of twenty, and route the totes to the shipping department.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Manual</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Binding</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Combine 20</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Process Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Triage</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Combine 35</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">mboard</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Assembly</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Combine 20</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Dest...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Delivery</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Dest...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">BusLoad</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Depart</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Dest...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Tote</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Shipping</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Group, Ent(), Accum, and Load. Also see <MadCap:xref class="lowercase_no_see" href="C-06 - Attributes and the COMBINE Statement.htm#C-06_1157716610_1085220" target="" title="" alt="">Attributes and the Combine Statement on page 1</MadCap:xref>.</p>
+    </body>
+</html>

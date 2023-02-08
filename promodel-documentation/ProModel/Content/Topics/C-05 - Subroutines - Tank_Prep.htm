@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="625" MadCap:lastWidth="944" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089322"></a>
+            <MadCap:keyword term="TANK_PREP;Subroutines:tank:TANK_PREP" /><a name="C-05_2723800551_30885"></a>Tank_Prep</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_PREP (&lt;Tank ID&gt;, &lt;Prep time&gt;)</p>
+        <p class="Syntax_body">TANK_PREP (TankA, 5) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Sets the state of the tank to Tank_Setup, waits for the specified time, then sets the state to Tank_Idle. Use Tank_Prep for cleaning activities after you empty a tank.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_Prep to take a tank off line for cleaning or other preparation time.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Prep time&gt;</p>
+        <p class="p">The duration (in <MadCap:keyword term="Time units, tank;Tanks, time units;Rate, tank flow" />time units defined in the General Information dialog) of preparation time.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Workers clean a mixing tank for 30 minutes after each batch produced. To model this, enter the following logic in the mixing subroutine defined for the mixing tank:</p>
+        <p class="p">&#160;</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">[Enter mixing and transfer logic here]</p>
+        <p class="syntax_body_indent">Tank_Prep(MixingTank, 30)</p>
+        <p class="Syntax_body">	}</p>
+        <p class="_rules">See Also</p>
+        <p class="p_2">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

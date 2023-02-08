@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Locations|Location Downtimes">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Called Downtime Editor</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-CalledDowntimeEditor.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Locations.htm#C-05_2723800551_1085243">Locations</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-LocationDowntimes.htm">Location Downtimes</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Called Downtime Editor</span>
+        </div>
+        <h4><a name="C-05_2723800551_1247131"></a>
+            <MadCap:keyword term="Locations:downtimes:called;Downtimes:location:called" /><a name="C-05_2723800551_82763"></a>Called Downtime Editor</h4>
+        <p class="p">Called downtimes are used in conjunction with the Down statement to make a location go down. When the name of the called downtime is referenced during simulation by the Down statement, the called downtime will execute its logic.</p>
+        <p class="Graphic">
+            <img src="mm-c5-105-1.jpg" />
+        </p>
+        <p class="p"><b>Name</b> The name of the called downtime. This is the name that will be referenced by the Down statement. Multiple locations may not use the same called downtime name. The name must be unique for each location.</p>
+        <p class="p"><b>Priority</b> The priority (0-999) of the downtime occurrence. The default priority is 99, the highest non-preemptive priority.</p>
+        <p class="p"><b>Scheduled...</b> Select YES if the downtime is to be counted as a scheduled downtime. Select NO if the downtime is to be counted as a non-scheduled downtime.</p>
+        <p class="p">All scheduled downtimes will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</p>
+        <p class="p"><b>Logic</b> Enter any logic statements to be processed when the downtime occurs. When the logic has completed, the location becomes available. In the most simple case, the logic is simply a Wait statement with a time value or expression which represents the duration of the downtime. Click on the heading button to open a larger edit window.</p>
+        <p class="p">For more information on the Down statement, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Down.htm#C-14_4292047180_1232009" title="" alt="" xrefformat="{paratext}">Down</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

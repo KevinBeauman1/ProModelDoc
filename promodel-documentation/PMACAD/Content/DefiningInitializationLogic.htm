@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="468" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>Defining Initialization Logic</h3>
+        <p class="p">Cause some logic to be executed at the start of the simulation. This may be the setting of variables, an initial ordering of entities, an initial send request, etc.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define a dummy entity connected to a dummy activity with the number of arrivals set to 1 to occur at time 0.</li>
+            <li class="li_1">In the Logic Builder of the dummy activity define the logic you would like to occur.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">At the beginning of the simulation, you would like to initialize the level of 3 different buffers (1, 2 and 3) in a lamp manufacturing process to 20 lamps each.</p>
+        <p class="p">
+            <img src="Resources/Images/definingintializationexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/definingintializationsolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">Although individual arrivals could have been defined to each of the buffers to be initialized (see One-Time Arrivals), the solution taken here was to define a single arrival to a dummy activity where logic could be defined ordering the Lamps to each of the Buffers.</p>
+    </body>
+</html>

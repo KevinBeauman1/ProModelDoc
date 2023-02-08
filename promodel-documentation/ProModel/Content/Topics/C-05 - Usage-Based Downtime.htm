@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="641" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h4>Usage-Based Downtime<MadCap:keyword term="Resources:downtimes:usage;Downtimes:resource:usage;Usage-based downtime" /></h4>
+        <p class="p">A usage-based downtime is a downtime based on how long a resources has been used, such as how often a forklift needs to be refueled. Usage-based downtimes for resources are specified through the Usage Downtimes edit table shown below. Actual time in use includes any time that a resource is moving with an entity or is being used by an entity at a location. It also includes any time a resource is being used in downtime logic as a maintenance resource. The fields of this table are defined as follows:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="pm-c5-133-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 5.50in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-132-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 5.50in; }">
+            </img>
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Frequency</span> The time between downtimes, based on the usage time of a resource. This may be a time distribution as shown above, or an expression.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">First Time</span> The time of the first downtime occurrence. Leave this field blank if the first occurrence is to be determined from the frequency field.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Priority</span> The priority of the downtime (0-999). The default priority is 99, the highest non-preemptive priority.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">List</span> A list of the individual units of the resource to be affected by the downtime. You may list individual units of the resource, specify All, or leave blank to affect all units.</p>
+        <ul>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">1,2</span> Units 1 and 2 only</li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">1-3,5</span> Units 1 through 3 and 5 only</li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">none</span> <span class="Normal_Char" style="line-height: 12pt;">  You may use none to indicate that no unit will adopt this downtime. This is useful in creating a scenario. By using a macro (which has been defined as a scenario parameter) to represent the number of units, the user may select none as an option for that parameter in the scenario manager. </span></li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">Macro</span> <span class="Normal_Char">The name of a macro defined as a scenario parameter that allows the user to specify the units to be affected by the downtime.</span></li>
+        </ul>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Node</span> This field applies only to dynamic resources and defines the node to which the resource will travel to go down. If no node is entered, the resource stays at the current node. The actual downtime does not begin until the resource arrives at this node. Traveling to the downtime node is counted statistically as time traveling to park.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Logic...</span> Specific logic to be performed when the downtime begins, typically a Wait statement. Resources may be used to service resources that are down if the servicing resource is static, or if the servicing resource is dynamic and uses the same network. (For a list of statements valid in Resource downtime logic, see <MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref>).</p>
+        <p class="p">&#160;</p>
+        <p class="p"> Select YES to disable a downtime without removing it from the table.</p>
+        <p class="p_10">Please Note: Usage-based downtimes do not accumulate. For example, if a downtime is preempted by an entity and another downtime is scheduled to occur while processing the entity, only the first downtime resumes after processing the entity. All others are ignored.</p>
+    </body>
+</html>

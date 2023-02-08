@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="1"
+  SkinType="WebHelpMobile"
+  Comment="This is the default skin"
+  Tabs="TOC,Index,Search"
+  conditions="Default.ScreenOnly"
+  Title="Process Simulator Help">
+  <Stylesheet />
+</CatapultSkin>

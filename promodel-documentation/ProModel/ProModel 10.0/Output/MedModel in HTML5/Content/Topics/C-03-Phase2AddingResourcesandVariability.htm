@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Planning the Model|Building a Model">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Phase 2: Adding Resources and Variability</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-03-Phase2AddingResourcesandVariability.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-03-PlanningtheModel.htm#C-03_1917231497_1035124">Planning the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-03-BuildingaModel.htm">Building a Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Phase 2: Adding Resources and Variability</span>
+        </div>
+        <h3 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="C-03_1917231497_1468423"></a><a name="kanchor167"></a><a name="C-03_1917231497_67523"></a>Phase 2: Adding Resources and Variability</h3>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">In this phase we wish to add a nurse and doctor that provide for the care and movement of patients in the clinic. This is done with Resources and to get them moving in the model, MedModel requires that all dynamic resources travel on a path network. Therefore, we need to define resources and path networks.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor168"></a>Defining Path Networks</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Path Networks consist of nodes and path segments which connect nodes to other nodes. Each location where a resource may stop to pick up, drop off, or treat entities must interface with a path node.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">We define path networks through the Path Network edit table similar to the previous edit tables. For each network we specify the nodes and path segments connecting the nodes. Some of the heading buttons, such as Paths and Interfaces, bring up other edit tables such as the Path Segment Edit table shown below. For more information on defining path networks, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-PathNetworks.htm#C-05_2723800551_1086257" title="" alt="">Path Networks</a>.</p>
+        <h5>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Path Network Edit Table</MadCap:conditionalText>
+        </h5>
+        <p class="image_nobreak">
+            <img src="mm-c3-53-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <h5>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor169"></a>Path Segment Edit Table</MadCap:conditionalText>
+        </h5>
+        <p class="image_nobreak">
+            <img src="mm-c3-53-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <h5>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Defining Resources<a name="kanchor170"></a></MadCap:conditionalText>
+        </h5>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Resources are defined in much the same way as entities. When in the Resource module we simply select an icon to represent the resource and then specify the characteristics of the resource in the Resource edit table. For more information see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Resources.htm#C-05_2723800551_1086477" title="" alt="">Resources</a>.</MadCap:conditionalText>
+        </p>
+        <p class="image_nobreak">
+            <img src="mm-c3-53-3_300x397.jpg" style="width: 300;height: 397;" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">The Resource edit table shown below contains fields for specifying the name and number of units of a resource. It also has fields for specifying resource downtimes (DTs...), the level of statistics to collect (Stats...), which path network is used for travel (Specs...), and any work and park search routines (Search...). Clicking the mouse on any of these buttons brings up separate edit tables for specifying this data.</MadCap:conditionalText>
+        </p>
+        <p class="image_nobreak" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c3-54-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <h4 data-mc-conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor171"></a>Process Editing</MadCap:conditionalText>
+        </h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Now that we have defined a resource, we must specify how and when that resource is used in the processing logic.</MadCap:conditionalText>
+        </p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">In the previous case, patients simply stayed at each location for the requisite amount of time representing administrative time or treatment they received.  Now that the doctor and nurse have been added, appropriate statements representing their use must be entered in each operation area.</MadCap:conditionalText>
+        </p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">In the example below, the patient obtains a doctor and a nurse for a period of time, frees the doctor, and then is escorted by the nurse to an operating facility.  This is accomplished with Get, Wait and Free statements in Operation logic and a Move With statement in Routing logic. </MadCap:conditionalText>
+        </p>
+        <h5>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Process Edit Table and corresponding <a name="kanchor172"></a>Operation logic</MadCap:conditionalText>
+        </h5>
+        <p class="image_nobreak">
+            <img src="6_32.png" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <h5>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor173"></a>Routing Edit Table</MadCap:conditionalText>
+        </h5>
+        <p class="image_nobreak">
+            <img src="mm-c3-54-4.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

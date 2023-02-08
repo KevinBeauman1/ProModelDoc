@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-06-Streams.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-06-Streams.htm#C-06_1157716610_1086820" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-13_1919394185_1091849" />
+    <Anchor
+      Name="C-13_1919394185_10185" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Distribution functions"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Logic elements:distribution functions"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Distribution functions:beta"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Beta distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Distribution functions:binomial"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Binomial distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Distribution functions:Erlang"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Erlang distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Distribution functions:exponential"
+      Conditions=""
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Exponential distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Gamma distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="58" />
+    <IndexCacheEntry
+      Term="Distribution functions:gamma"
+      Conditions=""
+      LocalConditions=""
+      Position="58" />
+    <IndexCacheEntry
+      Term="Geometric distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Distribution functions:geometric"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Inverse Gaussian distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="74" />
+    <IndexCacheEntry
+      Term="Distribution functions:inverse Gaussian"
+      Conditions=""
+      LocalConditions=""
+      Position="74" />
+    <IndexCacheEntry
+      Term="Lognormal distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="82" />
+    <IndexCacheEntry
+      Term="Distribution functions:lognormal"
+      Conditions=""
+      LocalConditions=""
+      Position="82" />
+    <IndexCacheEntry
+      Term="Normal distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="90" />
+    <IndexCacheEntry
+      Term="Distribution functions:normal"
+      Conditions=""
+      LocalConditions=""
+      Position="90" />
+    <IndexCacheEntry
+      Term="Pearson5 distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="98" />
+    <IndexCacheEntry
+      Term="Distribution functions:Pearson5"
+      Conditions=""
+      LocalConditions=""
+      Position="98" />
+    <IndexCacheEntry
+      Term="Pearson6 distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="106" />
+    <IndexCacheEntry
+      Term="Distribution functions:Pearson6"
+      Conditions=""
+      LocalConditions=""
+      Position="106" />
+    <IndexCacheEntry
+      Term="Poisson distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Distribution functions:Poisson"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Triangular distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="122" />
+    <IndexCacheEntry
+      Term="Distribution functions:triangular"
+      Conditions=""
+      LocalConditions=""
+      Position="122" />
+    <IndexCacheEntry
+      Term="Uniform distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="130" />
+    <IndexCacheEntry
+      Term="Distribution functions:uniform"
+      Conditions=""
+      LocalConditions=""
+      Position="130" />
+    <IndexCacheEntry
+      Term="User-defined distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="138" />
+    <IndexCacheEntry
+      Term="Distribution functions:user-defined"
+      Conditions=""
+      LocalConditions=""
+      Position="138" />
+    <IndexCacheEntry
+      Term="Weibull distribution"
+      Conditions=""
+      LocalConditions=""
+      Position="146" />
+    <IndexCacheEntry
+      Term="Distribution functions:Weibull"
+      Conditions=""
+      LocalConditions=""
+      Position="146" />
+    <IndexCacheEntry
+      Term="Distribution functions:general components"
+      Conditions=""
+      LocalConditions=""
+      Position="152" />
+    <IndexCacheEntry
+      Term="Logic elements:distribution functions:general components"
+      Conditions=""
+      LocalConditions=""
+      Position="152" />
+    <IndexCacheEntry
+      Term="Distribution functions:stream, optional"
+      Conditions=""
+      LocalConditions=""
+      Position="156" />
+    <IndexCacheEntry
+      Term="Logic elements:distribution functions:stream, optional"
+      Conditions=""
+      LocalConditions=""
+      Position="156" />
+    <IndexCacheEntry
+      Term="Stream, distributions"
+      Conditions=""
+      LocalConditions=""
+      Position="156" />
+    <IndexCacheEntry
+      Term="Distribution functions:axis shift, optional"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+    <IndexCacheEntry
+      Term="Logic elements:distribution functions:axis shift, optional"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+    <IndexCacheEntry
+      Term="Axis shift"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

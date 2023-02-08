@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="331" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Application Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>MenuCommand</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="MenuCommand"><a MadCap:generatedBookmark="TOC" name="MenuCommand"></a><a name="C-01_2914010915_459896"></a>
+            <MadCap:keyword term="MenuCommand;ProModel Application Object:MenuCommand" />MenuCommand</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:</span>  MenuCommand <span class="_Override" style="color: #0000ff;">CmdNum</span>, <span class="_Override" style="color: #0000ff;">lParam</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:</span>  Executes a specified menu option (as if the user had selected it).</p>
+        <p class="p" style="font-weight: bold;"><span class="Lower_Label">Parameters</span>:</p>
+        <p class="objects">CmdNum	 (Long)  The ID number of the menu command you wish to use. See <MadCap:xref class="lowercase_no_see" href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Content/Topics/Locations Table (1)_ pmd.htm#AppendixA_4093679820_493442" MadCap:xrefTarget="Locations Table (1): PMD_Table_Location">Locations Table (1): PMD_Table_Location on page 1</MadCap:xref>.</p>
+        <p class="objects">&#160;</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">lParam</span> 	(Long)  For almost all MenuIDs, Parameter has no meaning, so a zero should be passed.  For #4825 (Interactive Subroutine), Parameter will activate a specific subroutine.  The number in Parameter refers to the order of the subroutine in the “Interact” list available during simulation, not it’s index number in the Subroutine table.</p>
+        <p class="Component_description" style="font-weight: bold;"><span class="Lower_Label">Returns</span><span class="_Override" style="font-weight: bold;">:  </span><span style="font-weight: normal;">Nothing</span>
+        </p>
+        <p class="Component_description"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads a model, then opens the General Information dialog.</p>
+        <p class="objects">Sub ChangeView()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects2">	pmObject.LoadModel (mfg_cost.mod)</p>
+        <p class="objects2">	pmObject.MenuCommand <span class="_Override" style="color: #0000ff;">2863</span>, <span class="_Override" style="color: #0000ff;">0</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

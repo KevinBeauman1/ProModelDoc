@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Activate</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-14-Activate.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Activate</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1102504"></a><a name="C-14_4292047180_29135"></a>Activate</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:ACTIVATE;ACTIVATE" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Activate &lt;subroutine&gt;({parameter1&gt;,&lt;parameter2&gt;...})</p>
+        <p class="Syntax_body">Activate Sub1()</p>
+        <h5 class="_rules_statements">Description
+        </h5>
+        <p class="p">Starts an independent subroutine. The calling logic then continues without waiting for the called subroutine to finish. Therefore, independent subroutines can run in parallel with the logic that called them. Independent subroutines are not entity or location dependent and run without regard to what happens inside the logic that called them.</p>
+        <p class="p">Use Activate to process logic that has <MadCap:keyword term="WAIT" />Wait or <MadCap:keyword term="WAIT...UNTIL" />Wait...Until statements when you do not want to use an entity to process the Wait or Wait...Until statements. For example, an Activate in the initialization logic could call a subroutine that adjusts the arrival frequency for a type of entity depending on the time of day. </p>
+        <p class="p">Independent subroutines called with Activate cannot use entity-specific or location-specific system functions. If the subroutine has a return value, then that value is ignored. External subroutines cannot be called with Activate, although they may be called from within an activated subroutine.</p>
+        <h5 class="_valid_in">Valid In
+        </h5>
+        <p class="p">Any logic. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;subroutine&gt;</p>
+        <p class="p">The name of the subroutine to run. This name should appear exactly as if the subroutine were being called normally. Any return value for this function is ignored. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" title="" alt="" xrefformat="{paratext}">Subroutines</a>.</p>
+        <p class="Component">&lt;parameters&gt;</p>
+        <p class="p">The parameters that the subroutine normally takes.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">This example uses Activate in a model’s initialization logic to start a subroutine named Res_Log(). Res_Log() is a user-defined subroutine that logs every time that all units of a resource named <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText> are in use. After it logs the time that all units were busy, it waits ten minutes to check again. Note that the <MadCap:keyword term="WHILE...DO" />While...Do loop in the subroutine is never exited. This technique allows the subroutine to run during the entire simulation.</p>
+        <p class="p">Initialization Logic:
+        </p>
+        <p class="Syntax_body">Activate Res_Log()
+        </p>
+        <p class="p">Res_Log()
+Subroutine Logic:       </p>
+        <p class="Syntax_body">Int x = 1</p>
+        <p class="Syntax_body">While x = 1 Do</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">If FreeUnits(<MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText>)= 0 Then</p>
+        <p class="syntax_indent_2"> Log "All workers busy",0</p>
+        <p class="syntax_body_indent">Wait 10</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also
+        </p>
+        <p class="p">Xsub(). Also see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" title="" alt="" xrefformat="{paratext}">Subroutines</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-05-EnableorDisableCosting.htm" />
+    <Link
+      Url="Content/Resources/Images/mmcosting.png" />
+    <Link
+      Url="Content/Topics/8_205.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/C-05-EnableorDisableCosting.htm#C-05_2723800551_1088772" />
+    <Link
+      Url="Content/Resources/Images/mmcosting.png" />
+    <Link
+      Url="Content/Topics/8_205.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1088685" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Cost:building a model with costing"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

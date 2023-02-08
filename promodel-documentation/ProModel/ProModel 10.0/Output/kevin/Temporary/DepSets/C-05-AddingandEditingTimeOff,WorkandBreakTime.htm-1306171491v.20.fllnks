@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links />
+  <LongLinks />
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1517013" />
+    <Anchor
+      Name="C-05_2723800551_23461" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Shift:definition:Adding Work to a shift or break block"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Shift:definition:Adding Work to a shift or break block"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Shift:definition:Adding Work to a shift or break block"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="Shift:definition:editing work or break time"
+      Conditions=""
+      LocalConditions=""
+      Position="40" />
+    <IndexCacheEntry
+      Term="Shift:definition:erasing work or break time"
+      Conditions=""
+      LocalConditions=""
+      Position="48" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

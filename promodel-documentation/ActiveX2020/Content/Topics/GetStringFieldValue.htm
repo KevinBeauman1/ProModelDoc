@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="519" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_463099"></a>
+            <MadCap:keyword term="GetStringFieldValue;ProModel Data Object:GetStringFieldValue" />GetStringFieldValue</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetStringFieldValue <span class="_Override" style="color: #0000ff;">RecordType, FieldNumber, FieldValue</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the value of the specified string field from the selected record.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> 	(Long)  The Record Type (Table Number) of the table you want to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldNumber</span> (Long)  The field (column) number in specified table from which you want to return a value.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldValue</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	 (Long)  Data value contained in the specified field for the selected record. This must be a variable.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example steps through the Macros table, gets the name and value of each macro, then displays a message with that information.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub GetMacros()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim i As Integer</p>
+        <p class="objects2">	Dim RecCount As Long</p>
+        <p class="objects2">	Dim MacName As String</p>
+        <p class="objects2">	Dim MacText As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 11, RecCount</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	For i = 1 To RecCount</p>
+        <p class="objects3">		pmDataObject.SelectMainRecordByIndex 11, i</p>
+        <p class="objects3" style="font-weight: bold;">		pmDataObject.GetStringFieldValue <span class="_Override" style="color: #0000ff;">11, 1, MacName</span></p>
+        <p class="objects3" style="font-weight: bold;">		pmDataObject.GetStringFieldValue <span class="_Override" style="color: #0000ff;">11, 2, MacText</span></p>
+        <p class="objects3">		pmObject.MsgBox (MacName &amp; ":  " &amp; MacText)</p>
+        <p class="objects2">	Next i</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

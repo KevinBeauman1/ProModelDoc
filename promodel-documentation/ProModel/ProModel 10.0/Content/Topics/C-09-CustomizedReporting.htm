@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="368" MadCap:lastWidth="1518">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-09_398201723_1091055"></a>
+            <MadCap:keyword term="Custom:reporting;Simulation:options:customized reporting" /><a name="C-09_398201723_31648"></a>Customized Reporting</h3>
+        <p class="p">For customized reporting, you may want to take advantage of the following statements: <MadCap:keyword term="REPORT"></MadCap:keyword>Report, <MadCap:keyword term="RESET STATS"></MadCap:keyword>Reset Stats, and <MadCap:keyword term="WARMUP"></MadCap:keyword>Warmup. See <MadCap:xref class="lowercase_no_see" href="C-14-Report.htm#C-14_4292047180_1106713" target="" title="" alt="">Report on page 1</MadCap:xref>, <MadCap:xref class="lowercase_no_see" href="C-14-ResetStats.htm#C-14_4292047180_1106798" target="" title="" alt="">Reset Stats on page 1</MadCap:xref>, and <MadCap:xref class="lowercase_no_see" href="C-14-Warmup.htm#C-14_4292047180_1108369" target="" title="" alt="">Warmup on page 1</MadCap:xref> for syntax and examples.</p>
+        <p class="p"><span class="Bold">Report</span>A general statement called from any logic. When the statement is called, a full set of statistics is saved to be viewed as a snapshot report in the output processor. Optionally, the statement allows you to reset the statistics after the report is saved, giving you a batch or period for any time interval you define.</p>
+        <p class="p"><span class="Bold">Reset Stats</span> A general statement called from any logic and generally used in connection with the Report statement. When this statement is used, all statistics are set to zero. The output database is not erased (see Warmup).</p>
+        <p class="p"><span class="Bold">Warmup</span>   A general statement called from any logic. When this statement is used, all statistics are set to zero and the output database is erased. Use this statement in conjunction with the <MadCap:keyword term="WAIT UNTIL" />Wait Until statement to wait until specific parameters in the system being modeled are at a steady state or other conditions are appropriate to declare the warm-up period over.</p>
+    </body>
+</html>

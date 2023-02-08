@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/datalabelsoption1.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsexample.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsoption2.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsex2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/datalabelsoption1.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsexample.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsoption2.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsex2.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="data labels"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

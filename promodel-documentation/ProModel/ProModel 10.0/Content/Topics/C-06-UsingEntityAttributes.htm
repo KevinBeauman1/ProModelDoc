@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1831" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1121952"></a><a name="C-06_1157716610_12152"></a>Using <MadCap:keyword term="Entity:attributes:using;Attributes:see Entity attributes" />Entity Attributes</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Entity attributes are a powerful construct that enable a user to “tag” entities with characteristics to distinguish them from other entities of the same name. </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Entity attributes are place holders associated with individual entities which usually contain information about that entity. Attributes may contain integers or real numbers. Unlike variables, attributes are not global. To define attributes, use the Attributes module found under the More Elements option of the Build menu.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">One use of an entity attribute is to represent a <MadCap:keyword term="Entity:attributes:processing time;Processing time:using entity attributes"></MadCap:keyword>processing time.  This is especially useful when you base processing times at a location on some characteristic other than entity type, such as size or condition.  </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Suppose several types of tires enter a machining center that places the steel belts on the tire. The processing time of the tire increases as the diameter of the tire increases. The following example shows that for a tire entering a machining location, the processing time uses the value of the attribute “Proc_time.” You can make the attribute assignment in the “Logic” field of the Arrivals module.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-276-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">In this example, ProModel attaches the attribute “Proc_time” (short for process time) to the entity, tire, which contains a value representing the process time at Machine_1. You can assign a value to “Proc_time” in the Operation field or, as mentioned above, in the Logic field in the Arrivals module. The latter allows you to assign a value to the attribute for each entity as they arrive in the system. </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">When using attributes instead of <MadCap:keyword term="Entity:attributes:operation time;Operation:time:using entity attributes"></MadCap:keyword>operation times, ProModel substitutes the value assigned to the attribute directly into the Operation field. So, if “Proc_time=4.5” were your attribute assignment and the default units for time were in minutes, the resulting operation time would be 4.5 minutes.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">You may also use attributes to determine the routing of an entity. Note that the Routing Rule dialog offers a “<MadCap:keyword term="Entity:attributes:user condition routing;Routing, user condition"></MadCap:keyword>User Condition” routing rule. In this field, you can enter an expression that evaluates the value of an attribute for the entity currently at that location. Hence, ProModel selects the routing destination based on the attribute.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-276-2.jpg" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">
+            <img src="pm-c6-276-3.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">In this example, an entity attribute called “Inspected” has a value of zero or one. For uninspected tires, Inspected=0. For inspected tires, Inspected=1. Set the attribute value equal to 1 in the Operation field of the Inspection location to indicate an inspected tire. </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">At some other location in the model, ProModel makes a routing decision based the tire’s inspection status. The example above shows that the entity, tire, will route to either Inspect or Machine_2 based on the attribute value.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Another use for entity attributes is for assigning <MadCap:keyword term="Entity:attributes:entity characteristics;Entity:characteristics"></MadCap:keyword>entity characteristics such as number of times reworked, color, model type, lot size, order number, etc.  You may do this to reduce the number of system entities defined.  </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">In the following example, to show that you reworked a casting, each entity that goes through the location Rework has its “Reworked” attribute set equal to 1.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-277-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">You may <MadCap:keyword term="Entity:attributes:assigning values" />assign values to entity attributes in the Operation field in the Processing edit table, the Logic field in the Arrivals edit table, and the Move Logic in the Routing edit table. </p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="403" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Application Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>LoadModel</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="LoadModel"><a MadCap:generatedBookmark="TOC" name="LoadModel"></a><a name="C-01_2914010915_490356"></a>
+            <MadCap:keyword term="LoadModel;ProModel Application Object:LoadModel" />LoadModel</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>LoadModel <span class="_Override" style="color: #0000ff;">FileName</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Loads the specified model.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FileName</span>	(String)  Any valid path and model filename. Model files must have a .mod extension.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:  </span>Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, runs it for 30 minutes (1800 seconds), then terminates the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub QuitSimEarly()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim CurSimTime AS Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects2"><span class="_Override" style="font-weight: bold;">pmObject.LoadModel </span><span class="_Override" style="font-weight: bold;color: #0000ff;">(</span><span class="_Override" style="color: #0000ff;">mfg_cost.mod</span><span class="_Override" style="font-weight: bold;color: #0000ff;">)</span>
+        </p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

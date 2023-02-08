@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Activity Dialog"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/StationProperties.htm" />
+    <Link
+      Url="Content/Resources/Images/station properties.png" />
+    <Link
+      Url="Content/Cost.htm" />
+    <Link
+      Url="Content/Resources/Images/ActivityAvailability.png" />
+    <Link
+      Url="Content/Resources/Images/station resource.png" />
+    <Link
+      Url="Content/Resources/Images/ActivityDowntimes.png" />
+    <Link
+      Url="Content/Resources/Images/station advanced.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/StationProperties.htm#Availability" />
+    <Link
+      Url="Content/StationProperties.htm#Resource" />
+    <Link
+      Url="Content/StationProperties.htm#Downtimes" />
+    <Link
+      Url="Content/StationProperties.htm#Notes" />
+    <Link
+      Url="Content/StationProperties.htm#Advanced" />
+    <Link
+      Url="Content/Resources/Images/station properties.png" />
+    <Link
+      Url="Content/Cost.htm" />
+    <Link
+      Url="Content/Resources/Images/ActivityAvailability.png" />
+    <Link
+      Url="Content/Resources/Images/station resource.png" />
+    <Link
+      Url="Content/Resources/Images/ActivityDowntimes.png" />
+    <Link
+      Url="Content/Resources/Images/station advanced.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Availability" />
+    <Anchor
+      Name="Resource" />
+    <Anchor
+      Name="Downtimes" />
+    <Anchor
+      Name="Notes" />
+    <Anchor
+      Name="Advanced" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="activity properties"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="activity"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

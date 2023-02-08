@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2892" MadCap:lastWidth="924" MadCap:ignoredWords="i">
+    <head>
+    </head>
+    <body>
+        <h1>Data Display</h1>
+        <MadCap:keyword term="data display" />
+        <p class="p">The Data Display filter option only displays for Time Plot and Entity Count Time Series charts. The specific options the data display filter shows depends upon the chart selected and how the simulation was run (i.e. time only based, weekly time based, or calendar data based). For Time Plots, you can group the data by periodic average which allows you to define a specific period of time over which the values logged within that period will be averaged and reported. For Entity Counts, you can group the data by periodic sum which allows you to define a specific period of time over which the values logged within that period will be summed and then averaged across replications. A simulation that runs for eight hours with a period defined as two hours, will result in four averaged data points. </p>
+        <p class="p_10"><b>Note:</b> When multiple replications are run, the replication with the fewest number of periods reported will determine how many periods to compare across replications and display in the chart.</p>
+        <p>
+            <img src="Resources/Images/datadisplay.png" />
+        </p>
+        <p class="p">Click the Grouping drop-down and select Periodic Average (or Periodic Sum for Entity Count charts) or None. Selecting None will display the actual data as it was written during the simulation.</p>
+        <p class="p_10"><b>Note:</b> Depending upon the number of data points written, selecting None could cause the Output Viewer to take a long time to display or possibly fail to display some series.</p>
+        <p>
+            <img src="Resources/Images/grouping.png" />
+        </p>
+        <p class="p">You can also select the time interval for the chart data. Click the Interval drop-down and select from Hourly, Daily, Weekly, or Custom.</p>
+        <p>
+            <img src="Resources/Images/Interval.png" />
+        </p>
+        <p class="p_10"><b>Note:</b> Monthly, quarterly, and yearly are available as interval options for calendar based simulations.</p>
+        <p class="p">If you select the custom interval, another drop-down appears in which you may specify a time interval not found in the interval options.</p>
+        <p>
+            <img src="Resources/Images/custominterval.png" />
+        </p>
+        <h2>Histograms</h2>
+        <p class="p">Additional Data Display features are available for histograms.</p>
+        <p>
+            <img src="Resources/Images/ddbarwidth.png" />
+        </p>
+        <p class="p">You can set the bar width for the bars in your chart. Select Auto and Output Viewer will set the appropriate bar width. Select Custom and you can define the bar width you desire. </p>
+        <p>
+            <img src="Resources/Images/ddhistogram.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+        <p class="p">Histograms also provide the option whether or not to show discrete Labels.</p>
+        <p>
+            <img src="Resources/Images/discretelabels1.png" />
+        </p>
+        <p class="p">By default, Discrete Labels is unchecked. This shows the x axis values labeled at the edge of each bar. Selecting the Discrete Labels check box more explicitly shows the range of values each bar covers.</p>
+        <p>
+            <img src="Resources/Images/discretelabels21.png" />
+        </p>
+    </body>
+</html>

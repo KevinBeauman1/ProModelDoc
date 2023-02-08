@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="false"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-02-InstallationandLicensing.htm" />
+    <Link
+      Url="Content/Topics/C-02-InstallationTypes.htm" />
+    <Link
+      Url="Content/Topics/C-02-StandardInstallationProcedure.htm" />
+    <Link
+      Url="Content/Topics/C-02-NetworkInstallationProcedures.htm" />
+    <Link
+      Url="Content/Topics/OLDC-02 - Network Client Installation Procedure.htm" />
+    <Link
+      Url="Content/Topics/C-02-NetworkLicenseServerSetup.htm" />
+    <Link
+      Url="Content/Topics/C-02-LicensingProModelMedModelServiceModel.htm" />
+    <Link
+      Url="Content/Topics/C-02-CheckingforUpdates.htm" />
+    <Link
+      Url="Content/Topics/C-02-SoftwareLicenseKeyFAQ.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks />
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="350" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_460616"></a><a name="C-01_2914010915_Simulate"></a>
+            <MadCap:keyword term="Simulate;ProModel Application Object:Simulate" />Simulate</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>Simulate</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Starts the simulation.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:</span>  None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:  </span>Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, runs it for 30 minutes (1800 seconds), then terminates the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub SimIt()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim CurSimTime AS Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.Simulate</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects2">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects2">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Hierarchical Modeling"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/LinkingASubmodel.htm" />
+    <Link
+      Url="Content/HierarchicalModelingRules.htm" />
+    <Link
+      Url="Content/Resources/Images/ActivityUseSubmodelProperties.png" />
+    <Link
+      Url="Content/Resources/Images/Hyperlink2.png" />
+    <Link
+      Url="Content/Resources/Images/HyperlinkDefined.png" />
+    <Link
+      Url="Content/Resources/Images/SubmodelUniqueInstance.png" />
+    <Link
+      Url="Content/Resources/Images/SubmodelPrefix.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/LinkingASubmodel.htm" />
+    <Link
+      Url="Content/HierarchicalModelingRules.htm" />
+    <Link
+      Url="Content/Resources/Images/ActivityUseSubmodelProperties.png" />
+    <Link
+      Url="Content/Resources/Images/Hyperlink2.png" />
+    <Link
+      Url="Content/Resources/Images/HyperlinkDefined.png" />
+    <Link
+      Url="Content/Resources/Images/SubmodelUniqueInstance.png" />
+    <Link
+      Url="Content/Resources/Images/SubmodelPrefix.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="hierarchical modeling"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="unique instance"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="submodel prefix"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

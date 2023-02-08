@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="528" MadCap:lastWidth="1389" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103859"></a>ForResource()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:system functions:FORRESOURCE();FORRESOURCE()" />Shift and Break System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">ForResource()</p>
+        <p class="Syntax_body">If ForResource() Then Get Res1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">This function returns TRUE if the object executing the shift or break logic is a resource.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">All Shift or Break logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A shift called DAYS.SFT has five resources and eight locations assigned to it. When the resources go off-shift, it is desired to write the resource name and simulation time to a file called RES_TIME. The following logic is placed in the off-shift logic.</p>
+        <p class="Syntax_body">If ForResource() Then</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Xwrite res_time, "Shift for " $ Res(Resource()) $ "ended at " $ Clock(hr) $ “.”</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">ForLocation(). Also see <MadCap:xref class="lowercase_no_see" href="C-07-ShiftandBreakLogic.htm#C-07_3886599965_1089612" target="" title="" alt="">Shift and Break Logic on page 1</MadCap:xref>.</p>
+    </body>
+</html>

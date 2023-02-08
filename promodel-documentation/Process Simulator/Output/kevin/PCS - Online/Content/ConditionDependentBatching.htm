@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Modeling How-To's|Modeling Activities">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Condition Dependent Batching</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Modeling_How-To's.htm">Modeling How-To's</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Modeling_Activities.htm">Modeling Activities</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Condition Dependent Batching</span>
+        </div>
+        <h3>Condition Dependent Batching</h3>
+        <p class="p">Consolidate Entities into a Batch that have accumulated only until a condition becomes true (e.g., until a resource is available or until a truck has arrived).</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=DWvxPeQVFp8&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=18&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1" value="1">Define a global variable representing the condition to be met (e.g. vCondition).</li>
+            <li class="li_1" value="2">Define another global variable representing the count of entities waiting to be batched (e.g., vCount).</li>
+            <li class="li_1" value="3">Define another global variable representing the quantity of entities that will finally be batched (e.g., vBatchQty)</li>
+            <li class="li_1" value="4">Define an Inventory Buffer equal to the largest permissible batch size plus any extra waiting entities.</li>
+            <li class="li_1" value="5">INCrement the vCount variable in the Inventory logic.</li>
+            <li class="li_1" value="6">DECrement the vCount variable on the route exiting the Inventory so you always have an accurate count of entities in the Inventory.</li>
+            <li class="li_1" value="7">In the batching activity, click on the Batching button and select Batch.</li>
+            <li class="li_1" value="8">For the batch size, enter the name of the variable representing the batch quantity (e.g. vBatchQty).</li>
+            <li class="li_1" value="9">Create a trigger entity/activity combination with a single 1 time periodic arrival (1 entity entering a single activity not connected to any other activities in the model).</li>
+            <li class="li_1" value="10">Click on the Logic button in the trigger activity properties dialog.</li>
+            <li class="li_1" value="11">In the Logic Builder, define the following:</li>
+        </ol>
+        <p class="p_level1">While (Clock(min) &gt;= 0) Do</p>
+        <p class="p_level1">{</p>
+        <p class="p_level2">Wait Until (vCondition = 1)</p>
+        <p class="p_level2">If (vCount &lt; 10)</p>
+        <p class="p_level2">{</p>
+        <p class="p_level3">Wait Until vCount &gt;= 10</p>
+        <p class="p_level2">}</p>
+        <p class="p_level2">If (vCount &gt;= 10 And vCount &lt;= 20)</p>
+        <p class="p_level2">{</p>
+        <p class="p_level3">vBatchQty = vCount</p>
+        <p class="p_level3">Send vBatchQty Work Unit To Oven</p>
+        <p class="p_level2">}</p>
+        <p class="p_level2">Else</p>
+        <p class="p_level2">{</p>
+        <p class="p_level3">vBatchQty = 20</p>
+        <p class="p_level3">Send 20 Work Unit To Oven</p>
+        <p class="p_level2">}</p>
+        <p class="p_level2">vCondition = 0</p>
+        <p class="p_level1">}</p>
+        <h5>Example</h5>
+        <p class="p">At least 10, but no more than 20 completed parts are accumulated in a Buffer and then placed as a batch in an Oven for heat treatment whenever the Oven has completed a previous batch.</p>
+        <p class="p">
+            <img src="Resources/Images/conditionbatchingexample1.png" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">Batch Trigger logic is shown below.</p>
+        <p class="p">
+            <img src="Resources/Images/conditionbatchingsolution1.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Exit route logic is shown below.</p>
+        <p>
+            <img src="Resources/Images/conditionbatchingsolution2.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Notice that in the logic for the routing dialog going out of the Oven, the vCondition variable is set to 1 indicating that the oven is now ready and available for the next batch of parts. Be sure to set the initial value of vCondition to 1 so that the first batch of 10 will be allowed to move to the Oven.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

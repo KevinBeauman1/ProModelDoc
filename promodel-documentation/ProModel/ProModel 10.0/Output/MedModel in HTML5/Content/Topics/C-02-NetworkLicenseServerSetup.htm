@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Network License Server Setup</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-02-NetworkLicenseServerSetup.htm">Open topic with navigation</a>
+        </p>
+        <h3>Network License Server Setup<a name="C-02_3483315438_1051599"></a></h3>
+        <p class="p">Included on the CD-ROM is the HASP Driver and HASP License Manager Setup programs. Once these are installed, insert the network USB key in an open USB port on the license server.</p>
+        <ul>
+            <li value="1">Install the HASP Driver from the CD-ROM (CD drive:\License Server Setup\HASP Driver\HASPUserSetup.exe).</li>
+            <li value="2">Install the HASP License Manager from the CD-ROM (CD drive:\License Server Setup\HASP License Manager\Imsetup.exe).</li>
+        </ul>
+        <h4>Setup License Server Manually</h4>
+        <p class="p">After successfully running the setup for the license manager, if you chose to manually install the device driver for the security key and launch the license manager software, follow the steps below.</p>
+        <ol>
+            <li class="li_1" value="1">Install the Device Driver.</li>
+            <li class="li_1" value="2">Open a Command Prompt and run <span class="_Override" style="font-weight: bold;">HINSTALL -i</span> from the directory to which you installed the license manager.</li>
+            <li class="li_1" value="3">After you receive a confirmation that the driver installed successfully, reboot the workstation.</li>
+            <li class="li_1" value="4">Start the HASP License Manager software:</li>
+        </ol>
+        <p class="p">From the directory to which you installed the license server, run NHSRVW32.EXE. A window will appear and show the network protocols to which the license manager will listen for license requests..</p>
+        <p class="p_10">Please Note: You need to install the device driver only once. However, you must launch the license manager program each time you reboot the license server. To automatically start the license manager each time you reboot the server, create and place an icon for NHSRVW32.EXE in the server’s Startup folder.</p>
+        <h4><a name="C-02_3483315438_38150"></a>Find a License Key Server on a Routed Network</h4>
+        <p class="p">In order for a workstation to run the network client edition of <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> properly, the workstation must check out a license from a license server. To make a license request, the computer sends a broadcast message out on the network and awaits a response from the license server. If the license server and the computer running <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> are on the same sub net of a routed network (or on the same network of a non-routed network), the license server receives the request and responds. Due to the nature of routed networks, if the license server and computer running <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> are not on the same sub net of a routed network, the key server will not receive the license request broadcast. </p>
+        <p class="p">&#160;</p>
+        <p class="p">To resolve this problem, the workstation must send a license request directly to the computer on the network set up as the license server. For the workstation to identify which computer on the network is the license server, you must create and store a text file called NETHASP.INI in the directory to which you installed <span class="_Override" style="line-height: 12pt;"><MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> on the workstation.</span></p>
+        <p class="p">&#160;</p>
+        <p class="p">For TCPIP-based networks the NETHASP.INI file must contain the following lines</p>
+        <p class="p_11">[NH_COMMON]</p>
+        <p class="p_11">NH_TCPIP=Enabled;</p>
+        <p class="p_11">[NH_TCPIP]</p>
+        <p class="p_11">NH_TCPIP_METHOD=TCP</p>
+        <p class="p_11">NH_SERVER_ADDR=<span class="_Override" style="font-style: italic;">&lt;Enter the license server’s IP address here&gt;</span></p>
+        <p class="p_10">Please Note: If you followed step 6 in the <a href="C-02-NetworkClientInstallaqtionProcedure.htm" class="MCXref xref">Network Client Installation</a> instructions for <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>, the NETHASP.INI file is generated automatically.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

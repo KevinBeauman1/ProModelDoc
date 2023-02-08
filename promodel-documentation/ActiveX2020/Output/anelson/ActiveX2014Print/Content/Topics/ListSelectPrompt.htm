@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Events Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>ListSelectPrompt</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_461569"></a><a name="kanchor37"></a>ListSelectPrompt</h2>
+        <p class="p"><span class="Lower_Label">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span><span class="_Override" style="font-style: italic;">ObjectVariable</span>_ListSelectPrompt(<span class="_Override" style="color: #0000ff;">ByVal Message As String, ByVal MenuItemCount As Long, psaLabels() As String, psaValues() As Double, Choice As Long, ByVal Flags As Long</span>) As Long</p>
+        <p class="p"><span class="Lower_Label">Description</span><span class="_Override" style="font-weight: bold;">:  </span>The <span class="_Override" style="font-variant: small-caps;">prompt</span> statement in ProModel can be defined either as a simple prompt/response dialog box or as a prompt dialog with a list of options to choose from.  This event fires whenever a <span class="_Override" style="font-variant: small-caps;">prompt</span> statement defined as a choice list is encountered in the model logic.  Use the InputTextPrompt event to handle simple <span class="_Override" style="font-variant: small-caps;">prompt </span>statements.</p>
+        <p class="p"><span class="Lower_Label">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Message</span> 	 (String) – Message to the user, describing the meaning of parameter being prompted for, values provided, etc.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">MenuItemCount</span> 	(Long) – Number of items in menu</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">psaLabels</span> 	– array of strings representing menu items</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">psaValues</span> 	– array of real numbers (double) representing values that correspond to each menu item</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Choice</span> 	– zero-based index of the menu item to return to application</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Flags</span> 	 (Long) – Not Used</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>
+        </p>
+        <p class="objects">0 = Use the first value</p>
+        <p class="objects">1 = Set the variable to the value in <span class="_Override" style="font-style: italic;">Choice</span> parameter</p>
+        <p class="objects">2 = Show the prompt dialog and let the user enter a value</p>
+        <p class="objects">3 = Abort the simulation</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>In the following example we start with the form shown below:</p>
+        <p class="p">
+            <img src="3_3_401x242.png" style="width: 401;height: 242;" />
+        </p>
+        <p class="objects">Private Function pmEventsObject_ListSelectPrompt(ByVal Message As String, _</p>
+        <p class="objects3">				ByVal MenuItemCount As Long, psaLabels() As String, _</p>
+        <p class="objects3">				psaValues() As Double, Choice As Long, ByVal Flags As Long) As Long</p>
+        <p class="objects2">	Dim i As Integer</p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">	Label1.Caption = "Prompt: " &amp; Message</p>
+        <p class="objects2">	Textbox1.Text = ""</p>
+        <p class="objects2">	For i = 0 To MenuItemCount - 1</p>
+        <p class="objects3">		Textbox1.Text = Textbox1.Text &amp; i &amp; ") " &amp; psaLabels(i) &amp; " = " &amp; _</p>
+        <p class="objects4">				psaValues(i) &amp; vbCrLf</p>
+        <p class="objects2">	Next i</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	If OptionButton(0).Value = True Then</p>
+        <p class="objects3">		pmEventsObject_ListSelectPrompt = 0  'Use first value</p>
+        <p class="objects2">	ElseIf OptionButton(1).Value = True Then</p>
+        <p class="objects3">		Choice = Textbox2.Text</p>
+        <p class="objects3">		pmEventsObject_ListSelectPrompt = 1  'Use value from textbox2</p>
+        <p class="objects2">	ElseIf OptionButton(2).Value = True Then</p>
+        <p class="objects3">		pmEventsObject_ListSelectPrompt = 2  'Show standard prompt</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		pmEventsObject_ListSelectPrompt = 3  'Abort simulation</p>
+        <p class="objects2">	End If</p>
+        <p class="Example">&#160;</p>
+        <p class="objects">End Function</p>
+    </body>
+</html>

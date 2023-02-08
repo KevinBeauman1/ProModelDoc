@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0,79],u:['../Content/Resources/MasterPages/PCS2010.htm'],s:['+','reposit'],p:[['+',21],['camera',21],['follow',83],['may',35],['presentation',21],['the',29],['would',60]]});

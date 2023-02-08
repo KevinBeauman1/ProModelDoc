@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c6-280-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-280-2.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c6-280-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-280-2.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1120627" />
+    <Anchor
+      Name="C-06_1157716610_38609" />
+    <Anchor
+      Name="C-06_1157716610_70561" />
+    <Anchor
+      Name="C-06_1157716610_54533" />
+    <Anchor
+      Name="C-06_1157716610_62258" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Priorities:modeling"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Modeling priorities:see Priorities"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Priorities:modeling:processing destination"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Destination, choosing"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Priorities:for a destination"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Priorities:modeling:selecting resources"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Resources:selecting"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Priorities:modeling:downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Preemption logic:and downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Priorities:modeling:preemption"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="Preemption logic"
+      Conditions=""
+      LocalConditions=""
+      Position="32" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

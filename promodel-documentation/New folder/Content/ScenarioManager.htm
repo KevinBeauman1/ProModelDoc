@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1819" MadCap:lastWidth="977">
+    <!-- InstanceBegin template="/Templates/PIOptions.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Scenario Manager</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <link rel="StyleSheet" href="Resources/Stylesheets/Stylesheet - general.css" />
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="scenario manager" />Scenario Manager</h1>
+        <p>
+            <MadCap:keyword term="scenarios" />In Process Simulator it is possible to set up multiple scenarios to 
+ be run and evaluated side by side in the output report to see how they 
+ compare. Scenarios are defined in the Scenario Manager dialog, which is 
+ accessible from the Process Simulator ribbon.</p>
+        <p>The scenario manager provides a table where multiple scenarios can be 
+ defined, each with a set of custom parameters. Parameters are values for 
+ simulation object properties, for example an activity’s capacity, or 
+ a resource’s number of units. These values, or parameters, can be easily changed 
+ in the scenario manager and varied for different scenarios. This is helpful 
+ for comparing changes to the model’s simulation objects without creating 
+ and managing multiple models.</p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/ScenarioManager1.png" />
+        </p>
+        <h2>Toolbar</h2>
+        <p>The Scenario Manager toolbar contains the following options:</p>
+        <ul>
+            <li class="li_1"><b>Add Parameters</b>: this button adds rows to the 
+ table, which allows you to vary the value of the parameter for each scenario.</li>
+            <li class="li_1"><b>Add Scenario:</b> this button adds columns to the 
+ table, which represent different scenarios.</li>
+            <li class="li_1"><b>Move Row Up/Down</b> these buttons move the selected rows to different positions in the table.</li>
+            <li class="li_1"><b>Show Baseline Values</b> checked by default, all values in the table will be shown. Unchecked, it will hide any values that are the same as the baseline value.</li>
+        </ul>
+        <p>The <b>Baseline</b> column is not editable, and shows the values of the parameters 
+ as defined in the model.</p>
+        <p>The <b>Simulate Scenario?</b> row allows you to choose the scenarios you would 
+ like to have simulated when you click the Run Scenarios button, or choose 
+ Simulate Scenarios from the Process Simulator ribbon.</p>
+        <p><b>Last Run Date</b> displays the last date and time the scenario was simulated. If blank, the scenario hasn't been simulated or the results were deleted. </p>
+        <h2>Right-Click Menu</h2>
+        <p>Right-clicking in the Scenario Manager will display a menu with options 
+ pertaining to the area you clicked on. Using the right-click menu can 
+ speed up the process of adding of scenarios and parameters.</p>
+        <p>
+            <img src="Resources/Images/Scenariosrightclick.png">
+            </img>
+        </p>
+        <p><b>Reset Parameter Name</b> - this will reset a parameter name, that has been modified,  
+ back to its original name.</p>
+        <p><b>Reset Value To Baseline</b> - this will reset the parameter value, that has been modified for a specific scenario, back to the same value as the baseline.</p>
+        <p><b>Disconnect From Baseline</b> - if a parameter value for a specific scenario has not been modified, it is connected to the baseline value and will be displayed unbolded in the field. Choosing this option will keep the value but treat it as if it has been modified (and will be displayed bolded).</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

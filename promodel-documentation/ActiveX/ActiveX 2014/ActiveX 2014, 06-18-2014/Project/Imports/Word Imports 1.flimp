@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MsWordImport
+  PreserveSourceStyles="False"
+  KeepSourceLinks="false"
+  ConvertInlineFormatting="True"
+  AddContinuedLinks="False"
+  AddContinuedFromLinks="False"
+  ContinuedLinkFormat="(continued in {title})"
+  ContinuedFromLinkFormat="(continued from {title})"
+  UseMaxCharLimit="False"
+  UseMinCharLimit="true"
+  MaxCharLimit="10000"
+  MinCharLimit="50"
+  FilenameLength="24"
+  LastCollectTime="2013-04-05T11:54:14.4746384-04:00"
+  Stylesheet="../../Content/Resources/Stylesheets/Promodel.css"
+  LastImport="2013-04-05T11:55:37.5034006-04:00">
+  <Files>
+    <Url
+      Source="../../../../../../../Desktop/Wirtz Materials/PMC COTS Products/ProModel product suite/ProActiveX Constants.docx"
+      AbsoluteSource="file:///C:/Users/Greg/Desktop/Wirtz Materials/PMC COTS Products/ProModel product suite/ProActiveX Constants.docx" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Word Imports 1/PM ProModel Application Object.htm"
+      TimeStamp="4/5/2013 11:54:15 AM" />
+    <Url
+      Source="../TOCs/Word Imports 1.fltoc"
+      TimeStamp="4/5/2013 11:54:15 AM" />
+    <Url
+      Source="../../Content/Resources/Stylesheets/Promodel1.css"
+      TimeStamp="4/5/2013 11:54:15 AM" />
+  </GeneratedFiles>
+  <ParagraphStyles>
+    <Map
+      From="Heading1"
+      To="h1.(MS Word Style)" />
+    <Map
+      From="Heading2"
+      To="h2.(MS Word Style)" />
+    <Map
+      From="Heading3"
+      To="h3.(MS Word Style)" />
+    <Map
+      From="Heading4"
+      To="h4.(MS Word Style)" />
+    <Map
+      From="Heading5"
+      To="h5.(MS Word Style)" />
+    <Map
+      From="Heading6"
+      To="h6.(MS Word Style)" />
+  </ParagraphStyles>
+  <CharacterStyles>
+    <Map
+      From="Hyperlink"
+      To="a.(MS Word Style)" />
+  </CharacterStyles>
+  <NewTopicStyles />
+  <UsedParagraphStyles />
+  <UsedCharacterStyles />
+</MsWordImport>

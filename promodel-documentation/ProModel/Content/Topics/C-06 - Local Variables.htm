@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="2278" MadCap:lastWidth="1395" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1085869"></a><a name="C-06_1157716610_35888"></a>Local Variables<MadCap:keyword term="Variables:local:variables;Local variables" /></h3>
+        <p class="p">Local variables function as though they were temporary attributes defined in a specific logic section which disappear when the logic section is finished executing.  Local variables are useful for test variables in loops and storing locally used, unique values for each entity at the current location.  </p>
+        <p class="p">&#160;</p>
+        <p class="p">Local variables are used within a block of logic (i.e., operation logic, subroutines) and are declared with an <MadCap:keyword term="INT" />Int or <MadCap:keyword term="REAL" />Real statement. Local variables are only available within the logic in which they are declared and are not defined in the Variables edit table. A new local variable is created for each entity to encounter an Int or Real statement. See <MadCap:xref class="lowercase_no_see" href="C-14 - Int.htm#C-14_4292047180_1104904" target="" title="" alt="">Int on page 1</MadCap:xref> and <MadCap:xref class="lowercase_see" href="C-14 - Real.htm#C-14_4292047180_1106513" target="" title="" alt="">Real</MadCap:xref> for more information. A local variable is specific to each entity, in much the same way an attribute is specific to an entity, except that the local variable is only available while the entity processes the logic to declare the local variable. Local variables may be passed to subroutines as parameters. Local variables are available to macros.</p>
+        <h4>
+            <MadCap:keyword term="Variables:local:example" />Example</h4>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">A plant manufactures valves of 10 different sizes, such as 10'', 20'', .... All valves are inspected at a common inspection station and then move to a dock where they are loaded onto pallets. The pallets are designed to hold only a certain size valve. Therefore, a pallet designed to hold 10'' valves can only hold 10'' valves, not 20'' valves. </MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Suppose a Pallet enters a multi-capacity location, Dock.  Each Pallet has a different entity attribute, p_type, describing the type of valve it can hold.  Valves are loaded onto the Pallet.  The 10” valves must be loaded onto the pallet designed to hold the 10” valves.  Therefore, the attribute value of the Valve, v_type, must match the attribute value of the Pallet, p_type.  We can use local variables to accomplish this modeling task.  The logic is as follows where X is a local variable:</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">A hospital’s central sterile supply (CSS) packs 5 different types of surgical instrument trays for sterilization. Each Tray requires two each of a specific size of surgical scissors. All scissors are inspected at a common inspection station and then move to a packing point where they are placed (i.e., loaded) onto trays. The trays are required to contain only a certain size scissor. Therefore a tray designed to hold 5'' scissors can only hold 5'' scissors, not 6'' scissors.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">Suppose a Tray enters a multi-capacity location, Packing. Each Tray has a different entity attribute, T_type, describing the type of scissor it can receive. Scissors are loaded onto the Tray. The 5'' scissors must be loaded onto the tray designed to contain the 5'' scissors. Therefore, the attribute value of the scissor, S_type, must match the attribute value of the tray, T_type. We can use local variables to accomplish this modeling task. The logic is as follows where X is a local variable:</p>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Valve</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Inspect</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Pallet</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Int X</p>
+                        <p class="CellBody">X = p_type</p>
+                        <p class="CellBody">Load 10 Iff</p>
+                        <p class="CellBody">X = v_type</p>
+                        <p class="CellBody">Wait 10</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.MedModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Scissor</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Inspect</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Tray</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Packing</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Int X</p>
+                        <p class="CellBody">X = T_type</p>
+                        <p class="CellBody">Load 5 Iff</p>
+                        <p class="CellBody">X = v_type</p>
+                        <p class="CellBody">Wait 10</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Valve</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Load 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Pallet</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Delivery</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">Move For 8</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.MedModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Scissor</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Packing</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Load 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Tray</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Sterilize</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">Move For 8</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">If we had not used local variables, we would need to use the following operation logic for Pallet at Dock:</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">If we had not used local variables, we would have to use the following operation logic for Tray at Packing:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Local Variables - Operation logic window.png" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 4.00in;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - Local Variables - Operation logic window.png" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 4.00in;" />
+        </p>
+        <p class="p">As can be seen from the two examples of logic, the first example is much easier and more straight forward.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">It is important to note that using “Load 10 Iff p_type = v_type” in the operation logic would not work for the intended purpose. Attributes referenced in Iff conditions always refer to the entity being loaded. Set the value of a local variable, X, to the pallet attribute, p_type, so it can be referenced in the Load statement. The pallet attribute cannot be directly referenced in the <MadCap:keyword term="LOAD" />Load statement.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">If Dock was a single capacity location, using a global variable would work the same as using a local variable.  However, because Dock is a multi-capacity location, it can load valves onto multiple pallets at the same time.  If a global variable was used instead of a local variable, the global variable would change each time a pallet entered Dock.  If there were two different types of pallets at Dock, there would be only one type of valve loaded on the pallet because the global variable refers to both pallets.  </MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Suppose, for example, a global variable, type, signifies the pallet attribute, p_type. We assign type=p_type at the beginning of the operation logic for location Dock. The first pallet arrives and type=3. Therefore, only valves with v_type=3 are loaded onto the pallet. Another pallet enters Dock and type=5. Now only valves with valve_type=5 are loaded onto both pallets.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">It is important to note that using “Load 5 Iff Tray_type = S_type” in the operation logic would not work for the intended purpose. Attributes referenced in Iff conditions always refer to the entity being loaded. Set the value of a local variable, X, to the tray attribute, T_type, so it can be referenced in the Load statement. The tray attribute cannot be directly referenced in the <MadCap:keyword term="LOAD" />Load statement.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">If Packing was a single capacity location, using a global variable would work the same as using a local variable. However, because Packing is a multi-capacity location, it can load scissors onto multiple trays at the same time. If a global variable was used instead of a local variable, the global variable would change each time a tray entered Packing. If there were two different types of trays at Packing, then there would be only one type of scissor being loaded on the tray because the global variable refers to both Trays. </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">Suppose, for example, a global variable, type, signifies the tray attribute, T_type. We assign type=T_type at the beginning of the operation logic for location Packing. The first tray arrives and type=3. Therefore, only scissors with S_type=3 are loaded onto the tray. Another tray enters Packing and type=5. Now only scissors with S_type=5 are loaded onto both trays.</p>
+        <p class="p_10">Local Variable Notes: 1.  You may not use the <MadCap:keyword term="WAIT UNTIL" />Wait Until statement with local variables. 2.  The local variable definition only needs to appear somewhere in the logic before being referenced.  The entity does not need to execute the local variable definition statement (Int, Real).</p>
+    </body>
+</html>

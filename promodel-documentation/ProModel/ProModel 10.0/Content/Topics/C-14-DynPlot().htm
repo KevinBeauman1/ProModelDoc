@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1313" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103584"></a>DynPlot()</h2>
+        <h5 class="_valid_in">General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">DynPlot “<i>&lt;chart name&gt;</i>”</p>
+        <p class="Syntax_body">DynPlot “my dynamic plot name”</p>
+        <p class="Syntax_body">DynPlot “Chart 1”</p>
+        <p class="Syntax_body">DynPlot “” </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">The DynPlot statement is used to automatically turn on predefined Dynamic Plot windows. Its usage is similar to that of the View statement. Dynamic Plot windows are predefined during simulation mode.  These predefined Chart views can then be called from any logic statement, invoking the display of the designated chart during simulation.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any Logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Chart name&gt;</p>
+        <p class="p">The name of the Dynamic Plot chart as defined in the Dynamic Plots dialog. Enclose the name in quotation marks.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">You are giving a presentation to management. Two hours into the simulation, you want a chart to be displayed showing the value of a WIP variable plotted against average part cost. Four hours into the simulation, you want this chart to disappear.</p>
+        <p class="p">To do this, define a Chart view from the Dynamic Plots dialog, naming your Chart view “WIP vs Cost.” Define a subroutine and call it in the initialization logic using the Activate statement. Enter the following logic in the subroutine:</p>
+        <p class="Syntax_body">		Wait 2 hr</p>
+        <p class="Syntax_body">		DynPlot “Wip vs Cost”</p>
+        <p class="Syntax_body">		Wait 2 hr</p>
+        <p class="Syntax_body">	DynPlot ""</p>
+        <p class="p_10">Please Note: Using the statement with a null value (no name defined between the quotation marks) will close all currently open Dynamic Plot windows.</p>
+    </body>
+</html>

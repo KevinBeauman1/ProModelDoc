@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1469" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Production Kanban (Reorder Point) Control System</h3>
+        <p class="p">Produce entities at an upstream activity when a signal is received that a downstream inventory has dropped to a specified inventory level. (Note: this is just like a conveyance kanban only entities begin an activity rather than conveyed or moved.)</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">For the activity where entities are to be produced, define a buffer prior to the activity with a Send routing to the activity.</li>
+            <li class="li_1">For the buffer or storage that is to be replenished when its inventory drops to a specified trigger level, define a storage by dragging a storage shape onto the layout.</li>
+            <li class="li_1">Fill in the information for the storage.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Whenever a finished goods inventory of Tables drops to 10, an additional 100 tables are assembled and sent to finished goods to replenish the inventory.</p>
+        <p class="p">
+            <img src="Resources/Images/productionkanbanexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/productionkanbansolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p>
+            <img src="Resources/Images/productionkanbansolution2.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">The Buffer has an ordered routing to the Assembly activity. From the Assembly activity finished tables are then routed to Finished Goods inventory. The storage dialog for the Finished Goods Inventory has the appropriate trigger level and reorder quantity specified.</p>
+    </body>
+</html>

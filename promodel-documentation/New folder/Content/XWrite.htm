@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1157" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>Xwrite</h2>
+        <h5>
+            <MadCap:keyword term="statements:xwrite;xwrite" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Xwrite &lt;file ID&gt;, &lt;string or numeric expression&gt;</p>
+        <h2>Description</h2>
+        <p>Writes information to a text file in any text format the user chooses. Xwrite is for writing user-formatted files, while Write and Writeline are for writing special formatted text files. Xwrite always appends to a file unless the file is Reset. Note that any time a Write or Writeline writes to a file, the file will automatically be a text file. No end of file marker is appended to files written only with Xwrite. In subsequent replications, additional items are appended to the end of the file unless the file is Reset. Process Simulator does not format the string expression, although you can use the Format function to manually format data. To add an end of file marker to a user-formatted file, use Xwrite Char(26).</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;file ID&gt;</b>
+        </p>
+        <p>The name of the file as previously defined in the <a href="externalfiles.htm" class="a_11">External Files</a> grid.</p>
+        <p><b>&lt;string or numeric expression&gt;</b> </p>
+        <p>The string expression to be written to the file. </p>
+        <h2>Example</h2>
+        <p>The following example uses Xwrite to record the time each Box completes processing at the activity Shipping.</p>
+        <p class="p_11">Wait N(7.3, .4)<br />Xwrite Rpt, "Box shipped at: " $ Format(Clock(min), 3, 2)</p>
+        <h5>See Also</h5>
+        <p><a href="write.htm" class="a_11">Write</a>, <a href="writeline.htm" class="a_11">Writeline</a>, and Reset. Also see <MadCap:xref class="lowercase_no_see" href="ExternalFiles.htm" target="" title="" alt="">External Files</MadCap:xref></p>
+    </body>
+</html>

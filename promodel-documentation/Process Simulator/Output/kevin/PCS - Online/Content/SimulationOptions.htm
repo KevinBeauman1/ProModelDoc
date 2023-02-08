@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Simulation and Options|Simulation">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Simulation Properties</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="SimulationAndOptions.htm">Simulation and Options</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Simulation.htm">Simulation</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Simulation Options</span>
+        </div>
+        <h1><a name="kanchor154"></a>Simulation Options</h1>
+        <p>The Simulation Options dialog enables the user to define properties
+ for running the simulation, such as, simulation time and warm-up period. 
+ The simulation options can be opened in the following ways:</p>
+        <ol>
+            <li class="li_1" value="1">Clicking on the <b>Simulation Options</b> icon from the 
+ Process Simulator ribbon.</li>
+            <li class="li_1" value="2">Right-clicking anywhere on a blank part of the layout 
+ and selecting <b>Simulation Options</b> from the context menu.</li>
+        </ol>
+        <h2>Run Length Tab</h2>
+        <p style="text-align: left;">
+            <img src="Resources/Images/SimulationOptionsDialog.png" />
+        </p>
+        <ul>
+            <li class="li_1" value="1"><b>Run Length Type</b> This allows you to specify what time measurement the run time is being specified for; Time Only, Weekly Time, or Calendar Date</li>
+            <li class="li_1" value="2"><b>Warmup Period</b> Allows you to specify whether there is to be a warmup period. Click in the box, if yes.</li>
+            <li class="li_1" value="3"><strong class="strong_1">Warmup Length</strong> 
+ &#160;&#160;This is a period in which to get the model to a steady state condition. 
+ This is typically only needed if the process is being evaluated for its 
+ performance in a steady state. All statistics are reset at the end of 
+ a warmup period.</li>
+            <li class="li_1" value="4"><strong class="strong_1">Run length (Time 
+ Only)</strong> &#160;&#160;This is the duration for running the simulation. 
+ Run length can be defined by a set number of hours, days, or weeks. By 
+ default this is set to 40 hours. 
+ If shifts are defined, it is important to note that the simulation always 
+ starts on Monday morning at 12:00 A.M. </li>
+            <li class="li_1" value="5"><strong class="strong_1">Run length (Weekly 
+ Time)</strong>&#160;&#160; Run length may also be defined by weekly time, 
+ where you may a Week, Day and Time for the Warmup Begin, Simulation Begin, and Simulation End times. </li>
+            <li class="li_1" value="6"><span class="c_Override_1" style="font-weight: bold;">Run length (Calendar 
+ Date)</span> &#160;&#160;Run 
+ length may also be defined by calendar date. &#160;Choose 
+ exact dates and times for Warmup Begin, Simulation Begin, and Simulation End times.</li>
+            <li class="li_1" value="7"><span class="c_Override_1" style="font-weight: bold;">Adjust for Daylight 
+ Saving Time</span> This option  will have the simulation 
+ account for Daylight Saving Time changes when Run Length Type is set to Calendar Date.</li>
+            <li class="li_1" value="8"><strong class="strong_1">
+ Replications</strong> &#160;&#160;This is the number of statistical variations to 
+ run for this simulation. If you place the "@" symbol immediately preceding a number in this field (e.g. @5), you can run the specific replication indicated by that number. Note that you can run a specific replication if, and only if, you have run at least that number of replications previously.</li>
+            <li class="li_1" value="9"><b>Clock Precision</b>&#160;&#160;This sets the 
+ lowest time unit precision the statistics will be collected at.</li>
+            <li class="li_1" value="10"><b>Clock Precision Units</b>&#160;&#160;Select 
+ the clock units you want to display at run-time. This also affects the 
+ lowest time unit precision the statistics will be collected at.</li>
+        </ul>
+        <h2>Animation Tab</h2>
+        <p>
+            <img src="Resources/Images/SimulationOptionsAnimation.png" />
+        </p>
+        <ul>
+            <li class="li_1" value="1"><strong class="strong_1">Enable Animation</strong> 
+ &#160;&#160;When checked, animation will be displayed during simulation. 
+ When unchecked the animation is disabled, the simulation will run faster 
+ and statistics will still be collected. With this option unchecked, animation 
+ cannot be turned on with the run-time animation toggle option.</li>
+            <li class="li_1" value="2"><b>Initial Animation 
+ Speed</b> &#160;&#160;Use the slider to set the speed of the animation 
+ when the simulation begins.</li>
+            <li class="li_1" value="3"><b>Unit for Avg CT 
+ Display</b> &#160;&#160;Allows 
+ you to select the unit of time that will be used for the Average Cycle 
+ Time statistic displayed at the end of an Exit route during simulation.</li>
+            <li class="li_1" value="4"><strong class="strong_1">Pause Simulation</strong> 
+ &#160;&#160;Pauses the simulation before it begins.</li>
+            <li class="li_1" value="5"><strong class="strong_1">Show Trace</strong> 
+ &#160;&#160;Opens the Trace window at the start of simulation and puts it in Step mode.</li>
+            <li value="6"><b>Configure Page Layout Options</b> allows you to choose how many diagram page layouts are placed on a row during simulation. You can either limit the number of page layouts per row based on a boundary specified in pixels or by the number of pages.
+                <ul><li value="1"><b>Layout Type</b></li><ul><li value="1"><b>Boundary in Pixels</b> This specifies the maximum amount of space (in pixels) allowed before page layouts are added to a new row.</li><li value="2"><b>Number Per Row</b> This sets the specific number of pages allowed before subsequent pages are added to a new row.</li></ul><li value="2"><b>Start Submodel Layout on New Row</b> Forces the first submodel to be added to the layout on its own row (regardless if the above limit has been reached). This ensures that only main model pages are organized together.
+                    </li></ul></li>
+        </ul>
+        <p>Click <b>OK</b> to save the property settings or <b>Cancel</b> to exit without saving.<br /></p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

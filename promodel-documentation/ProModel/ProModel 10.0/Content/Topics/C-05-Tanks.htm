@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1799" MadCap:lastWidth="1178">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-05_2723800551_1088785"></a>
+            <MadCap:keyword term="Tanks" /><a name="C-05_2723800551_27277"></a>Tanks</h2>
+        <p class="p">Tanks are simply locations to which <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> associates a level instead of an entity routing. (As a result, the units and rules fields do not apply to tanks.) Using tanks, you can model the continuous flow of liquids and other substances into and out of tanks or similar vessels. Also, when combined with discrete-event simulation, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>’s <MadCap:keyword term="continuous modeling" />continuous modeling capability makes it possible to model the exchange between continuous material and discrete entities <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">(e.g., when you place liquid into a container)</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">(e.g., when you place liquid oxygen into a tank)</MadCap:conditionalText>.<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel"> Other uses include modeling high-rate, discrete part manufacturing systems.</MadCap:conditionalText></p>
+        <h3>
+            <MadCap:keyword term="Tanks:submodel;Submodel:tank" />The Tank Submodel</h3>
+        <p class="p">In order to function properly, all tank models should include the tank submodel (TANKSUB.MOD). The tank submodel contains important subroutines and data elements (arrays and macros) used to simplify tank modeling. Each of these subroutines and data elements has a “Tank_” prefix to help identify it and to prevent any accidental name duplication.</p>
+        <p class="p_10"> Please Note: All user-defined model elements should begin with something other than “Tank_”.</p>
+        <p class="How_to_title">How to <span class="_Override" style="font-weight: normal;font-size: 10pt;line-height: 12pt;"><MadCap:keyword term="Tanks:submodel:import;Import:tank submodel;Submodel:tank:import" /><MadCap:keyword term="Tanks:define" /></span>define a <MadCap:keyword term="Tanks:define" />tank</p>
+        <ol>
+            <li class="li_1_how_to_step">Select the gauge/tank symbol from the Location Graphics window.</li>
+            <li class="li_1">Click on the layout window where you wish to place the tank and select <span class="_Override" style="font-weight: bold;">Create Tank Location</span> from the menu that appears. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> places the tank on the layout.</li>
+        </ol>
+        <p class="p_10">Please Note: When you create the first tank in your model, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will display a dialog that allows you to automatically import various subroutines, arrays, macros, and library graphics specific to tanks. If you do not wish to include these new items, you may cancel the action.</p>
+        <ol MadCap:continue="true">
+            <li class="li_1">Enter a capacity (1 to 999999) for the tank in the location capacity field.</li>
+            <li class="li_1">Define and reference any necessary tank control subroutines.</li>
+        </ol>
+        <p class="How_to_title">How to <span class="_Override" style="font-weight: normal;font-size: 10pt;line-height: 12pt;"><MadCap:keyword term="Edit:tank or gauge;Gauge:edit;Tanks:edit" /></span>edit a tank or a <MadCap:keyword term="Gauge:edit;Tanks:edit;Border:tank;Fill:color:tank;Tanks:border color;Tanks:fill color" />gauge</p>
+        <ol>
+            <li class="li_1_how_to_step">Double click on the tank or gauge (or right click and select <span class="_Override" style="font-weight: bold;">Edit Graphic</span>).</li>
+            <li class="li_1_how_to_step">From the dialog that appears, make the appropriate changes.</li>
+            <li class="li_1_how_to_step">Click <span class="_Override" style="font-weight: bold;">OK</span>.</li>
+        </ol>
+        <p class="Graphic" style="margin-top: 2pt;margin-bottom: 2pt;font-family: 'Times New Roman';font-size: 9pt;">
+            <img src="5-10-15.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="How_to_title">How to <span class="_Override" style="font-weight: normal;font-size: 10pt;line-height: 12pt;"><MadCap:keyword term="Tanks:change between a tank and a gauge;Gauge:change to tank" /></span>change between a <MadCap:keyword term="Gauge:change to tank" />tank and a gauge</p>
+        <ul>
+            <li class="li_1">Double click on the tank or gauge and check or uncheck the tank option.</li>
+        </ul>
+        <p class="p">or...</p>
+        <ul>
+            <li class="li_1">Right click on the tank or gauge and select <span class="_Override" style="font-weight: bold;">Change Tank to Gauge</span> or <span class="_Override" style="font-weight: bold;">Change Gauge to Tank</span>.</li>
+        </ul>
+        <p class="p">In addition to defining a tank graphic, you may add <MadCap:keyword term="Labels:add to gauge or tank;Figures:add to gauge or tank;Tanks:add labels and figures;Gauge:add labels and figures" />labels and other figures to a tank. For example, you can add a counter to digitally display the fill level of the tank (<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> rounds the value displayed to the nearest integer). The following are examples of how you can use tanks in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>.</p>
+        <p class="Graphic">
+            <img src="5-10-16.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

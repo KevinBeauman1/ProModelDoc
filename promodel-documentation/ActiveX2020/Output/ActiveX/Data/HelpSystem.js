@@ -1,0 +1,13 @@
+var xmlHelpSystemData = "";
+xmlHelpSystemData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlHelpSystemData += '<WebHelpSystem DefaultUrl=\"Content/Topics/Title.htm\" Toc=\"Data/Toc.js\" Index=\"Data/Index.js\" Concepts=\"Data/Concepts.js\" BrowseSequence=\"Data/BrowseSequence.js\" Glossary=\"Data/Glossary.js\" SearchDatabase=\"Data/Search.js\" Alias=\"Data/Alias.xml\" Synonyms=\"Data/Synonyms.xml\" SkinName=\"ActiveX HTML5\" SkinID=\"ActiveX_HTML5\" Multilingual=\"false\" Skins=\"ActiveX HTML5\" BuildTime=\"1/28/2020 2:14:04 PM\" BuildVersion=\"12.0.5991.25330\" TargetType=\"WebHelp2\" SkinTemplateFolder=\"Skin/\" InPreviewMode=\"false\" MoveOutputContentToRoot=\"false\" ReplaceReservedCharacters=\"false\" MakeFileLowerCase=\"false\" UseCustomTopicFileExtension=\"false\" PreventExternalUrls=\"false\" EnableResponsiveOutput=\"true\" IncludeGlossarySearchResults=\"true\" ResultsPerPage=\"20\" xml:lang=\"en-us\" LanguageName=\"English\">';
+xmlHelpSystemData += '    <CatapultSkin Version=\"1\" SkinType=\"WebHelp2\" Comment=\"HTML5 skin\" Anchors=\"Width,Height\" Width=\"800\" Height=\"600\" Top=\"0\" Left=\"0\" Bottom=\"0\" Right=\"0\" Tabs=\"TOC\" DefaultTab=\"TOC\" UseBrowserDefaultSize=\"True\" UseDefaultBrowserSetup=\"True\" CommentsInTopic=\"false\" DisplayCommunitySearchResults=\"false\" DisplayNotificationOptions=\"false\" NavigationLinkTop=\"false\" EnableResponsiveOutput=\"true\" Title=\"ActiveX Help\" conditions=\"ActiveX.Comment,Default.ScreenOnly\" Name=\"ActiveX HTML5\" SkinID=\"ActiveX_HTML5\" SkinClass=\"_Skins_ActiveX_HTML5\" HideNavOnStartup=\"False\" LogoUrl=\"\">';
+xmlHelpSystemData += '        <Toolbar EnableCustomLayout=\"true\" Buttons=\"Print|RemoveHighlight|Separator|PreviousTopic|NextTopic\">';
+xmlHelpSystemData += '            <Script>$(document).ready(function(){';
+xmlHelpSystemData += '&#160; &#160;$(\'head\').append(\'&lt;link rel=\"shortcut icon\" href=\"Content/Resources/Images/favicon.ico\" type=\"image/x-icon\" /&gt;\');';
+xmlHelpSystemData += '});</Script>';
+xmlHelpSystemData += '        </Toolbar>';
+xmlHelpSystemData += '        <WebHelpOptions HideNavigationOnStartup=\"false\" />';
+xmlHelpSystemData += '    </CatapultSkin>';
+xmlHelpSystemData += '</WebHelpSystem>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('HelpSystem', xmlHelpSystemData);

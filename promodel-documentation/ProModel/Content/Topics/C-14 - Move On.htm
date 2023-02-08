@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="624" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1105964"></a>Move On</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related move logic statements:MOVE ON;MOVE ON;Move:logic statements:MOVE ON" />Entity-Related Move Logic Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Move On &lt;path network&gt;</p>
+        <p class="Syntax_body">Move On StatPath2</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Use this statement to move an entity along a path network. <MadCap:keyword term="MOVE WITH" /></p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This statement is valid only in Move Logic. Move On may only be encountered once by an entity in the same move logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;path network&gt;</p>
+        <p class="p">Any valid path network name.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An entity, EntA, moves from StationA to StationB along a network called Net1.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">StationA</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">StationB</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">StationB</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move On Net1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Move For and Move With. Also see <MadCap:xref class="lowercase_no_see" href="C-07 - Routing Move Logic.htm#C-07_3886599965_1089551" target="" title="" alt="">Routing Move Logic on page 1</MadCap:xref>.</p>
+    </body>
+</html>

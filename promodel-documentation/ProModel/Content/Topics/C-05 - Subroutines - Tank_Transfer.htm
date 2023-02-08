@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="658" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089025"></a><a name="C-05_2723800551_28786"></a>Tank_T<MadCap:keyword term="TANK_TRANSFER;Subroutines:tank:TANK_TRANSFER" />ransfer</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_TRANSFER (&lt;FROM Tank ID&gt;, &lt;TO Tank ID&gt;, &lt;Transfer Quantity&gt;, &lt;FROM Rate&gt;, &lt;TO Rate&gt;, &lt;Resume Level&gt;)</p>
+        <p class="Syntax_body">TANK_TRANSFER (Tank1, Tank2, 2000, 100, 0, 0) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p"><a name="C-05_2723800551_FROM"></a>Transfers a specified quantity from one tank to another. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> sets the state of the FROM tank to Tank_Emptying and the TO tank to Tank_Filling. If the FROM tank becomes empty, its state becomes Tank_Idle. If the <a name="C-05_2723800551_TO"></a>TO tank becomes full, its state becomes Tank_Blocked. Otherwise, the states remain unchanged.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_Transfer when you want to transfer a specific quantity from one tank to another.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;FROM Tank ID&gt;</p>
+        <p class="p">The name or location index number of the FROM tank.</p>
+        <p class="Component">&lt;TO Tank ID&gt;</p>
+        <p class="p">The name or location index number of the TO tank.</p>
+        <p class="Component">&lt;Transfer Quantity&gt;</p>
+        <p class="p">The number of units (gallons, pounds) to transfer. To transfer the entire contents of a tank, enter Tank_Level [&lt;FROM Tank ID&gt;].</p>
+        <p class="Component">&lt;FROM Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined out of the FROM tank. To use a dynamically calculated rate in the Tank_Rate subroutine, enter 0. </p>
+        <p class="Component">&lt;TO Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog into the TO tank. Use 0 if same as the FROM rate. (The TO rate is automatically the same as the FROM rate if you add 0 as the FROM rate.)</p>
+        <p class="Component">&lt;Resume level&gt;</p>
+        <p class="p">If the TO tank reaches capacity before the specified quantity transfers, the TO tank must drop to the resume level before continuing with the transfer. To terminate transferring when the TO tank reaches capacity, enter Tank_Stop. A value of 0 causes an error to occur if the tank becomes empty before transferring the specified quantity.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">When a mixing tank is ready to mix a new batch of material, 10,000 gallons of water must first transfer from a water supply tank at a rate of 100 gpm. The following logic represents this action:</p>
+        <p class="Syntax_body">Tank_Transfer(WaterTank, MixTank, 10000, 100, 0, 0)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

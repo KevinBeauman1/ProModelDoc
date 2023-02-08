@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Interactive Subroutines</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-06-InteractiveSubroutines.htm">Open topic with navigation</a>
+        </p>
+        <h3><a name="C-06_1157716610_1086332"></a>Interactive Subroutines<a name="kanchor2312"></a></h3>
+        <p class="p">Interactive subroutines are subroutines activated by the user anytime during run-time by choosing the subroutine from the Interact menu. The name appearing in the Interact menu is either the subroutine name or if a string is entered as a comment statement at the beginning of the subroutine logic, the string is used as the name (e.g., // “Arrival Frequency”). Interactive subroutines allow the user to interact with the simulation during run-time. Subroutines are defined as type Interactive in the Subroutine edit table. Normally, subroutines are activated by entities. However, interactive subroutines can be user-activated in addition to being entity-activated. Interactive subroutines can be used for:</p>
+        <ul>
+            <li class="li_1" value="1">changing model variables during a simulation run</li>
+            <li class="li_1" value="2">changing routings</li>
+            <li class="li_1" value="3">calculating and reporting user-defined statistics </li>
+        </ul>
+        <p class="p">Suppose you want to interactively change the arrival frequency for a certain entity, customers, during run time. Define a variable, Var1, and assign it an initial value to be used for the initial arrival frequency. Enter Var1 in the arrival frequency field for the entity customers. Create a subroutine of type Interactive and enter the following logic:</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Interactive Subroutines - Logic window_384x170.png" style="width: 384;height: 170;" />
+        </p>
+        <p class="p">During run-time, you can then change the arrival frequency for the customers by choosing the Customer Arrivals from the Interact menu. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-09-Run-TimeInteractMenu.htm#C-09_398201723_1091688" title="" alt="">Run-Time Interact Menu</a> for more information. </p>
+        <p class="p_10">Please Note: Interactive subroutines may also be called from any logic or expression where no return value is required. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" title="" alt="">Statements and Functions</a> for more information.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

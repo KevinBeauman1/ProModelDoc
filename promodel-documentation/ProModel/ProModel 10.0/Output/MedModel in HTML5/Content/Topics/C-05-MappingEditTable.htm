@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Path Networks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Mapping Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-MappingEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-PathNetworks.htm">Path Networks</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Mapping Edit Table</span>
+        </div>
+        <h3><a name="C-05_2723800551_1086417"></a>Mapping Edit Table<a name="kanchor950"></a></h3>
+        <p class="p">If there are multiple paths emanating from one node to another node, the <span class="_Override" style="font-weight: bold;">default</span> path selection will be based on the shortest distance for speed &amp; distance networks, and the least number of nodes for time based networks. These defaults can be overridden by explicitly mapping some destination nodes to specific branches that entities and resources will take when traveling out of a “from” node.</p>
+        <p class="Graphic">
+            <img src="pm-c5-122-2.jpg" />
+        </p>
+        <p class="p">The fields of the Mapping edit table are described as follows.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">From</span> Entities and resources traveling out of this node will use this mapping record to decide which of the alternate branches will be taken next.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">To</span> The “from” node and the “to” node together define the branch to be taken next. This might also be interpreted as the node which entities and resources will go <span class="_Override" style="font-style: italic;">through</span>, to reach one of the destination nodes.</p>
+        <p class="p"><span class="Bold"><b>Dest</b>.</span> Entities and resources whose <span class="_Override" style="font-style: italic;">ultimate destination</span> is one of these nodes will be forced to take the branch that directly connects the “from” node to the “to” node.</p>
+        <p class="p_10">Please Note: When your simulation is compiled and run, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Med</MadCap:conditionalText>Model will automatically define destinations for your network mapping, if you have not defined them yourself. These computer-generated mappings will not appear in the Dest. column of the Mappings table, but the From and To columns will contain information on these mappings. Do not delete the information in these columns.</p>
+        <p class="How_to_title">How to create mappings using the <a name="kanchor951"></a>mapping edit table:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click on the <span class="Helv_Bold" style="font-weight: bold;">Mapping...</span> heading button in the Path Network edit table. This will open the Mapping edit table.</li>
+            <li class="li_1_how_to_step" value="2">Click on the <span class="Helv_Bold" style="font-weight: bold;">From</span> heading button and select the node to be mapped.</li>
+            <li class="li_1_how_to_step" value="3">Click on the <span class="Helv_Bold" style="font-weight: bold;">To</span> heading button and select the terminating node for the branch to be mapped.</li>
+            <li class="li_1_how_to_step" value="4">Click on the <span class="Helv_Bold" style="font-weight: bold;">Destination</span> heading button and select the desired node(s).</li>
+        </ol>
+        <p class="How_to_title">How to create mappings graphically:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click on the <span class="Helv_Bold" style="font-weight: bold;">Mapping...</span> heading button in the Path Network edit table. This will open the Mapping edit table.</li>
+            <li class="li_1_how_to_step" value="2">Click on the from node in the Layout Window. This places the selected node in the From field.</li>
+            <li class="li_1_how_to_step" value="3">Click on the to node in the Layout Window. Note that the to node must be directly connected to the from node with a single branch.</li>
+            <li class="li_1_how_to_step" value="4">Click on the destination node(s) in the Layout Window. This places the selected node(s) in the Destination field.</li>
+        </ol>
+        <p class="p_10">Please Note: <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> automatically calculates and uses the shortest paths based on time or distance on unmapped portions of networks. If an Expression Array is used to specify the times for a time-based network and the time unit is included as part of the expression in the array, the time unit will not be used when determining the shortest path. In order to have the time unit affect the shortest path calculation it must be explicitly entered in the Time field (e.g. Arr1[1,2] min).</p>
+        <p class="p">An example of mapping two branches of a network is given on the following pages.</p>
+        <h4>Mapping Example<a name="kanchor952"></a></h4>
+        <p class="p">The following example uses a path network diagram to demonstrate mapping.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Suppose, as indicated in the following diagram, it’s important that a patient going to one of the three X-ray rooms (Nodes N5, N6 or N7) from the Nursing Unit (Node 1), not pass through the surgical corridor where ORs 1 and 2 are located. Since the distance from Node N2 to Node N3 and then to Node N5, N6 and N7 is shorter than going directly from Node N2 to Node N5 and then to Nodes N6 or N7, MedModel would automatically send the patient through Node N3 to reach the X-ray facilities because it’s the shortest available path.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-122-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">To force the patient to take the longer path when going to and from the Nursing Unit and X-ray rooms, the desired path to be traveled must be “Mapped.”</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">The mapping for this example requires four lines in the Mappings table. Two for each direction at each node of the branch.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">When a patient traveling from the Nursing Unit to any of the other locations indicated arrives at Node N2, he or she must decide which branch to take. The first line in the Mappings table requires that patients leaving Node N2 on their way to Nodes N3 and N4 take the branch from Node N2 to Node N3. The second mapping specifies the alternative condition that whenever a patient is enroute from the Nursing Unit (Node N1) to any one of the three X-ray rooms, it must take the branch from Node N2 to Node N5.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">A patient returning from any of the X-ray rooms must decide which branch to take upon reaching Node N5. Line three in the Mappings table ensures that any time a patient is traveling to the Nursing Unit (Node N1) from one of the X-ray rooms (Nodes N5, N6, or N7), it must take the longer branch from N5 to N2. The final line specifies the alternative condition that patients enroute from an X-ray room (Nodes N5, N6, or N7) to an Or (Nodes N3 or N4), must take the branch from N5 to N3. Lines 3 and 4 are <span class="_Override" style="font-style: italic;">optional</span>, and might be useful to speed up translation, since the restrictions they impose allow the shortest path calculations to be bypassed.</p>
+        <p class="Graphic">
+            <img src="mm-c5-123-1.jpg" />
+        </p>
+        <p class="p">There is a shortcut to force the same non-default path selection constraint to a number of destination nodes: For instance, if the vertical arm of the path network extended up to include many other nodes N8, N9, ..., and locations Loc7, Loc8, ..., then we would change the Mapping edit table as follows:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Delete line 1 in the Mapping edit table.</li>
+            <li class="li_1_how_to_step" value="2">Make sure that line 3 is there (it is <span class="_Override" style="font-style: italic;">not </span>optional any more).</li>
+            <li class="li_1_how_to_step" value="3">Include a line which reads: “From: N2, To: N5, Dest:&lt;BLANK&gt;”.</li>
+        </ol>
+        <p class="Graphic">
+            <img src="mm-c5-123-2.jpg" />
+        </p>
+        <p class="p">The empty destination column will be interpreted as “all other destination nodes” by <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>.</p>
+        <p class="p_10">Please Note: For a “from” node (unless there is a branch map with a blank destination column), any nodes not explicitly listed in the destination columns of existing mapping records will be reached via the default path selections.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

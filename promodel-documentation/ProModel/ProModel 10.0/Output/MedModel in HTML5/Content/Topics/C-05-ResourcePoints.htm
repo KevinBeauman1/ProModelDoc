@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Resource Points</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-ResourcePoints.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resource Points</span>
+        </div>
+        <h3><a name="C-05_2723800551_1087123"></a><a name="kanchor914"></a><a name="C-05_2723800551_25328"></a>Resource Points</h3>
+        <p class="p">For a static resource, resource points are the layout coordinates of the resource graphics. For dynamic resources, resource points are auxiliary points where multiple resources may appear graphically when in use or parked at a multi-capacity node. When a resource arrives at a node, it will appear on that node unless a resource point is defined for that resource at that node. The resource will appear on the resource point when it arrives to park or perform a task at a particular node. Resource points prevent resources from appearing on top of each other. In the case of dynamic resources, resource points are defined in terms of an offset from the node to which they are connected. Resource points are defined in terms of an offset from the upper left corner of the layout for static resources.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">The following Resource Points edit table shows that node MD_Home has two resource points attached to it. The horizontal offset is 45 units for the first point and - 14 for the second. The vertical offset is - 40 down for the first point and 20 units up from the node position for the second. (For resource points positive distances are up and to the right.)</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-140-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Whenever physicians arrive at node MD_Home, they will automatically go to one of the two resource points. This prevents the physicians from graphically appearing on top of each other if they are both at node MD_Home simultaneously.</p>
+        <p class="How_to_title">How to add resource points to a node<a name="kanchor915"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Select <span class="_Override" style="font-weight: bold; text-decoration: none;">R</span><span class="_Override" style="font-weight: bold;">esources </span>from the <span class="_Override" style="font-weight: bold; text-decoration: none;">B</span><span class="_Override" style="font-weight: bold;">uild </span>menu.</li>
+            <li class="li_1_how_to_step" value="2">Click on the resource points heading button, <span class="_Override" style="font-weight: bold;">Pts....</span></li>
+            <li class="li_1_how_to_step" value="3">Click on the node for which a resource point is to be added.</li>
+            <li class="li_1_how_to_step" value="4">Click on the layout where the resource point is to appear.</li>
+            <li class="li_1_how_to_step" value="5">Repeat steps 3 and 4 for each resource point to be added.<br /></li>
+        </ol>
+        <p class="p_10">Please Note: Resource points are automatically added to the home node for each resource graphic placed on the layout.</p>
+        <p class="How_to_title">How to delete resource points<a name="kanchor916"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Bring up the Resource Points edit table by clicking on the <span class="_Override" style="font-weight: bold;">Pts... </span>heading button in the Resources edit table.</li>
+            <li class="li_1_how_to_step" value="2">Select the point to be deleted by highlighting the edit table record or clicking on the resource point in the layout. (If you click on the point to select it, you must then reactivate the Resource Points window by clicking on the title bar of the table.)</li>
+            <li class="li_1_how_to_step" value="3">Select <span class="_Override" style="font-weight: bold; text-decoration: none;">D</span><span class="_Override" style="font-weight: bold;">elete </span>from the <span class="_Override" style="font-weight: bold; text-decoration: none;">E</span><span class="_Override" style="font-weight: bold;">dit </span>menu.</li>
+        </ol>
+        <p class="How_to_title">How to move resource points<a name="kanchor917"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Bring up the Resource Points edit table by clicking on the <span class="_Override" style="font-weight: bold;">Pts... </span>heading button from the Resources edit table.</li>
+            <li class="li_1_how_to_step" value="2">Drag the resource point to a new location with the mouse.</li>
+        </ol>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

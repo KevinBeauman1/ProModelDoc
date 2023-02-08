@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/Getting Started with 3D Animator.htm" />
+    <Link
+      Url="Project/ConditionTagSets/3DA.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/Getting Started with 3D Animator.htm#C-02_1946547532_1061208" />
+    <Link
+      Url="Project/ConditionTagSets/3DA.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_1942222156_1067103" />
+    <Anchor
+      Name="C-04_1942222156_21897" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="3DA.OmitFromHelpKeepPrint" />
+    <Condition
+      Tag="3DA.Help_Only" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Promodel.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="994" MadCap:lastWidth="1152" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086719"></a>Resource Priorities and Preemption<MadCap:keyword term="Resources:priorities;Resources:preemption;Priorities:resources;Preemption:resources" /></h3>
+        <p class="p">Priorities for resource requests may be assigned through a <MadCap:keyword term="GET" />Get, <MadCap:keyword term="JOINTLY GET" />Jointly Get, or <MadCap:keyword term="USE" />Use statement in operation logic, downtime logic, or move logic (or the subroutines called from these logics). Priorities for resource downtimes are assigned in the Priority field of the Clock and Usage downtime edit tables. The following examples illustrate these points.</p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Use Res 1,200 For N(3,.1)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Graphic">
+            <img src="mm-c5-133-1.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">When a resource, being used by an entity, is preempted by either a downtime or another entity, any processing time for the preempted entity due to a <MadCap:keyword term="WAIT" />Wait or <MadCap:keyword term="USE" />Use statement is interrupted until the preempting entity or downtime releases the resource. If an entity is using other resources in addition to the one preempted, the other resources remain in possession of the entity (unless they are preempted away).</p>
+        <p class="p">In the case of a resource downtime preempting another resource downtime, any remaining time delay, as well as any other downtime logic remaining to be processed by the preempted downtime, is immediately discontinued without resuming and the preempting downtime takes over.</p>
+        <p class="p_10">Please Note: Resource priorities and preemption Notes: 1.  If a resource is transporting an entity, it cannot be preempted by another entity or by a downtime until it drops off the current entity at the destination location. Therefore, the resource will deliver the current entity and then immediately come under control of the preempting entity or downtime. 2.  If a resource is moving but does not possess an entity, the resource can be preempted by a downtime or entity. The resource will stop at the next node in the path network and travel to the downtime node after which the resource will go down. </p>
+    </body>
+</html>

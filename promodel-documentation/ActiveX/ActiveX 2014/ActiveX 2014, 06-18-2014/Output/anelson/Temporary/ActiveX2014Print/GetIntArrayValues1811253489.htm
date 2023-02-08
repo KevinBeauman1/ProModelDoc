@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="564" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Runtime Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>GetIntArrayValues</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="GetIntArrayValues"><a MadCap:generatedBookmark="TOC" name="GetIntArrayValues"></a><a name="C-01_2914010915_493444"></a>GetIntArrayValues</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax: </span> GetIntArrayValues </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Gets the values on an integer array during simulation runtime</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:</span>
+        </p>
+        <p class="objects">Array Name	 (String) The name of integer array.</p>
+        <p class="objects">Subset	 (String) A selection of elements from the integer array. The syntax is the same as the syntax used in VBA to index an array. For instance, to get elements 1 to 10 from an array set Subset to "1 to 10". For a two-dimentional array you would use "1 to 10, 1 to 10".</p>
+        <p class="objects">pvar	 (variable) An array of integers taken from the specified ProModel array.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns: </span> An array of integers taken from a ProModel array during runtime. </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example</span>:This example launches a simulation and displays part of the contents of an integer array after 1 hour of simulation time has elapsed.</p>
+        <p class="objects">Sub GetIntegerArrayValues()</p>
+        <p class="objects2">Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">Dim pmRuntime As ProModel.CRuntime</p>
+        <p class="objects2">Dim curSimTime As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">Set pmRuntime = CreateObject("ProModel.Cruntime")</p>
+        <p class="objects2">pmObject.LoadModel "Tanker.mod"</p>
+        <p class="objects2">pmObject.Simulate</p>
+        <p class="objects2">curSimTime = 0</p>
+        <p class="objects2">Do While curSimTime &lt; 3600</p>
+        <p class="objects3">	pmObject.GetSimTime curSimTime</p>
+        <p class="objects3">	DoEvents</p>
+        <p class="objects2">Loop</p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">Dim intArray</p>
+        <p class="objects2">Dim n As Long</p>
+        <p class="objects2">Dim arrayContents As String</p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">pmRuntime.GetIntArrayValues "Tank_State", "1 to 10", intArray</p>
+        <p class="objects2">arrayContents = "Array Contents: " &amp; Chr(13)</p>
+        <p class="objects2">For n = 1 To 10</p>
+        <p class="objects2">	arrayContents = arrayContents &amp; intArray(n) &amp; Chr(13)</p>
+        <p class="objects2">Next n</p>
+        <p class="objects2">MsgBox arrayContents</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="989" MadCap:lastWidth="1447" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103033"></a><a name="C-14_4292047180_39922"></a>Comments</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Documentation symbols:#, //, /*...*/;Special Characters;Special Characters;Special Characters;Comments" />Documentation Symbols</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">//</p>
+        <p class="Syntax_body">/*...*/</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component" style="font-weight: bold;">//</p>
+        <p class="p">	Two forward slashes signal the start of a one-line comment. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will ignore any characters on the rest of the line.</p>
+        <p class="Component" style="font-weight: bold;">/*...*/</p>
+        <p class="p">A slash followed by an asterisk signals the start of a multi-line comment. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will ignore all characters after the “/*” until it finds an asterisk followed by a slash, “*/”. Use this type of comment for long explanations and to prevent <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> from executing long portions of logic during debugging. Comments using // may be nested inside multi-line comments.</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Comments are notes to the modeler inside blocks of logic. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> ignores them, but they can be particularly useful to explain logic when more than one person will be using a model. </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below has several notes to explain it. Additionally, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> ignores the Else statement and the Else statement’s block.</p>
+        <p class="Syntax_body" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">If Parts_Available &gt; Attr2 Then   </MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">{//Parts to join is stored in Attr2</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Join Attr2			//Join the number of parts</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">				// needed only if there are</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">				// enough parts available.</MadCap:conditionalText>
+            <br />
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">	Wait Attr1</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">}</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">/* Else</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">{			//Start operation</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">		Inc Var1 </MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">		Wait Attr3</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">} */</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">If Patient_Type = 3 Then   </MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">{//Patient type is stored in attribute Patient_Type</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Get MD			// Get a Doctor only if patient is type 3</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Wait Attr1</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">	}</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">/* Else</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">{    //Start Treatment by Nurse</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">		Get NURSE </MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">		Inc Var1</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">		Wait Attr2</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">	} */</MadCap:conditionalText>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c6-283-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-3.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-4.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Join.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c6-283-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-3.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-283-4.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Join.htm#C-14_4292047180_1105007" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1120802" />
+    <Anchor
+      Name="C-06_1157716610_21016" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Assemblies:making"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="JOIN"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="GROUP"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="UNGROUP"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="COMBINE"
+      Conditions=""
+      LocalConditions=""
+      Position="24" />
+    <IndexCacheEntry
+      Term="LOAD"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="ACCUM"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

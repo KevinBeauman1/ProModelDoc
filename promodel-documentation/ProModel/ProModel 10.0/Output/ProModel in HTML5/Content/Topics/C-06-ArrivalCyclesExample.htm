@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Arrival Cycles">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Arrival Cycles Example</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-ArrivalCyclesExample.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-ArrivalCycles.htm">Arrival Cycles</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Arrival Cycles Example</span>
+        </div>
+        <h3><a name="C-06_1157716610_1086391"></a>Arrival Cycles Example<a name="kanchor1152"></a></h3>
+        <p class="p">Suppose we are modeling the operations of a bank (or any service or manufacturing system) and we need to specify a pattern for customer arrivals. From past data, we know that customers arrive throughout the day (9:00 <span class="_Override" style="font-variant: small-caps;">am</span> to 5:00 <span class="_Override" style="font-variant: small-caps;">pm</span>) according to the following approximate percentages.</p>
+        <table style="width: 595px;">
+            <col style="width: 157px;" />
+            <col style="width: 194px;" />
+            <col style="width: 187px;" />
+            <tbody>
+                <tr>
+                    <td>From </td>
+                    <td>Before</td>
+                    <td>Percent</td>
+                </tr>
+                <tr>
+                    <td>	9:00 am</td>
+                    <td>	10:30 am</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>10:30 am</td>
+                    <td>11:30 am</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>11:30 am</td>
+                    <td>1:00 pm</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>1:00 pm</td>
+                    <td>4:00 pm</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>4:00 pm</td>
+                    <td>5:00 pm</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Defining the Arrival Cycle<a name="kanchor1153"></a></h4>
+        <p class="p">The arrival cycle will be named Bank_Arrivals in the Arrival Cycles edit table. Because the data is expressed in terms of percentages, we select Percent as the basis for the cycle. Also, the percentage values are not cumulative so we specify No in the Cumulative field.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-1.jpg" />
+        </p>
+        <p class="p">Next, we right-click in the Table field to open the table for entering the cycle data.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-2.jpg" />
+        </p>
+        <p class="p">In this example, even though the percentages of customers that have arrived are not cumulative, the time is always cumulative. Therefore, the table reads as follows: ten percent of the daily customers arrive in the first 1.5 hours, fifteen percent of the daily customers arrive between hour 1.5 and 2.5, and so on. The arrivals are randomly distributed according to a Uniform distribution during the time interval in which they arrive. </p>
+        <p class="p">The arrival cycle is now defined and can be assigned to an arrivals record in the Arrivals edit table.</p>
+        <h4>Assigning Arrivals to the Arrival Cycle<a name="kanchor1154"></a></h4>
+        <p class="p">After an arrival cycle has been defined, assign an arrival record to the arrival cycle in the Arrivals edit table for the arriving customers. The arrival record for the bank example appears below. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Arrivals.htm#C-05_2723800551_1087908" title="" alt="">Arrivals</a> for more information.)</p>
+        <p>
+            <img src="pm-c6-245-3.png" />
+        </p>
+        <p class="p">The total number of customers per day is normally distributed with a mean of 1000 and a standard deviation of 35.  The number of occurrences of the cycle is 20, representing 20 working days (1 month) of time.  The frequency in this case refers to the period of the cycle or the time between the start of one cycle and the start of the next cycle, which is every 24 hours.  Make sure the arrival frequency is defined with the same time unit as the arrival cycle.</p>
+        <p class="p">Without an arrival cycle, all the Customers for a single day would arrive at the start of the simulation.  An arrival cycle will divide the quantity specified in the Qty each... field into various sized groups arriving throughout the day.</p>
+        <p class="p">To assign the arrival cycle to the arrival record, right-click in the Qty Each field and select Arrival Cycle to open a dialog with the names of all defined cycles.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-4.jpg" />
+        </p>
+        <p class="p">Click on the entry Bank_Arrivals and select OK. The Qty each... field now includes the cycle.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

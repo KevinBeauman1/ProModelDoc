@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Data Graphics"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="http://www.microsoft.com/" />
+    <Link
+      Url="http://office.microsoft.com/en-us/visio/FX100487861033.aspx" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="http://www.microsoft.com/" />
+    <Link
+      Url="http://office.microsoft.com/en-us/visio/FX100487861033.aspx" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet - general.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

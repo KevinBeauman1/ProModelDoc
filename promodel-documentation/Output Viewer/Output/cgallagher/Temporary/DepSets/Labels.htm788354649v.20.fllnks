@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/labels.png" />
+    <Link
+      Url="Content/Resources/Images/axistitlesribbon.png" />
+    <Link
+      Url="Content/Resources/Images/axestitles.png" />
+    <Link
+      Url="Content/Resources/Images/Legendribbon.png" />
+    <Link
+      Url="Content/Resources/Images/legendlocation.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsnew.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsexample1.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsoption2.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsex21.png" />
+    <Link
+      Url="Content/Resources/Images/datatableribbon.png" />
+    <Link
+      Url="Content/Resources/Images/showdatatables.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/labels.png" />
+    <Link
+      Url="Content/Resources/Images/axistitlesribbon.png" />
+    <Link
+      Url="Content/Resources/Images/axestitles.png" />
+    <Link
+      Url="Content/Resources/Images/Legendribbon.png" />
+    <Link
+      Url="Content/Resources/Images/legendlocation.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsnew.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsexample1.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsoption2.png" />
+    <Link
+      Url="Content/Resources/Images/datalabelsex21.png" />
+    <Link
+      Url="Content/Resources/Images/datatableribbon.png" />
+    <Link
+      Url="Content/Resources/Images/showdatatables.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="axistitles" />
+    <Anchor
+      Name="legends" />
+    <Anchor
+      Name="datalabels" />
+    <Anchor
+      Name="DataTable" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="labels"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="axis titles"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="labels"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="axis titles"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="axes"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

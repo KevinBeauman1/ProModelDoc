@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/sm-c1-260-2.jpg" />
+    <Link
+      Url="Content/Topics/C-06-UsingRandomNumberStreams.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/sm-c1-260-2.jpg" />
+    <Link
+      Url="Content/Topics/C-06-UsingRandomNumberStreams.htm#C-06_1157716610_1086844" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086831" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Streams:edit table"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

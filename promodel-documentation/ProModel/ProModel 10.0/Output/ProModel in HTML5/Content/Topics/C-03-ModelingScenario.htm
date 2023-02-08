@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Planning the Model|Building a Model">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Modeling Scenario</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-03-ModelingScenario.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-03-PlanningtheModel.htm#C-03_1917231497_1035124">Planning the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-03-BuildingaModel.htm">Building a Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Modeling Scenario</span>
+        </div>
+        <h3><a name="C-03_1917231497_1039569"></a>Modeling Scenario<a name="kanchor142"></a></h3>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Before we actually begin building a model, let's look at a fictitious scenario for our model building session.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Cogswell Cogs has just secured a contract to produce a new cog for production of the X-95C Family Space Cruiser. The current capacity of the Cogswell facility is not adequate to handle any additional work load while continuing to fill existing orders. Therefore, Mr. Cogswell has ordered the I.E. department to simulate the design of a new workcell dedicated to the production of the new cog.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The process consists of loading a cast blank onto an NC mill for milling of the outside splines. Once the splines have been cut, the cog must be degreased, inspected and loaded with an inner bearing. All operations, including inspection, are to be performed by a single operator.</p>
+        <h4 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor143"></a>Model Elements</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">In building this model we must define all of the basic modeling elements and a few of the optional elements. </p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor144"></a>Locations</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">We need some type of receiving location to hold incoming entities. We also need processing locations where entities have value added to them. For the given production rate, Cogswell's engineers have determined that the workcell will require two NC_300 series numerically controlled mills, a degreasing machine, and an inspection/assembly station.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor145"></a>Entities (Parts)</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The entity types in this system include Pallets, each carrying six cast Blanks. Blanks become Cogs after processing, and Bearings are loaded at the Inspect station. If a Cog fails the inspection it will be called a Reject.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor146"></a>Arrivals</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Cogswell's engineers have determined that Pallets should arrive at the rate of 1 Pallet every 45 minutes.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor147"></a>Processing</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">The operation at each mill requires an operator to load the Blank, which takes a normally distributed amount of time with a mean of 3 minutes and standard deviation of .2 minutes (i.e., N(3,.2)). After a blank has been loaded, the machining time is a constant 5.7 minutes.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Cogs are then removed from the mill and placed in the degreasing machine. The degreasing machine has capacity for 2 Cogs, and has a cycle time of 5 minutes.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">Once the Cogs have been degreased, they are inspected for proper spline depth, and a bearing is installed in the center hole. This process requires the cell operator, and takes U(3.2,.3) minutes for the inspection and U(1.5,.2) minutes for the Bearing to be installed. If the Cog fails inspection, no Bearing is installed.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor148"></a>Resources</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">A single operator, CellOp, performs all manual operations.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor149"></a>Path Networks</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">In order to make CellOp a mobile resource, we must define a path network. We'll call it CellNet.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor150"></a>Attributes</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">An attribute is simply a “numeric tag” attached to either an entity (entity attribute) or a location (location attribute). Since each Cog is inspected for proper spline depth, we attach an attribute called Test to each Cog, specifying the Pass/Fail status of the Cog.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.ProModel"><a name="kanchor151"></a>User Distributions</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">We will sample from a user defined distribution and set the Test attribute to either 1 (for pass) or 0 (for fail). Ninety six percent of the Cogs pass inspection and have their Test attribute set to one. Four percent fail the inspection and have their Test attribute set to zero.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

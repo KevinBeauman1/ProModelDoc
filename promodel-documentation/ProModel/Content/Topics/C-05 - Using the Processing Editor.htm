@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="597" MadCap:lastWidth="560">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1087179"></a>Using the Processing Editor<MadCap:keyword term="Processing:editor:using" /></h3>
+        <p class="p">This discussion covers the procedures used to define operations and routings using the Processing Editor. As with most other procedures in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>, they may be performed graphically using the mouse, or manually by typing the information directly in the edit tables.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Before you begin to specify the processing logic, define all locations and entities to be referenced in the processing. This is done through the Location and Entity Editors. If you reference a location or an entity that has not yet been defined in a location or entity field, you will be prompted to add that location or entity to the respective location or entity list. However, no graphic gets automatically assigned to the location or entity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The easiest way to define the processing logic is to define the routing or flow sequence using the tools in the Processing Tools window, which appears in the lower left corner of the Processing Editor. These tools have been designed to allow you to easily and rapidly define the flow of entities through the system. It is also a good idea to define the routing rule for each routing as it is created. Once you have defined the from-to relationships between locations for each entity, fill in the details of the operation and move logic for each location. This is typically done by typing the logic in the operation or move logic column manually or by using the Logic Builder, documented at the end of this section.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Defining processes graphically in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> requires interaction with all four process editing windows.</p>
+        <p class="p_11">Process Edit Table</p>
+        <p class="p_11">Routing Edit Table</p>
+        <p class="p_11">Tools Window</p>
+        <p class="p_11">Layout Window</p>
+        <p class="p">Before discussing the procedures for using these windows interactively, let us look briefly at a process flowchart of a simple model.</p>
+        <h4>Example Model<MadCap:keyword term="Processing:example" /></h4>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Two entity types, EntA and EntB, arrive at Locations 1A and 1B, respectively, according to some specified arrival logic. After a short preparation time, both entities are routed to Location 2 where 1 EntB is joined to 1 EntA. At this point the resulting entity, EntC, is sent to Location 3 for consolidation. Twelve EntC's are accumulated at Location 3 and processed together for 3.0 minutes. Then they exit the system.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">Two entity types, Patient and Med_rcrd (medical record), arrive at Locations Enter and File respectively according to some specified arrival logic. The patient moves to the waiting room where he or she takes approximately 5 minutes to fill out some paperwork. When finished, the patient waits for the treatment room to become available. The patient spends approximately 20 minutes in the treatment room after which he or she proceeds to the clinic desk. At the desk, a medical record is joined with the patient. Once joined, the patient spends approximately 2 minutes with the nurse at the desk and then moves to the location called Depart where he or she exits the model.</p>
+        <p class="space_before_image">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="8_179.png" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="PROCFLOW.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="p">In the flowchart above, each block represents a process record for an entity at a location. The lower left portion of a block specifies the operation(s) performed on the entity at the location. The lower right portion of the block represents the number of entities output to the next location.</p>
+    </body>
+</html>

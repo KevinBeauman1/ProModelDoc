@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="499" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks">
+            <a name="C-05_2723800551_1089207">
+            </a>
+            <a name="C-05_2723800551_27994">
+            </a>Tan<MadCap:keyword term="TANK_FALLTRIGGER;Subroutines:tank:TANK_FALLTRIGGER" />k_FallTrigger</h3>
+        <h4 class="_rules_statements">Syntax sample</h4>
+        <p class="Syntax_body">TANK_FALLTRIGGER (&lt;Tank ID&gt;, &lt;Level&gt;)</p>
+        <p class="Syntax_body">TANK_FALLTRIGGER (TankB, 500) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Waits until tank contents falls to a specified level.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_FallTrigger to initiate an action when a tank level falls to a specific level.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Level&gt;</p>
+        <p class="p">When the tank level falls to this value, any subsequent logic executes.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">When an in-process tank, TankX, falls to 1000 gallons, it triggers a mixing tank to begin producing more product. To model this, define the following activated subroutine to control the mixing tank:</p>
+        <p class="p">&#160;</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Tank_FallTrigger(TankX, 1000)</p>
+        <p class="syntax_body_indent">[Insert logic to mix new batch here]</p>
+        <p class="Syntax_body">	}</p>
+        <p class="p_10">Please Note: Using Tank_FallTrigger instead of a Wait Until statement prevents the action from triggering again until the level first rises above the fall trigger level.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref href="C-05 - Subroutines - Examples of Tank Logic.htm#C-05_2723800551_1089840" target="" title="" alt="" class="lowercase_no_see">Defining Trigger Levels on page 1</MadCap:xref>
+        </p>
+    </body>
+</html>

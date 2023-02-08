@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1776" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102504"></a><a name="C-14_4292047180_29135"></a>Activate</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:ACTIVATE;ACTIVATE" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Activate &lt;subroutine&gt;({parameter1&gt;,&lt;parameter2&gt;...})</p>
+        <p class="Syntax_body">Activate Sub1()</p>
+        <h5 class="_rules_statements">Description
+        </h5>
+        <p class="p">Starts an independent subroutine. The calling logic then continues without waiting for the called subroutine to finish. Therefore, independent subroutines can run in parallel with the logic that called them. Independent subroutines are not entity or location dependent and run without regard to what happens inside the logic that called them.</p>
+        <p class="p">Use Activate to process logic that has <MadCap:keyword term="WAIT" />Wait or <MadCap:keyword term="WAIT...UNTIL" />Wait...Until statements when you do not want to use an entity to process the Wait or Wait...Until statements. For example, an Activate in the initialization logic could call a subroutine that adjusts the arrival frequency for a type of entity depending on the time of day. </p>
+        <p class="p">Independent subroutines called with Activate cannot use entity-specific or location-specific system functions. If the subroutine has a return value, then that value is ignored. External subroutines cannot be called with Activate, although they may be called from within an activated subroutine.</p>
+        <h5 class="_valid_in">Valid In
+        </h5>
+        <p class="p">Any logic. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;subroutine&gt;</p>
+        <p class="p">The name of the subroutine to run. This name should appear exactly as if the subroutine were being called normally. Any return value for this function is ignored. See <MadCap:xref class="lowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" target="" title="" alt="">Subroutines on page 1</MadCap:xref>.</p>
+        <p class="Component">&lt;parameters&gt;</p>
+        <p class="p">The parameters that the subroutine normally takes.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">This example uses Activate in a model’s initialization logic to start a subroutine named Res_Log(). Res_Log() is a user-defined subroutine that logs every time that all units of a resource named <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Worker</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText> are in use. After it logs the time that all units were busy, it waits ten minutes to check again. Note that the <MadCap:keyword term="WHILE...DO" />While...Do loop in the subroutine is never exited. This technique allows the subroutine to run during the entire simulation.</p>
+        <p class="p">Initialization Logic:
+        </p>
+        <p class="Syntax_body">Activate Res_Log()
+        </p>
+        <p class="p">Res_Log()
+Subroutine Logic:       </p>
+        <p class="Syntax_body">Int x = 1</p>
+        <p class="Syntax_body">While x = 1 Do</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">If FreeUnits(<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Worker</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText>)= 0 Then</p>
+        <p class="syntax_indent_2"> Log "All workers busy",0</p>
+        <p class="syntax_body_indent">Wait 10</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also
+        </p>
+        <p class="p">Xsub(). Also see <MadCap:xref class="lowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" target="" title="" alt="">Subroutines on page 1</MadCap:xref>.</p>
+    </body>
+</html>

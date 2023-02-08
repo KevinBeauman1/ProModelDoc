@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessexample1.png" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessolution1.png" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessolution2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch?v=0DkdPcMQETU&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=4&amp;feature=plcp" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessexample1.png" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessolution1.png" />
+    <Link
+      Url="Content/Resources/Images/prioritizingresourceaccessolution2.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

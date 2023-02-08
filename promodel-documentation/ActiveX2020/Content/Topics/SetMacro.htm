@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="307" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_460326"></a><a name="C-01_2914010915_SetMacro"></a>
+            <MadCap:keyword term="SetMacro;ProModel Application Object:SetMacro" />SetMacro</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SetMacro <span class="_Override" style="color: #0000ff;">Macro Name, Macro Value</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Sets the value of a ProModel macro.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">MacroName</span>	(String)  ID of any defined macro in loaded model.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">MacroValue</span>	 (String)  New value for specified macro.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, changes a macro value, then runs the simulation with the new value.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub Use3Ops()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.SetMacro <span class="_Override" style="color: #0000ff;">"Number_of_Operators", 3</span></p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

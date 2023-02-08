@@ -1,0 +1,279 @@
+﻿#mainBody {
+	margin-left: 200px;
+	width: 100%
+}
+
+.body-content {
+	margin-top: 80px;
+	padding: 0 60px 20px 60px;
+}
+
+blockquote {
+	padding: 0 1em;
+	color: #6a737d;
+	border-left: 0.25em solid #dfe2e5;
+	margin-top: -15px;
+}
+
+.bg-dark {
+	background-color: #111316 !important;
+}
+
+.navbar-brand {
+	padding-top: 0px;
+}
+
+a.navbar-brand > img {
+	margin-top: -6px;
+	margin-right: 5px
+}
+
+.navbar {
+	padding-top: 13px;
+}
+
+#appTitle {
+	font-size: 20px;
+}
+
+.sidebar {
+	position: fixed;
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	padding: 20px 0;
+	overflow-x: auto;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	border-right: 1px solid #eee;
+	color: white;
+	background-color: #3D4752;
+}
+
+	.sidebar .nav {
+		margin-bottom: 20px;
+	}
+
+	.sidebar .nav-item {
+		width: 100%;
+	}
+
+		.sidebar .nav-item + .nav-item {
+			margin-left: 0;
+		}
+
+	.sidebar .nav-link {
+		border-radius: 0;
+	}
+
+.nav-link {
+	padding: 0 0 0 12px;
+}
+
+.nav-link:hover {
+	color: #7AC5FF !important;
+}
+
+.tree {
+	max-width: 100%;
+}
+
+	.tree, .tree ul {
+		margin: 0;
+		padding: 0;
+		list-style: none
+	}
+
+		.tree ul {
+			margin-left: .5em;
+			position: relative
+		}
+
+			.tree ul ul {
+				margin-left: .5em
+			}
+
+
+		.tree li {
+			padding: 0 0 0 11px;
+		}
+
+/*.tree ul li:last-child:before {
+		background: #fff;
+		height: auto;
+		top: 1em;
+		bottom: 0
+	}*/
+
+.indicator {
+	margin-right: 5px;
+}
+
+.tree li a {
+	text-decoration: none;
+	color: white;
+}
+
+.tree li button, .tree li button:active, .tree li button:focus {
+	text-decoration: none;
+	color: #369;
+	border: none;
+	background: transparent;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	outline: 0;
+}
+
+.tree .nav-link {
+	display: inline;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.node-selected {
+	color: #7AC5FF !important;
+}
+
+span.branch {
+	cursor: pointer;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 7px 10px;
+	vertical-align: top;
+	text-align: right;
+	min-width: 8px;
+}
+
+table {
+	width: 100%;
+}
+
+thead {
+	color: #757575;
+}
+
+/*@media (min-width: 1400px) {
+	.body-content p,
+	.body-content ul,
+	.body-content table,
+	.doc-example {
+		max-width: 80%;
+	}
+}*/
+
+.doc-title {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+	.doc-title > p {
+		margin-bottom: 0;
+	}
+
+
+.doc-lead {
+	font-size: 1.325rem;
+	font-weight: 300;
+	margin-bottom: 3.5rem;
+}
+
+.doc-example {
+	padding: 1rem;
+	background-color: #f8f9fa;
+	margin-bottom: 1rem;
+	margin-top: -10px;
+}
+
+.no-lead {
+	margin-top: 5px;
+}
+
+.doc-example > p {
+	margin-bottom: 0;
+}
+
+h1 {
+	font-size: 1.75rem;
+	margin-top: 2rem;
+	margin-bottom: .1rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 2rem;
+	margin-bottom: .1rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 2rem;
+	margin-bottom: .1rem;
+}
+
+.mobile {
+	display: none;
+}
+
+#helpContainer {
+	width: 200px;
+}
+
+/* if not mobile device min width 576px */
+@media only screen and (min-width: 576px) {
+
+	#helpContainer {
+		display: block !important;
+	}
+}
+
+/* if mobile device max width 575px (mobile) */
+@media only screen and (max-width: 575px) {
+	.mobile {
+		display: inline-block;
+	}
+
+	#helpContainer {
+		display: none;
+		z-index: 3;
+	}
+
+	#mainBody {
+		margin-left: 0px;
+	}
+
+	.body-content {
+		padding: 0 20px 20px 20px;
+	}
+
+	#hamburger {
+		color: white !important;
+		font-size: 27px;
+		background-color: transparent;
+		outline: none;
+		border: none;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+
+	.desktop {
+		display: none;
+	}
+}
+
+/* This is a fix for an iPhone 5 device so that the hamburger menu
+	doesn't wrap and go to the next line and overlap content
+*/
+@media only screen and (max-width: 340px) {
+	#appTitle {
+		font-size: 18px !important;
+	}
+}

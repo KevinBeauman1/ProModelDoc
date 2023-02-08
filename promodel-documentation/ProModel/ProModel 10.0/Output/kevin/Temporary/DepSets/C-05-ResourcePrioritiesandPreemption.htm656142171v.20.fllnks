@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/mm-c5-133-1.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/mm-c5-133-1.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1086719" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Resources:priorities"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Resources:preemption"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Priorities:resources"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Preemption:resources"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="GET"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="JOINTLY GET"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="USE"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="WAIT"
+      Conditions=""
+      LocalConditions=""
+      Position="65" />
+    <IndexCacheEntry
+      Term="USE"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="667" MadCap:lastWidth="558" MadCap:disableMasterStylesheet="true" MadCap:tocPath="Introduction" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>Methods</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 MadCap:xrefTargetName="Methods"><a MadCap:generatedBookmark="TOC" name="Methods"></a>Methods</h2>
+        <p class="p">Each ProModel ActiveX <span class="_Override" style="font-weight: bold;font-style: italic;">Object</span> has one or more <span class="_Override" style="font-weight: bold;font-style: italic;">methods</span> (actions it can perform).</p>
+        <p class="p">Each method may or may not have <span class="_Override" style="font-weight: bold;font-style: italic;">Parameters</span> (details that you provide or that ProModel returns).</p>
+        <h3>Syntax</h3>
+        <p class="p">Most methods can be used in two different ways.  The first example shown below does not have a variable to receive the result code.  The second example uses a slightly different syntax that will enable you to determine whether or not the method executed successfully.</p>
+        <h4>Syntax 1</h4>
+        <p class="p">If you don’t need to know whether the method succeeded or failed, use the method name, followed by a space, then each parameter.  Use a comma to separate the parameters.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Sub FindRecord()</p>
+        <p class="objects">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="Example">&#160;</p>
+        <p class="objects">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects">	Set pmDataObject = CreateObject(“ProModelData”)</p>
+        <p class="objects">	pmDataObject.Populate</p>
+        <p class="Example">&#160;</p>
+        <p class="Syntax_body"><span class="_Override" style="font-weight: bold;">pmDataObject.SelectMainRecordByName 1, “MyLocation”</span>
+        </p>
+        <p class="Example">&#160;</p>
+        <p class="objects">	Set pmObject = Nothing</p>
+        <p class="objects">	Set pmDataObject = Nothing</p>
+        <p class="p">End Sub</p>
+        <h4>Syntax 2:</h4>
+        <p class="p">When you use this syntax, you can determine what happened when the method was executed.  You will need to declare a variable to hold the result code returned by ProModel.  In the method call, start with that variable, then an equals (=) sign, followed by the method name and a left parenthesis.  As with Syntax 1, the parameters are listed in order, separated by commas.  Finally, a right parenthesis closes the method call.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Sub FindRecord()</p>
+        <p class="objects">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects">	Dim vResultCode as Long</p>
+        <p class="Example">&#160;</p>
+        <p class="objects">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects">	Set pmDataObject = CreateObject(“ProModelData”)</p>
+        <p class="objects">	pmDataObject.Populate</p>
+        <p class="Example">&#160;</p>
+        <p class="objects" style="font-weight: bold;">	vResultCode = pmDataObject.SelectMainRecordByName (1, “MyLocation”)</p>
+        <p class="Example">&#160;</p>
+        <p class="objects">	If vResultCode &lt;&gt; 0 Then</p>
+        <p class="objects2">		MsgBox “Record Not Found”</p>
+        <p class="objects">	End If</p>
+        <p class="Example">&#160;</p>
+        <p class="objects">	Set pmObject = Nothing</p>
+        <p class="objects">	Set pmDataObject = Nothing</p>
+        <p class="Example">End Sub</p>
+    </body>
+</html>

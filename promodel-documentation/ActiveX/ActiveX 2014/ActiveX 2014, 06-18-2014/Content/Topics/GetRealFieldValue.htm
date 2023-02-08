@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="425" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_462903"></a>
+            <MadCap:keyword term="GetRealFieldValue;ProModel Data Object:GetRealFieldValue" />GetRealFieldValue</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetIntFieldValue <span class="_Override" style="color: #0000ff;">RecordType, FieldNumber, FieldValue</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the value of the specified real number field from the selected record.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> 	 (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldNumber</span> (Long)  The field (column) number in specified table from which you want to return a value.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldValue</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	 (Long)  Data value contained in the specified field for the selected record. This must be a variable.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example selects the second routing record (not necessarily the second routing block) of the first processing record, gets the Probability value and displays it in a message box.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub SetRoutingProbability()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim ProbValue As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel "Orders.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.SelectMainRecordByIndex 19, 1</p>
+        <p class="objects2">	pmDataObject.SelectMainRecordByIndex 20, 2</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.GetRealFieldValue <span class="_Override" style="color: #0000ff;">20, 13, ProbValue</span></p>
+        <p class="objects2">	pmObject.MsgBox “Probability = “ &amp; ProbValue</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1710" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>If...Then...Else</h1>
+        <h5>
+            <MadCap:keyword term="statements:if then else;if;then;else if; else" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>If &lt;Boolean expression&gt; Then &lt;statement 1&gt; {Else &lt;statement 2&gt;}</p>
+        <p>If Var1 = 5 Then Wait 2 min</p>
+        <p>If (Attr2 = 5) Or (Var5 &lt;&gt; 0) Then Wait 2 min<br />Else Wait 3 min</p>
+        <p class="p_1">If Var1 &gt; Attr2 Then<br />{</p>
+        <p class="p_11">Var1 = Attr2<br />	Wait Attr1</p>
+        <p class="p_1">}<br />Else<br />{</p>
+        <p class="p_11">Inc Var1 <br />Wait Attr2</p>
+        <p class="p_1">}</p>
+        <h2>Description</h2>
+        <p>Executes a statement or statement block if the Boolean expression is true. If an Else statement is included and the Boolean expression is false, an alternate statement or statement block is executed. If Then statements only apply to the next statement or statement block in  logic. Any statements outside of the start and end brackets { } will execute normally.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>If &lt;boolean expression&gt; Then</b>
+        </p>
+        <p>The condition to be tested.</p>
+        <p><b>&lt;statement 1&gt;</b> <![CDATA[ ]]></p>
+        <p>The statement or block to be executed if the condition is true.</p>
+        <p><b>Else &lt;statement 2&gt;</b> <![CDATA[ ]]></p>
+        <p>The statement or block to be executed if the condition is false.</p>
+        <h2>Example</h2>
+        <p>In the following example an If...Then...Else test is made to see if the simulation clock is less than eight hours. If so, the Client is routed to Office1, otherwise the Client is routed to Office2.</p>
+        <p class="p_11">If Clock(hr) &lt; 8 Then</p>
+        <p class="p_12">aDest = Office1</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">aDest = Office2</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="While.htm" class="a_11">While</a> and Do Until.</p>
+    </body>
+</html>

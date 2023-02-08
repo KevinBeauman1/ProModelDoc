@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1941" MadCap:lastWidth="1152" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086529"></a>Discrete Distributions<MadCap:keyword term="User:distributions:discrete" /></h3>
+        <p class="p">Discrete distributions are characterized by a finite set of outcomes, together with the probability of obtaining each outcome.  In the following  example, there are three possible outcomes for the group size: 30% of the time the group size will be 10, 60% of the time the group size will be 20, and 10% of the time the group size will be 30.</p>
+        <p>
+            <img src="9_51.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">One way to represent a discrete distribution is by its probability mass function, listing the possible outcomes together with the probability of observing each outcome.  A probability mass function for the example above could be expressed as follows (with G representing the group size).</p>
+        <p class="Syntax_body">G	10	20	30 </p>
+        <p class="Syntax_body">P(G)	.30	.60	.10</p>
+        <p class="p">An alternate way to represent a distribution is through a cumulative distribution function, listing each possible outcome together with the probability that the observed outcome will be less than or equal to the specified outcome.  A cumulative distribution function for the example above could be expressed as follows.</p>
+        <p class="Syntax_body">G	10	20	30 </p>
+        <p class="Syntax_body">P(G)	.30	.90	1.0</p>
+        <p class="p">In the next example, the number of parts are grouped into a batch according to a user distribution.</p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="50px" class="Column-Column1" />
+            <col width="63px" class="Column-Column2" />
+            <col width="151px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Group Dist() As Batch</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Batch</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Wait 10 min</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="34px" class="Column-Column1" />
+            <col width="46px" class="Column-Column2" />
+            <col width="69px" class="Column-Column3" />
+            <col width="46px" class="Column-Column4" />
+            <col width="69px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Batch</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> provides the flexibility to specify discrete distributions according to a probability mass function or a cumulative distribution function.  Select Yes or No in the Cumulative field of the Distribution edit table and fill in the table according to the probability mass function or the cumulative distribution function.  The following tables  show the discrete distribution example defined in both formats.</p>
+        <h4>
+            <MadCap:keyword term="Distributions:discrete:probability mass function;Probability mass function" />Discrete (probability mass function) </h4>
+        <p class="Graphic">
+            <img src="pm-c6-252-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>D<MadCap:keyword term="Distributions:discrete:cumulative distribution function;Cumulative distribution function" />iscrete (cumulative distribution function)</h4>
+        <p class="Graphic">
+            <img src="pm-c6-252-2.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

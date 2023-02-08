@@ -1,0 +1,6 @@
+﻿@{
+    Layout = "~/Views/Help/Shared/_Layout.cshtml";
+}
+@Html.Raw(MdHelper.GetMdAsHtml(Html.ViewContext.HttpContext, ViewData["page"] as string))
+
+@Html.Raw(MdHelper.GetMdAsHtml(Html.ViewContext.HttpContext, "help/docs/Footer.md"))

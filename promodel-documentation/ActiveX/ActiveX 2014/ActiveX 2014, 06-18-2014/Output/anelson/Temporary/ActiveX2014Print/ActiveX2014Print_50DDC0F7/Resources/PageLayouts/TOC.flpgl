@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="0.5in" PaddingRight="1.5in" PaddingTop="1in" PaddingBottom="1in" PageType="left">
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="5.770833in" Height="6.979167in" Right="-70px" Bottom="2px" X="-4px" Y="0px" Anchors="">
+        </Frame>
+        <Frame Flow="header" Height="0.5in" Right="-70px" X="-4px" Y="-0.7291667in" ColumnCount="1" Width="5.770833in" Bottom="694px" PaddingLeft="0px" PaddingRight="0px" Anchors="" FlowIndex="1" VerticalAlign="middle" TextAlign="left">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body xhtml:style="font-size: 8pt;font-family: Arial;">
+                        <xhtml:table xhtml:style="caption-side: top;margin-left: 0;margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 0.50in;font-size: 8pt;" />
+                            <xhtml:col xhtml:style="width: 5.25in;font-size: 8pt;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;font-weight: bold;" xhtml:class="_no_borders"><MadCap:variable xhtml:name="System.PageNumber" xhtml:style="font-family: Arial;font-size: 8pt;" />
+                                    </xhtml:td>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;" xhtml:class="_no_borders">
+                                        <xhtml:p><xhtml:b>ActiveX User Guide</xhtml:b>
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="footer" Height="0.5in" Right="-70px" Bottom="-72px" X="-4px" Y="7.25in" Width="5.770833in" PaddingLeft="0px" PaddingRight="0px" BorderTopStyle="solid" BorderTopWidth="1px" Anchors="" TextAlign="left" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="margin-left: 0; margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 3in;" />
+                            <xhtml:col xhtml:style="width: 3in;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td xhtml:class="_no_borders">&#160;</xhtml:td>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;text-align: right;" xhtml:class="_no_borders">&#160;</xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                        <xhtml:p xhtml:style="text-align: left;">&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Name="Copy of Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="0.5in" PaddingRight="1.5in" PaddingTop="1in" PaddingBottom="1in" PageType="empty">
+        <Frame Flow="header" Height="0.5in" Right="-70px" X="-4px" Y="-0.7291667in" ColumnCount="1" Width="5.770833in" Bottom="694px" PaddingLeft="0px" PaddingRight="0px" Anchors="" FlowIndex="1" VerticalAlign="middle" TextAlign="left">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body xhtml:style="font-size: 8pt;font-family: Arial;">
+                        <xhtml:table xhtml:style="caption-side: top;margin-left: 0;margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 0.50in;font-size: 8pt;" />
+                            <xhtml:col xhtml:style="width: 5.25in;font-size: 8pt;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;font-weight: bold;" xhtml:class="_no_borders"><MadCap:variable xhtml:name="System.PageNumber" xhtml:style="font-family: Arial;font-size: 8pt;" />
+                                    </xhtml:td>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;" xhtml:class="_no_borders">
+                                        <xhtml:p xhtml:style="font-family: Arial;text-align: left;font-size: 8pt;"><xhtml:b> ProModel 2014 User Guide</xhtml:b><xhtml:b xhtml:style="font-family: Arial;"><xhtml:b> MedModel  2014 User Guide</xhtml:b></xhtml:b>
+                                        </xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="footer" Height="0.5in" Right="-70px" Bottom="-72px" X="-4px" Y="7.25in" Width="5.770833in" PaddingLeft="0px" PaddingRight="0px" BorderTopStyle="solid" BorderTopWidth="1px" Anchors="" TextAlign="left" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="margin-left: 0; margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 3in;" />
+                            <xhtml:col xhtml:style="width: 3in;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td xhtml:class="_no_borders">&#160;</xhtml:td>
+                                    <xhtml:td xhtml:style="font-family: Arial;font-size: 8pt;text-align: right;" xhtml:class="_no_borders">&#160;</xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                        <xhtml:p xhtml:style="text-align: left;">&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+    <Page Name="Right" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="1.5in" PaddingRight="0.5in" PaddingTop="1in" PaddingBottom="1in" PageType="right">
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="5.8125in" Height="6.979167in" Right="2px" Bottom="2px" X="-80px" Y="0px" PaddingLeft="0px" PaddingRight="0px">
+        </Frame>
+        <Frame Flow="footer" Height="0.5in" Right="2px" Bottom="-72px" X="-80px" Y="7.25in" Width="5.8125in" PaddingLeft="0px" PaddingRight="0px" BorderTopStyle="solid" BorderTopWidth="1px" Anchors="" TextAlign="left" VerticalAlign="middle">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="width: 100%; margin-left: 0; margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 3in;" />
+                            <xhtml:col xhtml:style="width: 2.75in;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td xhtml:class="_no_borders">&#160;</xhtml:td>
+                                    <xhtml:td xhtml:class="_no_borders" xhtml:style="text-align: right;"><xhtml:span xhtml:style="font-family: Arial; font-size: 8pt;">© ProModel Corporation</xhtml:span>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="header" Height="0.5in" Right="2px" X="-80px" Y="-0.7395833in" ColumnCount="1" Width="5.8125in" Anchors="" Bottom="695px" VerticalAlign="middle" TextAlign="right" FlowIndex="2">
+            <Content>
+                <xhtml:html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:head>
+                    </xhtml:head>
+                    <xhtml:body>
+                        <xhtml:div xhtml:style="text-align: right;">
+                            <xhtml:table xhtml:style="caption-side: top;margin-left: 0;margin-right: auto;">
+                                <xhtml:col xhtml:style="font-family: Arial;width: 5.25in;" />
+                                <xhtml:col xhtml:style="font-family: Arial;width: 0.50in;" />
+                                <xhtml:tbody>
+                                    <xhtml:tr>
+                                        <xhtml:td xhtml:class="_no_borders">
+                                            <xhtml:p xhtml:class="p" xhtml:style="text-align: right;font-weight: bold;"><xhtml:b xhtml:style="font-family: Arial; font-size: 8pt;">&#160;</xhtml:b><MadCap:variable xhtml:name="Heading.Level1" />
+                                            </xhtml:p>
+                                        </xhtml:td>
+                                        <xhtml:td xhtml:style="font-size: 9pt;font-family: Arial;font-weight: bold;" xhtml:class="_no_borders">
+                                            <xhtml:p xhtml:style="text-align: right;font-size: 10pt;"><MadCap:variable xhtml:name="System.PageNumber" xhtml:style="font-family: Arial; font-size: 8pt;" />
+                                            </xhtml:p>
+                                        </xhtml:td>
+                                    </xhtml:tr>
+                                </xhtml:tbody>
+                            </xhtml:table>
+                        </xhtml:div>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+    </Page>
+</PageStyles>

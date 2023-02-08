@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1327" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Order</h1>
+        <h5>
+            <MadCap:keyword term="statements:order;order" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Order &lt;expression&gt; &lt;entity&gt; {To &lt;activity&gt;}</p>
+        <p>Order 10 EntA To Act2<br />Order Qty_Attr Ent(Entity_Attr) To Loc(Dest_Attr)</p>
+        <h2>Description</h2>
+        <p>Causes the specified number of entities to be created and placed into the system at the designated activity.  If the activity does not have enough capacity for all the new entities, the excess entities will be destroyed.  Attributes from the creating entity will be copied to the resulting entities.  Use Order to replenish inventories when a particular condition occurs. Such as when an inventory reaches the minimum level.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The number of new entities to be ordered. This field is evaluated every time the Order statement is encountered, allowing the number ordered to vary as the simulation progresses.</p>
+        <p><b>&lt;entity&gt;</b>
+        </p>
+        <p>The name of the new entities. Ent() may be used for an entity name.</p>
+        <p><b>&lt;activity&gt;</b>
+        </p>
+        <p>The destination of the new entities. Loc() may be substituted for the names of activities. If no activity is specified, the entities will be ordered to the activity where the Order statement is being executed. </p>
+        <h2>Example</h2>
+        <p>
+            In this example, loans arrive at activity Screen and trigger an order for a credit check to Loan_Office.
+           </p>
+        <p class="p_11">Order 1 Credit_Check To Loan_Office</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="send.htm" class="a_11">Send</a>, and routing types <a href="sendrouting.htm" class="a_11">Send</a> and <a href="create.htm" class="a_11">Create</a></p>
+    </body>
+</html>

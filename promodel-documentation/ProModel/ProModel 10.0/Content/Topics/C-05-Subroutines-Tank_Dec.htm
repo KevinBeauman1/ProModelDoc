@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1263" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089156"></a><a name="C-05_2723800551_23973"></a>Tan<MadCap:keyword term="TANK_DEC;Submodels:tank:TANK_DEC" />k_Dec</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_DEC (&lt;Tank ID&gt;, &lt;Quantity&gt;)</p>
+        <p class="Syntax_body">TANK_DEC (SupplyTankB, 1000) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Instantly decreases the level of a tank by a specified quantity. If the tank has insufficient quantity, it empties as material becomes available. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> sets the tank state to Tank_Idle if you decrease the level to 0. Otherwise the state remains unchanged.</p>
+        <p class="p">Use Tank_Dec to instantly remove a specific quantity from a tank.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Quantity&gt;</p>
+        <p class="p">The number of units by which to decrement the contents of the tank (gallons, pounds).</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A fill tank fills one 10-gallon container every 15 seconds. After filling, each container moves to a location called FillStation. To model this activity, define the following activated subroutine (this subroutine creates a filled container every 15 seconds):</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Wait 15 sec</p>
+        <p class="syntax_body_indent">Tank_Dec(FillTank, 10)</p>
+        <p class="syntax_body_indent">Order 1 Container TO FillStation</p>
+        <p class="Syntax_body">	}</p>
+        <p class="_rules">See Also</p>
+        <p class="p_2">
+            <MadCap:xref class="lowercase_no_see" href="C-05-Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

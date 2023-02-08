@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Subroutines</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor324"></a>Subroutines</h1>
+        <p>A subroutine is a user-defined command that can be called to perform a block of logic, and optionally to return a value. Subroutines are normally used when the same set of statements is repeated in multiple places, such as at multiple activities. In this case, calling the same subroutine from each activity simplifies the logic and provides a single source where the logic can be modified. A subroutine may be named any unique, valid name.</p>
+        <p>A subroutine may have parameters that act as local variables inside the subroutine and that take the values of the arguments (i.e. numeric expressions) that are passed to the subroutine. Additionally, a subroutine can return either an integer value or a real value to the logic or property field that called the subroutine.</p>
+        <p>Subroutines are defined in the <b>Subroutines</b> grid, which is accessible from the <b>Model Elements</b> group in the  Process Simulator ribbon.</p>
+        <p>
+            <img src="Resources/Images/SubroutinesGrid.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2><a name="kanchor325"></a>Defining Subroutines</h2>
+        <p>In the image of the Model Elements dialog box above, three subroutines are defined. Subroutine1 does not return any value and does not have any parameters. Subroutine2 returns an integer value when it has completed its logic, and it does not have any parameters. Subroutine3 returns a real value when it has completed its logic, and it is defined to have two parameters (Parameter1 and Parameter2) that will receive values from two corresponding arguments that are passed to the subroutine when it is called.</p>
+        <p>Below are descriptions of the fields and elements in the Subroutines grid window. It is divided into a grid listing the subroutine names and a Logic window and toolbar that updates according to the subroutine selected.</p>
+        <p><b>Name</b> — the name of the subroutine. You can double-click on the name of an existing subroutine if you want to rename it. A subroutine may be named any unique, valid name. This is the name that will be used in the logic to call the subroutine.</p>
+        <p><b>Logic Window</b> — can contain one or more statements to be executed whenever the subroutine is called. Statements in subroutines must be valid in the logic that calls the subroutine. Subroutine logic may contain a Return statement with a value to be returned from the subroutine (refer to the topic <a href="Return.htm" class="MCXref xref">Return</a> for the correct syntax of this statement). As you select a specific subroutine from the list, the logic window (to the right) will update to show logic specific to that subroutine. The logic toolbar also updates and will show subroutine-specific details for any Parameters or Return Type.</p>
+        <p>The Logic window also has the following toolbar:</p>
+        <p>
+            <img src="Resources/Images/SubroutineLogicToolbar.png" class="img_2" />
+        </p>
+        <p>The buttons (from left to right) are the Statement drop down list, Cut, Copy, Paste, Outdent, Indent, Comment, Uncomment, Parameters, and Return Type.</p>
+        <p><b>Parameters</b> — are accessible by clicking on the Parameters button (second from the right) in the logic toolbar. Parameters are the values of arguments that are passed to the subroutine get assigned to local variables within the subroutine logic. These local variables are called <i>parameters</i>. Parameters can be defined as real or integer types. The first parameter receives the first argument, the second parameter receives the second argument, and so on. Click the heading button, then double-click in this field (or click the ellipsis icon) to open the Parameters dialog box, with which you can type the name and select the data type (<i>Integer</i> or <i>Real</i>) of the parameters that you want for the subroutine.</p>
+        <p>
+            <img src="Resources/Images/SubroutineParametersDialog.png" class="img_2" />
+        </p>
+        <p><b>Return Type </b> — are accessible by clicking on the Return Type button (far right) in the logic toolbar. This defines the type of numeric value returned by the subroutine, which can be real, integer, or none. Select <i>Real</i> if the subroutine will return a real type number and <i>Integer</i> if the subroutine will return an integer type. Select <i>None</i> when no return value is expected.</p>
+        <h2><a name="kanchor326"></a>Using Subroutines</h2>
+        <p>Process Simulator handles subroutines in two ways. First, a subroutine may be processed by the calling logic as though the subroutine is part of the calling logic. This is the manner in which a subroutine is most commonly used.  When a subroutine in encountered in logic, Process Simulator executes the statements contained in the subroutine directly inline with the logic from where it is called. All logic before a subroutine is executed before the subroutine's logic. All logic after a subroutine is executed after the subroutine's logic has finished. Execution of a subroutine is accomplished by simply referencing the subroutine by name in some logic or expression.</p>
+        <p>Second, a subroutine may be processed independently of the calling logic so the calling logic continues without waiting for the subroutine to finish. This method requires an <a href="Activate.htm" class="a_11">Activate</a> statement followed by the name of the subroutine.</p>
+        <p>The general format for calling a subroutine without arguments is:</p>
+        <p class="p_11">SubroutineName()</p>
+        <p>The general format for calling a subroutine with arguments is:</p>
+        <p class="p_11">SubroutineName(arg1,arg2, ... ,argn)</p>
+        <p>Where arg1 is the name of the first argument, arg2 is the name of the second argument, and argn is the name of the n<sup>th</sup> argument.</p>
+        <h3>Miscellaneous Information about Calling and Using Subroutines</h3>
+        <ol>
+            <li value="1">If the subroutine has no arguments, open and closed parentheses are still necessary in the calling statement. </li>
+            <li value="2">Statements in subroutines must be valid in the logic that called the subroutine. For example, if a subroutine is called from activity logic, the subroutine may contain only those statements valid in the activity logic. Subroutines called from an Activate statement can have any general logic statements, including Wait.</li>
+            <li value="3">A subroutine may be used in any logic. Additionally, a subroutine may be used in most property fields, provided that the Return statement is used in the subroutine to return an appropriate value to the property field. </li>
+            <li value="4">If a subroutine was defined to return either a real or integer value, but it does not use a Return statement to return a value, a value of 0 (zero) will be returned by default. No value will be returned for a subroutine of type <i>None</i>.</li>
+            <li value="5">When using the Activate statement to call a subroutine, the calling logic continues without waiting for the called subroutine to finish, and if a return value was defined, it is ignored by the calling logic. Therefore, activated subroutines can run in parallel with the logic that called them. Refer to the topic <a href="Activate.htm" class="MCXref xref">Activate</a> for information about this statement.</li>
+            <li value="6">Activated subroutines cannot contain entity-specific or activity-specific system functions.</li>
+        </ol>
+        <p>The following are examples of calls to subroutines:</p>
+        <ul>
+            <li value="1">Elapsed_Time()</li>
+            <li value="2">Calculate_Sums(Set1, Set2, Set3)</li>
+            <li value="3">Average = Compute_Average(Expenses)</li>
+            <li value="4">Activate Monitor_Levels()</li>
+        </ul>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

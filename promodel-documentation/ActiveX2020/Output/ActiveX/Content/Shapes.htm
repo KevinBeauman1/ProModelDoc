@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Shapes</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1>Shapes</h1><a name="kanchor315"></a>
+        <p class="p">All shapes contained in the Process Simulator stencil are assigned one of six shape types: Activity, Entity, Resource, Buffer, Storage, or Plain Graphic. Furthermore, the type of any shape can be changed by right-clicking on the shape after it has been placed on the layout and selecting a shape type from the context menu.</p>
+        <p>
+            <img src="Resources/Images/sampleshapes.png" />
+        </p>
+        <p class="p">You may also use shapes from any stencil in Visio, and assign them Process Simulator types by right-clicking on them once they have been placed on the layout. </p>
+        <ul>
+            <li value="1"><strong class="strong_1">Plain Graphic</strong>&#160;&#160;Choose this shape type if you do not want the shape to interact with your simulation. A Plain Graphic is used to add visual elaboration or decoration to your diagram, but it will not process or affect your simulation in any way.</li>
+            <li value="2"><strong class="strong_1">Activity</strong>&#160;&#160;The processing steps performed for each entity. Examples include check-in, transform, assembly, disassembly and inspection. Activities can have input and output buffers associated with them and tasks can be performed on a batch of entities or one at a time. Often during simulation, numbers are displayed around an activity shape.</li>
+            <ul>
+                <li value="1">The number above and to the left of the activity represents the current contents of the In Buffer.</li>
+                <li value="2">The number above and to the right of the activity represents the current contents of the Out Buffer.</li>
+                <li value="3">The number below represents the current contents of the activity.</li>
+            </ul>
+            <li value="3"><strong class="strong_1">Entity</strong>&#160;&#160;The items or people that are processed. Examples include documents, customers, parts, etc.</li>
+            <li value="4"><strong class="strong_1">Resource</strong>&#160;&#160;The agents used to move and process entities. Examples are workers and machines. Although a resource may be used to process entities at an activity and then move entities, the resource itself will not move on the Visio layout. Instead the resource’s color will change to reflect its state.</li>
+            <ul>
+                <li value="1"><strong class="strong_1">No Color Change</strong>&#160;&#160;The resource is idle and available for work.</li>
+                <li value="2"><strong class="strong_1">Green</strong>&#160;&#160;The resource is in use either processing or moving an entity.</li>
+                <li value="3"><strong class="strong_1">Red</strong>&#160;&#160;The resource is down and unavailable for work.</li>
+            </ul>
+            <li value="5"><strong class="strong_1">Buffer</strong>&#160;&#160;The buffer shape provides an area where entities can accumulate and, optionally, be batched. Often during simulation, numbers are displayed around a buffer shape.</li>
+            <ul>
+                <li value="1">The number represents the current contents of the buffer.</li>
+            </ul>
+            <li value="6"><strong class="strong_1">Storage</strong>&#160;&#160;The storage shape provides an area where entities can be stored and then automatically replenished when triggered by a low quantity or after a certain amount of time. Often during simulation, numbers are displayed around a storage shape.</li>
+            <ul>
+                <li value="1">The number above represents the number of entities that have been ordered, but haven't yet arrived at the storage due to a delayed lead time.</li>
+                <li value="2">The number below represents the current contents of the storage.</li>
+            </ul>
+        </ul>
+        <p class="p_10">Please note: By default, any shape placed in the layout from a stencil other than Process Simulator will be an activity type unless changed by the user. For more information, see <a href="PlacingShapes.htm" class="a_1" style="font-style: normal;">Placing Shapes</a>.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

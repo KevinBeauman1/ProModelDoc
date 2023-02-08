@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="3240" MadCap:lastWidth="1466" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1107312"></a>S<MadCap:keyword term="SPLIT AS" />plit As</h2>
+        <h5 class="_valid_in">Entity-Re<MadCap:keyword term="Entity:entity-related operation statements:SPLIT AS;SPLIT AS" />lated Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Split &lt;expression&gt; AS &lt;new entity name&gt;</p>
+        <p class="Syntax_body">Split 10 As Entx</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Splits an existing entity into a number of new entities (greater than one) you specify, and optionally changes the entity names. The treatment of cost and time statistics is based on whether the Split As statement is used explicitly or implicitly as defined later. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> counts the old entity as an exit and the resulting entities share the same attribute values as the original entity.</p>
+        <p class="p">Any entity you wish to split must release all owned resources using the Free statement. Use Split As to divide pieces of raw material into components. The entities formed by the Split As statement at a location will not appear in the statistics for this location.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The operation column of process edit tables only. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does not allow Split As on conveyors, and not at the end of a queue. You also may not use Split As after a <MadCap:keyword term="ROUTE" />Route statement. Do not use Split As in combination with <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="CREATE" />Create, <MadCap:keyword term="GROUP" />Group, <MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, or other split statements in the same process logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">Split the entity into this number of entities. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> evaluates this expression every time it encounters the statement.</p>
+        <p class="Component">&lt;new entity name&gt;</p>
+        <p class="p">The name of the resulting entities.  Each split entity searches forward in the process list, and then from the beginning of the list, until it finds a process for the new entity type at the current location.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">When you use the Split As statement as an explicit entity action, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> transfers the accrued cost from the original entity to the new entities and divides it evenly  between all of them, and counts the old entity as an exit. </p>
+        <p class="p">Time statistics however are treated differently.  The accrued time stays with the original entity when it is counted as an exit, and each new entity begins at zero with new time statistics. </p>
+        <p class="p">The results will show that the original entity and new entities each have their own time statistics but only the new entities will have costs as all accrued costs from the original entity were passed to and split between the new entities. </p>
+        <h5 class="_rules_statements">I<MadCap:keyword term="Entity:actions:implicit" />mplicit Entity Actions</h5>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModelMedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows you to split entities implicitly as part of the routing definition. To do this, define a route block with a Quantity field output value greater than one and the New Entity option unchecked. </p>
+        <p class="p">When you split entities implicitly, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> transfers the accrued cost from the original entity to the new entities and divides it evenly among all new entities, and counts the old entity as an exit – same treatment as an explicit entity action.</p>
+        <p class="p">In this case time statistics however are treated differently than explicit entity actions .  The accrued time gets transferred in full  to each of the new entities.  The results will show that the old entity has no time or cost stats, and the new entities have all the time and cost stats.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">In the following example, Cases arrive at a receiving location for an initial inspection.  Once the inspection is complete, the shipment is split into individual entities called Units. ServiceModel determines the number of Units resulting from the Split As statement by the value of each Case’s attribute, Quan.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">In the following example, a blood sample arrives at the lab for a 2 hour processing time. Once the processing is complete, the primary sample is split into test samples. MedModel determines the number of test samples resulting from the Split As statement by the value of the sample’s attribute, Attr3.</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">In the following example, a batch of entities, Batch A, arrives at Loc1 for a 2 hour processing time.  Once the processing completes, BatchA splits into individual entities called EntA.  ProModel determines the number of EntA’s resulting from the Split As statement by the value of BatchA’s attribute, Attr3.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Case</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Receive</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait T(20,30,60) </p>
+                        <p class="CellBody">Split Quan As Unit</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Receive</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Use Res1 For U(2,.3)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Process Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Sample</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Lab</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 2 Hr</p>
+                        <p class="CellBody">Split Attr3 As Test_Samples</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">Test_Samples</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Analysis</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Use Tech For U(2,.3)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">BatchA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 2 Hr</p>
+                        <p class="CellBody">Split Attr3 As EntA</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">Use Res1 For U(2,.3)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Units</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Stores</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">.5 min</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Results</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Office</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" MadCap:conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Join, Group, Ungroup, and Create.</p>
+    </body>
+</html>

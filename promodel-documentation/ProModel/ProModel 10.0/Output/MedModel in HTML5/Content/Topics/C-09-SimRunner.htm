@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Simulation Analysis">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>SimRunner</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-09-SimRunner.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-10-ReportsandGraphs.htm#C-10_2322678712_1035124">Simulation Analysis</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">SimRunner</span>
+        </div>
+        <h2><a name="C-09_398201723_1205939"></a><a name="kanchor1571"></a><a name="C-09_398201723_63220"></a>SimRu<a name="kanchor1572"></a>nner</h2>
+        <p class="p">SimRunner takes your existing <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> simulation models, evaluates them for you, then performs tests to find better ways to achieve the results you desire. Typically, most people use simulation tools to predict and improve a system’s performance by modeling the actual location (e.g., a plant floor, a bank lobby, or emergency room) or abstract process (i.e., a logical process). Through testing various “what-if” scenarios, SimRunner can help you determine the most ideal way to conduct operations—we call this optimization. </p>
+        <p class="p">When you conduct an analysis using SimRunner, you build and run projects. With each project, SimRunner runs sophisticated optimization algorithms on your model to help you optimize multiple factors simultaneously. For each project, you will need to provide SimRunner with a model to analyze or optimize, identify which input factors to change, and define how to measure system performance using an objective function. SimRunner can conduct two types of tests: Pre-Analysis (Statistical Advantage) and Simulation Optimization.</p>
+        <h3>Sim<a name="kanchor1573"></a>Runner Benefits</h3>
+        <p class="p">Using SimRunner will help you find accurate solutions for your modeling needs. No longer must you sit and experiment with what you think might work, only to find that your solution actually interferes with productivity in other parts of the model. SimRunner will help you locate true solutions by monitoring how changes affect each part of the model. In other words, SimRunner will not let you improve one area of your model at the expense of another—the results you get are beneficial to the entire model.</p>
+        <h3>Sta<a name="kanchor1574"></a>rting a New Project</h3>
+        <p class="p">The following describes how to start and prepare a project for analysis. Remember that you must create and validate your model <span class="_Override" style="font-style: italic;">prior</span> to analyzing or optimizing it in SimRunner.</p>
+        <p class="How_to_title">How to select a model:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click the <span class="Helv_Bold" style="font-weight: bold;">New</span> button on the button bar or select <span class="Helv_Bold" style="font-weight: bold; text-decoration: none;">N</span><span class="Helv_Bold" style="font-weight: bold;">ew Project</span> from the <span class="Helv_Bold" style="font-weight: bold;">File</span> menu.</li>
+            <li class="li_1_how_to_step" value="2">From the Open dialog, select the model file you wish to use.</li>
+            <li class="li_1_how_to_step" value="3">Click <span class="Helv_Bold" style="font-weight: bold;">OK</span>.</li>
+            <li class="li_1_how_to_step" value="4">Once you select a model, the model’s name will appear in the Project Information dialog.</li>
+        </ol>
+        <p class="How_to_title">How to <a name="kanchor1575"></a>define the input factors:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click on the <span class="Helv_Bold" style="font-weight: bold;">Inputs</span> button.</li>
+            <li class="li_1_how_to_step" value="2">To select input variables, click next to each variable in the <span class="Helv_Bold" style="font-weight: bold;text-decoration: underline;">S</span><span class="Helv_Bold">elected</span> column. SimRunner will mark the selected items.</li>
+        </ol>
+        <p class="p_10">Please Note: SimRunner will optimize only single value macros defined as scenario parameters.</p>
+        <p class="How_to_title">How to define the <a name="kanchor1576"></a>objective function (output variables):</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click the <span class="Helv_Bold" style="font-weight: bold;">Outputs</span> button.</li>
+            <li class="li_1_how_to_step" value="2">In the Objective Function Setup dialog, select the category of the item(s) you wish to minimize or maximize.</li>
+            <li class="li_1_how_to_step" value="3">Highlight an item in the list. </li>
+            <li class="li_1_how_to_step" value="4">Select <span class="Helv_Bold" style="font-weight: bold;">Maximize</span>, <span class="Helv_Bold" style="font-weight: bold;">Minimize</span>, or <span class="Helv_Bold" style="font-weight: bold;">Custom</span> to select the type of optimization you wish to use for the variable.</li>
+            <li class="li_1_how_to_step" value="5">Enter the <span class="Helv_Bold" style="font-weight: bold;">Weighting</span>. This number represents the importance of Maximizing or Minimizing the item. (The higher the number, the higher the importance.) </li>
+            <li class="li_1_how_to_step" value="6">After you set the values for the item, click the right arrow to place the item in the selected list. To remove an item from the selected list, select the item and click the left arrow. (Alternatively, you may double click on an item to add it to or remove it from the list of selected variables.)</li>
+        </ol>
+        <h3><a name="kanchor1577"></a>Stage one: Pre-Analysis</h3>
+        <p class="p">With the model built, the input factors selected, and an objective function defined, you are ready to conduct a Pre-Analysis. Also known as Statistical Advantage, the Pre-Analysis runs several tests to identify the initial bias (warm-up period), determine appropriate run-length to reach steady-state, find the number of replications necessary to ensure that each event occurs at least once, and locate the model averages.</p>
+        <h3><a name="kanchor1578"></a>Stage two: Simulation Optimization</h3>
+        <p class="p">Simulation Optimization is a multi-variable optimization that tries different combinations of input factors to arrive at the combination that provides the best objective function (output) value. Depending on the number of selected input factors and the complexity of the solution space, this process can take a long or short time. Optimizations with many factors and complex solutions take longer to run.</p>
+        <p class="How_to_title">How to run an optimization:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click on the <span class="_Override" style="font-weight: bold;">Optimize!</span> button or select <span class="_Override" style="font-weight: bold; text-decoration: none;">S</span><span class="_Override" style="font-weight: bold;">tart Optimization</span> from the <span class="_Override" style="font-weight: bold; text-decoration: none;">P</span><span class="_Override" style="font-weight: bold;">roject</span> menu.</li>
+            <li class="li_1_how_to_step" value="2">Click <span class="_Override" style="font-weight: bold;">Play</span> on the dashboard to begin.</li>
+        </ol>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

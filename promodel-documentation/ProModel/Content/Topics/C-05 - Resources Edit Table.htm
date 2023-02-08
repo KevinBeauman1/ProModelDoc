@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="657" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h4>Resources Edit Table<MadCap:keyword term="Resources:edit:table" /></h4>
+        <p class="p">The Resources edit table defines the characteristics of each resource in the system. The fields of this table are defined below.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-129-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-126-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-127-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Resources:icon"></MadCap:keyword><b>Icon</b></span><span class="Element" style="line-height: 12pt;">   The icon selected for this resource. Icons are selected using the Resource Graphics Window. If more than one icon is selected for the resource, the first icon is shown here.</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Resources:name"></MadCap:keyword><b>Name</b></span><span class="Element" style="line-height: 12pt;">   The name of the resource.</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Units</b>
+            <MadCap:keyword term="Resources:units">
+            </MadCap:keyword>   The number of <MadCap:keyword term="Zero units"></MadCap:keyword>units represented by this resource name between 0 and 999 (or a macro). If the entry is a numeric expression, the expression will be evaluated at the start of the simulation run. Consequently, the number of resource units cannot be changed during the simulation run. If you would like to vary the number of units of a resource during runtime, use downtimes to vary the number of resources available at a given time. (See also <MadCap:xref class="lowercase_no_see" href="C-05 - Resource Downtimes.htm#C-05_2723800551_1086660" target="" title="" alt="">Resource Downtimes on page 1</MadCap:xref>.)</p>
+        <p class="p_10">Please Note: When you use a macro with a value of zero in the units field, you can use SimRunner to find the optimal number of resources needed for your model. </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">DTs...</span><span class="Helv_Bold" style="line-height: 12pt;"><MadCap:keyword term="Resources:downtimes"></MadCap:keyword></span><span class="Element">  Select this field to define any optional downtimes for this resource. Only clock and usage based downtimes are permitted for resources.</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="Resources:statistics">
+            </MadCap:keyword><b>Stats</b>...   The desired statistics, if any, to gather for this resource. Statistics can be collected as a summary report over all units of a resource, or individually for each unit of a resource. The options are as follows:</p>
+        <ul>
+            <li class="li_1"><span class="Bold"><b>None</b>:</span> No statistics are gathered.</li>
+            <li class="li_1"><span class="Bold"><b>Summary</b>:</span> Average utilization and activity times are recorded collectively for all units of the resource.</li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">By Unit</span>: Statistics are gathered for each unit individually as well as collectively.</li>
+            <li class="li_1" style="font-weight: normal;"><b>Time Series</b>: Collects basic statistics and time series tracking the resource over time.</li>
+        </ul>
+        <p class="p"><span class="Helv_Bold" style="font-weight: bold;">Specs...</span>
+            <MadCap:keyword term="Resources:specifications">
+            </MadCap:keyword>   Select this field to open the Resource Specifications dialog box. From here you can assign a path network, set the resource speed, and define pickup and deposit times. For more information on the Specification dialog, see <MadCap:xref class="lowercase_no_see" href="C-05 - Resource Specifications Dialog Box.htm#C-05_2723800551_1086999" target="" title="" alt="">Resource Specifications Dialog Box on page 1</MadCap:xref>.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Search...</b>
+            <MadCap:keyword term="Resources:park search;Resources:work search;Park search;Work search">
+            </MadCap:keyword>  If a path network has been assigned, select this field to access the Work Search and Park Search edit tables, used to define optional work and park searches.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Logic...</b>
+            <MadCap:keyword term="Resources:logic;Node:logic">
+            </MadCap:keyword>   If a path network has been assigned, select this field to define any optional logic to be executed whenever a resource enters or leaves a particular path node. If you have defined a node entry and exit logic, the logic field will show the number of nodes where node entry and exit logic has been defined.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Pts...</span>
+            <MadCap:keyword term="Resources:resource points">
+            </MadCap:keyword>   If a path network has been assigned, select this field to define resource points. Resource points are auxiliary points where multiple resources may appear graphically when parked or in use at a multi-capacity node.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Notes...</span>
+            <MadCap:keyword term="Resources:notes">
+            </MadCap:keyword>   Enter any notes in this field, or click on the heading button to open a larger Notes window for entering notes.</p>
+    </body>
+</html>

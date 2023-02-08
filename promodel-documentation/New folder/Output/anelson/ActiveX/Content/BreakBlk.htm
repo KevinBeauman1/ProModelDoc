@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>BreakBlk</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>BreakBlk</h1>
+        <h5><a name="kanchor177"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>BreakBlk</p>
+        <h2>Description</h2>
+        <p>Exits from the innermost statement block. The next statement to be executed will be the one immediately following the end bracket of the innermost statement block. If a BreakBlk is executed outside any statement block, Process Simulator will exit the logic completely. </p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Example</h2>
+        <p>
+            This example uses BreakBlk in the logic for a shipping department that handles two types of entities, Letters and Packages. Both packages and letters need to be addressed, but packages may need to be wrapped before they are addressed. When a package arrives, shipping increments the variable No_of_Pkg to keep track of the number of packages it ships. Attr1 is then checked to see if the package has been wrapped. If the package has been wrapped (if Attr1 = 1), the BreakBlk statement exits the statement block that wraps packages. If the package has not been wrapped, a resource, Wrapper, wraps the package. Finally, all entities that Shipping processes are addressed by the same statement and routed to the Post_Office. The line “//&#160;Breakblk to here” is a comment which marks the next statement executed after the BreakBlk.
+            <br /></p>
+        <p class="p_11">If Entity() = Letter Then</p>
+        <p class="p_12">Inc No_of_Letters</p>
+        <p class="p_11">If Entity() = Pkg Then<br />{</p>
+        <p class="p_12">Inc No_of_Pkg<br />If Attr1 = 1 Then</p>
+        <p class="p_13">BreakBlk</p>
+        <p class="p_12">Use Wrapper For 8 min<br />Attr = 1</p>
+        <p class="p_11">}<br />//BreakBlk to here<br />Use Addresser For 3 min</p>
+        <h5>See Also</h5>
+        <p><a href="Break.htm" class="a_11">Break</a>, <a href="IfThenElse.htm" class="a_11">If Then Else</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

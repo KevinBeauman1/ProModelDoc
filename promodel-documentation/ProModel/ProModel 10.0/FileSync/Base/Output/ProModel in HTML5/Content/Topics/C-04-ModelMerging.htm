@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Modeling Environment|Insert Tab">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Model Merging</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-04-ModelMerging.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-04-ModelingEnvironment.htm#C-04_4289884492_1035124">Modeling Environment</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-04-InsertTab.htm">Insert Tab</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Model Merging</span>
+        </div>
+        <h3><a name="C-04_4289884492_1080354"></a><a name="C-04_4289884492_33707"></a>Model Merging<MadCap:keyword term="Model:merge;Merge:models" /></h3>
+        <p class="p">Model merging is a powerful feature that allows large or complex models to be built in smaller segments. A model segment may be as small as a single workstation or as large as an entire department. After all segments are ready, they can be merged together to form a single model.</p>
+        <p class="p">The Merge feature consists of two options: Merge Model and Merge Submodel.</p>
+        <p class="Graphic">
+            <img src="3-1-2-1.jpg" />
+        </p>
+        <h4><a name="C-04_4289884492_1080362"></a>
+            <MadCap:keyword term="Merge:models" /><a name="C-04_4289884492_20267"></a>Merge Model</h4>
+        <p class="p">The Merge Model option allows two or more independent (complete or incomplete) models to be merged into a single model.  Duplicate elements found in the base model and the merging model are treated differently according to the element type.</p>
+        <p class="p">Entity and attribute names common to both models are considered common elements in the merged model.  For example, if both models contain the entity type In-Box, the merged model will contain only the record from the base model in the Entities table for In-Box.</p>
+        <p class="p">Duplicate locations, resources or path networks <span class="_Override" style="font-style: italic;">must </span>first be renamed or deleted from the merging model.  Otherwise, an error message occurs and the merge will terminate.</p>
+        <p class="p">If the two models use different graphic libraries, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>will give the user the choice to append the merging model's graphic library to the base model's graphic library.</p>
+        <p class="p">All other duplicate model elements cause a prompt to appear with the choice to delete the duplicate element from the merging model or cancel the merge process.</p>
+        <h4>
+            <MadCap:keyword term="Merge:submodel;Submodel:merge" />Merge Submodel</h4>
+        <p class="p">The Merge Submodel option allows commonly used submodels to be merged into an existing model in one or more places. Submodels are created just like any other model and may be complete or incomplete models.</p>
+        <p class="p">When specifying a submodel, you are prompted for a “tag” to be attached to each element of the submodel as either a prefix or suffix. For example, you may be developing a model with four workstations. Instead of creating workstations individually, you could create a submodel with only the common elements (e.g., in-box, out-box, telephone, variables, arrays, etc.) and merge the submodel into the main model four times. In the resulting model, you would then fill in the unique portions of each workstation. Entity and attribute names will not be tagged.</p>
+        <p class="p">In the following example, the tag “A_” is attached as a prefix to every element of the submodel. A location called Queue1 in the submodel becomes A_Queue1 in the main model and so on. Likewise, a variable called Rejects becomes A_Rejects in the merged model.</p>
+        <p class="Graphic">
+            <img src="3-3-2-1.jpg" />
+        </p>
+        <p class="p_10">Please Note: Tags used as prefixes must begin with a letter, A through Z, or an underscore. For example, the tag “3C_” is invalid and would produce an error message.</p>
+        <p class="How_to_title">How to merge a model or submodel into an existing model:</p>
+        <ol>
+            <li class="li_1" value="1">Open the initial (base) model.</li>
+            <li class="li_1" value="2">Select the <span class="_Override" style="font-weight: bold; text-decoration: none;">Insert</span> ribbon tab.</li>
+            <li class="li_1" value="3">Select the <span class="_Override" style="font-weight: bold; text-decoration: none;">Model</span> or <span class="_Override" style="font-weight: bold; text-decoration: none;">Submodel</span> button from the Merge group.</li>
+            <li class="li_1" value="4">Specify the name of the model to be merged in the following dialog box.</li>
+        </ol>
+        <p class="p">
+            <img src="pm-c4-65-2.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <ol data-mc-continue="true">
+            <li value="5">If you select Submodel, specify a prefix or suffix to be attached to each element of the submodel.</li>
+            <li class="li_1" value="6">Click on the layout where you want the model or submodel to appear. A bracket appears on the screen, representing the <span class="_Override" style="font-style: italic;">upper left corner </span>of the merging model’s layout. This bracket moves as you move the mouse, allowing you to correctly position the layout to be merged.</li>
+            <li class="li_1" value="7">Next, you will be asked if you would like to append the graphic library file from the model or submodel to the current graphic library file.  Select yes or no depending on your preference.</li>
+            <li class="li_1" value="8">When the model is merged in, the graphical elements remain selected so that you can position the merged model exactly where you want it.</li>
+        </ol>
+        <p class="p_10">Please Note: When merging models, if the zoom factors and grid scales are not the same, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will adjust the sizes of graphical elements in the merging model to the scale of the original model.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

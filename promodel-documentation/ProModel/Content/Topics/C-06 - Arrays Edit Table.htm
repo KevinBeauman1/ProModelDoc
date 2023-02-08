@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="979" MadCap:lastWidth="1395">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086025"></a>Arrays Edit Table<MadCap:keyword term="Arrays:edit table" /></h3>
+        <p class="p">The Arrays edit table is used to define Arrays that are used in the model.  The fields of the Arrays edit table are explained on the following page.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/mm-array.png" MadCap:mediastyle="@media print { max-width: 5in; }">
+            </img>
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">ID</span> The name of the array.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Dimensions </b><MadCap:keyword term="Arrays:dimensions"></MadCap:keyword></span>The size of each dimension of the array in cells. For example, the dimensions of a one-dimensional array of 100 cells is “100.” Likewise, a two-dimensional array with 50 rows and five columns would have dimensions of “50,5.” The number of rows is first, followed by a comma and then the number of columns. An array cannot have more than 20 dimensions.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Type</b><MadCap:keyword term="Arrays:type (real or integer)"></MadCap:keyword></span> The type (integer, real, string, or expression) for all cells in the array.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Import File</b><MadCap:keyword term="Arrays:import file" /></span> The name of the spreadsheet from which you will populate the array. In the text box below the column heading, you may enter either a fully qualified path to your Microsoft Excel file or a path relative to your .mod file. For example, if your Microsoft Excel file is in the same directory as your .mod file, simply enter the name of the Microsoft Excel file into this field. Alternatively, click the heading button or double click in this field to browse for a specific file. A pop-up menu will appear for specifying either a file stored locally or a file stored on SharePoint. See <MadCap:xref class="lowercase_no_see" href="C-05 - General Information Dialog Box.htm#C-06_1157716610_1086054">General Information Dialog Box</MadCap:xref> and <MadCap:xref class="lowercase_no_see" href="C-06 - Accessing Files for Arrays on SharePoint.htm#C-06_1157716610_1086054">Access Files for Arrays on SharePoint</MadCap:xref> for more information on importing data for arrays from SharePoint.</p>
+        <p class="p">&#160;</p>
+        <p class="p">See <MadCap:xref class="lowercase_no_see" href="C-06 - Import Data into Arrays.htm#C-06_1157716610_1086054" target="" title="" alt="">Import Data into Arrays on page 1</MadCap:xref> for more information on using the Import dialog.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Export File</b><MadCap:keyword term="Arrays:export file" /></span> The name of the spreadsheet to which you will save the array data. In the text box below the column heading, you may enter either a fully qualified path to your Microsoft Excel  file or a path relative to your .mod file. For example, if your Microsoft Excel file is in the same directory as your .mod file, simply enter the name of the Microsoft Excel file into this field. Alternatively, click the heading button or double click in this field to browse for a specific file. A pop-up menu will appear for specifying either a file to be stored locally or a file to be stored on SharePoint. See <MadCap:xref class="lowercase_no_see" href="C-05 - General Information Dialog Box.htm#C-06_1157716610_1086054">General Information Dialog Box</MadCap:xref> and <MadCap:xref class="lowercase_no_see" href="C-06 - Accessing Files for Arrays on SharePoint.htm#C-06_1157716610_1086054">Access Files for Arrays on SharePoint</MadCap:xref> for more information on exporting data for arrays to SharePoint.</p>
+        <p class="p">&#160;</p>
+        <p class="p">See <MadCap:xref class="lowercase_no_see" href="C-06 - Export Arrays to Spreadsheets.htm#C-06_1157716610_1141599" target="" title="" alt="">Export Arrays to Spreadsheets on page 1</MadCap:xref> for more information on using the Export dialog.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Disable</b><MadCap:keyword term="Arrays:disable"></MadCap:keyword></span> Use this option to have the import file, export file, or both ignored during simulation without deleting the name of the import or export files from the Array record. Choose “None” to use the specified import and export files.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Persist</b><MadCap:keyword term="Arrays:persist" /></span> When running multiple replications you may choose to keep the values in the array from one replication to the next or clear (reset) the array values every replication.</p>
+        <p class="p">&#160;</p>
+        <p class="p">For example, if you run a simulation for three scenarios with an array that “Keeps” its values, the data in the array at the end of the first replication will be kept and used as the second replication begins. If you are using an Import File, it will be used to populate the array for the first replication, but ignored for subsequent replications when “Keep” is selected for the array.</p>
+        <p class="p">&#160;</p>
+        <p class="p">If you choose to “Clear” the array, no array information will be kept from one replication to another and the array will be reset with its initial information at the beginning of each replication (see  <MadCap:xref href="C-06 - Initializing Arrays.htm" target="" title="" alt="" class="lowercase_no_see">Initializing Arrays on page 1</MadCap:xref>). If you are using an Import File, it will be used to populate the array at the beginning of each replication when “Clear” is selected for the array. </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Notes</span>   A general notes field for entering descriptive information about the array. Click the heading button or double click in this field to open a larger window for entering notes.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The window pictured above shows how to define the example arrays that appear on the previous page.</p>
+    </body>
+</html>

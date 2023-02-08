@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Pre-defined Tank Subroutines">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Tank_SelectOutput</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-Subroutines-Tank_SelectOutput.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Pre-definedTankSubroutines.htm">Pre-defined Tank Subroutines</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Tank_SelectOutput</span>
+        </div>
+        <h3 class="tanks"><a name="C-05_2723800551_1089366"></a><a name="C-05_2723800551_13568"></a>Ta<MadCap:keyword term="TANK_SELECTOUTPUT;Subroutines:tank:TANK_SELECTOUTPUT" />nk_SelectOutput</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_SELECTOUTPUT   (&lt;First Tank&gt;, &lt;Number of Tanks&gt;, &lt;Selection Rule&gt;, &lt;Maximum Level&gt;, &lt;Product Type&gt;)</p>
+        <p class="Syntax_body">TANK_SELECTOUTPUT (TankA, 3, Tank_InOrder, 5000, 0) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Selects an output tank from among several tanks based on a selection rule and optional product type. To use this function, list all tanks included in the selection decision together in the Location module.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;First Tank&gt;</p>
+        <p class="p">The name or location index number of the starting tank in the range.</p>
+        <p class="Component">&lt;Number of Tanks&gt;</p>
+        <p class="p">The number of tanks in selection range (limit 10).</p>
+        <p class="Component">&lt;Selection Rule&gt;</p>
+        <p class="p">The rule for making the selection may be one of the following:</p>
+        <p class="Syntax_body">Tank_InOrder (selects first idle tank encountered)</p>
+        <p class="Syntax_body">Tank_LongestIdle (selects the tank idle the longest)</p>
+        <p class="Component">&lt;Maximum Level&gt;</p>
+        <p class="p">The maximum level of the output tank before considering it for selection. Enter 0 if the output tank must be empty or idle before being considered.</p>
+        <p class="Component">&lt;Product Type&gt;</p>
+        <p class="p">An integer specifying the required value of the Product array in order to select the tank. Enter 0 if the tank selection requires no product type match. (This applies only if the maximum level specified is greater than 0.)</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A supply tank feeds one of 3 output tanks and always gives preference first to Tank1, then to Tank2, and finally to Tank3 based on availability. Furthermore, the supply tank can select a tank only if its contents are less than 8000 gallons. To model this selection, list Tank1, Tank2, and Tank3 together (and in order) in the location module. Then define the following statement to select the tank using a local variable, Selected_Tank:</p>
+        <p class="Syntax_body">Int Selected_Tank</p>
+        <p class="Syntax_body">SelectedTank=Tank_SelectOutput(Tank1, 3, Tank_InOrder, 8000,0)</p>
+        <p class="p">The diagram below shows the logic used to make a tank selection:</p>
+        <p>
+            <img src="8_127.png" />
+        </p>
+        <p class="p">If you base a tank selection on product type, you must be careful to assign an appropriate integer value to the Product array element corresponding to the tank location.</p>
+        <p class="_rules">See Also</p>
+        <p class="p"><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Subroutines-ExamplesofTankLogic.htm#C-05_2723800551_1089801" title="" alt="" xrefformat="{paratext}">Selecting from Multiple Input or Output Tanks</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

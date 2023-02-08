@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Locations">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Location Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-LocationEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Locations.htm#C-05_2723800551_1085243">Locations</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Location Edit Table</span>
+        </div>
+        <h4><a name="C-05_2723800551_1085277"></a>Location Edit Table<MadCap:keyword term="Locations:edit table" /></h4>
+        <p class="p">A location's characteristics can be modified with the Location edit table. The Location edit table contains fields for displaying the graphic icon, specifying the location name, and defining other characteristics of each location. Each of these fields is explained below. You can edit the desired field directly in some cases, or by selecting a record and clicking the column heading button of the desired field.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-100-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p"><span class="Bold"><b>Icon</b><MadCap:keyword term="Locations:icon;Icon:locations" /></span>   The graphic icon used to represent the location. Changing location graphics is done using the tools in the Location Graphics window. If multiple graphics have been used to define a location, the first graphic used is shown here. Clicking on the Icon button brings the graphic for the current location into view if it is not currently showing in the layout window.</p>
+        <p class="p"><span class="Bold"><b>Name</b><MadCap:keyword term="Locations:naming;Name:location" /></span>   The name of each location. Names can be up to 80 characters in length and must begin with a letter (for more information on naming items, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-11-Names.htm#C-11_756594771_1090808" title="" alt="" xrefformat="{paratext}">Names</a>). A location's name can be changed by editing this field. The Search and Replace is automatically called when the name is changed.</p>
+        <p class="p"><span class="Bold"><b>Cap.</b><MadCap:keyword term="Locations:capacity;Capacity:location" /></span>  The capacity of the location refers to the number of entities the location can hold or process at any one time. A <MadCap:keyword term="Locations:capacity:maximum;Capacity:maximum location capacity;Tanks:capacity:maximum" />location's maximum capacity is 999999. Entering <MadCap:keyword term="INF" />INF or <MadCap:keyword term="INFINITE" />INFINITE will set the capacity to the maximum allowable value. If this field contains an expression, it will be evaluated at the start of the simulation before any initialization logic. Accordingly, a location's capacity will not vary during the simulation run.</p>
+        <p class="p_10">Please Note: Individual units of a multi-unit location may differ in capacity only if every unit's capacity is greater than 1. For example, in a location with two units, one may have a capacity of 5 and the other a capacity of 10. However, one unit may not have a capacity of one and the other a capacity of five. </p>
+        <p class="p"><span class="Bold"><b>Units</b><MadCap:keyword term="Locations:units;Units" /></span><span class="Element" style="line-height: 12pt;">   The number of units of a location, up to 999. A multi-unit location works like several locations with common characteristics. </span>
+        </p>
+        <p class="p"><span class="Bold"><b>DTs</b><MadCap:keyword term="Locations:downtimes;Downtimes" /></span><span class="Element" style="line-height: 12pt;"> Right-click in this field and choose a downtime from the context menu to define location downtimes, including any setup times. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-LocationDowntimes.htm#C-05_2723800551_1085676" title="" alt="" xrefformat="{paratext}">Location Downtimes</a>.)</span>
+        </p>
+        <p class="p"><span class="Bold"><b>Stats</b><MadCap:keyword term="Locations:statistics;Statistics" /></span><span class="Element" style="line-height: 12pt;"> Right-click in this field to change or specify the level of statistical detail to be gathered for the location. (To view a location's statistics after a simulation run, choose Output Viewer from the View ribbon tab.) Three levels of data collection are available:</span>
+        </p>
+        <ul>
+            <li class="li_1" value="1"><span class="Bold"><MadCap:keyword term="Statistics:none" /><b>None</b></span> No statistics will be collected.</li>
+            <li class="li_1" value="2"><span class="Bold"><MadCap:keyword term="Statistics:basic" /><b>Basic</b></span> Only utilization and average time in location will be collected.</li>
+            <li class="li_1" value="3"><span class="Bold"><MadCap:keyword term="Statistics:time series" /><b>Time Series</b></span> Collects basic statistics and time series tracking the contents of the location over time.</li>
+        </ul>
+        <p class="p"><span class="Bold"><b>Rules</b><MadCap:keyword term="Locations:rules;Rules:location" /></span> This field defines (1) how a location selects the next incoming entity from several that are waiting to enter this location, (2) how multiple entities at a location queue for output, and (3) which unit of a multi-unit location is selected by an incoming entity. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-RulesDialogBox.htm#C-05_2723800551_1086047" title="" alt="" xrefformat="{paratext}">Location Decision Rules Dialog Box</a>.) To edit any of this information at a location, double-click in the field or right-click and choose <b>Rules...</b> from the context menu to open the Location Rules dialog box.</p>
+        <p class="p"><span class="Bold"><b>Notes</b><MadCap:keyword term="Locations:notes field;Notes:field" /></span> Enter any optional notes about a location in this field or double-click in the field to open a larger Notes window.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

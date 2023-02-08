@@ -1,0 +1,558 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+body
+{
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 1.7em;
+	margin: 17px;
+	max-width: 750px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-weight: bold;
+	color: #749AB6;
+}
+
+p.example
+{
+	color: #546C7F;
+	border: solid 1px #BECFDC;
+	background-color: #DEE8F0;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 14px 20px;
+}
+
+p.note
+{
+	color: #616E14;
+	border: solid 1px #BFD62F;
+	background-color: #DAE691;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	padding: 14px 20px;
+}
+
+a
+{
+	text-decoration: none;
+	font-family: 'Segoe UI';
+	color: #ffffff;
+}
+
+MadCap|expanding
+{
+	mc-open-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/minus.png');
+	mc-closed-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/plus.png');
+	mc-image-position: left;
+}
+
+MadCap|dropDown
+{
+	mc-open-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/minus.png');
+	mc-closed-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/plus.png');
+}
+
+MadCap|toggler
+{
+	mc-open-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/minus.png');
+	mc-closed-image: url('../../../../../../../../../Program Files (x86)/MadCap Software/MadCap Flare V10/Flare.app/Resources/Images/WebHelp/plus.png');
+	color: inherit;
+}
+
+MadCap|popupHead
+{
+	color: #5B8EC1;
+}
+
+MadCap|popupBody
+{
+	color: #EBEBEB;
+	border: none;
+	background-color: rgba(0, 0, 0, .85);
+	padding: 11px 15px;
+}
+
+MadCap|glossaryTerm
+{
+	
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: inherit;
+	font-weight: inherit;
+}
+
+MadCap|glossaryTerm.Hyperlink
+{
+	color: #5B8EC1;
+	font-weight: inherit;
+}
+
+MadCap|glossaryTerm.Popup
+{
+	color: #5B8EC1;
+	font-weight: normal;
+}
+
+MadCap|conceptLink
+{
+	color: #000000;
+}
+
+MadCap|keywordLink
+{
+	color: #000000;
+}
+
+MadCap|relatedTopics
+{
+	color: #000000;
+}
+
+MadCap|helpControlMenu
+{
+	color: #707070;
+	background-color: #FFFFFF;
+	border: none;
+}
+
+MadCap|helpControlMenuItem
+{
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+MadCap|helpControlMenuItem.Highlighted
+{
+	color: #000000;
+	background-color: #E5EFF7;
+}
+
+@media print
+{
+	h1
+	{
+		color: #00aeef;
+		font-family: 'Segoe UI Light';
+	}
+
+	h2
+	{
+		color: #00aeef;
+		font-family: 'Segoe UI Light';
+	}
+
+	h3
+	{
+		color: #00aeef;
+		font-family: 'Segoe UI Light';
+	}
+
+	h4
+	{
+		color: #00aeef;
+		font-family: 'Segoe UI Light';
+	}
+
+	h5
+	{
+		color: #00aeef;
+		font-family: 'Segoe UI Light';
+	}
+
+	h6
+	{
+		font-family: 'Segoe UI Light';
+		color: #00aeef;
+	}
+}
+
+@media non-print
+{
+	a
+	{
+		font-family: 'Segoe UI Light';
+		text-decoration: none;
+		background-color: #ffffff;
+		color: #ffffff;
+	}
+
+	a:active
+	{
+		text-decoration: none;
+	}
+
+	a:focus
+	{
+		text-decoration: none;
+	}
+
+	a:visited
+	{
+		color: #ffffff;
+	}
+
+	a.GlossaryPageTerm
+	{
+		color: #00aeef;
+	}
+
+	a.MCBreadcrumbsLink
+	{
+		color: #ffffff;
+	}
+
+	a:hover
+	{
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	a:link
+	{
+		text-decoration: none;
+		color: #ffffff;
+	}
+
+	MadCap|shortcut
+	{
+		color: #ffffff;
+	}
+
+	object
+	{
+		
+	}
+
+	a.MCBreadcrumbsLink:visited
+	{
+		text-decoration: none;
+	}
+
+	h1
+	{
+		color: #cd692d;
+		font-family: 'Segoe UI';
+	}
+
+	h2
+	{
+		color: #335094;
+		font-family: 'Segoe UI';
+	}
+
+	h6
+	{
+		color: #335094;
+		font-family: 'Segoe UI';
+	}
+
+	h5
+	{
+		color: #335094;
+		font-family: 'Segoe UI';
+	}
+
+	h4
+	{
+		color: #335094;
+		font-family: 'Segoe UI';
+	}
+
+	h3
+	{
+		color: #335094;
+		font-family: 'Segoe UI';
+	}
+
+	table
+	{
+		border-spacing: 0px;
+	}
+
+	hr
+	{
+		height: 0px;
+		border-top-width: 0px;
+		border: 0px inset;
+	}
+
+	MadCap|xref
+	{
+		mc-format: 'See "{paratext}"';
+		text-decoration: none;
+		color: none;
+	}
+
+	a.GlossaryPageTerm:active
+	{
+		color: #ffffff;
+	}
+
+	a.GlossaryPageTerm:focus
+	{
+		color: #ffffff;
+	}
+
+	a.GlossaryPageTerm:hover
+	{
+		color: #ffffff;
+	}
+
+	a.GlossaryPageTerm:link
+	{
+		color: #ffffff;
+	}
+
+	a.GlossaryPageTerm:visited
+	{
+		color: #ffffff;
+	}
+
+	p
+	{
+		font-size: 11pt;
+		margin-bottom: 0.12em;
+		margin-top: 0.12em;
+		font-family: 'Segoe UI';
+	}
+
+	p.Concept
+	{
+		margin-top: 10pt;
+	}
+
+	pre
+	{
+		font-family: 'Segoe UI';
+		font-size: 9pt;
+		margin-top: -0.88em;
+		margin-bottom: -0.88em;
+	}
+
+	MadCap|breadcrumbsProxy
+	{
+		border-bottom-width: 0px;
+	}
+
+	a.aimage
+	{
+		background-color: #ffffff;
+	}
+
+	li
+	{
+		font-family: 'Segoe UI';
+	}
+
+	ol
+	{
+		font-family: 'Segoe UI';
+	}
+
+	ul
+	{
+		font-family: 'Segoe UI';
+	}
+}
+
+a
+{
+	font-family: 'Segoe UI Light';
+	text-decoration: none;
+	background-color: #ffffff;
+	color: #ffffff;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a:visited
+{
+	color: #ffffff;
+}
+
+a:focus
+{
+	text-decoration: none;
+}
+
+a:hover
+{
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a:active
+{
+	text-decoration: none;
+}
+
+a.GlossaryPageTerm
+{
+	color: #00aeef;
+}
+
+a.MCBreadcrumbsLink
+{
+	color: #ffffff;
+}
+
+MadCap|shortcut
+{
+	color: #ffffff;
+}
+
+object
+{
+	
+}
+
+a.MCBreadcrumbsLink:visited
+{
+	text-decoration: none;
+}
+
+h1
+{
+	color: #cd692d;
+	font-family: 'Segoe UI';
+}
+
+h2
+{
+	color: #335094;
+	font-family: 'Segoe UI';
+}
+
+h6
+{
+	color: #335094;
+	font-family: 'Segoe UI';
+}
+
+h5
+{
+	color: #335094;
+	font-family: 'Segoe UI';
+}
+
+h4
+{
+	color: #335094;
+	font-family: 'Segoe UI';
+}
+
+h3
+{
+	color: #335094;
+	font-family: 'Segoe UI';
+}
+
+table
+{
+	border-spacing: 0px;
+}
+
+hr
+{
+	height: 0px;
+	border-top-width: 0px;
+	border: 0px inset;
+}
+
+MadCap|xref
+{
+	mc-format: 'See "{paratext}"';
+	text-decoration: none;
+	color: none;
+}
+
+a.GlossaryPageTerm:link
+{
+	color: #ffffff;
+}
+
+a.GlossaryPageTerm:visited
+{
+	color: #ffffff;
+}
+
+a.GlossaryPageTerm:focus
+{
+	color: #ffffff;
+}
+
+a.GlossaryPageTerm:hover
+{
+	color: #ffffff;
+}
+
+a.GlossaryPageTerm:active
+{
+	color: #ffffff;
+}
+
+p
+{
+	font-size: 11pt;
+	margin-bottom: 0.12em;
+	margin-top: 0.12em;
+	font-family: 'Segoe UI';
+}
+
+p.Concept
+{
+	margin-top: 10pt;
+}
+
+pre
+{
+	font-family: 'Segoe UI';
+	font-size: 9pt;
+	margin-top: -0.88em;
+	margin-bottom: -0.88em;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom-width: 0px;
+}
+
+a.aimage
+{
+	background-color: #ffffff;
+}
+
+li
+{
+	font-family: 'Segoe UI';
+}
+
+ol
+{
+	font-family: 'Segoe UI';
+}
+
+ul
+{
+	font-family: 'Segoe UI';
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Planning the Model|Building a Model">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Modeling Scenario</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-03-ModelingScenario.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-03-PlanningtheModel.htm#C-03_1917231497_1035124">Planning the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-03-BuildingaModel.htm">Building a Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Modeling Scenario</span>
+        </div>
+        <h3><a name="C-03_1917231497_1039569"></a>Modeling Scenario<a name="kanchor141"></a></h3>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Before we actually begin building a model, let's look at a fictitious scenario for our model building session.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">A local hospital has a small Urology Clinic that sees patients with appointments throughout the day.  The clinic consists of a physician, a nurse-clinician, a treatment room, doctor’s office, and several auxiliary areas.  Patients are greeted and registered by the nurse-clinician, wait for an escort to the treatment room, are treated by the physician and then have a short session with the physician in his office before departing.  Except on initial arrival, patients are generally escorted by either the nurse or the physician throughout their visit.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">You have been asked to model the care process to examine capacity and waiting time in anticipation of a forecasted 20% increase in demand for urological care. </p>
+        <h4 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor142"></a>Model Elements</h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">In building this model we must define all of the basic modeling elements and a few of the optional elements. </p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor143"></a>Locations</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">As stated in the initial summary, locations to which patients may travel include the receptionist’s desk, the treatment room, and the doctor’s office.  However, as in all health care models, a waiting area must also be included at any point where patient queuing might take place.  In this case, such locations include both a line at the receptionist’s desk as well as a four-chair waiting room.  Note that the line at the receptionist’s desk is considered a multi-capacity location even though patients may not recognize it as having any physical or obvious characteristics.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor144"></a>Entities (Patients)</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Your study of patient conditions has shown that a difference in care times can be directly attributed to a patient’s condition as either acute or chronic.  For this, patients will be modeled as either acute or chronic according to a historical ratio and associated treatment time distributions.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor145"></a>Arrivals</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">An examination of records reveals that a patient arrives every 45 minutes during an eight hour work day (8 <span class="_Override" style="font-variant: small-caps;">am</span> to 5<span class="_Override" style="font-variant: small-caps;"> pm</span>).</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor146"></a>Patient Care Process</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Patients proceed directly to the receptionist’s desk where registration with the nurse takes about 5 minutes with a standard deviation of one minute (i.e., N(5,1)).  Patients then proceed to the waiting area where they remain until escorted by the nurse to the treatment room.  Once in the treatment room, patients are further interviewed by the nurse for N(5,1) minutes and await the doctor. </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Examination/treatment by the doctor takes N(25,5) minutes if the patient is acute (60%) and N(30,5) if the patient is chronic (40%).</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Once patients have been treated, they are escorted to the doctor’s office by the doctor where they discuss the examination for N(15,3) minutes.  Once the interview is finished, patients are free to depart and the doctor is free to see another patient.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor147"></a>Resources</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">The doctor and nurse perform all activities of the clinic.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor148"></a>Path Networks</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">A single network called Clinic_net will provide a basis for movement for the physician and patients. However, because the nurse is both a static and a mobile resource, a second network called Nurse_net will be created for his or her movement.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor149"></a>Attributes</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">An attribute is simply a “numeric tag” attached to either an entity (entity attribute) or a location (location attribute). Since examination time for each patient is determined by the patient’s condition, we will attach an attribute called “Type” to each patient to determine his or her condition.</p>
+        <h5 data-mc-conditions="PM-MM Conditionals.MedModel"><a name="kanchor150"></a>User Distributions</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">We will sample from a user-defined distribution and set the Type attribute to either 1 (for acute) or 2 (for chronic).  60% of the patients will be defined as acute and 40% will be defined as chronic.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

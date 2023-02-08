@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="286" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086591"></a>Dynamic Resources<MadCap:keyword term="Resources:dynamic resources;Dynamic resources" /></h3>
+        <p class="p">Dynamic resources are resources that move along an assigned path network and may transport entities between locations as a forklift would. They may also need to process entities at several locations, such as an operator performing tasks at more than one location. For these reasons, it is usually preferable to model the resource's movement using a path network. Defined properly, the resource will travel along the path network during the simulation run.</p>
+        <p class="How_to_title">How to create a dynamic resource:</p>
+        <ol>
+            <li class="li_1_how_to_step">Create a path network using the Path Network Editor.</li>
+            <li class="li_1_how_to_step">Select <span class="Helv_Bold" style="font-weight: bold;">Resources</span> from the <span class="Helv_Bold" style="font-weight: bold;">Build</span> menu. This automatically brings up the Resources edit table and the Resource Graphics window, which are used together to define all resources in the model.</li>
+            <li class="li_1_how_to_step">Choose a graphic icon for the resource from the Resource Graphics window.</li>
+            <li class="li_1_how_to_step">Click the <span class="_Override" style="font-weight: bold;">Specs...</span> button to open the Specifications Dialog.</li>
+            <li class="li_1_how_to_step">Assign a path network to the resource.</li>
+            <li class="li_1_how_to_step">If desired, place units of the resource on the layout by selecting the Add button in the Resource Graphics window and clicking on the layout. Every time you create and place a resource graphic on the layout for the same resource in the edit table, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> creates a new resource point. See <MadCap:xref class="lowercase_no_see" href="C-05-ResourcePoints.htm#C-05_2723800551_1087123" target="" title="" alt="">Resource Points on page 1</MadCap:xref> for more information.</li>
+            <li class="li_1_how_to_step">Supply any optional information about the resource including number of units, downtimes, work and/or park searches, and node logic in the Resources edit table.</li>
+        </ol>
+        <p class="p_10">Please Note: <span class="Emphasis">Dynamic resources Notes: </span>1. When defining the resource specifications, the default Resource Search for dynamic resources is Closest Resource. The default for Entity Search is Closest Entity. 2. More than one resource can use the same path network.</p>
+    </body>
+</html>

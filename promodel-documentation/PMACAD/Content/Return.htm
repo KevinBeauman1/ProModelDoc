@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1500" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Return</h1>
+        <h5>
+            <MadCap:keyword term="statements:return;return" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Return {&lt;expression&gt;}</p>
+        <p>Return<br />Return Attr1**Sqrt(Attr2)</p>
+        <h2>Description</h2>
+        <p>Sends a value from a subroutine to the logic that called the subroutine. In the same way that parameters send information from the calling logic to the subroutine, Return sends information from the subroutine to the calling logic. After the Return is executed, no more logic in the subroutine is executed.  When subroutines return values, the Returns statement must be followed by an expression. </p>
+        <p>When used in logic that is not a subroutine (or a subroutine of type None), Return functions like a very powerful Break or BreakBlk statement. Whereas Break and BreakBlk exit only the innermost loop or statement block, Return exits the logic completely, no matter how deeply nested inside loops and statement blocks. </p>
+        <h2>Valid In</h2>
+        <p>Any logic, but used most often in subroutines.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The value to return. This expression must be on the same line as the Return.  If a subroutine was activated, then the return value is ignored.</p>
+        <h2>Example</h2>
+        <p>The following example uses a subroutine to check the supply of items in an inventory activity whenever an order is shipped.  If the free capacity of the activity is greater than 10, the user is prompted for an order quantity; otherwise no new items will be ordered.  If an order is made, the order time is returned; otherwise the variable OrderTime remains unchanged.  </p>
+        <p>Shipping activity logic</p>
+        <p class="p_11">Wait N(3.2, .2)<br />OrderTime = Sub1()</p>
+        <p>Sub1 subroutine logic</p>
+        <p class="p_11">If FreeCap(Inventory) &gt; 10 Then<br />{</p>
+        <p class="p_12">Prompt "Enter an Order quantity for Items99", Qty99<br />Order Qty99 Items99 To Inventory<br />Return Clock(hr)</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="subroutines.htm" target="" title="" alt="">Subroutines</MadCap:xref>. Also see <a href="break.htm" class="a_11">Break</a> and <a href="breakblk.htm" class="a_11">BreakBlk</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/columncharts1.png" />
+    <Link
+      Url="Content/Entity Summary Column Chart.htm" />
+    <Link
+      Url="Content/Entity States Column Chart.htm" />
+    <Link
+      Url="Content/Entity Cost Column Chart.htm" />
+    <Link
+      Url="Content/Entity Failed Arrivals Column Chart.htm" />
+    <Link
+      Url="Content/Location Summary Column Chart.htm" />
+    <Link
+      Url="Content/Location Single Capacity Column Chart.htm" />
+    <Link
+      Url="Content/Location Multi-Capacity States Column Chart.htm" />
+    <Link
+      Url="Content/Location Setup Column Chart.htm" />
+    <Link
+      Url="Content/Location Costs Column Chart.htm" />
+    <Link
+      Url="Content/Resource Summary Column Chart.htm" />
+    <Link
+      Url="Content/Resource States Column Chart.htm" />
+    <Link
+      Url="Content/Resource Cost Column Chart.htm" />
+    <Link
+      Url="Content/Variable Summary Column Chart.htm" />
+    <Link
+      Url="Content/Logs CC.htm" />
+    <Link
+      Url="Content/Node Entries CC.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/columncharts1.png" />
+    <Link
+      Url="Content/Entity Summary Column Chart.htm" />
+    <Link
+      Url="Content/Entity States Column Chart.htm" />
+    <Link
+      Url="Content/Entity Cost Column Chart.htm" />
+    <Link
+      Url="Content/Entity Failed Arrivals Column Chart.htm" />
+    <Link
+      Url="Content/Location Summary Column Chart.htm" />
+    <Link
+      Url="Content/Location Single Capacity Column Chart.htm" />
+    <Link
+      Url="Content/Location Multi-Capacity States Column Chart.htm" />
+    <Link
+      Url="Content/Location Setup Column Chart.htm" />
+    <Link
+      Url="Content/Location Costs Column Chart.htm" />
+    <Link
+      Url="Content/Resource Summary Column Chart.htm" />
+    <Link
+      Url="Content/Resource States Column Chart.htm" />
+    <Link
+      Url="Content/Resource Cost Column Chart.htm" />
+    <Link
+      Url="Content/Variable Summary Column Chart.htm" />
+    <Link
+      Url="Content/Logs CC.htm" />
+    <Link
+      Url="Content/Node Entries CC.htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="column charts"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

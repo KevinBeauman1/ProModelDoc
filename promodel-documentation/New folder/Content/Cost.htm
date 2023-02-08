@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1452" MadCap:lastWidth="880">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Cost</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Cost Calculations</h1>
+        <p>Process Simulator allows you to collect cost data on entities, activities 
+ and resources. The unit cost for each entity processed is shown in the 
+ scoreboard in the output report. Total costs by activity, resource and 
+ entity can also be viewed in the output report. </p>
+        <p>To define a process with costing, you can enter costing information 
+ to the objects in your process through the properties dialogs for each 
+ object. In the following situations, specific costing rules apply:</p>
+        <h2>Interrupt/Off Shift</h2>
+        <ul>
+            <li class="li_1">If you interrupt an entity’s resource, an additional 
+ cost per use will apply once you re-acquire the resource. While waiting 
+ for the resource to return, the entity does not record operation or resource 
+ costs. </li>
+            <li class="li_1">If an entity interrupts another entity, the interrupted 
+ entity continues to record operation time during the entire interruption 
+ period. While the interrupting and interrupted entities are simultaneously 
+ at an activity, the activity records the cost for both entities. If the 
+ interrupting entity obtains a resource, the interrupted entity will not 
+ record the resource costs during the interruption period.</li>
+            <li class="li_1">If an entity is at an activity and is interrupted 
+ when the activity goes off shift, the entity records the time off shift 
+ as part of its operational costs. The activity records the cost of the 
+ interrupted entity while it remains at the activity.</li>
+        </ul>
+        <h2>Attach</h2>
+        <ul>
+            <li class="li_1">Attached entities do not add their costs or time 
+ statistics to their base entities.</li>
+            <li class="li_1">When a Detach occurs, Process Simulator divides all 
+ costs accrued by an attached entity among the detached entities. Process 
+ Simulator adds all other entity statistics calculated during the attached 
+ period to each of the detached entities.</li>
+            <li class="li_1">Entities leaving the system that are attached onto 
+ other entities do NOT report their individual costs, but do report all 
+ other statistics. To get the cost of each entity, you must detach the 
+ entities before they exit.</li>
+        </ul>
+        <h2>Batch</h2>
+        <ul>
+            <li class="li_1">Batched entities do not add their costs or statistics 
+ to the batch shell (a temporary entity representing batched entities that 
+ starts with cost and time statistics of zero).</li>
+            <li class="li_1">When an unbatch occurs, Process Simulator divides 
+ all costs accrued by a batched entity among the unbatched entities. Process 
+ Simulator copies all other entity statistics calculated during the batched 
+ period to each of the unbatched entities.</li>
+            <li class="li_1">When an unbatch occurs, the first entity processed from the batch takes any resources the batch owns.</li>
+            <li class="li_1">When an unbatch occurs, attributes that were assigned to the batch are not passed to any unbatched entity.</li>
+            <li class="li_1">Entities leaving the system batched with other entities 
+ do NOT report their individual costs, but do report all other statistics. 
+ To get the cost of each entity, you must unbatch the entities before they 
+ exit.</li>
+            <li class="li_1">If a batch has members that are also batched, only the top level batch is unbatched with an UNBATCH function. Subsequent unbatching will continue to occur in a first-in-last-out (FILO) sequence until all batches have been unbatched in reverse order with respect to how the batches were created originally.</li>
+        </ul>
+        <h2>Special Cost Handling</h2>
+        <ul>
+            <li class="li_1">As soon as you acquire a resource, it begins to accrue 
+ cost.</li>
+            <li class="li_1">If an activity uses a resource during an off shift 
+ period, the activity accrues that resource’s cost.</li>
+            <li class="li_1">The USE statement counts as operation and resource 
+ cost.</li>
+            <li class="li_1">When you Create a new entity, it begins with new 
+ time statistics and an initial cost.</li>
+            <li class="li_1">If you Rename an entity, previous time statistics 
+ and costs continue with the entity.</li>
+        </ul>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

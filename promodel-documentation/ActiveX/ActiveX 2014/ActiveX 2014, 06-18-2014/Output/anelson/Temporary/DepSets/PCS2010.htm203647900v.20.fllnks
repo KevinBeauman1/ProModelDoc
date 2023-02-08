@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PortfolioSimulatorStyles.css" />
+    <Link
+      Url="Project/VariableSets/Running HF 1.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PortfolioSimulatorStyles.css" />
+    <Link
+      Url="Project/VariableSets/Running HF 1.flvar" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="System.PageNumber" />
+    <Variable
+      Name="Running HF 1.Running H/F 1" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PortfolioSimulatorStyles.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

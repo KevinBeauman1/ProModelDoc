@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="363" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The RDBDataServer Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>ScenarioName</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="ScenarioName"><a MadCap:generatedBookmark="TOC" name="ScenarioName"></a><a name="C-01_2914010915_464125"></a>
+            <MadCap:keyword term="ScenarioName;RDBDataServer Object:ScenarioName" />ScenarioName</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>ScenarioName</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Returns the name of the Scenario in the current data selection.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:  </span>None</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>The current scenario name, or “invalid” if the current selection is not valid.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, gets and displays some of the data, then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim MyScenario As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2">	RDBObj.OpenFile("mfg_cost.rdb")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.SelectData 1, 1, 1, 1, 1, 1</p>
+        <p class="objects2">	If RDBObj.PositionIsValid = True Then</p>
+        <p class="objects3">		MyScenario = RDBObj.ScenarioName</p>
+        <p class="objects3">		MsgBox ("Selected Scenario =  " &amp; MyScenario)</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		MsgBox ("Data Selection Invalid")</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

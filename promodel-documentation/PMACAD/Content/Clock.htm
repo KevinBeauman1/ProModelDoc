@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="987" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Clock()</h1>
+        <h5>
+            <MadCap:keyword term="functions:clock;clock" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>Clock({&lt;time unit&gt;})</p>
+        <p>If Clock(day) &gt;= 1.5 Then Pause<br />Attr1 = Clock()</p>
+        <h2>Description</h2>
+        <p>Returns the value of the elapsed simulation time in the units specified. Clock units should be kept consistent when comparing values. If an attribute has been assigned a time in minutes, any time value compared with that attribute should also be in minutes.</p>
+        <p>When no units are specified in the parentheses in the clock function, Process Simulator returns the default time unit specified, which is minutes.</p>
+        <h2>Valid In</h2>
+        <p>Any logic. </p>
+        <h2>Components</h2>
+        <p class="Component"><b>&lt;time unit&gt;</b>
+        </p>
+        <p>The elapsed simulation time will be returned in this unit. This may be hr, min, sec, day, wk. If omitted, the value returned will be in the default time units, which is minutes. When using Clock() to capture a time for later use with the Log statement, the units should be omitted.</p>
+        <h5>See Also</h5>
+        <p><a href="log.htm" class="a_11">Log</a>
+        </p>
+    </body>
+</html>

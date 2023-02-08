@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MadCapLog Protocol="2" Description="MadBuild V12 Generated MyWebHelp.fltar" Date="2020-12-01T16:01:29.3730428-07:00">
+    <Messages>Compiling target MyWebHelp...
+Build failed: Compiler: Failed to create the output folder. Access to the path 'C:\Users\Ellen\Desktop\2014\16-3-D Animator2014\' is denied.
+Saving log to "C:\_git\ProModel.Documentation\3D Animator\3_D_Animator_2020\Output\anelson\MyWebHelp\MyWebHelp.mclog"
+</Messages>
+    <Warnings />
+    <Errors>
+        <LogEntry File="../../../Project/Targets/MyWebHelp.fltar" Message="Build failed: Compiler: Failed to create the output folder. Access to the path 'C:\Users\Ellen\Desktop\2014\16-3-D Animator2014\' is denied.&#xA;" LineIndex="-1" CharIndex="-1" Subsystem="Compiler" Target="MyWebHelp" ErrorID="10086" />
+    </Errors>
+</MadCapLog>

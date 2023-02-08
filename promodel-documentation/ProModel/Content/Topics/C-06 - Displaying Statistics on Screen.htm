@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="552" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120658"></a>
+            <MadCap:keyword term="Statistics:displaying on screen;Display statistics on screen:see Statistics" /><a name="C-06_1157716610_35461"></a>Displaying Statistics On Screen</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Effective use of statistics lends meaning and credibility to simulation models.  This section is designed to show ways of displaying statistics on screen while the simulation is running.  It also provides examples you can incorporate into any model.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">&#160;</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Displaying on-screen statistics is valuable for adding model clarity as well as providing a way to keep track of what is happening in the model. The technique used for displaying statistics is to define variables within your model, perform certain functions on those variables (e.g., addition, subtraction, etc.), and then display those variables on the screen.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">&#160;</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">ProModel defines variables as symbols (e.g., x, y, and var1) that hold numeric values. They are defined in the Variables edit table. When defining variables, you must include the following information:</p>
+        <ul>
+            <li class="li_1">
+                <MadCap:keyword term="Names">
+                </MadCap:keyword><b>Name</b> (may be alphanumeric combination)</li>
+            <li class="li_1">
+                <MadCap:keyword term="Type">
+                </MadCap:keyword><b>Type</b> (real or integer)</li>
+            <li class="li_1">
+                <MadCap:keyword term="Initial value">
+                </MadCap:keyword><b>Initial value</b> (may be any value)</li>
+        </ul>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">After defining a variable, you may display it anywhere on the layout screen by simply clicking with your mouse in the desired position with the variable highlighted in the edit table.  </p>
+        <p class="How_to_title">How to show <MadCap:keyword term="Statistics:displaying on screen:system throughput;Throughput;System throughput"></MadCap:keyword>system throughput on the screen:</p>
+        <ol>
+            <li class="li_1_how_to_step">Define the variable “thruput.”</li>
+            <li class="li_1_how_to_step">Display the variable on the screen.</li>
+            <li class="li_1_how_to_step">In the processing edit table, increment the variable by one each time an entity leaves the system.  </li>
+        </ol>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Another common, on-screen statistic is work in process (<MadCap:keyword term="WIP"></MadCap:keyword>WIP).  To show this statistic on the screen, follow the first two steps above.  To accurately indicate the WIP in your model, increment a variable as entities enter the system and use the decrement statement as they exit the system.</p>
+        <p class="How_to_title">How to display the <MadCap:keyword term="Statistics:displaying on screen:total system time for entities"></MadCap:keyword>total system time for entities:</p>
+        <ol>
+            <li class="li_1_how_to_step">Assign the simulation clock time to an entity attribute at the beginning of your simulation.</li>
+            <li class="li_1_how_to_step">Subtract that attribute from the current clock time at the ending location and assign it to a variable you can display.</li>
+        </ol>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">For example, to display total system time for entities in the system, define a variable and an attribute.  The entity attribute, Input_Time, records the time an entity entered the system.  The variable, Sys_Time, records the elapsed time each entity spent in the system (clock-input time).  By displaying the variable on the layout, you will have a dynamic value showing system time of the exiting entity.</p>
+    </body>
+</html>

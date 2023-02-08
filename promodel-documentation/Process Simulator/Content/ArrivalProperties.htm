@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1746" MadCap:lastWidth="1332">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="arrival properties;arrival" />Arrival Properties</h1>
+        <p>The <b>Arrival</b> properties define how entities enter the system at an activity. An arrival is defined by connecting an entity to an activity and setting the  properties to define the arrival. If no arrivals exist in the process when the simulation starts, arrivals will automatically be created at activities with no incoming connection. However, as long as at least one arrival is defined, then other activities without arrivals defined will not have arrivals automatically created. The appearance of the <b>Arrival</b> properties will vary depending on the <b>Type</b> of arrival specified in the <b>General</b> section.</p>
+        <p>Right-click on a connector, choose Properties, and the <b>Arrivals</b> shape properties window displays.</p>
+        <p>There are four sections found in the <b>Arrival</b> properties window.</p>
+        <ul>
+            <li>Calendar</li>
+            <li>Notes</li>
+            <li>Advanced</li>
+        </ul>
+        <p>
+            <img src="Resources/Images/ArrivalProperties.png" MadCap:mediastyle="@media print { max-width: 5in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p> Properties is where you choose the kind of arrival you want to define. Select the type of arrival from the <b>Type</b> drop down list:</p>
+        <p>
+            <ul>
+                <li class="li_1"><b>Periodic</b> Arrivals occur at a specified time interval. This is the default arrival type.</li>
+                <li class="li_1"><b>Continuous</b> An arrival occurs whenever the activity has available capacity.</li>
+                <li class="li_1"><b>Scheduled</b> Arrivals occur at specified dates and times.</li>
+                <li class="li_1"><b>Ordered</b> Arrivals only occur when an order is received for the entity triggered by a Storage activity.</li>
+                <li class="li_1"><b>Pattern</b> Arrivals occur based upon a defined pattern of quantities over specified time segments. </li>
+            </ul>
+        </p>
+        <p class="p">Based on what type of arrival you select the details will vary.</p>
+        <h2>Calendar</h2>
+        <p>  A calendar can be selected which will restrict the entities from arriving during the time off defined in the calendar. Calendars can only be selected for Periodic, Scheduled, and Pattern arrival types. The following options are available.
+        </p>
+        <p class="p" style="text-align: left;">
+            <img src="Resources/Images/ArrivalCalendarOptions.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li><b>None</b> No calendar will be assigned and the arrivals will occur based upon the Periodic, Scheduled or Pattern arrival definitions.</li>
+            <li><b>Specified at the arrival destination</b> Selecting this option means that the arrival will follow the calendar assigned to the activity where the entities arrive.</li>
+            <li><b>Unique to this arrival</b> By selecting this option, you specify which Calendar file the arrival will adhere to. The <b>File</b> field will appear after selecting this option where you can enter the Calendar path and file name or browse for and select the Calendar file.</li>
+        </ul>
+        <h2>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the arrival. </p>
+        <h2>Advanced</h2>
+        <p><b>Submodel Input</b>   This option is used in a submodel, and specifies that the arrival is an input of an entity from the parent model.
+        </p>
+    </body>
+</html>

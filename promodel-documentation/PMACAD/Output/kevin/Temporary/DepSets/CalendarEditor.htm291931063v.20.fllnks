@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Calendar Editor"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Resources/Images/5-7-2.bmp" />
+    <Link
+      Url="Content/Resources/Images/calendareditor.png" />
+    <Link
+      Url="Content/Resources/Images/Calendar_scheduledtime.bmp" />
+    <Link
+      Url="Content/Resources/Images/show_non_work_days.bmp" />
+    <Link
+      Url="Content/Resources/Images/calander_day_right_click_menu.bmp" />
+    <Link
+      Url="Content/Resources/Images/split_day_dialog.bmp" />
+    <Link
+      Url="Content/Resources/Images/shifts_toolbar.bmp" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Resources/Images/5-7-2.bmp" />
+    <Link
+      Url="Content/Resources/Images/calendareditor.png" />
+    <Link
+      Url="Content/Resources/Images/Calendar_scheduledtime.bmp" />
+    <Link
+      Url="Content/Resources/Images/show_non_work_days.bmp" />
+    <Link
+      Url="Content/Resources/Images/calander_day_right_click_menu.bmp" />
+    <Link
+      Url="Content/Resources/Images/split_day_dialog.bmp" />
+    <Link
+      Url="Content/Resources/Images/shifts_toolbar.bmp" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="calendar editor"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="shift changes"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="calendar editor"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="calendar editor main menu"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

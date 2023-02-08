@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="402" MadCap:lastWidth="626" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>AppendRecord</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="AppendRecord"><a MadCap:generatedBookmark="TOC" name="AppendRecord"></a><a name="C-01_2914010915_462653"></a>
+            <MadCap:keyword term="AppendRecord;ProModel Data Object:AppendRecord" />AppendRecord</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>AppendRecord <span class="_Override" style="color: #0000ff;">RecordType</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Adds a new record to the <span class="_Override" style="font-weight: bold;">end</span> of the specified table.  When using AppendRecord, you may use the <span class="_Override" style="font-style: italic;">Set…FieldValue</span> methods without first calling the <span class="_Override" style="font-style: italic;">SelectRecordBy…</span> method.  However, if you are using a method that requires the Record Index number as a parameter, you will need to get that number with the <span class="_Override" style="font-style: italic;">GetRecordCount</span> method (or any other method that returns that information).</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to add a record to.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads the mfg_cost model, adds a new record to the Locations table, and then changes the location name to My_New_Loc.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AppRec()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">	pmDataObject.AppendRecord <span class="_Override" style="color: #0000ff;">1</span></p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

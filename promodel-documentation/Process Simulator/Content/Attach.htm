@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1464" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Attach</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="attach" />Attach</h1>
+        <p>
+            <img src="Resources/Images/AttachProperties.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Quantity</b>&#160;&#160;This allows you to specify the number of entities to be attached to the entity waiting at the connecting activity.</p>
+        <p><b>Quantity Mode</b> Allows you to select the behavior by which to attach the specified quantity.</p>
+        <p>
+            <img src="Resources/Images/AttachQuantityMode.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li><b>Entire Quantity</b> With this option, the base entity will attach the total number of entities defined in the <b>Quantity</b> field and wait until all entities are available to be attached.</li>
+            <li><b>Immediately (0 to Qty)</b> With this option, the base entity will attach whatever quantity is available at the activity and immediately route out.</li>
+            <li><b>With Time Limit (0 to Qty)</b> For this option, the base entity will attach the total number of entities defined in the <b>Quantity</b> field within the specified time limit. If the attach quantity has not been met when the time limit is reached, the base entity will continue on with the entities it has attached. 
+				<p><img src="Resources/Images/AttachWithTimeLimit.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" /></p></li>
+        </ul>
+        <p><b>Attach To</b> Defines which entities will be attached to the base entity. Clicking the drop down list will show the following options:</p>
+        <p>
+            <img src="Resources/Images/AttachToList.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li><b>Any Entity</b> Allows any entity type to be attached to the base entity.</li>
+            <li><b>Creator</b> Restricts the attaching entities to only those that the base entity created through a Create routing earlier in the process.</li>
+            <li><b>Selected Entities Only</b> Choosing this option shows an additional field where you can select specific entities to attach from a drop down list.</li>
+        </ul>
+        <p><b>When</b> Allows you to specify whether the attach occurs before or after the base entity executes its activity logic.</p>
+        <p><b>Condition</b> This is optional and allows you to more specifically choose to attach entities based on their attribute value.</p>
+        <p><b>Permanently</b> You may also choose to permanently attach the entities, which means that there is no intention of detaching the entities later in the process. By doing this, all cost statistics of the attaching entities are rolled up and reported with the base entity.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

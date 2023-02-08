@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="857" MadCap:lastWidth="1178">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-05_2723800551_1086257"></a><a name="C-05_2723800551_25168"></a>Path Networks<MadCap:keyword term="Path networks;Network:path" /></h2>
+        <p class="p">When resources are modeled as dynamic resources which travel between locations, they follow path networks. Entities moving by themselves between locations may also move on path networks if referenced in the move logic of the routing. Otherwise, they follow the routing path. Multiple entities and resources may share a common path network. Movement along a path network may be defined in terms of speed and distance, or simply by time. See discussion on Automatic Time and Distance Calculation, later in this section, for more information about movement according to speed and distance or by time.</p>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ServiceModel">There are two types of path networks: <span class="Bold"><MadCap:keyword term="Network:passing;Path networks:passing" />passing</span><span class="Element" style="line-height: 12pt;"> </span>and <span class="Bold"><MadCap:keyword term="Network:non-passing;Path networks:non-passing" />non-passing</span>. </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">There are three types of path networks: <span class="Bold"><MadCap:keyword term="Network:passing;Path networks:passing" />passing</span><span class="Element" style="line-height: 12pt;">, </span><span class="Bold"><MadCap:keyword term="Network:non-passing;Path networks:non-passing" />non-passing, and crane</span>. </MadCap:conditionalText>A passing network is used for open path movement where entities and resources are free to overtake one another. Non-passing networks consist of single-file tracks or guide paths such as those used for <MadCap:keyword term="AGV" />AGVs where vehicles are not able to pass. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Crane path networks are described in more detail in the section <MadCap:xref class="lowercase_see" href="C-06-CraneSystems.htm#C-06_1157716610_1119817" target="" title="" alt="">Crane Systems</MadCap:xref>.</MadCap:conditionalText></p>
+        <p class="p">Passing and non-passing networks consist of nodes, which are connected by path segments. Path segments are defined by a beginning and an ending node and may be uni-directional or bi-directional. Multiple path segments, which may be straight or jointed, may be connected at path nodes. For all path networks, path nodes define the points where the resources using the network interface with processing locations. </p>
+        <p class="p">Path Networks are defined in the Path Networks Editor, which is accessed from the Home ribbon tab.</p>
+        <p class="Graphic">
+            <img src="cm-c5-117-1.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="How_to_title"><b style="font-size: 8pt; font-family: Arial;">How to create or edit a path network:</b>
+            <MadCap:keyword term="Path networks:accessing" />
+        </p>
+        <ul>
+            <li class="li_1">Select <span class="_Override" style="font-weight: bold;">Path </span><span class="_Override" style="font-weight: bold;">Networks</span> from the <span class="_Override" style="font-weight: bold;">Home</span> ribbon.</li>
+        </ul>
+        <p class="p">or...</p>
+        <ul MadCap:continue="true">
+            <li class="li_1">Right-click on the existing path network and select <span class="Helv_Bold" style="font-weight: bold;">Edit</span>.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|External Files">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>File Types</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-FileTypes.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-ExternalFiles.htm">External Files</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">File Types</span>
+        </div>
+        <h3><a name="C-06_1157716610_1086685"></a>File Types<MadCap:keyword term="External files:types;File:external:types" /></h3>
+        <p class="p">External files may be defined as one of several types depending upon the purpose of the file.</p>
+        <h4><a name="General"></a>General Read File<MadCap:keyword term="External files:types:general read file;File:types:general read;General read file" /></h4>
+        <p class="p">A General Read file contains numeric values read into a model using a Read statement. Values must be separated by a space, comma, or end of line. Any non-numeric data will be automatically skipped when obtaining the next numeric value. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Read.htm#C-14_4292047180_1106477" title="" alt="" xrefformat="{paratext}">Read</a> for correct syntax and examples. For example, if you specify a normal distribution such as N(5,1) in the General Read file, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will not return a numeric value following the distribution. Instead, it will read in the first value, 5, and the next value, 1. </p>
+        <p class="p">A General Read file must be an ASCII file.  Data created in a spreadsheet must be saved as a text file.</p>
+        <h4><a name="General2"></a>General Write File<MadCap:keyword term="External files:types:general write file;File:types:general write;General write file" /></h4>
+        <p class="p">A General Write file is used for writing text strings and numeric values using the <MadCap:keyword term="WRITE" />Write and <MadCap:keyword term="WRITELINE" />Writeline statements. Text strings are enclosed in quotes when written to the file, with commas automatically appended to strings. This enables the files to be read into spreadsheet programs like Excel or Lotus 1-2-3 for custom viewing, editing, and graphing. Write files may also be written to using the <MadCap:keyword term="XWRITE" />Xwrite statement which gives the modeler full control over output and formatting. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Write.htm#C-14_4292047180_1108417" title="" alt="" xrefformat="{paratext}">Write</a>, <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-WriteLine.htm#C-14_4292047180_1108486" title="" alt="" xrefformat="{paratext}">WriteLine</a>, or <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Xwrite.htm#C-14_4292047180_1108596" title="" alt="" xrefformat="{paratext}">Xwrite</a> for correct syntax and examples.</p>
+        <p class="p">If you write to an external file during multiple replications or a single, independent run, the data will be appended to the data from the previous replication.  However, if the Reset statement is used, the data is overwritten for each replication.  </p>
+        <h4>Entity-Location File<MadCap:keyword term="External files:types:entity-location file;File:types:entity-location;Entity:location file" /></h4>
+        <p class="p">An Entity-Location file (or expression file) is an Excel spreadsheet file containing numeric expressions listed by entity and location name.  Entity names should appear across the top row, beginning in column 2, while location names should be entered down the first column, beginning on row 2.  A numeric expression for each Entity-Location combination is entered in the cell where the names intersect.  An example of a spreadsheet file is shown next.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Entity Location file - Excel sheet_480x297.png" style="width: 480; height: 297;" />
+        </p>
+        <p class="p">To use the value stored in an Entity-Location file as an operation time, call out the file identifier in the operation logic as shown in the following example. (In this example, “SvcTms” is the File ID of the desired Entity-Location file.)</p>
+        <p class="p_10">Please Note: If the Excel file contains more than one sheet of data, only the first sheet will be read in.</p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait SvcTms()</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">By specifying SvcTms() with no arguments in the parentheses, a value is returned from the Entity-Location File “SvcTms” for the current entity at the current location, i.e., EntA at Loc1. You may also return the value stored in any other cell of an Entity-Location file by explicitly specifying the entity and location names in the parentheses, e.g., SvcTms(EntB, Loc1) or SvcTms(EntC, Loc2).</p>
+        <h4>Arrivals File<MadCap:keyword term="External files:types:arrivals file;File:types:arrivals file;Arrivals:files" /></h4>
+        <p class="p">An Arrivals file is a Excel spreadsheet file containing arrival information normally specified in the Arrival Editor.  One or more arrival files may be defined and referenced in the External Files Editor.  Arrival files are automatically read in following the reading of the Arrival Editor data.  The column entries must be as follows:</p>
+        <p class="p" style="font-weight: bold;">Column		Data</p>
+        <p class="p">A				Entity name </p>
+        <p class="p">	B				Location name </p>
+        <p class="p">	C				Quantity per arrival </p>
+        <p class="p">	D				Time of first arrival </p>
+        <p class="p">	E				Number of arrivals </p>
+        <p class="p">	F				Frequency of arrivals </p>
+        <p class="p">	G through...		Attribute assignments</p>
+        <p class="p">Columns A through F may have any heading desired as long as the data is of the proper type.  If attributes are to be assigned, columns G and higher should have headings that match the names of the attributes being assigned.  The following example illustrates these points.</p>
+        <h5>Example<MadCap:keyword term="Arrivals:files:example" /></h5>
+        <p class="Graphic">
+            <img src="../Resources/Images/Arrivals file - Excel sheet_480x297.png" style="width: 480; height: 297;" />
+        </p>
+        <p class="p">The values in the spreadsheet cells must be a numeric expression as opposed to a formula commonly used in spreadsheets.  For example, if cell E4 in the spreadsheet above was actually a formula generating the value 100, the value <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> generates is zero. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> only recognizes expressions for the Qty, Time, Number, and Frequency columns in a spreadsheet.</p>
+        <p class="p">When defining an External Arrivals File, you do not need to define arrivals in the Arrivals edit table.  If several entities are scheduled to arrive at the same time, entities arrive in the system according to the order in which they appear in the arrival list.  However, when there is more than one occurrence for the arrival record, the next entity will not arrive until the frequency has elapsed.  Meanwhile, other entities listed below the record may be allowed to arrive.</p>
+        <p class="p_10">Please Note: If the time of the first arrival is zero and there is only one arrival of some quantity, you do not need to complete additional cells. Likewise, if there is only one arrival at a time other than zero, you do not need to fill in additional cells after the Time entry.</p>
+        <p class="p_10">Please Note: If the Excel file contains more than one sheet of data, only the first sheet will be read in.</p>
+        <h4>Shift File<MadCap:keyword term="External files:types:shift file;File:types:shift file;Shift:file" /></h4>
+        <p class="p">A Shift file type is automatically created in the External Fields table when you assign a calendar to a location or resource. If calendars have been assigned, they will be automatically added as a Shift record type in the External Files table. If no path is listed for the calendar file, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will first search in the directory where the model exists and then in the default models directory specified in the application Options.</p>
+        <p class="p_10">Please Note: Creating a shift file record in the External Files Editor should not be done.  It is done automatically through the shift assignment.</p>
+        <h4>DLL File<MadCap:keyword term="External files:types:DLL file" /></h4>
+        <p class="p">A DLL file is needed when using external subroutines through the Xsub() function. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" title="" alt="" xrefformat="{paratext}">Subroutines</a> for more information.</p>
+        <h4>Array File<MadCap:keyword term="External files:types:Array file" /></h4>
+        <p class="p">An Array file record is automatically created in the External Files table when you define an Excel file as the Import or Export file for an array. When a file has been assigned to an array, it will be automatically added as an Array record type in the External Files table. If no path is listed for the file, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>will first search in the directory where the model exists and then in the default models directory specified in the application Options. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-AccessingFilesforArraysonSharePoint.htm#C-06_1157716610_1086242" xrefformat="{paratext}">Accessing Files for Arrays on SharePoint</a> for more information on importing data into arrays, or on exporting data from arrays, with SharePoint.</p>
+        <h4>Other External Files<MadCap:keyword term="External files:types:other;File:extensions;File:external:other" /></h4>
+        <p class="p">In addition to allowing the user to define external files, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> creates other external files. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> automatically creates and/or opens files depending on the specifications in the model. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-AccessingExternalFileswithSharePoint.htm#C-06_1157716610_1086242" xrefformat="{paratext}">Accessing External Files with SharePoint</a> for more information on reading data from, and writing data to, external files on SharePoint. Below is a description of the different files <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> creates (* indicates files that remain open while the model is running):</p>
+        <p class="p">Extension 	Type 	Description </p>
+        <p class="p_11">
+            <MadCap:keyword term="CSV files" />CSV 	ASCII 	Export Data (comma delimited) </p>
+        <p class="p_11">
+            <MadCap:keyword term="MOD files" />MOD* 	Binary 	Model File </p>
+        <p class="p_11">
+            <MadCap:keyword term="RDB files" />RDB 	Binary 	Output Database (basic statistics) </p>
+        <p class="p_11">
+            <MadCap:keyword term="RDT files" />RDT 	Binary 	Output Time Series data </p>
+        <p class="p_11">
+            <MadCap:keyword term="SED files" />SED* 	Binary 	Seed File used to store seed values for each replication </p>
+        <p class="p_11">
+            <MadCap:keyword term="TRC files" />TRC* 	ASCII 	Trace File </p>
+        <p class="p_11">
+            <MadCap:keyword term="GLB files" />GLB 	Binary 	Graphic Library Files </p>
+        <p class="p_11">
+            <MadCap:keyword term="PMOV files" />PMOV ProModel Output Viewer Settings File that stores all the settings and options for reports and charts so they can be recreated when viewing simulation results in Output Viewer.</p>
+        <p class="p_11">
+            <MadCap:keyword term="PMCAL files" />PMCAL ProModel Calendar File</p>
+        <h4>Open Files<MadCap:keyword term="External files:open files;File:open external;File:external:open" /></h4>
+        <p class="p">Depending on the model specifications, there may be some occasions where several files need to be open simultaneously to execute the model. There is a feature which allows the user to access up to 255 open files at any time. The [General] section of the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">promod.ini</MadCap:conditionalText> file contains the following statement: OpenFiles=n where n is the number of files between 20 and 255. The default is 40. To change the number of available open files, simply edit the<MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">promod.ini</MadCap:conditionalText> file such that OpenFiles equals the desired number and then restart <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>. There is also the option to close files using the Close statement. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Close.htm#C-14_4292047180_1102938" title="" alt="" xrefformat="{paratext}">Close</a>. </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

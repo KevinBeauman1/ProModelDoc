@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Storage Dialog</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Storage Properties</h1><a name="kanchor323"></a>
+        <p>Right-click on a storage shape, select Properties, and the <b>Storage</b> properties window displays.</p>
+        <p>There are Four sections in the <b>Storage</b> properties window.</p>
+        <ul>
+            <li value="1"><a href="#Trigger" class="a_11 selected">Trigger</a>
+            </li>
+            <li value="2"><a href="#Order" class="a_11 selected">Order</a>
+            </li>
+            <li value="3"><a href="#Notes" class="a_11 selected">Notes</a>
+            </li>
+            <li value="4"><a href="#Advanced" class="a_11 selected">Advanced</a>
+            </li>
+        </ul>
+        <p style="text-align: left;">
+            <img src="Resources/Images/StorageProperties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Storage shapes provide an area in the process for entities to be stored and allow for automatic reordering of entities based on quantity levels or time.</p>
+        <p>Storage units may be “stacked,” which combines the individual storage shapes into one storage block. Each storage shape in the block must have a unique entity selected in the General section. Below is an example image of three storage shapes that have been stacked to form one storage block.</p>
+        <p>
+            <img src="Resources/Images/StackedStorage.gif" />
+        </p>
+        <p>When stacking storage shapes, the connection points must line up so that a green square appears around the connection points, as shown below:</p>
+        <p>
+            <img src="Resources/Images/StackedStorageConPoint.gif" />
+        </p>
+        <p>To move an entire storage block, click on and drag the bottom storage shape.</p>
+        <p>
+            <img src="Resources/Images/StorageProperties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Name</b> This is the simulation-friendly name of the storage and should be used when referenced in logic. It is synched with the text of the storage shape in the layout. It replaces any special characters or spaces with underscores _. This name and the shape text can be unsynched through the option in the Advanced section.</p>
+        <p><span class="c_Override_1"><b>Capacity</b></span> The maximum 
+ number of entities that can be in the storage at one time. Use the keyword 
+ “Infinite” for an unlimited amount of storage.</p>
+        <p><span class="c_Override_1"><b>Entity</b></span>&#160;Choose 
+ the name of the entity that will be stored at the storage shape. If you 
+ have multiple storage shapes stacked into a storage block, each shape 
+ must have a unique entity.</p>
+        <p><span class="c_Override_1"><b>Initial Level</b></span>&#160;Enter the 
+ number of entities that will be in the storage when the simulation starts. 
+ If the Initial Level is less than the reorder quantity then an initial 
+ order will be automatically triggered at the beginning of the simulation.</p>
+        <h2><a name="Trigger"></a>Trigger</h2>
+        <p>The trigger controls when more entities will be ordered according to 
+ the Order options</p>
+        <p><span class="c_Override_1"><b>Type</b></span>&#160;An 
+ entity order trigger can be defined by either level or time:</p>
+        <ul type="circle" class="ul_4">
+            <li class="li_1" value="1"><span class="c_Override_1"><b>By Level</b></span>&#160;When the 
+ trigger is defined By Level, an entity order will occur when the quantity 
+ of entities at the storage shape drops below the level defined.</li>
+            <img src="Resources/Images/StorageTriggerByLevel.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+            <ul type="circle">
+                <li class="li_1" value="1"><span class="c_Override_1" style="font-weight: bold;">Level</span> &#160;When the quantity of entities at the storage drops to this value or less, an order will occur.</li>
+            </ul>
+            <li class="li_1" value="2"><span class="c_Override_1"><b>By Time</b></span>&#160;An order will occur according to the simulation clock and not the quantity of entities at the storage.</li>
+            <img src="Resources/Images/StorageTriggerByTime.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+            <ul type="circle">
+                <li value="1"><span class="c_Override_1"><b>First Time</b></span>&#160;The first order will occur when the simulation clock reaches this time. If this field is left blank then the first occurrence will be based upon the time in the Frequency field.</li>
+                <li value="2"><span class="c_Override_1" style="font-weight: bold;">Frequency</span> &#160;Defines how often orders will occur after the first time.</li>
+            </ul>
+        </ul>
+        <h2><a name="Order"></a>Order</h2>
+        <p>
+            <img src="Resources/Images/StorageOrder.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>An order causes entities to arrive with an Ordered Arrival or route 
+ with a Send Routing to a storage or activity when the order is triggered.</p>
+        <ul type="disc" class="ul_1">
+            <li class="li_1" value="1"><span class="c_Override_1"><b>Entity</b></span>&#160;Select 
+ the entity to be ordered. This does not need to be the same entity that 
+ is in the storage. However, the entity must become the storage entity 
+ somewhere in the process prior to arriving at the storage in order to 
+ be allowed into the storage without error. &#160;This 
+ can be accomplished, for example, by renaming the entity or attaching 
+ the ordered entity to another entity with the proper name.</li>
+            <li class="li_1" value="2"><span class="c_Override_1"><b>Quantity/Up-To Qty</b></span>&#160;If the 
+ Trigger Type is defined as By Level, then this is the <b>Quantity</b> of entities that 
+ are reordered when the total inventory drops below the trigger level. 
+ &#160;If the 
+ Trigger Type is defined as By Time, then the quantity of entities that are reordered 
+ is determined by subtracting the total inventory from the <b>Up-To Qty</b> 
+ defined..</li>
+            <li class="li_1" value="3"><span class="c_Override_1"><b>Source</b></span>&#160;Select 
+ where entities are to be ordered or sent to. Entities do not need to be ordered 
+ or sent directly to the storage where the order is defined, but rather an order can 
+ be performed at any ordered arrival or send routing.</li>
+        </ul>
+        <h2><a name="Notes"></a>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the storage. </p>
+        <h2><a name="Advanced"></a>Advanced</h2>
+        <p><strong class="strong_1">Statistics</strong> Check to collect statistics for this Storage.</p>
+        <p><b>Sync Name</b> When checked, the shape text and simulation-friendly Name (in General section) are connected and can only be changed by editing the shape text in the layout. When unchecked, they are disconnected, which allows you to have more descriptive shape text while keeping the simulation-friendly name (used in logic) more simple and concise. </p>
+        <p><b>Show Text</b> Checking this option shows the shape text in the layout, while unchecking this option hides the shape text.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

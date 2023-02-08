@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="2221" MadCap:lastWidth="1466" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1104362"></a><a name="C-14_4292047180_11941"></a>Group</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related operation statements:GROUP;GROUP" />Entity-Related Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Group &lt;expression&gt; {As &lt;entity name&gt;}</p>
+        <p class="Syntax_body">Group (Var1+Var2)</p>
+        <p class="Syntax_body">Group 10 As EntX</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Accumulates and temporarily consolidates a specified quantity of entities into a single Group shell entity. The shell entity retains the same attributes as the first entity that was grouped into the shell. However, if the Group As statement is used, the new shell entity does not retain any attribute values, even if the same name is used for the Group shell entity as the entities that have been grouped.</p>
+        <p class="p">The individual entities comprising the group retain their identities, attributes, and resources and are divided from the group when an <MadCap:keyword term="UNGROUP" />Ungroup statement is encountered. The first entity processed from the group takes any resources the group owns. Entities in a group can be grouped into a larger group at another location.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The operation column of process edit tables only. Group may not be used in combination with <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="CREATE" />Create, <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, <MadCap:keyword term="SPLIT AS" />Split As, other Group statements in the same processing logic, or with conveyors. An exception to this rule is that an Ungroup statement may follow a Group statement in the same process.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The number of entities to group. If this expression is zero, the statement is ignored. If less than zero, it generates an error.</p>
+        <p class="p">This expression is evaluated every time an entity encounters the Group statement, so the amount of entities to be combined can vary as the simulation progresses. If it becomes less than or equal to the number of entities already waiting to be combined, the entity that encountered the Group statement will be grouped with all the waiting entities.</p>
+        <p class="Component">AS &lt;new entity name&gt;  </p>
+        <p class="p">The optional name of the resulting entity. If left off, the new entity has the same name as the last entity to complete the group.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">Group creates a shell (a temporary entity representing grouped entities that starts with cost and time statistics of zero) to which <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> assigns all cost and time statistics for the group. Each grouped entity retains its individual cost and time statistics and, when you ungroup the entities and the shell disappears, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> divides all statistics and cost (accrued by the shell) between them.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">In this example, Man, Woman, and Child are grouped together at Floor1 before getting on an elevator.  The group of entity types, called Grp_A, is then routed to Floor2 where it will be ungrouped. (See the Ungroup statement example.)</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Man</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Floor1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait E(2.0)</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Woman</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Floor1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Wait U(3,1)</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Child</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Floor1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">Wait N(2.1,.2)</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">Group 10 As Grp_A</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Grp_A</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Get Elevator</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Man</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 0.5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Woman</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 0.5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Child</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">Move For 0.5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Grp_A</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Floor2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move With </p>
+                        <p class="CellBody">Elevator</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also </p>
+        <p class="p">Combine, Accum, GroupQty(), and Entity(). Also see <MadCap:xref class="lowercase_no_see" href="C-06-AttributesandtheGROUPUNGROUPStatement1.htm#C-06_1157716610_1085220" target="" title="" alt="">Attributes and the Group/Ungroup Statements on page 1</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="667" MadCap:lastWidth="562">
+    <head>
+    </head>
+    <body>
+        <h4><a name="C-05_2723800551_1085277"></a>Location Edit Table<MadCap:keyword term="Locations:edit table" /></h4>
+        <p class="p">A location's characteristics can be modified with the Location edit table. The Location edit table contains fields for displaying the graphic icon, specifying the location name, and defining other characteristics of each location. Each of these fields is explained below. You can edit the desired field directly in some cases, or by selecting a record and clicking the column heading button of the desired field.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-100-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-100-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-91-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" />
+        </p>
+        <p class="p"><span class="Bold"><b>Icon</b><MadCap:keyword term="Locations:icon;Icon:locations" /></span>   The graphic icon used to represent the location. Changing location graphics is done using the tools in the Location Graphics window. If multiple graphics have been used to define a location, the first graphic used is shown here. Clicking on the Icon button brings the graphic for the current location into view if it is not currently showing in the layout window.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Name</b><MadCap:keyword term="Locations:naming;Name:location" /></span>   The name of each location. Names can be up to 80 characters in length and must begin with a letter (for more information on naming items, see <MadCap:xref class="lowercase_no_see" href="C-11 - Names.htm#C-11_756594771_1090808" target="" title="" alt="">Names on page 1</MadCap:xref>). A location's name can be changed by editing this field. The Search and Replace is automatically called when the name is changed.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Cap.</b><MadCap:keyword term="Locations:capacity;Capacity:location" /></span>  The capacity of the location refers to the number of entities the location can hold or process at any one time. A <MadCap:keyword term="Locations:capacity:maximum;Capacity:maximum location capacity;Tanks:capacity:maximum" />location's maximum capacity is 999999. Entering <MadCap:keyword term="INF" />INF or <MadCap:keyword term="INFINITE" />INFINITE will set the capacity to the maximum allowable value. If this field contains an expression, it will be evaluated at the start of the simulation before any initialization logic. Accordingly, a location's capacity will not vary during the simulation run.</p>
+        <p class="p_10">Please Note: Individual units of a multi-unit location may differ in capacity only if every unit's capacity is greater than 1. For example, in a location with two units, one may have a capacity of 5 and the other a capacity of 10. However, one unit may not have a capacity of one and the other a capacity of five. </p>
+        <p class="p"><span class="Bold"><b>Units</b><MadCap:keyword term="Locations:units;Units" /></span><span class="Element" style="line-height: 12pt;">   The number of units of a location, up to 999. A multi-unit location works like several locations with common characteristics. </span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>DTs</b><MadCap:keyword term="Locations:downtimes;Downtimes" /></span><span class="Element" style="line-height: 12pt;">   Click on this heading button to define location downtimes, including any setup times. (See <MadCap:xref class="lowercase_no_see" href="C-05 - Location Downtimes.htm#C-05_2723800551_1085676" target="" title="" alt="">Location Downtimes on page 1</MadCap:xref>.)</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Stats</b><MadCap:keyword term="Locations:statistics;Statistics" /></span><span class="Element" style="line-height: 12pt;">   Click on this heading button to specify the level of statistical detail to be gathered for the location. (To view a location's statistics after a simulation run, choose View statistics from the Output menu.) Three levels of data collection are available:</span>
+        </p>
+        <ul>
+            <li class="li_1"><span class="Bold"><MadCap:keyword term="Statistics:none" /><b>None</b></span> No statistics will be collected.</li>
+            <li class="li_1"><span class="Bold"><MadCap:keyword term="Statistics:basic" /><b>Basic</b></span> Only utilization and average time in location will be collected.</li>
+            <li class="li_1"><span class="Bold"><MadCap:keyword term="Statistics:time series" /><b>Time Series</b></span> Collects basic statistics and time series tracking the contents of the location over time.</li>
+        </ul>
+        <p class="p"><span class="Bold"><b>Rules</b><MadCap:keyword term="Locations:rules;Rules:location" /></span>   This field defines (1) how a location selects the next incoming entity from several that are waiting to enter this location, (2) how multiple entities at a location queue for output, and (3) which unit of a multi-unit location is selected by an incoming entity. (See <MadCap:xref class="lowercase_no_see" href="C-05 - Location Decision Rules Dialog Box.htm#C-05_2723800551_1086047" target="" title="" alt="">Rules Dialog Box on page 1</MadCap:xref>.) To edit any of this information at a location, click on the heading button to open the Location Rules dialog box.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Notes</b><MadCap:keyword term="Locations:notes field;Notes:field" /></span>   Enter any optional notes about a location in this field or click on the heading button to open a larger Notes window.</p>
+    </body>
+</html>

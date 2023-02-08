@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1916" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PILogic.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Free Form Logic</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="logic;custom logic" />Logic Windows</h1>
+        <p>The Logic windows provide a convenient interface for entering custom logic for the objects in your process. If you're not sure where to start with logic, the <a href="#statementlist" class="a_11">Statement List</a> on the toolbar, <a href="Intellisense.htm" class="a_11">Intellisense</a>, and <a href="SyntaxGuide.htm" class="a_11">Syntax Guide</a> are features that will help you.  </p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/LogicWindow.png" MadCap:mediastyle="@media print { max-height: auto;max-width: 4.00in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2>Logic Window</h2>
+        <ul>
+            <li>The Logic window displays the logic you have typed in it and the order in which
+ it will be executed. Logic is executed from top to bottom each time this 
+ particular logic is called during simulation.</li>
+            <li>Type the logic directly into the window immediately below the toolbar. You can edit the logic as you would with most any text editor.</li>
+            <li>To check for correct syntax of your logic, simulate your model.</li>
+        </ul>
+        <h2>Logic Toolbar</h2>
+        <p>The Logic toolbar provides additional functionality for modifying your logic. You must first select a line of logic, or multiple lines, in the 
+ logic window before using most of the buttons in the toolbar.</p>
+        <p>
+            <img src="Resources/Images/LogicToolbar.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li class="li_1"><b>Statement List</b> - this drop down list displays all valid statements for use in Logic for the selected object (see below).</li>
+            <li class="li_1"><b>Cut</b>, <b>Copy</b>, <b>Paste</b> - the next three buttons in the toolbar allow you to 
+ cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) lines of logic
+ in the logic window.</li>
+            <li class="li_1"><b>Outdent</b> and <b>Indent</b> - these two buttons allow you to align selected lines of logic, respectively. This feature can help in formatting the code to make it more structured and readable.</li>
+            <li class="li_1"><b>Comment</b> and <b>Uncomment</b> - the next two buttons allow you to comment out and 
+ uncomment selected lines of logic. When you "comment out" a line of logic, 
+ it will not be executed. Process Simulator will ignore any lines of logic
+ that have been commented out with double slashes (<i>//</i>).</li>
+        </ul>
+        <h2><a name="statementlist"></a>Statement List</h2>
+        <p>Every Logic window has a Statement List which shows you which statements can be used in the logic's context. Hovering over a statement in the list will open a help tooltip explaining what it does. Selecting a statement from the list will add it into the Logic window.</p>
+        <p>
+            <img src="Resources/Images/StatementList.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2>Automatic Formatting</h2>
+        <p>Logic windows will attempt to automatically format your logic through indentation, coloring and capitalization. This is done for readability and consistency across models and users. For example, it formats the indentation of the logic within conditional statements such as the If, Else If, Else, and While-Do statements, by placing a starting brace { and ending brace } and indenting the statements between them. Currently, this default formatting cannot be customized.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

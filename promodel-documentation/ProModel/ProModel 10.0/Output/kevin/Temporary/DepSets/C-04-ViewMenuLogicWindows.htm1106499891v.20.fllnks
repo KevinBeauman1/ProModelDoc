@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/View Menu - Logic Windows.png" />
+    <Link
+      Url="Content/Topics/Font - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Logic Color Selection - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Color - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/View Menu - Logic Windows.png" />
+    <Link
+      Url="Content/Topics/Font - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Logic Color Selection - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Color - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_LogicWindowSettings" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Edit:preferences"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="View:menu:logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Logic:window"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Logic:window:window font"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Font:logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Logic:window:logic window font"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="View:menu:logic window:logic window font"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Logic:window:color"
+      Conditions=""
+      LocalConditions=""
+      Position="36" />
+    <IndexCacheEntry
+      Term="Color:logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="36" />
+    <IndexCacheEntry
+      Term="View:menu:logic window:color"
+      Conditions=""
+      LocalConditions=""
+      Position="36" />
+    <IndexCacheEntry
+      Term="Logic color:logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+    <IndexCacheEntry
+      Term="Color:logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

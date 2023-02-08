@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="896" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>ObjectID</h1>
+        <h5>
+            <MadCap:keyword term="functions:objectid;objectid" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>ObjectID()</p>
+        <p>If ObjectID() = 123 Then Debug</p>
+        <h2>Description</h2>
+        <p>Returns the unique ID number associated with the entity calling the function.  As each entity enters the simulation, whether through an arrival, order, or being created, its ID number is incremented in sequence, thus ensuring that every ObjectID is unique throughout the simulation.  The first entity is given the number 1, and each subsequent entity’s ID number is incremented by 1.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Example</h2>
+        <p>Every 100th entity entering a process step must be routed to a QA process. By dividing the ObjectID number by 100, you can route every entity that has no remainder (ID number divides evenly by 100) to the QA process.</p>
+        <p class="p_11">Real Test<br />Test = ObjectID() Mod 100<br />If Test &lt;&gt; 0 Then</p>
+        <p class="p_12">aDest = NextStep</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">aDest = QA_Process</p>
+    </body>
+</html>

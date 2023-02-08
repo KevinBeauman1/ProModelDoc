@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="607" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490292"></a><a name="C-01_2914010915_GetSimTime"></a>
+            <MadCap:keyword term="GetStatus;ProModel Application Object:GetStatus" />GetStatus</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetStatus</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Gets the current state of a loaded model.  Use this method to trap events triggered by ProModel or the user. Note:  This method is easier to use than the Events Handler, but less robust and reliable.  For instance, the GetStatus method will work fine for simple applications, but for more complicated situations, such as running a series of models, it would work better to use the event handler approach to avoid problems with timing issues.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:  </span>None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:  </span>Long.  Status code (0 – 9) of the loaded model.</p>
+        <p class="Component_description" style="font-family: Arial;font-weight: bold;font-style: normal;font-size: 10pt;letter-spacing: 0em;color: #000000;text-decoration: none;"><span class="Lower_Label">Status Codes:</span>
+        </p>
+        <ol>
+            <li>Status unknown</li>
+            <li>No model loaded</li>
+            <li>Loading a model</li>
+            <li>Model loaded</li>
+            <li>Load error</li>
+            <li>Translating model</li>
+            <li>Simulation in progress</li>
+            <li>Simulation or translation terminated pre-maturely</li>
+            <li>Simulation completed</li>
+            <li>Simulation frozen</li>
+        </ol>
+        <p class="Component_description"><span class="_Override" style="font-weight: bold;">Example:</span>This example starts the simulation for the loaded model and continuously checks the status.  Then, when the status changes to 8 (normal completion), shows a message to let the user know it’s done.</p>
+        <p class="objects">Sub WhatsUp()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim vStatus As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2"> <![CDATA[	]]><b>vStatus = pmObject.GetStatus</b></p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">	Do</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects3">		vStatus = pmObject.GetStatus</p>
+        <p class="objects2">	Loop Until vStatus = 8</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	MsgBox "I'm done."</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

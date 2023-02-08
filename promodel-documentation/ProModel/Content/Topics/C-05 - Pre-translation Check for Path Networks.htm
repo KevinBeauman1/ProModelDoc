@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="335" MadCap:lastWidth="560">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1224921"></a>
+            <MadCap:keyword term="Pre-translation check;Path networks:pre-translation check" />Pre-translation check for Path Networks and Automatic Mapping</h3>
+        <p class="p">When you run your simulation, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will compile your model, check your path networks for errors and automatically calculate shortest distances between nodes. If your model has large, complex path networks, this could cause your model’s compilation time to run quite long.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To combat this, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will perform a pre-translation check for path networks. This means that the first time your model compiles, it will check your path networks for errors and automatically calculate the shortest distance between nodes. It will then save this information.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Every subsequent time your model compiles, it will read the saved information about your path networks and not check for errors or recalculate shortest distances. This saves compilation time on large models.</p>
+        <p class="p">&#160;</p>
+        <p class="p">However, if you edit one or more of your path networks, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will once again check the modified path networks for errors and recalculate shortest distances during compilation. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will consider a path network to have been modified if its name was at any time, since the last compile, highlighted in the Path Network dialog window.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Or if you have checked to recompile mappings in the simulation dialog, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will check all Path networks for errors and recalculate shortest distances (i.e. automatic mappings) between each scenario. </p>
+    </body>
+</html>

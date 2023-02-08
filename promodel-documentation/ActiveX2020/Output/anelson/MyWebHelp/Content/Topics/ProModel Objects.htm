@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Introduction">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>ProModel Objects</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2>ProModel Objects</h2>
+        <p class="p">All of the Type Libraries have an Application object, a Data object and a Runtime object.  Each object gives you access to different parts of ProModel.  The following is a brief description of these objects:</p>
+        <ul>
+            <li class="li_1" value="1">Application – gives you operational control of ProModel.  For example, using this object you can load a model or start a simulation.</li>
+            <li class="li_1" value="2">Data – allows access to model information (like Locations or Processing records).</li>
+            <li class="li_1" value="3">Runtime – gives you methods that can update or capture the values of statistics while a simulation is running.</li>
+        </ul>
+        <p class="p">When you declare object variables, we recommend that you use the ProModel object types. These object types include the ProModel, ProModelPM, ProModelMM and ProModelSM type libraries. The ProModel type library behaves in a unique manner compared with the other three. It is generic in the sense that it can be used to control either ProModel, MedModel or ServiceModel. Whereas, the ProModelPM type library is specific to the ProModel product, ProModelMM is specific to the MedModel product and ProModelSM is specific to the ServiceModel product.</p>
+        <p class="p">&#160;</p>
+        <p class="p">ProModel, MedModel and ServiceModel include a useful utility called ProSetter. If your system includes ProModel and MedModel (and/or ServiceModel) then this utility may be used in order to change which product is launched by the generic ProModel type library.</p>
+        <p class="p">Here are examples of how to declare and create an instance of each of the ProModel objects.  </p>
+        <p class="p">&#160;</p>
+        <p class="p">ProModel Type Library</p>
+        <p class="objects">Dim <span class="_Override" style="font-style: italic;">ObjVarName</span> as ProModel.CProModel</p>
+        <p class="objects">Set <span class="_Override" style="font-style: italic;">ObjVarName</span> = CreateObject(“ProModel”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as proModel.CProModelData</p>
+        <p class="objects">Set ObjVarName = Create Object("ProModelData")</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as ProModel.CRuntime</p>
+        <p class="objects">Set ObjVarName = CreateObject("ProModel.CRuntime")</p>
+        <p class="objects">&#160;</p>
+        <p class="p">ProModelPM Type Library (ProModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Runtime”)</p>
+        <p class="objects">&#160;</p>
+        <p class="p">PromodelMM Type Library (MedModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Runtime”)</p>
+        <p class="objects">&#160;</p>
+        <p class="p">PromodelSM Type Library (ServiceModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Runtime”)</p>
+    </body>
+</html>

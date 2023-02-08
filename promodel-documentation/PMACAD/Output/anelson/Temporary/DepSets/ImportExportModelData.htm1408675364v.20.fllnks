@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Import-Export Model Data"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Resources/Images/newimportexport1.png" />
+    <Link
+      Url="Content/Resources/Images/pcsribbon_import_export_buttons.png" />
+    <Link
+      Url="Content/Resources/Images/export_to.png" />
+    <Link
+      Url="Content/Resources/Images/exporting_progress.png" />
+    <Link
+      Url="Content/Resources/Images/view_exported_file.png" />
+    <Link
+      Url="Content/Resources/Images/after export view.png" />
+    <Link
+      Url="Content/ObjectExplorer.htm" />
+    <Link
+      Url="Content/Resources/Images/importing status.png" />
+    <Link
+      Url="Content/Resources/Images/import errors.png" />
+    <Link
+      Url="Content/Resources/Images/import errors.1.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Resources/Images/newimportexport1.png" />
+    <Link
+      Url="Content/Resources/Images/pcsribbon_import_export_buttons.png" />
+    <Link
+      Url="Content/Resources/Images/export_to.png" />
+    <Link
+      Url="Content/Resources/Images/exporting_progress.png" />
+    <Link
+      Url="Content/Resources/Images/view_exported_file.png" />
+    <Link
+      Url="Content/Resources/Images/after export view.png" />
+    <Link
+      Url="Content/ObjectExplorer.htm" />
+    <Link
+      Url="Content/Resources/Images/importing status.png" />
+    <Link
+      Url="Content/Resources/Images/import errors.png" />
+    <Link
+      Url="Content/Resources/Images/import errors.1.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="model data:export"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model data"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="export"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="import"
+      Conditions=""
+      LocalConditions=""
+      Position="75" />
+    <IndexCacheEntry
+      Term="model data:import"
+      Conditions=""
+      LocalConditions=""
+      Position="75" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

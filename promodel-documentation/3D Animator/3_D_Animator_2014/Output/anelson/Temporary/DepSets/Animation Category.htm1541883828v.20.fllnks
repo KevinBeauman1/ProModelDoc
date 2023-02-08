@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/AnimationCat.bmp" />
+    <Link
+      Url="Content/Topics/AnimationTable.bmp" />
+    <Link
+      Url="Content/Topics/Compose Navigation Tab.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/AnimationCat.bmp" />
+    <Link
+      Url="Content/Topics/AnimationTable.bmp" />
+    <Link
+      Url="Content/Topics/Compose Navigation Tab.htm#C-04_1942222156_1076587" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_1942222156_Animation_Category" />
+    <Anchor
+      Name="C-04_1942222156_1076760" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Animation Category"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Start Date"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="Disable Compose Items"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Promodel.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

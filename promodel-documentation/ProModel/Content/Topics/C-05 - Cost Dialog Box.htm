@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="560" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>
+            <MadCap:keyword term="Cost:cost dialog box" />Cost Dialog Box</h3>
+        <p class="p">Use the Cost Dialog box to define costs for Locations, Entities, and Resources. Fields in the Cost Dialog box vary between Object Types and <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> evaluates expressions in these fields only during translation at run time. The General Statistics Report includes statistical information automatically generated during run time about cost for locations, entities, and resources.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Obje</b>
+            <MadCap:keyword term="Cost:cost dialog box:object type" /><b>ct Type</b> Use this pull-down menu to define costing for the components of the selected object type. Object types include locations, resources, and entities as shown in the following example. All defined model components of the selected type appear in the box below the object type field and <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows you to assign costs to any of these components.</p>
+        <p class="Graphic">
+            <img src="5-10-2.jpg">
+            </img>
+        </p>
+        <h4>Loca<MadCap:keyword term="Cost:locations;Locations:cost" />tions</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-3.jpg" MadCap:mediastyle="@media print { max-width: 2.5in; }">
+            </img>
+        </p>
+        <p class="p"><b>Operat</b>
+            <MadCap:keyword term="Cost:cost dialog box:operation rate;Cost:locations:operation rate" /><b>ion Rate</b> This field specifies the cost per unit of time to process entities at the selected location. Cost accrues only while an entity executes a <MadCap:keyword term="WAIT" />Wait or <MadCap:keyword term="USE" />Use statement in operation logic. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> accepts expressions in this field and evaluates them at translation.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>P</b>
+            <MadCap:keyword term="Cost:cost dialog box:per;Cost:locations:per" /><b>er</b> With this pull-down menu, you can set the time units for the Operation Rate. Time units may be in seconds, minutes, hours, or days as shown here.</p>
+        <p class="Graphic">
+            <img src="5-10-4.jpg">
+            </img>
+        </p>
+        <h4>Reso<MadCap:keyword term="Cost:resources;Resources:cost" />urces</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-5.jpg" style="margin-right: 1.265045px;margin-bottom: 1.067039px;" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><b>Regular </b><MadCap:keyword term="Cost:cost dialog box:regular rate;Cost:resources:regular rate"></MadCap:keyword><b>Rate</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This field specifies the cost per unit of time for a resource used in the model. You can use expressions in this field (evaluated at translation) to set the rate or change it using SetRate. For more information on the SetRate operation statement, see <MadCap:xref class="lowercase_no_see" href="C-14 - SetRate.htm#C-14_4292047180_1107243" target="" title="" alt="">SetRate on page 1</MadCap:xref>. </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>P</b><MadCap:keyword term="Cost:cost dialog box:per;Cost:resources:per"></MadCap:keyword><b>er</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This pull-down menu allows you to set the time units for the Regular Rate. Times may be in seconds, minutes, hours, or days as shown here.</p>
+        <p class="Graphic">
+            <img src="5-10-4.jpg">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><b>Cost P</b><MadCap:keyword term="Cost:cost dialog box:cost per use;Cost:resources:cost per use"></MadCap:keyword><b>er Use</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This field allows you to define the actual dollar cost accrued each time you use the resource (i.e., the minimum usage cost). The cost per use updates when you obtain the resource and <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> accepts expressions in this field (evaluated at translation).</p>
+        <p class="p_10">Please Note: Since <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> counts a preemption as a use, if you preempt a resource from an entity, the usage cost applies to the resource only when it returns to the entity. </p>
+        <h4> Enti<MadCap:keyword term="Cost:entities;Entity:cost" />ties</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-7.jpg" MadCap:mediastyle="@media print { max-width: 2.5in; }">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><b>Initi</b><MadCap:keyword term="Cost:cost dialog box:initial cost;Cost:entities:initial cost;Initial:cost:CREATE;Initial:cost:ORDER; Initial:cost:ROUTE; Initial:cost:INCENTCOST" /><b>al Cost</b></span> This field allows you to define the initial entity cost for an entity which enters the system through a scheduled arrival, a Create statement, or an Order statement. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> accepts expressions in this field and evaluates them at translation.</p>
+        <p class="p_10">Please Note: <i>When you implicitly create new entities through a Route statement, </i><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel" style="font-style: italic;">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel" style="font-style: italic;">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel" style="font-style: italic;">ServiceModel</MadCap:conditionalText><i> does not add an initial cost to the entity. To add an initial cost, use the IncEntCost statement. See </i><MadCap:xref class="lowercase_no_see" href="C-14 - IncEntCost.htm#C-14_4292047180_1104683" target="" title="" alt="" style="font-style: italic;">IncEntCost on page 1</MadCap:xref><i> for more information.</i></p>
+    </body>
+</html>

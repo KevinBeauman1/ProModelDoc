@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/Subroutine Example - Operation logic window.png" />
+    <Link
+      Url="Content/Topics/6-5-3.jpg" />
+    <Link
+      Url="Content/Topics/cc-c6-243-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/Subroutine Logic - Logic window.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/Subroutine Example - Operation logic window.png" />
+    <Link
+      Url="Content/Topics/6-5-3.jpg" />
+    <Link
+      Url="Content/Topics/cc-c6-243-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/Subroutine Logic - Logic window.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086302" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Subroutines:example"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Subroutines:edit:table"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Subroutines:parameters"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Parameters:subroutines"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Subroutines:logic"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="Logic:subroutines"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="787" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="Introduction" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>ProModel Objects</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 MadCap:xrefTargetName="ProModel Objects"><a MadCap:generatedBookmark="TOC" name="ProModel Objects"></a>ProModel Objects</h2>
+        <p class="p">All of the Type Libraries have an Application object, a Data object and a Runtime object.  Each object gives you access to different parts of ProModel.  The following is a brief description of these objects:</p>
+        <ul>
+            <li class="li_1" value="1">Application – gives you operational control of ProModel.  For example, using this object you can load a model or start a simulation.</li>
+            <li class="li_1" value="2">Data – allows access to model information (like Locations or Processing records).</li>
+            <li class="li_1" value="3">Runtime – gives you methods that can update or capture the values of statistics while a simulation is running.</li>
+        </ul>
+        <p class="p">When you declare object variables, we recommend that you use the ProModel object types. These object types include the ProModel, ProModelPM, ProModelMM and ProModelSM type libraries. The ProModel type library behaves in a unique manner compared with the other three. It is generic in the sense that it can be used to control either ProModel, MedModel or ServiceModel. Whereas, the ProModelPM type library is specific to the ProModel product, ProModelMM is specific to the MedModel product and ProModelSM is specific to the ServiceModel product.</p>
+        <p class="p">&#160;</p>
+        <p class="p">ProModel, MedModel and ServiceModel include a useful utility called ProSetter. If your system includes ProModel and MedModel (and/or ServiceModel) then this utility may be used in order to change which product is launched by the generic ProModel type library.</p>
+        <p class="p">Here are examples of how to declare and create an instance of each of the ProModel objects.  </p>
+        <p class="p">&#160;</p>
+        <p class="p">ProModel Type Library</p>
+        <p class="objects">Dim <span class="_Override" style="font-style: italic;">ObjVarName</span> as ProModel.CProModel</p>
+        <p class="objects">Set <span class="_Override" style="font-style: italic;">ObjVarName</span> = CreateObject(“ProModel”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as proModel.CProModelData</p>
+        <p class="objects">Set ObjVarName = Create Object("ProModelData")</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as ProModel.CRuntime</p>
+        <p class="objects">Set ObjVarName = CreateObject("ProModel.CRuntime")</p>
+        <p class="objects">&#160;</p>
+        <p class="p">ProModelPM Type Library (ProModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelPM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelPM.Runtime”)</p>
+        <p class="objects">&#160;</p>
+        <p class="p">PromodelMM Type Library (MedModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelMM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelMM.Runtime”)</p>
+        <p class="objects">&#160;</p>
+        <p class="p">PromodelSM Type Library (ServiceModel product)</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Application</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Application”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Data</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Data”)</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Dim ObjVarName as PromodelSM.Runtime</p>
+        <p class="objects">Set ObjVarName = CreateObject(“PromodelSM.Runtime”)</p>
+    </body>
+</html>

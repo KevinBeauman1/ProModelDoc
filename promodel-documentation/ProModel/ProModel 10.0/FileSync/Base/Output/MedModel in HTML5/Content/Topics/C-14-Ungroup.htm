@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Ungroup</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-14-Ungroup.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Ungroup</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1107668"></a><a name="C-14_4292047180_30171"></a>Ungroup</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related operation statements:UNGROUP;UNGROUP" />Entity-Related Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Ungroup {LIFO}</p>
+        <p class="Syntax_body">Ungroup</p>
+        <p class="Syntax_body">Ungroup LIFO</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Separates entities that were grouped with the <MadCap:keyword term="GROUP" />Group statement. Each of the resulting entities searches ahead in the process list and then from the beginning of the list until a process is found that has been defined for that entity type at the current location. The first entity processed from the group takes any resources the group owns. If a grouped entity has members that are also grouped entities, only the top level group is ungrouped with an Ungroup statement. An additional Ungroup will ungroup any member groups.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The operation column of process edit tables only. You may not use Ungroup on conveyors nor at the end of a queue. Ungroup may not be used in combination with <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="CREATE" />Create, <MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="LOAD" />Load, <MadCap:keyword term="UNLOAD" />Unload, Split As or other Ungroup statements in a processing logic. It may follow a Group statement no more than once in the same processing logic to allow batch processing.</p>
+        <p class="p_10">Please Note: If you are trying to ungroup an entity that has never been grouped, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> ignores the Ungroup statement.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">
+            <MadCap:keyword term="LIFO" />LIFO</p>
+        <p class="p">Last In, First Out. Starts the ungrouped entities processing from last to first, rather than from first to last. If this option is not specified, the ungrouped entities will be processed <MadCap:keyword term="FIFO" />FIFO, or First In, First Out.</p>
+        <h5 class="_rules_statements">Explicit Entity Actions</h5>
+        <p class="p">With an Ungroup, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> dissolves the temporary shell and divides costs among the ungrouped entities (ungrouped entities may include smaller clusters of grouped entities). </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">The example below is the continuation of the Group statement example where EntA, EntB and EntC were grouped to form Grp_A. Now the entities are ungrouped with all of their original properties. (See the Group statement example.)</MadCap:conditionalText>
+        </p>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Grp_A</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Ungroup</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">
+                        <p class="CellBody">Use Res1 For 2 min</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Loc5</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">Loc6</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body4">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Group, Load, Join, Combine, and Split As. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-AttributesandtheGROUPUNGROUPStatement1.htm#C-06_1157716610_1085220" title="" alt="" xrefformat="{paratext}">Attributes and the Group/Ungroup Statements</a> for more information.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

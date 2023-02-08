@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Free Form Logic"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/LogicWindows.htm" />
+    <Link
+      Url="Content/Intellisense.htm" />
+    <Link
+      Url="Content/SyntaxGuide.htm" />
+    <Link
+      Url="Content/Resources/Images/LogicWindow.png" />
+    <Link
+      Url="Content/Resources/Images/LogicToolbar.png" />
+    <Link
+      Url="Content/Resources/Images/StatementList.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/LogicWindows.htm#statementlist" />
+    <Link
+      Url="Content/Intellisense.htm" />
+    <Link
+      Url="Content/SyntaxGuide.htm" />
+    <Link
+      Url="Content/Resources/Images/LogicWindow.png" />
+    <Link
+      Url="Content/Resources/Images/LogicToolbar.png" />
+    <Link
+      Url="Content/Resources/Images/StatementList.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="statementlist" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="logic"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="custom logic"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

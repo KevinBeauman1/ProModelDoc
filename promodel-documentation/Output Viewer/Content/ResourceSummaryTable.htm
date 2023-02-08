@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1761" MadCap:lastWidth="916" MadCap:ignoredWords="ProModel">
+    <head>
+    </head>
+    <body>
+        <h1>Resource Summary Table</h1>
+        <MadCap:keyword term="resource summary table" />
+        <p class="p">Click on the Tables drop-down and select Summary in the Resource group.</p>
+        <p>
+            <img src="Resources/Images/ResourceSummaryTable1.png" />
+        </p>
+        <p class="p">A table is generated, which lists various resource summary statistics regarding the model, and contains the following columns of information.</p>
+        <p>
+            <img src="Resources/Images/ResourceSummaryTable2.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/ResourceSummaryTable2-pcs.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Scenario:</b> The scenario to which the data in the row applies.</p>
+        <p class="p"><b>Name:</b> The resource name.</p>
+        <p class="p"><b>Units:</b> The number of units defined in the Resources module for that resource.</p>
+        <p class="p"><b>Scheduled Time:</b> The total amount of time the resource was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>Work Time:</b>The total amount of time the resource was in use.</p>
+        <p class="p"><b>Number Times Used:</b> The total number of times the resource has been acquired to <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">transport or </MadCap:conditionalText>process an entity or to service <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> or other downed resources.</p>
+        <p class="p"><b>Average Time Per Usage:</b> The average time the resource spent <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">transporting or </MadCap:conditionalText>processing an entity, or servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> or other resource. Includes any pickup and drop-off time as well as any blocked time while in use. </p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>Average Time Travel To Use:</b>The average time the resource spent traveling to a location or other resource to transport or process an entity, or to service a location or other resource. Does not include any pickup time, but does include any blocked time. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM" style="margin-left: 40px;"> Average Time Travel to Use = Total Time Travel to Use / (divided by) Number of Times Used</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>Average Time Travel To Park:</b>The average time the resource spent traveling to either a park node or a downtime node. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Blocked In Travel:</b> Blocked In Travel The percentage of time the resource was unable to move to a destination because the next path node along the route of travel was blocked (occupied by another resource). (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p"><b>% Utilization</b>: The percentage of time the resource spent <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">traveling to be used, transporting or </MadCap:conditionalText>processing an entity, or servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity </MadCap:conditionalText>or other resource.</p>
+        <p class="p" style="margin-left: 40px;">% Utilization = (<MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Total Travel to Use Time + </MadCap:conditionalText>Total Time In Usage) / (divided by) Total Scheduled Time</p>
+        <p class="p_10"><b>Note:</b> Output Viewer reports resource groups and multi-unit resources both by unit and collectively. The collective unit (aggregate) report for a resource totals the first three fields and averages the last <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">five</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">two</MadCap:conditionalText> fields discussed above.</p>
+    </body>
+</html>

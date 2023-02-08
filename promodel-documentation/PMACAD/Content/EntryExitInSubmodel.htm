@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1351" MadCap:lastWidth="956">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Hierarchical Modeling Rules</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <link rel="StyleSheet" href="Resources/Stylesheets/Stylesheet - general.css" />
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+    </head>
+    <body>
+        <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1>
+            <MadCap:keyword term="submodel connections" />Entry and Exit Points in a Submodel</h1>
+        <p>In addition to linking an activity to a submodel, connections within the submodel must be defined to specify where entities from the parent model enter the subprocess and where entities exit the submodel to return to the parent model. These connections are described below.</p>
+        <h2>Submodel Entry Point</h2>
+        <p class="li_1">Entities enter a submodel from the parent model at an activity that 
+ has an <b>Arrival</b> connection with the <b>Submodel Input</b> checkbox checked in its Advanced section. </p>
+        <p class="li_1">
+            <img src="Resources/Images/SubmodelEntry.png" class="img_2" />
+        </p>
+        <p>Only one entry point in the subprocess should be defined.
+</p>
+        <h2>Submodel Exit Points</h2>
+        <p>Entities return to the parent model from any activity 
+ in the submodel that has  a <b>Route 
+ to Exit</b> connection with the <b>Submodel Output</b> property
+ checked in the Advanced section of the shape properties. If the Submodel Output checkbox is unchecked, 
+ the entities will simply exit the system at that point and report its statistics. </p>
+        <p>
+            <img src="Resources/Images/SubmodelExitPoints.png" class="img_2" />
+        </p>
+        <p>At least one exit point must be defined but a submodel can have multiple exit points.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

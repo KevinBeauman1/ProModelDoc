@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1487" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Int</h1>
+        <h5>
+            <MadCap:keyword term="statements:int;int" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Int &lt;name1&gt;{= &lt;expression1&gt;, &lt;name2&gt;= &lt;expression2&gt;...) </p>
+        <p>Int Count<br />Int Count = 1<br />Int Count = 1, Test = Rand(100)</p>
+        <h2>Description</h2>
+        <p>Creates a local variable of type integer. Local variables work much the same as attributes, except that they only are available within the logic that declares them. A new variable will be created for each entity that encounters an Int statement. Local variables are not directly available to subroutines, which have their own local variables. However, a local variable may be passed to a subroutine as a parameter.</p>
+        <p>Use local variables  as the test variable in While and Do Until loops.</p>
+        <h2>Valid In</h2>
+        <p>Any logic. Variables declared with Int are valid in any expression within the logic where a normal integer number is valid.</p>
+        <h2>Components</h2>
+        <p><b>&lt;names&gt;</b>
+        </p>
+        <p>An identifier for the local variable. This identifier must be a valid name.</p>
+        <p><b>&lt;expressions&gt;</b>
+        </p>
+        <p>The variable will initially be assigned this value. This expression is evaluated every time the Int statement is encountered. If no expression is assigned, the local variable will be initialized as zero.</p>
+        <h2>Example</h2>
+        <p>
+            A plant manufactures pipes of 12 different types, such as 2" steel, 4" aluminum, etc. At the Cutting station, these pipes are cut into certain lengths depending upon the orders that need fulfilling. As a pipe arrives at Cutting, it has an attribute aCutQty that specifies how many cuts are needed for that specific pipe. We can use a local variable to keep track of how many times the pipe is cut so that it can exit the While loop after completing the cuts. The logic might look like the following:</p>
+        <p class="p_11">Int cutCount<br />While (cutCount &lt;= attrMaxCuts) Do<br />{</p>
+        <p class="p_12">Wait N(15, .4) sec</p>
+        <p class="p_12">Inc varTotalPipeCuts<br />Inc cutCount</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p><a href="real.htm" class="a_11">Real</a>
+        </p>
+    </body>
+</html>

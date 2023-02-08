@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="207" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088709"></a>C<MadCap:keyword term="Cost:COMBINE/GROUP;COMBINE;GROUP" />ombine/Group</h3>
+        <ul>
+            <li class="li_1">Combined entities add their costs to the resultant entity, but not their time statistics. The resultant entity begins with fresh time statistics.</li>
+            <li class="li_1">Grouped entities do<span class="Emphasis"> not</span> add their costs or statistics to the group sh<MadCap:keyword term="Shell"></MadCap:keyword>ell (a temporary entity representing grouped entities that starts with cost and time statistics of zero).</li>
+            <li class="li_1">When an <MadCap:keyword term="UNGROUP"></MadCap:keyword>Ungroup occurs, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> divides all costs accrued by a grouped entity among the ungrouped entities. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> copies all other entity statistics calculated during the grouped period to each of the ungrouped entities.</li>
+            <li class="li_1">Entities leaving the system grouped with other entities do NOT report their individual costs, but <span class="Emphasis">do</span> report all other statistics. To get the cost of each entity, you must ungroup the entities before they exit.</li>
+        </ul>
+    </body>
+</html>

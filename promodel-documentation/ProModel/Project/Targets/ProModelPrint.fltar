@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="ProModel PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  conditions="PM-MM Conditionals.ProModel,Print_only.PrintOnly"
+  MasterStylesheet="/Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css"
+  ConditionTagExpression="include[&quot;PM-MM Conditionals.ProModel&quot; or Print_only.PrintOnly] exclude[&quot;PM-MM Conditionals.MedModel&quot; or &quot;PM-MM Conditionals.ServiceModel&quot;] "
+  MasterToc="/Project/TOCs/PM-MM Printed User Guide.fltoc"
+  DisableAutoSync="true"
+  GetLatestBeforeCompile="false"
+  InjectBookHeadings="false"
+  InjectEmptyPages="true"
+  OutputFolder="C:\_hg\ProModel.Documentation\ProModel\Output"
+  PatchHeadingLevels="true">
+  <PDF
+    ShowUsedBookmarks="true"
+    InitialMagnification="100"
+    PageMode="UseOutlines"
+    ConvertBookmarks="true"
+    Tagged="false"
+    PageLayout="OneColumn"
+    CollapsedBookmarks="true"
+    DownsampleImages="false"
+    TitleBar="DocumentTitle" />
+  <PrintedOutput
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <DocumentProperties
+    Title="ProModel 2016 User Guide"
+    Author="ProModel Corporation" />
+</CatapultTarget>

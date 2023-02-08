@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="659" MadCap:lastWidth="562" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1108596"></a><a name="C-14_4292047180_22411"></a>Xwrite</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General operation statements:XWRITE;XWRITE" />General Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Xwrite &lt;file ID&gt;, &lt;string or numeric expression&gt;</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Writes information to a general write file in any text format the user chooses. Xwrite is for writing user-formatted files, while <MadCap:keyword term="WRITE" />Write and <MadCap:keyword term="WRITELINE" />Writeline are for writing special formatted text files. Xwrite always appends to a file unless the file is Reset. Note that any time a Write or Writeline writes to a file, the file will automatically be a text file. No end of file marker is appended to files written only with Xwrite. In subsequent replications, additional items are appended to the end of the file unless the file is <MadCap:keyword term="RESET" />Reset. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does not format the string expression, although you can use the <MadCap:keyword term="FORMAT()" />Format statement to manually format data. To add an end of file marker to a user-formatted file, use Xwrite <MadCap:keyword term="CHAR()" />Char(26).</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;file ID&gt;</p>
+        <p class="p">The name of the file as previously defined in the External Files Editor.</p>
+        <p class="Component">&lt;string or numeric expression&gt; </p>
+        <p class="p">The string expression to be written to the file. </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The following example uses Xwrite to record the time each Box completes processing at location Ship.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Ship</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait N(7.3,.4)</p>
+                        <p class="CellBody">Xwrite Rpt, “Box Shipped at:” $ Format(Clock(min),3,2)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Doc</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Write, Writeline, and Reset. Also see <MadCap:xref class="lowercase_no_see" href="C-06 - File Types.htm#General2" target="" title="" alt="">General Write File on page 1</MadCap:xref>.</p>
+        <p class="Body">&#160;</p>
+    </body>
+</html>

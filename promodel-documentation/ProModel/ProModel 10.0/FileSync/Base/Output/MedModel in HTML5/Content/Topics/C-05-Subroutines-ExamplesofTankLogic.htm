@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Pre-defined Tank Subroutines">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Examples of Tank Control Logic</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-Subroutines-ExamplesofTankLogic.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Pre-definedTankSubroutines.htm">Pre-defined Tank Subroutines</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Examples of Tank Control Logic</span>
+        </div>
+        <h3><a name="C-05_2723800551_1089726"></a><a name="C-05_2723800551_Tanks"></a>Examples of Tank Control Logic</h3>
+        <p class="p">The following examples show how to model different tank and flow situations. For full models illustrating these situations, see the reference model in the MODELS\REFS directory within the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> directory.</p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Filling from an Entity</h4>
+        <p class="p">A typical tank modeling situation is the arrival of an entity (e.g., a tanker or other vehicle) to deliver its contents to a tank. To model this situation, define an arrival or routing for the entity, causing it to enter the location where it will make its delivery. In the entity processing logic at the delivery location, call the Tank_Fill subroutine. By <span class="_Override" style="font-style: italic;">calling</span> rather than <span class="_Override" style="font-style: italic;">activating</span> the subroutine, you will detain the delivering entity until Tank_Fill executes. Note that the material does NOT route from the delivery location to the tank. Instead, the Tank_Fill subroutine simply fills the tank with a specified quantity while the entity waits. Unless the quantity is a constant amount, it is usually a good idea to use an entity attribute to store this quantity value. After filling the contents into the tank, the entity is free to continue processing.</p>
+        <p class="p">To illustrate how an entity might transfer its contents to a tank, suppose an entity, Tanker, arrives at a location, Delivery, carrying a quantity of gallons stored in an entity attribute called Tanker_Qty. The tanker discharges its contents into a tank, ReceivingTank, at a rate of 200 gallons per minute. Once the ReceivingTank becomes full, the level must drop to 1000 gallons before filling resumes. Since the entity is tied up while it discharges into the tank, use the following statement in the processing logic for Tanker at Delivery to define the logic used to fill the tank:</p>
+        <h5>Fill the tank</h5>
+        <p class="Syntax_body">Tank_Fill (ReceivingTank, Tanker_Qty, 200, 1000) </p>
+        <p class="p">The above statement causes each arriving tanker to wait until the quantity stored in its Tanker_Qty attribute adds to the ReceivingTank. Once the tanker delivers this quantity, it is free to execute the routing defined for it at the Delivery location.</p>
+        <h4><a name="C-05_2723800551_1089736"></a><a name="C-05_2723800551_Initialize and replenish supply tanks;Replenish and initialize supply tanks;Tanks"></a>Initializing and Replenishing Supply Tanks</h4>
+        <p class="p">A supply tank is an originating tank that is a source of raw material for one or more downstream tanks. Often, supply tanks contain ingredients that feed into a mixing tank or hold chemicals that feed into a reactor. Typically, you replenish a supply tank when it gets low and make it available for use whenever it has an adequate supply. If you always stock the supply tank and it is always available for use, you do NOT need to model it since it poses no constraint on the process. You may set supply tanks to an initial level at the start of the simulation in the initialization logic, then use them as needed by a mixing or other downstream tank. To initialize the level in a supply tank, enter the following statement in the initialization logic:</p>
+        <h5>Initialize tank level</h5>
+        <p class="Syntax_body"><span class="Helv_Bold">Tank_SetLevel</span> (<span class="Emphasis">&lt;supply tank&gt;, &lt;qty&gt;</span>)</p>
+        <p class="p">If, for example, you wanted to begin the simulation with the supply tank, WaterTank, filled with 800 gallons of water, you would enter:</p>
+        <h5>Start with full tank</h5>
+        <p class="Syntax_body">Tank_SetLevel (WaterTank, 800)</p>
+        <p class="p">To gradually fill or refill a supply tank whenever it drops below a trigger level, use the Tank_Fill subroutine with a large fill quantity and an appropriate resume level. For example, the following statement will continue pumping up to 999999 units into TankA at a rate of 200 units per minute. Whenever the tank becomes full, it must drop to 400 units before filling resumes. </p>
+        <h5>Resume fill with trigger level</h5>
+        <p class="Syntax_body">Tank_Fill (TankA, 999999, 200, 400)</p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Mixing and Reactor Tanks</h4>
+        <p class="p">Mixing and reactor tanks receive material usually from one or more supply tanks. Once it receives the material, the tank may require a mixing or other reaction time. To illustrate, suppose we have two tanks (Tank1 and Tank2) supplying ingredients to a tank called MixingTank. First, workers pump 2000 gallons of a liquid from Tank1 at 50 gallons per minute followed by the transfer of 300 pounds of dry mix from Tank2 at 20 pounds a minute (the dry mix adds .2 gallons to the level of the MixingTank for every pound transferred, equating to 4 gallons per minute). The ingredients then mix for 15 minutes before transferring to an idle storage tank. After transferring the mix, workers must clean the MixingTank for 50 minutes to prepare it for the next mixing cycle. </p>
+        <p class="p">The control logic for the mixing tank should be a subroutine activated from the initialization logic which continues to loop throughout the simulation. The subroutine logic might appear as follows:</p>
+        <h5>Mix and clean the tank</h5>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Tank_Transfer (Tank1,MixingTank,2000, 50, 0, 0)</p>
+        <p class="syntax_body_indent">Tank_Transfer (Tank2,MixingTank, 300, 20, 4, 0) </p>
+        <p class="syntax_body_indent">Tank_DoOperation (MixingTank,15) //Mix time</p>
+        <p class="syntax_body_indent">Wait Until Tank_State [StorageTank]= Tank_Idle /* Waits for storage tank availability */</p>
+        <p class="syntax_body_indent">Tank_Transfer (MixingTank, StorageTank, Tank_Level[MixingTank],40, 0, 0) </p>
+        <p class="syntax_body_indent">Tank_Prep (MixingTank, 50) // Clean mixing tank for 50 minutes.</p>
+        <p class="Syntax_body">}</p>
+        <p class="p">If the ingredients feed into the mixing tank at the same time rather than sequentially, activate the Tank_Transfer subroutines for the mixing tank and monitor the Tank_Fills array to know which ingredients enter into the tank. For simultaneous fills, replace the first two transfer statements following the Begin statement in the previous subroutine with the following logic:</p>
+        <h5>Simultaneously mix, then clean tank</h5>
+        <p class="Syntax_body">Tank_Fills[MixingTank]=0</p>
+        <p class="Syntax_body">Activate Tank_Transfer(Tank1, MixingTank, 2000, 50, 0, 0)</p>
+        <p class="Syntax_body">Activate Tank_Transfer(Tank2, MixingTank, 300, 20, 4, 0)</p>
+        <p class="Syntax_body">Wait Until Tank_Fills[MixingTank]=2</p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Emptying to an Entity</h4>
+        <p class="p">Often, tanks deliver material to discrete entities such as containers (or perhaps the material itself converts to discrete entities through a solidification or consolidation process). In either case, you can draw from the delivery tank using the Tank_Empty subroutine if outflow is gradual and defined by a flow rate, or the Tank_Dec subroutine if the output occurs in discrete intervals based on a bottling or packaging time. </p>
+        <p class="p"><a name="C-05_2723800551_SEND"></a>To output material from a tank without modeling the entity to which it outputs, call the Tank_Empty or Tank_Dec subroutine. To transfer material from a tank to entities arriving at a filling station (remember, the filling station itself is NOT a tank), route the entities to the filling station using a Send or other routing rule, then call the Tank_Empty or Tank_Dec subroutine. </p>
+        <p class="p">If using the Tank_Dec subroutine, the entity should wait for the fill time <span class="_Override" style="font-style: italic;">before</span> decreasing the tank level since Tank_Dec happens <span class="_Override" style="font-style: italic;">instantly</span>. For example, if a bottling operation fills a 2 gallon container every 6 seconds, define the following processing logic for the container at the fill station:</p>
+        <h5>Wait to fill from tank, then continue</h5>
+        <p class="Syntax_body">Wait 6 sec </p>
+        <p class="Syntax_body">Tank_Dec (Filler, 2) </p>
+        <p class="p"><a name="C-05_2723800551_ORDER"></a>If the delivery tank has insufficient contents to decrease the level by the specified amount, the processing will automatically pause until enough material is available. Once the specified quantity empties, the entity can continue processing. To create an entity as the result of an emptying operation, define an activated subroutine that empties the desired quantity, then execute an Order statement. This will create a new entity at the filling station. </p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Tank Transfers</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="pm-c5-204-1.png" />
+        </p>
+        <p class="p">When transferring from one tank to another, you must determine whether the source tank makes the decision to transfer to the destination tank (a push approach) or whether the destination tank makes the decision to draw material from a source tank (a pull approach). You should define a control subroutine from the perspective of the tank that makes the decision. If the model requires no tank selection, specify a Wait Until statement to wait until the FROM or TO tank satisfies the condition required for transfer. For example, if a source tank makes the decision to transfer to a destination tank whenever the destination tank becomes idle, enter the following statement in the subroutine:</p>
+        <h5>Transfer contents when idle</h5>
+        <p class="Syntax_body">	Wait Until Tank_State [&lt;destination tank ID&gt;] = Tank_Idle</p>
+        <p class="p">If the destination tank makes the decision to transfer (a pull approach), you should base the Wait Until statement on a required condition for the source tank as follows:</p>
+        <h5>Transfer contents based on condition</h5>
+        <p class="Syntax_body">	Wait Until Tank_State [&lt;source tank ID&gt;] = Tank_Blocked</p>
+        <p class="p">Following the Wait Until statement, call the Tank_Transfer, Tank_TransferUpTo, or Tank_TransferDownTo subroutine to transfer from the source tank to the destination tank. </p>
+        <p class="p">To illustrate how to define a tank transfer using a pull approach, suppose that TankB requires 1000 gallons from TankA whenever TankB becomes empty. TankB will draw material from TankA only when TankA has a minimum level of 1000 gallons. The subroutine to define this logic might appear as follows:</p>
+        <h5>Tank transfer in a pull system</h5>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Wait Until Tank_Level[TankA] &gt;= 1000 /*Wait for TankA to reach 1000 gallons*/</p>
+        <p class="syntax_body_indent">Tank_Transfer (TankA, TankB, 1000, 200,0,0) /* Transfer 1000 gal 	to TankB at 200 gpm*/</p>
+        <p class="syntax_body_indent">[Enter TankB processing and emptying logic here]</p>
+        <p class="Syntax_body">}</p>
+        <p class="p_10">Please Note: To select from among multiple input or output tanks, activate this subroutine in the initialization logic.</p>
+        <h4><a name="C-05_2723800551_1089801"></a><a name="C-05_2723800551_Multiple input or output tanks;Tanks"></a>Selecting from Multiple Input or Output Tanks</h4>
+        <p class="p">To enable one or more tanks to select from several input or output tanks, use the pre-defined subroutine Tank_SelectInput or Tank_SelectOutput (see subroutine descriptions). <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> bases tank selection on which tank is ready to transfer or receive and that has the same ProductType array value. You must list the tank selections together in the Location module. </p>
+        <p class="p">For example, if TankX selects from among three input tanks (Tank1, Tank2, and Tank3) based on which input tank has waited the longest to discharge its contents, you would enter the following logic in the control subroutine defined for TankX:</p>
+        <h5>Select from multiple tanks</h5>
+        <p class="Syntax_body">Int Selected_Tank</p>
+        <p class="Syntax_body">SelectedTank = Tank_SelectInput(TankX, Tank1, 3,<br />Tank_LongestBlocked, 0)</p>
+        <p class="p">The first statement defines a local variable, SelectedTank, used to assign which tank you select. The second statement calls the SelectInput subroutine specifying that TankX is to select one of three tanks beginning with Tank1. Tank_LongestBlocked causes TankX to select the tank blocked the longest (i.e., tank is full or waiting). Entering 0 at the end prevents selecting a full tank. If no tank is full, the statement does not execute until one of the input tanks fills. With a tank ID assigned to SelectedTank, you can call a transfer subroutine to make the transfer.</p>
+        <p class="p">For output tanks, you would define similar logic but include Tank_Select<span class="_Override" style="font-style: italic;">Output</span> instead of Tank_Select<span class="_Override" style="font-style: italic;">Input</span>.</p>
+        <p class="Graphic">
+            <img src="pm-c6-206-1.jpg" />
+        </p>
+        <h4><a name="C-05_2723800551_1089813"></a><a name="C-05_2723800551_Transfers, split;Split transfers;Tanks"></a>Split Transfers</h4>
+        <p class="p">Sometimes it is necessary to use a tank or separator to split the flow to several output tanks. To define the concurrent transfer of material from one tank to multiple tanks, define an activated subroutine for each transfer. Suppose, for example, that when TankA fills it begins transferring to TankB at a rate of 30 gpm and to TankC at a rate of 40 gpm. To know when both transfers are complete, define a global variable (e.g., TransferDone) which increments at the end of each transfer. Defining the following logic would initiate this split transfer once TankA is full:</p>
+        <h5>Initiate split transfer</h5>
+        <p class="Syntax_body">Activate TransferToB () // initiates transfers from A to B</p>
+        <p class="Syntax_body">Activate TransferToC () // initiates transfers from A to C</p>
+        <p class="Syntax_body">Wait Until TransferDone = 2 // Wait until transfers are complete</p>
+        <p class="Syntax_body">TransferDone = 0 // reset for next transfer</p>
+        <p class="p">The subroutines TransferToB and TransferToC would each execute a Tank_TransferDownTo command followed by a statement incrementing the value of TransferDone. For example, the logic for TransferToB would be as follows:</p>
+        <h5>Split transfers subroutines</h5>
+        <p class="Syntax_body">TransferDownTo(TankA, TankB, 0, 30, 0)</p>
+        <p class="Syntax_body">Inc TransferDone</p>
+        <h4><a name="C-05_2723800551_1089825"></a><a name="C-05_2723800551_Transfer rate;Tanks"></a>Varying the Transfer Rate</h4>
+        <p class="p">The transfer or empty rate can change dynamically during an empty, fill, or transfer. To vary the rate of flow, pass 0 as the flow rate when calling any of the transfer, fill, or empty subroutines. This calls the Tank_Rate subroutine automatically with each time step. You should modify the Tank_Rate subroutine so that it returns the appropriate rate value. </p>
+        <p class="p">Suppose, for example, that TankA transfers to TankB at a rate that decreases from 150 gpm to 50 gpm when the level of TankB reaches 4000. To achieve this, pass 0 as the From Rate when you call the transfer subroutine, then enter the following logic in the Tank_Rate subroutine:</p>
+        <h5>Vary the transfer rate</h5>
+        <p class="Syntax_body">If (Tank_FromID = TankA) And (Tank_ToID = TankB) Then</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent"> If Tank_Level[TankB] &gt;= 4000 Then</p>
+        <p class="syntax_indent_2"> RETURN 50</p>
+        <p class="syntax_body_indent">Else</p>
+        <p class="syntax_indent_2"> RETURN 150</p>
+        <p class="Syntax_body">}</p>
+        <h4><a name="C-05_2723800551_Dynamically suspend flow;Flow"></a>Dynamically Suspending Flow</h4>
+        <p class="p">To momentarily interrupt flow into or out of a tank, use the Tank_GoDown subroutine or set the state of the tank to down (Tank_SetState = Tank_Down). This typically happens if a pump fails but may occur in other situations.</p>
+        <h4><a name="C-05_2723800551_Dynamically terminate flow;Flow"></a>Dynamically Terminating a Flow</h4>
+        <p class="p">Normally, the flow into or out of a tank stops once you reach the desired quantity or level. However, in some situations you may wish to terminate a transfer if some event or condition occurs that you cannot predetermine (e.g., a decision to divert flow to a preferred outlet tank that just became available). In this case, you can turn off the flow into or out of a tank by specifying a variable transfer rate instead of a fixed transfer rate (see previous discussion, <span class="_Override" style="font-style: italic;">Varying the Transfer Rate</span>). A variable transfer uses the Tank_Rate subroutine to determine the rate for each time step—to terminate a transfer, return a rate value of 0. </p>
+        <h4><a name="C-05_2723800551_1089840"></a><a name="C-05_2723800551_Define trigger levels;Tanks"></a>Defining Trigger Levels</h4>
+        <p class="p">A trigger level is a level to which material in a tank either falls or rises and triggers some action. To continuously monitor when a tank reaches a trigger level, define and activate a trigger subroutine in the initialization logic. The subroutine should call Tank_RiseTrigger or Tank_FallTrigger depending on whether the associated action should execute when the tank level <span class="_Override" style="font-style: italic;">rises</span> or <span class="_Override" style="font-style: italic;">falls</span> to a certain level.</p>
+        <p class="Graphic">
+            <img src="pm-c5-207-1.jpg" />
+        </p>
+        <p class="p">To show how to define a trigger subroutine, suppose that whenever TankA rises to 2000 gallons, an entity called Truck travels to a location called Pickup. The logic for this trigger subroutine might look as follows:</p>
+        <h5>Trigger subroutine</h5>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Tank_RiseTrigger (TankA, 2000) /* waits for TankA to rise to 2000 units*/</p>
+        <p class="syntax_body_indent">Order 1 Truck to Pickup   // order a Truck to Pickup</p>
+        <p class="Syntax_body">	}</p>
+        <p class="p">Once the tank reaches the trigger level, the Tank_RiseTrigger subroutine prevents further triggering until the level drops back below the trigger level first. </p>
+        <p class="p">When you use trigger subroutines, use them <span class="_Override" style="font-style: italic;">sparingly</span> because they are CPU <span class="_Override" style="font-style: italic;">intensive</span>. Every time the tank level changes, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> tests to see if the tank reached the trigger level. Trigger subroutines are often unnecessary because, unlike an actual tank where sensors report the tank level, you directly control how much to pump into a tank. For instance, an alternative way to model the previous example without using a triggering subroutine would be to call the Tank_TransferToLevel subroutine to first fill the tank to the 2000 unit level, order the Truck entity and then transfer the rest.</p>
+        <h4><a name="C-05_2723800551_Process multiple products;Tanks"></a>Processing Multiple Products</h4>
+        <p class="p">Where you must track several different products through one or more tanks, it may be useful to define macros for naming each product type. For example, setting ProductA equal to 1 and ProductB equal to 2 will improve the readability of the model. To track which product a particular tank is processing, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> uses a pre-defined integer array called Tank_Product—the user is responsible for maintaining the array values. If, for example, ProductA begins pumping into Tank1, enter the following after you assign an integer value to ProductA in the Macros module to distinguish it from other products:</p>
+        <h5>Tracking products</h5>
+        <p class="Syntax_body">Tank_Product [Tank1] = ProductA</p>
+        <h4><a name="C-05_2723800551_Pipes, show;Tanks"></a>Showing Pipes</h4>
+        <p class="p">To show pipes connecting the tanks, use paths or background graphics. If you desire to show the material in the pipe, use a long, skinny tank with a capacity of 1 to represent the pipe. You can set the level of this tank to 0 or 1 to show product flow. For example, suppose we define a tank location called Pipe used to represent the connection between Tank1 and Tank2. Whenever transferring from Tank1 to Tank2, you would enter the following:</p>
+        <h5>Define pipes</h5>
+        <p class="Syntax_body">Tank_SetLevel (Pipe,1)</p>
+        <p class="Syntax_body">Tank_Transfer (Tank1, Tank2, ….)</p>
+        <p class="Syntax_body">Tank_SetLevel (Pipe, 0)</p>
+        <h4><a name="C-05_2723800551_High-rate entity processing;Entity processing"></a>High-Rate Entity Processing</h4>
+        <p class="p">For systems that process entities at rates higher than one hundred units per minute, using discrete entities could make the simulation extremely slow. For this reason, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> uses tanks. To use a tank to model high-rate processing, think of the tank as a buffer where the tank level represents the number of items in the buffer. For example, suppose that bottles feed through a filling station at a rate of 110 per minute. The input buffer, FillerInput, has a capacity of 1200 bottles and the output buffer, FillerOutput, has a capacity of 2000 bottles. If FillerOutput is full, processing stops until the quantity in the output buffer drops to 1500 bottles. An arriving container feeds quantities of 200 bottles to the FillerInput location and it takes 1 minute to unload the container. When the filling station fills 50 bottles, workers put the bottles into a box (represented by an entity) and ship them. Since workers load the boxes as soon as the bottles complete the filling process, there is no delay time involved.</p>
+        <p class="p">The operation logic for the container at the arriving location would be as follows:</p>
+        <h5>High-rate processing</h5>
+        <p class="Syntax_body">Wait 1 min</p>
+        <p class="Syntax_body">Tank_Inc (FillerInput, 200)</p>
+        <p class="p">To model the processing of bottles from FillerInput to FillerOutput, enter the following statement in the model initialization logic.</p>
+        <h5>High-rate processing</h5>
+        <p class="Syntax_body">Activate Tank_Transfer(FillerInput, FillerOutput, 999999, 110, 0, 1500)</p>
+        <p class="p">This statement causes the FillerInput tank to transfer bottles to FillerOutput at a rate of 110 per minute whenever there are bottles in FillerInput and capacity available in FillerOutput. The resume level is 1500. (Up to 999999 bottles will transfer.)</p>
+        <p class="p">To model the creation of a 50-bottle box each time the filling station fills 50 bottles, define and activate the following subroutine in the model initialization logic:</p>
+        <h5>Create new, combined unit</h5>
+        <p class="Syntax_body">Tank Loop //causes logic to repeat continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Tank_Dec(FillerOutput, 50)</p>
+        <p class="syntax_body_indent">Order 1 Box to Shipping</p>
+        <p class="Syntax_body">}</p>
+        <p class="p_10">Please Note: The Tank_Dec statement automatically removes 50 bottles from FillerOutput whenever there are at least 50 bottles available.</p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Special Notes</h4>
+        <ul>
+            <li class="li_1" value="1">Since tank models do not stop automatically when there are no more entities or scheduled arrivals, remember to define a run length or a Stop statement.</li>
+            <li class="li_1" value="2">When you activate a subroutine, it doesn't process until the current logic (the one activating the subroutine) finishes or becomes blocked. It you want the activated subroutine to process <span class="_Override" style="font-style: italic;">first</span>, enter “Wait 0” after the Activate statement.</li>
+            <li class="li_1" value="3">Do not define a local variable inside of a Tank_Loop since the loop will create the variable multiple times.</li>
+            <li class="li_1" value="4"><a name="C-05_2723800551_IF...THEN"></a>Make sure all If...Then logic and Wait Until statements based on the Tank_Level array use the “&gt;=” or “&lt;=” operator and not just an “=” operator. (This is because flow occurs in increments and you can’t check for an exact value.)</li>
+            <li class="li_1" value="5">Tanks are not legal in multi-unit locations or in locations containing a conveyor or queue.</li>
+        </ul>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

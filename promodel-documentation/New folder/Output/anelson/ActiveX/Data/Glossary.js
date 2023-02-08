@@ -1,0 +1,1 @@
+define({numchunks:1,prefix:'Glossary_Chunk',terms:[{t:'Integer',c:0},{t:'integer',c:0},{t:'Real',c:0},{t:'real',c:0}]});

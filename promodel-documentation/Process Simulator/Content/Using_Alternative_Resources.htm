@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2274" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3>Using Alternative Resources</h3>
+        <p class="p">An activity or routing can use one of several different resources to perform the task.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=5qo8TbEPo4s&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=6&amp;feature=plcp" target="_blank">A video demonstrating solution A can be found here.</a></p>
+        <p class="p"><a href="http://www.youtube.com/watch?v=fOYhog4OcNY&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=5&amp;feature=plcp" target="_blank">A video demonstrating solution B can be found here.</a>
+        </p>
+        <h4>Solution A</h4>
+        <ol>
+            <li>Define the resources to be used by dragging resource shapes onto the layout.</li>
+            <li>Open the properties for the activity or routing.</li>
+            <li>Click on Logic.</li>
+            <li>In the Logic, define a USE statement specifying the alternative resources (use the OR option) and the time of use. (Note: resource is automatically freed after the usage time. To keep the resource until a subsequent activity, use a GET statement instead of a USE statement.)</li>
+        </ol>
+        <h4>Solution B</h4>
+        <ol>
+            <li>Define the resources to be used by dragging resource shapes onto the layout.</li>
+            <li>Select Resource Groups under the Process Simulator menu.</li>
+            <li>Define a group name and add both of the defined resources to this group.</li>
+            <li>In the Activity properties where the resources are to be used, enter the time of use in the Time field and select the resource group name in the Resource section.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Patients entering a surgical department prep room are prepped by a nurse or a surgical assistant, whichever is available first. Prep time takes N(5,1) minutes.</p>
+        <p class="p">
+            <img src="Resources/Images/usingalternativeresourceexample1.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution A</h4>
+        <p>
+            <img src="Resources/Images/usingalternativeresourcesolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The logic indicates that the Nurse will be captured as the first preference, but, if not available, the Surgical Assistant is used.</p>
+        <h4>Solution B</h4>
+        <p class="p">Resource Group dialog</p>
+        <p class="p">
+            <img src="Resources/Images/usingalternativeresourcesolution2.png" MadCap:mediastyle="@media print { max-width: 5.0in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Prep Room activity properties</p>
+        <p class="p">
+            <img src="Resources/Images/usingalternativeresourcesolution3.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Introduction">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Working with Data</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-01.htm#C-01_2914010915_459331">Introduction</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Working with Data</span>
+        </div>
+        <h2>Working with Data</h2>
+        <p class="p">When you create a model, what you are actually doing is recording information about your business processes.  When you run a simulation, ProModel takes that information and uses it to display an animated representation of your processes and to generate the statistical information about your processes.</p>
+        <p class="p">&#160;</p>
+        <p class="p">You can think of each model you create as a database.  Within each model database there are many tables, such as Locations, Path Networks, and Processing.  ProModel’s ActiveX uses numbers to reference each table.  In the appendix, you will find a list of tables and their corresponding numbers.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Each table contains one or more fields.  You may have records in many of these tables, with information in some of the fields.  If you are accustomed to spreadsheets, each model would be a workbook, each table a sheet.  Fields would correspond to columns and records would be the rows.  Fields and records are also referenced by number. A complete list of tables and fields, along with their reference numbers, can be found in Appendix A on <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="AppendixA.htm#AppendixA_4093679820_506437">Appendix: Table Definitions on page 1</a>.</p>
+        <p class="p">&#160;</p>
+        <p class="p">With a database, you have an element that is not as easy to create in a spreadsheet, the parent-child relationship.  Since ProModel is a database environment, there are many tables that have that type of relationship.  Let’s look at something a little more concrete.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Suppose you have just started a new model and have defined the locations shown below:</p>
+        <p class="p">
+            <img src="3_4.png" style="width: 361.92px;height: 102.72px;margin-right: 2.304016px;margin-bottom: 0.935997px;" />
+        </p>
+        <p>&#160;</p>
+        <p class="p">For each of these three locations, there is more that one graphic icon.  In addition, the conveyor for Loc2 has a couple of joints (bends) in it.  So, your Locations table would have three records.  Each of these records would have more than one graphic.  Information about the graphics is stored in a different table, which is a child of the Locations table.  The child table (Location Graphics) also has a child of its own, the Q/Conveyor Joints table.  A diagram of the table relationships would look something like this:</p>
+        <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;" class="TableStyle-Process_Table" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">Locations	</td>
+                    <td class="BodyE-Column2-Body1">Location Graphics	</td>
+                    <td class="BodyD-Column3-Body1">	Q/Conveyor Joints</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">1. Loc1</td>
+                    <td class="BodyE-Column2-Body2">
+                        <p>	1. Part Spot</p>
+                        <p>2. Text Box</p>
+                        <p>	3. Counter</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">&#160;</td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">2. Loc2</td>
+                    <td class="BodyE-Column2-Body3">	1. Conveyor	</td>
+                    <td class="BodyD-Column3-Body3">
+                        <p>1. Start Point</p>
+                        <p>		2. First Bend</p>
+                        <p>		3. Second Bend</p>
+                        <p>		4. End Point</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">3. Loc3	</td>
+                    <td class="BodyB-Column2-Body4">
+                        <p>	2. Text Box</p>
+                        <p>1. Part Spot</p>
+                        <p>2. Text Box<br /></p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">If we want to change the name of Loc1 to “EntryPoint”, we would need to make that change in the first record of the Locations table (table number 1).  So, we would select record one in table one.</p>
+        <p class="p">&#160;</p>
+        <p class="p">If we want to move Loc3 to a different place in the layout, we would first need to select the Loc3 record in the parent table (Locations).  Then we can select records in the child table (Location Graphics – table 45) and change the X and Y values of each.</p>
+        <p class="p">&#160;</p>
+        <p class="p"> Now, if we want to move the end of the Loc2 conveyor closer to our new Loc3 position, we first need to select Loc2 in the parent table (Locations).  Then, we would select Conveyor in the child table (Location Graphics) for Loc2.  Finally, we can select the End Point record in the second level child table (Q/Conveyor Joints – table 61) and change its X and Y values.</p>
+        <p class="p">&#160;</p>
+        <p class="p">You may have realized from the description above that you must always <span class="_Override" style="text-decoration: underline;">select</span> a record before you can work with any of the information in that record.  This holds true for all of the data tables in ProModel.  Records can be selected either by name (if it has one) or by index number.  The index number is the number in the upper right corner of the data window in ProModel and represents the record’s position in the table (its row number).  When a new record is added to a table in ProModel, that record is automatically selected.  If a record is deleted from a table, the index numbers of following records will be changed to close the gap. </p>
+        <p class="p"> </p>
+        <p class="p">The fields (columns) are also numbered, from left to right.  One caveat:  the first field is not always the one you might think it is.  For example, the Name field in the Locations table is actually number two.  Field one is no longer used.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

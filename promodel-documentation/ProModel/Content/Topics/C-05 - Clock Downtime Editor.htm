@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="509" MadCap:lastWidth="561">
+    <head>
+    </head>
+    <body>
+        <h4>Clock Downtime Editor<MadCap:keyword term="Locations:downtimes:clock;Downtimes:location:clock" /></h4>
+        <p class="p">Clock downtimes are used to model downtimes that occur depending on the elapsed simulation time, such as when a downtime occurs every few hours, no matter how many entities a location has processed.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Clock Downtime Editor consists of the edit table shown below. To access the Clock Downtime Editor, select Clock from the menu that appears after clicking the DT... heading button. Most expressions, including distributions, can be included in the Frequency, First Time, and Priority fields. (See     <![CDATA[ ]]><MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref> to see if the specific statement or function is valid in a particular field.)</p>
+        <p class="Graphic">
+            <img src="mm-c5-102-2.jpg" MadCap:mediastyle="@media print { max-width: 4in; }">
+            </img>
+        </p>
+        <p class="p">
+            <b>Frequency</b> The time between successive downtime occurrences. This option may be an expression. This field is evaluated as the simulation progresses, so the time between downtimes can vary.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <b>First Time</b> The time of the first downtime occurrence. If this field is left blank, the first clock downtime will occur according to the frequency field. This time is evaluated after any initialization logic.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <b>Priority</b> The priority (0-999) of the downtime occurrence. The default priority is 99, the highest non-preemptive priority.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <b>Scheduled...</b>  Select YES if the downtime is to be counted as a scheduled downtime. Select NO if the downtime is to be counted as a non-scheduled downtime.</p>
+        <p class="p">&#160;</p>
+        <p class="p">All scheduled downtimes will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <b>Logic</b> Enter any logic statements to be processed when the downtime occurs. When the logic has completed, the location becomes available. In the most simple case, the logic is simply a Wait statement with a time value or expression which represents the duration of the downtime. Click on the heading button to open a larger edit window.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <b>Disable</b> Select YES to temporarily disable the downtime without deleting it from the table.</p>
+        <p class="p">The example above shows a simple clock-based downtime where the location is down for 10 minutes every 2 hours (120 min). Because this time should not be included in the total scheduled or available hours, YES is selected in the “Scheduled” column.</p>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="320" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089495"></a><a name="C-05_2723800551_37110"></a>T<MadCap:keyword term="TANK_UPDATESTATS;Subroutines:tank:TANK_UPDATESTATS" />ank_UpdateStats</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_UPDATESTATS (&lt;Tank ID&gt;)</p>
+        <p class="Syntax_body">TANK_UPDATESTATS (TankA) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> calls this subroutine automatically whenever you call any of the predefined subroutines that affect the tank level. If you change the value of the Tank_Level directly, call the Tank_UpdateStats subroutine afterward. This subroutine updates the current statistics on the tank and sets the state to Tank_Filling (if filling), Tank_Emptying (if emptying), Tank_Blocked (if full), or Tank_Idle (if empty).</p>
+        <p class="p">&#160;</p>
+        <p class="p">You should not need to use this subroutine unless you defined a customized Tank_Empty, Tank_Fill, or Tank_Transfer subroutine.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+    </body>
+</html>

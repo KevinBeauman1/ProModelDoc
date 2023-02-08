@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlossary>
+  <GlossaryEntry
+    glossTerm="PCS Glossary.Term0">
+    <Terms>
+      <Term>Integer</Term>
+    </Terms>
+    <Definition
+      Link="">An integer number is a whole number ranging from  -2,147,483,648 to 2,147,483,647. Integer values may not include commas. Therefore, the number 5,380 should be entered as 5380.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="PCS Glossary.Term1">
+    <Terms>
+      <Term>Real</Term>
+    </Terms>
+    <Definition>A real number is any number ranging from 1.7 X 10 -308 to 1.7 X 10 +308, including decimals. Real values may not include commas. As such, the number 5,380.5 should be entered as 5380.5.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="PCS Glossary.Term2">
+    <Terms>
+      <Term>real</Term>
+    </Terms>
+    <Definition>A real number is any number ranging from 1.7 X 10 -308 to 1.7 X 10 +308, including decimals. Real values may not include commas. As such, the number 5,380.5 should be entered as 5380.5.</Definition>
+  </GlossaryEntry>
+  <GlossaryEntry
+    glossTerm="PCS Glossary.Term3">
+    <Terms>
+      <Term>integer</Term>
+    </Terms>
+    <Definition>An integer number is a whole number ranging from -2,147,483,648 to 2,147,483,647. Integer values may not include commas. Therefore, the number 5,380 should be entered as 5380.</Definition>
+  </GlossaryEntry>
+</CatapultGlossary>

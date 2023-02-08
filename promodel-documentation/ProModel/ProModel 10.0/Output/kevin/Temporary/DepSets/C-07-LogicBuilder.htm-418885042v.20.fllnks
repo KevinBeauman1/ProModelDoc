@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box.png" />
+    <Link
+      Url="Content/Topics/7-1-1a.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box.png" />
+    <Link
+      Url="Content/Topics/7-1-1a.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-07_3886599965_1089336" />
+    <Anchor
+      Name="C-07_3886599965_16498" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Logic:builder:accessing"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

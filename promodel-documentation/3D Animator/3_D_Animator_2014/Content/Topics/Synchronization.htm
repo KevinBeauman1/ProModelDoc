@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="507" MadCap:lastWidth="558">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-04_1942222156_1082104"></a><a name="C-04_1942222156_43715"></a>Synchronization</h2>
+        <p class="p">Whenever a model (.mod) file is simulated in ProModel, MedModel, or ServiceModel, and you choose to generate an animation script, you will be offered two choices of whether to overwrite the previous setup (.sup) file. </p>
+        <h3>Choosing to Overwrite</h3>
+        <p class="p">Selecting “Yes” will overwrite the previous setup file. This will delete any custom setup information you have entered in 3D Animator for that animation.</p>
+        <h3>Choosing to Synchronize</h3>
+        <p class="p">Selecting “No” will synchronize the setup file with the model file.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Synchronization is the process where changes to the objects in the model are reflected in the 3D animation setup file.</p>
+        <p class="p">&#160;</p>
+        <p class="p">During synchronization, objects that have been added to the model are automatically added to the setup file, while objects no longer in the model are removed from the setup file. Synchronization detects changes to objects by their name; therefore, object name changes in the model should be repeated manually in the setup file in 3D Animator, otherwise the object will be removed from the setup file and then added again as a new object with default 3D information.</p>
+        <h3>Synchronization Notes</h3>
+        <ul>
+            <li>When labels are added or removed from the model after the setup file has been initially generated, they will not be automatically added to the setup file. They must be added manually.</li>
+            <li>Path and conveyor joints that are added to the model are not automatically added to the setup file. They must be added manually.</li>
+        </ul>
+    </body>
+</html>

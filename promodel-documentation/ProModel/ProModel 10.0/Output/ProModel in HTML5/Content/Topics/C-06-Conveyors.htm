@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Material Handling Systems">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Conveyors</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-Conveyors.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-MaterialHandlingSystems.htm">Material Handling Systems</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Conveyors</span>
+        </div>
+        <h3><a name="C-06_1157716610_1120059"></a><a name="kanchor1358"></a><a name="C-06_1157716610_28087"></a>Conveyors</h3>
+        <p class="p">A conveyor is any moving track, belt, chain, or roller which transports parts from one location to another. This section will help you better understand conveyors and how to model them using ProModel.</p>
+        <p class="p">ProModel determines the capacity of a conveyor by its speed and load spacing rather than a stated capacity. Specifically, capacity is a function of the minimum allowable interload spacing on a conveyor (which is the length of a queue position in the case of accumulation conveyors) and its length. It may be desirable, however, to impose a limit to the number of loads permitted on the conveyor at any one time.</p>
+        <p class="p">Conveyors usually do not pick up and drop off loads as in the case of lift trucks, AGVS, and cranes. You must place loads onto and remove them from conveyors.</p>
+        <p class="p">Depending on the nature of the conveyor and its operation, modeling a conveyor can be  straightforward or complex. For single conveyor sections, modeling is very simple. Conveyor networks, on the other hand, give rise to several complexities (recirculating, merging, etc.) that become more difficult to model.</p>
+        <h5><a name="C-06_1157716610_78530"></a>Conveyor <a name="kanchor1359"></a>Simulation Benefits</h5>
+        <p class="p">Simulating your conveyor system will help you address design and operational issues, answering the following questions:</p>
+        <ul>
+            <li class="li_1" value="1">What is the minimum <a name="kanchor1360"></a>conveyor speed that still meets rate requirements?</li>
+            <li class="li_1" value="2">What is the <a name="kanchor1361"></a>load rate capacity of the conveyor?</li>
+            <li class="li_1" value="3">What is the <a name="kanchor1362"></a>load delivery time for different activity levels?</li>
+            <li class="li_1" value="4">How much <a name="kanchor1363"></a>queuing do accumulation conveyors need?</li>
+            <li class="li_1" value="5">How many carriers do trolley or power-and-free conveyors need?</li>
+            <li class="li_1" value="6">What is the optimum number of pallets to maximize productivity in a recirculating environment?</li>
+        </ul>
+        <h4><a name="C-06_1157716610_88541"></a>Conveyor <a name="kanchor1364"></a>Types</h4>
+        <p class="p">You may represent conveyors as one continuous span of randomly spaced parts (e.g., belt conveyor) or as intermittent spaces or carriers located at fixed intervals (i.e., trolley conveyor).</p>
+        <h4><a name="kanchor1365"></a>Accumulating &amp;<a name="kanchor1366"></a> Non-Accumulating</h4>
+        <p class="p">In addition to continuous or intermittent conveyors, some conveyors permit loads to accumulate or queue if conditions impede forward motion progress. ProModel refers to these conveyors as accumulating conveyors. Other conveyors provide no queuing and halt all activity if forward progress of the leading part or load stops. ProModel refers to these types of conveyors as non-accumulating conveyors. </p>
+        <p class="p">The following figure illustrates how entities can continue to accumulate after the leading load stops on an accumulating conveyor. How a non-accumulating conveyor can accept one additional entity if the leading entity stops, however it is unable to advance any further since the entire conveyor stopped.</p>
+        <p class="Graphic">
+            <img src="9_16.jpg" />
+        </p>
+        <p class="p">The different combination of continuous or intermittent conveyors and transport or accumulation conveyors result in the following four different kinds of conveyors that ProModel is capable of modeling.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Type</p>
+                    </td>
+                    <td class="HeadD-Column2-Header1">
+                        <p class="CellHeading">Example</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Continuous, Non-Accumulating</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">Belt, chain</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody"><a name="kanchor1367"></a>Intermittent, Non-Accumulating</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">Tray, trolley</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Continuous, Accumulating	</p>
+                    </td>
+                    <td class="BodyD-Column2-Body3">
+                        <p class="CellBody">Roller</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Intermittent, Accumulating	</p>
+                    </td>
+                    <td class="BodyA-Column2-Body4">
+                        <p class="CellBody">Power-and-free, towline</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">For best results, you should model carriers or part holding devices on intermittent, accumulating conveyors as though the devices were entities waiting for you to load and unload other entities to and from them (see "Load" is ProModel User Guide) as you move parts. An alternative but similar method is to use a Join statement and then specify two routings when you want the part removed (see Example E in "Modeling Conveyor Systems" in the next section). Yet another way of modeling parts with carriers on a conveyor, is to simply set a part attribute equal to a particular value if the part is on a carrier. If the part is not on a carrier, assign a different value to the same attribute. Operations may occur at either the beginning or end of a conveyor as shown here.</p>
+        <p class="Graphic">
+            <img src="9_65.jpg" />
+        </p>
+        <h4><a name="kanchor1368"></a>Single Section Conveyors</h4>
+        <p class="p">Conveyors used for simple queuing or buffering often consist of a single stretch or section of conveyor. Loads enter at one end and exit at the other end. Load spacing is generally random. These types of conveyors are generally quite easy to model. The modeler merely defines the length and speed and states whether the conveyor is an accumulating or non-accumulating conveyor.</p>
+        <h4><a name="kanchor1369"></a>Conveyor Networks</h4>
+        <p class="p">A conveyor network consists of two or more sections that are connected together to enable part merging, diverting, and recirculating. In such instances, a conveyor may have one or more entry points and one or more exit points. Furthermore, part entry and exit may not always happen at the beginning or end of the conveyor. In ProModel, loads or entities must always enter at the beginning and exit at the end of conveyor networks. To model merging or branching in the middle of the conveyor, break the conveyor into smaller sections.</p>
+        <h4><a name="kanchor1370"></a><a name="C-06_1157716610_38715"></a>Modeling Conveyor Systems</h4>
+        <p class="p">A conveyor system is a combination of one or more types of conveyors which interact to move parts.  Such a system may include branching, merging, and looping.  The process of dividing conveyors into logical sections is fairly straightforward if you understand what constitutes a conveyor section.</p>
+        <p class="p">For modeling purposes, a conveyor section is defined as any independently driven segment of conveyor of the same type.  Conveyor turns are irrelevant as long as the conveyor remains unchanged and both are actuated or stopped together.</p>
+        <p class="p">In ProModel, an accumulating conveyor section must end at the point where parts are permitted to accumulate or back up.  This generally occurs at a transfer point or process location.</p>
+        <h4>Modeling <a name="kanchor1371"></a>Conveyors</h4>
+        <p class="p">While not essential, it is visually more effective to <a name="kanchor1372"></a>draw conveyors to scale on the layout.  You should also size entities traveling on a conveyor to scale when you create them.  Setting the length of a conveyor different from the scale length or conveying entities that have a length or width that is not to scale will result in the appearance of <a name="kanchor1373"></a>load overlapping or excessive <a name="kanchor1374"></a>load spacing.  The underlying logic and simulation is still valid, regardless of whether the graphics are to scale.</p>
+        <p class="p"><a name="kanchor1375"></a>Loads may appear to jump when transferring from the end of one conveyor to another conveyor.  This is a result of ProModel not allowing a load to transfer onto a conveyor until there is room for the load.  Including a transfer time in the Move Logic column of the Routing edit table can result in smooth movement between conveyor sections.  Defining a variable called Transfer_Time and using that variable rather than entering the actual time allows for experimentation with various conveyor speeds with minimal modeling changes.</p>
+        <p class="p"><a name="kanchor1376"></a>Clock precision is also important. Note that movement of one foot at 40 feet per minute will take .025 minutes. If clock precision is set at .1 minutes, truncation will result in zero time. Make sure you check your model for the correct clock precision. For most conveyors, a clock precision of .001 is adequate. ProModel may require greater precision for high-speed conveyors where speeds are greater than 200 fpm.</p>
+        <p class="p">Modeling conveyors in ProModel is quite easy.  Select the conveyor icon in the Locations Graphics window and place the beginning and ending points of the conveyor using the mouse.  Clicking the right mouse button will end the conveyor.  Left-click to add or delete a joint and allow the conveyor to bend.</p>
+        <p class="p">Some users prefer to display the grid and select the <a name="kanchor1377"></a>Snap to Grid option in the View menu. Others will leave Snap to Grid off. You may find that the precise positioning of a conveyor is easier when you turn Snap to Grid off and set the Zoom sufficiently high. When you need to change the type of conveyor to accumulating, double-click on the conveyor icon in the layout, select the Conveyor Options button, and select Accumulating from the Conveyor Options dialog.    </p>
+        <p class="p">The following six <a name="kanchor1378"></a>examples show various ways of modeling conveyors:</p>
+        <p class="p">Example ARoutes one or more parts from one or more non-conveyor locations to any conveyor location.</p>
+        <p class="Graphic">
+            <img src="9_66.jpg" />
+        </p>
+        <p class="p"><a name="kanchor1379"></a>Example BRoutes one or more parts from any conveyor location to one or more non-conveyor locations.</p>
+        <p class="Graphic">
+            <img src="9_67.jpg" />
+        </p>
+        <p class="p">Example CRoutes single parts from any conveyor location to one or more other conveyor locations.</p>
+        <p class="Graphic">
+            <img src="9_69.jpg" />
+        </p>
+        <p class="p">Example DJoins one or more parts from one or more non-conveyor locations to another transporting entity (e.g., a pallet or carrier) at any conveyor location.</p>
+        <p class="Graphic">
+            <img src="9_70.jpg" />
+        </p>
+        <p class="p"><a name="kanchor1380"></a>Example EAccumulates multiple parts coming from one or more non-conveyor locations onto a conveyor location.</p>
+        <p class="Graphic">
+            <img src="9_71.jpg" />
+        </p>
+        <p class="p">Example FSplits parts at a conveyor location sending one or more parts to a non-conveyor location and a single part (e.g., a pallet or carrier) onto the conveyor.</p>
+        <p class="Graphic">
+            <img src="9_72.jpg" />
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

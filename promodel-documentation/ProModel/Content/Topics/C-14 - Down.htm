@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="465.5" MadCap:lastWidth="561" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1232009"></a><a name="C-14_4292047180_49635"></a>Down</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Downtimes:downtime-specific system functions;DOWN" />Downtime-Specific System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Down &lt;dtname&gt;, {&lt;priority&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Makes a location, with the specified called downtime, attempt to go down.</p>
+        <p class="p">&#160;</p>
+        <p class="p">This statement is used in conjunction with the Called Downtime dialog, where you have previously defined the called downtime’s name, priority, and logic.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When this statement is executed, the called downtime will attempt to execute its logic. The timing of the execution of the called downtime’s logic will depend on the location’s state and the called downtime’s priority. </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic, except Initialization and Termination logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;dtname&gt;</p>
+        <p class="p">The name of the called downtime. This name is defined in the Called Downtime dialog, found in the Locations table.</p>
+        <p class="Component">&lt;priority&gt;</p>
+        <p class="p">You may optionally define a priority. This will override the priority you defined in the Called Downtime dialog for the specified called downtime.</p>
+        <p class="p_10">Please Note: The Down statement does not need to be called from the processing logic at the location that is to go down. It can be called from any logic in your model, except Initialization and Termination logic, and still cause the location’s Called Downtime to execute.</p>
+        <p class="_rules">See Also </p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Called Downtime Editor.htm#C-05_2723800551_1247131" target="" title="" alt="">Called Downtime Editor on page 1</MadCap:xref>, and <MadCap:xref class="lowercase_no_see" href="C-05 - Location Priorities and Preemption.htm#C-05_2723800551_1085757" target="" title="" alt="">Location Priorities and Preemption on page 1</MadCap:xref>.</p>
+    </body>
+</html>

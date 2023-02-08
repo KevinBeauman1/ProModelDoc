@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configuring and Animating">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Synchronization</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2><a name="C-04_1942222156_1082104"></a><a name="C-04_1942222156_43715"></a>Synchronization</h2>
+        <p class="p">Whenever a model (.mod) file is simulated in ProModel, MedModel, or ServiceModel, and you choose to generate an animation script, you will be offered two choices of whether to overwrite the previous setup (.sup) file. </p>
+        <h3>Choosing to Overwrite</h3>
+        <p class="p">Selecting “Yes” will overwrite the previous setup file. This will delete any custom setup information you have entered in 3D Animator for that animation.</p>
+        <h3>Choosing to Synchronize</h3>
+        <p class="p">Selecting “No” will synchronize the setup file with the model file.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Synchronization is the process where changes to the objects in the model are reflected in the 3D animation setup file.</p>
+        <p class="p">&#160;</p>
+        <p class="p">During synchronization, objects that have been added to the model are automatically added to the setup file, while objects no longer in the model are removed from the setup file. Synchronization detects changes to objects by their name; therefore, object name changes in the model should be repeated manually in the setup file in 3D Animator, otherwise the object will be removed from the setup file and then added again as a new object with default 3D information.</p>
+        <h3>Synchronization Notes</h3>
+        <ul>
+            <li value="1">When labels are added or removed from the model after the setup file has been initially generated, they will not be automatically added to the setup file. They must be added manually.</li>
+            <li value="2">Path and conveyor joints that are added to the model are not automatically added to the setup file. They must be added manually.</li>
+        </ul>
+    </body>
+</html>

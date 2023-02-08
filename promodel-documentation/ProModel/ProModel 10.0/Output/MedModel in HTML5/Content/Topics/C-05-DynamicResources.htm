@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Dynamic Resources</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-DynamicResources.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Dynamic Resources</span>
+        </div>
+        <h3><a name="C-05_2723800551_1086591"></a>Dynamic Resources<a name="kanchor864"></a></h3>
+        <p class="p">Dynamic resources are resources that move along an assigned path network and may transport entities between locations as a forklift would. They may also need to process entities at several locations, such as an operator performing tasks at more than one location. For these reasons, it is usually preferable to model the resource's movement using a path network. Defined properly, the resource will travel along the path network during the simulation run.</p>
+        <p class="How_to_title">How to create a dynamic resource:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Create a path network using the Path Network Editor.</li>
+            <li class="li_1_how_to_step" value="2">Select <span class="Helv_Bold" style="font-weight: bold;">Resources</span> from the <span class="Helv_Bold" style="font-weight: bold;">Build</span> menu. This automatically brings up the Resources edit table and the Resource Graphics window, which are used together to define all resources in the model.</li>
+            <li class="li_1_how_to_step" value="3">Choose a graphic icon for the resource from the Resource Graphics window.</li>
+            <li class="li_1_how_to_step" value="4">Click the <span class="_Override" style="font-weight: bold;">Specs...</span> button to open the Specifications Dialog.</li>
+            <li class="li_1_how_to_step" value="5">Assign a path network to the resource.</li>
+            <li class="li_1_how_to_step" value="6">If desired, place units of the resource on the layout by selecting the Add button in the Resource Graphics window and clicking on the layout. Every time you create and place a resource graphic on the layout for the same resource in the edit table, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> creates a new resource point. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-ResourcePoints.htm#C-05_2723800551_1087123" title="" alt="">Resource Points</a> for more information.</li>
+            <li class="li_1_how_to_step" value="7">Supply any optional information about the resource including number of units, downtimes, work and/or park searches, and node logic in the Resources edit table.</li>
+        </ol>
+        <p class="p_10">Please Note: <span class="Emphasis">Dynamic resources Notes: </span>1. When defining the resource specifications, the default Resource Search for dynamic resources is Closest Resource. The default for Entity Search is Closest Entity. 2. More than one resource can use the same path network.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

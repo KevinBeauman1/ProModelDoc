@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2436" MadCap:lastWidth="1178">
+    <!-- InstanceBegin template="/Templates/PIOptions.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Debugging Process Simulator Logic</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <link rel="StyleSheet" href="Resources/Stylesheets/Stylesheet - general.css" />
+        <!-- InstanceEndEditable -->
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="debug" />Debugging Process Simulator Logic</h1>
+        <p>The Debugger is a convenient and efficient way to test or follow the 
+ processing of any logic defined in your model. The debugger is used to 
+ step through logic one statement at a time and examine variables and attributes 
+ while a model is running. </p>
+        <p>Before discussing the details of the Debug option, it is important to 
+ understand the following terms:</p>
+        <ul>
+            <li><span class="c_Override_1" style="font-weight: bold;">Statement</span> 
+ &#160;&#160;A 
+ statement causes Process Simulator to take some action or perform some 
+ operation. This includes statements such as Free, Order, and Wait. </li>
+            <li><span class="c_Override_1" style="font-weight: bold;">Logic</span> 
+ &#160;&#160;Logic 
+ refers to the complete set of statements defined for a particular process.</li>
+            <li><b>Thread</b> &#160;&#160;A 
+ thread is a specific execution of any logic. A thread is initiated whenever 
+ a logic needs to be executed. Note that the same logic may be running 
+ in several threads at the same time. For example, three entities of the 
+ same type being processed simultaneously at the same multi-entity activity 
+ would constitute three threads.</li>
+            <li>A thread or logic execution can be suspended 
+ by any statement, causing simulation time to pass (e.g. Wait 5, etc.). 
+ After such a statement completes its task, the thread is resumed. During 
+ the time a thread is suspended, other threads may be initiated, suspended, 
+ resumed, or completed. This is called thread switching.</li>
+        </ul>
+        <p class="p_10">Please note: Even though several threads can execute the same logic at the same time 
+ in the simulation, the simulation processor can only process them one 
+ at a time. So there is really only one current thread while all other 
+ threads are suspended (either scheduled for some future simulation time, 
+ or waiting to be executed at the same simulation time). </p>
+        <h2>Debugger Dialog Box</h2>
+        <p>The Debugger dialog is only available at run time, and can be opened 
+ during the simulation by clicking on the Debug button in the ribbon. 
+ It will also open automatically if the simulation logic encounters a <a href="debug.htm" class="a_11">Debug</a>
+ statement. </p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Debugger.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Error Display 
+ Box</b> &#160;&#160;Displays 
+ the error message or reason why the <b>Debugger</b> dialog box is displayed, 
+ such as the User-Condition becoming true.</p>
+        <p><b>Context Box</b> &#160;Displays 
+ the module, operation, and line number (in which the debugger stopped) 
+ where the current logic is being executed from. This can show multiple levels of context, for example, activity logic that calls a subroutine.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Logic Display 
+ Box</span> &#160;&#160;Displays 
+ the statements of the current logic being executed.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Local Info Box</span> 
+ &#160;Displays 
+ local variables and entity attributes with non-zero values (any with zeros are hidden).</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Run</span> &#160;&#160;Continues 
+ to run the simulation, but still checks the debugger options selected 
+ in the <b>Debugger Options</b> dialog box.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Next Statement</span> 
+ &#160;&#160;Jumps 
+ to the next statement in the current thread. If the last statement executed 
+ suspends the thread, another thread meeting the debugger conditions may 
+ be displayed as the next statement.</p>
+        <p><b>Into Subroutine</b> &#160;&#160;Steps 
+ to the first statement in the next subroutine executed by this thread. 
+ Again, if the last statement executed suspends the thread, another thread 
+ meeting debugger conditions may be displayed first. </p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Options</span> 
+ &#160;&#160;Brings 
+ up the <b>Debugger Options</b> dialog box.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">End Simulation</span> 
+ &#160;&#160;Choose 
+ this option to terminate the simulation. This will prompt you about collecting 
+ statistics.</p>
+        <h2>Debugger Options Dialog </h2>
+        <p>The <b>Debugger Options</b> dialog allows the user to specify when to display 
+ the Debugger dialog box during the simulation run.</p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Debuggeroptions.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Disable debugger</span> 
+ &#160;&#160;Disables 
+ the debugger completely. By default the debugger is enabled. Running the 
+ model with the debugger disabled increases the run speed. When running 
+ multiple replications or scenarios, or when the animation is disabled, 
+ the debugger will automatically be disabled.</p>
+        <p><b>Debug Statement</b> 
+ &#160;&#160;Displays 
+ the Debugger dialog every time a Debug statement is encountered in 
+ logic while running the simulation. </p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Global Change</span> 
+ &#160;&#160;Displays 
+ the Debugger dialog  every time a global change occurs to a specified 
+ variable or array. The Debugger dialog  shows the original and new 
+ value of the element. Only one global name can be specified in this field. 
+ </p>
+        <p><b>User Condition</b> &#160;Displays 
+ the Debugger dialog when a defined user condition written as a Boolean 
+ expression becomes true, for example, when Var1=5. Only one expression 
+ can be specified in this field, although several conditions can be tested 
+ by using the OR operator.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Check Condition</span> 
+ &#160;&#160;Allows 
+ the user to define how often to check the user condition. The options 
+ include:</p>
+        <ul type="circle" class="ul_4">
+            <li class="li_1"><b>Before each 
+ statement</b> &#160;The 
+ condition, such as Var1 = 1, will be checked before each statement is executed. 
+ This option is the most precise way to tell exactly when the user condition 
+ becomes true, but it slows down the simulation the most. </li>
+            <li class="li_1"><b>At each thread 
+ switch</b> &#160;The 
+ condition, such as Var3 &gt; 17, will be checked only if a statement from 
+ a different thread follows the current statement being executed. </li>
+            <li class="li_1"><span class="c_Override_1" style="font-weight: bold;">At each thread 
+ initiation</span> &#160;The 
+ condition, such as Att1 = 5, will be checked only if the next statement 
+ to be executed is the first statement in a thread (the first statement 
+ in a thread is also the first statement of a logic). </li>
+        </ul>
+        <p><span class="c_Override_1" style="font-weight: bold;">OK</span> &#160;&#160;Closes 
+ the <b>Debugger Options</b> dialog and continues to run the simulation model.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1532" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Conditional Routings</h3>
+        <p class="p">Route to one of several different activities depending on the type of entity or the value of a variable or entity attribute.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=yzEIbE7T14c&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=15&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <p class="p">&#160;</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Connect the FROM activity to two or more TO activities that represent the conditional routing options. (A connection may also be made to a blank space on the layout to represent exiting the system.)</li>
+            <li class="li_1">In the Routing properties dialog for each of the routing connections, select Conditional as the Route Type and specify the condition (entity type, attribute or variable) and test value for making the routing decision.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Customer orders for nutritional supplements are received by an Order Entry person and then routed to one of three different supply areas (A, B and C) areas for order fulfillment depending on the type (A, B or C) of order.</p>
+        <p class="p">
+            <img src="Resources/Images/conditionalroutingexamplea.png" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/conditionalroutingsolution.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Multiple entity types enter the Receive Orders activity, but they can be correctly routed based on the entity type itself using the conditional routing leaving that activity.</p>
+    </body>
+</html>

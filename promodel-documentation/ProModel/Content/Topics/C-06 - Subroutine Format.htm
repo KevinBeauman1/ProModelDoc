@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="235" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>
+            <a name="C-06_1157716610_1086289">
+            </a>Subroutine Format<MadCap:keyword term="Subroutines:format" /></h3>
+        <p class="p">A subroutine may be named any unique, valid name.  The general format for calling a subroutine is as follows:</p>
+        <p class="Syntax_body">SubroutineName(arg1, arg2,....,argn)</p>
+        <p class="Component">Subroutine call</p>
+        <p class="Syntax_body">
+            <span class="Helv_Bold">GetOpTime(3,7)</span>
+        </p>
+        <p class="Syntax_body">
+            <span class="Helv_Bold">DoInitialization()</span>
+        </p>
+        <p class="p_10">Subroutine Format Notes: 1. 	If no arguments are specified, open and closed parentheses are still required.  2. 	<MadCap:keyword term="Subroutines:valid usage" />Statements in subroutines must be valid in the logic that called the subroutine. For example, if a subroutine is called from the operation logic, the subroutine may contain only those statements valid in the operation logic. Subroutines called from an <MadCap:keyword term="ACTIVATE" />Activate statement or from the Interact Menu at run-time can have any general logic statements, including Wait. 3. A subroutine may be used in any logic field. In addition, a subroutine may be used in any expression field, provided that the <MadCap:keyword term="RETURN" />RETURN statement is used to return a value to the expression field. Expression fields include the Qty Each column of the Arrivals edit table and the routing rule for processing. 4. 	If a subroutine does not return an expression with the RETURN statement, a value of zero will be returned for subroutines of type Real and Integer.  No value will be returned for a subroutine of type None or Interactive.</p>
+    </body>
+</html>

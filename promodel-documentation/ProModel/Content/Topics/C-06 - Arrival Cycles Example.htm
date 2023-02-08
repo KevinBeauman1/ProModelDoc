@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1510" MadCap:lastWidth="1356">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086391"></a>Arrival Cycles Example<MadCap:keyword term="Arrivals:cycles:examples" /></h3>
+        <p class="p">Suppose we are modeling the operations of a bank (or any service or manufacturing system) and we need to specify a pattern for customer arrivals. From past data, we know that customers arrive throughout the day (9:00 <span class="_Override" style="font-variant: small-caps;">am</span> to 5:00 <span class="_Override" style="font-variant: small-caps;">pm</span>) according to the following approximate percentages.</p>
+        <table style="width: 595px;">
+            <col style="width: 157px;" />
+            <col style="width: 194px;" />
+            <col style="width: 187px;" />
+            <tbody>
+                <tr>
+                    <td>From </td>
+                    <td>Before</td>
+                    <td>Percent</td>
+                </tr>
+                <tr>
+                    <td>	9:00 am</td>
+                    <td>	10:30 am</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>10:30 am</td>
+                    <td>11:30 am</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>11:30 am</td>
+                    <td>1:00 pm</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>1:00 pm</td>
+                    <td>4:00 pm</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>4:00 pm</td>
+                    <td>5:00 pm</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Defining the Arrival Cycle<MadCap:keyword term="Arrivals:cycles:defining" /></h4>
+        <p class="p">The arrival cycle will be named Bank_Arrivals in the Arrival Cycles edit table. Because the data is expressed in terms of percentages, we select Percent as the basis for the cycle. Also, the percentage values are not cumulative so we specify No in the Cumulative field.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-1.jpg" MadCap:mediastyle="@media print { max-width: 5in; }">
+            </img>
+        </p>
+        <p class="p">Next, we click on the Table heading button to open another edit table for entering the cycle data.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="p">In this example, even though the percentages of customers that have arrived are not cumulative, the time is always cumulative. Therefore, the table reads as follows: ten percent of the daily customers arrive in the first 1.5 hours, fifteen percent of the daily customers arrive between hour 1.5 and 2.5, and so on. The arrivals are randomly distributed according to a Uniform distribution during the time interval in which they arrive. </p>
+        <p class="p">&#160;</p>
+        <p class="p">The arrival cycle is now defined and can be assigned to an arrivals record in the Arrivals edit table.</p>
+        <h4>Assigning Arrivals to the Arrival Cycle<MadCap:keyword term="Arrivals:cycles:assigning arrivals" /></h4>
+        <p class="p">After an arrival cycle has been defined, assign an arrival record to the arrival cycle in the Arrivals edit table for the arriving customers. The arrival record for the bank example appears below. See <MadCap:xref class="lowercase_no_see" href="C-05 - Arrivals.htm#C-05_2723800551_1087908" target="" title="" alt="">Arrivals on page 1</MadCap:xref> for more information.)</p>
+        <p>
+            <img src="pm-c6-245-3.png" MadCap:mediastyle="@media print { max-width: 5in; }">
+            </img>
+        </p>
+        <p class="p">The total number of customers per day is normally distributed with a mean of 1000 and a standard deviation of 35.  The number of occurrences of the cycle is 20, representing 20 working days (1 month) of time.  The frequency in this case refers to the period of the cycle or the time between the start of one cycle and the start of the next cycle, which is every 24 hours.  Make sure the arrival frequency is defined with the same time unit as the arrival cycle.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Without an arrival cycle, all the Customers for a single day would arrive at the start of the simulation.  An arrival cycle will divide the quantity specified in the Qty each... field into various sized groups arriving throughout the day.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To assign the arrival cycle to the arrival record, click on the Qty each... heading button to open a dialog with the names of all defined cycles.</p>
+        <p class="Graphic">
+            <img src="pm-c6-245-4.jpg" MadCap:mediastyle="@media print { max-width: 2in; }">
+            </img>
+        </p>
+        <p class="p">Click on the entry Bank_Arrivals and select OK. The Qty each... field now includes the cycle.</p>
+    </body>
+</html>

@@ -1,0 +1,623 @@
+/* MadCap Table Style: */
+
+/*<meta Version="7" />*/
+
+mcTableStyle
+{
+	name: MyTable;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 12pt;
+	border-spacing-x: 0;
+	border-spacing-y: 0;
+	border-collapse: collapse;
+	border-left-color: #000000;
+	border-right-color: #000000;
+	border-top-color: #000000;
+	border-bottom-color: #000000;
+	border-top-style: none;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	cell-padding-top: 5pt;
+	cell-padding-left: 3pt;
+	cell-padding-right: 5.4pt;
+	cell-padding-bottom: 2pt;
+	max-id: 4;
+}
+
+mcTableColumnStyle
+{
+	separator-style: none;
+	ruler-style: none;
+	name: Column1;
+	id: 0;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	separator-style: none;
+	name: Header1;
+	id: 3;
+}
+
+mcTableBodyStyle
+{
+	span: 6;
+	separator-style: none;
+	ruler-style: none;
+	name: Body1;
+	id: 1;
+}
+
+mcTableBodyStyle
+{
+	span: 0;
+	separator-style: none;
+	ruler-style: none;
+	name: Body2;
+	id: 2;
+}
+
+mcTableFootStyle
+{
+	name: Footer1;
+	id: 4;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-MyTable
+{
+	border-collapse: collapse;
+	border-left-style: none;
+	border-left-color: #000000;
+	border-right-style: none;
+	border-right-color: #000000;
+	border-top-style: none;
+	border-top-color: #000000;
+	border-bottom-style: none;
+	border-bottom-color: #000000;
+	margin-left: 0in;
+	margin-right: 0in;
+	margin-top: 6pt;
+	margin-bottom: 12pt;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-MyTable .Column-Column1
+{
+	
+}
+
+.TableStyle-MyTable .Head-Header1
+{
+	
+}
+
+.TableStyle-MyTable .HeadI-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .HeadI-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadE-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .HeadE-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadF-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .HeadF-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadH-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .HeadH-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadD-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .HeadD-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadC-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .HeadC-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadB-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .HeadB-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadA-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .HeadA-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .HeadG-Column1-Header1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .HeadG-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-MyTable .Foot-Footer1
+{
+	
+}
+
+.TableStyle-MyTable .FootI-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootI-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootE-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootE-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootF-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootF-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootH-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootH-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootD-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .FootD-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootC-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootC-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootB-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .FootB-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootA-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .FootA-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .FootG-Column1-Footer1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .FootG-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-MyTable .Body-Body1
+{
+	
+}
+
+.TableStyle-MyTable .BodyI-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyI-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyE-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyE-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyF-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyF-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyH-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyH-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyD-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .BodyD-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyC-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyC-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyB-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyB-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyA-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .BodyA-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyG-Column1-Body1
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .BodyG-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-MyTable .Body-Body2
+{
+	
+}
+
+.TableStyle-MyTable .BodyI-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyI-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyE-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyE-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyF-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyF-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyH-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyH-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyD-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .BodyD-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyC-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyC-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyB-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-right-style: none;
+}
+
+.TableStyle-MyTable .BodyB-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyA-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+}
+
+.TableStyle-MyTable .BodyA-Column1-Body2 p
+{
+	
+}
+
+.TableStyle-MyTable .BodyG-Column1-Body2
+{
+	padding-left: 3pt;
+	padding-right: 5.4pt;
+	padding-top: 5pt;
+	padding-bottom: 2pt;
+	border-bottom-style: none;
+}
+
+.TableStyle-MyTable .BodyG-Column1-Body2 p
+{
+	
+}
+
+

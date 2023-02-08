@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Routing Rules">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Probability</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-12-Probability.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-12-RoutingRules.htm">Routing Rules</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Probability</span>
+        </div>
+        <h2 class="statements"><a name="C-12_3485478126_1093199"></a>Probability</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">&lt;probability&gt; {&lt;expression&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Randomly selects a location listed in a block of routings based on a probability. Several probability routings should be used together and the sum of all probabilities must equal one. The entity will wait to be routed until the selected location has available capacity. Unlike most primary routings, an <a name="kanchor1726"></a>ALTERNATE and <a name="kanchor1727"></a>Backup routing may be specified after each <a name="kanchor1728"></a>PROBABILITY routing in a single routing block. If the selected location has no ALTERNATE routing and has no available capacity, the entity will wait for the location until it has available capacity.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The rule field of the Routing edit table only.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;probability&gt;</p>
+        <p class="p">The chance of the routing being taken, expressed as a decimal less than one. All probabilities in a single routing block must add up to one. This number must be a value and may not be an expression. </p>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The total entities output from the process. This expression is valid only for the first routing of a routing block. For more information on this expression, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" title="" alt="">Processing</a>.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">A Patient waiting for care in the waiting room is sent to Examination room #1, 80% of the time, Treatment room #1, 15% of the time, and to X-ray 5% of the time. If Exam room #1 is selected but is occupied, an alternate location, Exam room #2, is selected. If both Exam room #1 and Exam room #2 are closed (i.e., down for cleaning, maintenance, etc.), a backup location (Exam room #3) is selected. Treatment room #1 has an alternate location (Treatment room #2) in case it is unavailable, but has no backup location. X-ray has neither an alternate location nor a backup location.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Process Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td rowspan="6" class="BodyE-Column1-Body1">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td rowspan="6" class="BodyE-Column2-Body1">
+                        <p class="CellBody">Waiting</p>
+                    </td>
+                    <td rowspan="6" class="BodyD-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel" />
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.MedModel" />
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.MedModel" />
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel" />
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel" />
+            </tbody>
+        </table>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">
+                <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">Routing Table</MadCap:conditionalText>
+            </MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td rowspan="6" class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Exam_Rm1</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">.800 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Exam_Rm2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">ALT</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Exam_Rm3</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">Backup</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyE-Column3-Body4">
+                        <p class="CellBody">TX_Rm1</p>
+                    </td>
+                    <td class="BodyE-Column4-Body4">
+                        <p class="CellBody">.150</p>
+                    </td>
+                    <td class="BodyD-Column1-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">TX_Rm2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">ALT</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.MedModel">
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Patient</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">X_Ray</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">.050</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p"><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" title="" alt="">Processing</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

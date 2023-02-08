@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1212" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>IncLocCost</h1>
+        <h5>
+            <MadCap:keyword term="statements:incloccost;incloccost" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>IncLocCost &lt;expression&gt;</p>
+        <p>IncLocCost 15<br />IncLocCost -15 <br />IncLocCost SetupCostVar</p>
+        <h2>Description</h2>
+        <p>Enables you to increment the cost (positively or negatively) of the current activity by a given amount. Use this function to add to the activity’s actual, accumulated dollar amount.</p>
+        <h2>Valid In</h2>
+        <p>Operation logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The positive or negative change to the value of cost.</p>
+        <h2>Example</h2>
+        <p>The logic below shows how to add a cost per entry to a location for an entering entity. Process Simulator automatically tracks operation cost per time unit specified in the cost dialog, however, you may assign a one time cost each time an entity enters a location. </p>
+        <p>In the following example, an entity, EntA, arrives for inspection at Inspect. We define no rate of operation cost for Inspect because each inspection accrues a one time cost regardless of how long the entity remains at Inspect. At Inspect, workers inspect EntA. After inspection, Process Simulator adds the cost to the activity through the IncLocCost statement and then to the entity with the IncEntCost statement.</p>
+        <p class="p_11">Wait N(3, .7)<br />IncLocCost 3<br />IncEntCost 3</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="getcost.htm" class="a_11">GetCost</a>, <a href="getresRate.htm" class="a_11">GetResRate</a>, <a href="incentCost.htm" class="a_11">IncEntCost</a>, <a href="incresCost.htm" class="a_11">IncResCost</a>, and <a href="setrate.htm" class="a_11">SetRate</a></p>
+    </body>
+</html>

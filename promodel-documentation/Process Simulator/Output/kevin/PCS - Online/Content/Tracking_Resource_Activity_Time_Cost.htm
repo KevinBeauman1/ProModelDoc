@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Modeling How-To's|Cost Modeling">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Tracking Resource Activity Time Cost</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="Modeling_How-To's.htm">Modeling How-To's</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="CostModeling.htm">Cost Modeling</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Tracking Resource/Activity Time Cost</span>
+        </div>
+        <h3>Tracking Resource Activity Time Cost</h3>
+        <p class="p">Increase the unit cost of an entity according to the length of time a resource was used or activity performed.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1" value="1">Open the resource or activity dialog.</li>
+            <li class="li_1" value="2">Enter an hourly cost to be applied.</li>
+            <li class="li_1" value="3">Each time during the simulation when this resource or activity is used, the hourly rate is used to determine the incremental cost to be added to the entity.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">A coordinate measuring machine (CMM) is used on certain parts and is charged out at $150.00 an hour. We want to add this cost to the entities that use it.</p>
+        <p class="p">
+            <img src="Resources/Images/trackingresourcestimecostexample1.png" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/trackingresourcestimecostsolution1.png" />
+        </p>
+        <p class="p">The hourly rate for the CMM is set to $150. Alternatively, we could have defined the CMM as an activity and set the hourly rate for the activity to $150.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

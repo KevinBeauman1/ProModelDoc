@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>IncOnOrderQty</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>IncOnOrderQty</h1>
+        <h5><a name="kanchor251"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Inc (&lt;storage name&gt;, &lt;expression&gt;)</p>
+        <p>IncOnOrderQty(StorageBin, NewOrdersVar)<br />IncOnOrderQty(StorageBlock, - NumRejectsVar)</p>
+        <h2>Description</h2>
+        <p>Increments or decrements the on order value (total entities ordered but not yet arrived at the storage) for a Storage activity. In some situations, entities that were ordered through a storage reorder might exit the system prior to arriving at the storage activity. If this is the case, use IncOnOrderQty to adjust the on order quantity for the storage it remains synched with how many entities it is expecting to arrive at the storage. </p>
+        <h2>Valid In</h2>
+        <p>Activity, arrival, and route logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;storage name&gt;</b>
+        </p>
+        <p>The name of a storage activity.</p>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The amount to increment or decrement the on order value of the specified storage.</p>
+        <h2>Example</h2>
+        <p>In the following example, 1000 Bolts are reordered to BoltStorage whenever the inventory level drops below 50. When new Bolts arrive they are inspected for quality of sale. If they do not meet the standard, they are put into a discount bin and sold at a reduced price, which happens about 1% of the time. To keep the expected order quantity in synch at BoltStorage, IncOnOrderQty is used to decrement the on order quantity for BoltStorage whenever a Bolt fails inspection and routes to BargainBin.</p>
+        <p class="p_11">Real passInspect = Rand(100)<br />If passInspect &lt;= 1.0 Then<br />{</p>
+        <p class="p_12">aDest = BargainBolt<br />IncOnOrderQty(BoltStorage, -1)</p>
+        <p class="p_11">}<br />Else</p>
+        <p class="p_12">aDest = BoltStorage</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="StorageProperties.htm" class="a_11">Storages</a>
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

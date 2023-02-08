@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c5-139-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-138-1.jpg" />
+    <Link
+      Url="Content/Topics/C-05-ResourceSearchRoutines.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c5-139-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-138-1.jpg" />
+    <Link
+      Url="Content/Topics/C-05-ResourceSearchRoutines.htm#C-05_2723800551_1087052" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Resources:work search:edit table"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Work search:edit table"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

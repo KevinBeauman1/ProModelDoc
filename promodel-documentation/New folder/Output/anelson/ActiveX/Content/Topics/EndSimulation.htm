@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Application Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>EndSimulation</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="The ProModel Application.htm#C-01_2914010915_459788">The ProModel Application Object</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">EndSimulation</span>
+        </div>
+        <h2 class="statements"><a name="C-01_2914010915_490171"></a><a name="kanchor3"></a>EndSimulation</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>EndSimulation</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Terminates a simulation run before completion.  The EndSimulation method will have no effect if called when there is no simulation running.  If running multiple replications, the entire simulation will end (remaining replications will not be run). The output viewer will be launched automatically. </p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">: </span> None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Example</span><span class="_Override" style="font-weight: bold;">: </span>This example loads a model, runs it for 30 minutes (1800 seconds), then terminates the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub QuitSimEarly()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim CurSimTime AS Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects2">	pmObject.LoadModel (mfg_cost.mod)</p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

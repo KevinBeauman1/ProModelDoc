@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1167" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Inc</h1>
+        <h5>
+            <MadCap:keyword term="statements:inc;inc" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Inc &lt;name&gt;{, &lt;expression&gt;}</p>
+        <p>Inc Var1 <br />Inc Attr2, 5+Var1</p>
+        <h2>Description</h2>
+        <p>Increments a variable, array element, or attribute by the value of a specified numeric expression. When counting the number of entities a location has processed, increment a variable at the end of the processing logic.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;name&gt;</b>
+        </p>
+        <p>The name of any variable, array element, or attribute.</p>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The amount to increment the value. If this expression is omitted, the value will be incremented by one. This also can be a negative number.</p>
+        <h2>Example</h2>
+        <p>The following example increments two variables in route logic. Num_complete is incremented by one, and Count is incremented by the expression Attr1*Attr2.</p>
+        <p class="p_11">Inc Num_complete<br />Inc Count, Attr1 * Attr2</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="dec.htm" class="a_11">Dec</a>, <a href="assignment.htm" class="a_11">Assignment</a></p>
+    </body>
+</html>

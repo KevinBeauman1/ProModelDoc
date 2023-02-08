@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="241" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="Introduction" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>Parameters</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 MadCap:xrefTargetName="Parameters"><a MadCap:generatedBookmark="TOC" name="Parameters"></a>Parameters</h2>
+        <p class="p">ProModel has two kinds of parameters:  Input Parameters and Output Parameters.  Each parameter has a specific data type.  In this document, the data types shown are Visual Basic data types.  If you are programming in another ActiveX enabled language, you will need to use the equivalent types in that language.</p>
+        <p class="p">&#160;</p>
+        <p class="p">For input parameters, you may place a value of the correct type directly in the method call, or place the value into a variable of the appropriate type, then use the variable to satisfy the parameter requirements.  For output parameters you must supply a variable of the appropriate type to receive the values returned by ProModel.</p>
+        <p class="p">For output parameters, you must use a variable.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Although some programming languages will automatically convert one data type to another, you may need to use variables to work with some methods.  In the example for the Zoom method, shown on <MadCap:xref class="lowercase_no_see" href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Content/Topics/Zoom.htm#C-01_2914010915_490756" MadCap:xrefTarget="Zoom">Zoom on page 1</MadCap:xref>, you will notice that a variable of type Double is declared, then the numeric value is placed in that variable, and the variable is used in the method call.  If the Zoom method is executed with a number as the parameter, an error is raised, because Visual Basic automatically converts the number, but not to the correct type.  So, by placing the number in a variable explicitly defined as a Double, the problem of incorrect conversion is avoided.  Other languages may have similar limitations.</p>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="783" MadCap:lastWidth="1193" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103612"></a>End</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General control statements:END;END" />General Control Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">} (the End statement)</p>
+        <p class="Syntax_body">&#160;</p>
+        <p class="Syntax_body">While FreeCap(Loc1) &gt; 5 Do </p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">		Inc Var2, 5</p>
+        <p class="syntax_body_indent">		Wait 5 sec</p>
+        <p class="Syntax_body">	}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Defines a statement block along with a corresponding Begin ({) statement. <MadCap:keyword term="BEGIN" />Begin ({) and End (}) are almost always used in conjunction with other control statements such as <MadCap:keyword term="IF...THEN" />If...Then and <MadCap:keyword term="DO...WHILE" />Do...While. Every End must pair with a Begin.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Compare the following examples:</p>
+        <p class="p">&#160;</p>
+        <p class="p">The example below includes a Begin and End statement in the form of the “{” and “}” symbols. In this logic, if the attribute Attr1 equals one, ten Cases are ordered and the variable, Var1, increments. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> executes the statements within the Begin and End only if Attr1 equals one. </p>
+        <p class="Syntax_body">If Attr1 = 1 Then</p>
+        <p class="Syntax_body">	{</p>
+        <p class="syntax_body_indent">		Order 10 Case</p>
+        <p class="syntax_body_indent">		Inc Var1</p>
+        <p class="Syntax_body">	}</p>
+        <p class="p">Just as in the logic above, if Attr1 in the following example equals one, ten Cases are ordered. However, Var1 increments no matter what the value of Attr1. Without a statement block, the If...Then applies only to the very next statement, no matter how you format the logic.</p>
+        <p class="Syntax_body">If Attr1 = 1 Then</p>
+        <p class="syntax_body_indent">Order 10 Case</p>
+        <p class="Syntax_body">Inc Var1</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Begin, If...Then, Do...While, While...Do, Do...Until, and End.</p>
+    </body>
+</html>

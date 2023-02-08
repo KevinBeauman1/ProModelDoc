@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1025" MadCap:lastWidth="1518">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-13_1919394185_1091823"></a>
+            <MadCap:keyword term="Statements;Logic elements:statements" /><a name="C-13_1919394185_22436"></a>Statements</h2>
+        <p class="p">Statements cause <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> to take some action or perform some operation. Unlike functions, statements neither return a value nor use parentheses, and logic may contain comments. (See <MadCap:xref class="lowercase_no_see" href="C-14-Comments.htm#C-14_4292047180_1103033" target="" title="" alt="">Comments on page 1</MadCap:xref>.) Statements can use spacing (including a new line) before each word in a statement, and are case insensitive so any letter may be either upper or lower case.</p>
+        <h3>
+            <MadCap:keyword term="General action statements;Control statements;Statements:general action;Statements:control;Logic elements:statements:general action;Logic elements:statements:control" />General Action and Control Statements</h3>
+        <p class="p">General statements can be divided into two main categories: action and control statements. They are called general because they can be used in any logic. Action statements cause some action to occur in the model, such as changing an entity’s graphic or writing to a file. Control Statements determine the next statement to be executed, such as loops, branches, and statement blocks.</p>
+        <h3>
+            <MadCap:keyword term="Resource-related operation statements;Entity:entity-related operation statements;Statements:resource-related;Statements:entity-related operation;Logic elements:statements:resource-related;Logic elements:statements:entity-related operation" />Resource- and Entity-Related Operation Statements</h3>
+        <p class="p">Operation Statements perform specific actions on entities and resources at locations throughout the system whenever they are encountered by an entity in the operation logic. They are valid only in certain areas. See each statement for a list of places where it is valid.</p>
+        <p class="p">There are two subsets of operation statements: entity-related and resource-related.  Entity-related operation statements perform specific actions on entities only.  Resource-related operation statements involve resources alone (for example, Get and Free) or resources and entities together (for example, use).</p>
+        <h3><a name="C-13_1919394185_1091837"></a>
+            <MadCap:keyword term="Statements:blocks;Statements:blocks;Logic elements:statement blocks" /><a name="C-13_1919394185_25340"></a>Statement Blocks</h3>
+        <p class="p">A statement block is a group of statements that begin with  the symbol “{”, and end with the  the symbol “}”. An example appears below.</p>
+        <p class="Component">Statement blocks</p>
+        <p class="p"><![CDATA[	]]>					{					</p>
+        <p class="syntax_body_indent">		Statement 1					Statement 1</p>
+        <p class="syntax_body_indent">		Statement 2					Statement 2</p>
+        <p class="syntax_body_indent">		Statement 3					Statement 3</p>
+        <p class="syntax_body_indent">		...						...</p>
+        <p class="syntax_body_indent">		Statement n					Statement n</p>
+        <p class="p"><![CDATA[	]]>		}</p>
+    </body>
+</html>

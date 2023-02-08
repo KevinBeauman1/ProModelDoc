@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Path Networks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Path Segment Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-PathSegmentEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-PathNetworks.htm">Path Networks</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Path Segment Edit Table</span>
+        </div>
+        <h3><a name="C-05_2723800551_1086362"></a>Path Segment Edit Table<MadCap:keyword term="Path networks:paths:segment edit table" /></h3>
+        <p class="p">This table is used to define the Path Segments that make up a path network. When specifying travel according to time between nodes, the heading “Distance” changes automatically to “Time.”</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c3-53-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p">The following defines the fields of the Path Segment edit table.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">From</span> The beginning node of the path segment.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">To</span> The ending node of the path segment.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">BI</span> Set to <span class="_Override" style="font-weight: bold;">Uni</span>-directional or <span class="_Override" style="font-weight: bold;">Bi</span>-directional depending on whether traffic can travel in only one or either direction.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Time" /><b>Time</b></span> If travel along the network is to be measured in time rather than in speed and distance, then enter the time required for a resource or entity to traverse the path segment. This value may be any numeric expression except for resource and downtime system functions. When travel along a path is measured in time, all resources and entities traveling along the path take the same amount of time to travel it, regardless of their speed. This field's title changes to “Distance” if the T/S field in the Path Networks edit table is set to Speed and Distance.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Distance" /><b>Distance</b></span> If travel along the network is to be measured in terms of speed and distance, enter the length of the segment which determines the travel time along the path in conjunction with the speed of the resource or entity.</p>
+        <p class="p">The value entered may be any numeric expression except for attributes, arrays, and system functions. This expression is evaluated only when the simulation begins.</p>
+        <p class="p">The distance may be followed by a comma and a speed factor between .01 and 99. This speed factor<MadCap:keyword term="Speed:factor" /> may be used to model any circumstance affecting the speed of items traveling the path. For example, a resource may normally travel at 150 fpm, but may slow down as it goes around a corner to 80% of the original speed, 120 fpm. This would be entered as 100, .8 for a path segment 100 feet long which traversed the corner. This field's title changes to “Time” if the T/S field in the Path Networks edit table is set to Time.</p>
+        <p class="p_10">Please Note: Path segment editing notes: 1. If no path segments have been defined for a network, resources and entities will move from node to node in zero time. See <a href="C-05-Processing.htm#Routing" title="" alt="" class="MCXref xref" xrefformat="{paratext}">Processing</a> for more information about the Routing Move dialog box. 2. To move nodes already defined on the layout, click on the Nodes button and move the desired nodes. 3. To insure that all nodes can be seen by the user, two nodes cannot be located at the same point.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

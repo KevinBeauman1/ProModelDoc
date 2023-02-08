@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  DefaultUrl="/Content/WelcomeToProcessSimulator.htm"
+  Type="WebHelp2"
+  MasterToc="/Project/TOCs/Process Simulator TOC.fltoc"
+  GlossaryTermConversion="marked"
+  MasterStylesheet="/Content/Resources/Stylesheets/Promodel.css"
+  GetLatestBeforeCompile="false"
+  ConditionTagExpression="include[Primary.Online] exclude[Exclude_draft.PrintOnly or Exclude_draft.ScreenOnly or Primary.Print] "
+  GenerateWebSafeImages="true"
+  WebSafeFileExtension="png"
+  SearchDatabaseChunkSize="30000"
+  TOCChunkSize="30000"
+  IndexChunkSize="30000"
+  Comment="PCS with HTML5 Target"
+  DisableAutoSync="true"
+  Skin="/Project/Skins/PCS HTML5 Skin.flskn"
+  MasterPage="/Content/Resources/MasterPages/PCS MasterPage.flmsp">
+  <Variables>
+    <Variable
+      Name="Primary/PhoneNumber">888-776-6633</Variable>
+  </Variables>
+  <ConditionTags />
+  <Glossaries>
+    <Glossary
+      Link="/Project/Glossaries/PCS Glossary.flglo" />
+  </Glossaries>
+</CatapultTarget>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1112" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106820"></a>Resource()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:system functions:RESOURCE();RESOURCE();Resource-specific system functions:RESOURCE()" />Shift &amp; Break System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Resource ()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the name-index number of the resource currently processing the off-shift or break logic.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Pre-Off Shift, Off-shift, Pre-Break, Break, Resource Clock DT, Resource Usage DT, Resource Node and Subroutine logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose you have locations and resources as members in a shift file assignment and you want to wait until variable <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Claims_To_Process</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Patients_Waiting</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Parts_To_Process</MadCap:conditionalText> is equal to zero before allowing a particular resource called <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Adjuster</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Attending_MD</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Operator</MadCap:conditionalText> to go off shift. You would enter the following pre-off shift logic:</p>
+        <p class="Syntax_body">If ForResource() Then</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">		If Resource() = <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Adjuster</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Attending_MD</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Operator</MadCap:conditionalText> Then </p>
+        <p class="syntax_body_indent">{</p>
+        <p class="syntax_indent_2">			Wait Until <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Claims_To_Process</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Patients_Waiting</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Parts_To_Process</MadCap:conditionalText> = 0</p>
+        <p class="syntax_body_indent">}</p>
+        <p class="Syntax_body">		}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Location(), ForLocation(), and ForResource().</p>
+    </body>
+</html>

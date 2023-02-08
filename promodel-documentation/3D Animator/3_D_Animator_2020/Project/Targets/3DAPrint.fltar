@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/3DA.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/Promodel.css"
+  ConditionTagExpression="include[3DA.OmitFromHelpKeepPrint or Default.PrintOnly] "
+  OutputFolder="C:\Users\Ellen\Desktop\2014\16-3-D Animator2014"
+  DisableAutoSync="true">
+  <DocumentProperties
+    Title="3D Animator User Guide"
+    Author="ProModel Corporation" />
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100"
+    PageMode="UseOutlines" />
+  <PrintedOutput
+    ExpandingTextConversion="expand"
+    PopupConversion="expand" />
+</CatapultTarget>

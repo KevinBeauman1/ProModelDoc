@@ -1,0 +1,527 @@
+/* MadCap Table Style: */
+
+/*<meta Version="7" />*/
+
+mcTableStyle
+{
+	name: Tablestyleplain;
+	border-collapse: separate;
+	border-left-style: solid;
+	border-left-width: 0px;
+	border-left-color: #000000;
+	border-right-style: solid;
+	border-right-width: 0px;
+	border-right-color: #000000;
+	border-top-style: solid;
+	border-top-width: 0px;
+	border-top-color: #000000;
+	border-bottom-style: solid;
+	border-bottom-width: 0px;
+	border-bottom-color: #000000;
+	cell-padding-left: 1px;
+	cell-padding-right: 1px;
+	cell-padding-top: 1px;
+	cell-padding-bottom: 1px;
+	border-spacing-y: 2;
+	border-spacing-x: 2;
+	max-id: 1;
+	background-image: none;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	font-family: Arial;
+	name: Column1;
+	id: 0;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	font-weight: normal;
+	separator-style: solid;
+	separator-width: 0px;
+	separator-color: #ffffff;
+	font-size: 10pt;
+	font-family: Arial;
+	vertical-align: top;
+	text-align: left;
+	name: Body1;
+	id: 1;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-Tablestyleplain
+{
+	border-collapse: separate;
+	background-image: none;
+	border-left-style: solid;
+	border-left-color: #000000;
+	border-left-width: 0px;
+	border-right-style: solid;
+	border-right-color: #000000;
+	border-right-width: 0px;
+	border-top-style: solid;
+	border-top-color: #000000;
+	border-top-width: 0px;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-bottom-width: 0px;
+	border-spacing: 2px 2px;
+}
+
+.TableStyle-Tablestyleplain .Column-Column1
+{
+	
+}
+
+.TableStyle-Tablestyleplain .HeadI-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadI-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadE-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadE-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadF-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadF-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadH-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadH-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadD-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadD-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadC-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadC-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadB-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadB-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadA-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadA-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadG-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .HeadG-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootI-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootI-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootE-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootE-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootF-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootF-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootH-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootH-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootD-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootD-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootC-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootC-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootB-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootB-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootA-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootA-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootG-Column1-
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .FootG-Column1- p
+{
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .Body-Body1
+{
+	
+}
+
+.TableStyle-Tablestyleplain .BodyI-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyI-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyE-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 0px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: solid;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyE-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyF-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 0px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: solid;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyF-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyH-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyH-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyD-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 0px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: solid;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyD-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyC-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyC-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyB-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyB-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyA-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyA-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyG-Column1-Body1
+{
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	font-family: Arial;
+}
+
+.TableStyle-Tablestyleplain .BodyG-Column1-Body1 p
+{
+	font-size: 10pt;
+	font-weight: normal;
+	font-family: Arial;
+}
+
+

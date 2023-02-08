@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1382" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>SetRate</h1>
+        <h5>
+            <MadCap:keyword term="statements:setrate;setrate" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>SetRate &lt;resource name&gt;, &lt;expression&gt;, &lt;unit&#160;#&gt;</p>
+        <p>SetRate Operator, 25, 3</p>
+        <h2>Description</h2>
+        <p>Allows you to define the regular rate of cost for resources contained in a model. If you have already defined the regular rate in the shape properties, this statement will override that rate. You can use SetRate to set different rates for each unit of a resource.</p>
+        <h2>Valid In</h2>
+        <p>Initialization logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;resource name&gt;</b><![CDATA[	]]></p>
+        <p>The name of the resource whose rate you wish to set.</p>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The rate assigned to the resource. </p>
+        <p><b>&lt;unit #&gt;</b>
+        </p>
+        <p>The unit number of the resource. Where multiple units of a resource exist, you must specify which unit of the resource to set the rate for. The keyword All may be used to indicate all units of a resource.</p>
+        <p class="p_10">Please Note: SetRate uses the time units defined for the model. (By default, SetRate uses hours.)</p>
+        <h2>Example</h2>
+        <p>The logic below displays how you can uniquely assign the regular rate for each unit of a resource, Operator. Operator has three units, meaning that each unit can perform the same task. However, each of the three Operators has a different hourly rate. We set these rates in the Initialization logic using the following:</p>
+        <p class="p_11">SetRate Operator, 10, 1<br />SetRate Operator, 8, 2<br />SetRate Operator, 7, 3</p>
+        <h5>See Also</h5>
+        <p><a href="getcost.htm" class="a_11">GetCost</a>, <a href="getresRate.htm" class="a_11">GetResRate</a>, <a href="incentCost.htm" class="a_11">IncEntCost</a>, <a href="inclocCost.htm" class="a_11">IncLocCost</a>, and <a href="incresCost.htm" class="a_11">IncResCost</a></p>
+    </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Logic">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Preemption Process Logic</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-07-PreemptionProcessLogic.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-07-BuildingtheLogic.htm#C-07_3886599965_1035124">Building the Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Preemption Process Logic</span>
+        </div>
+        <h2><a name="C-07_3886599965_1089500"></a><a name="kanchor1413"></a><a name="C-07_3886599965_26971"></a>Preemption Process Logic</h2>
+        <p class="p">With Preemption Process Logic, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> makes it possible to control preemption rather than limit you to default preemption priority levels and values. This feature pertains only to the preemption of entities using a location. It does not include preemption of downtimes.</p>
+        <p class="p">Normally, if an entity or downtime attempts to preempt an entity that is using a location, the location is immediately preempted (assuming it is preemptable). Once the location finishes the preempting activity, the original preempted entity regains possession of the location and resumes processing where it left off.</p>
+        <p class="p">To override this default preemption procedure, in the case of entities that are preempted by another entity or a downtime, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> allows a Preemption Process Record to be defined which postpones the actual preemption of the location until after the current entity explicitly releases it.</p>
+        <p class="p">The Preemption Process Record, allows you to control if and when the location is given up.  In the case of a preemptive request for a location, the preemption process record allows the entity to be routed elsewhere if desired.  If a preemption process is defined, the actual preemption does not occur until the preemption process explicitly frees the location.  </p>
+        <p class="p">After the location is given up, the entity may (1) elect to use an alternative location to complete the process, or (2) seek to regain access to the same location to complete the process.</p>
+        <p class="p">While an entity is executing a preemption process, it cannot be preempted by any other entity or downtime.</p>
+        <p class="How_to_title">How to create a preemption process record<a name="kanchor1414"></a>: </p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Using the same entity and location names, create a process record somewhere following the process record where the preemption may occur.</li>
+        </ol>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c7-282-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <ol data-mc-continue="true">
+            <li class="li_1" value="2">Click on the Entity button to display the Entities dialog shown here.</li>
+        </ol>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c7-282-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <ol data-mc-continue="true">
+            <li class="li_1" value="3">Check the Preemption Process option box and click OK.</li>
+            <li class="li_1" value="4">Click on the Operation button to enter the preemption logic.  You can use any valid operation logic including delays. It is recommended that you enter a comment as the first line in the logic indicating that this is a preemption process. This will make the record easily identifiable as a preemption process.</li>
+        </ol>
+        <p class="p_10">Please Note: When a preemption occurs, the entity looks forward and then from the beginning of the process list trying to find a preemption process that matches the same entity and location (a process with <a name="kanchor1415"></a>All as the entity name will match any entity). If a match is found, the preemption process gets executed. Otherwise the default preemption occurs. Only the first preemption process encountered will be executed in the event that multiple preemption processes are defined with the same entity and location names.</p>
+        <h3>Possible Effects of Delayed Preemption<a name="kanchor1416"></a></h3>
+        <p class="p">Several circumstances can be created through the use of preemption process records.  An entity delaying a preemption, for example, may find at the conclusion of the delay that the preemption is no longer required, or that it faces an even higher preemption priority.</p>
+        <p class="p">In cases where an entity has multiple locations or resources from which to choose, a preemptive request for any one of them is not necessarily a commitment to select that particular location. If any of the alternative locations becomes available, the entity will select it and withdraw the preemption request.</p>
+        <h3>Functions for Defining Logic in a Preemption Process<a name="kanchor1417"></a></h3>
+        <p class="p">The Preemption Process Logic feature includes the following functions for use in the preemption logic.</p>
+        <p class="p"><a name="kanchor1418"></a>Preemptor()   Identifies whether a downtime or entity is making the preemptive request. It returns a 0 if the preemptor is a downtime, otherwise it returns the index number of the preempting entity.</p>
+        <p class="p"><a name="kanchor1419"></a>TimeLeft() Returns the amount of time remaining if the preemption occurred during a <a name="kanchor1420"></a>Wait or <a name="kanchor1421"></a>Use statement. It returns a time value in default time units (real). If multiple entities are preempted from a location, it returns the longest remaining time for all of the entities.</p>
+        <p class="p_10">Please Note: The values returned by these functions must be checked before any processing delay occurs since they are updated whenever a preemption takes place.  If the values must be referred to later, they should be assigned to the entity’s attribute or to a local variable.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

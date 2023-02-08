@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="501" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>SelectMainRecordByIndex</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="SelectMainRecordByIndex"><a MadCap:generatedBookmark="TOC" name="SelectMainRecordByIndex"></a><a name="C-01_2914010915_463269"></a>
+            <MadCap:keyword term="SelectMainRecordByIndex;ProModel Data Object:SelectMainRecordByIndex" />SelectMainRecordByIndex</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SelectMainRecordByIndex <span class="_Override" style="color: #0000ff;">RecordType, RecordIndex</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Selects a record by its Record Index (row number).  This method is very useful in looping through all the records in a table.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordIndex</span> (Long)  The Record Index (Row Number) of the record you wish to select.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example steps through the Macros table, selecting each record by Index Number, then gets the name and value of each macro, then displays a message with that information.</p>
+        <p class="objects">Sub GetMacros()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim i As Integer</p>
+        <p class="objects2">	Dim RecCount As Long</p>
+        <p class="objects2">	Dim MacName As String</p>
+        <p class="objects2">	Dim MacText As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 11, RecCount</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	For i = 1 To RecCount</p>
+        <p class="objects3" style="font-weight: bold;">		pmDataObject.SelectMainRecordByIndex <span class="_Override" style="color: #0000ff;">11, i</span></p>
+        <p class="objects3">		pmDataObject.GetStringFieldValue 11, 1, MacName</p>
+        <p class="objects3">		pmDataObject.GetStringFieldValue 11, 2, MacText</p>
+        <p class="objects3">		pmObject.MsgBox (MacName &amp; ":  " &amp; MacText)</p>
+        <p class="objects2">	Next i</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

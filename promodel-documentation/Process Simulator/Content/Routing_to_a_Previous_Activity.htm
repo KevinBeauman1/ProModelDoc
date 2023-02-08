@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2158" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3>Routing to a Previous Activity</h3>
+        <p class="p">Sometimes entities make multiple passes through the same activity. In such instances, the activity time or routing may be a function of which pass it is.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=tkNNpCSA40w&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=14&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define an attribute for the entity of type integer.</li>
+            <li class="li_1">Click on Logic  in the activity Properties.</li>
+            <li class="li_1">Define an INC statement to increment the value of the attribute.</li>
+            <li class="li_1">If you want the activity processing to change based on the value of the attribute, in the Logic define an IF-THEN statement to determine what processing to perform.</li>
+            <li class="li_1">If you want the routing to change based on the value of the attribute, in the routing Properties dialog define a Conditional routing and select the next location based on the attribute value.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">At a doctor’s office, patients check in at a receptionist desk and wait for their name to be called to see the doctor. After their appointment, they return to the receptionist desk to pay for the visit and schedule any follow-up visit. The first pass through this activity takes only N(1,.2) minutes and then patients go to a waiting area. The second pass takes N(2,.5) minutes and then patients exit the office.</p>
+        <p class="p">
+            <img src="Resources/Images/routingtoapreviousactivityexample.png" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">Logic for Receptionist Activity.</p>
+        <p class="p">
+            <img src="Resources/Images/routingtoapreviousactivitysolution1.png" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Routing to Waiting Area.</p>
+        <p>
+            <img src="Resources/Images/routingtoapreviousactivitysolution2.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Routing to Exit.</p>
+        <p>
+            <img src="Resources/Images/routingtoapreviousactivitysolution3.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">An attribute called aPass is defined which is incremented (INC aPass) in Logic of the Receptionist activity dialog. An IF-THEN statement is defined to cause the wait time to be a function of the value of Pass. The conditional routing chooses the destination as the Waiting Area if pass is equal to 1 (i.e., this is the first pass), or To Exit if pass is equal to 2.<br /></p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="646" MadCap:lastWidth="1071" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089465"></a><a name="C-05_2723800551_32297"></a>Ta<MadCap:keyword term="TANK_SELECTINPUT;Subroutines:tank:TANK_SELECTINPUT" />nk_SelectInput</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_SELECTINPUT (&lt;First Tank&gt;, &lt;Number of Tanks&gt;, &lt;Selection Rule&gt;, &lt;Minimum Level&gt;, &lt;Product Type&gt;)</p>
+        <p class="Syntax_body">TANK_SELECTINPUT (Tank1, 5, Tank_InOrder, 1000, 0)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Selects an input tank from among several tanks based on a selection rule. To use this function, you must list all tanks included in the selection together in the Location module.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;First Tank&gt;</p>
+        <p class="p">The name or location index number of the starting tank in the range.</p>
+        <p class="Component">&lt;Number of Tanks&gt;</p>
+        <p class="p">The number of tanks in the selection range (limit 10).</p>
+        <p class="Component">&lt;Selection Rule&gt;</p>
+        <p class="p">The rule for making the selection may be one of the following:</p>
+        <p class="Syntax_body">Tank_InOrder (selects the first blocked tank encountered)</p>
+        <p class="Syntax_body">Tank_LongestBlocked (selects the tank blocked the longest)</p>
+        <p class="Component">&lt;Minimum Level&gt;</p>
+        <p class="p">The minimum level of the input tank before considering it for selection. If the tank must be full before considering it for an input source, enter 0.</p>
+        <p class="Component">&lt;Product Type&gt;</p>
+        <p class="p">An integer specifying the required value for the Product array in order to select the tank. Enter 0 if the tank selection requires no product type match.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A tanker arrives at a pick up station to load from one of 5 tanks depending on which tank has been full the longest. The tanker will fill from a partial tank if the tank has any contents at all (at least .1 gallons). To model the tank selection, define the following operation logic for Tanker at PickUpStation:</p>
+        <p class="Syntax_body">Int Selected_Tank</p>
+        <p class="Syntax_body">Selected_Tank=Tank_SelectInput(Tank1, 5, Tank_LongestBlocked, .1, 0)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05-Subroutines-ExamplesofTankLogic.htm#C-05_2723800551_1089801" target="" title="" alt="">Selecting from Multiple Input or Output Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

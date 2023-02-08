@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc Version="1" DescendantCount="2">
+    <TocEntry Title="Process Simulator Tutorial" Link="/Content/Welcome_to_Tutorial.htm" Skin="/Project/Skins/PCSTutorial.flskn" StartSection="false" SectionNumberReset="continue" VolumeNumberReset="same" ChapterNumberReset="continue" ComputeToc="false" ReplaceMergeNode="false" ComputedResetPageLayout="true" ComputedFirstTopic="true" DescendantCount="0" />
+    <TocEntry Title="Tutorial Videos" Link="/Content/Tutorial Videos.htm" ComputedFirstTopic="false" DescendantCount="0" />
+</CatapultToc>

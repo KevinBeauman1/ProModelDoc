@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1915" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Get</h1>
+        <h5>
+            <MadCap:keyword term="statements:get;get" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Get {&lt;quantity&gt;} &lt;resource&gt; {,&lt;priority&gt;} {And or Or {&lt;quantity&gt;} &lt;resource&gt; {,&lt;priority&gt;}...}</p>
+        <p>Get Res1<br />Get 3 Res1, 5<br />Get 2 Res1 OR 3 Res2<br />Get Res1, 3 And (Res2 Or Res3)<br />Get Res(Skill_required)</p>
+        <h2>Description</h2>
+        <p>Captures a specified number of resources as they become available. If the entity already possesses one of the requested resources, the entity will still try to capture an additional unit of that resource. When capturing multiple resources, each resource will be captured as soon as it becomes available until all resources are captured.</p>
+        <p>Resources captured by a Get statement can only be preempted when the entity owning the resource is undergoing a Wait or Use time except in route logic. If the resource is preempted during one of those times, the time will continue where it left off when the resource becomes available.</p>
+        <p>Every Get must have a corresponding Free or an error occurs when the entity exits the system.  If an entity owns one or more resources and is subsequently temporarily attached to or batched with another entity, it cannot free the resource(s) until it is detached or unbatched.</p>
+        <h2>Valid In</h2>
+        <p>Activity and route logic. </p>
+        <h2>Components</h2>
+        <p><b>&lt;quantity&gt;</b>
+        </p>
+        <p>The number of resources to get. A value of zero is ignored and values less than zero return an error. This numeric expression is evaluated and truncated every time the Get statement is encountered.</p>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>The name of the resource to Get. You can substitute Res() for the resource name.</p>
+        <p><b>&lt;priority&gt;</b>
+        </p>
+        <p>When multiple entities are waiting for the same resource to become available, the entity with the highest priority will capture the resource first. This expression should be a number between 0 and 999.</p>
+        <h2>Example</h2>
+        <p>
+            To start a semi-automatic welding process, we need a static resource named Operator. Midway through the process, the Operator tests the weld with a resource named TestDevice, which is shared with other operators. After the test, the operator restarts the welder. The Operator stays with the welder until he or she completes the last part of the operation. After the welding process the operator moves the part to the buffing area, completes the buffing operation and then is freed.
+</p>
+        <p>Weld activity logic:</p>
+        <p class="p_11">        Use Operator For 4 min<br />Get Operator<br />Use TestDevice For U(2, .5)<br />Wait 4 min</p>
+        <p>
+            <br />Buffer activity logic:</p>
+        <p class="p_11">Wait T(7, 10, 11)<br />Free Operator</p>
+        <h5>See Also</h5>
+        <p>Jointly Get and <a href="use.htm" class="a_11">Use</a></p>
+    </body>
+</html>

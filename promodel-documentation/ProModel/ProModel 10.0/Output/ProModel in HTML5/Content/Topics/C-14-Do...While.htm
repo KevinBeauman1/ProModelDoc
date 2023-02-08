@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Do...While</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-14-Do...While.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Do...While</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1103421"></a>Do...While</h2>
+        <h5 class="_valid_in"><a name="kanchor1925"></a>General Control Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Do &lt;statement block&gt; While &lt;Boolean expression&gt;</p>
+        <p class="Syntax_body">Do Inc Var1 While Array1[Var1] &lt;&gt; 10 </p>
+        <p class="Syntax_body">Do</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">		Inc Var2, 5 <br />		Wait 5 sec</p>
+        <p class="Syntax_body">}</p>
+        <p class="Syntax_body">While FreeCap(Loc1) &gt; 5</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Repeats a statement or statement block continuously while a condition remains true. Do...While is an exit-condition loop, meaning that the loop will always execute at least once. Use Do...While for processes that must be executed one time and possibly more.  </p>
+        <p class="p_10">Please Note: Use caution when using a Do...While with a system function (e.g., FreeCap()) to ensure that the system does not enter an infinite loop. For example, eliminating the “Wait 5 sec” in the syntax sample will cause the system to enter an infinite loop because there is no time delay within the loop.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;statement block&gt; </p>
+        <p class="p">The statement or block of statements to execute.</p>
+        <p class="Component">&lt;Boolean expression&gt; </p>
+        <p class="p">As long as this expression is TRUE, the loop will continue. This expression is evaluated for each iteration of the loop.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below orders a minimum of ten cases to location Receiving every time it is encountered. As long as the location has a capacity greater than ten, it will send additional sets of ten entities to the location.</p>
+        <p class="Syntax_body">	Do</p>
+        <p class="syntax_body_indent">Order 10 Cases to Receiving</p>
+        <p class="Syntax_body">While FreeCap(Receiving) &gt; 10</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Begin, End, Do...Until, and While...Do.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

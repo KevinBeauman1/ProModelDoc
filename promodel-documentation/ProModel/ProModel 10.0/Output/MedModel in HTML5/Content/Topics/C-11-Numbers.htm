@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Language Elements and Expressions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Numbers</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-11-Numbers.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-11-LanguageElementsandExpressions.htm#C-11_756594771_1035124">Language Elements and Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Numbers</span>
+        </div>
+        <h2><a name="C-11_756594771_1090983"></a><a name="kanchor1588"></a>Numbers</h2>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> uses two types of numbers: real numbers and integers. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> also uses a special category of integers, called “name-index numbers.” This section discusses real numbers, integers, and name-index numbers. It then discusses converting between the different types.</p>
+        <h4><a name="kanchor1589"></a>Integers</h4>
+        <p class="p">An integer number is a whole number ranging from -2,147,483,648 to 2,147,483,647. Integer values may not include commas. Therefore, the number 5,380 should be entered as 5380. Name-index numbers (described in this section) work just like integer numbers.</p>
+        <p class="Component">Examples of integers</p>
+        <p class="Syntax_body">	-2234798</p>
+        <p class="Syntax_body">	 0</p>
+        <p class="Syntax_body">	 32</p>
+        <h4><a name="kanchor1590"></a>Real Numbers</h4>
+        <p class="p">A real number is any number ranging from 1.7 X 10&#160;-308 to 1.7 X 10&#160;+308, including decimals. Real values may not include commas. As such, the number 5,380.5 should be entered as 5380.5. </p>
+        <p class="Component">Examples of real numbers</p>
+        <p class="Syntax_body">	-2.875638</p>
+        <p class="Syntax_body">	 844.2</p>
+        <p class="Syntax_body">	 65.0</p>
+        <h4><a name="C-11_756594771_1091001"></a><a name="kanchor1591"></a><a name="C-11_756594771_20099"></a>Name-Index Numbers</h4>
+        <p class="p">When a simulation begins, locations, resources, and entities are all assigned numbers according to their position in their respective edit tables. The number assigned to the element is called its <span class="EquationVariables">name-index number</span>. For example, the third entity in the Entity edit table will have the number three for its name index number. The name of an element may be used in an expression to reference its name-index number. </p>
+        <p class="p">For example, if EntityA were the third entity in the Entity edit table, the statement, “Attr1 = EntityA,” would assign the number three to Attr1, because attributes take numbers. Additionally, you may also test for an index number by referencing the element name with a statement like, “If Var5 = Location3 Then.” In fact, when using a name-index number to identify a location, resource, or entity (as in the previous examples), it is usually best to use the name of the element, because inserting or deleting an element from the edit table, may change the name-index number assigned to other elements.</p>
+        <p class="p">If you need to refer to a location, resource, or entity by name but only know its name-index number, use the <a name="kanchor1592"></a>name functions: <a name="kanchor1593"></a>Loc(),<a name="kanchor1594"></a> Res(), and <a name="kanchor1595"></a>Ent(). These functions allow name-index numbers and variables or attributes containing name-index numbers to be converted back to their actual names for use in statements or expressions requiring the element name.</p>
+        <p class="p">Consider the statement, “Attr1 = PASSENGER.” Although this statement only stores the name index number of the element in the attribute, the name-index number can then be used in conjunction with Loc(), Ent(), and Res() to get the actual name of the location. For example, if PASSENGER is the fifth entity in the Entity edit table, the statement Join <a name="kanchor1596"></a>1 Ent(Attr1) works the same as Join 1 PASSENGER. Additionally, a name-index number can be used with the name functions to output a name to the screen or a file.</p>
+        <h4><a name="C-11_756594771_1091013"></a><a name="kanchor1597"></a><a name="C-11_756594771_33501"></a>Converting Between Numeric Types</h4>
+        <p class="p">When an expression expects one type of value but receives another, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> automatically takes care of converting between the two, so most often the difference will not matter. However, when <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> expects an integer but receives a real value, it truncates the real value at the decimal point. For example, say the variable Integer1 is assigned the value 3.9, as in the following statement: Integer1=3.9. The variable Integer1 would hold the value 3, not 4. To round 3.9 when assigning to an integer variable would require the statement, Integer1=Round(3.9). </p>
+        <p class="p">Converting from name-index numbers to the name of an element requires the Ent(), Loc(), and Res() functions as <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> does not automatically convert numbers to names. For information on how to output the name of an element based on its name-index number, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-11-StringExpressions.htm#C-11_756594771_1095062" title="" alt="">String Expressions</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

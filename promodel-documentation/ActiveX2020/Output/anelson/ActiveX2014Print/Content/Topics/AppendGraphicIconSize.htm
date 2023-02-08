@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Data Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>AppendGraphicIconSize</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_462565"></a><a name="kanchor54"></a>AppendGraphicIconSize</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>AppendGraphicIconSize <span class="_Override" style="color: #0000ff;">RecordType, RecordIndex, GraphicNumber, Xpos, Ypos, Xsize, Ysize</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Appends a graphic to an existing Location, Entity or Resource record.  This method lets you specify the size of the graphic as a percentage of its original size.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordIndex</span> (Long)  The Record Index (Row Number) of the Location, Entity or Resource you wish to add a graphic icon to.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">GraphicNumber</span> (Long)  Index number of a graphic icon in the Graphics Library specified in the General Information dialog of the loaded model.  Keep in mind that the numbers are not necessarily sequential, there may be gaps.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Xpos</span> (Double)  Number of pixels from the left margin to place the graphic icon.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Ypos</span> (Double)  Number of pixels from the top margin to place the graphic icon.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Xsize</span> (Double)  Width in pixels.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Ysize</span> (Double)  Height in pixels.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, adds a record to the Locations table, then appends a graphic icon to the new record and makes it 50 x 50 pixels.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AddGfx()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim recnum As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2">	pmDataObject.AppendRecord 1</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 1, recnum</p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.AppendGraphicIconSize <span class="_Override" style="color: #0000ff;">1, recnum, 10, 100, 50, 50, 50</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

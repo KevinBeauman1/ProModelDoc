@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1247" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Import Data into Arrays</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body style="text-align: left;">
+        <h1>
+            <MadCap:keyword term="arrays" />Import Data into Arrays</h1>
+        <p>When you import data from a Microsoft Excel<sup>®</sup> spreadsheet into an array, Process Simulator loads the data from left to right (i.e., within a row), and then from top to bottom (i.e., within a column). The limit to the number of rows and columns your arrays have depends upon the version of Excel you are using, the type of array defined (integer, real, expression), and the memory limits of your computer and operating system.</p>
+        <p>Steps to import Excel data into an array:</p>
+        <ol>
+            <li>Click <b>Arrays</b> from the Model Elements group in the Process Simulator ribbon.</li>
+            <li>Select the array record for which you want to import data.</li>
+            <li>Click in the cell of the <b>Import File</b> column. A drop down box will appear with the Import fields to define.</li>
+            <li>In the <b>File</b> field, type the name of the Excel file that you want to use. Alternatively, you may click the <b>Browse</b> button to navigate folders to find and select the Excel file.</li>
+            <li>In the <b>Sheet</b> field, type the exact name of the worksheet within the Excel file that contains the data you want to use.</li>
+            <li>In the <b>Cell Start</b> field, type the cell reference of the starting location of the data. The value stored in this cell will occupy the first position (i.e. the first row and first column) in the array. Type the cell reference (e.g. A1), which is the column letter and row number in the worksheet.</li>
+            <li>In the <b>Cell End</b> field, type the cell reference of the ending location of the data. The value stored in this cell will occupy the last position (i.e. the last row and last column) in the array. Type the cell reference (e.g. A10), which is the column letter and row number. Note: the number of rows and columns of the data to be imported should be no greater than those numbers for the size of the destination array. The data to be imported can be a subset of the full data set in the Excel worksheet.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/ArrayImport.png" MadCap:mediastyle="@media print { max-width: auto;max-height: 2in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Below are descriptions of the fields in the drop down box.</p>
+        <p><b>File</b> — the name of the Excel file from which you want to import data. You may type either a fully qualified path to your Excel file or a path relative to your Visio<sup>®</sup> file. For example, if your Excel file is in the same directory as your Visio file, simply enter the name of the Excel file into this field.</p>
+        <p><b>Sheet</b> — the name of the worksheet in the Excel file from which you will import the array data.</p>
+        <p class="p_10">Note: If your spreadsheet contains only a single data set, Process Simulator will automatically load the data into the array. You do not have to define any cell information unless you want to limit the contents of the array to a portion (i.e. a subset) of the import data set. Importing data into an array requires Microsoft Excel 2016.
+</p>
+        <p><b>Cell Start</b> — the cell in the spreadsheet with the first piece of data to import into the array.</p>
+        <p><b>Cell End</b> — the cell in the spreadsheet with the last piece of data to import into the array. Note: the column letter and/or the row number for this cell must be greater than that provided in the Cell Start box.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

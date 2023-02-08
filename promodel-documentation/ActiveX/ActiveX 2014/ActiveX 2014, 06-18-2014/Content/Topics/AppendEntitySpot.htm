@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="512" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_462347"></a>
+            <MadCap:keyword term="AppendEntitySpot;ProModel Data Object:AppendEntitySpot" />AppendEntitySpot</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>AppendRecord <span class="_Override" style="color: #0000ff;">RecordIndex, XPosition, YPosition</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Appends an Entity Spot graphic to an existing Location record.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordIndex</span> (Long)  The Record Index (Row Number) of the Location you wish to add an Entity Spot to.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">XPosition</span> (Double)  Number of pixels over from the left margin of the layout to place the entity spot.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">YPosition</span> (Double)  Number of pixels down from the top margin of the layout to place the entity spot.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads the mfg_cost model, adds a record to the Locations table, names the new location &amp; gives it an Entity Spot graphic icon.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AddGfx()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim recnum As Long</p>
+        <p class="objects2">	Dim fieldnum As Long</p>
+        <p class="objects2">	Dim subtable As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.AppendRecord 1</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 1, recnum</p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2">	pmDataObject.AppendEntitySpot <span class="_Override" style="color: #0000ff;">recnum, 45, 90</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">   	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+        <p class="Example">&#160;</p>
+        <p class="p">Note: An entity spot can also be added by appending a location graphic record and changing the type field to Enitity Spot (type 7).  See <MadCap:xref class="lowercase_no_see" href="Working with Graphics.htm#C-01_2914010915_459729">Working with Graphics on page 1</MadCap:xref>.</p>
+    </body>
+</html>

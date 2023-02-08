@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="365" MadCap:lastWidth="560" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086778"></a>Resource Preemption Matrix<MadCap:keyword term="Resources:preemption:matrix;Preemption:resources;Matrix, resource preemption" /></h3>
+        <p class="p">The following Preemption Matrix shows the possibilities of entities and downtimes preempting each other in the use of a resource. “Current” refers to the entity or downtime in possession of the resource when the requesting entity or downtime attempts to capture it. Downtimes below refer to clock and usage-based downtimes only.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Priority values are divided into ten levels (0 to 99, 100 to 199,..., 900-999), with values beyond 99 used for preempting entities or downtimes of a lower priority level.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" style="width: 251px;" />
+            <col class="Column-Column2" style="width: 132px;" />
+            <col class="Column-Column3" style="width: 172px;" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellHeading">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellHeading">To Preempt The Current Owner</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellHeading">To Preempt The Current Downtime</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellHeading" style="text-align: left;">Requesting Entity or Another Resource or Location’s Downtime</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">1 priority level higher</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">2 priority levels higher</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellHeading" style="text-align: left;">Requesting Downtime</p>
+                        <p class="CellHeading">&#160;</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">1 priority level higher</p>
+                    </td>
+                    <td class="BodyA-Column3-Body3">
+                        <p class="CellBody">1 priority level higher</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ul>
+            <li class="li_1">The upper-left quadrant shows that if an entity tries to seize a resource currently owned by another entity (or another resource’s or a location’s downtime), the entity must have a priority at least one level higher than the current entity to preempt the resource.</li>
+            <li class="li_1">The lower-left quadrant shows that a downtime must have a priority at least one level higher than the entity currently owning a resource if the resource is to be preempted.</li>
+            <li class="li_1">The upper-right quadrant shows that an entity must have a priority at least 2 levels higher than the current downtime priority to preempt a downed resource.</li>
+            <li class="li_1">The lower-right quadrant shows that a preempting downtime must have a priority at least one level higher than the current downtime to preempt it.</li>
+        </ul>
+        <p class="space_before_image">The following graphics demonstrate basic preemption concepts.</p>
+        <p class="space_before_image">&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;">
+            <col style="width: 3in;" />
+            <col style="width: 3in;" />
+            <tbody>
+                <tr>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 1</span>
+                        <p>&#160;</p>
+                        <img src="8_49.png" style="width: 145px;height: 147px;" />
+                    </th>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 4</span>
+                        <p>&#160;</p>
+                        <img src="8_52.jpg" style="width: 145px;height: 147px;" />
+                    </th>
+                </tr>
+                <tr>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 2</span>
+                        <p>&#160;</p>
+                        <img src="8_50.jpg" style="width: 145px;height: 147px;" />
+                    </th>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 5</span>
+                        <p>&#160;</p>
+                        <img src="8_53.jpg" style="width: 145px;height: 147px;" />
+                    </th>
+                </tr>
+                <tr>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 3</span>
+                        <p>&#160;</p>
+                        <img src="8_51.jpg" style="width: 145px;height: 147px;" />
+                    </th>
+                    <th><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Example 6</span>
+                        <p>&#160;</p>
+                        <img src="8_54.jpg" style="width: 145px;height: 147px;" />
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="unselect;hyperlinked" MadCap:lastBlockDepth="4" MadCap:lastHeight="2050" MadCap:lastWidth="1178">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Defining a Hyperlink for Hierarchical Modeling</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="hierarchical modeling;defining a hyperlink" />Linking a Submodel</h1>
+        <h2>Link to a Subprocess</h2>
+        <p>A quick way to link an activity to a subprocess is to utilize Visio's subprocess capability. To do this, follow these steps:</p>
+        <ol>
+            <li>Select the activity you wish to link to a subprocess.</li>
+            <li>From the Visio <b>Insert</b> ribbon select the 
+ <b>Link to Existing</b> list button. </li>
+        </ol>
+        <p>
+            <img src="Resources/Images/LinkToExistingSubprocess.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ol start="3">
+            <li>If you wish to link to a subprocess on another page 
+ of the same Visio file, choose the page name listed under <b>Pages in This Document</b>. </li>
+            <li>If you wish to link to a subprocess in another Visio 
+ file, select <b>Browse to Other Document...</b> 
+ and choose the file from the Link to File dialog.</li>
+            <li>With either step 3 or 4 performed, your activity will now be linked as a submodel to the page or document you chose.</li>
+        </ol>
+        <p class="p_10">Note: If you haven't created a subprocess for the activity yet, you can also choose the <b>Create New</b> button which will create a new page in your document and add the link to it. You can then define the subprocess on the new page at any time. </p>
+        <h2>Inserting a Hyperlink</h2>
+        <p>Another way to link an activity to a subprocess is to add a hyperlink. To do this, follow these steps:</p>
+        <ol>
+            <li>Select the activity you wish to link to a subprocess.</li>
+            <li>From the Visio <b>Insert</b> ribbon select the 
+ <b>Hyperlink</b> button (or use the hot key Ctrl+K). </li>
+        </ol>
+        <p>
+            <img src="Resources/Images/inserthyperlink.png" MadCap:mediastyle="@media print { max-width: 5in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ol start="3">
+            <li>If you wish to link to a subprocess in another Visio 
+ file, enter the Visio file name in the <b>Address</b> field or click on its <b>Browse</b> 
+ button and select the name of the file.</li>
+            <li>If you wish to link to a subprocess on another page 
+ of the same Visio file, enter the page number in the <b>Sub-address</b> field 
+ or click on its <b>Browse</b> button and select the page name. </li>
+            <li>Enter an optional description which will be the name 
+ displayed in the menu for selecting the subprocess. </li>
+        </ol>
+        <p style="text-align: left;">
+            <img src="Resources/Images/hyperlink.png" class="img_2" style="border-left-style: solid;border-left-width: 0px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 0px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 0px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ol start="6">
+            <li>Click <b>OK</b> when finished.</li>
+        </ol>
+        <p class="p_10"> Please note: You can link 
+ other files to activities as hyperlinks (plain graphics can be linked 
+ to separate Visio documents with no effect on the model).</p>
+        <p>Now when you move the mouse cursor over the activity it turns into a 
+ hyperlink symbol designating that a hyperlink has been defined for the 
+ activity. To go to the hyperlinked page or file, Ctrl+left-click on the shape or right-click 
+ and select the hyperlink name that now appears in the context menu. </p>
+        <h2>Removing/Disabling a Submodel Link</h2>
+        <p>If you no longer want an activity to use a linked subprocess, and instead 
+ use its own defined processing, you may either delete the hyperlink or 
+ unselect the <b>Use Submodel</b> check box in the Advanced section of the shape properties 
+ window.</p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/UncheckUseSub.png" MadCap:mediastyle="@media print { max-width: 5.00in; }" class="img_2" />
+        </p>
+        <p>You can also temporarily "turn off" using a submodel without removing the hyperlink in case you would like to run your model using the parent activity properties to simplify your model for verification or troubleshooting purposes, for example. Then later turn it back on and start utilizing the submodel again without the need to redefine the hyperlink.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>ResQty</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>ResQty</h1>
+        <h5><a name="kanchor300"></a>Function</h5>
+        <h2>Syntax samples</h2>
+        <p>ResQty({&lt;resource name&gt;})<br />If ResQty(Res1) &gt; 5 Then Free 5 Res1</p>
+        <h2>Description</h2>
+        <p>Returns the number of units of the specified resource that the current entity owns. ResQty() can be used to determine the amount of time necessary to process an entity based on the number of resources an entity owns.</p>
+        <h2>Valid In</h2>
+        <p class="p">Activity, arrival and route logic. This function returns an integer.</p>
+        <h2>Components</h2>
+        <p><b>&lt;resource name&gt;</b>
+        </p>
+        <p>The name of the resource to check for. If no resource name is specified, the total number of units of all resource types owned by the entity is returned. Res() may be substituted for a resource name.</p>
+        <h2>Example</h2>
+        <p>
+            The example below demonstrates the use of ResQty() to adjust the processing time for an entity based on the number of resources available to process it. Before EntA’s arrive at Act1, they capture a certain number of resources named Res1. Activity logic at Act1 determines how many Res1’s each EntA captured and processes it accordingly. The more resources an entity captures, the more workers available to work on the project, and the less time it takes. Process Simulator then routes EntA’s on to Act2. The logic at Act2 makes sure that no EntA owns more than one Res1.
+</p>
+        <p>Act1 activity logic</p>
+        <p class="p_11">Wait 120 / ResQty(Res1)</p>
+        <p>Act2 activity logic </p>
+        <p class="p_11">If ResQty(Res1) &gt; 1 Then</p>
+        <p class="p_12">Free (ResQty(Res1) - 1) Res1</p>
+        <h5>See Also</h5>
+        <p><a href="FreeCap.htm" class="a_11">FreeCap</a>, <a href="FreeUnits.htm" class="a_11">FreeUnits</a>, and <a href="GroupQty.htm" class="a_11">GroupQty</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

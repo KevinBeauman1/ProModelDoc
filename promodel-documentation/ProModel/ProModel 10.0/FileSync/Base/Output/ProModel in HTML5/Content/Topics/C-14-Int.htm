@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Int</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-14-Int.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Int</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1104904"></a><a name="C-14_4292047180_35688"></a>Int</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Local variable:declaration statements:INT;INT" />Local Variable Declaration Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Int &lt;name1&gt;{= &lt;expression1&gt;, &lt;name2&gt;= &lt;expression2&gt;...) </p>
+        <p class="Syntax_body">Int Count</p>
+        <p class="Syntax_body">Int Count = 1</p>
+        <p class="Syntax_body">Int Count = 1, Test = FreeCap(Loc2)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Creates a local variable of type integer. Local variables work much the same as attributes, except that they only are available within the logic that declares them. A new variable will be created for each entity that encounters an Int statement. Local variables are not directly available to subroutines, which have their own local variables. However, a local variable may be passed to a subroutine as a parameter. Local variables are available inside referenced macros.</p>
+        <p class="p">Use local variables where ever possible for the test variable in <MadCap:keyword term="WHILE...DO" />While...Do, <MadCap:keyword term="DO...WHILE" />Do...While, and <MadCap:keyword term="DO...UNTIL" />Do...Until loops.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic. Variables declared with Int are valid in any expression within the logic where a normal integer number is valid.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;names&gt;</p>
+        <p class="p">An identifier for the local variable. This identifier must be a valid name.</p>
+        <p class="Component">&lt;expressions&gt;</p>
+        <p class="p">The variable will initially be assigned this value. This expression is evaluated every time the Int statement is encountered.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">A plant manufactures pipes of 12 different types, such as 2" steel, 4" aluminum, etc. All workers inspect pipes at a common inspection station after which they move to a dock where other workers load them into boxes. The boxes are designed to hold only certain types of pipes. Therefore a box designed to hold 2" steel pipes can only hold 2" steel pipes, not 4" aluminum pipes.</MadCap:conditionalText>
+        </p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Suppose a Box, enters a multi-capacity location, Dock. Each Box has a different entity attribute, b_type, describing the type of pipe it can hold. Workers load pipes into the Box. Workers must load the 2" steel pipes into the box designed to hold the 2" steel pipes. Therefore, the attribute value of the Pipe, p_type, must match the attribute value of the Box, b_type. We can use local variables to accomplish this modeling task. In the following example, we defined X as a local variable and set it equal to b_type:</MadCap:conditionalText>
+        </p>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Pipe</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Inspect</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Int  X= b_type</p>
+                        <p class="CellBody">Load 5 Iff X=p_type</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyA-Column3-Body3">
+                        <p class="CellBody">Wait 10 </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Pipe</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Dock</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">Load 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                        <p class="CellBody">&#160;</p>
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">Delivery</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">Move For 8</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Real. Also see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-LocalVariables.htm#C-06_1157716610_1085869" title="" alt="" xrefformat="{paratext}">Local Variables</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

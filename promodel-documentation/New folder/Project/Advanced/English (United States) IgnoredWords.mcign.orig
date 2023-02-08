@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<IgnoredWordsDictionary>
+    <Word Comment="">Intellisense</Word>
+    <Word Comment="">GetCost</Word>
+    <Word Comment="">GetResRate</Word>
+    <Word Comment="">IncLocCost</Word>
+    <Word Comment="">IncResCost</Word>
+    <Word Comment="">SetRate</Word>
+    <Word Comment="">IncEntCost</Word>
+    <Word Comment="">Storages</Word>
+    <Word Comment="">Writeline</Word>
+    <Word Comment="">Xwrite</Word>
+    <Word Comment="">FreeCap</Word>
+    <Word Comment="">FreeUnits</Word>
+    <Word Comment="">PercentUtil</Word>
+    <Word Comment="">OwnedResource</Word>
+    <Word Comment="">GroupQty</Word>
+    <Word Comment="">CalDOM</Word>
+    <Word Comment="">CalHour</Word>
+    <Word Comment="">CalMin</Word>
+    <Word Comment="">CalMonth</Word>
+    <Word Comment="">CalYear</Word>
+    <Word Comment="">CalDay</Word>
+    <Word Comment="">Trunc</Word>
+    <Word>workflow</Word>
+    <Word>Visio</Word>
+    <Word>AutoCAD</Word>
+</IgnoredWordsDictionary>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="462" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_462963"></a>
+            <MadCap:keyword term="GetRecordCount;ProModel Data Object:GetRecordCount" />GetRecordCount</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetRecordCount <span class="_Override" style="color: #0000ff;">RecordType, Count</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the current number of records in the specified table.  This is very useful in looping through each record in a table of unknown size.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) for which you want the record count.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Count</span> (Long)  Returns the number of records in the specified table.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads the mfg_cost model, gets the record count from the Locations table, then displays a message telling the user how many locations there are.</p>
+        <p class="objects">Sub HowManyLocs()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim rec_count As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.GetRecordCount <span class="_Override" style="color: #0000ff;">1, rec_count</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	If rec_count = 1 Then</p>
+        <p class="objects4">			pmObject.MsgBox "There is 1 location in this model"</p>
+        <p class="objects3">		Else</p>
+        <p class="objects4">						pmObject.MsgBox "There are " &amp; rec_count &amp; " locations in this model"</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+        <p class="p">&#160;</p>
+    </body>
+</html>

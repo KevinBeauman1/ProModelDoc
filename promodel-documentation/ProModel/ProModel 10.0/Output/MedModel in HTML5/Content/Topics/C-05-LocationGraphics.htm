@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Locations">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Location Graphics </title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-LocationGraphics.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Locations.htm#C-05_2723800551_1085243">Locations</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Location Graphics</span>
+        </div>
+        <h4><a name="C-05_2723800551_1085428"></a><a name="kanchor606"></a>Location Graphics </h4>
+        <p class="p">A location may have any one or more of the following graphics selected from the Location Graphics window. </p>
+        <p class="p"><b>Counter</b><a name="kanchor607"></a>  A counter representing the current number of entities at a location. The options available with counters are explained next.</p>
+        <p class="p"><b>Gauge</b><a name="kanchor608"></a>   A vertical or horizontal sliding bar showing the location's current contents during the simulation (shown as a percentage of the capacity). This graph will be updated constantly as a simulation runs. The options available with gauges are explained below.</p>
+        <p class="p"><a name="kanchor609"></a><b>Tank</b>   A vertical or horizontal sliding bar showing the continuous flow of liquids and other substances into and out of tanks or similar vessels. This continuous modeling capability can be combined with discrete-event simulation to model the exchange between continuous material and discrete entities such as when a liquid is placed in containers. </p>
+        <p class="p"><b>Conveyor/Queue</b><a name="kanchor610"></a><a name="kanchor611"></a><a name="kanchor612"></a> A symbol representing a conveyor or a queue. To create joints in a conveyor or queue, click on the conveyor or queue with the right mouse button. Drag the joints to achieve the desired shape. Right click on a joint to delete it. The options available with conveyors and queues are described next.</p>
+        <p class="p"><b>Label</b><a name="kanchor613"></a>   Any text used to describe a location. The label is initially synchronized with the name of the location and changes whenever the location name is changed. The name, size, and color of the text may be edited by double clicking on the label or selecting it and clicking on the edit button (see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-08-GraphicToolsButtonBar.htm#C-08_1964285664_1090594" title="" alt="">Text</a>). Once the name on a label is edited, it will no longer be automatically changed when the location name is changed. </p>
+        <p class="p"><b>Status Light</b><a name="kanchor614"></a>   A circle that changes color during the simulation to show the location’s status. For a single capacity location, the states displayed are idle/empty, in operation, blocked, down, waiting, and in setup. For multi-capacity locations, the displayed states are up (operational) and down (off-shift, on break, disabled). Below are the states listed and their accompanying color:</p>
+        <p class="p">
+            <img src="statuslight states.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Entity Spot</b><a name="kanchor615"></a>   An assignable spot on the layout where the entity or entities will appear while at the location. While an entity is at a location, the entity’s alignment spot (defined in the Graphic editor) will appear exactly on top of the location's entity spot, allowing the two graphics to align exactly as desired. A multi-capacity location will use as many entity spots as defined (in the order defined) up to the capacity of the location. Entities in excess of entity spots will continue to pile up on the last entity spot defined.</p>
+        <p class="p"><b>Region</b><a name="kanchor616"></a>   A boundary used to represent a location's area. A region may be placed in the layout over an imported background such as an AutoCAD drawing to represent a machine or other location. This technique allows elements in the imported background to work as locations.</p>
+        <p class="p"><b>Library graphic</b><a name="kanchor617"></a>   Any of the graphics appearing in the library graphic menu. Use the scroll bar to view all available graphics. Library graphics may be created or modified through the Graphic Editor. The name for the graphic, the default name of any location created with that graphic, can be saved in the Graphic Editor (see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-08-NamingaGraphic.htm#C-08_1964285664_1090539" title="" alt="">Naming a Graphic</a>).</p>
+        <p class="How_to_title">How to edit a graphic already on the layout<a name="kanchor618"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Double click on the graphic.</li>
+        </ol>
+        <p class="p">or...</p>
+        <ol data-mc-continue="false">
+            <li class="li_1_how_to_step" value="1">	Select the graphic.</li>
+            <li class="li_1_how_to_step" value="2">Click on the Edit button inside the Location Graphics window.<br /></li>
+        </ol>
+        <p class="p">or...</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Right-click on the graphic in the layout.</li>
+            <li class="li_1_how_to_step" value="2">Select Edit Graphic from the menu.</li>
+        </ol>
+        <p class="p_10">Please Note: 1.	Location graphics are painted on the layout in the order of the location list and, for any given location having multiple graphics, in the order that the graphic was added to the layout. 2.	A location may include any of the above graphics and symbols. However, a location can have no more than one counter, one gauge, one tank, one queue, one status light, or one region.<a name="kanchor619"></a> 3.	Clicking on a layout graphic with no edit table on the screen displays the name of the element (location, etc.) represented by the graphic. With any edit table showing, hold down the CTRL key while clicking on the graphic to display the location name.<a name="kanchor620"></a></p>
+        <h5><a name="CounterDialogBox"></a>Counter Dialog Box<a name="kanchor621"></a></h5>
+        <p class="p">To edit the appearance of a counter, double click on the counter on the layout, select the counter and click on the Edit button, or right click on the counter and select edit. The counter dialog box allows you to choose the appearance of a graphic counter that is used to display the contents of a location. To change the digit color of the counter, click on the Digit Color button. To change the counter's background and border, click on the Frame button. The digit's font size and style may be changed by clicking on the Font button.</p>
+        <p class="image_nobreak">
+            <img src="5-1-5.jpg" />
+        </p>
+        <h5><a name="Gage/TankDialogBox"></a>Gauge/Tank Dialog Box<a name="kanchor622"></a></h5>
+        <p class="p">When you create a gauge or tank, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> will prompt you to specify which type you wish to use before you paste it in the layout. To edit a gauge or tank on the layout, double click on the gauge or tank to display the gauge/tank dialog box, select the gauge/tank and click on the Edit button, or right click on the gauge or tank and select edit graphic. From the gauge/tank dialog, you may change a gauge to a tank and define its appearance, orientation, and fill direction. You may also access this dialog by selecting the gauge or tank and clicking on the Edit button.</p>
+        <p class="image_nobreak">
+            <img src="5-1-6.jpg" />
+        </p>
+        <h5><a name="TextDialogBox"></a>Text Dialog Box<a name="kanchor623"></a></h5>
+        <p class="p">To edit the appearance of a location label, you may double-click on the text once it is on the layout, select the text and click on the Edit button, or right click on the text and select edit. The text is typed in an edit window with several edit features available via buttons above the window. The <a name="kanchor624"></a>font, <a name="kanchor625"></a>color, <a name="kanchor626"></a>alignment, <a name="kanchor627"></a>rotation and <a name="kanchor628"></a>frame may be changed from this dialog box. A sample of the currently chosen options is shown in the lower-left corner.</p>
+        <p class="image_nobreak">
+            <img src="5-1-7_309x214.jpg" style="width: 309;height: 214;" />
+        </p>
+        <h5><a name="LibraryGraphicDialogBox"></a>Library Graphic Dialog Box<a name="kanchor629"></a></h5>
+        <p class="p">To change or edit a library graphic that represents a location, you may double click on the library graphic on the layout, select the graphic and click on the Edit button, or right click on the graphic and select edit.</p>
+        <p class="image_nobreak" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-96-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p">This gives the option to change the icon, orientation, color, or graphic dimensions of the graphic. The default dimensions for the graphic, which are created in the Graphic Editor, are displayed above the graphic. To change the dimensions of the graphic, click on the Dimensions button. This gives you the ability to specify horizontal or vertical and feet or meters to change the graphic dimensions.</p>
+        <h5><a name="Queue/ConveyorDialogBox"></a>Queue/Conveyor Dialog Box<a name="kanchor630"></a><a name="kanchor631"></a></h5>
+        <p class="p">To control the look and operation of a conveyor or a queue, you may double click on the conveyor/queue in the Layout window, select the graphic and click on the Edit button, or right click on the conveyor/queue and choose edit graphic. The Queue/Conveyor dialog box appears. It also allows you to specify whether you wish to define the location as a conveyor or queue. Use the scroll bar to set the width of the queue or conveyor<a name="kanchor632"></a><a name="kanchor633"></a>. Select the style by clicking on solid, roller (i.e., roller conveyor) or line.<a name="kanchor634"></a><a name="kanchor635"></a> Click on the border color or fill color to change the color of the queue<a name="kanchor636"></a>. If you want the queue to be visible during edit time and invisible during run time, click on the Invisible During Simulation option<a name="kanchor637"></a>. See the discussion on conveyors and queues later in this section for more information.</p>
+        <p class="image_nobreak">
+            <img src="5-1-9.png" />
+        </p>
+        <h5><a name="kanchor638"></a><a name="Queues"></a>Queues</h5>
+        <p class="p"><a name="kanchor639"></a>A queue is a location that imitates the progressive movement and queuing of waiting lines. When an entity enters a queue, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> executes any operation logic for the entity and then moves it to the end of the queue. <a name="kanchor640"></a>To have processing logic execute after an entity arrives at the end of a queue, use a <a name="kanchor641"></a>Move statement in the operation logic. A move statement causes the entity to move to the end of the queue where any additional operation logic defined will be processed. Operation logic following a Move statement actually gets processed after the elapsed time that the entity would have reached the very end of the queue if no other entities were ahead of it. Following a Move statement, any operation statement is valid except for <a name="kanchor642"></a>Create, <a name="kanchor643"></a>Split As, <a name="kanchor644"></a>Ungroup, <a name="kanchor645"></a>Unload, or another Move statement.</p>
+        <p class="p">If a Move statement is specified that includes a move time (e.g., Move for 5.2 sec), the entity speed and length of the queue are ignored. If a move time is not included with the Move statement, the move time is based on the entity speed and length of the queue (if no queue length or entity speed is defined, the move time is zero).</p>
+        <p class="p"><a name="kanchor646"></a>Entities in a queue may not be preempted by other entities and, once entities begin movement in a queue, are not allowed to pass each other. After the specified move time, however, entities continue processing any additional operation and output logic. A “No Queuing” rule specified for a queue location allows entities to depart in any order after completing their move time. </p>
+        <p class="p"><a name="kanchor647"></a>Queues are drawn from the beginning to the end of the center-line and are assigned a default length based on the graphic scale. However, the default queue length may be overridden by entering a different length. When a queue is modified graphically, the length will automatically be recalculated based on the graphic scale unless you checked the “Recalculate path lengths when adjusted” option. You can access this option from the Tools menu under Options. </p>
+        <h5><a name="kanchor648"></a><a name="Conveyors"></a>Conveyors</h5>
+        <p class="p"><a name="kanchor649"></a>A conveyor is a location that simulates the movement of entities on either an accumulating or non-accumulating conveyor and appears with a conveyor graphic. Entities can only enter a conveyor at the beginning and leave at the end. For accumulating conveyors, if the lead entity is unable to exit the conveyor, trailing entities queue up behind it. For non-accumulating conveyors, if the lead entity comes to a stop, the conveyor and all other entities stop. Entities on a conveyor may not be preempted by other entities. </p>
+        <p class="p">The capacity assigned to a conveyor limits the number of entities that can access a conveyor. However, the cumulative total length or width of the entities on the conveyor cannot exceed the conveyor length. In fact, the utilization statistics for a conveyor reflect the amount of space utilized on the conveyor throughout the simulation, not the number of entities occupying the conveyor. Unlike other locations, an entity is not routed to the conveyor until there is room at the beginning for the entity to fit, even if the conveyor has capacity to hold it. </p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> executes operation logic for entities entering a conveyor as soon as they enter unless the logic follows a <a name="kanchor650"></a>Move statement. If no Move statement is encountered, entities begin their move on the conveyor after processing any logic. If a Move statement is encountered, entity movement is initiated. Any logic defined after a Move statement is processed when the entity reaches the very end of the conveyor.</p>
+        <p class="p">Move time on a conveyor is based on the length and speed of the conveyor, as well as the length or width of the entity. The move time for an entity on a conveyor is calculated using the following formula:</p>
+        <p class="p_11">Time = (Conveyor Length - Entity Length or Width)/Conveyor Speed</p>
+        <p class="p">And the percentage utilization is calculated using this formula:</p>
+        <p class="image_nobreak">
+            <img src="8_26.jpg" />
+        </p>
+        <p class="Syntax_body">Where:</p>
+        <p class="Syntax_body">tc =	the time the entity spent on the conveyor whether moving or not</p>
+        <p class="Syntax_body">Cc =	the conveyor capacity for that entity</p>
+        <p class="Syntax_body">T =	the total simulation time</p>
+        <p class="p_10">Please Note: Unlike queues, <a name="kanchor651"></a>Move statements for conveyors may not include a move time. Processing logic executed at the end of the conveyor may contain any operation statement except for <a name="kanchor652"></a>Create, <a name="kanchor653"></a>Split As, <a name="kanchor654"></a>Ungroup, or <a name="kanchor655"></a>Unload. Additionally, the <a name="kanchor656"></a>Accum, <a name="kanchor657"></a>Combine, and <a name="kanchor658"></a>Group statements are not allowed at the end of non-accumulating conveyors.</p>
+        <p class="p"><a name="kanchor659"></a>Due to the space limitations of a conveyor, certain operation statements at the beginning of a conveyor are invalid including <a name="kanchor660"></a>Accum, <a name="kanchor661"></a>Combine, <a name="kanchor662"></a>Create, <a name="kanchor663"></a>Group, <a name="kanchor664"></a>Split As, <a name="kanchor665"></a>Ungroup, and <a name="kanchor666"></a>Unload.</p>
+        <p class="p"><a name="kanchor667"></a>The default conveyor length is determined by the graphic scale, although this may be overridden by entering a different length. When a conveyor is modified graphically, the length will automatically be recalculated based on the graphic scale unless you uncheck the “Recalculate path lengths when adjusted” option. You can access this option from the Tools menu under Options.</p>
+        <h5><a name="kanchor668"></a><a name="ConveyorGraphicsDisplay"></a>Conveyor Graphics Display</h5>
+        <p class="p">When you use conveyors and want the graphics to display properly on the conveyor with no overlapping and little space between entities, use the following:</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity Orientation</p>
+                        <p class="CellHeading">on Conveyor</p>
+                    </td>
+                    <td class="HeadD-Column2-Header1">Requirements</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Width-wise</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">1. Entity width on conveyor should equal horizontal dimension.</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">2. Entity length on conveyor should equal vertical dimension.</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Length-wise</p>
+                    </td>
+                    <td class="BodyD-Column2-Body3">
+                        <p class="CellBody">1. Entity width on conveyor should equal vertical dimension.</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyA-Column2-Body4">
+                        <p class="CellBody">2. Entity length on conveyor should equal horizontal dimension.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5><a name="kanchor669"></a><a name="ConveyorAnimation"></a>Conveyor Animation</h5>
+        <p class="p">The animation of entities traveling along conveyors is displayed according to the logical length or width of the entity, not the scaled length or width of the entity graphic.</p>
+        <p class="How_to_title">How to define a conveyor graphically<a name="kanchor670"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Select the conveyor/queue symbol from the Location Graphics window.</li>
+            <li class="li_1_how_to_step" value="2">Click on the Layout window with the left mouse button where the conveyor should start.</li>
+            <li class="li_1_how_to_step" value="3">Add bends to the conveyor by moving the mouse and clicking the left mouse button. </li>
+            <li class="li_1_how_to_step" value="4">Move the mouse in the desired direction and click on the right mouse button to end the conveyor.</li>
+        </ol>
+        <p class="How_to_title">How to create bends in an existing conveyor<a name="kanchor671"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click on the conveyor with the right mouse button. From the menu that appears, select Add Joint. A small black square appears on the conveyor. </li>
+            <li class="li_1_how_to_step" value="2">Using the left mouse button, drag the square in the direction you desire to bend. </li>
+        </ol>
+        <h5><a name="kanchor672"></a><a name="ConveyorOptionsDialogBox"></a>Conveyor Options Dialog Box</h5>
+        <p class="p">The conveyor options dialog box is used to define the specifications for a conveyor. To access the conveyor options dialog box, you may double click on a conveyor, select the conveyor and click on the Edit button from the Location Graphics window, or right-click on the conveyor and select edit. This opens the Conveyor/Queue dialog box from which the Conveyor Options dialog box can be opened by clicking on the Conveyor Options button. The Conveyor Options dialog box presents the following options:</p>
+        <p class="image_nobreak">
+            <img src="5-1-10.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Accumulating</b><a name="kanchor673"></a>   Select or deselect this option depending on whether the conveyor is to be accumulating or non-accumulating.</p>
+        <p class="p"><b>Auto-Orient Entities</b><a name="kanchor674"></a> In new conveyors, the option is automatically selected. When selected, entities will auto orient allong the conveyor based on the selected Entity Orientation; Entities will lead from the right side of the graphic when Widthwise is selected, top of the graphic when you select Lengthwise.</p>
+        <p class="p">
+            <img src="../Resources/Images/Conveyor rotation.gif" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Entity Orientation</b><a name="kanchor675"></a> Select Lengthwise or Width-wise depending on whether the entity <a name="kanchor676"></a>is traveling on the conveyor in the direction of the entity length or in the direction of the width.</p>
+        <p class="p"><b>Length</b><a name="kanchor677"></a>   The length of the conveyor expressed in either feet or meters depending on the default specified in the General Information dialog.</p>
+        <p class="p"><a name="kanchor678"></a><b>Speed</b><a name="kanchor679"></a>  The speed of the conveyor in feet or meters per minute. The distance units can be set in the General Information dialog box.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

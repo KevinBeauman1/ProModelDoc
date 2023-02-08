@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="855" MadCap:lastWidth="1179" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102876"></a>Char()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Strings:functions:CHAR();CHAR()" />String Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Char(&lt;expression&gt;)</p>
+        <p class="Syntax_body">Char(10)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the <MadCap:keyword term="ASCII:characters;Characters:ASCII" />ASCII character for the number that the expression evaluates to. This function is most useful for outputting ASCII characters that cannot be typed, such as accented characters. This function is most often used in conjunction with a string expression and the concatenation (“$”) operator.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The number corresponding to the ASCII character varies with each computer depending on the character set specified in the config.sys file of your computer. To determine the number corresponding to the <MadCap:keyword term="ASCII" />ASCII character at your computer, run the model CHAR.MOD found in the MODELS\REFS directory. View the file this model generates called CHAR.TXT found in the same directory as the model.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any string expression.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">Any expression that evaluates to a number between 0 and 255. The expression is evaluated every time the Char() function is encountered.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below displays the combined cost of all the Parts ordered through a particular service center. The simulation has kept a tally of all the parts it has ordered in the variable Parts, and each part cost 25 English pounds. The logic displays the cost of the parts with the pound symbol (£), which is ASCII code 163.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Display “Total cost of parts:” $ Char(163) $ Parts * 25</p>
+        <p class="space_before_image">&#160;</p>
+        <p class="Graphic">
+            <img src="cc-mm-c14-440-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-11 - String Expressions.htm#C-11_756594771_1095062" target="" title="" alt="">String Expressions on page 1</MadCap:xref>. </p>
+    </body>
+</html>

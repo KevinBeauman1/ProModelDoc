@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Calendar Editor"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Adding3" />
+    <Anchor
+      Name="Adding" />
+    <Anchor
+      Name="Adding2" />
+    <Anchor
+      Name="Splittin" />
+    <Anchor
+      Name="Erasing" />
+    <Anchor
+      Name="Editing" />
+    <Anchor
+      Name="Erasing2" />
+    <Anchor
+      Name="Adding4" />
+    <Anchor
+      Name="Duplicat" />
+    <Anchor
+      Name="Renaming" />
+    <Anchor
+      Name="Importin" />
+    <Anchor
+      Name="Changing" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="time off"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="work time"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="break time"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="time off:adding or editing"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="shift changes:adding or editing"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="time off:erasing"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="shift changes:erasing"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="adding work"
+      Conditions=""
+      LocalConditions=""
+      Position="46" />
+    <IndexCacheEntry
+      Term="adding a break"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+    <IndexCacheEntry
+      Term="work time:editing"
+      Conditions=""
+      LocalConditions=""
+      Position="63" />
+    <IndexCacheEntry
+      Term="break time"
+      Conditions=""
+      LocalConditions=""
+      Position="63" />
+    <IndexCacheEntry
+      Term="work time:erasing"
+      Conditions=""
+      LocalConditions=""
+      Position="74" />
+    <IndexCacheEntry
+      Term="break time"
+      Conditions=""
+      LocalConditions=""
+      Position="74" />
+    <IndexCacheEntry
+      Term="adding and deleting shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="82" />
+    <IndexCacheEntry
+      Term="duplicating shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="93" />
+    <IndexCacheEntry
+      Term="renaming shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="100" />
+    <IndexCacheEntry
+      Term="shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="107" />
+    <IndexCacheEntry
+      Term="importing shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="107" />
+    <IndexCacheEntry
+      Term="exporting shifts"
+      Conditions=""
+      LocalConditions=""
+      Position="107" />
+    <IndexCacheEntry
+      Term="shift color"
+      Conditions=""
+      LocalConditions=""
+      Position="116" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

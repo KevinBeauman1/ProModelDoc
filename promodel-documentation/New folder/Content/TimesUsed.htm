@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1202" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>TimesUsed</h1>
+        <h5>
+            <MadCap:keyword term="functions:timesused;timesused" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>TimesUsed(&lt;resource&gt;)</p>
+        <p>If TimesUsed(Res1) &gt; 5 Then Use Res2 for 10</p>
+        <h2>Description</h2>
+        <p>Returns the number of times a resource has been used.</p>
+        <h2>Valid In</h2>
+        <p>Any logic. </p>
+        <h2>Components</h2>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>The name of the resource to examine. Res() may be used here.</p>
+        <h2>Example</h2>
+        <p>
+            In the example below, customers arrive at a local copy shop. Two resources (Trainee and Mgr) are available to service customers.  If the trainee has serviced 10 or fewer clients, the manager must assist in helping the customer.  Otherwise, the Trainee may help customers without the assistance of Mgr.
+        </p>
+        <p class="p_11">If TimesUsed(Trainee) &lt;= 10 Then<br />{</p>
+        <p class="p_12">Get Manager And Trainee<br />Wait 10 min<br />Free All</p>
+        <p class="p_11">}</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">Use Trainee For 10 min</p>
+        <h5>See Also</h5>
+        <p>Units</p>
+    </body>
+</html>

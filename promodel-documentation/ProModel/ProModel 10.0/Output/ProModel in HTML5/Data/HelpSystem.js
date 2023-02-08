@@ -1,0 +1,13 @@
+var xmlHelpSystemData = "";
+xmlHelpSystemData += '<?xml version=\"1.0\" encoding=\"utf-8\"?>';
+xmlHelpSystemData += '<WebHelpSystem DefaultUrl=\"Content/Topics/C-01-WelcometoProModel.htm\" Toc=\"Data/Toc.js\" Index=\"Data/Index.js\" Concepts=\"Data/Concepts.js\" BrowseSequence=\"Data/BrowseSequence.js\" Glossary=\"Data/Glossary.js\" SearchDatabase=\"Data/Search.js\" Alias=\"Data/Alias.xml\" Synonyms=\"Data/Synonyms.xml\" SkinName=\"ProModel in HTML5\" SkinID=\"ProModel_in_HTML5\" Multilingual=\"false\" Skins=\"ProModel in HTML5\" BuildTime=\"1/16/2023 3:20:18 PM\" BuildVersion=\"12.0.5991.25330\" TargetType=\"WebHelp2\" SkinTemplateFolder=\"Skin/\" InPreviewMode=\"false\" MoveOutputContentToRoot=\"false\" ReplaceReservedCharacters=\"false\" MakeFileLowerCase=\"false\" UseCustomTopicFileExtension=\"false\" PreventExternalUrls=\"false\" EnableResponsiveOutput=\"true\" IncludeGlossarySearchResults=\"true\" ResultsPerPage=\"20\" xml:lang=\"en-us\" LanguageName=\"English\">';
+xmlHelpSystemData += '    <CatapultSkin Version=\"2\" SkinType=\"WebHelp2\" Comment=\"HTML5 skin\" Anchors=\"Width,Height\" Width=\"600px\" Height=\"400px\" Top=\"320px\" Left=\"1920px\" Bottom=\"320px\" Right=\"0\" Tabs=\"TOC\" DefaultTab=\"TOC\" UseBrowserDefaultSize=\"true\" UseDefaultBrowserSetup=\"true\" BrowserSetup=\"\" FeedbackUserProfileItems=\"Username|EmailAddress|Address1|Address2|City|Country|Employer\" CommentsInTopic=\"false\" Title=\"ProModel Help\" NavigationLinkTop=\"true\" AutoSyncTOC=\"false\" DisplayNotificationOptions=\"false\" DisplayCommunitySearchResults=\"false\" EnableResponsiveOutput=\"true\" Name=\"ProModel in HTML5\" SkinID=\"ProModel_in_HTML5\" SkinClass=\"_Skins_ProModel_in_HTML5\" HideNavOnStartup=\"False\" LogoUrl=\"\">';
+xmlHelpSystemData += '        <WebHelpOptions NavigationPaneWidth=\"300\" HideNavigationOnStartup=\"false\" />';
+xmlHelpSystemData += '        <Toolbar EnableCustomLayout=\"true\" Buttons=\"Print|RemoveHighlight|Separator|PreviousTopic|NextTopic\">';
+xmlHelpSystemData += '            <Script>$(document).ready(function(){';
+xmlHelpSystemData += '&#160; &#160;$(\'head\').append(\'&lt;link rel=\"shortcut icon\" href=\"Content/Resources/Images/faviconPM.ico\" type=\"image/x-icon\" /&gt;\');';
+xmlHelpSystemData += '});</Script>';
+xmlHelpSystemData += '        </Toolbar>';
+xmlHelpSystemData += '    </CatapultSkin>';
+xmlHelpSystemData += '</WebHelpSystem>';
+MadCap.Utilities.Xhr._FilePathToXmlStringMap.Add('HelpSystem', xmlHelpSystemData);

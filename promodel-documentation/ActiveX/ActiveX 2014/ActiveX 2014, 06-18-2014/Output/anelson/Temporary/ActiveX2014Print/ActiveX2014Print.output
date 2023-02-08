@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTargetOutput
+  GeneratedTarget="/Output/anelson/ActiveX2014Print/ActiveX User Guide, PDF.pdf"
+  BuildVersion="12.0.5991.25330">
+  <Files>
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Topics/Active X_2011_cover.jpg" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Topics/3_4.png" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Topics/3_1.png" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/TableStyles/Data_Object_Indented.css" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Topics/3_2.png" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Topics/3_3.png" />
+    <Url
+      Source="Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/TableStyles/Data_Objects.css" />
+    <Url
+      Source="Output/anelson/ActiveX2014Print/ActiveX User Guide, PDF.pdf" />
+  </Files>
+  <Skins />
+</CatapultTargetOutput>

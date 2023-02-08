@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1925" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106038"></a>Move With</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Entity:entity-related move logic statements:MOVE WITH;MOVE WITH;Move:logic statements:MOVE WITH" />Entity-Related Move Logic Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Move With &lt;res1&gt; {, &lt;priority&gt;} <br />    Or &lt;res2&gt; {, &lt;priority&gt;} <br />    {For &lt;time &gt;} {Then Free}</p>
+        <p class="Syntax_body">Move With Technician, 100</p>
+        <p class="Syntax_body">Move With Operator1, 399 For 3 min</p>
+        <p class="Syntax_body">Move With Truck1, 99 Then Free</p>
+        <p class="Syntax_body">Move With Operator1 Or Operator2</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">This statement is used to move an entity using a designated resource such as a person or forklift.  With the Or operator, you can designate alternative resources for making the move.  The statement captures the first available resource designated in its expression and makes the move. As soon as the destination becomes available, the entity implicitly gets the resource. However, if one of the resources is already owned by the entity, it will use that resource. It also allows you to set the priority (p1) for accessing the designated resource.  If the resource is already owned by the entity, this priority is ignored.  </p>
+        <p class="p">If the resource is static, you may specify a time (<MadCap:keyword term="FOR" />For &lt;time expression&gt;) for the move. If a resource is dynamic, a time (For &lt;time expression&gt;) is not valid. If you use “For &lt;time&gt;” with a dynamic resource, you will receive a run-time error. The resource will travel based on either the time or speed/distance defined in the path networks module. </p>
+        <p class="p">The resource used to make the move is freed only if the <MadCap:keyword term="THEN FREE" />Then Free option is used.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This statement is valid only in Move Logic. Move With may only be encountered once by an entity in the same move logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;res1&gt;</p>
+        <p class="p">Resource to be captured and used to transport the entity.</p>
+        <p class="Component">&lt;res2&gt;</p>
+        <p class="p">Alternate resource to be captured and used to transport the entity.</p>
+        <p class="Component">&lt;priority&gt;</p>
+        <p class="p">The priority for accessing the resource. If the resource is already owned by the entity, this priority is ignored.</p>
+        <p class="Component">&lt;time&gt;</p>
+        <p class="p">The length of time the system takes to execute the move.  Used only if the resource is static.  This expression is evaluated whenever the statement is encountered.  If no time unit is specified, the default time unit specified in the General Information dialog is applied.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An entity moving from Station A to Station B may use either Tech1 or Tech2 to move the entity depending on which one is available first. The resource is freed after the move.</p>
+        <p class="Syntax_body">Move With Tech1 Or Tech2 Then Free</p>
+        <p class="p">The same thing could be accomplished in longer form:</p>
+        <p class="Syntax_body">Get Tech1 Or Tech2</p>
+        <p class="Syntax_body">Move With OwnedResource()</p>
+        <p class="Syntax_body">Free OwnedResource()</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Move For and Move On. Also see <MadCap:xref class="lowercase_no_see" href="C-07-RoutingMoveLogic.htm#C-07_3886599965_1089551" target="" title="" alt="">Routing Move Logic on page 1</MadCap:xref>.</p>
+    </body>
+</html>

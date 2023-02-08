@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/sm-c8-300-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c8-301-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c8-302-1.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-300-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-301-1.jpg" />
+    <Link
+      Url="Content/Topics/8-1-11.jpg" />
+    <Link
+      Url="Content/Topics/8-1-12.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/sm-c8-300-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c8-301-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c8-302-1.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-300-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-mm-c8-301-1.jpg" />
+    <Link
+      Url="Content/Topics/8-1-11.jpg" />
+    <Link
+      Url="Content/Topics/8-1-12.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1090327" />
+    <Anchor
+      Name="C-08_1964285664_1090412" />
+    <Anchor
+      Name="C-08_1964285664_35412" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Graphic editor:graphics menu"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphic editor:flip:horizontal"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Flip object:horizontal"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Graphic editor:flip:vertical"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Flip object:vertical"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Graphic editor:rotate:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Graphic editor:move:to front"
+      Conditions=""
+      LocalConditions=""
+      Position="24" />
+    <IndexCacheEntry
+      Term="Graphic editor:move:to back"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="Graphic editor:grouping graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Graphic editor:ungrouping graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Graphic editor:line:styles"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Graphic editor:fill:patterns"
+      Conditions=""
+      LocalConditions=""
+      Position="46" />
+    <IndexCacheEntry
+      Term="Graphic editor:line:color"
+      Conditions=""
+      LocalConditions=""
+      Position="51" />
+    <IndexCacheEntry
+      Term="Graphic editor:fill:color"
+      Conditions=""
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="Graphic editor:dimensions"
+      Conditions=""
+      LocalConditions=""
+      Position="61" />
+    <IndexCacheEntry
+      Term="Graphic editor:grouping graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Group:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Group:objects"
+      Conditions=""
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Graphic editor:ungrouping graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Ungroup:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Ungroup:objects"
+      Conditions=""
+      LocalConditions=""
+      Position="80" />
+    <IndexCacheEntry
+      Term="Graphic editor:line:styles"
+      Conditions=""
+      LocalConditions=""
+      Position="89" />
+    <IndexCacheEntry
+      Term="Line:styles"
+      Conditions=""
+      LocalConditions=""
+      Position="89" />
+    <IndexCacheEntry
+      Term="Line:change line or border style"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Border:change line or border style"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Graphic editor:fill:patterns"
+      Conditions=""
+      LocalConditions=""
+      Position="102" />
+    <IndexCacheEntry
+      Term="Fill:pattern:change"
+      Conditions=""
+      LocalConditions=""
+      Position="108" />
+    <IndexCacheEntry
+      Term="Line:color"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Fill:color"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Color:line"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Color:fill"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Line:color"
+      Conditions=""
+      LocalConditions=""
+      Position="118" />
+    <IndexCacheEntry
+      Term="Fill:color"
+      Conditions=""
+      LocalConditions=""
+      Position="118" />
+    <IndexCacheEntry
+      Term="Color:fill"
+      Conditions=""
+      LocalConditions=""
+      Position="118" />
+    <IndexCacheEntry
+      Term="Color:line"
+      Conditions=""
+      LocalConditions=""
+      Position="118" />
+    <IndexCacheEntry
+      Term="Graphic editor:dimensions"
+      Conditions=""
+      LocalConditions=""
+      Position="127" />
+    <IndexCacheEntry
+      Term="Graphics:dimensions"
+      Conditions=""
+      LocalConditions=""
+      Position="127" />
+    <IndexCacheEntry
+      Term="Dimensions:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="127" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

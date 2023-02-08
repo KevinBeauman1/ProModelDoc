@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1877" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="routing properties" />Routing Properties</h1>
+        <p>The <b>Routing</b> properties allow you to define the movement of entities from one activity to another. </p>
+        <p>Right-click on a connector, choose Properties, and the <b>Routing</b> shape properties window displays.</p>
+        <p>There are Four sections found in the <b>Routing</b> properties window.</p>
+        <ul>
+            <li>Resource</li>
+            <li>Route Type</li>
+            <li>Notes</li>
+            <li>Advanced</li>
+        </ul>
+        <p>
+            <img src="Resources/Images/routingd.png" MadCap:mediastyle="@media print { max-width: 5in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Move Time</b>   The time to move to the next activity. Leaving this field blank will result in no move time during simulation.
+        </p>
+        <h2>Resource</h2>
+        <p><b>Name</b>   Select the resource, if any, required to make the move. If the entity already owns a unit of the resource specified, it will use the captured unit for the move. If you choose, you may leave this field set to None, and define more complex logic, from the Logic dialog, for defining a resource or resources to move the entity.</p>
+        <p><b>Priority</b>   Select the priority (1-10 or interrupt) for obtaining the selected resource.</p>
+        <p><b>Keep</b>   When checked, the entity keeps the resource after making the move and continues to use it at the next activity.</p>
+        <h2>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the route. </p>
+        <h2>Advanced</h2>
+        <p><b>Output from Submodel</b>   This check box is available on a route to exit connection and is used to return entities to the parent activity when using hierarchical modeling.</p>
+        <h2>Route Type</h2>
+        <p>The Route Type section of the Routing properties will change depending on the type of route selected:</p>
+        <ul>
+            <li><b>Percentage</b>   The entity will select this route the specified percentage of time.</li>
+            <li><b>Conditional</b>   The entity will select this route if the condition specified is true.</li>
+            <li><b>Attach</b>   The entity will select this route when an entity at the destination activity is ready to have this entity attached to it. Attach routing can be established before an activity or after an activity.</li>
+            <li><b>Detach</b>   The entity will Detach any or selected attached entities and select this route for them.</li>
+            <li><b>Create</b>   The entity will Create a specified number of entities and select this route for them.</li>
+            <li><b>Send</b>  The entity will only route when either a SEND statement is encountered in logic or an Order is received from a Storage shape. See the SEND statement and Storage properties: Order.</li>
+            <li><b>Outlet</b>   The entity will select this route if all other routes are unavailable, because they are off-shift or have no available capacity.</li>
+            <li><b>Flexible</b>   The entity will route to the destination activity specified or based upon the activity index number in an attribute, variable, array, etc.</li>
+        </ul>
+        <p>When you define a route from an activity, its default type will be Percentage.  If you keep the Percentage routing type or change it to Conditional, Attach, or Send, subsequent routing connections that you add from that activity will default to the same type as the first route.  This behavior does not apply if the first route type is Create, Detach, or Outlet.</p>
+    </body>
+</html>

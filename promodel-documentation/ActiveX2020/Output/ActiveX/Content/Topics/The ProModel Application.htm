@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>The ProModel Application Object</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/TableStyles/Data_Object_Indented.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><span class="MCBreadcrumbs">The ProModel Application Object</span>
+        </div>
+        <h1><a name="C-01_2914010915_459788"></a>
+            <br />The <a name="kanchor1"></a>ProModel Application Object</h1>
+        <p class="p">The ProModel Application object is found in ProModel.exe, MedModel.exe and ServiceModel.exe as “<span class="_Override" style="font-style: italic;">ProModel”</span>,<span class="_Override" style="font-style: italic;"> or “ProModel Type Library”</span>. The <span class="_Override" style="font-style: italic;">“ProModelPM”, </span>or <span class="_Override" style="font-style: italic;">“ProModel PM Type Library” </span>is found exclusively in ProModel.exe. Likewise MedModel.exe contains <span class="_Override" style="font-style: italic;">"ProModelMM" </span>or<span class="_Override" style="font-style: italic;"> "ProModel MM Type Library" </span>and ServiceModel.exe contains<span class="_Override" style="font-style: italic;"> "ProModelSM", </span>or<span class="_Override" style="font-style: italic;"> "ProModel SM Type Library". </span> If one or more of these libraries are not available in your Visual Basic References list, run ProModel.exe, MedModel.exe or ServiceModel.exe (found in the corresponding product folder) with the “ /regserver” command line option.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The ProModel Application object may be used with the Professional, Gold Runtime and Student versions of ProModel.  The Silver Runtime version does not support ProModel’s ActiveX interface at all. The ProModel Application object has methods that control all the commonly used functions of ProModel, as well as the method used to initialize the Events object.  The available methods are listed below.</p>
+        <p class="p">&#160;</p>
+        <table style="caption-side: top;border-spacing: 0px 0px;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 0px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col style="width: 2.5in;" />
+            <col style="width: 2.5in;" />
+            <tbody>
+                <tr>
+                    <td class="_no_borders">EndReplication</td>
+                    <td class="_no_borders">EndSimulation</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">GetEventsObject</td>
+                    <td class="_no_borders">GetOutputPath</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">GetSimTime</td>
+                    <td class="_no_borders">GetStatus</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">GetVersion</td>
+                    <td class="_no_borders">LoadDefaults</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">LoadModel</td>
+                    <td class="_no_borders">MenuCommand</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">MergeModel</td>
+                    <td class="_no_borders">MsgBox</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">New</td>
+                    <td class="_no_borders">OpenModule</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">Quit</td>
+                    <td class="_no_borders">RedrawLayout</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">RedrawTables</td>
+                    <td class="_no_borders">ReleaseEventsObject</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">RunScenarios</td>
+                    <td class="_no_borders">Save</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">SaveAs</td>
+                    <td class="_no_borders">SetMacro</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">SetMenus</td>
+                    <td class="_no_borders">SetMessageModes</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">SetPan </td>
+                    <td class="_no_borders">SetView</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">SetViewRect</td>
+                    <td class="_no_borders">SetWindowPos</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">ShowTranslationDlg</td>
+                    <td class="_no_borders">Simulate</td>
+                </tr>
+                <tr>
+                    <td class="_no_borders">Zoom</td>
+                    <td class="_no_borders">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

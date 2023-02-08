@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Model Elements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Arrays</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningModelElements.htm">Defining Model Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Arrays</span>
+        </div>
+        <h1><a name="kanchor55"></a>Arrays</h1>
+        <p>
+            <img src="Resources/Images/ArraysGrid.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>In Process Simulator, an array is a matrix of cells that contains integer values, real values, or expressions depending on which type of array is selected. Each cell in an array works much like a variable, and a reference to a cell in an array can be used anywhere a variable can be used. A two-dimensional array may be thought of as multiple rows, for which each row has multiple columns (similar to a spreadsheet).</p>
+        <p><b>Name</b> — the name of the array.</p>
+        <p><b>Dimensions</b> — the size of each of the dimensions in the array. A two-dimensional array may be thought of as multiple rows, for which each row has multiple columns. Type the number of rows first, then a comma and space, and then type the number columns.  One-dimensional arrays must be written in the form of a two-dimensional array.</p>
+        <p><b>Type</b> — the type of data or information (integer, real, or expression) that is stored in all the cells in the array. By default, all cells in an array are initialized to zero. Initializing cells to some other value can be done by importing data from a Microsoft Excel<sup>®</sup> file or by assignment in Initialization Logic.</p>
+        <p><b>Import File</b>  — the name of the spreadsheet from which you will initialize the array with data. You may enter either a fully qualified path to your Excel file or a path relative to your Visio<sup>®</sup> file. For example, if your Excel file is in the same directory as your Visio file, simply enter the name of the Excel file into this field. Refer to the topic <a href="ArrayImport.htm" class="a_11">Import Data into Arrays</a> for more information on importing array data.</p>
+        <p><b>Export File</b> —  the name of the spreadsheet to which the array data will be saved at the end of a simulation. You may enter either a fully qualified path to your Excel file or a path relative to your Visio file. For example, if your Excel file is in the same directory as your Visio file, simply enter the name of the Excel file into this field. Refer to the topic <a href="ArrayExport.htm" class="a_11">Export Arrays to Spreadsheets</a> for more information on exporting array data.</p>
+        <p><b>Disable</b> — Use this option to have the import file, export file, or both ignored during simulation without deleting the name of the import or export files from the array record. Choose <i>None</i> to use the specified import and export files. Note that this field is automatically filled with the <i>None</i> setting by default when an array is initially defined.</p>
+        <p><b>Data Between Reps</b> — When running multiple replications, you may choose to keep the data in the array from one replication to the next, or to clear (reset) the array values every replication.  </p>
+        <p>For example, if you select the <i>Keep</i> setting and run a simulation with three replications, the data in the array at the end of the first replication will be kept and used as the second replication begins. If you are using an import file, the file will be used to initialize the array for the first replication only and will be ignored for subsequent replications.</p>
+        <p><b>Notes</b> — allows you to type general notes for descriptive information about the array. </p>
+        <h2>Using Arrays</h2>
+        <p>In the above image, Array1 was defined as an array with 1 row and 10 columns of integer values, Array2 was defined as an array with 7 rows and 3 columns of real values, and Array3 was defined as an array with 3 rows and 12 columns of expressions.</p>
+        <p>To reference a particular cell within an array, write the name of the array and write the numbers for the row and column of interest within square brackets. Note that the row number precedes the column number within the brackets. For example, the fourth column of Array1 should be expressed as <i>Array1[1, 4]</i>. Note that even one-dimensional arrays must be written in the form of two-dimensional arrays. Similarly, the fourth row and second column of Array2 should be expressed as <i>Array2[4, 2]</i>.</p>
+        <p>Array cell values are assigned in exactly the same way that values are assigned to a variable. For example, assigning the value 18.37 to the cell at the second row and third column of Array2 would be expressed as the following statement: <i>Array2[2, 3]=18.37</i></p>
+        <h3>Example</h3>
+        <p>Using arrays can simplify a model. Suppose you need to model an assembly line that attaches components to a computer motherboard. Furthermore, you want to track the usage of component parts over time. Without an array, hundreds of individual entities of various types would have to represent hundreds of individual components. Keeping track of all the components would be very complex, not to mention all of the attach routings for performing the assembly. Instead of entities, various cells in an array could track the number of each type of component used during the simulation.</p>
+        <p>An array can do the job more efficiently. The initial inventory level for each component could be stored in an external file and imported into the cells of the array at the start of the simulation. The first cell might contain the inventory level of transistors; the second could contain the inventory level of capacitors and so on. When a motherboard arrives at the activity adding the components, each cell’s value is decremented according to the number of that type of component attached to the motherboard. If each motherboard requires twelve transistors and five capacitors, then every time a motherboard arrives at the activity, the array’s first cell is reduced by twelve and the second cell is reduced by five. Thus, the model becomes much less complex because it requires fewer entities and less logic.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

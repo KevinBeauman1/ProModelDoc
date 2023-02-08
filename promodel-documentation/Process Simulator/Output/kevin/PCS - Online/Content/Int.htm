@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Statements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Int</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Statements.htm">Statements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Int</span>
+        </div>
+        <h1>Int</h1>
+        <h5><a name="kanchor95"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Int &lt;name1&gt;{= &lt;expression1&gt;, &lt;name2&gt;= &lt;expression2&gt;...) </p>
+        <p>Int Count<br />Int Count = 1<br />Int Count = 1, Test = Rand(100)</p>
+        <h2>Description</h2>
+        <p>Creates a local variable of type integer. Local variables work much the same as attributes, except that they only are available within the logic that declares them. A new variable will be created for each entity that encounters an Int statement. Local variables are not directly available to subroutines, which have their own local variables. However, a local variable may be passed to a subroutine as a parameter.</p>
+        <p>Use local variables  as the test variable in While and Do Until loops.</p>
+        <h2>Valid In</h2>
+        <p>Any logic. Variables declared with Int are valid in any expression within the logic where a normal integer number is valid.</p>
+        <h2>Components</h2>
+        <p><b>&lt;names&gt;</b>
+        </p>
+        <p>An identifier for the local variable. This identifier must be a valid name.</p>
+        <p><b>&lt;expressions&gt;</b>
+        </p>
+        <p>The variable will initially be assigned this value. This expression is evaluated every time the Int statement is encountered. If no expression is assigned, the local variable will be initialized as zero.</p>
+        <h2>Example</h2>
+        <p>
+            A plant manufactures pipes of 12 different types, such as 2" steel, 4" aluminum, etc. At the Cutting station, these pipes are cut into certain lengths depending upon the orders that need fulfilling. As a pipe arrives at Cutting, it has an attribute aCutQty that specifies how many cuts are needed for that specific pipe. We can use a local variable to keep track of how many times the pipe is cut so that it can exit the While loop after completing the cuts. The logic might look like the following:</p>
+        <p class="p_11">Int cutCount<br />While (cutCount &lt;= attrMaxCuts) Do<br />{</p>
+        <p class="p_12">Wait N(15, .4) sec</p>
+        <p class="p_12">Inc varTotalPipeCuts<br />Inc cutCount</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p><a href="Real.htm" class="a_11">Real</a>
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

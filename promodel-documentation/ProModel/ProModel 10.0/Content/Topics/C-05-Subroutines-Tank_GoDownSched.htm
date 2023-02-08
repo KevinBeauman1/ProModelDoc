@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1213" MadCap:lastWidth="1204" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089303"></a><a name="C-05_2723800551_37631"></a>Tank<MadCap:keyword term="TANK_GODOWNSCHED;Subroutines:tank:TANK_GODOWNSCHED" />_GoDownSched</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_GODOWNSCHED (&lt;Tank ID&gt;, &lt;Down time&gt;)</p>
+        <p class="Syntax_body">TANK_GODOWNSCHED (TankA, 5)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Sets the state of the tank to Tank_ScheduledDown, waits for the specified scheduled downtime, then sets the tank state back to its previous setting. If you defined a scheduled downtime using the location downtime dialog, call the Tank_GoDownSched subroutine in the downtime logic rather than use a Wait statement. If the downtime is for cleaning and you will return the tank status to idle, use the Tank_Prep subroutine.</p>
+        <p class="p">Use Tank_GoDownSched to shut down a tank for a scheduled task or event (e.g., interim maintenance or end of scheduled workday). Since the tank uses a scheduled downtime, the time lapsed during the event does not record as a downtime. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Down time&gt;</p>
+        <p class="p">The duration (in time units defined in the General Information dialog) of the scheduled downtime.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Every 4 hours, a technician must check the fill line from a dry supply bin. The time required to check the line is normally distributed with a mean of 10 minutes and a standard deviation of 3 minutes. To define this behavior, define a clock-based, scheduled downtime for the bin to occur with a frequency of 4 hours. In the logic defined for the downtime, enter the following:</p>
+        <p class="Graphic">
+            <img src="5-10-21.jpg" MadCap:mediastyle="@media print { max-width: 2.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

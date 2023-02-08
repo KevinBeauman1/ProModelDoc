@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="289" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_493127"></a><a name="C-01_2914010915_GetVersion"></a>
+            <MadCap:keyword term="GetVersion;ProModel Application Object:GetVersion" />
+            <MadCap:keyword term="GetVersion;ProModel Application Object:GetVersion" />GetOutputPath</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetOutputPath</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the fully qualified path where simulation ouptut will be written to. This path may also be found by using the ProModel user interface under Simulation Options | Output Path. </p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:  </span>None.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  A string containing the fully qualified path where simulation output for a given model will be stored.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, and then opens a VBA message box that displays the model’s output path.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub DisplayOutputPath()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim outputPath As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	outputPath = <span class="_Override" style="font-weight: bold;">pmObject.GetOutputPath</span></p>
+        <p class="objects2">	MsgBox "Simulation output will be written to the following location: " &amp; outputPath</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

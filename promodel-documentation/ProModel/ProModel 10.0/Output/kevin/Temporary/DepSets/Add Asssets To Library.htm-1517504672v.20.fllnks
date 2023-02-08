@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/PMAD Ribbon3.png" />
+    <Link
+      Url="Content/Topics/Add Assets to GLB.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/PMAD Ribbon3.png" />
+    <Link
+      Url="Content/Topics/Add Assets to GLB.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Add Assets To Library" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Add Assets To Library"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

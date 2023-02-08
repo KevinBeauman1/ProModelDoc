@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box, components.png" />
+    <Link
+      Url="Content/Topics/mm-c7-277-1.jpg" />
+    <Link
+      Url="Content/Topics/cc-c7-279-3.jpg" />
+    <Link
+      Url="Content/Topics/cc-c7-279-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-287-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box, Logic Elements list.png" />
+    <Link
+      Url="Content/Topics/sm-c8-280-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c1-280-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Logic Builder - dialog box, selecting elements.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Logic Builder - dialog box, selecting elements.png" />
+    <Link
+      Url="Content/Topics/sm-c1-282-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Logic Builder - dialog box, nested if.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Logic Builder - dialog box, nested if.png" />
+    <Link
+      Url="Content/Topics/sm-c1-282-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - PO Shift Logic window, nested if.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Operation - logic window, nested if.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box, components.png" />
+    <Link
+      Url="Content/Topics/mm-c7-277-1.jpg" />
+    <Link
+      Url="Content/Topics/cc-c7-279-3.jpg" />
+    <Link
+      Url="Content/Topics/cc-c7-279-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-287-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/Logic Builder - dialog box, Logic Elements list.png" />
+    <Link
+      Url="Content/Topics/sm-c8-280-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c1-280-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Logic Builder - dialog box, selecting elements.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Logic Builder - dialog box, selecting elements.png" />
+    <Link
+      Url="Content/Topics/sm-c1-282-1.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Logic Builder - dialog box, nested if.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Logic Builder - dialog box, nested if.png" />
+    <Link
+      Url="Content/Topics/sm-c1-282-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - PO Shift Logic window, nested if.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Operation - logic window, nested if.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-07_3886599965_1094695" />
+    <Anchor
+      Name="BuildExpression" />
+    <Anchor
+      Name="StatementSelection" />
+    <Anchor
+      Name="Paste" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Logic:builder:using"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Logic:builder:building statements or expressions"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="Logic:builder:components"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Logic:builder:parameter:buttons"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="Logic:builder:parameter:entry field"
+      Conditions=""
+      LocalConditions=""
+      Position="27" />
+    <IndexCacheEntry
+      Term="Logic:builder:keypad button"
+      Conditions=""
+      LocalConditions=""
+      Position="31" />
+    <IndexCacheEntry
+      Term="Logic:builder:logic:buttons"
+      Conditions=""
+      LocalConditions=""
+      Position="37" />
+    <IndexCacheEntry
+      Term="Logic:builder:build expression button"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+    <IndexCacheEntry
+      Term="Build:expression button:logic builder"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+    <IndexCacheEntry
+      Term="Logic:builder:select:statements"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="Logic:builder:paste:button"
+      Conditions=""
+      LocalConditions=""
+      Position="65" />
+    <IndexCacheEntry
+      Term="Logic:builder:clear button"
+      Conditions=""
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Logic:builder:logic:elements"
+      Conditions=""
+      LocalConditions=""
+      Position="78" />
+    <IndexCacheEntry
+      Term="Logic:builder:return button"
+      Conditions=""
+      LocalConditions=""
+      Position="85" />
+    <IndexCacheEntry
+      Term="Logic:builder:cancel button"
+      Conditions=""
+      LocalConditions=""
+      Position="85" />
+    <IndexCacheEntry
+      Term="Logic:builder:select:statements"
+      Conditions=""
+      LocalConditions=""
+      Position="96" />
+    <IndexCacheEntry
+      Term="Logic:builder:editing statement parameters"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Logic:builder:select:logic elements"
+      Conditions=""
+      LocalConditions=""
+      Position="108" />
+    <IndexCacheEntry
+      Term="Logic:builder:nested functions &amp; statements"
+      Conditions=""
+      LocalConditions=""
+      Position="128" />
+    <IndexCacheEntry
+      Term="Functions:nested"
+      Conditions=""
+      LocalConditions=""
+      Position="128" />
+    <IndexCacheEntry
+      Term="Statements:nested"
+      Conditions=""
+      LocalConditions=""
+      Position="128" />
+    <IndexCacheEntry
+      Term="Nested functions &amp; statements"
+      Conditions=""
+      LocalConditions=""
+      Position="128" />
+    <IndexCacheEntry
+      Term="IF...THEN"
+      Conditions=""
+      LocalConditions=""
+      Position="131" />
+    <IndexCacheEntry
+      Term="WHILE...DO"
+      Conditions=""
+      LocalConditions=""
+      Position="132" />
+    <IndexCacheEntry
+      Term="IF...THEN...ELSE"
+      Conditions=""
+      LocalConditions=""
+      Position="133" />
+    <IndexCacheEntry
+      Term="ELSE"
+      Conditions=""
+      LocalConditions=""
+      Position="165" />
+    <IndexCacheEntry
+      Term="THEN"
+      Conditions=""
+      LocalConditions=""
+      Position="166" />
+    <IndexCacheEntry
+      Term="Logic:builder:expressions, creating"
+      Conditions=""
+      LocalConditions=""
+      Position="175" />
+    <IndexCacheEntry
+      Term="Logic:builder:paste:logic/model elements only"
+      Conditions=""
+      LocalConditions=""
+      Position="175" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

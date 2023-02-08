@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Buffer Dialog"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/BufferProperties.htm" />
+    <Link
+      Url="Content/Resources/Images/bufferdialog.png" />
+    <Link
+      Url="Content/Resources/Images/BufferBatching.png" />
+    <Link
+      Url="Content/Resources/Images/BufferBatchingByAttribute.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/BufferProperties.htm#Batching" />
+    <Link
+      Url="Content/BufferProperties.htm#Notes" />
+    <Link
+      Url="Content/BufferProperties.htm#Advanced" />
+    <Link
+      Url="Content/Resources/Images/bufferdialog.png" />
+    <Link
+      Url="Content/Resources/Images/BufferBatching.png" />
+    <Link
+      Url="Content/Resources/Images/BufferBatchingByAttribute.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Batching" />
+    <Anchor
+      Name="Notes" />
+    <Anchor
+      Name="Advanced" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="buffer dialog"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="651" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h4>Usage Downtime Editor<MadCap:keyword term="Locations:downtimes:usage;Downtimes:location:usage" /></h4>
+        <p class="p">Usage downtimes are used to model downtimes that occur after a location has been operating for a certain amount of time, such as if a machine fails due to wear after so many hours of operation. Usage downtimes are different from clock downtimes because usage downtimes are based on location operation time, which does not include blocked time. Clock downtimes are based on total elapsed simulation time (operation time, blocked time, idle time). Usage downtimes are available only for single-capacity locations.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Usage Downtime Editor consists of the edit table shown below. It contains fields for defining location downtimes based on the actual time in use. Most functions, including distributions can be included in the Frequency, First Time, and Priority fields. (See  <MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref> to see if a specific function is valid in a particular field.)</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-106-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 4in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-104-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-104-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 4in; }">
+            </img>
+        </p>
+        <p class="p"><b>Frequency</b> The usage time between downtimes.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>First Time</b> The time in use before the first downtime occurrence. Leave blank if the first time is to be based upon the frequency entered.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Priority</b> The priority, between 0 and 999 of the downtime. The default priority is 99, which is the highest non-preemptive priority. Generally, usage downtimes tend to be preemptive and should have priority values greater than 100.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Logic</b> Any logic statements to be processed when the downtime occurs. Typically, this field contains a time expression representing the length of the downtime. Click on the heading button to open a larger edit window.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Disable</b> Select YES to temporarily disable the downtime without deleting it from the table.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">In this example, machine OpAsist1 is serviced after every 20 minutes of use. The first downtime occurs after 19 minutes of operation and requires the use of Clerk2 for 1.5 minutes.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">In the above example, X-Ray Room 1 will close after its cumulative usage time equals or exceeds a normally distributed time of 20 (±3) hours and will remain closed until the X-Ray Technician spends 20 minutes repairing, cleaning or re-setting whatever needs to be serviced.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">In this example, Robot2 will experience breakdowns according to a Gamma distribution with shape and scale parameters 1.7 and 2.3. Maintenance resource M1 will be used to service the robot. The repair time is normally distributed with a mean of 2.4 minutes and a standard deviation of .3 minutes.</p>
+        <p class="p_10">Please Note: Usage-based downtimes do not accumulate. For example, if a downtime cannot occur because the priorities of the entities being processed are at least 2 levels higher than the priority of the downtime, only the first downtime resumes after processing the entities. All others are ignored.</p>
+    </body>
+</html>

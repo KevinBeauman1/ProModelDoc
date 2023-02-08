@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Defining Variables, Attributes, and Resource Groups"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Attributes.htm" />
+    <Link
+      Url="Content/Variables.htm" />
+    <Link
+      Url="Content/Arrays.htm" />
+    <Link
+      Url="Content/Macros.htm" />
+    <Link
+      Url="Content/Subroutines.htm" />
+    <Link
+      Url="Content/ResourceGroups.htm" />
+    <Link
+      Url="Content/ExternalArrivals.htm" />
+    <Link
+      Url="Content/Distributions.htm" />
+    <Link
+      Url="Content/InitializationTerminationLogic.htm" />
+    <Link
+      Url="Content/ExternalFiles.htm" />
+    <Link
+      Url="Content/Resources/Images/ModelElementsRibbonGroup.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Attributes.htm" />
+    <Link
+      Url="Content/Variables.htm" />
+    <Link
+      Url="Content/Arrays.htm" />
+    <Link
+      Url="Content/Macros.htm" />
+    <Link
+      Url="Content/Subroutines.htm" />
+    <Link
+      Url="Content/ResourceGroups.htm" />
+    <Link
+      Url="Content/ExternalArrivals.htm" />
+    <Link
+      Url="Content/Distributions.htm" />
+    <Link
+      Url="Content/InitializationTerminationLogic.htm" />
+    <Link
+      Url="Content/ExternalFiles.htm" />
+    <Link
+      Url="Content/Resources/Images/ModelElementsRibbonGroup.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="model elements"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:variables"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:attributes"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:resource groups"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:macros"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:subroutines"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="model elements:external arrivals"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Region</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-14-Region.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Region</span>
+        </div>
+        <h2 class="statements">
+            <MadCap:keyword term="Logic:window:#region" />Region</h2>
+        <h4 class="_rules_statements"><span class="Helv_Bold">Syntax samples</span>
+        </h4>
+        <p class="Syntax_body">#region &lt;Optional region name or description&gt;</p>
+        <p class="syntax_indent_2">&lt;logic&gt;</p>
+        <p class="Syntax_body">#endregion</p>
+        <p class="Syntax_body">#region Declare Local Variables</p>
+        <p class="syntax_indent_2">Int myInt</p>
+        <p class="syntax_indent_2">Real myReal</p>
+        <p class="Syntax_body">#endregion</p>
+        <h5 class="_rules_statements"><span class="Helv_Bold">Description</span>
+        </h5>
+        <p class="p"> Collapsible regions facilitate the readability and understandability of the logic and the visual compartmentalization of various portions of the logic. With it, you can hide selected portions of the logic in order to better understand the overall processing flow of the logic, or you can hide from view specific portions of the logic on which you do not want to concentrate.</p>
+        <p class="p">To access this feature, you can either insert a blank line within existing logic, or you can add a blank line after existing logic. At the beginning of a blank line, type the number sign or pound sign (i.e., #), and the Intellisense feature will display the <i>#region</i> and <i>#endregion</i> delimiter statements. Select <i>#region</i>. The end of the region is delimited by <i>#endregion</i>, so you need to add a blank line after the last line of logic that you want contained within the logic region, and then similarly select <i>#endregion</i> to define the end of the region. Note that you can arbitrarily label any region with a comment by typing a space and some text after <i>#region</i>. Such a label can be a helpful reminder about the logic contained within a collapsed region.</p>
+        <p class="p">To collapse a region of logic, click the minus sign immediately to the left of <i>#region</i>. Note that when a region is collapsed the remaining displayed line numbers are out of numerical sequence, and that the missing line numbers are hidden within the collapsed region. To expand a collapsed region, click the plus sign immediately to the left of the <i>{...}</i> region marker, which will appear where there are missing line numbers.  If a label was given to the region, click the plus sign immediately to the left of the label. To remove the region, delete the two region delimiters and then delete the corresponding blank lines.</p>
+        <h5 class="_valid_in"><span class="Helv_Bold">Valid In</span>
+        </h5>
+        <p class="p">Any Logic</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <img src="../Resources/Images/Operation - logic window, region expanded.png" style="max-height: auto;max-width: 5in;" />
+        </p>
+        <p class="p">
+            <img src="../Resources/Images/Operation - logic window, region collapsed.png" style="max-height: auto;max-width: 5in;" />
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

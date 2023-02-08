@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1615" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1085267"></a>Cloning Attributes<MadCap:keyword term="Attributes:cloning" /></h3>
+        <p class="p">Whenever one entity initiates the creation of other entities through a <MadCap:keyword term="SPLIT AS" />Split As, <MadCap:keyword term="CREATE" />Create, or <MadCap:keyword term="ORDER" />Order statement, or as the result of specifying multiple outputs in a routing, the attributes of the original entity are automatically copied to each newly created entity.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">The following examples show two methods of splitting an incoming group of entities, called Shipment, into six Items.  The first method uses a Create statement in the operation logic to create the new entities called Item.  The original entity, Shipment, will have its name changed to Invoice in the routing table.  In the second example, both of the new entity types are created in the routing table, so no Create statement is needed in the operation logic.  In both cases, the attribute attached to the original entity, Quantity, is duplicated in both Invoice’s and Item’s attributes.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">The following examples show two methods of initiating the creation of entities which bear the same attribute values as the parent entity. The first method uses a Create statement in the operation logic to create an entity called “Blood_samp.” The second example uses multiple output routings to send the patient to the waiting room and his or her medical record (Med_rcrd) to the desk. In both cases, the attributes attached to the original entity, Patient, are duplicated in both the Blood_samp and Med_rcrd attributes. As such, both will carry with them the original patient’s identity value (Patient_ID).</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">The following examples show two methods of splitting an incoming batch of material, called BatchA, into one Tote and six EntA’s.  The first method uses a Create statement in the operation logic to create the new entities, called EntA.  The original entity, BatchA, will have its name changed to Tote in the routing table.  In the second example, both of the new entity types are created in the routing table, so no Create statement is needed in the operation logic.  In both cases, the attributes attached to the original entity, BatchA, are duplicated in both Tote’s and the EntA’s attributes.</p>
+        <h4>Process Logic<MadCap:keyword term="Attributes:cloning:example" /></h4>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - Cloning Attribures - Operation logic window.png" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Cloning Attribures - Operation logic window.png" MadCap:conditions="PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Routing Table</h4>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-219-3.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c6-219-3.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

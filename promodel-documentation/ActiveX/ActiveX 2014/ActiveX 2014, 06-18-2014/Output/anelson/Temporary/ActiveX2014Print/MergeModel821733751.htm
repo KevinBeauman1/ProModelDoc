@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="505" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Application Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>MergeModel</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="MergeModel"><a MadCap:generatedBookmark="TOC" name="MergeModel"></a><a name="C-01_2914010915_490393"></a>
+            <MadCap:keyword term="MergeModel;ProModel Application Object:MergeModel" />MergeModel</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:</span>  MergeModel <span class="_Override" style="color: #0000ff;">FileName, Xpos, Ypos, Tag, Flags</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Merges the specified model into the currently loaded model. Model merging is useful when you wish to join sub models or fragmented model components to the original model.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FileName</span>	 (String)  The name of the file you wish to merge.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Xpos</span> 	(Double)  Horizontal placement of submodel (number of pixels over from left margin).</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Ypos</span> 	(Double)  Vertical placement of submodel (number of pixels down from the top margin).</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Tag</span>	 (String)  A label attached to the beginning or end of every identifier in the merged model.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Flags</span> 	(Long)  You can use flags to specify merge options such as whether to attach a tag to the beginning or end of identifiers, or whether or not to merge graphics libraries.  Flags should be combined using the “Or” operator.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span><span class="_Override" style="font-weight: bold;">  <![CDATA[ ]]></span>(Long)				 Result of the merge operation (1 = successful, 0 = fail).</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Flags</span><span class="_Override" style="font-weight: bold;">:</span>  When using more than one flag, use the keyword “Or” to connect, or simply add the values of the flags together, and enter that value for all flags.</p>
+        <p class="objects">2 		Don’t prompt</p>
+        <p class="objects">8 	 	Prefix tag (default is suffix)</p>
+        <p class="objects">16	 	Merge new model’s graphic library into the current model and save with original name</p>
+        <p class="objects">32		 Merge new model’s graphic library into the current model and save as the original name plus 			the model tag</p>
+        <p class="objects">64		 Just use the original model’s graphic library</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, then merges in mfg_cost.mod at an offset of 20x20 pixels from the upper-left corner of the layout. All identifiers associated with mfg_cost.mod will have “sub_” added to the beginning.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AddClock()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim MySubMod As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	MySubMod = "mfg_cost.mod"</p>
+        <p class="objects2">	pmObject.MergeModel <span class="_Override" style="color: #0000ff;">MySubMod</span>, <span class="_Override" style="color: #0000ff;">175</span>, <span class="_Override" style="color: #0000ff;">125</span>, <span class="_Override" style="color: #0000ff;">"sub_"</span>, <span class="_Override" style="color: #0000ff;">8 Or 64</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

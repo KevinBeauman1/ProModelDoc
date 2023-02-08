@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Routing to a Previous Activity</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h3>Routing to a Previous Activity</h3>
+        <p class="p">Sometimes entities make multiple passes through the same activity. In such instances, the activity time or routing may be a function of which pass it is.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=tkNNpCSA40w&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=14&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1" value="1">Define an attribute for the entity of type integer.</li>
+            <li class="li_1" value="2">Click on Logic  in the activity Properties.</li>
+            <li class="li_1" value="3">Define an INC statement to increment the value of the attribute.</li>
+            <li class="li_1" value="4">If you want the activity processing to change based on the value of the attribute, in the Logic define an IF-THEN statement to determine what processing to perform.</li>
+            <li class="li_1" value="5">If you want the routing to change based on the value of the attribute, in the routing Properties dialog define a Conditional routing and select the next location based on the attribute value.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">At a doctor’s office, patients check in at a receptionist desk and wait for their name to be called to see the doctor. After their appointment, they return to the receptionist desk to pay for the visit and schedule any follow-up visit. The first pass through this activity takes only N(1,.2) minutes and then patients go to a waiting area. The second pass takes N(2,.5) minutes and then patients exit the office.</p>
+        <p class="p">
+            <img src="Resources/Images/routingtoapreviousactivityexample.png" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">Logic for Receptionist Activity.</p>
+        <p class="p">
+            <img src="Resources/Images/routingtoapreviousactivitysolution1.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Routing to Waiting Area.</p>
+        <p>
+            <img src="Resources/Images/routingtoapreviousactivitysolution2.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Routing to Exit.</p>
+        <p>
+            <img src="Resources/Images/routingtoapreviousactivitysolution3.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">An attribute called aPass is defined which is incremented (INC aPass) in Logic of the Receptionist activity dialog. An IF-THEN statement is defined to cause the wait time to be a function of the value of Pass. The conditional routing chooses the destination as the Waiting Area if pass is equal to 1 (i.e., this is the first pass), or To Exit if pass is equal to 2.<br /></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

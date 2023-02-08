@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="635" MadCap:lastWidth="1405" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106160"></a>OwnedResource()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Resource-specific system functions:OWNEDRESOURCE();OWNEDRESOURCE()" />Resource-Specific System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">OWNEDResource ({&lt;expression &gt;})</p>
+        <p class="Syntax_body">OWNEDResource (2)</p>
+        <p class="Syntax_body">OWNEDResource (ResQty())</p>
+        <p class="Syntax_body">OWNEDResource ()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the name-index number of the nth resource currently owned by the entity or downtime making the function call. The function parameter indicates the position of the resource in the chronological list of owned resources.  For example, OwnedResource(1) returns the longest owned resource in the list and so on.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When used without a parameter, this function returns the most recent resource that the entity captured and still owns.  If the parameter value is not within the range of the resource list, or if the entity or downtime currently does not own a resource, the function will return a 0 (zero) without a warning or error message.</p>
+        <p class="p">&#160;</p>
+        <p class="p">A preempted resource is NOT removed from the list but marked temporarily to indicate that the preemptee does not own the resource. After the resource resumes the original process after being preempted, it retains its original rank in the list.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Entity speed fields, traveling-time fields, resource fields, resource downtime logic, operation logic, location downtime logic, routing fields, arrival logic, debug user-condition fields, and move logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The nth resource currently owned by the entity or downtime making the function call.  When this parameter is not used, the function returns the last resource captured that is still owned by the entity.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose an entity owns two resources. The first resource was captured using the statement Get Worker. The second resource was captured using the statement Get Oper1 Or Oper2. We know the entity owns the resource Worker, but we do not know if the entity owns Oper1 or Oper2. It is time to release the second resource so we use the following logic:</p>
+        <p class="p">&#160;</p>
+        <p class="p">Free OWNEDResource()</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Res(), Get, Jointly Get, use, and Free. Also see <MadCap:xref class="lowercase_no_see" href="C-05 - Resources.htm#C-05_2723800551_1086477" target="" title="" alt="">Resources on page 1</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/5-1-21.jpg" />
+    <Link
+      Url="Content/Topics/8_100.jpg" />
+    <Link
+      Url="Content/Topics/8_107.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/5-1-21.jpg" />
+    <Link
+      Url="Content/Topics/8_100.jpg" />
+    <Link
+      Url="Content/Topics/8_107.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Locations:rules"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Rules:dialog box"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Decision:rules:for locations"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Locations:rules:selecting incoming entity"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Entity:select:oldest by priority"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="Entity:select:random"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Entity:select:least available capacity"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Entity:select:last selected location"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="Entity:select:highest attribute value"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+    <IndexCacheEntry
+      Term="Entity:select:lowest attribute value"
+      Conditions=""
+      LocalConditions=""
+      Position="45" />
+    <IndexCacheEntry
+      Term="Locations:rules:queuing for output"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+    <IndexCacheEntry
+      Term="Queue:no queuing"
+      Conditions=""
+      LocalConditions=""
+      Position="53" />
+    <IndexCacheEntry
+      Term="FIFO:see Locations, rules"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="Queue:first in, first out (FIFO)"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="First in, first out"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="LIFO:see Locations, rules"
+      Conditions=""
+      LocalConditions=""
+      Position="65" />
+    <IndexCacheEntry
+      Term="Queue:last in, last out (LIFO)"
+      Conditions=""
+      LocalConditions=""
+      Position="65" />
+    <IndexCacheEntry
+      Term="Last in, first out"
+      Conditions=""
+      LocalConditions=""
+      Position="65" />
+    <IndexCacheEntry
+      Term="Queue:by type"
+      Conditions=""
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Queue:highest attribute value"
+      Conditions=""
+      LocalConditions=""
+      Position="74" />
+    <IndexCacheEntry
+      Term="Queue:lowest attribute value"
+      Conditions=""
+      LocalConditions=""
+      Position="79" />
+    <IndexCacheEntry
+      Term="Locations:rules:selecting a unit"
+      Conditions=""
+      LocalConditions=""
+      Position="83" />
+    <IndexCacheEntry
+      Term="Entity:select:first available"
+      Conditions=""
+      LocalConditions=""
+      Position="87" />
+    <IndexCacheEntry
+      Term="Entity:select:by turn"
+      Conditions=""
+      LocalConditions=""
+      Position="91" />
+    <IndexCacheEntry
+      Term="Entity:select:most available capacity"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Entity:select:fewest entries"
+      Conditions=""
+      LocalConditions=""
+      Position="99" />
+    <IndexCacheEntry
+      Term="Entity:select:random"
+      Conditions=""
+      LocalConditions=""
+      Position="103" />
+    <IndexCacheEntry
+      Term="Entity:select:longest empty"
+      Conditions=""
+      LocalConditions=""
+      Position="107" />
+    <IndexCacheEntry
+      Term="Locations:rules:example"
+      Conditions=""
+      LocalConditions=""
+      Position="111" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

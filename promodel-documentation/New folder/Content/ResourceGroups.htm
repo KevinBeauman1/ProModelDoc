@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="623" MadCap:lastWidth="1371">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Resource Groups</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="resource groups;model elements: resource groups" />Resource Groups</h1>
+        <p style="text-align: left;">
+            <img src="Resources/Images/ResourceGroup.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Resource groups allow you to pool several different resources into one 
+ group for use wherever resources may be required.</p>
+        <p>When a resource group is used in Process Simulator, it is treated as 
+ multiple options for use. Each row that is defined in the resource group 
+ can be used.</p>
+        <p>For example, let’s say you have an assembly line task that can be completed by two different Line Operators or an Inspector. You could create a resource group called Assemblers with one Line Op 1, one Line Op 2, and one Inspector. 
+ If you choose to use the Assemblers group at an activity, that activity 
+ will attempt to capture one of the 3 resources but not all of them.</p>
+        <p>When a resource group is used in a <MadCap:xref href="Get.htm" target="" title="" alt="" class="text_page_in_parenthesis">Get </MadCap:xref>or <MadCap:xref href="Use.htm" target="" title="" alt="" class="text_page_in_parenthesis">Use </MadCap:xref>
+ statement in logic and a quantity is specified in the statement details, 
+ it becomes a multiplication factor to the quantities defined for the individual 
+ resources in the group. &#160;For 
+ example, if you have a resource group that has 1 Doctor and 2 Nurses, 
+ and you choose a quantity of 2 for the Get statement, 2 Doctors or 4 Nurses 
+ will be captured.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

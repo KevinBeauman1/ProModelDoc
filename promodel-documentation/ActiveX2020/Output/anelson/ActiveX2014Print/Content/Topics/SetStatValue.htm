@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The ProModel Runtime Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>SetStatValue</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_492143"></a><a name="kanchor49"></a>SetStatValue</h2>
+        <p class="Component_description" style="font-family: Arial;font-weight: bold;font-style: normal;font-size: 10pt;letter-spacing: 0em;color: #000000;text-decoration: none;">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>SetStatValue<span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span><span class="_Override" style="color: #0000ff;">TableID, RecordNum, SubRec, StatID, NewVal</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Changes the current value for the specified statistics element.  To set variable values, use TableID = 12, StatID = 5.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:</span>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">TableID</span> (Long)  Table (Section) Number containing the data element you wish to set.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordNum</span> (Long)  Record (Row) Number containing the data element you wish to set.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">StatID</span> (Long)  Statistic element you wish to set.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">SubRec</span> (Long) </p>
+        <p class="objects4">For Resource Stats: SubRec = Unit Number (parent = 0)</p>
+        <p class="objects4">For Node Entry Stats: SubRec = Node Index;</p>
+        <p class="objects4">For Failed Arrivals: RecordNum = Entity Index, SubRec = Location Index</p>
+        <p class="objects4">For all others: SubRec = 0</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">NewVal</span> (Double)  New value for the specified statistics element.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>Nothing.</p>
+        <p class="Component"><span class="_Override" style="font-weight: bold;">Example:</span>
+        </p>
+        <p class="p">This example loads Receive.mod, runs the simulation, sets the value variable 1 to zero after 30, 60 and 90 minutes of simulation, then ends the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub ResetStats()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmRuntime As ProModel.CRuntime</p>
+        <p class="objects2">	Dim CurSimTime As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmRuntime = CreateObject("Promodel.CRuntime")</p>
+        <p class="objects2">	pmObject.LoadModel ("receive.mod")</p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.SetStatValue <span class="_Override" style="color: #0000ff;">12, 1, 5, 0, 0</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 3600</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.SetStatValue <span class="_Override" style="color: #0000ff;">12, 1, 5, 0, 0</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 5400</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.SetStatValue <span class="_Override" style="color: #0000ff;">12, 1, 5, 0, 0</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

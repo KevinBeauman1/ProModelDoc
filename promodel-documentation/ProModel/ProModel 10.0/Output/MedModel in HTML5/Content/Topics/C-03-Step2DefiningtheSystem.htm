@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Planning the Model|Steps for Doing Simulation">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Step 2: Defining the System</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-03-Step2DefiningtheSystem.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-03-PlanningtheModel.htm#C-03_1917231497_1035124">Planning the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-03-PlanningtheModel.htm#C-03_1917231497_1037812">Steps for Doing Simulation</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Step 2: Defining the System</span>
+        </div>
+        <h3><a name="C-03_1917231497_1037949"></a>Step 2: <a name="kanchor58"></a>Defining the System</h3>
+        <p class="p">With clearly defined objectives and a well organized plan for the study, the system that will be simulated can begin to be defined in detail. This can be viewed as the development of a conceptual model on which the simulation model will be based. The process of gathering and validating system information can be overwhelming when faced with the stacks of uncorrelated data to sort through. Data is seldom available in a form that defines exactly how the system works. Many data gathering efforts end up with lots of data but very little useful information. </p>
+        <p class="p">Data gathering should never be performed without a purpose. Rather than being haphazard, data gathering should be goal oriented with a focus on information that will achieve the objectives of the study. There are several guidelines to keep in mind when gathering data.</p>
+        <ul>
+            <li class="li_1" value="1"><a name="kanchor59"></a><b>Identify cause-and-effect relationships</b>   It is important to correctly identify the causes or conditions under which activities are performed. In gathering downtime data, for example, it is helpful to distinguish between downtimes due to equipment failure or personal emergencies and planned downtimes for break. Once the causes have been established and analyzed, activities can be properly categorized.<br /></li>
+            <li class="li_1" value="2"><span class="Bold"><b>Look for key </b><a name="kanchor60"></a><b>impact factors</b></span> Discrimination should be used when gathering data to avoid wasting time examining factors that have little or no impact on system performance. If, for example, an operator is dedicated to a particular task and, therefore, is never a cause of delays in service, there is no need to include the operator in the model. Likewise, extremely rare downtimes, negligible move times and other insignificant or irrelevant activities that have no appreciable effect on routine system performance may be safely ignored. <br /></li>
+            <li class="li_1" value="3"><span class="Bold"><b>Distinguish between </b><a name="kanchor61"></a><b>time and condition dependent activities</b></span> Time-dependent activities are those that take a predictable amount of time to complete, such as customer service. Condition-dependent activities can only be completed when certain defined conditions within the system are satisfied. Because condition-dependent activities are uncontrollable, they are unpredictable. An example of a condition-dependent activity might be the approval of a loan application contingent upon a favorable credit check. <br /><br />Many activities are partially time-dependent and partially condition-dependent. When gathering data on these activities, it is important to distinguish between the time actually required to perform the activity and the time spent waiting for resources to become available or other conditions to be met before the activity can be performed. If, for example, historical data is used to determine repair times, the time spent doing the actual repair work should be used without including the time spent waiting for a repair person to become available. <br /></li>
+            <li class="li_1" value="4"><span class="Bold"><a name="kanchor62"></a><b>Focus on essence rather than substance</b></span><span class="Element" style="line-height: 12pt;"></span> A <a name="kanchor63"></a>system definition for modeling purposes should capture the key cause-and-effect relationships and ignore incidental details. Using this “black box” approach to system definition, we are not concerned about the nature of the activity being performed, but only the impact that the activity has on the use of resources and the delay of entity flow. For example, the actual operation performed on a machine is not important, but only how long the operation takes and what resources, if any, are tied up during the operation. It is important for the modeler to be constantly thinking abstractly about the system operation in order to avoid getting too caught up in the incidental details.<br /></li>
+            <li class="li_1" value="5"><span class="Bold"><b>Separate </b><a name="kanchor64"></a><b>input variables from </b><a name="kanchor65"></a><b>response variables</b></span><span class="Element" style="line-height: 12pt;"></span> Input variables in a model define how the system works (e.g., activity times, routing sequences, etc.). Response variables describe how the system responds to a given set of input variables (e.g., work-in-process, idle times, resource utilization, etc.). Input variables should be the focus of data gathering since they are used to define the model. Response variables, on the other hand, are the output of a simulation. Consequently, response variables should only be gathered later to help validate the model once it is built and run. </li>
+        </ul>
+        <p class="p">These guidelines should help ensure that the system is thought of in the proper light for simulation purposes. </p>
+        <p class="p">To help organize the process of gathering data for defining the system, the following steps are recommended:</p>
+        <ul>
+            <li class="li_1" value="1">Determine data requirements.</li>
+            <li class="li_1" value="2">Use appropriate data sources.</li>
+            <li class="li_1" value="3">Make assumptions where necessary.</li>
+            <li class="li_1" value="4">Convert data into a useful form.</li>
+            <li class="li_1" value="5">Document and approve the data.</li>
+        </ul>
+        <p class="p">Each of these steps is explained on the following pages.</p>
+        <h4><a name="kanchor66"></a>Determining Data Requirements</h4>
+        <p class="p">The first step in gathering system data is to determine what data is required for building the model. This should be dictated primarily by the scope and level of detail required to achieve the model objectives as described earlier. It is best to go from general to specific in gathering system data. The initial focus should be on defining the overall process flow to provide a skeletal framework for attaching more detailed information. Detailed information can then be added gradually as it becomes available (e.g., resource requirements, processing times, etc.). Starting with the overall process flow not only provides an orderly approach to data gathering, but also enables the model building process to get started which reduces the amount of time to build and debug the model later. Often, missing data becomes more apparent as the model is being built.</p>
+        <p class="p">In defining the basic flow of entities through the system, a flow diagram can be useful as a way of documenting and visualizing the physical flow of entities from location to location. Once a flow diagram is made, a structured walk-through can be conducted with those familiar with the operation to ensure that the flow is correct and that nothing has been overlooked. The next step might be to define the detail of how entities move between locations and what resources are used for performing operations at each location. At this point it is appropriate to identify location capacities, move times, processing times, etc. </p>
+        <p class="p">To direct <a name="kanchor67"></a>data gathering efforts and ensure that meetings with others, on whom you depend for model information, are productive, it may be useful to prepare a specific list of questions that identify the data needed. A list of pertinent questions to be answered might include the following:</p>
+        <ol>
+            <li class="li_1" value="1">What types of entities are processed in the system and what attributes, if any, distinguish the way in which entities of the same type are processed or routed?</li>
+            <li class="li_1" value="2">What are the route locations in the system (include all places where processing or queuing occurs, or where routing decisions are made) and what are their capacities (i.e., how many entities can each location accommodate or hold at one time)?</li>
+            <li class="li_1" value="3">Besides route locations, what types of resources (personnel, vehicles, equipment) are used in the system and how many units are there of each type (resources used interchangeably may be considered the same type)?</li>
+            <li class="li_1" value="4">What is the routing sequence for each entity type in the system?</li>
+            <li class="li_1" value="5">What activity, if any, takes place for each entity at each route location (define in terms of time required, resources used, number of entities involved and any other decision logic that takes place)?</li>
+            <li class="li_1" value="6">Where, when and in what quantities do entities enter the system (define the schedule, interarrival time, cyclic arrival pattern, or condition which initiates each arrival)? </li>
+            <li class="li_1" value="7">In what order do multiple entities depart from each location (First in, First out; Last in, First out)?</li>
+            <li class="li_1" value="8">In situations where an output entity could be routed to one of several alternative locations, how is the routing decision made (e.g., most available capacity, first available location, probabilistic selection)?</li>
+            <li class="li_1" value="9">How do entities move from one location to the next (define in terms of time and resources required)?</li>
+            <li class="li_1" value="10">What triggers the movement of entities from one location to another (i.e., available capacity at the next location, a request from the downstream location, an external condition)?</li>
+            <li class="li_1" value="11">How do resources move from location to location to perform tasks (define either in terms of speed and distance, or time)?</li>
+            <li class="li_1" value="12">What do resources do when they finish performing a task and there are no other tasks waiting (e.g., stay put, move somewhere else)?</li>
+            <li class="li_1" value="13">In situations where multiple entities could be waiting for the same location or resource when it becomes available, what method is used for making an entity selection (e.g., longest waiting entity, closest entity, highest priority, preemption)?</li>
+            <li class="li_1" value="14">What is the schedule of availability for resources and locations (define in terms of shift and break schedules)?</li>
+            <li class="li_1" value="15">What planned interruptions do resources and locations have (scheduled maintenance, setup, changeover)?</li>
+            <li class="li_1" value="16">What random failures do resources and locations experience (define in terms of distributions describing time to failure and time to repair)?</li>
+            <li class="li_1" value="17">Depending on the purpose of the simulation and level of detail needed, some of these questions may not be applicable. For very detailed models additional questions may need to be asked. Answers to these questions should provide nearly all of the information necessary to build a model. </li>
+        </ol>
+        <h4>Using Appropriate <a name="kanchor68"></a>Data Sources</h4>
+        <p class="p">Having a specific set of questions for defining the system, we are now ready to search for the answers. Information seldom comes from a single source. It is usually the result of reviewing reports, conducting personal interviews, personal observation and making lots of assumptions. “It has been my experience,” notes Carson (1986), “that for large-scale real systems, there is seldom any one individual who understands how the system works in sufficient detail to build an accurate simulation model. The modeler must be willing to be a bit of a detective to ferret out the necessary knowledge.” Good sources of system data includes the following:</p>
+        <ul>
+            <li class="li_1" value="1"><a name="kanchor69"></a>Time Studies</li>
+            <li class="li_1" value="2"><a name="kanchor70"></a>Predetermined Time Standards</li>
+            <li class="li_1" value="3"><a name="kanchor71"></a>Flow Charts</li>
+            <li class="li_1" value="4"><a name="kanchor72"></a><a name="kanchor73"></a>Facility Layouts</li>
+            <li class="li_1" value="5"><a name="kanchor74"></a>Market Forecasts</li>
+            <li class="li_1" value="6"><a name="kanchor75"></a>Maintenance Reports</li>
+            <li class="li_1" value="7"><a name="kanchor76"></a>On-line tracking systems</li>
+            <li class="li_1" value="8"><a name="kanchor77"></a>Equipment Manufacturers</li>
+            <li class="li_1" value="9"><a name="kanchor78"></a>Managers</li>
+            <li class="li_1" value="10"><a name="kanchor79"></a>Engineers</li>
+            <li class="li_1" value="11"><a name="kanchor80"></a>Facility Walk-throughs</li>
+            <li class="li_1" value="12"><a name="kanchor81"></a>Comparisons with Similar Operations</li>
+        </ul>
+        <p class="p">In deciding whether to use a particular source of data, it is important to consider the relevancy, reliability and accessibility of the source. If the information that a particular source can provide is irrelevant for the model being defined, then that source should not be consulted. What good is a maintenance report if it has already been decided that downtimes are not going to be included in the model? Reliability of the source will determine the validity of the model. A managers perception, for example, may not be as reliable as actual production logs. Finally, if the source is difficult to access, such as a visit to a similar facility in a remote site, it may have to be omitted. </p>
+        <h4>Making Assumptions</h4>
+        <p class="p">Not long after data gathering has started, you may realize certain information is unavailable or perhaps unreliable. Complete, accurate, and up-to-date data for all the information needed is rarely obtainable, especially when modeling a new system about which very little is known. For system elements about which little is known, assumptions must be made. There is nothing wrong with assumptions as long as they can be agreed upon, and it is recognized that they are <span class="_Override" style="font-style: italic;">only</span> assumptions. Any design effort must utilize assumptions where complete or accurate information is lacking. </p>
+        <p class="p">&#160;</p>
+        <p class="p">Many assumptions are only temporary until correct information can be obtained or it is determined that more accurate information is necessary. Often, <span class="_Override" style="font-style: italic;">sensitivity analysis</span>, in which a range of values is tested for potential impact, can give an indication of just how accurate the data really needs to be. A decision can then be made to firm up the assumptions or to leave them alone. If, for example, the degree of variation in a particular activity time has little or no impact on system performance, then a constant activity time may be used. Otherwise, it may be important to define the exact distribution for the activity time.</p>
+        <p class="p">Another approach in dealing with assumptions is to run three different scenarios showing a “best-case” using the most optimistic value, a “worst-case” using the most pessimistic value, and a “most-likely-case” using a best-estimate value. This will help determine the amount of risk you want to take in assuming a particular value. </p>
+        <h4>Converting Data to a Useful Form<a name="kanchor82"></a></h4>
+        <p class="p">Data is seldom in a form ready for use in a simulation model. Usually, some analysis and conversion needs to be performed for data to be useful as an input parameter to the simulation. Random phenomena must be fitted to some standard, theoretical distribution such as a normal or exponential distribution (Law and Kelton, 1991), or be input as a frequency distribution. Activities may need to be grouped together to simplify the description of the system operation. </p>
+        <p class="p"><a name="kanchor83"></a><b>Distribution Fitting</b> To define a distribution using a theoretical distribution requires that the data, if available, be fit to an appropriate distribution that best describes the variable. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> includes the Stat::Fit distribution fitting package which assists in fitting sample data to a suitable theoretical distribution. An alternative to using a standard theoretical distribution is to summarize the data in the form of a frequency distribution that can be used directly in the model. A frequency distribution is sometimes referred to as an <a name="kanchor84"></a><b>empirical </b>or <a name="kanchor85"></a><b>user-defined</b> distribution.</p>
+        <p class="p">Whether fitting data to a theoretical distribution, or using an empirical distribution, it is often useful to organize the data into a frequency distribution table. Defining a frequency distribution is done by grouping the data into intervals and stating the frequency of occurrence for each particular interval. To illustrate how this is done, the following frequency table tabulates the number and frequency of observations for a particular activity requiring a certain range of time to perform. </p>
+        <h4><a name="kanchor86"></a>Frequency Distributions of Delivery Times</h4>
+        <table class="TableStyle-Process_Table" style="caption-side: top;width: 100%;mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');border-left-style: solid;border-left-width: 0px;border-right-style: solid;border-right-width: 0px;border-top-style: solid;border-top-width: 0px;border-bottom-style: solid;border-bottom-width: 0px;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col width="60px" class="Column-Column1" />
+            <col width="72px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="66px" class="Column-Column4" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td style="font-size: 8pt;font-weight: normal;" class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Delivery Time (days)</p>
+                    </td>
+                    <td style="font-size: 8pt;font-weight: normal;" class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Number of Observations</p>
+                    </td>
+                    <td style="font-size: 8pt;font-weight: normal;" class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Percentage</p>
+                    </td>
+                    <td style="font-size: 8pt;font-weight: normal;" class="HeadD-Column4-Header1">
+                        <p class="CellHeading">Cumulative Percentage</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">0 - 1</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">25</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">16.5</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">16.5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">1 - 2</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">33</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">21.7</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">38.2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">2 - 3</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">30</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">19.7</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">57.9</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">3 - 4</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">22</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">14.5</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">72.4</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">4 - 5</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">14</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">9.2</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">81.6</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">5 - 6</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">10</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">6.6</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">88.2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">6 - 7</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">7</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">4.6</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">92.8</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">7 - 8</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">5</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">3.3</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">96.1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column1-Body1">
+                        <p class="p_11">8-9</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyE-Column2-Body1">
+                        <p class="p_11">4</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyE-Column3-Body1">
+                        <p class="p_11">2.6</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyD-Column4-Body1">
+                        <p class="p_11">98.7</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1" data-mc-pattern="1">
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyB-Column1-Body1">
+                        <p class="p_11">9 - 10</p>
+                    </td>
+                    <td style="font-family: Arial;font-size: 8pt;" class="BodyB-Column2-Body1">
+                        <p class="p_11">2</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyB-Column3-Body1">
+                        <p class="p_11">1.3</p>
+                    </td>
+                    <td style="font-size: 8pt;font-family: Arial;" class="BodyA-Column4-Body1">
+                        <p class="p_11">100.0</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h5>Total Number of Observations = 152</h5>
+        <p class="p">While there are rules that have been proposed for determining the interval or cell size, the best approach is to make sure that enough cells are defined to show a gradual transition in values, yet not so many cells that groupings become obscured. </p>
+        <p class="p">Note in the last column of the frequency table that the percentage for each interval may be expressed optionally as a cumulative percentage. This helps verify that all 100% of the possibilities are included. </p>
+        <p class="p">When gathering samples from a static population, one can apply descriptive statistics and draw reasonable inferences about the population. When gathering data from a dynamic and possibly time varying system, however, one must be sensitive to trends, patterns, and cycles that may occur with time. The samples drawn may not actually be homogenous samples and, therefore, unsuitable for applying simple descriptive techniques.</p>
+        <p class="p"><span class="Bold"><a name="kanchor87"></a><b>Activity Grouping</b></span><span class="Element" style="line-height: 12pt;"></span> Another consideration in converting data to a useful form is the way in which activities are grouped for modeling purposes. Often it is helpful to group activities together so long as important detail is not sacrificed. This makes models easier to define and more manageable to analyze. In grouping multiple activities into a single activity time for simplification, consideration needs to be given as to whether activities are performed in parallel or in series. If activities are done in parallel or with any overlap, the time during which overlapping occurs should not be additive. </p>
+        <p class="p">Serial activities are always additive. For example, if a series of activities is performed on an entity at a location, rather than specifying the time for each activity, it may be possible to sum activity times and enter a single time or time distribution.</p>
+        <h4><a name="kanchor88"></a>Documenting and Approving the Data</h4>
+        <p class="p">When it is felt that all relevant information has been gathered and organized into a usable form, it is advisable to document the information in the form of data tables, relational diagrams and assumption lists. Sources of data should also be noted. This document should then be reviewed by others who are in a position to evaluate the validity of the data and approve the assumptions made. This document will be helpful later if you need to make modifications to the model or look at why the actual system ends up working differently than what was modeled. </p>
+        <p class="p">In addition to including those factors to be used in the model, the data document should also include those factors deliberately excluded from the model because they are deemed to be either insignificant or irrelevant. If, for example, break times are not identified in the system description, a statement of explanation should be made explaining why. Stating why certain factors are being excluded from the system description will help resolve later concerns that may question why the factors were omitted.</p>
+        <p class="p">Validating system data can be a time-consuming and difficult task, especially when many assumptions are made. In practice, data validation ends up being more of a consensus or agreement that is obtained confirming that the information is good enough for the purposes of the model. While this approved data document provides the basis for building the model, it often changes as model building and experimentation get under way.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/ObjectsTab.bmp" />
+    <Link
+      Url="Content/Topics/Objects Navigation Tab.htm" />
+    <Link
+      Url="Content/Topics/Step 5_ Viewing Your 3D.htm" />
+    <Link
+      Url="Project/ConditionTagSets/3DA.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/ObjectsTab.bmp" />
+    <Link
+      Url="Content/Topics/Objects Navigation Tab.htm#C-04_1942222156_1076584" />
+    <Link
+      Url="Content/Topics/Step 5_ Viewing Your 3D.htm#C-02_1946547532_Step_5" />
+    <Link
+      Url="Project/ConditionTagSets/3DA.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-02_1946547532_1064050" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Objects"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="3DA.Help_Only" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Promodel.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

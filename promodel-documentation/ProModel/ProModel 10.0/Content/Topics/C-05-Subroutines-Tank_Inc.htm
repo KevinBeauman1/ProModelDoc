@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="949" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089138"></a><a name="C-05_2723800551_15835"></a>Tan<MadCap:keyword term="TANK_INC;Submodels:tank:TANK_INC" />k_Inc</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_INC (&lt;Tank ID&gt;, &lt;Quantity&gt;) </p>
+        <p class="Syntax_body">TANK_INC (StorageTank, 5000) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Instantly increases the level of a tank by a specified quantity. If the tank has insufficient capacity, the level increases as capacity becomes available. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> sets the tank state to Tank_Blocked if the level increases to the tank capacity, otherwise the state remains unchanged.</p>
+        <p class="p">Use Tank_Inc to instantly add a specific quantity to a tank.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Quantity&gt;</p>
+        <p class="p">The number of units by which to increment the contents of the tank (gallons, pounds). </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Trucks deliver pellets to a holding bin twice a day. When a truck arrives at the drop-off station, it dumps the entire 5,000 lb load in only 2.5 minutes. To model this, define the following operation logic for the truck at the drop-off station:</p>
+        <p class="Syntax_body">Wait 2.5 min</p>
+        <p class="Syntax_body">Tank_Inc(HoldingBin, 5000)</p>
+    </body>
+</html>

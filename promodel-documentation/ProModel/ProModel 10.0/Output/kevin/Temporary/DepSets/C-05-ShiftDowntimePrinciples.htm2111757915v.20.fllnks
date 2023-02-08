@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-05-Locations.htm" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm" />
+    <Link
+      Url="Content/Topics/8_116.jpg" />
+    <Link
+      Url="Content/Topics/8_117.jpg" />
+    <Link
+      Url="Content/Topics/8_118.jpg" />
+    <Link
+      Url="Content/Topics/8_119.jpg" />
+    <Link
+      Url="Content/Topics/8_120.png" />
+    <Link
+      Url="Content/Topics/8_121.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/C-05-Locations.htm#C-05_2723800551_1085243" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm#C-05_2723800551_1086477" />
+    <Link
+      Url="Content/Topics/8_116.jpg" />
+    <Link
+      Url="Content/Topics/8_117.jpg" />
+    <Link
+      Url="Content/Topics/8_118.jpg" />
+    <Link
+      Url="Content/Topics/8_119.jpg" />
+    <Link
+      Url="Content/Topics/8_120.png" />
+    <Link
+      Url="Content/Topics/8_121.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1088299" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Shift:downtime:principles"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Shift:downtime:principles:locations"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Shift:downtime:principles:examples"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Shift:downtime:principles:preemption"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Preemption:off-shift locations"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Off-shift:locations, preempting"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Shift:assignments:overlapping downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Shift:downtime:principles:overlapping downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Downtimes:overlapping shift downtimes"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Shift:downtime:principles:resources"
+      Conditions=""
+      LocalConditions=""
+      Position="43" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

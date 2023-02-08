@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1776" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086435"></a>Arrival Cycles by Quantity<MadCap:keyword term="Arrivals:cycles:quantity" /></h3>
+        <p class="p">The previous example was based on the assumption that a certain percentage of arrivals came within a specified time interval.  An alternate method of specifying an arrival cycle is to specify the number of arrivals to arrive within each time interval.</p>
+        <h4>Example 1</h4>
+        <p class="p">Suppose that in the bank example we knew that for each cycle period, the number of customers to arrive during each time interval within the cycle period is as follows:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">From	Before		Number</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">	9:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	10:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	100 	</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">10:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	11:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	150</span>
+        </p>
+        <p class="p"><span class="Helv_Reg"> 	11:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	1:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	300 </span>
+        </p>
+        <p class="p"><span class="Helv_Reg">	1:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	4:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	150 </span>
+        </p>
+        <p class="p"><span class="Helv_Reg">	4:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	5:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	300 </span>
+        </p>
+        <p class="p">With the data in this format, we specify the Arrival cycle by choosing Qty in the “Qty/Percent” field and complete the cycle table as follows:</p>
+        <p class="Graphic">
+            <img src="pm-c6-246-2.jpg" MadCap:mediastyle="@media print { max-width: 1.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">This table could also be specified cumulatively by choosing Yes in the Cumulative... field and entering the quantity values in a cumulative format.</p>
+        <p class="p_10">Please Note: When specifying Arrival cycles by quantity, the value entered in the “Quantity each” field of the Arrivals edit table changes meaning.  Instead of the total arrivals per cycle, it represents a factor by which all entries in the cycle table will be multiplied.  This field may be any valid expression which evaluates to a number.  This allows the same arrival cycle to be entered for more than one arrival record that has a different factor applied to it.  For example, you might want to define a different factor to a customer arrival pattern depending on the day of the week.  In this case, define an arrival record for each day with a frequency of one week.</p>
+        <h4>Example 2</h4>
+        <p class="p">Suppose we wish to see the effect on the Bank example if the number of arrivals is increased by 50%.  The relative quantities per time interval remain the same but now 50% more customers arrive each day.  Using the data from the previous example, we enter the same values in the Arrival cycle quantity fields, but specify a value of 1.5 in the quantity field of the Arrival edit table.</p>
+        <p class="Graphic">
+            <img src="pm-c6-247-1.jpg" MadCap:mediastyle="@media print { max-width: 1.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The result is an arrival schedule with the following parameters.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">	From	Before		Quantity</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">	9:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	10:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	150 	</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">10:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	11:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	225 	</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">11:30 </span><span class="Helv_Reg" style="font-variant: small-caps;">am</span><span class="Helv_Reg">	1:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	450 	</span>
+        </p>
+        <p class="p"><span class="Helv_Reg">1:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	4:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	225</span>
+        </p>
+        <p class="p"><span class="Helv_Reg"> 	4:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	5:00 </span><span class="Helv_Reg" style="font-variant: small-caps;">pm</span><span class="Helv_Reg">	450 </span>
+        </p>
+    </body>
+</html>

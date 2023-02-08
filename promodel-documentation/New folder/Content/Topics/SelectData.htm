@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="495" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_464179"></a>
+            <MadCap:keyword term="SelectData;RDBDataServer Object:SelectData" />SelectData</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax </span>SelectData <span class="_Override" style="color: #0000ff;">Scenario, Replication, Period, Table, Field, Record</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Retrieves the specified data element from the .rdb file.  All of the parameters must be specified, even if there is only one scenario, replication or period.</p>
+        <p class="p" style="font-weight: bold;">Parameters:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Scenario</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	(Long)  Scenario number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Replication</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	(Long)  Replication number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Period</span> 	 (Long)  Period number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Table</span> 	(Long)  Table (report section) number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Field</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	(Long)  Field (column) number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Record</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>	(Long)  Record (row) number containing the data you wish to select.</p>
+        <p class="Component_description"><span class="_Override" style="font-weight: bold;">Returns:  </span>TRUE if there is valid data corresponding to the parameters.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, gets and displays the Scheduled Hours for the first listed location in the Locations section of the statistic report (first scenario, replication &amp; period), then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim MyScenario As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2">	RDBObj.OpenFile("mfg_cost.rdb")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2" style="font-weight: bold;">	RDBObj.SelectData <span class="_Override" style="color: #0000ff;">1, 1, 1, 1, 1, 1</span></p>
+        <p class="objects2">	If RDBObj.PositionIsValid = True Then</p>
+        <p class="objects3">		MyScenario = RDBObj.ScenarioName</p>
+        <p class="objects3">		MsgBox ("Selected Scenario =  " &amp; MyScenario)</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		MsgBox ("Data Selection Invalid")</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

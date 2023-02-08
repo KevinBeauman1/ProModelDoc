@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="1"
+  Title="ProcessSimulatorHelp"
+  Top="5%"
+  Left="5%"
+  Width="90%"
+  Height="90%"
+  Tabs="TOC,Index,Search"
+  BrowserSetup="">
+  <Toc
+    LinesBetweenItems="true"
+    LinesFromRoot="false"
+    SingleClick="false"
+    PlusMinusSquares="false"
+    AlwaysShowSelection="false"
+    UseFolderIcons="false"
+    ImageListWidth="16"
+    BinaryStorage="false" />
+  <Stylesheet>
+    <Styles>
+      <Style
+        Name="AccordionItem">
+        <Classes>
+          <StyleClass
+            Name="Search">
+            <Properties>
+              <Property
+                Name="BorderLeft">solid  #0000ff</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+    </Styles>
+  </Stylesheet>
+  <Toolbar
+    EnableCustomLayout="true"
+    Buttons="Print|Home|Forward|Back" />
+</CatapultSkin>

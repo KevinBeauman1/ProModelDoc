@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1162" MadCap:lastWidth="1466" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3><a name="C-11_756594771_1095008"></a>
+            <MadCap:keyword term="Expressions:time;Time:expressions" /><a name="C-11_756594771_11013"></a>Time Expressions</h3>
+        <p class="p">A time expression is a numeric expression followed optionally by a time unit (<MadCap:keyword term="WK;Weeks" />wk, <MadCap:keyword term="DAY" />day, <MadCap:keyword term="HR;Hours" />hr, <MadCap:keyword term="MIN;Minutes" />min, <MadCap:keyword term="SEC;Seconds" />sec) which defines a duration. If no time unit is specified, the default time unit specified in the General Information dialog box is assumed. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> knows whether an expression is a time expression based on the context. Time expressions are not valid within a function call. For example, E(10 sec) is invalid, while E(10) sec is valid. If a negative value is used for a time expression, it is automatically converted to zero.</p>
+        <p class="Component">Syntax for time expressions</p>
+        <p class="Syntax_body">&lt;numeric expression&gt;{&lt;time units&gt;}</p>
+        <h5>Examples</h5>
+        <p class="Syntax_body">2 hrE(10) minVar1+40.25 min<br /><br /></p>
+        <p class="p">Note that time units cannot be mixed (e.g., 3 min 21 sec), unless you use colon notation.</p>
+        <h4>
+            <MadCap:keyword term="Expressions:time:colon notation;Time:expressions:colon notation;Colon notation;Notation:colon" />Colon Notation for Time Values</h4>
+        <p class="p">Colon notation allows for more complex time expressions. You may use colon notation in the following manner to express time values.</p>
+        <p class="Component">Colon notation</p>
+        <p class="Syntax_body">&lt;<MadCap:keyword term="Hours;Minutes;Seconds" />hours expression&gt;:&lt;minutes expression&gt;:&lt;seconds expression&gt;</p>
+        <p class="p">Colon notated time expressions evaluate from right to left as illustrated in the following examples:</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="83px" class="Column-Column1" />
+            <col width="181px" class="Column-Column2" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Example</p>
+                    </td>
+                    <td class="HeadD-Column2-Header1">
+                        <p class="CellHeading">Meaning</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">:05</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">5 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">5:00: or 5::</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">5 hours</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">5:00 or 5:</p>
+                    </td>
+                    <td class="BodyD-Column2-Body3">
+                        <p class="CellBody">5 minutes</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">2:40: </p>
+                    </td>
+                    <td class="BodyD-Column2-Body4">
+                        <p class="CellBody">2 hours and 40 minutes</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">15:02:05</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1">
+                        <p class="CellBody">15 hours, 2 minutes and 5 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">3:25</p>
+                    </td>
+                    <td class="BodyD-Column2-Body2">
+                        <p class="CellBody">3 minutes and 25 seconds</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Attr1::Var2</p>
+                    </td>
+                    <td class="BodyA-Column2-Body3">
+                        <p class="CellBody">Attr1 hours and Var2 seconds</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

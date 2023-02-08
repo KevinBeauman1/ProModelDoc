@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/6-4-9.png" />
+    <Link
+      Url="Content/Resources/Images/macro_resource_Grouping.png" />
+    <Link
+      Url="Content/Topics/C-10-ReportsandGraphs.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/6-4-9.png" />
+    <Link
+      Url="Content/Resources/Images/macro_resource_Grouping.png" />
+    <Link
+      Url="Content/Topics/C-10-ReportsandGraphs.htm#C-10_2322678712_1035124" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1088982" />
+    <Anchor
+      Name="C-06_1157716610_19756" />
+    <Anchor
+      Name="C-06_1157716610_Resources" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

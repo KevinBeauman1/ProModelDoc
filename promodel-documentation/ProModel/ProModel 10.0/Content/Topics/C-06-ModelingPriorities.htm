@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1665" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120627"></a>
+            <MadCap:keyword term="Priorities:modeling;Modeling priorities:see Priorities" /><a name="C-06_1157716610_38609"></a>Modeling Priorities</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Priorities are an important part of modeling any system.  They range from determining which location has priority for processing parts to choosing the appropriate resource.  Priorities allow you to determine the order in which events occur in the simulation.  The three most common uses of priorities deal with choosing processing destinations, selecting resources, and prioritizing downtimes.</p>
+        <h4><a name="C-06_1157716610_70561"></a>Choosing a <MadCap:keyword term="Priorities:modeling:processing destination;Destination, choosing" />Processing Destination</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">When one downstream destination exists and there are two or more upstream entities competing to get there, you can use priorities.  In the following example, two entities at different locations are both trying to get to Process C.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-280-1.jpg" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">If you want the entity coming from Process B to have priority and go to Process C first, define a priority in the destination field for the routing of Process B.  In the following example, we entered a priority of 10 for the routing of the entity Casting at the location Process_B.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-280-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="How_to_title">How to enter a <MadCap:keyword term="Priorities:for a destination"></MadCap:keyword>priority for a destination:</p>
+        <ol>
+            <li class="li_1_how_to_step">Enter a priority value directly in the destination field, making sure there is a comma separating the destination and priority.</li>
+        </ol>
+        <p class="p">or...	</p>
+        <ol start="2">
+            <li class="li_1_how_to_step">Click the <span class="Helv_Bold" style="font-weight: bold;">Destination... </span>button and enter the priority in the appropriate field. </li>
+        </ol>
+        <h4>
+            <MadCap:keyword term="Priorities:modeling:selecting resources;Resources:selecting" /><a name="C-06_1157716610_54533"></a>Selecting Resources</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Similar to the previous example, this type of prioritizing refers to which of two or more processes, requesting the same resource will have priority in capturing the resource. In the Operation field, in conjunction with the use or Get statements, the process with the higher priority number gets the resource first. </p>
+        <h4>
+            <MadCap:keyword term="Priorities:modeling:downtimes;Downtimes;Preemption logic:and downtimes" /><a name="C-06_1157716610_62258"></a>Downtimes and <MadCap:keyword term="Priorities:modeling:preemption;Preemption logic" />Preemption</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">ProModel uses priorities in conjunction with resource or location downtimes to determine which defined downtime takes priority. Downtimes with priorities that are 99 or less do not interrupt or “preempt” the activity, but begin after the current process completes. Downtimes with a priority of 100 or higher preempt the current activity. After the downtime, the activity resumes from where it left off.</p>
+    </body>
+</html>

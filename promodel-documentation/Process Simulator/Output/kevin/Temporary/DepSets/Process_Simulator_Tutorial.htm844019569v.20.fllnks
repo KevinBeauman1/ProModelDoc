@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileClass="left-layout"
+  FileTitle=""
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/TextEffects.css" />
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/Styles.css" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/custom.modernizr.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/jquery.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/foundation.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/plugins.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/require.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/require.config.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/MadCapAll.js" />
+    <Link
+      Url="Content/Tutorial/Process_Simulator_Tutorial.htm" />
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/Images/transparent.gif" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/jquery.offcanvas.js" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/TextEffects.css" />
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/Styles.css" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/custom.modernizr.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/jquery.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/foundation.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/plugins.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/require.min.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/require.config.js" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/MadCapAll.js" />
+    <Link
+      Url="Content/Tutorial/Process_Simulator_Tutorial.htm" />
+    <Link
+      Url="Content/Tutorial/Skins/Default/Stylesheets/Images/transparent.gif" />
+    <Link
+      Url="Content/Tutorial/Resources/Scripts/jquery.offcanvas.js" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Tutorial/Skins/Default/Stylesheets/TextEffects.css" />
+    <Url
+      Source="Content/Tutorial/Skins/Default/Stylesheets/Styles.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

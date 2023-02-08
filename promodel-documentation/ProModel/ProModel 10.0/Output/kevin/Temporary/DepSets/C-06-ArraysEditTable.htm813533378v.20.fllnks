@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/mm-array.png" />
+    <Link
+      Url="Content/Topics/C-05-GeneralInformationDialogBox.htm" />
+    <Link
+      Url="Content/Topics/C-06-AccessingFilesforArraysonSharePoint.htm" />
+    <Link
+      Url="Content/Topics/C-06-ImportDataintoArrays.htm" />
+    <Link
+      Url="Content/Topics/C-06-ExportArraystoSpreadsheets.htm" />
+    <Link
+      Url="Content/Topics/C-06-InitializingArrays.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/mm-array.png" />
+    <Link
+      Url="Content/Topics/C-05-GeneralInformationDialogBox.htm#C-06_1157716610_1086054" />
+    <Link
+      Url="Content/Topics/C-06-AccessingFilesforArraysonSharePoint.htm#C-06_1157716610_1086054" />
+    <Link
+      Url="Content/Topics/C-06-ImportDataintoArrays.htm#C-06_1157716610_1086054" />
+    <Link
+      Url="Content/Topics/C-06-ExportArraystoSpreadsheets.htm#C-06_1157716610_1141599" />
+    <Link
+      Url="Content/Topics/C-06-InitializingArrays.htm" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086025" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Arrays:edit table"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Arrays:dimensions"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="Arrays:type (real or integer)"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Arrays:import file"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="Arrays:export file"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Arrays:disable"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Arrays:persist"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

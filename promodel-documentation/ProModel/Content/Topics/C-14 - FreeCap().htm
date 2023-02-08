@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="613" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103944"></a>FreeCap()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:FREECAP();FREECAP()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">FreeCap(<i>&lt;location&gt;</i>)</p>
+        <p class="Syntax_body">Send FreeCap(Loc1) EntA TO Loc1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the available capacity of a location. This function returns an integer.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic and any field except those fields evaluated only at translation time. For a list of fields evaluated only at translation time, see  <MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref>.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;location&gt;</p>
+        <p class="p">The name of the location to examine. The <MadCap:keyword term="LOC()" />Loc() function may also be used here.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Suppose a process consists of two entity types, Letters and Envelopes, which are joined together before mailing.  The Letters and Envelopes are joined together at a single capacity location called Assembly (capacity=1).  Whenever a Letter finishes processing at Station2, you do not want it to enter Station3 unless there is an Envelope at Assembly, you want to send one there from another location, Buffer.  The logic for Letter at Station2 is as follows:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">In the following example, a patient is “sent” to a disaster staging area only if there is capacity available to handle the casualty. The logic for Patient at Staging is as follows:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Suppose the entities, Plates and Cams, travel through an assembly line. The location, Assembly (capacity=1) joins Cams with the Plates. When a Cam finishes processing at Station2, it should not enter Station3 unless a Plate is waiting to join with it further down the assembly line at Assembly. If there is no Plate at Assembly, another location, Buffer, sends one. The logic for Cam at Station2 is as follows:</MadCap:conditionalText>
+        </p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">If FreeCap(Assembly) = 1 Then</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">If FreeCap(Staging) = 1 Then</MadCap:conditionalText>
+        </p>
+        <p class="syntax_body_indent">	Send 1 <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Envelope</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Patient</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Plate</MadCap:conditionalText> TO <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Assembly</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Staging</MadCap:conditionalText></p>
+        <p class="_rules">See Also</p>
+        <p class="p">Cap(). </p>
+    </body>
+</html>

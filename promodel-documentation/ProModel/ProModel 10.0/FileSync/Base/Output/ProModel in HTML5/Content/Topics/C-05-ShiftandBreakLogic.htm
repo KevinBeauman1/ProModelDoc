@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Shifts and Breaks|Shift Assignments">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Shift and Break Logic</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-ShiftandBreakLogic.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-ShiftsandBreaks.htm">Shifts and Breaks</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-ShiftAssignments.htm">Shift Assignments</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Shift and Break Logic</span>
+        </div>
+        <h4>Shift and Break Logic<MadCap:keyword term="Shift:assignments:shift &amp; break:logic;Logic:shift &amp; break" /></h4>
+        <p class="p">Shift and break logic are optional and are defined in four distinct logic windows, each executed in a specific sequence throughout the simulation run. You can define logic to control how resources and locations go off line and what happens once they are off-line.</p>
+        <p class="p">To define shift or break logic, click on the Logic button to display a submenu of four events associated with shifts for which logic may be defined. Selecting an event from the submenu displays a standard logic window. You can enter separate logic for each of these four events to be executed when the event occurs. See the following discussion, <span class="_Override" style="font-style: italic;">Sequence of Events</span>.</p>
+        <p class="Graphic">
+            <img src="5-7-10.jpg" />
+        </p>
+        <p class="p">You may want to use the Logic Builder to help you enter the logic. Just click on the Build button in the logic window.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Pre-off-shift logic;Pre-break logic;Logic:pre-off-shift;Logic:pre-break logic" /><b>Pre-Off Shift or Pre-Break Logic</b></span><span class="_Override" style="font-weight: bold;"></span> Executed whenever the location or resource is scheduled to go off shift or on break. This occurs before the location or resource is checked for availability, so it is executed regardless of availability. This logic may be used to check certain conditions before actually taking the resource or location off line. The logic is executed for each resource and location listed as members for this shift assignment record. This allows some members to be taken off line while others may be forced to wait. (Pre-off shift and pre-break logic may be referred to in this manual as pre-logic when speaking of either one.)</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Off-shift:logic;Breaks:logic;Logic:off-shift;Logic:break" /><b>Off Shift &amp; Break Logic</b></span><span class="_Override" style="font-weight: bold;"></span> Executed at the instant the location or resource actually goes off line.</p>
+        <p class="How_to_title">How to determine the sequence of events<MadCap:keyword term="Shift:assignments:shift &amp; break:sequence of events;Logic:shift &amp; break:sequence of events" /></p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">When a location or resource is scheduled to go off line due to a break or the end of a shift, the pre-logic for that particular location or resource is executed.</li>
+            <li class="li_1_how_to_step" value="2">After executing the pre-logic, which may contain conditional (Wait Until) or time (Wait) delays, the location or resource is taken off line, assuming it is either available or the priority is high enough for preemption.</li>
+            <li class="li_1_how_to_step" value="3">At the instant the location or resource is taken off line, the off-Shift or Break logic is executed.</li>
+            <li class="li_1_how_to_step" value="4">After executing this logic, the location or resource waits until the time defined in the shift file expires before going back on line.</li>
+        </ol>
+        <p class="p_10">Please Note: If the off-shift and break nodes are not specified in the Resource Specs dialog, the resource will stay at the current node. If no resources or locations are assigned to a shift, the shift is ignored.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

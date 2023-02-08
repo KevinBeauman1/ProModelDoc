@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/chartsribbon.png" />
+    <Link
+      Url="Content/Tables.htm" />
+    <Link
+      Url="Content/Column Charts.htm" />
+    <Link
+      Url="Content/Location Charts.htm" />
+    <Link
+      Url="Content/Resource Charts.htm" />
+    <Link
+      Url="Content/Entity.htm" />
+    <Link
+      Url="Content/Location Single Capacity.htm" />
+    <Link
+      Url="Content/Location Multi-Capacity.htm" />
+    <Link
+      Url="Content/Resource.htm" />
+    <Link
+      Url="Content/Pie Charts.htm" />
+    <Link
+      Url="Content/Time Plot.htm" />
+    <Link
+      Url="Content/Histogram.htm" />
+    <Link
+      Url="Content/Entity Count.htm" />
+    <Link
+      Url="Content/Location State.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/chartsribbon.png" />
+    <Link
+      Url="Content/Tables.htm" />
+    <Link
+      Url="Content/Column Charts.htm" />
+    <Link
+      Url="Content/Location Charts.htm" />
+    <Link
+      Url="Content/Resource Charts.htm" />
+    <Link
+      Url="Content/Entity.htm" />
+    <Link
+      Url="Content/Location Single Capacity.htm" />
+    <Link
+      Url="Content/Location Multi-Capacity.htm" />
+    <Link
+      Url="Content/Resource.htm" />
+    <Link
+      Url="Content/Pie Charts.htm" />
+    <Link
+      Url="Content/Time Plot.htm" />
+    <Link
+      Url="Content/Histogram.htm" />
+    <Link
+      Url="Content/Entity Count.htm" />
+    <Link
+      Url="Content/Location State.htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="charts"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="charts"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

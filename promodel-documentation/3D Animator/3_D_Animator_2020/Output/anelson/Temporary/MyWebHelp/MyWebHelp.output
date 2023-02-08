@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTargetOutput
+  GeneratedTarget="/Output/Output/MyWebHelp/Welcome to 3D Animator.htm"
+  BuildVersion="12.0.5991.25330"
+  AliasFile="/Output/Output/MyWebHelp/Data/Alias.xml">
+  <Files />
+  <Skins>
+    <Url
+      Source="Output/Output/MyWebHelp/Data/Skin3D Animator/Skin.xml" />
+    <Url
+      Source="Output/Output/MyWebHelp/Data/SkinDefault/Skin.xml" />
+  </Skins>
+</CatapultTargetOutput>

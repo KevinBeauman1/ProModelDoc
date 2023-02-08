@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining a Process|Defining Connection Properties|Arrival">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Pattern</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningAProcess.htm">Defining a Process</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DefiningConnectionProperties.htm">Defining Connection Properties</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="ArrivalProperties.htm">Arrival</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Pattern</span>
+        </div>
+        <h1><a name="kanchor51"></a>Pattern</h1>
+        <p>Pattern type arrivals allow you to define your arrivals based upon a custom pattern where varying quantities 
+ of entities arrive within specified time buckets, similar to a histogram.</p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/ArrivalPattern.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Entity</b>&#160;&#160;Shows the entity connected to the arrival connector and specifies the type of entities that will arrive. If an entity is not connected to the arrival connection, then this field will be enabled and the arrival entity is manually selected.&#160;
+        </p>
+        <p>Click the <b>Define Arrivals</b> button to open the Pattern Arrivals dialog.</p>
+        <p>
+            <img src="Resources/Images/ArrivalPatternDialog.png" />
+        </p>
+        <h2>How to define a pattern arrival</h2>
+        <p>First, choose the arrival basis, <b>Weekly Time</b> or <b>Calendar Date</b>, by which you will define your pattern arrivals.</p>
+        <p>Next, click the <b>Add</b> button to add a pattern arrival record to the grid.</p>
+        <p> If 
+ the Pattern Arrival basis is set to Weekly Time, enter the <b>Week</b> number and week <b>Day</b>. If 
+ the basis is set to Calendar Date, enter the specific <b>Date</b>. The <b>Start</b> and <b>End</b> times define the duration over 
+ which the quantity of entities will be randomly distributed. Each row 
+ in the grid defines a unique duration and quantity, and all rows together define 
+ a custom pattern for the arriving entities. &#160;A 
+ pattern arrival is most commonly used to model the arrival of people into 
+ a system like patients into a health clinic or customers arriving into 
+ a bank. &#160;</p>
+        <p>If you use a Pattern arrival in your model, your simulation run length 
+ must be defined by either Weekly Time or Calendar Date, but not Time Only. 
+ The start time for each row must also be the same or later than the end 
+ time of the previous row. See <a href="SimulationOptions.htm" target="" title="" alt="" class="a_11">Simulation Options</a> for more information.</p>
+        <h2>Additional options for the pattern arrival</h2>
+        <ul>
+            <li value="1"><b>Quantity Variability</b> When toggled on, the quantities are 
+ entered into a Poisson distribution during simulation and thus given  variability for the number of arriving entities. When toggled off, no variability 
+ is applied and the exact quantities specified are used. </li>
+            <li value="2"><b>Repeat Every</b> &#160;Allows you to 
+ choose whether or not to repeat the pattern defined and the frequency 
+ with which to repeat it. (Note: Repeat interval must be greater than or 
+ equal to the total pattern duration.)</li>
+        </ul>
+        <p>Values for this grid can be copied  and pasted to and from Microsoft Excel by right-clicking on a cell and selecting from the context menu. To copy data from the grid you must first select the desired cells to copy. &#160;Once the desired cells are selected, right-click and select <b>Copy</b> from the context menu or use the Ctrl+C hot key to copy the data to the Windows clipboard. &#160;The data can now be pasted into Excel. </p>
+        <p>When pasting data from Excel into the <b>Pattern Arrivals</b> grid, right-click and select <b>Paste</b> from the menu or use the Ctrl+V hot key to 
+ paste the data into the grid.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

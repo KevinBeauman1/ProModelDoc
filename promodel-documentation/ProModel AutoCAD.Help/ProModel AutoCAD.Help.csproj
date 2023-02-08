@@ -1,0 +1,119 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+	<TypeScriptToolsVersion>4.2</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Help\Screens\**" />
+    <Compile Remove="Views\Help\Terms\**" />
+    <Compile Remove="wwwroot\Docs\**" />
+    <Compile Remove="wwwroot\files\**" />
+    <Compile Remove="wwwroot\lib\**" />
+    <Compile Remove="wwwroot\node_modules\**" />
+    <Content Remove="Views\Help\Screens\**" />
+    <Content Remove="Views\Help\Terms\**" />
+    <Content Remove="wwwroot\Docs\**" />
+    <Content Remove="wwwroot\files\**" />
+    <Content Remove="wwwroot\lib\**" />
+    <Content Remove="wwwroot\node_modules\**" />
+    <EmbeddedResource Remove="Views\Help\Screens\**" />
+    <EmbeddedResource Remove="Views\Help\Terms\**" />
+    <EmbeddedResource Remove="wwwroot\Docs\**" />
+    <EmbeddedResource Remove="wwwroot\files\**" />
+    <EmbeddedResource Remove="wwwroot\lib\**" />
+    <EmbeddedResource Remove="wwwroot\node_modules\**" />
+    <None Remove="Views\Help\Screens\**" />
+    <None Remove="Views\Help\Terms\**" />
+    <None Remove="wwwroot\Docs\**" />
+    <None Remove="wwwroot\files\**" />
+    <None Remove="wwwroot\lib\**" />
+    <None Remove="wwwroot\node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Help\CoreConcept.cshtml" />
+    <Content Remove="Views\Help\DataModel.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\site.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="ClientApp\boot-client.ts" />
+    <Content Include="ClientApp\site.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Markdig" Version="0.15.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\dist\912ec66d7572ff821749319396470bde.svg" />
+    <None Include="wwwroot\dist\jquery.js" />
+    <None Include="wwwroot\dist\main-client.js" />
+    <None Include="wwwroot\dist\vendor.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Views\Help\Topic.cshtml.orig">
+      <DependentUpon>Topic.cshtml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot\Help\Docs\Diagnostics1\Dot1.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Dot1.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\FeedbackButton2.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\RepositoryImage.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository.md">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository_Delete.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository_Duplicate.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository_Item_Count.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Repository\Repository_Search.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="wwwroot\Help\Docs\Scenarios\Dot1.png">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

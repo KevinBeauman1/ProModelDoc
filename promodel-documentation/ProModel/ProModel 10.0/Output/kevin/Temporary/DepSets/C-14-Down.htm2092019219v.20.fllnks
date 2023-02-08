@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-05-CalledDowntimeEditor.htm" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Content/Topics/C-05-CalledDowntimeEditor.htm#C-05_2723800551_1247131" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm#C-05_2723800551_1085757" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-14_4292047180_1232009" />
+    <Anchor
+      Name="C-14_4292047180_49635" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Downtimes:downtime-specific system functions"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="DOWN"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

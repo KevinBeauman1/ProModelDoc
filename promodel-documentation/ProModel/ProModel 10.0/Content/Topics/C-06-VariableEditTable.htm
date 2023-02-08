@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1802" MadCap:lastWidth="1152" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1085784"></a>Variable Edit Table<MadCap:keyword term="Variables:edit:table" /></h3>
+        <p class="p">This edit table is used to define Variables used globally in the model.  A description of each field is given below.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-223-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c6-223-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Icon</b>
+            <MadCap:keyword term="Variables:icon" />   This field shows “Yes” if an icon for the variable appears on the layout. A variable’s icon looks like a counter and displays the variable’s value.</p>
+        <p class="p"><b>ID</b>   The variable’s name.</p>
+        <p class="p"><b>Type</b>
+            <MadCap:keyword term="Variables:type (real or integer)" />   The type of variable, real or integer.</p>
+        <p class="p"><b>Initial Value</b>
+            <MadCap:keyword term="Variables:initial value" />   The initial value of the variable to be assigned at the start of the simulation. By default, initial values are 0, but can be changed in the edit table to whatever value you want. Any expression can be entered here (including previously defined variables) except attributes and system functions.</p>
+        <p class="p"><b>Stats</b>
+            <MadCap:keyword term="Variables:statistics" />
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> collects statistics for each variable on three levels of detail, None, Basic, and Time Series.</p>
+        <ul>
+            <li class="li_1"><b>None</b>   No statistics are collected for this variable during simulation.</li>
+            <li class="li_1"><b>Basic</b>   Collects basic statistics such as total changes, average minutes per change, current value, and average value.</li>
+            <li class="li_1"><b>Time Series</b>   Collects all the basic statistics plus the value history based on time or observations. When you select Time Series, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> collects either time-weighted or observation-based statistics for the variable depending upon the type selected.</li>
+        </ul>
+        <p class="Graphic">
+            <img src="6-2-3.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="127px" class="Column-Column1" />
+            <col width="48px" class="Column-Column2" />
+            <col width="89px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Variable Observation Record</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Value</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Time in Hours</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Observation 1</p>
+                        <p class="CellBody">Observation 2</p>
+                        <p class="CellBody">Observation 3</p>
+                        <p class="CellBody">Observation 4</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">6</p>
+                        <p class="CellBody">5</p>
+                        <p class="CellBody">6</p>
+                        <p class="CellBody">5</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">1</p>
+                        <p class="CellBody">2</p>
+                        <p class="CellBody">3</p>
+                        <p class="CellBody">4</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="Foot-Footer1">
+                    <td class="FootE-Column1-Footer1">
+                        <p class="CellHeading">Total</p>
+                    </td>
+                    <td class="FootE-Column2-Footer1">
+                        <p class="CellHeading">22</p>
+                    </td>
+                    <td class="FootD-Column3-Footer1">
+                        <p class="CellHeading">10</p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="p">
+            <MadCap:keyword term="Time:time-weighted statistics;Statistics:time-weighted" /><b>Time-Weighted</b>   Collects information on the percentage of time the variable was at a specific value. As shown in the above table, the average value of the variable is:</p>
+        <p class="p" style="text-align: center;"><u>(6 x 1) + (6 x 3) + (5 x 2) + (5 x 4)   =  5.4	</u>
+        </p>
+        <p class="p" style="text-align: center;">10</p>
+        <p class="p">
+            <MadCap:keyword term="Observation-based statistics;Statistics:observation-based" /><b>Observation-Based</b>   Collects information on the number of times the variable changed to a specific value. As shown in the above table, the value of the variable is 6, then 5, then 6, then 5. The average would simply be: </p>
+        <p class="p" style="text-align: center;"><u>6 + 5 + 6 + 5	    =  5.5</u>
+            <br />	4</p>
+        <p class="p"><b>Notes</b>   A general notes field for describing the variable. Click on the Notes button or double click in the field to open an edit window for entering detailed notes.</p>
+        <p class="p_10">Please Note: In order to create plots or histograms for a variable, Time Series stats must be selected in the variables edit table.</p>
+    </body>
+</html>

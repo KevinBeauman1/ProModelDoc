@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1546" MadCap:lastWidth="1193">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088054"></a>
+            <MadCap:keyword term="Logic:arrivals" />Arrival Logic</h3>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">Arrival Logic allows you to perform certain logic as an entity enters the system. It is used primarily for assigning initial entity attribute values. Suppose tellers at a bank drive-through process several types of transactions including deposits, withdrawals, and transfers. A user-defined distribution, DT_Service, could be defined representing the probability of a customer requiring a give type of service. In the example below, 1&#160;=&#160;Deposit (60%), 2 = Withdrawal (30%), and 3 = Transfer (10%).</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">Arrival Logic allows you to perform certain logic as an entity enters the system and is used primarily for assigning initial entity attribute values. Suppose you process three different types of samples at </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">a clinic</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">an inspection station</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel"> and each sample takes either 8, 10, or 12 minutes to test. Fifty percent of the samples take 8 minutes to test, 35% take 10 minutes, and 15% take 12 minutes.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">The samples have different processing times depending on the test performed. To differentiate between the different types of samples, we assign an entity attribute called Sample_Type to the samples. We define a discrete, non-cumulative user distribution called Test1 with the following information:</MadCap:conditionalText>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-162-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 2.5in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-159-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 2.5in; }" />
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">The arrival logic for each customer would contain a statement setting an entity attribute “Service_Type” equal to the value returned by the DT_Service distribution. In addition, a global variable “Total_Arrivals” increments each time a customer arrives.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel">The arrivals logic for the entity called Test1 is as follows:</MadCap:conditionalText>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-162-3.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 2.5in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/Arrival Logic - logic window.png" MadCap:conditions="PM-MM Conditionals.MedModel,PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 4.00in;" />
+        </p>
+    </body>
+</html>

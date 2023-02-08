@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="753" MadCap:lastWidth="1492">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120257"></a>
+            <MadCap:keyword term="Automated storage/retrieval systems;AS/RS:see Automated storage/retrieval systems" /><a name="C-06_1157716610_19484"></a>Automated Storage/Retrieval Systems</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">An automated storage/retrieval system (AS/RS) is “a combination of equipment and controls which handles, stores, and retrieves materials with precision, accuracy, and speed under a defined degree of automation” (The Material Handling Institute 1977). The goal of an AS/RS is to provide random, high density storage with quick load access, all under computer control.</p>
+        <h4>
+            <MadCap:keyword term="Automated storage/retrieval systems:modeling" /><a name="C-06_1157716610_27445"></a>Modeling AS/RSs</h4>
+        <p class="p">At a simple level, an AS/RS move time may be modeled by taking a time from a probability distribution that approximates the time to store or retrieve a load. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">More precise modeling incorporates the actual crane (<MadCap:keyword term="Horizontal speed;Cranes:horizontal speed;Speed:horizontal"></MadCap:keyword>horizontal) and lift (<MadCap:keyword term="Vertical speed;Cranes:vertical speed;Speed:vertical"></MadCap:keyword>vertical) speeds. </MadCap:conditionalText>Each movement usually has a different speed and distance to travel which means that movement along one axis is complete before movement along the other axis begins. From a modeling standpoint, it is usually only necessary to calculate and model the longest move time.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">In modeling AS/RS, the storage capacity is usually not a consideration and the actual inventory of the system is not modeled. It would require lots of overhead to model the complete inventory in a rack with 60,000 pallet locations. Since it is primarily only the activity that is of interest in the simulation, actual inventory is ignored. In fact, it is usually not even necessary to model specific stock keeping units (SKUs) being stored or retrieved, but only distinguish between load type insofar as it affects routing and subsequent operations.</p>
+        <h4 MadCap:conditions="PM-MM Conditionals.ProModel">Modeling an AS/RS as a <MadCap:keyword term="Automated storage/retrieval systems:vertical bridge crane;Cranes:vertical bridge;Vertical bridge crane" />Vertical Bridge Crane</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;" MadCap:conditions="PM-MM Conditionals.ProModel">One way to model an AS/RS with greater accuracy is to use the bridge crane construct. An AS/RS is really just a vertical crane with the same characteristics as a bridge crane.</p>
+        <h4><a name="C-06_1157716610_59138"></a>AS/RS <MadCap:keyword term="Automated storage/retrieval systems:simulation benefits" />Simulation Benefits</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Simulating your AS/RS will help you address design and operational issues, answering the following questions:</p>
+        <ul>
+            <li class="li_1">How many aisles do you need to handle the required activity?</li>
+            <li class="li_1">What is the best sequence of stores and retrievals to maximize throughput?</li>
+            <li class="li_1">What is the best stationing of empty S/R machines to minimize response time?</li>
+        </ul>
+    </body>
+</html>

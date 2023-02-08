@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1025" MadCap:lastWidth="1319">
+    <!-- InstanceBegin template="/Templates/PILogic.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>User Distributions</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <link rel="StyleSheet" href="Resources/Stylesheets/Stylesheet - general.css" />
+        <!-- InstanceEndEditable -->
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="user distributions" />User Distributions</h1>
+        <p>Occasionally, none of the built-in <a href="Distributions.htm" class="a_11">distributions</a> in Process Simulator can adequately represent a data set. In such cases, the user may define a custom distribution (called a <i>User Distribution</i>) to represent an empirically established data set. The user enters the data that defines a User Distribution.</p>
+        <p>A user-defined distribution is a table of empirically gathered data. User Distributions in Process Simulator support discrete probability distributions. Discrete distributions are characterized by a finite set of outcomes, together with the probability of observing each outcome. To use a User Distribution, you must enter data into the data table for the User Distribution that you define. User Distributions are accessed from the <b>Model Elements</b> group in the Process Simulator ribbon,  within the <b>More Elements</b> drop down menu button.</p>
+        <p>
+            <img src="Resources/Images/UserDistributionsGrid.png" MadCap:mediastyle="@media print { max-width: 5.75in;max-height: auto; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>In the screenshot above, three User Distributions (UserDistribution1, UserDistribution2, UserDistribution3) are defined. The empirically gathered data for UserDistribution2 is displayed in the details grid under the <i>Percent</i> and <i>Value</i> columns. In the above example, there are four possible outcomes for the data set of UserDistribution2: 20% of the time the outcome will be 1, 35% of the time the outcome will be 2, 25% of the time the outcome will be 3, and 20% of the time the outcome will be 4. Note that the sum of the percentages in the <i>Percent</i> column must add to 100 percent, as is displayed in the <i>Total</i> on the toolbar. The values in the <i>Value</i> column represent (or symbolize) the outcomes that were observed.</p>
+        <p>Below are descriptions of the fields and components of the User Distributions grid.</p>
+        <p><b>Name</b> — the name of the User Distribution. You can double-click on the name of an existing distribution if you want to rename it. A User Distribution may be named any unique, valid name that will be used in the logic or property field to reference the User Distribution.</p>
+        <p><b>Percent</b> — the probability (represented as the percentage) of observing each outcome in the data set.</p>
+        <p><b>Value</b> — the value that represents the discrete outcome that was determined empirically. The value must be in the form of either an integer or a real number, but it can symbolize some nonnumerical observation (e.g., a specific health condition).</p>
+        <p><b>Total</b> — the total of the percentages in the <i>Percent</i> column. When the entire data set is entered for the distribution, the <i>Total</i> in the toolbar must indicate a value of 100%.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

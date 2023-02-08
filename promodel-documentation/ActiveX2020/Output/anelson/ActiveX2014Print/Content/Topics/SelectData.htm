@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The RDBDataServer Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>SelectData</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_464179"></a><a name="kanchor81"></a>SelectData</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax </span>SelectData <span class="_Override" style="color: #0000ff;">Scenario, Replication, Period, Table, Field, Record</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Retrieves the specified data element from the .rdb file.  All of the parameters must be specified, even if there is only one scenario, replication or period.</p>
+        <p class="p" style="font-weight: bold;">Parameters:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Scenario</span><span class="_Override" style="font-style: italic;"> </span>	(Long)  Scenario number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Replication</span><span class="_Override" style="font-style: italic;"> </span>	(Long)  Replication number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Period</span> 	 (Long)  Period number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Table</span> 	(Long)  Table (report section) number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Field</span><span class="_Override" style="font-style: italic;"> </span>	(Long)  Field (column) number containing the data you wish to select.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Record</span><span class="_Override" style="font-style: italic;"> </span>	(Long)  Record (row) number containing the data you wish to select.</p>
+        <p class="Component_description"><span class="_Override" style="font-weight: bold;">Returns:  </span>TRUE if there is valid data corresponding to the parameters.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, gets and displays the Scheduled Hours for the first listed location in the Locations section of the statistic report (first scenario, replication &amp; period), then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim MyScenario As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2">	RDBObj.OpenFile("mfg_cost.rdb")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2" style="font-weight: bold;">	RDBObj.SelectData <span class="_Override" style="color: #0000ff;">1, 1, 1, 1, 1, 1</span></p>
+        <p class="objects2">	If RDBObj.PositionIsValid = True Then</p>
+        <p class="objects3">		MyScenario = RDBObj.ScenarioName</p>
+        <p class="objects3">		MsgBox ("Selected Scenario =  " &amp; MyScenario)</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		MsgBox ("Data Selection Invalid")</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

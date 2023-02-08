@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1444" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089057"></a><a name="C-05_2723800551_18011"></a>Tank_T<MadCap:keyword term="TANK_TRANSFERUPTO;Subroutines:tank:TANK_TRANSFERUPTO" />ransferUpTo</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_TRANSFERUPTO (&lt;FROM Tank ID&gt;, &lt;TO Tank ID&gt;, &lt;TO Level &gt;, &lt;FROM Rate&gt;, &lt;TO Rate&gt;)</p>
+        <p class="Syntax_body">TANK_TRANSFERUPTO (Tank1, Tank2, 8500, 75, 0) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Similar to Tank_Transfer except that Tank_TransferUpTo does NOT terminate a transfer based on the transferred quantity, rather when the TO tank level rises to a certain point. If the tank empties before reaching the TO level, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> suspends the transfer until capacity becomes available.</p>
+        <p class="p">Use Tank_TransferUpTo when you want to raise the level of a tank to a certain value but are not certain of the quantity needed to reach that level (e.g., the tank is draining at the same time you are trying to fill it).</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;FROM Tank ID&gt;</p>
+        <p class="p">The name or location index number of the FROM tank. </p>
+        <p class="Component">&lt;TO Tank ID&gt;</p>
+        <p class="p">The name or location index number of the TO tank.</p>
+        <p class="Component">&lt;TO Level&gt;</p>
+        <p class="p">Transfer until the TO tank reaches this level.</p>
+        <p class="Component">&lt;FROM Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog out of the FROM tank. To use a dynamically calculated rate in the Tank_Rate subroutine, enter 0.</p>
+        <p class="Component">&lt;TO Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog into the TO tank. Use 0 if the TO rate is the same as the FROM rate.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An in-process tank supplies several downstream tanks and must maintain a maximum level of 20,000 gallons. Whenever the in-process tank drops below 5,000 gallons, a supply tank refills the tank at a rate of 100&#160;gpm. To model this, define an activated subroutine for the supply tank using the following logic:</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Wait Until Tank_Level[InProcessTank]&lt;=5000</p>
+        <p class="syntax_body_indent">Tank_TransferUpTo(SupplyTank, InProcessTank, 20000, 100, 0)</p>
+        <p class="Syntax_body">	}</p>
+    </body>
+</html>

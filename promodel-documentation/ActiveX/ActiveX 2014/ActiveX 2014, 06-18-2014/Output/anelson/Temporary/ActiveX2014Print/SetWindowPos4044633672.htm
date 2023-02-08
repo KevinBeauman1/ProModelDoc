@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="534" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Application Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>SetWindowPos</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="SetWindowPos"><a MadCap:generatedBookmark="TOC" name="SetWindowPos"></a><a name="C-01_2914010915_490693"></a><a name="C-01_2914010915_SetWindowPos"></a>
+            <MadCap:keyword term="SetWindowPos;ProModel Application Object:SetWindowPos" />SetWindowPos</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SetWindowPos<span class="_Override" style="color: #0000ff;"> Window, xPos, yPos, xSize, ySize, Flags</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Defines the position, size and style of the application window or the layout window.  The application window position is relative to the screen, other layout window is relative to the application window.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Window</span> (Long)  Identifies the window (1 = layout window, 2 = application window).</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">xPos, yPos </span>(Long)  Determine the position of the window. </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">xSize, ySize</span> (Long)  Determine the size of the window.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Flags</span> (Long)  If xSize or ySize is zero, SetWindowPos calls the Windows API function ShowWindow and passes the flags.</p>
+        <p class="objects">&#160;</p>
+        <p class="objects"><span class="Lower_Label" style="font-weight: bold;">Window Types</span><span class="_Override" style="font-weight: bold;">:</span>
+        </p>
+        <p class="objects2">		1 				Layout window</p>
+        <p class="objects2">		2 		Application window</p>
+        <p class="Parameters"><span class="Lower_Label" style="font-weight: bold;">Flags</span>:  </p>
+        <p class="objects2">		-1 		Original Style</p>
+        <p class="objects2">		0		 Hide</p>
+        <p class="objects2">		1		 Normal</p>
+        <p class="objects2">		2 		Minimize</p>
+        <p class="objects2">		3 		Maximize</p>
+        <p class="objects2">		9	 	Restore</p>
+        <p class="objects2">&#160;</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, ensures that ProModel is running maximized, then moves the layout window near the top left corner of the ProModel screen.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Private Sub CommandButton2_Click()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmObject.SetWindowPos 2, 0, 0, 0, 0, 3</p>
+        <p class="objects2">	pmObject.SetWindowPos 1, 10, 10, 700, 500, 0</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

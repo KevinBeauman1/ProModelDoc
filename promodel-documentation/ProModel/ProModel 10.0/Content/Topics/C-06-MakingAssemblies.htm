@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1241" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120802"></a>
+            <MadCap:keyword term="Assemblies:making" /><a name="C-06_1157716610_21016"></a>Making Assemblies</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">An assembly occurs when you attach specific items or entities to another entity such as a base part or frame.  To assemble entities, use the Join or Load Perm statement.  Implementing Join is a two-step process:</p>
+        <ol>
+            <li class="li_1">	Employ the <MadCap:keyword term="JOIN"></MadCap:keyword>Join statement at the designated assembly location.</li>
+            <li class="li_1">	Use the Join routing rule for all joining entities. </li>
+        </ol>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">It is helpful to designate one of the joining entities to be the “base” entity which issues the Join statement. In the following example, “Comp” is the base entity. All other joining entities must travel to the assembly location on an “If Join Request” routing rule. Note that for “Monitor” traveling to the assembly location, the word “Join” appears in the Rule field. This indicates that “Monitor” will go to the location Assembly only if a Join statement requests it elsewhere in the model.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-283-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-283-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-283-3.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-283-4.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Several other ProModel statements similar to Join exist such as <MadCap:keyword term="GROUP" />Group/<MadCap:keyword term="UNGROUP" />Ungroup, <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="LOAD" />Load, and <MadCap:keyword term="ACCUM" />Accum. You generally use these statements for temporary or permanent batching. To learn more about these statements, see the discussion on Batching and Unbatching earlier in this section. </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">For more information see <MadCap:xref class="lowercase_no_see" href="C-14-Join.htm#C-14_4292047180_1105007" target="" title="" alt="">Join on page 1</MadCap:xref>.</p>
+    </body>
+</html>

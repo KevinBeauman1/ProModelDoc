@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="875" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>CalMin</h1>
+        <h5>
+            <MadCap:keyword term="functions:calmin;calmin" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>CalMin()</p>
+        <h2>Description</h2>
+        <p>The CalMin() function corresponds to the minute of the calendar date you defined as part of the warm-up period or simulation begin date under simulation options. Since this function ties directly to the 24-hour clock displayed during simulation, CalMin() will never return a value higher than 59.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <p class="p_10">Please Note: CalMin() works only when you select calendar date in the simulation options dialog.</p>
+        <h2>Example</h2>
+        <p>Suppose parts have a fixed shipping time of 4:30 pm. The following logic would order parts to the shipping area.</p>
+        <p class="p_11">If CalHour() = 16 And CalMin() = 30 Then</p>
+        <p class="p_11">Order 1 Part To Shipping_Area</p>
+        <h5>See Also</h5>
+        <p>CalDay, CalDOM, CalHour, CalMonth, and CalYear</p>
+    </body>
+</html>

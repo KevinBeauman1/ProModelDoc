@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="402" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>
+            <a name="C-05_2723800551_1089719">
+            </a>
+            <a name="C-05_2723800551_Tanks">
+            </a>Defining Tank Control Subroutines</h3>
+        <p class="p">Unlike defining entity activity at a location (defined in the Processing module), modeling tank location activity requires the use of subroutines. Many of these subroutines are user-defined and called using the Activate statement. Though you generally activate them from the initialization logic, you may also activate them from another tank subroutine. Tank subroutines consist of logic defined to control when, where, and how much to empty, fill, or transfer from a tank. Often, these subroutines require the use of Wait Until statements to monitor conditions (e.g., the tank level or state) before making a transfer and may include delays for mixing or cleaning.</p>
+        <p class="p">&#160;</p>
+        <p class="p">At a minimum, you should define a separate control subroutine for any logic that executes independently of any other logic. For example, if TankA fills TankB at the same time TankB transfers to some other tank, you should define two separate subroutines since both sets of logic must be capable of executing independently of each other. On the other hand, if the logic associated with two tanks is interdependent, only one control subroutine is necessary. For example, if TankA fills TankB while TankB waits, then TankB pumps out while tank A waits, you need only a single control subroutine since you control both tanks by a single logic sequence. If a single tank feeds several other tanks independently, you would need a separate subroutine to control each output. In most cases, you will need at least one control subroutine per tank and, in certain situations, you may wish to use a hierarchical control system (i.e., a master or supervisory control subroutine) to activate subordinate subroutines.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Most tank control subroutines should be activated subroutines. In contrast to <span class="_Override" style="font-style: italic;">called</span> subroutines, <span class="_Override" style="font-style: italic;">activated</span><a name="C-05_2723800551_Multiple tanks;Tanks"></a> subroutines use the Activate statement and cause the logic activating the subroutine to continue independently of the activated subroutine. This allows you to execute multiple control subroutines concurrently. Multiple tanks with identical control logic may share the same control subroutine if you activate the subroutine for each tank and pass the tank ID as a parameter.</p>
+        <p class="p">&#160;</p>
+        <p class="p">One of the keys to modeling interactive tank behavior is to effectively use Wait Until statements. When you use Wait Until statements based on the Tank_Level array, use them <span class="_Override" style="font-style: italic;">sparingly</span> since this array changes frequently and may slow the simulation. </p>
+    </body>
+</html>

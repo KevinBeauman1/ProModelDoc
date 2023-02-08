@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="457" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>Waiting/Storage Cost</h3>
+        <p class="p">Increment the unit cost of an entity based on the time spent waiting in a storage or buffer.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">In the Variables and Attributes window, define an entity attribute to record the start of the waiting time (e.g., Wait_Start).</li>
+            <li class="li_1">In the Logic for the storage or buffer, assign the clock time to Wait_Start (e.g., Wait_Start = Clock(min)).</li>
+            <li class="li_1">In the routing dialog for the storage or buffer increment the entity cost by the time spent waiting times the cost per hour (e.g., IncCost (Entity, (Clock(min) – Wait_Start) * &lt;rate&gt;)).</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">A doctors office wants to assign a $20 per hour penalty cost to his operation for Patient waiting time in the Waiting Room.</p>
+        <p class="p">
+            <img src="Resources/Images/waitingstoragecostexample.png" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">Wait Room logic is shown below.</p>
+        <p class="p">
+            <img src="Resources/Images/waitingstoragecostsolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">Routing logic is shown below.</p>
+        <p class="p">
+            <img src="Resources/Images/routinglogicnewscreen.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">Notice the logic defined to record the waiting start time and the hourly rate times the lapsed waiting time.</p>
+    </body>
+</html>

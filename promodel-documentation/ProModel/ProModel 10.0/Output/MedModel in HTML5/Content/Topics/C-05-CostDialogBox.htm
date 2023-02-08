@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Cost">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Cost Dialog Box</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-CostDialogBox.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Cost.htm#C-05_2723800551_1088624">Cost</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Cost Dialog Box</span>
+        </div>
+        <h3><a name="kanchor1196"></a>Cost Dialog Box</h3>
+        <p class="p">Use the Cost Dialog box to define costs for Locations, Entities, and Resources. Fields in the Cost Dialog box vary between Object Types and <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> evaluates expressions in these fields only during translation at run time. The General Statistics Report includes statistical information automatically generated during run time about cost for locations, entities, and resources.</p>
+        <p class="p"><b>Obje</b><a name="kanchor1197"></a><b>ct Type</b> Use this pull-down menu to define costing for the components of the selected object type. Object types include locations, resources, and entities as shown in the following example. All defined model components of the selected type appear in the box below the object type field and <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> allows you to assign costs to any of these components.</p>
+        <p class="Graphic">
+            <img src="5-10-2.jpg" />
+        </p>
+        <h4>Loca<a name="kanchor1198"></a>tions</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-3.jpg" />
+        </p>
+        <p class="p"><b>Operat</b><a name="kanchor1199"></a><b>ion Rate</b> This field specifies the cost per unit of time to process entities at the selected location. Cost accrues only while an entity executes a <a name="kanchor1200"></a>Wait or <a name="kanchor1201"></a>Use statement in operation logic. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> accepts expressions in this field and evaluates them at translation.</p>
+        <p class="p"><b>P</b><a name="kanchor1202"></a><b>er</b> With this pull-down menu, you can set the time units for the Operation Rate. Time units may be in seconds, minutes, hours, or days as shown here.</p>
+        <p class="Graphic">
+            <img src="5-10-4.jpg" />
+        </p>
+        <h4>Reso<a name="kanchor1203"></a>urces</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-5.jpg" style="margin-right: 1.265045px;margin-bottom: 1.067039px;" />
+        </p>
+        <p class="p"><span class="Bold"><b>Regular </b><a name="kanchor1204"></a><b>Rate</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This field specifies the cost per unit of time for a resource used in the model. You can use expressions in this field (evaluated at translation) to set the rate or change it using SetRate. For more information on the SetRate operation statement, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-SetRate.htm#C-14_4292047180_1107243" title="" alt="">SetRate</a>. </p>
+        <p class="p"><span class="Bold"><b>P</b><a name="kanchor1205"></a><b>er</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This pull-down menu allows you to set the time units for the Regular Rate. Times may be in seconds, minutes, hours, or days as shown here.</p>
+        <p class="Graphic">
+            <img src="5-10-4.jpg" />
+        </p>
+        <p class="p"><span class="Bold"><b>Cost P</b><a name="kanchor1206"></a><b>er Use</b></span><span class="Helv_Bold" style="line-height: 12pt;"></span> This field allows you to define the actual dollar cost accrued each time you use the resource (i.e., the minimum usage cost). The cost per use updates when you obtain the resource and <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> accepts expressions in this field (evaluated at translation).</p>
+        <p class="p_10">Please Note: Since <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> counts a preemption as a use, if you preempt a resource from an entity, the usage cost applies to the resource only when it returns to the entity. </p>
+        <h4> Enti<a name="kanchor1207"></a>ties</h4>
+        <p class="Graphic" style="font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;">
+            <img src="5-10-7.jpg" />
+        </p>
+        <p class="p"><span class="Bold"><b>Initi</b><a name="kanchor1208"></a><b>al Cost</b></span> This field allows you to define the initial entity cost for an entity which enters the system through a scheduled arrival, a Create statement, or an Order statement. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> accepts expressions in this field and evaluates them at translation.</p>
+        <p class="p_10">Please Note: <i>When you implicitly create new entities through a Route statement, </i><MadCap:conditionalText style="font-style: italic;" data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><i> does not add an initial cost to the entity. To add an initial cost, use the IncEntCost statement. See </i><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-IncEntCost.htm#C-14_4292047180_1104683" title="" alt="" style="font-style: italic;">IncEntCost</a><i> for more information.</i></p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

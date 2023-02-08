@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="624" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks">
+            <a name="C-05_2723800551_1088996">
+            </a>
+            <a name="C-05_2723800551_12614">
+            </a>Tan<MadCap:keyword term="TANK_EMPTY;Subroutines:tank:TANK_EMPTY" />k_Empty</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_EMPTY (&lt;Tank ID&gt;, &lt;Empty Quantity&gt;, &lt;Empty Rate&gt;, &lt;Resume Level&gt;)</p>
+        <p class="Syntax_body">TANK_EMPTY (TankB, 2000, 40, 0) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Empties a tank by a specified quantity and rate. The state is set to Tank_Emptying, then to Tank_Idle if the tank becomes empty. </p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_Empty when the destination is not another tank, but an arriving entity or a source that is not part of the model.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Empty Quantity&gt;</p>
+        <p class="p">The number of units (gallons, pounds) to empty. To empty a tank completely of its current contents, enter Tank_Level [&lt;Tank ID&gt;].</p>
+        <p class="Component">&lt;Empty Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog. To instantly decrease the level of a tank, use the Tank_Dec subroutine. To specify a dynamically calculated rate using the Tank_Rate subroutine, enter 0. </p>
+        <p class="Component">&lt;Resume level&gt;</p>
+        <p class="p">If the tank level drops to 0 before you empty the specified quantity, the tank must rise to the resume level before continuing to empty. To terminate emptying if the level ever drops to 0, enter Tank_Stop. A value of 0 causes an error to occur if the tank becomes empty before removing the specified quantity.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">When a chemical tank, ChemTank, is full (state is Tank_Blocked), workers pump its contents into a rail car at a rate of 60 gpm for transportation to another facility. Since rail cars are always available and the delivery activity is not of interest, it is not necessary to model the rail cars explicitly. Instead, activate a subroutine in the initialization logic with the following statement:</p>
+        <p class="p">&#160;</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Wait Until 	Tank_State[ChemTank]=Tank_Blocked</p>
+        <p class="syntax_body_indent">		Tank_Fill(ChemTank, Tank_Level[ChemTank], 60, 0)</p>
+        <p class="Syntax_body">	}</p>
+        <p class="_rules">See Also</p>
+        <p class="p_2">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

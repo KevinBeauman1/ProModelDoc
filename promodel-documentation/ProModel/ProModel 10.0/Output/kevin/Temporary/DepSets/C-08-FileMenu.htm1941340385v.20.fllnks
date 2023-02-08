@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/cm-c8-305-1.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/cm-c8-305-1.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-08_1964285664_1090240" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Graphic editor:file menu"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphic editor"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphic editor:save:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Graphic editor:print:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Graphic editor:print:graphics library"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Graphic editor:opening a graphics library"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Graphic editor:closing a graphics library"
+      Conditions=""
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="Graphic editor:save:graphics library"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Graphic editor:print:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="84" />
+    <IndexCacheEntry
+      Term="Print:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="84" />
+    <IndexCacheEntry
+      Term="Graphic editor:print:graphics library"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Print:graphic:library"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

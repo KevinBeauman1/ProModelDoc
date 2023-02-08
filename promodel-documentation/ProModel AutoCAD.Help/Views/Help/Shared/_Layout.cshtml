@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProModel AutoCAD Edition Help</title>
+    <link rel="icon" type="image/x-png" href="https://www.promodel.com/content/images/Portfolio-Simulator-2020-16.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Help/css/main.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="/Help">
+                <img src="~/Images/PMAD-logo.png" alt="logo">
+                <span id="appTitle">ProModel AutoCAD Edition Help</span>
+            </a>
+            <button id="hamburger" class="mobile"><i class="fas fa-bars"></i></button>
+        </nav>
+    </header>
+    <div id="content" class="container-fluid">
+        <div class="row">
+            <div id="helpContainer" class="sidebar">
+                <ul id="helpTree" class="d-none">
+                    <li>
+                        <span>@Html.MDLink("Introduction", @"Help/Docs/PMADHelpHome.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("About", @"Help/Docs/About/About.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Getting Started", @"Help/Docs/GettingStarted/GettingStarted.md")</span>
+                        <ul>
+                            <li class="nav-item">@Html.MDLink("Sign In", @"Help/Docs/GettingStarted/SignIn/SignIn.md")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Modeling", @"Help/Docs/Modeling/Modeling.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Simulation Browser", @"Help/Docs/Modeling/SimulationBrowser/Simulation_Browser.md")</span>
+                        <ul>
+                            <li class="nav-item">@Html.MDLink("Locations", @"Help/Docs/Modeling/SimulationBrowser/SB_Locations/SB_Locations.md")</li>
+                            <li class="nav-item">@Html.MDLink("Entities", @"Help/Docs/Modeling/SimulationBrowser/SB_Entities/SB_Entities.md")</li>
+                            <li class="nav-item">@Html.MDLink("Conveyors", @"Help/Docs/Modeling/SimulationBrowser/SB_Conveyors/SB_Conveyors.md")</li>
+                            <li class="nav-item">@Html.MDLink("Flows", @"Help/Docs/Modeling/SimulationBrowser/SB_Flows/SB_Flows.md")</li>
+                            <li class="nav-item">@Html.MDLink("Resources", @"Help/Docs/Modeling/SimulationBrowser/SB_Resources/SB_Resources.md")</li>
+                            <li class="nav-item">@Html.MDLink("Path Networks", @"Help/Docs/Modeling/SimulationBrowser/SB_Path_Networks/SB_Path_Networks.md")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Simulation Properties", @"Help/Docs/Modeling/SimulationProperties/Simulation_Properties.md")</span>
+                        <ul>
+                            <li class="nav-item">@Html.MDLink("Locations", @"Help/Docs/Modeling/SimulationProperties/SP_Locations/SP_Locations.md")</li>
+                            <li class="nav-item">@Html.MDLink("Entities", @"Help/Docs/Modeling/SimulationProperties/SP_Entities/SP_Entities.md")</li>
+                            <li class="nav-item">@Html.MDLink("Conveyors", @"Help/Docs/Modeling/SimulationProperties/SP_Conveyors/SP_Conveyors.md")</li>
+                            <li class="nav-item">@Html.MDLink("Flows", @"Help/Docs/Modeling/SimulationProperties/SP_Flows/SP_Flows.md")</li>
+                            <li class="nav-item">@Html.MDLink("Resources", @"Help/Docs/Modeling/SimulationProperties/SP_Resources/SP_Resources.md")</li>
+                            <li class="nav-item">@Html.MDLink("Path Networks", @"Help/Docs/Modeling/SimulationProperties/SP_Path_Networks/SP_Path_Networks.md")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Model Elements", @"Help/Docs/Modeling/ModelElements/Model_Elements.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Routing Rules", @"Help/Docs/Modeling/RoutingRules/Routing_Rules.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Distribution Intervals", @"Help/Docs/Modeling/Distribution_Intervals.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Logic", @"Help/Docs/Modeling/Logic/Logic.md")</span>
+                        <ul>
+                            <li class="nav-item">@Html.MDLink("Incrementing and Decrementing", @"Help/Docs/Modeling/Logic/IncrementingAndDecrementing/Incrementing_and_Decrementing.md")</li>
+                            <li class="nav-item">@Html.MDLink("Time", @"Help/Docs/Modeling/Logic/Time/Time.md")</li>
+                            <li class="nav-item">@Html.MDLink("Simulation Interruption", @"Help/Docs/Modeling/Logic/SimulationInterruption/Simulation_Interruption.md")</li>
+                            <li class="nav-item">@Html.MDLink("Grouping", @"Help/Docs/Modeling/Logic/Grouping/Grouping.md")</li>
+                            <li class="nav-item">@Html.MDLink("Code", @"Help/Docs/Modeling/Logic/Code/Code.md")</li>
+                            <li class="nav-item">@Html.MDLink("Conditional Statements", @"Help/Docs/Modeling/Logic/ConditionalStatements/Conditional_Statements.md")</li>
+                            <li class="nav-item">@Html.MDLink("Creation", @"Help/Docs/Modeling/Logic/Creation/Creation.md")</li>
+                            <li class="nav-item">@Html.MDLink("System", @"Help/Docs/Modeling/Logic/System/System.md")</li>
+                            <li class="nav-item">@Html.MDLink("Waiting", @"Help/Docs/Modeling/Logic/Waiting/Waiting.md")</li>
+                            <li class="nav-item">@Html.MDLink("Moving", @"Help/Docs/Modeling/Logic/Moving/Moving.md")</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Simulation", @"Help/Docs/Simulation/Simulation_Tools.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Simulation Results", @"Help/Docs/SimulationResults/Simulation_Results.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("Tools and Learn", @"Help/Docs/ToolsAndLearn/Tools_and_Learn.md")</span>
+                    </li>
+                    <li>
+                        <span>@Html.MDLink("ProModel 3D Animator For Inventor", @"Help/Docs/ProModel3DAnimator/ProModel_3D_Animator.md")</span>
+                    </li>
+
+                    <li>
+                        <span>@Html.MDLink("Version History", @"Help/Docs/Version_History.md")</span>
+                    </li>
+                </ul>
+            </div>
+            <main id="mainBody" role="main">
+                <div class="container-fluid body-content">
+                    @RenderBody()
+                </div>
+            </main>
+        </div>
+    </div>
+    <div id="overlay" class="overlay">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="~/Help/js/main.js"></script>
+</body>
+</html>

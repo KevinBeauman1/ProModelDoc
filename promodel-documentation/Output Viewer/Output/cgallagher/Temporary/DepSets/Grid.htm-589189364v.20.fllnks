@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/gridribbon1.png" />
+    <Link
+      Url="Content/Grid.htm" />
+    <Link
+      Url="Content/Resources/Images/gidlines.png" />
+    <Link
+      Url="Content/Resources/Images/gridlinesboth1.png" />
+    <Link
+      Url="Content/Resources/Images/striping.png" />
+    <Link
+      Url="Content/Resources/Images/striping2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/gridribbon1.png" />
+    <Link
+      Url="Content/Grid.htm#Gridlines" />
+    <Link
+      Url="Content/Grid.htm#Striping" />
+    <Link
+      Url="Content/Resources/Images/gidlines.png" />
+    <Link
+      Url="Content/Resources/Images/gridlinesboth1.png" />
+    <Link
+      Url="Content/Resources/Images/striping.png" />
+    <Link
+      Url="Content/Resources/Images/striping2.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Gridlines" />
+    <Anchor
+      Name="Striping" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="grid"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="gridlines"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="striping"
+      Conditions=""
+      LocalConditions=""
+      Position="24" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

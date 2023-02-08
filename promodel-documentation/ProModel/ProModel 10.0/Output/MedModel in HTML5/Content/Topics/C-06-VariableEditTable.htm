@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Variables">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Variable Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-06-VariableEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-Variables.htm#C-06_1157716610_1085768">Variables</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Variable Edit Table</span>
+        </div>
+        <h3><a name="C-06_1157716610_1085784"></a>Variable Edit Table<a name="kanchor1010"></a></h3>
+        <p class="p">This edit table is used to define Variables used globally in the model.  A description of each field is given below.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-223-2.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p"><b>Icon</b><a name="kanchor1011"></a>   This field shows “Yes” if an icon for the variable appears on the layout. A variable’s icon looks like a counter and displays the variable’s value.</p>
+        <p class="p"><b>ID</b>   The variable’s name.</p>
+        <p class="p"><b>Type</b><a name="kanchor1012"></a>   The type of variable, real or integer.</p>
+        <p class="p"><b>Initial Value</b><a name="kanchor1013"></a>   The initial value of the variable to be assigned at the start of the simulation. By default, initial values are 0, but can be changed in the edit table to whatever value you want. Any expression can be entered here (including previously defined variables) except attributes and system functions.</p>
+        <p class="p"><b>Stats</b><a name="kanchor1014"></a>
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> collects statistics for each variable on three levels of detail, None, Basic, and Time Series.</p>
+        <ul>
+            <li class="li_1" value="1"><b>None</b>   No statistics are collected for this variable during simulation.</li>
+            <li class="li_1" value="2"><b>Basic</b>   Collects basic statistics such as total changes, average minutes per change, current value, and average value.</li>
+            <li class="li_1" value="3"><b>Time Series</b>   Collects all the basic statistics plus the value history based on time or observations. When you select Time Series, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> collects either time-weighted or observation-based statistics for the variable depending upon the type selected.</li>
+        </ul>
+        <p class="Graphic">
+            <img src="6-2-3.jpg" />
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="127px" class="Column-Column1" />
+            <col width="48px" class="Column-Column2" />
+            <col width="89px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Variable Observation Record</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Value</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Time in Hours</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">Observation 1</p>
+                        <p class="CellBody">Observation 2</p>
+                        <p class="CellBody">Observation 3</p>
+                        <p class="CellBody">Observation 4</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">6</p>
+                        <p class="CellBody">5</p>
+                        <p class="CellBody">6</p>
+                        <p class="CellBody">5</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">1</p>
+                        <p class="CellBody">2</p>
+                        <p class="CellBody">3</p>
+                        <p class="CellBody">4</p>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="Foot-Footer1">
+                    <td class="FootE-Column1-Footer1">
+                        <p class="CellHeading">Total</p>
+                    </td>
+                    <td class="FootE-Column2-Footer1">
+                        <p class="CellHeading">22</p>
+                    </td>
+                    <td class="FootD-Column3-Footer1">
+                        <p class="CellHeading">10</p>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p class="p"><a name="kanchor1015"></a><b>Time-Weighted</b>   Collects information on the percentage of time the variable was at a specific value. As shown in the above table, the average value of the variable is:</p>
+        <p class="p" style="text-align: center;"><u>(6 x 1) + (6 x 3) + (5 x 2) + (5 x 4)   =  5.4	</u>
+        </p>
+        <p class="p" style="text-align: center;">10</p>
+        <p class="p"><a name="kanchor1016"></a><b>Observation-Based</b>   Collects information on the number of times the variable changed to a specific value. As shown in the above table, the value of the variable is 6, then 5, then 6, then 5. The average would simply be: </p>
+        <p class="p" style="text-align: center;"><u>6 + 5 + 6 + 5	    =  5.5</u>
+            <br />	4</p>
+        <p class="p"><b>Notes</b>   A general notes field for describing the variable. Click on the Notes button or double click in the field to open an edit window for entering detailed notes.</p>
+        <p class="p_10">Please Note: In order to create plots or histograms for a variable, Time Series stats must be selected in the variables edit table.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

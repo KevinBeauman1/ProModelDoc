@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1501" MadCap:lastWidth="941">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> Summary Table</h1>
+        <MadCap:keyword term="Location Summary Table" MadCap:conditions="PM-PCS Conditionals.PM" />
+        <MadCap:keyword term="Activity Summary Table" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        <p class="p">Click on the Tables drop-down and select Summary in the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> group.</p>
+        <p>
+            <img src="Resources/Images/locationsummarytable1.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/locationsummarytable1-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p">A table is generated, which summarizes statistics gathered during the simulation that apply to all <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText>, and contains the following columns of information.</p>
+        <p>
+            <img src="Resources/Images/locationsummarytable2.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/locationsummarytable2-pcs.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Scenario:</b> The scenario to which the data in the row applies.</p>
+        <p class="p"><b>Name:</b> The <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> name.</p>
+        <p class="p"><b>Scheduled Time:</b> The total amount of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>Capacity:</b> The capacity defined  for this <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> in the model.</p>
+        <p class="p"><b>Total Entries:</b> The total number of entities that entered the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>, not including entities arriving to be <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">joined and loaded</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attached</MadCap:conditionalText>. Entities <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">split, unloaded, or ungrouped</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">detached or unbatched</MadCap:conditionalText> from another entity at <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> do not count as additional entries. Arriving entities that have been previously <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">grouped or loaded</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attached or batched</MadCap:conditionalText> to form a single entity only count as one entry.</p>
+        <p class="p"><b>Average Time Per Entry:</b> The average time each entity spent at the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. This time may include partial times from the beginning and end of the actual run time.</p>
+        <p class="p"><b>Average Contents:</b> The average number of entities at the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>.</p>
+        <p class="p"><b>Maximum Contents:</b> The maximum number of entities which occupied the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> over the course of the simulation.</p>
+        <p class="p"><b>Current Contents:</b> The number of entities remaining at the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> when the simulation ended.</p>
+        <p class="p"><b>% Utilization:</b> The percentage of capacity occupied, on average, during the simulation.</p>
+        <p class="p_2"><u>Cumulative Occupancy Time x 100</u>
+        </p>
+        <p class="p_2">Capacity x Scheduled Time</p>
+        <p class="p">Cumulative Occupancy Time refers to the sum of the clock time each entity spends at <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> for processing.</p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2588" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-04_4289884492_1080354"></a><a name="C-04_4289884492_33707"></a>Model Merging<MadCap:keyword term="Model:merge;Merge:models" /></h3>
+        <p class="p">Model merging is a powerful feature that allows large or complex models to be built in smaller segments. A model segment may be as small as a single workstation or as large as an entire department. After all segments are ready, they can be merged together to form a single model.</p>
+        <p class="p">The Merge feature consists of two options: Merge Model and Merge Submodel.</p>
+        <p class="Graphic">
+            <img src="3-1-2-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4><a name="C-04_4289884492_1080362"></a>
+            <MadCap:keyword term="Merge:models" /><a name="C-04_4289884492_20267"></a>Merge Model</h4>
+        <p class="p">The Merge Model option allows two or more independent (complete or incomplete) models to be merged into a single model.  Duplicate elements found in the base model and the merging model are treated differently according to the element type.</p>
+        <p class="p">Entity and attribute names common to both models are considered common elements in the merged model.  For example, if both models contain the entity type In-Box, the merged model will contain only the record from the base model in the Entities table for In-Box.</p>
+        <p class="p">Duplicate locations, resources or path networks <span class="_Override" style="font-style: italic;">must </span>first be renamed or deleted from the merging model.  Otherwise, an error message occurs and the merge will terminate.</p>
+        <p class="p">If the two models use different graphic libraries, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>will give the user the choice to append the merging model's graphic library to the base model's graphic library.</p>
+        <p class="p">All other duplicate model elements cause a prompt to appear with the choice to delete the duplicate element from the merging model or cancel the merge process.</p>
+        <h4>
+            <MadCap:keyword term="Merge:submodel;Submodel:merge" />Merge Submodel</h4>
+        <p class="p">The Merge Submodel option allows commonly used submodels to be merged into an existing model in one or more places. Submodels are created just like any other model and may be complete or incomplete models.</p>
+        <p class="p">When specifying a submodel, you are prompted for a “tag” to be attached to each element of the submodel as either a prefix or suffix. For example, you may be developing a model with four workstations. Instead of creating workstations individually, you could create a submodel with only the common elements (e.g., in-box, out-box, telephone, variables, arrays, etc.) and merge the submodel into the main model four times. In the resulting model, you would then fill in the unique portions of each workstation. Entity and attribute names will not be tagged.</p>
+        <p class="p">In the following example, the tag “A_” is attached as a prefix to every element of the submodel. A location called Queue1 in the submodel becomes A_Queue1 in the main model and so on. Likewise, a variable called Rejects becomes A_Rejects in the merged model.</p>
+        <p class="Graphic">
+            <img src="3-3-2-1.jpg" MadCap:mediastyle="@media print { max-width: 1.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p_10">Please Note: Tags used as prefixes must begin with a letter, A through Z, or an underscore. For example, the tag “3C_” is invalid and would produce an error message.</p>
+        <p class="How_to_title">How to merge a model or submodel into an existing model:</p>
+        <ol>
+            <li class="li_1">Open the initial (base) model.</li>
+            <li class="li_1">Select the <span class="_Override" style="font-weight: bold; text-decoration: none;">Insert</span> ribbon tab.</li>
+            <li class="li_1">Select the <span class="_Override" style="font-weight: bold; text-decoration: none;">Model</span> or <span class="_Override" style="font-weight: bold; text-decoration: none;">Submodel</span> button from the Merge group.</li>
+            <li class="li_1">Specify the name of the model to be merged in the following dialog box.</li>
+        </ol>
+        <p class="p">
+            <img src="mm-c4-65-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+            <img src="pm-c4-65-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>If you select Submodel, specify a prefix or suffix to be attached to each element of the submodel.</li>
+            <li class="li_1">Click on the layout where you want the model or submodel to appear. A bracket appears on the screen, representing the <span class="_Override" style="font-style: italic;">upper left corner </span>of the merging model’s layout. This bracket moves as you move the mouse, allowing you to correctly position the layout to be merged.</li>
+            <li class="li_1">Next, you will be asked if you would like to append the graphic library file from the model or submodel to the current graphic library file.  Select yes or no depending on your preference.</li>
+            <li class="li_1">When the model is merged in, the graphical elements remain selected so that you can position the merged model exactly where you want it.</li>
+        </ol>
+        <p class="p_10">Please Note: When merging models, if the zoom factors and grid scales are not the same, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will adjust the sizes of graphical elements in the merging model to the scale of the original model.</p>
+    </body>
+</html>

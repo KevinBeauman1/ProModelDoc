@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/4-1-1-1.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/4-1-1-1.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_4289884492_1092121" />
+    <Anchor
+      Name="C-04_4289884492_1092131" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Edit:table"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Table:editing"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Delete:deleting a record from a table"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Insert:record in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="Append:record to a table"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Move:moving a record in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Delete:deleting a record from a table"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="Record:delete:from a table"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="Insert:record in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+    <IndexCacheEntry
+      Term="Record:insert in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="41" />
+    <IndexCacheEntry
+      Term="Append:appending a record to a table"
+      Conditions=""
+      LocalConditions=""
+      Position="48" />
+    <IndexCacheEntry
+      Term="Record:append:to table"
+      Conditions=""
+      LocalConditions=""
+      Position="48" />
+    <IndexCacheEntry
+      Term="Move:moving a record in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+    <IndexCacheEntry
+      Term="Record:move in a table"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

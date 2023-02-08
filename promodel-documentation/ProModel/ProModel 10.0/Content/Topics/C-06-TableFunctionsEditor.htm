@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1076" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086469"></a>Table Functions Editor<MadCap:keyword term="Table:functions:editor" /></h3>
+        <p class="p">Table functions are defined by the user and return a dependent (or look-up) value based on the independent (or reference) value passed as the function argument.  Independent values must be entered in ascending order.  If the independent value passed to a table function falls between two independent values, a dependent value for the unspecified reference value is calculated by linear interpolation.  The following two examples show how to specify a linear function (where only two reference values are needed to define the entire function) and a nonlinear function (where more than two reference values need to be specified).</p>
+        <h4>Example 1<MadCap:keyword term="Table:functions:examples" /></h4>
+        <p class="p">The example below shows a relationship that exists between the time required to process an order and the number of entities in the order. As the number of entities increases, the time required to process the order also increases. The relationship in this case is linear, meaning the processing time is directly proportional to the number of copies in the order. Because of the linear relationship, only the two endpoints need to be entered in the function table. (The function table for this example is given in the discussion on the Table Function editor.)</p>
+        <p>
+            <img src="9_42.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Example 2</h4>
+        <p class="p">In this example the relationship between the independent value and the dependent value is nonlinear and inversely proportional.  In addition, interpolation is required to determine the dependent value if the independent value passed to the function lies between the independent values given explicitly in the table function.<br />In the example above the dependent value represents a factor which is to be multiplied by the processing time required to complete an order. Each order is assigned a number, 1 through 5, according to the level of quality desired. In this case, a lower number represents higher quality. (The function table for this example is listed in the following explanation of the Function Table Editor.)</p>
+        <p>
+            <img src="9_45.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+    </body>
+</html>

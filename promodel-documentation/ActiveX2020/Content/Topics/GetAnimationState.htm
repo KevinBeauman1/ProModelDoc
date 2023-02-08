@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="262" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_461841"></a>
+            <MadCap:keyword term="GetAnimationState;ProModel Runtime Object:GetAnimationState" />GetAnimationState</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>GetAnimationState<span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span><span class="_Override" style="color: #0000ff;">State</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Gets the current state of the animation, whether ON or OFF.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:</span>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">State</span> (Long - Output Parameter)  Zero (0) if animation is off, one (1) if animation is on.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns: </span> Long - Zero (0) if animation is off, one (1) if animation is on.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example</span><b>:</b>
+        </p>
+        <p class="objects">Dim AnimState as Long</p>
+        <p class="objects">Dim pmRun as Promodel.CRuntime</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">pmObj.Simulate</p>
+        <p class="objects" style="font-weight: bold;">pmRun.GetAnimationState AnimState</p>
+        <p class="objects">MsgBox "Animation is " &amp; IIF(AnimState = 0, "off", "on")</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Set pmObj = nothing</p>
+        <p class="objects">Set pmRun = nothing</p>
+    </body>
+</html>

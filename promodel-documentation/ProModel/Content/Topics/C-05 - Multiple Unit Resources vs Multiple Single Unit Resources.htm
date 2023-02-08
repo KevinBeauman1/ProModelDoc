@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="376" MadCap:lastWidth="1193">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086649"></a>
+            <MadCap:keyword term="Resources:multi-unit:vs. multiple single-unit;Multi-unit:resources;Multiple single-unit resources" />Multi-Unit Resources vs. Multiple Single-Unit Resources</h3>
+        <h4>Multi-Unit Resources<MadCap:keyword term="Resources:multi-unit" /></h4>
+        <p class="p">When a resource is defined as having more than one unit, each resource unit is given a numeric suffix by which it is identified in the output report. For example, a resource (Res1) which has five units will display output statistics for resources called Res1.1, Res1.2, . . . . Individual units of a resource (e.g., Get Res1.1) cannot be requested.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Suppose you define a resource, Technician, which has ten units. You also have ten locations and each resource unit can only interface with one location. For example, Technician.5 can only work at Loc5. Since “Use Technician.5” is invalid, you would need to use multiple single-unit resources instead (e.g., Technician1, Technician2, Technician3).</p>
+        <p class="p">&#160;</p>
+        <p class="p">Multi-unit resources are intended for use when several resources are defined with the exact same specifications and any resource can be used at a number of locations. For example, a computer can be operated by one of three technicians. If you did not use multi-unit resources, you would need to specify “Use Technician1 Or Technician2 Or Technician3,” although this can easily be abbreviated by using a macro to represent the resource expression. When you define three units for a single resource, Res1, you can simply state “Use Res1” and one resource unit will be used based on its availability.</p>
+        <h4>Multiple Single-Unit Resources<MadCap:keyword term="Resources:multiple, single-unit resources;Multiple single-unit resources" /></h4>
+        <p class="p">Multiple single-unit resources are useful when resources have different specifications, follow different path networks, or are used at specific locations. If several resources have the same specifications and travel the same path network but can only do work or interface with specific locations, they must be defined as multiple single-unit resources. This is because a unit of a multi-unit resource must be able to interface with all locations where it is called to work.</p>
+    </body>
+</html>

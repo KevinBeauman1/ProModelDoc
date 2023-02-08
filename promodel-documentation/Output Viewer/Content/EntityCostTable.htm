@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="997" MadCap:lastWidth="916" MadCap:ignoredWords="IncEntCost;ProModel;GetCost;g;Var1">
+    <head>
+    </head>
+    <body>
+        <h1>Entity Costs Table</h1>
+        <MadCap:keyword term="entity costs table" />
+        <p class="p">Click on the Tables drop-down and select Costs within the Entity group.</p>
+        <p>
+            <img src="Resources/Images/entitycoststable1.png" />
+        </p>
+        <p class="p">The following table is generated, which  lists cost data for entities in the simulation, and contains the following columns of information.</p>
+        <p>
+            <img src="Resources/Images/entitycosttable1.png" />
+        </p>
+        <p class="p"><b>Scenario:</b> The scenario to which the data applies.</p>
+        <p class="p"><b>Name:</b> The entity item name.</p>
+        <p class="p"><b>Explicit Exits:</b> The number of entities that have explicitly exited. Whenever an entity exits the system, it is an explicit exit except in the following cases; when an entity <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">JOINS, permanently LOADS, or COMBINES</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">permanently attaches</MadCap:conditionalText> with another entity, it implicitly exits the system, and is reported as an exit in the Entity Activity report. However, for costing purposes, the entity did not explicitly exit, but its costing information was added to the entity it was <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">JOINED, permanently LOADED, or COMBINED with</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">permanently attached to</MadCap:conditionalText>. When an entity temporarily <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">LOADS</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attaches</MadCap:conditionalText> onto a base entity or <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">GROUPS</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">batches</MadCap:conditionalText> with another entity, and the entire <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">LOADED or GROUPED</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach or batch group</MadCap:conditionalText> entity exits the system, the original entity implicitly exits the system, and is reported as an exit in the Entity summary table. However, for costing purposes, the original entity did not explicitly exit, but its costing information was added to the entire <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">load or group</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach or batch group</MadCap:conditionalText>.</p>
+        <p class="p"><b>Total Cost:</b>The cumulative entity cost, or the sum of costs incurred at all <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> the entity passed through + the sum of all costs incurred by use of resource + initial cost + any IncEntCost</p>
+        <p class="p"><b>% Total Cost:</b> Refers to the entity’s percentage of the sum of all entity costs. </p>
+    </body>
+</html>

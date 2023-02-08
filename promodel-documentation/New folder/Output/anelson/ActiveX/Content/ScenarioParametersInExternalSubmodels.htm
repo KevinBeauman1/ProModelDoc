@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Hierarchical Modeling and Scenario Management</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor309"></a>Scenario Parameters in External Submodels</h1>
+        <p>When defining scenario parameters, a list of possible parameters for 
+ the parent model is listed in 
+ the Scenario Parameters dialog. &#160;If 
+ you would like to define a scenario parameter for an external submodel (i.e. in a separate Visio document), you must 
+ first define a macro or global variable in both the parent model and external submodel, 
+ then use the macro or variable in a field in the submodel where you would 
+ like to apply the scenario parameter, and finally set the macro or variable 
+ as a scenario parameter in the parent model.</p>
+        <p class="p_10">Note: If your submodel is on another page within the same document as your main model, there is no need to use this technique because elements are global across all pages within the same document.</p>
+        <h2>Example</h2>
+        <p>For example, if we would like our external submodel to use a scenario parameter 
+ for one of its activity's (Op31) capacity, we would do the following:</p>
+        <ol>
+            <li value="1">Define a macro in the parent model, 
+ and set its initial value to 1. &#160;For 
+ this example we will call the macro Op31Cap.</li>
+        </ol>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Example1.png" class="img_2" />
+        </p>
+        <ol start="2">
+            <li value="2">Define the same macro in the external submodel. 
+ Set the initial value of the variable to 1. This must be done so the submodel 
+ accepts the macro in the capacity field. </li>
+            <li value="3">Open the <b>Properties</b> window for activity Op31 in 
+ the external submodel, and type the macro name in the activity Capacity field or right-click and select it from the context menu.</li>
+        </ol>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Example2.png" class="img_2" />
+        </p>
+        <ol start="4">
+            <li value="4">Open the <b>Scenario Manager</b> 
+ in the parent model and click the <b>Add Parameters</b> button.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/addparameter.png" class="img_2" />
+        </p>
+        <ol start="5">
+            <li value="5">Expand the <b>Macro</b> folder, and double-click on the <b>Op31Cap</b> macro to add it 
+ as a scenario parameter.</li>
+        </ol>
+        <p class="li_1" style="text-align: left;">
+            <img src="Resources/Images/Example3.png" class="img_2" />
+        </p>
+        <ol start="6">
+            <li value="6">The macro 
+ can now be used as a scenario parameter to control capacity for activity
+ Op31 in the external submodel.</li>
+        </ol>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>ProActiveX</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-08-ProActiveX.htm">Open topic with navigation</a>
+        </p>
+        <h3><a name="C-08_1964285664_1092481"></a><a name="C-08_1964285664_64263"></a><a name="kanchor2397"></a><a href="" title="ProActiveX Help" alt="ProActiveX Help">ProActiveX</a>
+        </h3>
+        <h4>Overview</h4>
+        <p class="p">The ProActiveX spreadsheet is designed to help you understand how to use <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>’s ActiveX components. The worksheets and macros give clear and functional examples of how to access all currently enabled data elements. A detailed help system is available <a href="http://www.promodel.com/onlinehelp/ActiveX/100/Default.htm" title="ProActiveX Help" alt="ProActiveX Help">here</a>.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The ProActiveX spreadsheet may be used “as is” or modified to suit your specific needs. With ProActiveX and a fundamental knowledge of Visual Basic for Applications, you can create customized user interfaces for <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>–or let our consulting division do it for you!</p>
+        <p class="p">&#160;</p>
+        <p class="p">ProActiveX.xls has nineteen data worksheets corresponding to the module with the same name in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>. Additionally, there is one hidden sheet with data for drop-down lists used on the other sheets.</p>
+        <p class="p_10">Please Note: ProActiveX is only compatible with Excel 2000 or newer.</p>
+        <h4>Worksheets</h4>
+        <h5>Drop-down lists, check boxes and text boxes</h5>
+        <p class="p">Many of the worksheets in ProActiveX have drop-down lists which make it easier to fill in the required data. In all cases, the value you select will be inserted into the selected cell or range of cells. However, the assigned macros do not prevent you from selecting a different column than the one with the drop-down used.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Using a combo box with a pre-defined list is one way to ensure consistency in the data. In most cases, the numeric value of the list selection is temporarily recorded on the hidden sheet (named <span class="Bold" style="font-weight: bold;">Hidden Sheet</span>). On the <span class="Bold" style="font-weight: bold;">Simulation Options</span> sheet, instead of filling in a cell or range, the value shows in the drop-down box itself and the numeric value is hidden in the cell behind it. </p>
+        <p class="p">&#160;</p>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Simulation Options</span> sheet also contains several check boxes and a text box. The values for the check boxes are hidden in the cells behind them. The method used for hiding the values is simply to make the text color the same as the background color.</p>
+        <h5>Not Enabled and Partially Enabled</h5>
+        <p class="p">A few of the worksheets have data columns defined for methods which have not yet been implemented in the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><span class="Bold" style="font-weight: bold;"> Data Object. </span>These columns have been included to acknowledge that these elements were not forgotten when ProActiveX was created–these data elements will be enabled in future releases of <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>.</p>
+        <h5>Calendar Editor Button</h5>
+        <p class="p">The Shift Assignments worksheet has a button to the far right labeled <span class="Bold" style="font-weight: bold;">Calendar Editor</span>. Clicking on this button will show the Calendar Editor, just like when you invoke the menu call from your default ProModel Corporation product.</p>
+        <h5>Browse Button</h5>
+        <p class="p">The General Info worksheet has a<span class="Bold" style="font-weight: bold;"> Browse... </span>button that uses the Microsoft Common Dialog to display a file selection window.</p>
+        <h5>Comments</h5>
+        <p class="p">Several worksheets have comments in the cells of the title rows. These comments are included to give you important information about the data contained in that column–like limitations or formatting requirements.</p>
+        <h5>Panes and Sections</h5>
+        <p class="p">In each worksheet where the data columns go beyond the right-hand border of a single screen, separate panes have been created and ‘frozen’ to allow you to scroll through the columns without moving the column that identifies the record.  The title rows have also been frozen, so that the user can scroll down the sheet without losing sight of the titles.</p>
+        <p class="p">&#160;</p>
+        <p class="p">In each worksheet, title labels spanning more than one column indicate that all the columns beneath that title pertain to that type of information.  For example, on the Resources worksheet, there are several columns for downtime data which have duplicate titles, but different section labels.  In some cases, the labels are used merely to make the titles easier to read.</p>
+        <h4>Controls Sheet</h4>
+        <p class="p">The first sheet of the ProActiveX file is the Controls Sheet. The options available on this sheet are described below.</p>
+        <h5>Get (All)</h5>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Get </span>button copies ActiveX enabled data elements from the currently open model to the ProActiveX spreadsheet.</p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> must be running and a model loaded.  When all of the data has been copied to the spreadsheet, a message box will appear saying,   “Process Complete.”</p>
+        <h5>Build Model</h5>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Build Model</span> button copies all ActiveX enabled data elements from the ProActiveX spreadsheet to the currently open model.</p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> must be running and a model loaded.  When all of the data has been copied to the model, a message box will appear saying, “Process Complete.”</p>
+        <h5>Save Model</h5>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Save Model</span> button saves all updates to the loaded model. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> must already be open with a model loaded.</p>
+        <h5>Run Simulation</h5>
+        <p class="p">The<span class="Bold" style="font-weight: bold;"> Run Simulation</span> button starts the simulation for the loaded model.  To view the simulation, you will have to manually select <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> from your Windows Task Bar, to bring it forward.</p>
+        <h5>Op<span class="Bold">en <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText></span></h5>
+        <p class="p">The <span class="Bold"><b>Open </b><MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> <![CDATA[ ]]></span>button starts <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>, but does not load a model.</p>
+        <h5>Load Model</h5>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Load Model</span> button gives the user an opportunity to specify a model and then open it in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>.  If <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> is not already running, the <span class="Bold">Load Model</span> button will start <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> and then load the selected model.  This button gives you an example of a custom dialog box.</p>
+        <h4><a name="C-08_1964285664_17845"></a>Macros</h4>
+        <p class="p">All of the processing logic for ProActiveX is contained in Excel macros.  In most cases each macro is in a separate module.  The controlling modules are named <span class="Bold">Get_ALL_Model_Data</span> and <span class="Bold">Pop_ALL_Model_Data.</span> There are also macros in some of the Excel Sheet Objects.  For example, Sheet04 (Resources) has subroutines that dynamically fill in the Path Network drop-down list (using the information on the Path Networks sheet) every time the Resources sheet is activated.  This is one method for keeping the drop-down list in sync whenever you update the data.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When the user clicks on the<span class="Bold"> Build All </span>button on the Controls Sheet, the <span class="Bold">create_model</span> subroutine is started (found in the POP__ALL_Model_Data module).  This subroutine then calls subroutines in other modules to process each type of data.  The order in which the subroutines are called is important, since many of the modules in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> depend on information in other modules.  For example, the Locations module must be built before the Path Networks module, because the Path Networks module references Locations.</p>
+        <p class="p">&#160;</p>
+        <p class="p">All of the subroutines in ProActiveX use the constants established in the <span class="Bold">PM_CONSTANTS</span> module.  You will also find this module recorded in the file called <span class="Bold">PM_CONSTANTS.bas</span>. The main purpose of the constants is to provide a method for accessing the parameters to the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> properties and methods data, without having to remember the numbers associated with each table and field.</p>
+        <p class="p">&#160;</p>
+        <p class="p">There are some other useful subroutines that are used throughout the program to do things like showing the right error message or replacing Excel style carriage returns with <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> style carriage returns.</p>
+        <p class="p">&#160;</p>
+        <p class="p">In many cases when you look at the tables in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>, what you actually see on the screen is a main table and one or more sub tables.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The subroutines in ProActiveX must process the data for all tables simultaneously by using <span class="Bold">For...Next</span> or <span class="Bold">Do While...</span> loops.</p>
+        <p class="p">&#160;</p>
+        <p class="p">In many of the data tables, the first field is a <span class="Bold">Name</span> or <span class="Bold">ID</span> field that identifies each record in the table and does not allow duplicates.  In the subroutines that populate these types of tables, the logic is designed to search for an existing <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> record with the same name or ID.  If a record is found, all of its fields will be updated. If no record is found, a new one will be appended.  In tables that have no identifying field, records are always appended.</p>
+        <p class="p">&#160;</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

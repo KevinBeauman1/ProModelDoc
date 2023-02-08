@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="ActiveX PDF Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterStylesheet="/Content/Resources/Stylesheets/Promodel.css"
+  DisableAutoSync="true"
+  MasterToc="/Project/TOCs/ActiveX.fltoc"
+  OutputFile="ActiveX User Guide, PDF"
+  Skin="/Project/Skins/ACTIVEX HTML5 Skin.flskn">
+  <DocumentProperties
+    Title="ActiveX for ProModel 2014 User Guide"
+    Author="ProModel Corporation" />
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100" />
+  <PrintedOutput
+    ExpandingTextConversion="expand"
+    PopupConversion="expand" />
+</CatapultTarget>

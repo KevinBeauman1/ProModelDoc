@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="397" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_473432"></a>
+            <MadCap:keyword term="InsertRecord;ProModel Data Object:InsertRecord" />InsertRecord</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>InsertRecord <span class="_Override" style="color: #0000ff;">RecordType</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Inserts a new record <span class="_Override" style="font-weight: bold;">before</span> the selected record in the table. The newly inserted record will already be selected, so there is no need to use the <span class="_Override" style="font-style: italic;">SelectMainRecordBy…</span> methods before populating the data.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> 	 (Long)  The Record Type (Table Number) of the table you wish to insert the record into.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads the mfg_cost model, finds the “Inspect” location and inserts a new record before it, then selects the new record &amp; gives it a name.</p>
+        <p class="objects">Sub AddALoc()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmDataObject.SelectMainRecordByName 1, "Inspect"</p>
+        <p class="objects2">	pmDataObject.InsertRecord <span class="_Override" style="color: #0000ff;">1</span></p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2">	pmObject.MsgBox "Done"</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

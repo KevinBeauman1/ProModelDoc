@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Locations">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Location Decision Rules Dialog Box</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-RulesDialogBox.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Locations.htm#C-05_2723800551_1085243">Locations</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Location Decision Rules Dialog Box</span>
+        </div>
+        <h3>Location Decision Rules Dialog Box<a name="kanchor704"></a></h3>
+        <p class="p">The Rules dialog box, opened by double-clicking in the Rules field in the Locations edit table, is used to choose the rule for <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> to follow when making the following decisions:</p>
+        <ul>
+            <li class="li_1" value="1">Selecting incoming entities</li>
+            <li class="li_1" value="2">Queuing for output</li>
+            <li class="li_1" value="3">Selecting a unit</li>
+        </ul>
+        <h5 class="NOTE">Note: The queuing rules for a location take effect only when entities are "queued" at the particular location due to being in a <u>blocked</u> state. In other words, the entities are ready to move to the next location, but the next location is not available due to insufficient capacity or to being inoperative.</h5>
+        <p class="Graphic">
+            <img src="5-1-21.jpg" />
+        </p>
+        <h4>Selecting Incoming Entities<a name="kanchor705"></a></h4>
+        <p class="p">When a location becomes available and there is more than one entity waiting to enter, a decision must be made regarding which one to admit. The primary determining factor is the priority of the input routing. The entity with the highest routing priority will be admitted regardless of the incoming selection rule. However, if two or more entities have the same priority for claiming the location, then the location selects an incoming entity based on the incoming selection rules listed below.</p>
+        <p class="p"><span class="Bold"><a name="kanchor706"></a><b>Oldest by Priority  </b></span>Selects the entity waiting the longest among those having the highest routing priority.</p>
+        <p class="p"><span class="Bold"><a name="kanchor707"></a><b>Random</b></span> Selects randomly with equal probability among all waiting entities. </p>
+        <p class="p"><span class="Bold"><a name="kanchor708"></a><b>Least Available Capacity</b></span><span class="Element" style="line-height: 12pt;"></span> Selects the entity coming from the location having the least available capacity. Ties are broken by the entity waiting the longest.</p>
+        <p class="p"><span class="Bold"><a name="kanchor709"></a><b>Last Selected Location</b></span><span class="Element" style="line-height: 12pt;"></span> Selects the entity coming from the location that was selected last. Ties are broken by the entity waiting the longest. If no entities are waiting at the last selected location, the <span class="_Override" style="font-style: italic;">Oldest by Priority</span> rule takes effect.</p>
+        <p class="p"><span class="Bold"><a name="kanchor710"></a><b>Highest Attribute Value</b></span> Selects the entity with the highest attribute value for a specified attribute. Ties are broken by the entity that has been waiting the longest. Location attributes are also valid entries.</p>
+        <p class="p"><span class="Bold"><a name="kanchor711"></a><b>Lowest Attribute Value</b></span><span class="Element" style="line-height: 12pt;"></span> Selects the entity which has the lowest attribute value for a specified attribute. Ties are broken by the entity waiting the longest. Location attributes are also valid entries.</p>
+        <h4>Queuing For Output<a name="kanchor712"></a></h4>
+        <p class="p">When an entity finishes its operation at a location, other entities to finish ahead of it may not have departed. A decision must be made to allow the entity to leave or to wait according to some queuing rule. If one of the following queuing rules is not specified, “No Queuing” will be used.</p>
+        <p class="p"><span class="Bold"><a name="kanchor713"></a><b>No Queuing</b></span><span class="Element" style="line-height: 12pt;"></span> Entities that have completed their operations at the current location are free to route to other locations independent of other entities that have finished their operations. If this option is selected it is not displayed in the Rules Box.</p>
+        <p class="p"><span class="Bold"><b>First In, First Out (FIFO</b><a name="kanchor714"></a></span><span class="Helv_Bold" style="line-height: 12pt;">) </span><span class="Element">  The first entity completing operation must leave for its next location before the second entity completing its operation can leave, and so on.</span>
+        </p>
+        <p class="p"><span class="Bold"><b>Last In, First Out (LIFO</b><a name="kanchor715"></a></span><span class="Helv_Bold" style="line-height: 12pt;">) </span><span class="Element">   Entities that have finished operations queue for output LIFO so the last one finished is the first to leave.</span>
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor716"></a><b>By Type</b></span> Entities that have finished operations queue for output FIFO by entity type so the routing for each entity type is processed independently of routings for all other types.</p>
+        <p class="p"><span class="Bold"><a name="kanchor717"></a><b>Highest Attribute Value</b></span><span class="Element" style="line-height: 12pt;"></span> Entities that have completed operations queue for output according to the highest value of a specified attribute.</p>
+        <p class="p"><span class="Bold"><a name="kanchor718"></a><b>Lowest Attribute Value</b></span><span class="Element" style="line-height: 12pt;"></span> Entities that have completed operations queue for output according to the lowest value of a specified attribute.</p>
+        <h4>Selecting a Unit<a name="kanchor719"></a></h4>
+        <p class="p">If the location has multiple units, then incoming entities must select which available unit to use. One of the following rules may be selected. These decision rules apply to multi-unit locations only. </p>
+        <p class="p"><span class="Bold"><a name="kanchor720"></a><b>First Available</b></span> Selects the first available unit.</p>
+        <p class="p"><span class="Bold"><a name="kanchor721"></a><b>By Turn</b></span> Rotates the selection among the available units.</p>
+        <p class="p"><span class="Bold"><a name="kanchor722"></a><b>Most Available Capacity</b></span> Selects the unit having the most available capacity. This rule has no effect with single capacity units.</p>
+        <p class="p"><span class="Bold"><a name="kanchor723"></a><b>Fewest Entries</b></span> Selects an available unit with the fewest entries.</p>
+        <p class="p"><span class="Bold"><a name="kanchor724"></a><b>Random</b></span> Selects an available unit randomly.</p>
+        <p class="p"><span class="Bold"><a name="kanchor725"></a><b>Longest Empty</b></span> Selects the unit that has been empty the longest.</p>
+        <p class="p">When specifying the decision rules for selecting incoming entities at a location, it is important to remember that the routing of an entity is also dependent on the queuing for output decision rules at the previous location. The following example will clarify this principle.</p>
+        <h4>Rules Dialog Box Example<a name="kanchor726"></a></h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Consider a location, Waiting room 1, which has a “Maximum Attribute - Acuity” as the queuing for output rule. Suppose that two other locations, Waiting rooms 2 and 3, have “No Queuing” for the output rule. The three locations are occupied by patients waiting to go to Exam room 1 which has an “Maximum Attribute - Acuity” rule for selecting the next patient. </p>
+        <p class="image_nobreak" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="8_100.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Two patients are waiting at Waiting room 1. The patient waiting the longest, Patient A, has been waiting 10 minutes. The other patient, Patient B, which arrived after Patient A, has been waiting 5 minutes. At Waiting room 2, the patient waiting for the exam room, Patient C, has been waiting 7 minutes. At Waiting room 3, Patient D has been waiting for the exam room for 3 minutes. All patients have an attribute named Acuity but only Patient C has an acuity value higher than 0.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">The patient which will enter the exam room first is Patient C. Even though Patient A has been waiting ten minutes, Patient A must wait until Patient C has been seen in the exam room because Patient C is ahead of Patient A in the input queue according to the “Highest Attribute - Acuity” selection rule. Once Patient C is finished in the exam room, Patient A will be seen followed by Patient B and then Patient D.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

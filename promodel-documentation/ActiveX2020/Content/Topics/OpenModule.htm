@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="568" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_459936"></a>
+            <MadCap:keyword term="OpenModule;ProModel Application Object:OpenModule" />OpenModule</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>OpenModule <span class="_Override" style="color: #0000ff;">Module</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Opens a specific build module. A module is a table in the ProModel Build menu. Passing a zero (0) value will close any open modules.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Module</span>	(Long)  A module ID number from the list below.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:  </span>Nothing</p>
+        <p class="p" style="font-weight: bold;"><span class="Lower_Label">Module ID Numbers:</span>
+        </p>
+        <p class="objects">0 		No modules open</p>
+        <p class="objects">1 		Locations</p>
+        <p class="objects">2 		Arrivals</p>
+        <p class="objects">5 		Entities</p>
+        <p class="objects">6 		Resources</p>
+        <p class="objects">10 		Variables</p>
+        <p class="objects">11 		 Attributes</p>
+        <p class="objects">12 		Arrays</p>
+        <p class="objects">15		Function tables</p>
+        <p class="objects">16 		 Distribution tables</p>
+        <p class="objects">17 		 Cycle tables</p>
+        <p class="objects">18 		 Subroutines</p>
+        <p class="objects">19 		Processing</p>
+        <p class="objects">24 		Path Networks</p>
+        <p class="objects">25 		Macros</p>
+        <p class="objects">26 		 Streams</p>
+        <p class="objects">27 		External Files</p>
+        <p class="objects">34 		 Shift Assignments</p>
+        <p class="objects">36 		Background Graphics (Behind grid)</p>
+        <p class="objects">37 		Background Graphics (Front of grid)</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, then opens the Entities module, as if the user had selected Build &gt;&gt; Entities.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub OpenEntMod()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.OpenModule <span class="_Override" style="color: #0000ff;">5</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

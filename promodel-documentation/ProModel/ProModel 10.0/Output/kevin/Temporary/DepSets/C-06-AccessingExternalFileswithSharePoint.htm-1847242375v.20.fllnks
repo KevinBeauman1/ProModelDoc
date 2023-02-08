@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-05-GeneralInformationDialogBox.htm" />
+    <Link
+      Url="Content/Topics/mm-c6-254-3.jpg" />
+    <Link
+      Url="Content/Resources/Images/External Files Editor.png" />
+    <Link
+      Url="Content/Resources/Images/SharePoint File - pop-up menu.png" />
+    <Link
+      Url="Content/Resources/Images/Browse SharePoint Files - dialog box.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/C-05-GeneralInformationDialogBox.htm#C-06_1157716610_1086054" />
+    <Link
+      Url="Content/Topics/mm-c6-254-3.jpg" />
+    <Link
+      Url="Content/Resources/Images/External Files Editor.png" />
+    <Link
+      Url="Content/Resources/Images/SharePoint File - pop-up menu.png" />
+    <Link
+      Url="Content/Resources/Images/Browse SharePoint Files - dialog box.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="External files:SharePoint"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="File:external:SharePoint"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

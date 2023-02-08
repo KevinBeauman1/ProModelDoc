@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1347" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>GetResRate</h1>
+        <h5>
+            <MadCap:keyword term="functions:getresrate;getresrate" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>GetResRate({&lt;resource&gt;})</p>
+        <p>GetResRate()<br />GetResRate(Operator1)</p>
+        <h2>Description</h2>
+        <p>Returns the cost rate specified in the shape properties or through the SetRate() function for a resource currently owned by the entity making the function call. When used without the optional &lt;resource&gt; parameter, this function returns the cost rate of the entity’s most recently captured, owned resource.</p>
+        <p>If an entity owns multiple units of a resource, the function returns the cost rate of the entity’s most recently captured resource unit.</p>
+        <h2>Valid In</h2>
+        <p>Activity and route logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>A resource currently owned by the entity making the function call. When you use GetResRate without this parameter, this function returns the cost rate of the entity’s most recently captured, owned resource.</p>
+        <h2>Example</h2>
+        <p>A clerk normally works an 8-hour shift. However, if the clerk does not finish entering all the orders in his Input_Queue at the end of the day, he must stay and finish them. Since the clerk is paid time-and-a-half for any overtime, you must increment the cost of the resource by an additional half of the normal rate to get the overtime rate. To do this, activate a subroutine that keeps track of when the resource is on-shift and when it should go off-shift. Set a variable equal to 1 in the subroutine, indicating when the resource should go off-shift. If the variable is equal to 1, increment the cost of a resource by half the original rate. (Since each unit of the clerk has a different rate, you must obtain the cost rate for the resource owned by the entity.) </p>
+        <p class="p_11">Get Clerk, 100<br />Wait N(4.5, .3)<br />If OffShiftVar = 1 Then</p>
+        <p class="p_12">IncResCost GetResRate() * 0.5</p>
+        <p class="p_11">Free Clerk</p>
+        <h5>See Also</h5>
+        <p><a href="getcost.htm" class="a_11">GetCost</a>, <a href="incentCost.htm" class="a_11">IncEntCost</a>, <a href="inclocCost.htm" class="a_11">IncLocCost</a>, <a href="incresCost.htm" class="a_11">IncResCost</a>, and <a href="setrate.htm" class="a_11">SetRate</a></p>
+    </body>
+</html>

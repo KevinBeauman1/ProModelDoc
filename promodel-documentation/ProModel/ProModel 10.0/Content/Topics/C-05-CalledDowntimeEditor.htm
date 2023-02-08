@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="715" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h4><a name="C-05_2723800551_1247131"></a>
+            <MadCap:keyword term="Locations:downtimes:called;Downtimes:location:called" /><a name="C-05_2723800551_82763"></a>Called Downtime Editor</h4>
+        <p class="p">Called downtimes are used in conjunction with the Down statement to make a location go down. When the name of the called downtime is referenced during simulation by the Down statement, the called downtime will execute its logic.</p>
+        <p class="Graphic">
+            <img src="mm-c5-105-1.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Name</b> The name of the called downtime. This is the name that will be referenced by the Down statement. Multiple locations may not use the same called downtime name. The name must be unique for each location.</p>
+        <p class="p"><b>Priority</b> The priority (0-999) of the downtime occurrence. The default priority is 99, the highest non-preemptive priority.</p>
+        <p class="p"><b>Scheduled...</b> Select YES if the downtime is to be counted as a scheduled downtime. Select NO if the downtime is to be counted as a non-scheduled downtime.</p>
+        <p class="p">All scheduled downtimes will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</p>
+        <p class="p"><b>Logic</b> Enter any logic statements to be processed when the downtime occurs. When the logic has completed, the location becomes available. In the most simple case, the logic is simply a Wait statement with a time value or expression which represents the duration of the downtime. Click on the heading button to open a larger edit window.</p>
+        <p class="p">For more information on the Down statement, see <MadCap:xref class="lowercase_no_see" href="C-14-Down.htm#C-14_4292047180_1232009" target="" title="" alt="">Down on page 1</MadCap:xref>.</p>
+    </body>
+</html>

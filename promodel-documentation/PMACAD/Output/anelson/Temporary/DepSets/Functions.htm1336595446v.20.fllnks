@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Functions"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Clock.htm" />
+    <Link
+      Url="Content/GetResRate.htm" />
+    <Link
+      Url="Content/DownQty.htm" />
+    <Link
+      Url="Content/GroupQty.htm" />
+    <Link
+      Url="Content/Entity.htm" />
+    <Link
+      Url="Content/Location.htm" />
+    <Link
+      Url="Content/Entries.htm" />
+    <Link
+      Url="Content/ObjectID.htm" />
+    <Link
+      Url="Content/FreeCap.htm" />
+    <Link
+      Url="Content/OwnedResource.htm" />
+    <Link
+      Url="Content/FreeUnits.htm" />
+    <Link
+      Url="Content/ResQty.htm" />
+    <Link
+      Url="Content/GetCost.htm" />
+    <Link
+      Url="Content/TimeEntered.htm" />
+    <Link
+      Url="Content/GetReplicationNum.htm" />
+    <Link
+      Url="Content/TimesUsed.htm" />
+    <Link
+      Url="Content/Exp.htm" />
+    <Link
+      Url="Content/Round.htm" />
+    <Link
+      Url="Content/Ln.htm" />
+    <Link
+      Url="Content/Sqrt.htm" />
+    <Link
+      Url="Content/Rand.htm" />
+    <Link
+      Url="Content/Trunc.htm" />
+    <Link
+      Url="Content/CalDay.htm" />
+    <Link
+      Url="Content/CalMin.htm" />
+    <Link
+      Url="Content/CalDOM.htm" />
+    <Link
+      Url="Content/CalMonth.htm" />
+    <Link
+      Url="Content/CalHour.htm" />
+    <Link
+      Url="Content/CalYear.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/Clock.htm" />
+    <Link
+      Url="Content/GetResRate.htm" />
+    <Link
+      Url="Content/DownQty.htm" />
+    <Link
+      Url="Content/GroupQty.htm" />
+    <Link
+      Url="Content/Entity.htm" />
+    <Link
+      Url="Content/Location.htm" />
+    <Link
+      Url="Content/Entries.htm" />
+    <Link
+      Url="Content/ObjectID.htm" />
+    <Link
+      Url="Content/FreeCap.htm" />
+    <Link
+      Url="Content/OwnedResource.htm" />
+    <Link
+      Url="Content/FreeUnits.htm" />
+    <Link
+      Url="Content/ResQty.htm" />
+    <Link
+      Url="Content/GetCost.htm" />
+    <Link
+      Url="Content/TimeEntered.htm" />
+    <Link
+      Url="Content/GetReplicationNum.htm" />
+    <Link
+      Url="Content/TimesUsed.htm" />
+    <Link
+      Url="Content/Exp.htm" />
+    <Link
+      Url="Content/Round.htm" />
+    <Link
+      Url="Content/Ln.htm" />
+    <Link
+      Url="Content/Sqrt.htm" />
+    <Link
+      Url="Content/Rand.htm" />
+    <Link
+      Url="Content/Trunc.htm" />
+    <Link
+      Url="Content/CalDay.htm" />
+    <Link
+      Url="Content/CalMin.htm" />
+    <Link
+      Url="Content/CalDOM.htm" />
+    <Link
+      Url="Content/CalMonth.htm" />
+    <Link
+      Url="Content/CalHour.htm" />
+    <Link
+      Url="Content/CalYear.htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="functions"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="system functions"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="math functions"
+      Conditions=""
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="calendar functions"
+      Conditions=""
+      LocalConditions=""
+      Position="77" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

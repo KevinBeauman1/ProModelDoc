@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+    <ConditionTag Name="Help_Only" BackgroundColor="#0000ff" />
+    <ConditionTag Name="OmitFromHelp" BackgroundColor="#ff0000" />
+    <ConditionTag Name="OmitFromHelpKeepPrint" BackgroundColor="#ff0000" />
+</CatapultConditionTagSet>

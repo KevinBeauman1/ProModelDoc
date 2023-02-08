@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="678" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>Balking</h3>
+        <p class="p">Customers balk, i.e., they refuse to enter a waiting line, if the line is too long.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Set the In Buffer capacity of the activity that customers would like to enter to the limit that will be acceptable to a customer. If customers are arriving from outside of the system, they will automatically balk and exit the system if the In Buffer is full. If they are arriving from another activity via a routing, an outlet routing must be specified for them to go to.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Customers arrive at the Spicy Thai restaurant located in a mall during the noon hour every E(.5) minutes. They will not get in the order line, however, if there are 10 or more customers already in line.</p>
+        <p class="p">
+            <img src="Resources/Images/balkingexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/balkingsolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">The In Buffer capacity of 10 automatically causes arrivals to be destroyed that try to arrive when it is full.</p>
+    </body>
+</html>

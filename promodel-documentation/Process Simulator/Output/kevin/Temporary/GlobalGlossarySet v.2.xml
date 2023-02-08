@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultGlobalGlossaryCache
+  SavedSource="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/Process Simulator/Output/kevin/Temporary/GlobalGlossarySet v.2.xml">
+  <Map>
+    <GlossaryCacheEntry
+      Term="Integer"
+      glossTerm="PCS Glossary.Term0"
+      SourceFile="/Project/Glossaries/PCS Glossary.flglo">
+      <Definition
+        Link="">An integer number is a whole number ranging from  -2,147,483,648 to 2,147,483,647. Integer values may not include commas. Therefore, the number 5,380 should be entered as 5380.</Definition>
+    </GlossaryCacheEntry>
+    <GlossaryCacheEntry
+      Term="Real"
+      glossTerm="PCS Glossary.Term1"
+      SourceFile="/Project/Glossaries/PCS Glossary.flglo">
+      <Definition>A real number is any number ranging from 1.7 X 10 -308 to 1.7 X 10 +308, including decimals. Real values may not include commas. As such, the number 5,380.5 should be entered as 5380.5.</Definition>
+    </GlossaryCacheEntry>
+    <GlossaryCacheEntry
+      Term="real"
+      glossTerm="PCS Glossary.Term2"
+      SourceFile="/Project/Glossaries/PCS Glossary.flglo">
+      <Definition>A real number is any number ranging from 1.7 X 10 -308 to 1.7 X 10 +308, including decimals. Real values may not include commas. As such, the number 5,380.5 should be entered as 5380.5.</Definition>
+    </GlossaryCacheEntry>
+    <GlossaryCacheEntry
+      Term="integer"
+      glossTerm="PCS Glossary.Term3"
+      SourceFile="/Project/Glossaries/PCS Glossary.flglo">
+      <Definition>An integer number is a whole number ranging from -2,147,483,648 to 2,147,483,647. Integer values may not include commas. Therefore, the number 5,380 should be entered as 5380.</Definition>
+    </GlossaryCacheEntry>
+  </Map>
+  <SourceUrls />
+</CatapultGlobalGlossaryCache>

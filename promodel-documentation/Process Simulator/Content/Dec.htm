@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1167" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Dec</h1>
+        <h5>
+            <MadCap:keyword term="statements:dec;dec" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Dec &lt;name&gt;{, &lt;expression&gt;}</p>
+        <p>Dec Var1<br />Dec Attr1, 5</p>
+        <h2>Description</h2>
+        <p>Decrements a variable, array element, or attribute by the value of a specified numeric expression. To decrement a variable, attribute, or array element when the current entity actually leaves a location, use Dec in the move logic.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;name&gt;</b>
+        </p>
+        <p>Any variable, array element, or attribute.</p>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The amount to decrement the value. If this expression is omitted, the value will be decremented by one. This can be a negative number.</p>
+        <h2>Example</h2>
+        <p>The example below shows two variables decremented in route logic. The variable Num_in_system is decremented by one, while variable Var3 is decremented by 20 prior to the entity exiting the model.</p>
+        <p class="p_11">Dec Num_in_system<br />Dec Var3, 20</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="inc.htm" class="a_11">Inc</a>, <a href="Assignment.htm" class="a_11">Assignment</a></p>
+    </body>
+</html>

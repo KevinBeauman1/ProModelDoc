@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1213" MadCap:lastWidth="916">
+    <head>
+    </head>
+    <body>
+        <h1>Entity State Chart</h1>
+        <MadCap:keyword term="entity states chart" />
+        <p class="p">Click on Entity within the State group of the Charts ribbon.</p>
+        <p>
+            <img src="Resources/Images/EntityStatesChart1.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/EntityStatesChart1-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p">The following chart is generated.</p>
+        <p>
+            <img src="Resources/Images/EntityStatesChart2.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="p_14">This chart shows a horizontal stacked bar chart summarizing the states of each entity type during the simulation run. States describe the condition of these objects.</p>
+        <p class="p"><b>% In Move Logic:</b>	 The percentage of time the entity was moving from one <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> to another during the simulation, including any delay time incurred in move logic, and including any time waiting for a resource to become available when that resource is requested in the move logic.</p>
+        <p class="p"><b>% Waiting:</b>	 The percentage of time the entity was waiting for a resource, another entity or a wait until condition in order to begin processing or move to the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. Any delays in processing move logic (even WAIT statements) are counted as waiting time, including delays due to <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Join, Load, </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach actions </MadCap:conditionalText>or Match statements.</p>
+        <p class="p"><b>% In Operation</b>:	 The percentage of time the entity spent processing at <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText>.</p>
+        <p class="p"><b>% Blocked:</b>	 The percentage of time the entity spent waiting for an available destination.</p>
+    </body>
+</html>

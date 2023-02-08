@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Simulation Analysis|Six Sigma Analysis with Minitab">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Six Sigma Configuration Dialog</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-10-SixSigmaConfigurationDialog.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-10-ReportsandGraphs.htm#C-10_2322678712_1035124">Simulation Analysis</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-10-SixSigmaAnalysiswithMinitab.htm">Six Sigma Analysis with Minitab</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Six Sigma Configuration Dialog</span>
+        </div>
+        <h3><a name="C-10_6SigmaConfigDialog"></a>Six Sigma Configuration Dialog</h3>
+        <p>
+            <img src="configurationdialog_405x264.jpg" style="width: 405; height: 264;" />
+        </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Disabled </span>Click and place a checkmark in the box in the Disabled column for items to be temporarily removed from the analysis. This does not delete the items but rather disables them from being included in the Six Sigma analysis while preserving all the information about the item. </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Name</span> Name of the analysis item selected in the Add Analysis Item dialog.  This name can be modified by double-clicking in the cell.  This name will be used in the title of the graph generated in Minitab.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Type</span> Type of analysis item selected in the Add Analysis Item dialog.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Stat Collection</span> Choose a method of statistical summarization for Six Sigma Analysis of a particular item. </p>
+        <ul>
+            <li class="li_1" value="1"><span class="_Override" style="font-weight: bold;">Total/Final Value</span> For each replication run, a single value is reported which represents either a total or final value of the item being analyzed. </li>
+            <li class="li_1" value="2"><span class="_Override" style="font-weight: bold;">Observation</span> Over a simulation run, multiple values for an analysis item may be logged.  Choose this option if analyzing each individual value in the order they were logged.  When multiple replications are run, the corresponding logged values in each replication will be averaged.  For example, the first value logged in each replication will be averaged, the second value in each replication will be averaged, the third values will be averaged, and so forth.  The replication with the fewest number of observations will determine how many observations will be compared across replications.</li>
+            <li class="li_1" value="3"><span class="_Override" style="font-weight: bold;">Periodic Average</span> Allows the user to define a specific period of time over which the values logged within that period will be averaged and reported. A simulation that runs for 8 hours with a period defined as 2 hours will result in 4 averaged data points. When multiple replications are run, the replication with the fewest number of periods reported will determine how many periods to compare across replications.</li>
+        </ul>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Periodic Time</span> Applies only when <span class="_Override" style="font-weight: bold;">Periodic Average</span> is selected for the <span class="_Override" style="font-weight: bold;">Stat Collection</span>. It represents a range of time that all values logged within that range will be averaged.  The total number of periods depends upon the length of the simulation.  For example, if a simulation runs for 8 hours and a period is defined as 2 hours, then a total of 4 periods will be the result.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Periodic Unit</span> Applies only when Periodic Average is selected for the Stat Collection. It is the unit of time, be it seconds, minutes, hours, days, weeks, quarters, or years, for the value specified for Periodic Time.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">LSL</span> (Lower Spec Limit) – A user-defined limit that can be specified on its own or with an Upper Spec Limit. However, both the LSL and USL cannot remain blank. </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">USL</span> (Upper Spec Limit) – A user-defined limit that can be specified on its own or with a Lower Spec Limit selected. However, both the USL and LSL cannot remain blank.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">CI</span> (Confidence Interval) – This value is used in generating the Capability Analysis graph in Minitab.  By default, a confidence interval of 95 is automatically entered when a new Analysis Item is added to the Six Sigma Configuration table but can be modified if desired.  </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Launch Minitab Button</span> – Clicking on this button will launch Minitab.  If a simulation has already been run and the statistical data has been generated, the analysis items in the Six Sigma Configuration table will be summarized and graphed in Minitab.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">OK Button</span> – Click the OK button to close the Six Sigma Configuration dialog and save any changes that were made.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Cancel Button</span> – Click the Cancel button to close the Six Sigma Configuration dialog and discard any changes that were made.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

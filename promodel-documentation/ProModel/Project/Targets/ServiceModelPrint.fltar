@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="ServiceModel PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/PM-MM Printed User Guide.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/PM-MM Stylesheet 1, unlinked.css"
+  DisableAutoSync="true"
+  ConditionTagExpression="include[Print_only.PrintOnly or &quot;PM-MM Conditionals.ServiceModel&quot;]exclude[&quot;PM-MM Conditionals.MedModel&quot; or &quot;PM-MM Conditionals.ProModel&quot;]"
+  PatchHeadingLevels="false"
+  GetLatestBeforeCompile="false"
+  OutputFile="ServiceModel_User_Guide_PDF"
+  InjectEmptyPages="true">
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100"
+    CollapsedBookmarks="true" />
+  <PrintedOutput
+    PopupConversion="expand"
+    ExpandingTextConversion="expand" />
+  <DocumentProperties
+    Title="ServiceModel 2011 User Guide"
+    Author="ProModel Corporation" />
+</CatapultTarget>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/5-10-2.jpg" />
+    <Link
+      Url="Content/Topics/5-10-3.jpg" />
+    <Link
+      Url="Content/Topics/5-10-4.jpg" />
+    <Link
+      Url="Content/Topics/5-10-5.jpg" />
+    <Link
+      Url="Content/Topics/C-14-SetRate.htm" />
+    <Link
+      Url="Content/Topics/5-10-7.jpg" />
+    <Link
+      Url="Content/Topics/C-14-IncEntCost.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/5-10-2.jpg" />
+    <Link
+      Url="Content/Topics/5-10-3.jpg" />
+    <Link
+      Url="Content/Topics/5-10-4.jpg" />
+    <Link
+      Url="Content/Topics/5-10-5.jpg" />
+    <Link
+      Url="Content/Topics/C-14-SetRate.htm#C-14_4292047180_1107243" />
+    <Link
+      Url="Content/Topics/5-10-7.jpg" />
+    <Link
+      Url="Content/Topics/C-14-IncEntCost.htm#C-14_4292047180_1104683" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Cost:cost dialog box"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:object type"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Cost:locations"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Locations:cost"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:operation rate"
+      Conditions=""
+      LocalConditions=""
+      Position="24" />
+    <IndexCacheEntry
+      Term="Cost:locations:operation rate"
+      Conditions=""
+      LocalConditions=""
+      Position="24" />
+    <IndexCacheEntry
+      Term="WAIT"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="USE"
+      Conditions=""
+      LocalConditions=""
+      Position="27" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:per"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Cost:locations:per"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Cost:resources"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Resources:cost"
+      Conditions=""
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:regular rate"
+      Conditions=""
+      LocalConditions=""
+      Position="44" />
+    <IndexCacheEntry
+      Term="Cost:resources:regular rate"
+      Conditions=""
+      LocalConditions=""
+      Position="44" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:per"
+      Conditions=""
+      LocalConditions=""
+      Position="51" />
+    <IndexCacheEntry
+      Term="Cost:resources:per"
+      Conditions=""
+      LocalConditions=""
+      Position="51" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:cost per use"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="Cost:resources:cost per use"
+      Conditions=""
+      LocalConditions=""
+      Position="59" />
+    <IndexCacheEntry
+      Term="Cost:entities"
+      Conditions=""
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Entity:cost"
+      Conditions=""
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Cost:cost dialog box:initial cost"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Cost:entities:initial cost"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Initial:cost:CREATE"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Initial:cost:ORDER"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Initial:cost:ROUTE"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+    <IndexCacheEntry
+      Term="Initial:cost:INCENTCOST"
+      Conditions=""
+      LocalConditions=""
+      Position="76" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

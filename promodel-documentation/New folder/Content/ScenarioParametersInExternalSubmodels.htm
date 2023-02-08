@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1792" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Hierarchical Modeling and Scenario Management</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="hierarchical modeling;scenario management" />Scenario Parameters in External Submodels</h1>
+        <p>When defining scenario parameters, a list of possible parameters for 
+ the parent model is listed in 
+ the Scenario Parameters dialog. &#160;If 
+ you would like to define a scenario parameter for an external submodel (i.e. in a separate Visio document), you must 
+ first define a macro or global variable in both the parent model and external submodel, 
+ then use the macro or variable in a field in the submodel where you would 
+ like to apply the scenario parameter, and finally set the macro or variable 
+ as a scenario parameter in the parent model.</p>
+        <p class="p_10">Note: If your submodel is on another page within the same document as your main model, there is no need to use this technique because elements are global across all pages within the same document.</p>
+        <h2>Example</h2>
+        <p>For example, if we would like our external submodel to use a scenario parameter 
+ for one of its activity's (Op31) capacity, we would do the following:</p>
+        <ol>
+            <li>Define a macro in the parent model, 
+ and set its initial value to 1. &#160;For 
+ this example we will call the macro Op31Cap.</li>
+        </ol>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Example1.png" class="img_2" />
+        </p>
+        <ol start="2">
+            <li>Define the same macro in the external submodel. 
+ Set the initial value of the variable to 1. This must be done so the submodel 
+ accepts the macro in the capacity field. </li>
+            <li>Open the <b>Properties</b> window for activity Op31 in 
+ the external submodel, and type the macro name in the activity Capacity field or right-click and select it from the context menu.</li>
+        </ol>
+        <p style="text-align: left;">
+            <img src="Resources/Images/Example2.png" MadCap:mediastyle="@media print { max-width: 5in; }" class="img_2" />
+        </p>
+        <ol start="4">
+            <li>Open the <b>Scenario Manager</b> 
+ in the parent model and click the <b>Add Parameters</b> button.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/addparameter.png" class="img_2" />
+        </p>
+        <ol start="5">
+            <li>Expand the <b>Macro</b> folder, and double-click on the <b>Op31Cap</b> macro to add it 
+ as a scenario parameter.</li>
+        </ol>
+        <p class="li_1" style="text-align: left;">
+            <img src="Resources/Images/Example3.png" class="img_2" />
+        </p>
+        <ol start="6">
+            <li>The macro 
+ can now be used as a scenario parameter to control capacity for activity
+ Op31 in the external submodel.</li>
+        </ol>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="3182" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1108554"></a><a name="C-14_4292047180_33106"></a>Xsub()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="External subroutine calls:XSUB();XSUB():external subroutine calls" />External Subroutine Call</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Xsub(&lt;file ID&gt;, &lt;ordinal function number&gt; or &lt;function name&gt; {, &lt;parameter1&gt;, &lt;parameter2&gt;...})</p>
+        <p class="Syntax_body">Xsub(Interface,1, 5)</p>
+        <p class="Syntax_body">Xsub(LogDLL, “_Log_B_of_X”,10,5)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Calls an external subroutine inside a DLL file. Xsub() is perhaps the most powerful statement in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>, because by using it the user can access the entire functionality of any 32-bit Windows programming language such as C, C++, Delphi, or Visual Basic. Xsub() can be used for sophisticated file IO and to make simulations interactive. In fact, subroutines called with Xsub() can do anything that the language they were written in allows. Because of its power, however, Xsub() should be used with caution. When called, the simulation is suspended until the external subroutine finishes execution.</p>
+        <p class="p">The subroutine inside the DLL must have been compiled as exportable by a Windows 32-bit compiler and have a return type of IEEE format double real. Xsub() will copy the parameters following the function name to a block of memory, then pass the function a pointer to that block of memory. </p>
+        <p class="p">The function can take only one parameter: a pointer to void. But the function may access any number of parameters through structure overlaying. The function should define a structure to match the type and order of the parameters, and assign the pointer just passed to a pointer to that type of structure. The parameters can then be used through structure overlaying. Integers are passed as four byte values and reals are passed as eight byte IEEE values.</p>
+        <p class="p_10">Please Note: For Windows Programmers Only   The handle to the run-time simulation frame window will be the last parameter passed. Most subroutines can completely ignore this parameter, but it will be needed if the subroutine displays a window.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any expression or logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;file ID&gt;</p>
+        <p class="p">The file ID assigned to an external DLL file as defined in the External Files editor. This file should be a 32-bit Windows DLL file.</p>
+        <p class="Component">&lt;ordinal function number&gt;</p>
+        <p class="p">The ordinal number of the function inside the DLL. This function must be exportable. When DLL’s are compiled, every exported function inside them is numbered. The individual functions can then be accessed by calling the program by number. This field may be an expression that evaluates to an ordinal function number that is valid inside the DLL. Use an ordinal function number or the function name.</p>
+        <p class="Component">&lt;function name&gt;</p>
+        <p class="p">The name of the function inside the DLL. This function must be exportable. Note that when most compilers compile DLL’s, they adjust the name of the functions inside them. The function name inside the <MadCap:keyword term="XSUB()" />Xsub statement  must be the adjusted name, not the original name. </p>
+        <p class="p">Most C compilers add an underscore to the function name; so a function called “Test1” would be compiled as “_Test1.” For most C++ compilers, valid <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> external function names will be mangled to “@&lt;function name&gt;$pv.” Different compilers will vary, however, so the user should be aware of the particular compiler’s quirks.</p>
+        <p class="Component">&lt;parameters&gt;</p>
+        <p class="p">The parameters to pass to the function. These may be any variable, number, or expression. They are only limited by the type of field or logic that uses the Xsub function. Each parameter should be separated by a comma. See above for how the external subroutine will access these parameters.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An external function written to the <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> specification, called Log_B_of_X and written in C, returns the log of a value to a variable base. The function, reproduced below, has been compiled into the DLL, “XSUB.DLL.” The function itself is reproduced on the left below, and the source code can be found in the file “XSUB.CPP.”</p>
+        <p class="p">The <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> logic statements assign the base five logarithm of the real variable R1 to the real variable R2. Each statement assumes that the file XSUB.DLL has been assigned the identifier “Log” in the External Files Editor. The first statement accesses the function as if the DLL had been compiled in C++ by using the mangled function name. The second statement accesses the function as if it had been compiled in C by using the C adjusted function name. The third statement accesses the function using the ordinal function number. </p>
+        <p class="Component">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> Logic</p>
+        <p class="Syntax_body">R2 = Xsub(Log, “@Log_B_X$pv”,5.0,R1)<br />R2 = Xsub(Log, ”_Log_B_X”,5.0,R1)<br />R2 = Xsub(Log, 2, 5.0, R1)</p>
+        <p class="Component">XSUB.CPP Logic</p>
+        <p class="Syntax_body">struct TEST_SUB_PARAMS</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">double base;</p>
+        <p class="syntax_body_indent">double x;</p>
+        <p class="syntax_body_indent">HWND hWndFrame;</p>
+        <p class="Syntax_body">};</p>
+        <p class="Syntax_body"> 			// This makes it a C function rather than a C++</p>
+        <p class="Syntax_body">extern “C”</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">/* On compile, Borland and Microsoft add a leading underscore  to a 'C' name! */</p>
+        <p class="syntax_body_indent">double _export Log_B_of_X(void *p)<br />{</p>
+        <p class="syntax_indent_2">// Parameters come in a<br />// structure pointed to by p</p>
+        <p class="syntax_indent_2">TEST_SUB_PARAMS * params;</p>
+        <p class="syntax_indent_2">params = (TEST_SUB_PARAMS*) p;</p>
+        <p class="syntax_indent_2">MessageBox (GetTopWindow <br />(params-&gt;hWndFrame),<br />“Executing Log_B_of_X function.”,<br />“XSUB”, MB_OK);</p>
+        <p class="syntax_indent_2">return log (params-&gt;x) / log(params-&gt;base);</p>
+        <p class="syntax_body_indent">}</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-06-ExternalSubroutines.htm#C-06_1157716610_1086242" target="" title="" alt="">External Subroutines on page 1</MadCap:xref> (normal subroutines are less powerful, but much easier to create and use).</p>
+    </body>
+</html>

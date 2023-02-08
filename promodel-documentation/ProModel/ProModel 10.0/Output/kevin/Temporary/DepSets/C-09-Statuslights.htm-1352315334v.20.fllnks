@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/cc-c9-343-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-sm-cx-346-1.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/cc-c9-343-2.jpg" />
+    <Link
+      Url="Content/Topics/cc-sm-cx-346-1.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1091453" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Run-time:information menu"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Information menu:during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Status:light"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Run-time:information menu:status light"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Locations:display:information during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Run-time:information menu:locations"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Variables:displaying information during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="Run-time:information menu:variables"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="Arrays:displaying information during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="Run-time:information menu:arrays"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="Dynamic Plots"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="Locations:display:information during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="39" />
+    <IndexCacheEntry
+      Term="Run-time:information menu:locations"
+      Conditions=""
+      LocalConditions=""
+      Position="39" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

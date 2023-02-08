@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Free Form Logic</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor262"></a>Logic Windows</h1>
+        <p>The Logic windows provide a convenient interface for entering custom logic for the objects in your process. If you're not sure where to start with logic, the <a href="#statementlist" class="a_11 selected">Statement List</a> on the toolbar, <a href="Intellisense.htm" class="a_11">Intellisense</a>, and <a href="SyntaxGuide.htm" class="a_11">Syntax Guide</a> are features that will help you.  </p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/LogicWindow.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2>Logic Window</h2>
+        <ul>
+            <li value="1">The Logic window displays the logic you have typed in it and the order in which
+ it will be executed. Logic is executed from top to bottom each time this 
+ particular logic is called during simulation.</li>
+            <li value="2">Type the logic directly into the window immediately below the toolbar. You can edit the logic as you would with most any text editor.</li>
+            <li value="3">To check for correct syntax of your logic, simulate your model.</li>
+        </ul>
+        <h2>Logic Toolbar</h2>
+        <p>The Logic toolbar provides additional functionality for modifying your logic. You must first select a line of logic, or multiple lines, in the 
+ logic window before using most of the buttons in the toolbar.</p>
+        <p>
+            <img src="Resources/Images/LogicToolbar.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li class="li_1" value="1"><b>Statement List</b> - this drop down list displays all valid statements for use in Logic for the selected object (see below).</li>
+            <li class="li_1" value="2"><b>Cut</b>, <b>Copy</b>, <b>Paste</b> - the next three buttons in the toolbar allow you to 
+ cut (Ctrl+X), copy (Ctrl+C), and paste (Ctrl+V) lines of logic
+ in the logic window.</li>
+            <li class="li_1" value="3"><b>Outdent</b> and <b>Indent</b> - these two buttons allow you to align selected lines of logic, respectively. This feature can help in formatting the code to make it more structured and readable.</li>
+            <li class="li_1" value="4"><b>Comment</b> and <b>Uncomment</b> - the next two buttons allow you to comment out and 
+ uncomment selected lines of logic. When you "comment out" a line of logic, 
+ it will not be executed. Process Simulator will ignore any lines of logic
+ that have been commented out with double slashes (<i>//</i>).</li>
+        </ul>
+        <h2><a name="statementlist"></a>Statement List</h2>
+        <p>Every Logic window has a Statement List which shows you which statements can be used in the logic's context. Hovering over a statement in the list will open a help tooltip explaining what it does. Selecting a statement from the list will add it into the Logic window.</p>
+        <p>
+            <img src="Resources/Images/StatementList.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2>Automatic Formatting</h2>
+        <p>Logic windows will attempt to automatically format your logic through indentation, coloring and capitalization. This is done for readability and consistency across models and users. For example, it formats the indentation of the logic within conditional statements such as the If, Else If, Else, and While-Do statements, by placing a starting brace { and ending brace } and indenting the statements between them. Currently, this default formatting cannot be customized.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

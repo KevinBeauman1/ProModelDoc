@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="Content/Resources/Images/PCS Splash - 2016 (640x370).bmp" />
+    <Link
+      Url="Content/Resources/Images/Promodelnewlogo_smallerfootprint.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="Content/Resources/Images/PCS Splash - 2016 (640x370).bmp" />
+    <Link
+      Url="Content/Resources/Images/Promodelnewlogo_smallerfootprint.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet - general.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining a Process|Defining Connection Properties">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Arrival Properties</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningAProcess.htm">Defining a Process</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DefiningConnectionProperties.htm">Defining Connection Properties</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Arrival Properties</span>
+        </div>
+        <h1><a name="kanchor44"></a>Arrival Properties</h1>
+        <p>The <b>Arrival</b> properties define how entities enter the system at an activity. An arrival is defined by connecting an entity to an activity and setting the  properties to define the arrival. If no arrivals exist in the process when the simulation starts, arrivals will automatically be created at activities with no incoming connection. However, as long as at least one arrival is defined, then other activities without arrivals defined will not have arrivals automatically created. The appearance of the <b>Arrival</b> properties will vary depending on the <b>Type</b> of arrival specified in the <b>General</b> section.</p>
+        <p>Right-click on a connector, choose Properties, and the <b>Arrivals</b> shape properties window displays.</p>
+        <p>There are four sections found in the <b>Arrival</b> properties window.</p>
+        <ul>
+            <li value="1">Calendar</li>
+            <li value="2">Notes</li>
+            <li value="3">Advanced</li>
+        </ul>
+        <p>
+            <img src="Resources/Images/ArrivalProperties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p> Properties is where you choose the kind of arrival you want to define. Select the type of arrival from the <b>Type</b> drop down list:</p>
+        <p>
+            <ul>
+                <li class="li_1" value="1"><b>Periodic</b> Arrivals occur at a specified time interval. This is the default arrival type.</li>
+                <li class="li_1" value="2"><b>Continuous</b> An arrival occurs whenever the activity has available capacity.</li>
+                <li class="li_1" value="3"><b>Scheduled</b> Arrivals occur at specified dates and times.</li>
+                <li class="li_1" value="4"><b>Ordered</b> Arrivals only occur when an order is received for the entity triggered by a Storage activity.</li>
+                <li class="li_1" value="5"><b>Pattern</b> Arrivals occur based upon a defined pattern of quantities over specified time segments. </li>
+            </ul>
+        </p>
+        <p class="p">Based on what type of arrival you select the details will vary.</p>
+        <h2>Calendar</h2>
+        <p>  A calendar can be selected which will restrict the entities from arriving during the time off defined in the calendar. Calendars can only be selected for Periodic, Scheduled, and Pattern arrival types. The following options are available.
+        </p>
+        <p class="p" style="text-align: left;">
+            <img src="Resources/Images/ArrivalCalendarOptions.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <ul>
+            <li value="1"><b>None</b> No calendar will be assigned and the arrivals will occur based upon the Periodic, Scheduled or Pattern arrival definitions.</li>
+            <li value="2"><b>Specified at the arrival destination</b> Selecting this option means that the arrival will follow the calendar assigned to the activity where the entities arrive.</li>
+            <li value="3"><b>Unique to this arrival</b> By selecting this option, you specify which Calendar file the arrival will adhere to. The <b>File</b> field will appear after selecting this option where you can enter the Calendar path and file name or browse for and select the Calendar file.</li>
+        </ul>
+        <h2>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the arrival. </p>
+        <h2>Advanced</h2>
+        <p><b>Submodel Input</b>   This option is used in a submodel, and specifies that the arrival is an input of an entity from the parent model.
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MedModel PDF Target"
+  Type="PDF"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  ConditionTagExpression="include[Print_only.PrintOnly or &quot;PM-MM Conditionals.MedModel&quot;]exclude[&quot;PM-MM Conditionals.ProModel&quot; or &quot;PM-MM Conditionals.ServiceModel&quot;]"
+  MasterToc="/Project/TOCs/PM-MM Printed User Guide.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css"
+  DisableAutoSync="true"
+  GetLatestBeforeCompile="false"
+  OutputFile="MedModel_User_Guide_PDF"
+  InjectEmptyPages="true"
+  OutputFolder="C:\_hg\ProModel.Documentation\ProModel\Output"
+  PatchHeadingLevels="true">
+  <PrintedOutput
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="false" />
+  <PDF
+    ShowUsedBookmarks="true"
+    InitialMagnification="100"
+    CollapsedBookmarks="true"
+    TitleBar="DocumentTitle"
+    ConvertBookmarks="true"
+    Tagged="false"
+    PageLayout="OneColumn" />
+  <DocumentProperties
+    Title="MedModel 2016 User Guide"
+    Author="ProModel Corporation" />
+</CatapultTarget>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="657" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089084"></a>
+            <MadCap:keyword term="TANK_TRANSFERDOWNTO;Subroutines:tank:TANK_TRANSFERDOWNTO" /><a name="C-05_2723800551_35265"></a>Tank_TransferDownTo</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_TRANSFERDOWNTO (&lt;FROM Tank ID&gt;, &lt;TO Tank ID&gt;, &lt;TO Level &gt;, &lt;FROM Rate&gt;, &lt;TO Rate&gt;)</p>
+        <p class="Syntax_body">TANK_TRANSFERDOWNTO (Tank1, Tank2, 1000, 80, 0) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Similar to Tank_Transfer except that Tank_TransferDownTo terminates the transfer when the FROM tank level lowers to a designated level instead of lowering by a specific quantity. If the TO tank becomes full, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> suspends the transfer until capacity becomes available.</p>
+        <p class="p">Use Tank_TransferDownTo when you want to lower the level of a tank to a specific value but you are not certain how much to empty in order to drop to that level (e.g., the tank may fill at the same time it empties).</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;FROM Tank ID&gt;</p>
+        <p class="p">The name or location index number of the FROM tank. </p>
+        <p class="Component">&lt;TO Tank ID&gt;</p>
+        <p class="p">The name or location index number of the TO tank.</p>
+        <p class="Component">&lt;TO Level&gt;</p>
+        <p class="p">Transfer until the FROM tank drops to this level.</p>
+        <p class="Component">&lt;FROM Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog out of the FROM tank. To use a dynamically calculated rate in the Tank_Rate subroutine, enter 0.</p>
+        <p class="Component">&lt;TO Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog into the TO tank. Use 0 if the TO rate is the same as the FROM rate.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An in-process tank, TankA, supplies TankB at a rate of 50 gpm. TankA must maintain a minimum level of 200 gallons to insure against pump cavitation. When TankA’s level drops to 200 gallons, the tank stops pumping to TankB until the level of TankA rises above 200 gallons. To model this scenario, enter the following logic in the subroutine controlling the flow from TankA to TankB:</p>
+        <p class="Syntax_body">Tank_Loop //logic repeats continuously</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Wait Until Tank_Level[TankA]&gt;200</p>
+        <p class="syntax_body_indent">Tank_TransferDownTo(TankA, TankB, 200, 50, 0)</p>
+        <p class="Syntax_body">	}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Subroutines - Examples of Tank Logic.htm#C-05_2723800551_1089813" target="" title="" alt="">Split Transfers on page 1</MadCap:xref>.</p>
+    </body>
+</html>

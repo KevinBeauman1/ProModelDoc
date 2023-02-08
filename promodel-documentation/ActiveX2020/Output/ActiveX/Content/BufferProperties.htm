@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Buffer Dialog</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Buffer Properties</h1><a name="kanchor178"></a>
+        <p>Right-click on a buffer shape, select Properties, and the <b>Buffer</b> properties window displays.</p>
+        <p>There are Three sections in the <b>Buffer</b> properties window.</p>
+        <ul>
+            <li value="1"><a href="#Batching" class="a_11 selected">Batching</a>
+            </li>
+            <li value="2"><a href="#Notes" class="a_11 selected">Notes</a>
+            </li>
+            <li value="3"><a href="#Advanced" class="a_11 selected">Advanced</a>
+            </li>
+        </ul>
+        <p style="text-align: left;">
+            <img src="Resources/Images/bufferdialog.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">A buffer shape provides a place in your process where entities can accumulate and optionally batch.</p>
+        <p><b>Name</b> This is the simulation-friendly name of the buffer and should be used when referenced in logic. It is synched with the text of the buffer shape in the layout. It replaces any special characters or spaces with underscores _. This name and the shape text can be unsynched through the option in the Advanced section.</p>
+        <p><b>Capacity</b> The maximum number of entities that can be in the buffer at one time.</p>
+        <p><b>Output Rule</b> The way entities are stored in the buffer and subsequently released is controlled by one of three rules.</p>
+        <ul>
+            <li value="1"><span class="c_Override_1" style="font-weight: bold;">None</span> Any entity can leave the buffer in any order. When the rule is set to “None” the first entity in the buffer will typically be first entity out of the buffer, but if a SEND command is issued for an entity from a buffer that has a none rule, any entity requested by the SEND command can be released, and is not restricted to the typical FIFO behavior.</li>
+            <li value="2"><span class="c_Override_1" style="font-weight: bold;">First In First Out</span> When the FIFO rule is selected, the first entity entering the buffer must be the first entity out. Entities cannot be released from the buffer except in the order they arrived.</li>
+            <li value="3"><span class="c_Override_1" style="font-weight: bold;">Last In First Out</span> When the LIFO rule is selected, the last entity entering the buffer must be the first entity out. Entities cannot be released from the buffer except in the reverse order they arrived.</li>
+            <li value="4"><span class="c_Override_1" style="font-weight: bold;">By Entity Type</span> This rule will cause the entities entering the buffer to queue up in a FIFO rule by type.</li>
+        </ul>
+        <h2><a name="Batching"></a>Batching</h2>
+        <p>
+            <img src="Resources/Images/BufferBatching.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Batching options cause entities to be either grouped into a single entity or ungrouped into multiple entities in the buffer. This determines whether entities route to the next activity individually or as a group.</p>
+        <p><b>Type:</b> Determines 
+ the type of batch in the buffer.</p>
+        <ul>
+            <li type="circle" value="1"><span class="c_Override_1" style="font-weight: bold;">None</span> 
+ &#160;No batching 
+ of entities occurs in the buffer.</li>
+            <li type="circle" value="2"><span class="c_Override_1" style="font-weight: bold;">Batch</span> 
+ &#160;Entities 
+ entering the buffer are grouped into a batch prior to routing to the next 
+ activity. If this option is selected, a batch size must be entered.</li>
+            <li type="circle" value="3"><span class="c_Override_1" style="font-weight: bold;">Unbatch</span> 
+ &#160;Entities 
+ entering the buffer as a batch are unbatched prior to routing to the next 
+ activity.</li>
+            <li type="circle" value="4"><span class="c_Override_1" style="font-weight: bold;">Rebatch</span> 
+ &#160;Batches 
+ or entities entering the input buffer that were previously part of a batch 
+ are rebatched into their original batch size prior to entering the activity.</li>
+            <li type="circle" value="5"><span class="c_Override_1" style="font-weight: bold;">Accumulate</span> 
+ &#160;The Accumulate 
+ option does not group entities into a batch, but rather holds the entities 
+ in the buffer until the number of entities specified in the Quantity field 
+ are reached. When the quantity is reached, the entities are released.</li>
+        </ul>
+        <p><b>Quantity</b> The number 
+of entities in each batch, or the number of entities to accumulate. This field is only visible when <b>By</b> is set to None.</p>
+        <p><b>By</b> Choose from the following options, how you would like batching to done at the buffer:</p>
+        <ul>
+            <li value="1"><b>None</b> When set to None, any entity type will batch or accummulate based upon the <b>Quantity</b> value.</li>
+            <li value="2"><b>Entity</b> When this 
+ option is selected, batching and accumulating are done for each entity 
+ type. For example, entity types EntA and EntB both enter a buffer. If "By None" is selected, both EntA and EntB can be batched together. If "By Entity" is selected, you can choose to batch only EntA 
+entities together. Choosing &lt;Other&gt; will batch or accumulate 
+ all entity types that enter the buffer other than the specified entity  types.</li>
+            <li value="3"><b>Attribute</b> When this option is selected, batching and accumulating are done according to the attribute value of each entity entering the activity. Select from the list an attribute that will be evaluated for batching. In the grid, define the groups to be batched by specifying the value of the attribute and what the batch quantity will be for entities with that attribute value.</li>
+        </ul>
+        <p>
+            <img src="Resources/Images/BufferBatchingByAttribute.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h2><a name="Notes"></a>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the entity. </p>
+        <h2><a name="Advanced"></a>Advanced</h2>
+        <p><strong class="strong_1">Statistics</strong> Check to collect statistics for this buffer.</p>
+        <p><b>Sync Name</b> When checked, the shape text and simulation-friendly Name (in General section) are connected and can only be changed by editing the shape text in the layout. When unchecked, they are disconnected, which allows you to have more descriptive shape text while keeping the simulation-friendly name (used in logic) more simple and concise. </p>
+        <p><b>Show Text</b> Checking this option shows the shape text in the layout, while unchecking this option hides the shape text.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

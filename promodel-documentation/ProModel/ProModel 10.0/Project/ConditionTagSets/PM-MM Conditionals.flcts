@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Name="MedModel"
+    BackgroundColor="#ff0000" />
+  <ConditionTag
+    Name="ProModel"
+    BackgroundColor="#0000ff" />
+  <ConditionTag
+    Name="ServiceModel"
+    BackgroundColor="#00ff00" />
+</CatapultConditionTagSet>

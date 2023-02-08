@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1097" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements">
+            <MadCap:keyword term="DTLENGTH();Shifts &amp; breaks:system functions:DTLENGTH()" /><a name="C-14_4292047180_1119466_A"></a>DTLength()</h2>
+        <h5 class="_valid_in">Shift &amp; Break System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">DTLength &lt;time units&gt;</p>
+        <p class="Syntax_body">Shift_Time = DTLength()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">The DTLength function returns the full length of the off-shift or break time for a location or resource before it resumes normal activities. Unless passed as an argument (e.g., DTLength(hr)), the return value uses the time units defined in the General Information dialog box (see <MadCap:xref class="lowercase_no_see" href="C-05-GeneralInformation.htm#C-05_2723800551_1088499" target="" title="" alt="">General Information</MadCap:xref>).</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This function can only be referenced in shift and break logic (This statement is not valid in pre-off shift or pre-break logic).</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;time units&gt;</p>
+        <p class="p">The time units, if different from the default found in the General Information dialog, in which you want the return value expressed.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose a technician is frequently working on a job when the end of the shift rolls around and that the priority for ending the shift is not high enough to interrupt the job. You may want to track the total amount of time the technician is delayed in a variable named <i>vTechDelay</i> by incrementing the value by the delay each time.</p>
+        <p class="p">
+            <MadCap:keyword term="DTLEFT()" />real delay = DTLength() – DTLeft() //Calculate the delay</p>
+        <p class="p">inc  vTechDelay, delay</p>
+        <p class="_rules">See Also</p>
+        <p class="p">DTDelay()</p>
+        <p class="p">DTLeft()</p>
+    </body>
+</html>

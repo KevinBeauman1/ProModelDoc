@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-03_1917231497_1039569" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Model:example of building a model"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Model:elements"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Locations"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Entity"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Arrivals"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Patient care process"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="24" />
+    <IndexCacheEntry
+      Term="Resources"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="Path networks"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="32" />
+    <IndexCacheEntry
+      Term="Attributes"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="User:distributions"
+      Conditions="PM-MM Conditionals.MedModel"
+      LocalConditions=""
+      Position="38" />
+    <IndexCacheEntry
+      Term="Model:elements"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="44" />
+    <IndexCacheEntry
+      Term="Locations"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="47" />
+    <IndexCacheEntry
+      Term="Entity"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Arrivals"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="53" />
+    <IndexCacheEntry
+      Term="Processing"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="Resources"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="61" />
+    <IndexCacheEntry
+      Term="Path networks"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="64" />
+    <IndexCacheEntry
+      Term="Attributes"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="67" />
+    <IndexCacheEntry
+      Term="User:distributions"
+      Conditions="PM-MM Conditionals.ProModel"
+      LocalConditions=""
+      Position="70" />
+    <IndexCacheEntry
+      Term="Model:elements"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="75" />
+    <IndexCacheEntry
+      Term="Locations"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="78" />
+    <IndexCacheEntry
+      Term="Entity"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="82" />
+    <IndexCacheEntry
+      Term="Arrivals"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="85" />
+    <IndexCacheEntry
+      Term="Processing"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="Resources"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="92" />
+    <IndexCacheEntry
+      Term="Path networks"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Attributes"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="98" />
+    <IndexCacheEntry
+      Term="User:distributions"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="101" />
+    <IndexCacheEntry
+      Term="Variables"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="104" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

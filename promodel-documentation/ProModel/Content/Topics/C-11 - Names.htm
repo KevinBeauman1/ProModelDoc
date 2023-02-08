@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="286" MadCap:lastWidth="558">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-11_756594771_1090808"></a>
+            <MadCap:keyword term="Language elements:names;Names" /><a name="C-11_756594771_26188"></a>Names</h2>
+        <p class="p">A name or identifier is any combination (up to eighty characters long) of letters, numbers, and underscores (“_”), used to identify model elements such as locations, entities, variables, and functions. Although any valid name can refer to any object, it is best to use names which describe the object they identify (e.g., using “ClientA” to describe an entity that represents a client). Names, like all words in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>, are not case sensitive, meaning that <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> sees “PARKING_A,” “Parking_A,” and “PaRkInG_a” as identical.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Names must use the following <MadCap:keyword term="Language elements:names:conventions;Names:conventions" />conventions:</p>
+        <ul>
+            <li class="li_1">Names may contain the letters A through Z (upper or lower case), digits (0-9) and the underscore “_”. Names may not contain spaces. When opening an older model, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> flags improper use of these restricted characters.</li>
+            <li class="li_1">Do not use a digit as the first character of a name. After the first character, any character may be a digit. For example, “2Var” is an invalid name, but “V2”, is a valid name.</li>
+            <li class="li_1">Names may not be keywords, but names may contain keywords. For example, “For” is an invalid name, but “<span class="_Override" style="font-style: italic;">For</span>klift” is a valid name. Similarly, “<span class="_Override" style="font-style: italic;">Queue</span>2” and “<span class="_Override" style="font-style: italic;">Order</span>Qty” are both valid.</li>
+            <li class="li_1">No matter what they identify, every name in a model must be unique. For example, you cannot name both a location and an entity “Server.” You may, however, name one “Server1” or “Server_Location” and the other “Server2” or “Server_Resource.”</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1000" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102781"></a>CalHour()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:CALHOUR();CALHOUR()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">CalHour()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">The CalHour() function corresponds to the hour of the calendar date you defined as part of the warm-up period or simulation begin date under simulation options. Since this function ties directly to the 24-hour clock displayed on the screen during simulation, CalHour() will never return a value higher than 23.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <p class="p_10">Please Note: CalHour() works only when you select calendar date in the simulation options dialog.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The following example implements a change in personnel used to perform an operation. After the simulation runs for 18 hours, the technician becomes available to perform the activity.</p>
+        <p class="Syntax_body">If CalHour() &gt; 18 Then</p>
+        <p class="syntax_body_indent">Use Worker For N(10,.4)</p>
+        <p class="Syntax_body">Else</p>
+        <p class="syntax_body_indent"> Use Technician For N(8,.2)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">CalDay(), CalDOM(), CalMin(), CalMonth(), and CalYear().</p>
+    </body>
+</html>

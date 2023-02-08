@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="7" MadCap:lastHeight="1416" MadCap:lastWidth="1306">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Variables</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body style="text-align: left;">
+        <h1>
+            <MadCap:keyword term="variables;model elements: variables" />Variables (Global)</h1>
+        <p style="text-align: left;">
+            <img src="Resources/Images/variables.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Variables are of two types: global and local. Global variables are place 
+ holders defined by the user to represent changing numeric values. Local 
+ variables are place holders which are available only within the logic 
+ that declared them. Variables can contain either <MadCap:glossaryTerm class="glossterm">Real</MadCap:glossaryTerm> 
+ or <MadCap:glossaryTerm class="glossterm">Integer</MadCap:glossaryTerm> 
+ numbers, and are typically used for decision making or recording information. </p>
+        <p>A global variable can be referenced anywhere numeric expressions are 
+ allowed in a model. If a variable is needed only in a single block of 
+ logic, it is easier to define a local variable right inside the logic 
+ block. </p>
+        <p>Global variables are defined in the Variables grid, and have 
+ the following options:</p>
+        <ul>
+            <li><b>Name</b>&#160;&#160;The 
+ name of the variable. Double click on an existing name to change the name.</li>
+        </ul>
+        <p class="p_10">Variable names must be alpha-numeric, or may contain underscores. No other special characters are allowed such as %, $, !, etc.</p>
+        <ul>
+            <li><b>Type</b> &#160;&#160;The type of variable, <MadCap:glossaryTerm class="glossterm">real</MadCap:glossaryTerm> or <MadCap:glossaryTerm class="glossterm">integer</MadCap:glossaryTerm>.</li>
+            <li><b>Initial Value</b> 
+ &#160;&#160;The initial value of the variable to be assigned at the start 
+ of the simulation. By default, initial values are 0, but can be changed 
+ to whatever value you want.</li>
+            <li><b>Statistics</b> 
+				&#160;&#160;You can choose to collect no statistics, time-weighted statistics, 
+			or observation-based statistics for the variable.</li>
+        </ul>
+        <blockquote>
+            <ul>
+                <li class="li_1"><b>Time-Weighted</b>&#160;&#160;Collects 
+ total changes, average minutes per change, current value, average value, 
+ and time-weighted statistics of the variable. The example below illustrates 
+ the calculation of time-weighted statistics for variables:</li>
+            </ul>
+            <blockquote>
+                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;" border="1" class="table_1">
+                    <col />
+                    <col />
+                    <col />
+                    <tr>
+                        <td width="56%" class="td_10" style="text-align: left;"><strong class="strong_1">Variable Observation 
+						Record</strong>
+                        </td>
+                        <td width="20%" class="td_10" style="text-align: left;"><strong class="strong_1">Value</strong>
+                        </td>
+                        <td width="24%" class="td_10" style="text-align: left;"><strong class="strong_1">Time in Hours</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_1" style="text-align: left;">
+                            <p class="td_TableStyle_ps_2008_tablestyles_Body_1_0_RowSep_ColSep">Observation 1<br />Observation 2<br />Observation 3<br />Observation 4</p>
+                        </td>
+                        <td class="td_1" style="text-align: left;">6<br />5<br />6<br />5</td>
+                        <td class="td_1" style="text-align: left;">1<br />2<br />3<br />4</td>
+                    </tr>
+                    <tr>
+                        <td class="td_10" style="text-align: left;"><strong class="strong_1">Total</strong>
+                        </td>
+                        <td class="td_10" style="text-align: left;"><strong class="strong_1"> 22</strong>
+                        </td>
+                        <td class="td_10" style="text-align: left;"><strong class="strong_1">10</strong>
+                        </td>
+                    </tr>
+                </table>
+            </blockquote>
+        </blockquote>
+        <blockquote>
+            <blockquote>
+                <p class="p">Time-weighted collects information on the percentage of time the variable was at a specific value. As shown in the above table, the average value of the variable is: </p>
+                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;font-family: Arial;font-size: 10pt;"><u class="u_1" style="font-size: 10pt;">(6 x 1) + (5 x 2)  + (6 x 3)+ (5 x 4)</u> = 5.4</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;font-family: Arial;font-size: 10pt;"> 10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </blockquote>
+        </blockquote>
+        <blockquote>
+            <ul>
+                <li class="li_1"><b>Observation</b> &#160;&#160;Collects information on the number of times the variable changed to a specific value. &#160;As shown in the previous table, the value of the variable is 6, then, 5, then 6, and then 5. &#160;The average would simply be as shown below:</li>
+            </ul>
+            <blockquote>
+                <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;">
+                    <col />
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;font-family: Arial;font-size: 10pt;"><u class="u_1">6 + 5 + 6 + 5</u> = 5.5</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;font-size: 10pt;"> 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </blockquote>
+        </blockquote>
+        <ul>
+            <li><strong class="strong_1">Graphic</strong> 
+ &#160;&#160;The variable's graphic appears as a counter in the layout, 
+ and displays the change in the variable's value during simulation. If 
+ you delete the variable's graphic from the layout, the variable itself 
+ will not be deleted, the Graphic option will just become unselected. Select
+ the Delete button in the grid toolbar while a record is highlighted in the list of variables 
+ to delete variables from the model.</li>
+        </ul>
+        <p>Local variables are defined with Local Variable statements in Logic.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

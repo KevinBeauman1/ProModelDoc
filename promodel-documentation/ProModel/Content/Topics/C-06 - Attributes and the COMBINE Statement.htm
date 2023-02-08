@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="656.6666" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1085652"></a>Attributes and the Combine Statement<MadCap:keyword term="Attributes:COMBINE statement with attributes" /></h3>
+        <p class="p">Consider the example where several entities are combined permanently into a single entity, Box. See <MadCap:xref class="lowercase_no_see" href="C-14 - Combine.htm#C-14_4292047180_1102960" target="" title="" alt="">Combine on page 1</MadCap:xref> for more information. The combined entity, Box, assumes the attribute values of the last entity that was combined to the single entity. If three entities, EntA, EntB, and EntC, are combined to form a single entity called Box, and EntC was the last entity that was combined, the Box will have the same attribute values as EntC. Therefore, if EntC had an attribute (Att1=5), then Att1=5 for the combined entity, Box. The following diagram demonstrates three entities combining into one entity.</p>
+        <p>
+            <img src="9_6.jpg" />
+        </p>
+        <p class="p">The logic for the diagram is as follows:</p>
+        <p class="Component">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Att1 = 1</p>
+                        <p class="CellBody">Wait 2 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Att1 = 3</p>
+                        <p class="CellBody">Wait 3 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">Att1 = 5</p>
+                        <p class="CellBody">Wait 6</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">Combine 3</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">All</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc5</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');width: 4in;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 3</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Loc4</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">Move For .5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Box</p>
+                    </td>
+                    <td class="BodyE-Column3-Body4">
+                        <p class="CellBody">Loc5</p>
+                    </td>
+                    <td class="BodyE-Column4-Body4">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body4">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">In the above example, EntC is the last entity to be combined so the entity Box assumes the attribute value of EntC, Att1=5.</p>
+    </body>
+</html>

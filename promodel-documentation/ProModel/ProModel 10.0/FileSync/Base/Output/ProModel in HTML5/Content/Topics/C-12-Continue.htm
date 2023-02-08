@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Routing Rules">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Continue</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-12-Continue.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-12-RoutingRules.htm">Routing Rules</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Continue</span>
+        </div>
+        <h2 class="statements"><a name="C-12_3485478126_1092355"></a>Continue</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Cont 1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Leaves an entity at the current location for further processing. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> searches the process list forward and then from the beginning until a process is found for the output entity at the current location. If the entity name remains the same and no additional processes for that entity type are defined at the location, the original process will repeat continuously unless a condition bypasses the routing block with the <MadCap:keyword term="CONTINUE;Routing rules:CONTINUE;CONT, see CONTINUE" />CONTINUE rule. </p>
+        <p class="p">The CONTINUE routing rule also allows dynamic priority changes. This means a low priority entity that enters a location can be dynamically upgraded to a higher priority without leaving the location. Move Logic for the routing block with the CONTINUE rule will not be executed.</p>
+        <p class="p">Neither a time value nor a movement rescue is allowed in the Move Logic column for a route block containing a CONTINUE rule. This rule is one way to route an entity from a single capacity location to the same location without causing a deadlock. The CONTINUE rule can also simulate an unlimited supply of a raw material at a location. </p>
+        <p class="p">Statistics for a location using the CONTINUE rule are collected as one entry for the entity.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">The rule field of the Routing edit table only. A CONTINUE rule must be the only routing in a routing block and must always take a quantity of one. </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">This example simulates an unlimited supply of ore at a location. After the Extract location extracts the Iron from the Ore, two routing blocks execute. The first routing block routes the Iron just extracted on to a molding location. The second routing block routes another unit of ore back to the location, where the process begins again.</MadCap:conditionalText>
+        </p>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 0px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Ore</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Extract</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 100</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel" />
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Iron</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Mold</p>
+                    </td>
+                    <td class="BodyA-Column3-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules" data-mc-conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1*</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Iron</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Mold</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 10</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Ore</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Extract</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">Cont 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">...</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">See the next example for an illustration of dynamic priority changing.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:keyword term="Dynamic priority changing;Routing rules:CONTINUE:dynamic priority changing;Priorities:dynamic priority changing;CONTINUE:dynamic priority changing" />Dynamic Priority Changing<MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Suppose a gear enters a location. The gear has a low priority. If another type of gear enters the system with a higher priority, the second gear may preempt the first gear. Another worker in the plant needs the first gear immediately or else he will miss his deadline. Now the first gear’s priority is higher than the second gear. Using the <MadCap:keyword term="CONTINUE" />CONTINUE routing rule allows you to change the priority of the first gear. An entity that enters a location with a priority 99 can increase its priority to 999 without ever leaving that location. In addition, this functionality will also allow you to specifically control which entities in a multi-capacity location will be preempted by another incoming high priority entity.</MadCap:conditionalText></p>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Wait 3</p>
+                        <p class="CellBody">If Clock() &gt; 1 Then</p>
+                        <p class="CellBody">  {</p>
+                        <p class="Syntax_body">     var = 999</p>
+                        <p class="Syntax_body">     Route 2</p>
+                        <p class="CellBody">  }</p>
+                        <p class="CellBody">Else Route 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel" />
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyA-Column3-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Loc2, 99</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Loc2, var</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">Cont 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4" data-mc-conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body4">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p"><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-Processing.htm#C-05_2723800551_1087167" title="" alt="" xrefformat="{paratext}">Processing</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

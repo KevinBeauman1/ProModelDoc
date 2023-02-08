@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Functions|Calendar Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>CalDay</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Functions.htm">Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Functions.htm">Calendar Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">CalDay</span>
+        </div>
+        <h1>CalDay</h1>
+        <h5><a name="kanchor144"></a>Function</h5>
+        <h2>Syntax samples
+        </h2>
+        <p>CalDay()</p>
+        <h2>Description
+        </h2>
+        <p>The CalDay() function corresponds to the weekday of the calendar date you defined as part of the warm-up period or simulation begin date under simulation options. Since CalDay() resets with the advent of a new week, every weekday will return the same value (i.e. Wednesday will always return a value of 3).</p>
+        <h2>Valid In
+        </h2>
+        <p>Any logic.</p>
+        <p class="p_10">Please Note: <i>CalDay()</i> <i>works only when you select calendar date in the simulation options dialog.</i></p>
+        <h2>Example</h2>
+        <p>Suppose that shipment arrival types vary from day to day. Since Monday’s Shipment_Type_A arrival patterns are unique, you will need to use a distribution specific to those patterns.</p>
+        <p class="p_11">If CalDay() = 1 Then<br />{</p>
+        <p class="p_12">Shipment_Type_A = 		Monday_Distribution_A<br />Use Forklift For Unload_Time</p>
+        <p class="p_11">}</p>
+        <h5>See Also
+        </h5>
+        <p><a href="CalDOM.htm" class="a_11">CalDOM</a>, <a href="CalHour.htm" class="a_11">CalHour</a>, <a href="CalMin.htm" class="a_11">CalMin</a>, <a href="CalMonth.htm" class="a_11">CalMonth</a>, and <a href="CalYear.htm" class="a_11">CalYear</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

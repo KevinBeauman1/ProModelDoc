@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="530" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>AppendGraphicIconSize</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="AppendGraphicIconSize"><a MadCap:generatedBookmark="TOC" name="AppendGraphicIconSize"></a><a name="C-01_2914010915_462565"></a>
+            <MadCap:keyword term="AppendGraphicIconSize;ProModel Data Object:AppendGraphicIconSize" />AppendGraphicIconSize</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>AppendGraphicIconSize <span class="_Override" style="color: #0000ff;">RecordType, RecordIndex, GraphicNumber, Xpos, Ypos, Xsize, Ysize</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Appends a graphic to an existing Location, Entity or Resource record.  This method lets you specify the size of the graphic as a percentage of its original size.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordIndex</span> (Long)  The Record Index (Row Number) of the Location, Entity or Resource you wish to add a graphic icon to.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">GraphicNumber</span> (Long)  Index number of a graphic icon in the Graphics Library specified in the General Information dialog of the loaded model.  Keep in mind that the numbers are not necessarily sequential, there may be gaps.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Xpos</span> (Double)  Number of pixels from the left margin to place the graphic icon.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Ypos</span> (Double)  Number of pixels from the top margin to place the graphic icon.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Xsize</span> (Double)  Width in pixels.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Ysize</span> (Double)  Height in pixels.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, adds a record to the Locations table, then appends a graphic icon to the new record and makes it 50 x 50 pixels.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AddGfx()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim recnum As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel ("mfg_cost.mod")</p>
+        <p class="objects2">	pmDataObject.AppendRecord 1</p>
+        <p class="objects2">	pmDataObject.GetRecordCount 1, recnum</p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.AppendGraphicIconSize <span class="_Override" style="color: #0000ff;">1, recnum, 10, 100, 50, 50, 50</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

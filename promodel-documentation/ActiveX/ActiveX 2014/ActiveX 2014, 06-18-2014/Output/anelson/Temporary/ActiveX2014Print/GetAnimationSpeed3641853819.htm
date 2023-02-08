@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="276" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Runtime Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>GetAnimationSpeed</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="GetAnimationSpeed"><a MadCap:generatedBookmark="TOC" name="GetAnimationSpeed"></a><a name="C-01_2914010915_493340"></a>
+            <MadCap:keyword term="GetAnimationSpeed;ProModel Runtime Object:GetAnimationSpeed" />GetAnimationSpeed</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>GetAnimationSpeed<span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span><span class="_Override" style="color: #0000ff;">Speed</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Gets the current value …  When using GetAnimationSpeed and SetAnimationSpeed, the numeric value of a given speed may be slightly different for each method (because of rounding).</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:</span>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Speed</span> (Long - Output Parameter) Numeric value representing animation speed (1 to 100).</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns: </span> Long - Numeric value representing animation speed (1 to 100).</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example</span><b>:</b>
+        </p>
+        <p class="objects">Dim AnimSpeed as Long</p>
+        <p class="objects">Dim pmRun as Promodel.CRuntime</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">pmObj.Simulate</p>
+        <p class="objects" style="font-weight: bold;">pmRun.GetAnimationSpeed AnimSpeed</p>
+        <p class="objects">MsgBox "Animation Speed is " &amp; AnimSpeed</p>
+        <p class="objects">&#160;</p>
+        <p class="objects">Set pmObj = nothing</p>
+        <p class="objects">Set pmRun = nothing</p>
+    </body>
+</html>

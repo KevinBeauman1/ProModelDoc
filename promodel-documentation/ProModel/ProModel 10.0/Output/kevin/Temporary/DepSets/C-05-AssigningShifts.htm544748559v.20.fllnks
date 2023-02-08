@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/cm-c5-161-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-163-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-164-2.png" />
+    <Link
+      Url="Content/Resources/Images/shiftassignlocation2.png" />
+    <Link
+      Url="Content/Resources/Images/MM - Select Locations - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Select Locations - dialog box.png" />
+    <Link
+      Url="Content/Topics/sm-c1-166-4.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Select Resources - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Select Resources - dialog box.png" />
+    <Link
+      Url="Content/Topics/mm-c5-164-1.png" />
+    <Link
+      Url="Content/Topics/5-7-8.png" />
+    <Link
+      Url="Content/Topics/sm-c1-167-1.png" />
+    <Link
+      Url="Content/Topics/5-7-9.jpg" />
+    <Link
+      Url="Content/Topics/C-05-Locations.htm" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/cm-c5-161-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-163-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-164-2.png" />
+    <Link
+      Url="Content/Resources/Images/shiftassignlocation2.png" />
+    <Link
+      Url="Content/Resources/Images/MM - Select Locations - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Select Locations - dialog box.png" />
+    <Link
+      Url="Content/Topics/sm-c1-166-4.jpg" />
+    <Link
+      Url="Content/Resources/Images/MM - Select Resources - dialog box.png" />
+    <Link
+      Url="Content/Resources/Images/PM - Select Resources - dialog box.png" />
+    <Link
+      Url="Content/Topics/mm-c5-164-1.png" />
+    <Link
+      Url="Content/Topics/5-7-8.png" />
+    <Link
+      Url="Content/Topics/sm-c1-167-1.png" />
+    <Link
+      Url="Content/Topics/5-7-9.jpg" />
+    <Link
+      Url="Content/Topics/C-05-Locations.htm#C-05_2723800551_1085243" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm#C-05_2723800551_1086477" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_Priorities" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Shift:assignments"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="Shift:assignments:locations"
+      Conditions=""
+      LocalConditions=""
+      Position="27" />
+    <IndexCacheEntry
+      Term="Shift:assignments:resources"
+      Conditions=""
+      LocalConditions=""
+      Position="39" />
+    <IndexCacheEntry
+      Term="Shift:assignments:resources:units"
+      Conditions=""
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Shift:assignments:selecting calendar files"
+      Conditions=""
+      LocalConditions=""
+      Position="73" />
+    <IndexCacheEntry
+      Term="Shift:assignments:priorities"
+      Conditions=""
+      LocalConditions=""
+      Position="85" />
+    <IndexCacheEntry
+      Term="Shift:priorities:end shift"
+      Conditions=""
+      LocalConditions=""
+      Position="101" />
+    <IndexCacheEntry
+      Term="Priorities:shift"
+      Conditions=""
+      LocalConditions=""
+      Position="101" />
+    <IndexCacheEntry
+      Term="Shift:priorities:off-shift"
+      Conditions=""
+      LocalConditions=""
+      Position="106" />
+    <IndexCacheEntry
+      Term="Shift:priorities:start break"
+      Conditions=""
+      LocalConditions=""
+      Position="111" />
+    <IndexCacheEntry
+      Term="Shift:priorities:break"
+      Conditions=""
+      LocalConditions=""
+      Position="116" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

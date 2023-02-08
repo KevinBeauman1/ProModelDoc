@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1819" MadCap:lastWidth="929" MadCap:ignoredWords="Gantt">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> State (over time)</h1>
+        <MadCap:keyword term="location state" MadCap:conditions="PM-PCS Conditionals.PM" />
+        <MadCap:keyword term="activity state" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        <p class="p">Click on <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> State within the Time Series group of the Charts ribbon.</p>
+        <p>
+            <img src="Resources/Images/LocationStateTSRibbon.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/LocationStateTSRibbon-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"> The following chart is generated.</p>
+        <p>
+            <img src="Resources/Images/LocationStateTSChart.png" MadCap:mediastyle="@media print { max-width: 4in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/LocationStateTSChart-pcs.png" MadCap:mediastyle="@media print { max-width: 4in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p_14">The <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> State time series Gantt chart can be viewed in two ways. When viewing multiple replications, a 100% stacked column Gantt chart is displayed. If viewing as an individual replication, the Gantt chart shows the exact time when the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> changed state and how long it remained in that state. In the multiple replication view, each state is totaled within the time intervals, averaged across replications, and then displayed as a 100% stacked column chart in each interval. The timeline can be panned and zoomed using your mouse scroll wheel.Double-clicking in the chart area will reset the view to show the entire simulation timeline. </p>
+        <p class="p"><b>% Empty:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> had no entities.</p>
+        <p class="p"><b>% In Operation:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was processing an entity.</p>
+        <p class="p"><b>% Blocked:</b>	The percentage of time entities spent waiting for a freed destination.</p>
+        <p class="p"><b>% Waiting:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was waiting for a resource, another entity or a wait until condition in order to begin processing or move to the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. Any delays in processing move logic (even WAIT statements) are counted as waiting time, including <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Join, Load,</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach actions</MadCap:conditionalText> and Match statements.</p>
+        <p class="p"><b>% Down:</b>	The percentage of time <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was not available due to unscheduled downtime. Multiple capacity <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> only have "Up" and "Down"states which are when the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> is available or unavailable due to a downtime. </p>
+        <p class="p_10">Please Note:  Changing replications, as well as showing/hiding <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> states, are options that can be filtered in the Filter Options panel. </p>
+    </body>
+</html>

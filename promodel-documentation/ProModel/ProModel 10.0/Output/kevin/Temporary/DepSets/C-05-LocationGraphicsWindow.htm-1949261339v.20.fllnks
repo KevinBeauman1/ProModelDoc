@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/8_62.png" />
+    <Link
+      Url="Content/Topics/8_74.jpg" />
+    <Link
+      Url="Content/Topics/5-1-24.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/8_62.png" />
+    <Link
+      Url="Content/Topics/8_74.jpg" />
+    <Link
+      Url="Content/Topics/5-1-24.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1085324" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Locations:graphics:window"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphics:location:graphics window"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Locations:new:mode"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="New:mode"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="Locations:graphics:window:edit button"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="Graphics:location:graphics window:edit button"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="Locations:graphics:window:erase button"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Graphics:location:graphics window:erase button"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Locations:graphics:window:view button"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Graphics:location:graphics window:view button"
+      Conditions=""
+      LocalConditions=""
+      Position="30" />
+    <IndexCacheEntry
+      Term="Locations:define:new location graphically"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="Locations:define:multiple locations"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Multiple locations"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Locations:move:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Move:location graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="50" />
+    <IndexCacheEntry
+      Term="Locations:move:multiple graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="57" />
+    <IndexCacheEntry
+      Term="Move:multiple location graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="57" />
+    <IndexCacheEntry
+      Term="Locations:delete:location"
+      Conditions=""
+      LocalConditions=""
+      Position="62" />
+    <IndexCacheEntry
+      Term="Delete:location"
+      Conditions=""
+      LocalConditions=""
+      Position="62" />
+    <IndexCacheEntry
+      Term="Locations:delete:location graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="79" />
+    <IndexCacheEntry
+      Term="Delete:location:graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="79" />
+    <IndexCacheEntry
+      Term="Locations:view"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="View:location"
+      Conditions=""
+      LocalConditions=""
+      Position="95" />
+    <IndexCacheEntry
+      Term="Locations:add mode"
+      Conditions=""
+      LocalConditions=""
+      Position="102" />
+    <IndexCacheEntry
+      Term="Add:mode"
+      Conditions=""
+      LocalConditions=""
+      Position="102" />
+    <IndexCacheEntry
+      Term="Locations:text"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Text:label"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Labels:text"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Entity:spot"
+      Conditions=""
+      LocalConditions=""
+      Position="105" />
+    <IndexCacheEntry
+      Term="Status:light"
+      Conditions=""
+      LocalConditions=""
+      Position="106" />
+    <IndexCacheEntry
+      Term="Locations:adding symbol to existing location"
+      Conditions=""
+      LocalConditions=""
+      Position="109" />
+    <IndexCacheEntry
+      Term="Icon:add to location"
+      Conditions=""
+      LocalConditions=""
+      Position="109" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

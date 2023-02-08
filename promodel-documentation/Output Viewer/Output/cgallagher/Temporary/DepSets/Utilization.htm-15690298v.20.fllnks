@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Location Charts.htm" />
+    <Link
+      Url="Content/Resource Charts.htm" />
+    <Link
+      Url="Content/Resources/Images/Utilizationribbon.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Location Charts.htm" />
+    <Link
+      Url="Content/Resource Charts.htm" />
+    <Link
+      Url="Content/Resources/Images/Utilizationribbon.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="utilization"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

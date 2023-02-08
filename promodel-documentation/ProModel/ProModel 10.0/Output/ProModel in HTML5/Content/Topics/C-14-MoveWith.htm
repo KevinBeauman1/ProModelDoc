@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Move With</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-14-MoveWith.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Move With</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1106038"></a>Move With</h2>
+        <h5 class="_valid_in"><a name="kanchor2026"></a>Entity-Related Move Logic Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Move With &lt;res1&gt; {, &lt;priority&gt;} <br />    Or &lt;res2&gt; {, &lt;priority&gt;} <br />    {For &lt;time &gt;} {Then Free}</p>
+        <p class="Syntax_body">Move With Technician, 100</p>
+        <p class="Syntax_body">Move With Operator1, 399 For 3 min</p>
+        <p class="Syntax_body">Move With Truck1, 99 Then Free</p>
+        <p class="Syntax_body">Move With Operator1 Or Operator2</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">This statement is used to move an entity using a designated resource such as a person or forklift.  With the Or operator, you can designate alternative resources for making the move.  The statement captures the first available resource designated in its expression and makes the move. As soon as the destination becomes available, the entity implicitly gets the resource. However, if one of the resources is already owned by the entity, it will use that resource. It also allows you to set the priority (p1) for accessing the designated resource.  If the resource is already owned by the entity, this priority is ignored.  </p>
+        <p class="p">If the resource is static, you may specify a time (<a name="kanchor2027"></a>For &lt;time expression&gt;) for the move. If a resource is dynamic, a time (For &lt;time expression&gt;) is not valid. If you use “For &lt;time&gt;” with a dynamic resource, you will receive a run-time error. The resource will travel based on either the time or speed/distance defined in the path networks module. </p>
+        <p class="p">The resource used to make the move is freed only if the <a name="kanchor2028"></a>Then Free option is used.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This statement is valid only in Move Logic. Move With may only be encountered once by an entity in the same move logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;res1&gt;</p>
+        <p class="p">Resource to be captured and used to transport the entity.</p>
+        <p class="Component">&lt;res2&gt;</p>
+        <p class="p">Alternate resource to be captured and used to transport the entity.</p>
+        <p class="Component">&lt;priority&gt;</p>
+        <p class="p">The priority for accessing the resource. If the resource is already owned by the entity, this priority is ignored.</p>
+        <p class="Component">&lt;time&gt;</p>
+        <p class="p">The length of time the system takes to execute the move.  Used only if the resource is static.  This expression is evaluated whenever the statement is encountered.  If no time unit is specified, the default time unit specified in the General Information dialog is applied.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An entity moving from Station A to Station B may use either Tech1 or Tech2 to move the entity depending on which one is available first. The resource is freed after the move.</p>
+        <p class="Syntax_body">Move With Tech1 Or Tech2 Then Free</p>
+        <p class="p">The same thing could be accomplished in longer form:</p>
+        <p class="Syntax_body">Get Tech1 Or Tech2</p>
+        <p class="Syntax_body">Move With OwnedResource()</p>
+        <p class="Syntax_body">Free OwnedResource()</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Move For and Move On. Also see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-07-RoutingMoveLogic.htm#C-07_3886599965_1089551" title="" alt="">Routing Move Logic</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Activity Dialog</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Activity Properties</h1><a name="kanchor148"></a>
+        <p>Right-click on a shape, select Properties, and the <b>Activity</b> properties window displays.</p>
+        <p>There are Seven sections in the <b>Activity</b> properties window in addition to the default properties.</p>
+        <ul>
+            <li value="1"><a href="#Resource" class="a_11 selected">Resource</a>
+            </li>
+            <li value="2"><a href="#Availability" class="a_11 selected">Availability</a>
+            </li>
+            <li value="3"><a href="#Batching" class="a_11 selected">Batching</a>
+            </li>
+            <li value="4"><a href="#Setup" class="a_11 selected">Setup</a>
+            </li>
+            <li value="5"><a href="#Downtimes" class="a_11 selected">Downtimes</a>
+            </li>
+            <li value="6"><a href="#Notes" class="a_11 selected">Notes</a>
+            </li>
+            <li value="7"><a href="#Advanced" class="a_11 selected">Advanced</a>
+            </li>
+        </ul>
+        <p style="text-align: left;">
+            <img src="Resources/Images/ActivityProperties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Name</b> This is the simulation-friendly name of the activity and should be used when referenced in logic. It is synched with the text of the activity shape in the layout. It replaces any special characters or spaces with underscores _. This name and the shape text can be unsynched through the option in the Advanced section.</p>
+        <p><strong class="strong_1">Capacity</strong> The maximum number of entities (or entity batches) that can be processed concurrently at this activity.</p>
+        <p><strong class="strong_1">Buffers</strong> The maximum number of entities that can be waiting in the Input and Output buffer prior to this activity. Enter 0 if there is no input or output buffer. If the capacity is greater than 0, entities routing to the activity will route to the input buffer first. </p>
+        <p><strong class="strong_1">Time</strong>The time required to perform the activity. Time units can be specified to be seconds, minutes, hours, days, or weeks.	Leaving this field blank will result in no wait time during simulation. However, if you create a scenario parameter using this field, the <b>Time</b> value will be changed to 0.</p>
+        <p><strong class="strong_1">Multi Entity</strong> The multi entity tab allows you to define different process times and 
+ resource requirements for different entity types. </p>
+        <div>
+            <p>
+                <img src="Resources/Images/activitymultientity1_596x341.png" style="width: 596;height: 341;" />
+            </p>
+        </div>
+        <ul>
+            <li value="1"><span class="c_Override_1" style="font-weight: bold;">Entity</span> &#160;Enter 
+ the name of the different entities to be processed at this activity on 
+ separate rows. </li>
+            <li value="2"><span class="c_Override_1" style="font-weight: bold;">Time</span> The time required to perform the activity. </li>
+            <li value="3"><span class="c_Override_1" style="font-weight: bold;">Resource</span> 
+ &#160;Select 
+ the resource, if any, required to perform this activity. </li>
+            <li value="4"><span class="c_Override_1" style="font-weight: bold;">Priority</span> 
+ &#160;Enter the 
+ priority (0-10 or interrupt) for getting this resource. </li>
+            <li value="5"><span class="c_Override_1" style="font-weight: bold;">Keep</span> &#160;When 
+ checked the resource will not be freed from the entity when the activity 
+ time is complete. If left unchecked, the entity will release the resource 
+ when the activity time is complete.</li>
+        </ul>
+        <p><strong class="strong_1">Hourly Cost</strong> The <a href="Cost.htm" class="a_11">cost</a> (dollars, pounds, etc.) per hour added to the entity based on the time the entity is at the activity</p>
+        <h2><a name="Resource"></a>Resource</h2>
+        <p>
+            <img src="Resources/Images/ActivityResource.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><strong class="strong_1">Name</strong> Select the resource, if any, required to perform this activity. The resource will be captured by the entity for the activity Time, and then freed. If you want to use or select from multiple resources, you may leave this field set to <b>Select None</b>, and then capture the resources in <b>Logic</b>.</p>
+        <p><strong class="strong_1">Priority</strong> Enter the priority (0-10 or interrupt) for getting this resource. The higher the value, the higher the priority. An interrupt priority means that the current entity will interrupt whatever activity the resource is currently performing.</p>
+        <p><strong class="strong_1">Keep</strong> When checked, the resource will not be freed by the entity when the activity time is complete. If unchecked, the entity will release the resource when the activity time is complete.</p>
+        <h2><a name="Availability"></a>Availability</h2>
+        <p>
+            <img src="Resources/Images/ActivityAvailability.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><strong class="strong_1">Percentage</strong> &#160;&#160;Enter the percentage of time that the activity is available to complete processing. If the percent is less than 100, interruptions will occur randomly with an average duration of five minutes each.</p>
+        <p><strong class="strong_1">Shift Calendar</strong> &#160;&#160;A shift calendar can also be assigned to this activity. If a shift calendar is assigned, the activity will only be available during the time defined. Use <b>Calendar Editor</b> to define your shift calendar (.pmcal) file. Enter the file name in the field or browse and select one from your computer.</p>
+        <p><strong class="strong_1">Interrupt</strong> Check this option to interrupt the resource from its current task when it is time to go on break or off shift.</p>
+        <h2><a name="Batching"></a>Batching</h2>
+        <p>
+			These options are only available if the capacity of either the input or output buffer is greater than 0.
+		</p>
+        <p>
+            <img src="Resources/Images/ActivityBatching.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><strong class="strong_1">Before Activity</strong> Batching options cause entities to be either grouped into a single entity or ungrouped into multiple entities in the input buffer. This determines whether entities entering the activity are processed individually or as a group.</p>
+        <ul>
+            <li value="1"><strong class="strong_1">None</strong> &#160;&#160;No batching of entities occurs prior to entering the activity. </li>
+            <li value="2"><strong class="strong_1">Batch</strong> &#160;&#160;Entities entering the input buffer are grouped into a batch prior to entering the activity. If this option is selected, a batch size must be entered and capacity for an Input Buffer must be defined.</li>
+            <li value="3"><strong class="strong_1">Unbatch</strong> &#160;&#160;Entities entering the input buffer as a batch are unbatched prior to entering the activity. </li>
+            <li value="4"><strong class="strong_1">Rebatch</strong> &#160;&#160;Entities entering the input buffer that were previously part of a batch are rebatched into their original batch size prior to entering the activity. If this option is selected an Input Buffer for the activity must be given capacity sufficient to hold the maximum rebatching quantity of the entities that will enter the activity.</li>
+        </ul>
+        <p><strong class="strong_1">After Activity</strong> Batching options cause entities to be either grouped into a single entity or ungrouped into multiple entities in the output buffer of the activity. This determines whether entities route to the next activity individually or as a group.</p>
+        <ul>
+            <li value="1"><strong class="strong_1">None</strong> &#160;&#160;No batching of entities occurs in the output buffer of the activity. </li>
+            <li value="2"><strong class="strong_1">Batch</strong> &#160;&#160;Entities entering the input buffer that were previously part of a batch or already batched entities are rebatched into their original batch size prior to entering the activity. If this option is selected, a batch size must be entered and capacity for an Output Buffer must be defined.</li>
+            <li value="3"><strong class="strong_1">Unbatch</strong> &#160;&#160;Entities entering the output buffer as a batch are unbatched prior to routing to the next activity.</li>
+            <li value="4"><strong class="strong_1">Rebatch</strong> &#160;&#160;Batches or entities entering the input buffer that were previously part of a batch are rebatched into their original batch size prior to entering the activity. If this option is selected an Output Buffer for the activity must be given capacity sufficient to hold the maximum rebatching quantity of the entities that will leave the activity.</li>
+        </ul>
+        <p class="p_10">Warning: If you select the Unbatch option, and have not previously Batched entities, the Unbatch command will Detach any entities that were previously Attached.</p>&#160; 
+		
+		<h2><a name="Setup"></a>Setup</h2><p>Setup is used to model situations where an activity can process different types of entities, but needs setup or changeover time to do so. The setup time is used only when an entity routes to the activity and is different from the previous entity that was at the activity.</p><p>Setups can only be defined for single capacity activities.</p><p><img src="Resources/Images/ActivitySetup.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" /></p><p><strong class="strong_1">Entity</strong> The name of the entity that will trigger the setup time when it routes to the activity. The keyword “ALL” will incur a setup time for every change of entity type to route to the activity.</p><p><strong class="strong_1">Time</strong> The amount of time the activity will take to setup for the entity. When this time is complete, then processing on the entity will commence.</p><p><strong class="strong_1">Resource</strong> Optionally, select a resource required to perform the setup.</p><p><strong class="strong_1">Priority</strong> If you have chosen a resource to perform the setup, you may also choose a priority to capture the resource. When the entity enters the activity, the activity will attempt to get the resource for the setup using this priority. If the priority is set to Interrupt, the resource will be preempted from the work it is performing to perform the setup at this activity.</p><p><strong class="strong_1">Disable</strong> &#160;Check this box to disable the setup during simulation. This is useful for ignoring the setup without deleting it from the list.</p><h2><a name="Downtimes"></a>Downtimes</h2><p>
+			Downtimes are used to model interruptions in the processing of entities at activities. Downtimes may represent scheduled interruptions such as shifts, breaks, or scheduled maintenance. Or, they may represent unscheduled, random interruptions such as equipment failures. Usage based downtimes can only be defined for single capacity activities. The amount of time the activity is down and the timing for going down are defined in this section.
+</p><p><img src="Resources/Images/ActivityDowntimes.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" /><![CDATA[		]]></p><p><strong class="strong_1">Basis</strong> Three types of downtimes are available:</p><ul><li class="li_1" value="1"><strong class="strong_1">Scheduled:</strong> A scheduled downtime is one that is planned for, and thus taken into account in the output statistics as such. The time spent in a scheduled downtime will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</li><li class="li_1" value="2"><span class="c_Override_1" style="font-weight: bold;">Unscheduled:</span> Unscheduled downtimes are not planned for and will appear as such in the output statistics.</li><li class="li_1" value="3"><span class="c_Override_1" style="font-weight: bold;">Usage:</span> Usage downtimes are used to model downtimes that occur after being in use for a certain amount of time, such as if a machine fails due to wear after so many hours of operation. Usage downtimes are different from scheduled and unscheduled downtimes because usage downtimes are based on operation time, which does not include blocked time. Scheduled and unscheduled downtimes are based on total elapsed simulation time (operation time, blocked time, idle time).</li></ul><p><span class="c_Override_1" style="font-weight: bold;">Frequency</span>&#160;The clock time (usage time for usage downtimes) between the start of successive downtime occurrences. This option may be an expression. This field is evaluated as the simulation progresses, so the time between downtimes can vary.</p><p><strong class="strong_1">First Time</strong>&#160;The time of the first downtime occurrence. If this field is left blank, the first clock downtime will occur according to the time in the frequency field.</p><p><strong class="strong_1">Interruptive</strong> If this box is checked, any processing at the activity will be immediately put on hold for the duration of the downtime. If unchecked, the downtime will begin as soon as any in-progress processing at the activity is completed.</p><p><strong class="strong_1">Time</strong>&#160;The duration of the downtime.</p><p><span class="c_Override_1" style="font-weight: bold;">Resource</span> Optionally, select a resource required by the activity for the downtime.</p><p><strong class="strong_1">Priority</strong>&#160;If you have chosen a resource to use for the downtime, you may also choose a priority for capturing the resource. When the downtime occurs at the activity, it will attempt to get the resource using this priority. If the priority is set to Interrupt, the resource will be preempted from the work it is performing to perform the downtime at this activity.</p><p><strong class="strong_1">Disable</strong>&#160;Check this box to disable the downtime during simulation. This is useful for ignoring the downtime without deleting it from the list.</p><h2><a name="Notes"></a>Notes</h2><p>Enter any notes you would like to make in regards to the activity. </p><h2><a name="Advanced"></a>Advanced</h2><p><img src="Resources/Images/ActivityAdvanced.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" /></p><p><strong class="strong_1">Statistics</strong> Check this box to collect statistics for the activity. </p><p><b>Sync Name</b> When checked, the shape text and simulation-friendly Name (in General section) are connected and can only be changed by editing the shape text in the layout. When unchecked, they are disconnected, which allows you to have more descriptive shape text while keeping the simulation-friendly name (used in logic) more simple and concise. </p><p><b>Show Text</b> Checking this option shows the shape text in the layout, while unchecking this option hides the shape text.</p><p><strong class="strong_1">Use Submodel</strong>&#160;This option is used in conjunction with <a href="HierarchicalModeling.htm" class="a_11">hierarchical modeling</a>. When checked, this activity will use a submodel to define the process at the activity, and ignore any processing defined in the activity dialog.</p><hr width="100%" size="0" align="center" /><p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p></body>
+</html>

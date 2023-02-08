@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1260" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>ResQty</h1>
+        <h5>
+            <MadCap:keyword term="functions:resqty;resqty" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>ResQty({&lt;resource name&gt;})<br />If ResQty(Res1) &gt; 5 Then Free 5 Res1</p>
+        <h2>Description</h2>
+        <p>Returns the number of units of the specified resource that the current entity owns. ResQty() can be used to determine the amount of time necessary to process an entity based on the number of resources an entity owns.</p>
+        <h2>Valid In</h2>
+        <p class="p">Activity, arrival and route logic. This function returns an integer.</p>
+        <h2>Components</h2>
+        <p><b>&lt;resource name&gt;</b>
+        </p>
+        <p>The name of the resource to check for. If no resource name is specified, the total number of units of all resource types owned by the entity is returned. Res() may be substituted for a resource name.</p>
+        <h2>Example</h2>
+        <p>
+            The example below demonstrates the use of ResQty() to adjust the processing time for an entity based on the number of resources available to process it. Before EntA’s arrive at Act1, they capture a certain number of resources named Res1. Activity logic at Act1 determines how many Res1’s each EntA captured and processes it accordingly. The more resources an entity captures, the more workers available to work on the project, and the less time it takes. Process Simulator then routes EntA’s on to Act2. The logic at Act2 makes sure that no EntA owns more than one Res1.
+</p>
+        <p>Act1 activity logic</p>
+        <p class="p_11">Wait 120 / ResQty(Res1)</p>
+        <p>Act2 activity logic </p>
+        <p class="p_11">If ResQty(Res1) &gt; 1 Then</p>
+        <p class="p_12">Free (ResQty(Res1) - 1) Res1</p>
+        <h5>See Also</h5>
+        <p><a href="freecap.htm" class="a_11">FreeCap</a>, <a href="freeunits.htm" class="a_11">FreeUnits</a>, and <a href="groupqty.htm" class="a_11">GroupQty</a></p>
+    </body>
+</html>

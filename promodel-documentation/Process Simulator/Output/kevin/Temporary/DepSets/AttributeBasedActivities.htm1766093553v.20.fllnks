@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/ConditionalRoutings.htm" />
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch" />
+    <Link
+      Url="Content/Resources/Images/attributebasedexample.png" />
+    <Link
+      Url="Content/Resources/Images/attributebasedsolutionb.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/ConditionalRoutings.htm" />
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch?v=kxt95EDhNZg&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=21&amp;feature=plcp" />
+    <Link
+      Url="Content/Resources/Images/attributebasedexample.png" />
+    <Link
+      Url="Content/Resources/Images/attributebasedsolutionb.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

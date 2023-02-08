@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>PercentUtil()</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-14-PercentUtil().htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">PercentUtil()</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1231954"></a>
+            <MadCap:keyword term="PercentUtil()" />PercentUtil()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:percentutil()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="p">PercentUtil (&lt;loc or res name&gt; {, &lt;res unit})</p>
+        <p class="p">PercentUtil (Lathe)</p>
+        <p class="p">PercentUtil (Operator)</p>
+        <p class="p">PercentUtil (Operator, 3)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the cumulative utilization percentage for the specified location or resource. If a resource is specified without the optional unit number, the function returns the average percent utilization of all units.</p>
+        <p class="p">The value returned by this function represents the cumulative percentage of capacity occupied (if a location) or units captured (if a resource), on average, at the time the function was called.</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">Cumulative Occupancy or In Use Time x 100</td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: center;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;padding-left: 0px;padding-right: 0px;">Capacity or Unit(s) x Scheduled Time</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p"> Cumulative Occupancy Time in the above equation refers to the sum of the clock time each entity spends at a location for processing.</p>
+        <p class="p">Cumulative In Use time in the above equation refers to the sum of the clock time all units of a resource are captured for use by an entity or downtime. If the optional resource unit number is specified in the function, only the Cumulative In Use time for that unit is calculated.</p>
+        <p class="p">PercentUtil() may be called to return percent utilization for both multi- and single-capacity locations, all resource units, or an individual resource unit.</p>
+        <p class="p">Please Note: The method used to calculate utilization percentage for this function is the same method used in the output statistics.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any Logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;location or resource name&gt;</p>
+        <p class="p">The name of the location.</p>
+        <p class="p"><b>&lt;resource unit&gt;</b>
+        </p>
+        <p class="p">The optional unit number of the resource. If omitted, the function returns the average of all units.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1301" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1119466"></a>DTLeft()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:system functions:DTLEFT();DTLEFT()" />Shift &amp; Break System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">DTLeft &lt;time units&gt;</p>
+        <p class="Syntax_body">Shift_Time = DTLeft()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">The DTLeft function returns the balance of the off-shift or break time remaining for a location or resource before it resumes normal activities. Unless passed as an argument (e.g., DTLeft(hr)), the return value uses the time units defined in the General Information dialog box (see <MadCap:xref class="lowercase_no_see" href="C-05-GeneralInformation.htm#C-05_2723800551_1088499" target="" title="" alt="">General Information</MadCap:xref>).</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This function can only be referenced in shift and break logic (This statement is not valid in pre-off shift or pre-break logic).</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;time units&gt;</p>
+        <p class="p">The time units, if different from the default found in the General Information dialog, in which you want the return value expressed.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose a technician is frequently working on a job when the end of the shift rolls around and that the priority for ending the shift is not high enough to interrupt the job. To ensure that the technician gets a minimum of 14 hours off before coming back to work, even though the shift file specified 16 hours between shifts, you could enter the following off-shift logic:</p>
+        <p class="Syntax_body">If DTLeft(hr) &lt; 14 Then</p>
+        <p class="Syntax_body">	{</p>
+        <p class="syntax_body_indent">		Wait 14 hr</p>
+        <p class="syntax_body_indent">		Skip</p>
+        <p class="Syntax_body">			}</p>
+        <p class="p_10">Please Note: In the above example, the Skip statement is important to skip over the defined time in the shift file.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">DTDelay()</p>
+    </body>
+</html>

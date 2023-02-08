@@ -1,0 +1,132 @@
+{\rtf1\ansi\deff38
+{\colortbl;\red0\green0\blue0;\red0\green0\blue128;}
+
+{\fonttbl
+{\f0\fswiss\fcharset0 Helvetica;}
+{\f1\froman\fcharset0 Times;}
+{\f2\fswiss\fcharset0 AvantGarde;}
+{\f38\fswiss\fcharset0 Arial;}
+{\f46\froman\fcharset0 Times New Roman;}
+{\f227\fmodern\fcharset0 Courier New;}
+{\f469\fswiss\fcharset0 Helvetica ;}
+{\f476\fswiss\fcharset0 Helv ;}
+{\f707\fswiss\fcharset0 Helv;}
+}\sectd \ftnbj {\*\listtable
+{\list\listtemplateid553648156\listsimple{\listlevel\levelnfc4\leveljc0\levelstartat1\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listname ; }\listid16777244}
+{\list\listtemplateid553648157\listsimple{\listlevel\levelnfc2\leveljc0\levelstartat1\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listname ; }\listid16777245}
+{\list\listtemplateid553648158\listsimple{\listlevel\levelnfc3\leveljc0\levelstartat1\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listname ; }\listid16777246}
+{\list\listtemplateid553648159\listsimple{\listlevel\levelnfc1\leveljc0\levelstartat1\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listname ; }\listid16777247}
+{\list\listtemplateid553648155\listsimple{\listlevel\levelnfc0\leveljc0\levelstartat1\levelfollow0{\leveltext\'02\'00.;}{\levelnumbers\'01;}}{\listname ; }\listid16777243}
+}{\*\listoverridetable
+{\listoverride\listid16777244\listoverridecount0\ls5}
+{\listoverride\listid16777245\listoverridecount0\ls4}
+{\listoverride\listid16777246\listoverridecount0\ls3}
+{\listoverride\listid16777247\listoverridecount0\ls2}
+{\listoverride\listid16777243\listoverridecount0\ls1}
+}
+{\fonttbl
+}
+{\stylesheet
+{\s0\fs20\snext0 Base;}
+{\*\cs1\additive\b\snext1 ACRONYM;}
+{\s2\f227\fs16\keep\sbasedon3\snext2 ADDRESS;}
+{\s4\b\snext4 Banner Base;}
+{\s5\f1\fs20\sb120\sa120\sl240\snext5 Body;}
+{\s6\f476\fs20\li274\sb120\sa120\sbasedon7\snext6 Body Text Indent 2;}
+{\s8\f46\fs20\sbasedon9\snext8 Body#1;}
+{\*\cs10\additive\f2\fs18\b\cf1\snext10 Bold;}
+{\s11\f46\li360\ri360\sbasedon3\snext11 BQ;}
+{\s12\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs20}\sbasedon0\snext12 Bullet1;}
+{\s13\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs20}\sbasedon0\snext13 Bullet2;}
+{\s14\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs20}\sbasedon0\snext14 Bullet3;}
+{\s15\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs20{\pntxtb \'a1}}\sbasedon0\snext15 Bullet4;}
+{\s16\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs20}\sbasedon0\snext16 Bullet5;}
+{\s17\f469\fs22\li1080\fi-360\sl280\tx1080\snext17 Bulleted;}
+{\s18\f46\fs20\li360\fi-273\tx360\sbasedon9\snext18 Bulleted#1;}
+{\s19\fs12\b\li-144\sbasedon4\snext19 Button Bar;}
+{\*\cs20\additive\i\snext20 CITE;}
+{\*\cs21\additive\f227\snext21 CODE;}
+{\s22\f46\li360\sbasedon3\snext22 DD;}
+{\*\cs23\additive\snext23 Default Paragraph Font;}
+{\*\cs24\additive\i\snext24 DFN;}
+{\s25\f46\li360\sbasedon3\snext25 DIR;}
+{\s26\f46\li720\sbasedon3\snext26 DIR_LI;}
+{\s27\f46\sbasedon3\snext27 DL;}
+{\s28\f46\sbasedon3\snext28 DT;}
+{\*\cs29\additive\i\snext29 EM;}
+{\*\cs30\additive\i\sbasedon23\snext30 Emphasis;}
+{\s31\f2\b\sbasedon9\snext31 Example;}
+{\s32\f2\fs18\tx188\tx532\sbasedon9\snext32 Example body LAST;}
+{\*\cs33\additive\super\sbasedon23\snext33 footnote reference;}
+{\s34\f469\fs20\li270\sb120\sa120\sbasedon7\snext34 footnote text;}
+{\s35\f46\fs48\b\sa240\sbasedon3\snext35 H1;}
+{\s36\f46\fs36\b\sa240\sbasedon3\snext36 H2;}
+{\s37\f46\fs28\b\sa240\sbasedon3\snext37 H3;}
+{\s38\f46\b\sa240\sbasedon3\snext38 H4;}
+{\s39\f46\fs20\b\sa240\sbasedon3\snext39 H5;}
+{\s40\f46\fs16\b\sa240\sbasedon3\snext40 H6;}
+{\s41\f476\fs28\b\cf2\li274\sb60\sa120\sbasedon7\snext7 heading 1;}
+{\s42\f707\fs28\b\cf2\li274\sb60\sa120\sbasedon9\snext9 heading 1#1;}
+{\s43\f476\b\li360\ri360\sb120\sa120\sbasedon7\snext7 heading 2;}
+{\s44\f476\b\li274\sb240\sa60\sbasedon7\snext7 heading 3;}
+{\s45\f707\fs20\b\li274\sb240\sa60\sbasedon9\snext9 heading 3#1;}
+{\s46\f2\fs32\b\sl300\sbasedon9\snext46 Heading1;}
+{\s47\f2\fs28\b\sl300\sbasedon9\snext47 Heading2;}
+{\s48\f2\b\sbasedon9\snext48 Heading3;}
+{\s49\f2\fs20\b\sbasedon9\snext49 Heading4;}
+{\*\cs50\additive\f0\b\cf1\snext50 Helv Bold;}
+{\s51\f2\fs18\sbasedon9\snext51 How to step;}
+{\s52\f2\fs18\sbasedon9\snext52 How to step 1;}
+{\s53\f2\fs18\sbasedon9\snext53 How to step LAST;}
+{\s54\f2\b\sbasedon9\snext54 How to title;}
+{\s55\f469\b\li540\sb280\sa120\sl-280\snext55 HowTo1 Title;}
+{\s3\f46\snext3 HTMLBASE;}
+{\*\cs56\additive\f227\b\snext56 KBD;}
+{\s57\f227\fs16\keep\sbasedon3\snext57 LISTING;}
+{\s58\f46\li360\sbasedon3\snext58 MENU;}
+{\s59\f46\li720\sbasedon3\snext59 MENU_LI;}
+{\s7\f476\fs20\li274\sb120\sa120\snext7 Normal;}
+{\s9\f46\snext9 Normal#1;}
+{\s60\f2\b\sbasedon9\snext60 Note;}
+{\s61\f46\fs20\i\sbasedon9\snext61 Note body;}
+{\s62\f46\sbasedon3\snext62 NO_TAG;}
+{\s63\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvl1\pndec\pnstart1{\pntxta .}}\ls1\sbasedon0\snext63 Number1;}
+{\s64\fs20\li540\fi-540\tx540{\*\pn\pnlvlcont\pnlvl1\pnucrm\pnstart1{\pntxta .}}\ls2\sbasedon0\snext64 Number2;}
+{\s65\fs20\li1080\fi-540\tx1080{\*\pn\pnlvlcont\pnlvl1\pnucltr\pnstart1{\pntxta .}}\ls3\sbasedon0\snext65 Number3;}
+{\s66\fs20\li1620\fi-540\tx1620{\*\pn\pnlvlcont\pnlvl1\pnlcrm\pnstart1{\pntxta .}}\ls4\sbasedon0\snext66 Number4;}
+{\s67\fs20\li2160\fi-540\tx2160{\*\pn\pnlvlcont\pnlvl1\pnlcltr\pnstart1{\pntxta .}}\ls5\sbasedon0\snext67 Number5;}
+{\s68\f46\li540\sbasedon3\snext68 OL;}
+{\s69\f46\li540\fi-360\tx360{\*\pn\pnlvlcont\pnlvl1\pndec\pnstart1{\pntxta .}}\ls1\sbasedon3\snext69 OL_LI;}
+{\s70\f46\sa240\sbasedon3\snext70 P;}
+{\s71\f227\fs20\keep\sbasedon3\snext71 PRE;}
+{\*\cs72\additive\b\snext72 Q;}
+{\*\cs73\additive\b\snext73 SAMP;}
+{\*\cs74\additive\b\snext74 STRONG;}
+{\*\cs75\additive\f227\snext75 TT;}
+{\s76\f46\li540\sbasedon3\snext76 UL;}
+{\s77\f46\li540\fi-360\tx360{\*\pn\pnlvlcont\pnlvlblt\pnstart1\pnf54\pnfs24}\sbasedon3\snext77 UL_LI;}
+{\*\cs78\additive\i\snext78 VAR;}
+{\s79\f227\fs20\keep\sbasedon3\snext79 XMP;}
+}
+{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2119}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554875}}{\fldrslt }}{\up $}{\footnote $ <Template> NewContentsTpc_ }
+{\up #}{\footnote # 792552}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2131}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554883}}{\fldrslt }}{\up $}{\footnote $ <Template> Context Dialog }
+{\up #}{\footnote # 792673}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2128}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554881}}{\fldrslt }}{\up #}{\footnote # 792637}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2122}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554877}}{\fldrslt }}{\up $}{\footnote $ <Template> ~ContextMap~ }
+{\up #}{\footnote # 792582}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2116}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554806}}{\fldrslt }}{\up #}{\footnote # 792523}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2134}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554885}}{\fldrslt }}{\up #}{\footnote # 792702}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2113}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554804}}{\fldrslt }}{\up $}{\footnote $ <Template> ~ContextSensDlg~ }
+{\up #}{\footnote # 792492}
+\plain\fs20 
+\page{\field{\*\fldinst{PRIVATE ForeHelp xParaStyle ID=2125}}{\fldrslt }}\pard\plain\s0 {\field{\*\fldinst{PRIVATE ForeHelp xTopic ID=33554879}}{\fldrslt }}{\up $}{\footnote $ <Template> ~QuickFixDlg~ }
+{\up #}{\footnote # 792608}
+\plain\fs20 
+}

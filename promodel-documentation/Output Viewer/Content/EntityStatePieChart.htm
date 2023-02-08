@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2205" MadCap:lastWidth="929">
+    <head>
+    </head>
+    <body>
+        <h1>Entity State Pie Chart</h1>
+        <MadCap:keyword term="entity states pie chart" />
+        <p class="p">Select Entity from the Pie Charts drop-down button within the State group of the Charts ribbon.</p>
+        <p>
+            <img src="Resources/Images/EntityPieChart.png" MadCap:mediastyle="@media print { max-width: 2.5in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/EntityPieChart-pcs.png" MadCap:mediastyle="@media print { max-width: 2.5in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p_1">The following pie chart is generated.</p>
+        <p>
+            <img src="Resources/Images/entitystatespiechart.png" />
+        </p>
+        <p class="p_14">This pie chart displays each state as a separate section of the pie based upon the percentage of overall simulation time the entity type spent in a state.</p>
+        <p class="p"><b>% In Move Logic:</b>	The percentage of time the item was moving from one <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> to another during the simulation, including any delay time incurred in move logic, and including any time waiting for a resource to become available when that resource is requested in the move logic.</p>
+        <p class="p"><b>% Waiting:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was waiting for a resource, another entity or a wait until condition in order to begin processing or move to the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. Any delays in processing move logic (even WAIT statements) are counted as waiting time, including <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Join, Load,</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach actions</MadCap:conditionalText> and Match statements.</p>
+        <p class="p"><b>% In Operation:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was actually processing an entity.</p>
+        <p class="p"><b>% Blocked:</b>	The percentage of time entities spent waiting for a freed destination.</p>
+        <p class="p_14">For all pie charts only one item in a chart can be viewed at a time in full display view. Other item charts will be placed off to the side in your Report View. Click on one of the other views to bring it into full view.</p>
+        <p>
+            <img src="Resources/Images/piechartexample21.png" />
+        </p>
+        <p>
+            <img src="Resources/Images/piechartexample3.png" />
+        </p>
+    </body>
+</html>

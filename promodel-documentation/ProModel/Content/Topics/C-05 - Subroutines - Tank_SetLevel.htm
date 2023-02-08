@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="476" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089116"></a><a name="C-05_2723800551_31838"></a>Ta<MadCap:keyword term="TANK_SETLEVEL;Subroutines:tank:TANK_SETLEVEL" />nk_SetLevel</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_SETLEVEL (&lt;Tank ID&gt;, &lt;Quantity&gt;)</p>
+        <p class="Syntax_body">TANK_SETLEVEL (TankA, 1500) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Instantly sets the level of a tank to a specified quantity. If the quantity is negative or larger than the tank capacity, an error occurs. The tank state sets to Tank_Blocked if you set the tank level to the tank capacity and to Tank_Idle if you set the tank level to 0. Otherwise, the state remains unchanged.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_SetLevel when you want to initialize a tank to a specific level.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Quantity&gt;</p>
+        <p class="p">The level at which to set the tank (number of gallons, pounds). To completely fill the tank, enter Tank_Cap(&lt;Tank Name&gt;).</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">When you begin a simulation, you wish to set the initial level of a supply tank, TankX, to 10,000 gallons. To model this, enter the following statement in the initialization logic for the model.</p>
+        <p class="Syntax_body">Tank_SetLevel(TankX, 10000)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Subroutines - Examples of Tank Logic.htm#C-05_2723800551_1089736" target="" title="" alt="">Initializing and Replenishing Supply Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

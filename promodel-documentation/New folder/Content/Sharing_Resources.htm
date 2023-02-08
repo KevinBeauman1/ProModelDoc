@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1461" MadCap:lastWidth="1332">
+    <head>
+    </head>
+    <body>
+        <h3>Sharing Resources</h3>
+        <p class="p">Two or more activities or moves require the use of the same resource to perform the activity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=TT9gLi6nw3I&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=5&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define the resource to be used by dragging a resource shape onto the layout.</li>
+            <li class="li_1">For each of the activities or routings using the resource do the following:</li>
+        </ol>
+        <blockquote>
+            <ol style="list-style-type: lower-alpha;">
+                <li class="li_1">Open the properties for the activity or routing.</li>
+                <li class="li_1">In the Resource section, select the resource to be used for the activity.</li>
+            </ol>
+        </blockquote>
+        <h5>Example</h5>
+        <p class="p">Jobs coming into a print shop are loaded into one of two different printing machines (Print 1 and Print 2) depending on the type of job it is. Both machines require the use of an operator to load and start the machine which takes N(2,.8) minutes to complete.</p>
+        <p class="p">
+            <img src="Resources/Images/sharingresourcesexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/sharingresourcessolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Since the operator is used only to load the machines, the use of the operator and load time is defined in the routing dialog to each print machine rather than for the print activity itself.</p>
+    </body>
+</html>

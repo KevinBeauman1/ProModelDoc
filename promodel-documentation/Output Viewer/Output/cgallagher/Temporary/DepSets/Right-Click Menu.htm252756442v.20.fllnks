@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/right-clickmenu1.png" />
+    <Link
+      Url="Content/Legend.htm" />
+    <Link
+      Url="Content/Data Table.htm" />
+    <Link
+      Url="Content/Data Labels.htm" />
+    <Link
+      Url="Content/Data Markers.htm" />
+    <Link
+      Url="Content/Gridlines.htm" />
+    <Link
+      Url="Content/Axes (Right-click).htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/right-clickmenu1.png" />
+    <Link
+      Url="Content/Legend.htm" />
+    <Link
+      Url="Content/Data Table.htm" />
+    <Link
+      Url="Content/Data Labels.htm" />
+    <Link
+      Url="Content/Data Markers.htm" />
+    <Link
+      Url="Content/Gridlines.htm" />
+    <Link
+      Url="Content/Axes (Right-click).htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

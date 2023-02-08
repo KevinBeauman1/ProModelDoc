@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>MapArr</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-14-MapArr.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">MapArr</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1105619"></a>MapArr</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:MAPARR;MAPARR" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">MapArr &lt;array name&gt;{TO &lt;variable name&gt;}</p>
+        <p class="Syntax_body">MapArr Array1 TO Var10</p>
+        <p class="Syntax_body">MapArr Array5</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Starting with the variable you specify, the MapArr statement maps each individual cell of an array to a unique variable (i.e., if you define 12 cells for the array, the array will map to 12 variables). To display the cell value of a mapped array, create a variable graphic for the variable to which you mapped the array cell. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> collects statistics for an array cell through the variable to which you mapped the cell. (Choose “Basic” or “Time Series” statistics for a mapped variable, then view the variable in the Statistics Output program.) The initial value of the array cells are not written to the variables. Only changes to the array are recorded. </p>
+        <p class="p">If you do not specify the optional variable name in the statement, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will unmap the array from the variables that you originally mapped it. You can remap arrays by using the MapArr statement.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;array name&gt;</p>
+        <p class="p">Map, unmap, or remap this array. The brackets, [ ], are unnecessary after the array name in the statement.</p>
+        <p class="Component">TO &lt;variable name&gt;</p>
+        <p class="p">The optional name of the variable to which you map the first cell in the array. If you do not specify a name, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will unmap the array from the variables.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose you want to dynamically view an array, Storage_Array, during simulation. The array has a dimension of 2x3x2 (a three-dimensional ar<MadCap:keyword term="Arrays" />ray with 2 cells in the first dimension, 3 cells in the second, and 2 cells in the third) and contains a total of 12 cells (multiply  dimensions together). </p>
+        <p class="p">Since you already used the first 8 of the 30 variables defined in the model, Var1 through Var30, you will start mapping the array with Var9 and end with Var20 (the 12th variable from Var9 listed in the Variables module). In the initialization logic, use the following statement:</p>
+        <p class="p">MapArr Storage_Array TO Var9</p>
+        <p class="p">The cells in Storage_Array will map to variables Var9 to Var20 in the following order:</p>
+        <p class="p">[1,1,1] ... Var9<br />[1,1,2] ... Var10<br />[1,2,1] ... Var11<br />[1,2,2] ... Var12<br />[1,3,1] ... Var13<br />[1,3,2] ... Var14<br />[2,1,1] ... Var15<br />[2,1,2] ... Var16<br />[2,2,1] ... Var17<br />[2,2,2] ... Var18<br />[2,3,1] ... Var19<br />[2,3,2] ... Var20<br /></p>
+        <p class="p">In the Variables module, create graphics for variables Var9 through Var20 and place them on the layout. This will allow you to view them during the simulation.</p>
+        <p class="p_10">Please Note: Changing the cell value of a mapped array will change the value stored in the array cell And the value of the variable to which you mapped the specific cell. Changing the value of a variable, however, will change ONLY the variable value and NOT the cell value of the mapped array cell. Also, when you use a mapped array in an expression, the array returns the value of the variable mapped to it.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

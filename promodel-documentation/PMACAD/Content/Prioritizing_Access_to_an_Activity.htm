@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1848" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Prioritizing Access to an Activity</h3>
+        <p class="p">If two or more different activities feed to another activity that is currently unavailable, you may want to prioritize the order in which routings get access to the activity when it becomes available.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=YgLF0TK3wEs&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=13&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define a resource which will be used merely for determining which entity gets to route first.</li>
+            <li class="li_1">In the Properties dialog for each activity where the entities are routing FROM,* define a GET statement in the activity Logic where this resource is specified by priority. (If entities are coming from the same activity, you will need to define IF-THEN logic to determine which entities should get the resource with the higher priority)</li>
+            <li class="li_1">In the activity where these entities are routing TO, define a FREE statement as the first statement in the activity logic.</li>
+        </ol>
+        <p class="p">*Since Logic statements are executed BEFORE any activity time that is defined in the Activity dialog, be sure to define any activity time in the Logic Builder instead of using the Activity Time field.</p>
+        <h5>Example</h5>
+        <p class="p">Two different claim forms (High Priority and Low Priority) are routed from an Incoming box (with no activity time) to an Approval process, but you always want to allow the High Priority claim forms to route first.</p>
+        <p>
+            <img src="Resources/Images/prioritizingaccessexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">Logic builder for the In-box activity. </p>
+        <p>
+            <img src="Resources/Images/prioritizingaccesssolution1.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Logic builder for the Approval Processing activity. </p>
+        <p>
+            <img src="Resources/Images/prioritizingaccesssolution2.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Notice that a resource called Gate Keeper has been defined to regulate which claim form gets to route from Incoming to the Approval process first. In the Logic Builder of the Incoming activity, if the entity is a High Priority claim, it gets the Gate Keeper with a priority of 1; otherwise, it will get the Gate Keeper with a priority of 0. In the Approval activity the Gate Keeper is freed.</p>
+    </body>
+</html>

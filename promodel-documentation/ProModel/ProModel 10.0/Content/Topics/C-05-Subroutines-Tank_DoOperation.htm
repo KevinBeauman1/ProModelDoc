@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="925" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089259"></a><a name="C-05_2723800551_41769"></a>Ta<MadCap:keyword term="TANK_DOOPERATION;Subroutines:tank:TANK_DOOPERATION" />nk_DoOperation</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_DOOPERATION (&lt;Tank ID&gt;, &lt;Operation time&gt;) </p>
+        <p class="Syntax_body">TANK_DOOPERATION (TankA, 30) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Sets the state of the tank to Tank_Operation and waits for the specified operation time. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> sets the state to Tank_Blocked after the operation. </p>
+        <p class="p">Use Tank_DoOperation when some activity or treatment time is necessary for the material in a tank.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Operation time&gt;</p>
+        <p class="p">The duration (in <MadCap:keyword term="Time units, tank;Tanks, time units;Rate, tank flow" />time units defined in the General Information dialog) of the operation.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">After technicians add all the necessary ingredients to the mixing tank, the tank requires a 20 minute mixing time. To define this operation, enter the following statement in the subroutine for the mixing activity:</p>
+        <p class="p">Tank_DoOperation(MixingTank, 20)</p>
+        <p class="_rules">See Also</p>
+        <p class="p_2">
+            <MadCap:xref class="lowercase_no_see" href="C-05-Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

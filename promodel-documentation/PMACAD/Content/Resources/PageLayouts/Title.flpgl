@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Name="Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="title">
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="5.520833in" Height="8.010417in" Right="0px" Bottom="-97px" X="-50px" Y="0px">
+        </Frame>
+    </Page>
+    <Page Name="Copy of Left" Width="7in" Height="9in" Padding="1in" PageSize="custom" PaddingLeft="1in" PaddingRight="1in" PaddingTop="1in" PaddingBottom="1in" PageType="empty">
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="5.520833in" Height="8.010417in" Right="0px" Bottom="-97px" X="-50px" Y="0px">
+        </Frame>
+    </Page>
+</PageStyles>

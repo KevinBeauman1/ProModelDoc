@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1337" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Prioritizing Resource Access for Two Different Entity Types at the Same Activity</h3>
+        <p class="p">Two different entities at the same activity are to be given different priorities for acquiring a particular resource.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=L4ZHtGRL9Z0&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=3&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">In the activity Properties, set the capacity of the activity high enough to accommodate all the jobs that could be there waiting for the resource.</li>
+            <li class="li_1">For each entity type having a different priority, specify the time, resource and resource priority for that entity type.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Two different claim forms (High Priority and Low Priority) are processed through an Approval process. Both require the use of an Officer but High Priority claims should always be processed before Low Priority claims.</p>
+        <p class="p">
+            <img src="Resources/Images/prioritizing2resourceaccessexample1.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/prioritizing2resourceaccessolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" />
+        </p>
+        <p class="p">Higher priority claims are give a higher priority value (in this case 1) while the lowest priority value is kept at 0 which is the default priority.</p>
+    </body>
+</html>

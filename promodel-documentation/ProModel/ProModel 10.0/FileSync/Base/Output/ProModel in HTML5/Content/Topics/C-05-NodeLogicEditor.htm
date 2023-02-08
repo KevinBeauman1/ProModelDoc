@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Node Logic Editor</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-NodeLogicEditor.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Node Logic Editor</span>
+        </div>
+        <h3><a name="C-05_2723800551_1087088"></a>Node Logic Editor<MadCap:keyword term="Resources:node logic:editor;Node:logic:editor" /></h3>
+        <p class="p">The Node Logic edit table is used to define special logic for a dynamic resource to perform upon entering or exiting a node. Node logic may be defined for any dynamic resource at any node. Typical uses of node logic are:</p>
+        <ul>
+            <li class="li_1" value="1">Changing a resource graphic using the <MadCap:keyword term="GRAPHIC" />Graphic statement</li>
+            <li class="li_1" value="2">Controlling traffic using <MadCap:keyword term="WAIT UNTIL" />Wait Until statements</li>
+            <li class="li_1" value="3">Gathering special statistics on resource movement</li>
+        </ul>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-140-1.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p">The fields of the Node Logic edit table are defined as follows:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Node</span> The entry or departure node where the resource will process the logic.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Entry Logic</span> Logic to be executed when a resource enters the node.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Exit Logic</span> Logic to be executed when a resource leaves the node.</p>
+        <p class="p">The table above was taken from the example contained on the following pages.</p>
+        <h3>Node Logic Example<MadCap:keyword term="Resources:node logic:example;Node:logic:example" /></h3>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-140-2.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p">Suppose that for safety considerations we desire to <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">keep track of the number of times both forklifts simultaneously enter a particular zone of the network consisting of branches</MadCap:conditionalText> N2 to N3, N3 to N4, and N3 to N5. (It is thought that this zone may be particularly susceptible to accidents due to heavy traffic.) We could accomplish this using node logic at the entry and exit points of the zone.</p>
+        <p class="p">The only way to enter or exit the zone is through nodes N2 and N5. To track the number of <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">forklifts</MadCap:conditionalText> currently in the zone, we increment and decrement a variable called Current. Each time a <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">forklift</MadCap:conditionalText><span class="_Override" style="font-style: italic;">leaves </span>node N2 or N5 en-route <span class="_Override" style="font-style: italic;">to </span>node N3 we increment variable Current. Each time a <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">forklift</MadCap:conditionalText><span class="_Override" style="font-style: italic;">enters </span>node N2 or N5 enroute <span class="_Override" style="font-style: italic;">from </span>N3 we decrement variable Current. Finally, each time we increment the variable Current, we check to see if Current &gt; 1. If so, we increment a second variable called Total to record an occurrence of both forklifts in the zone at the same time.</p>
+        <p class="p">The following windows show the entry and exit logic for node N2, representing one entry to the zone. The node logic for node N5 is identical to that for node N2.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Entry Logic and Exit Logic windows.png" style="max-height: auto;max-width: 8.00in;" />
+        </p>
+        <p class="p_10">Please Note: This example follows the rule that allows the Last() function to be used only in Node Entry Logic, while the Next() function may be used only in Node Exit Logic. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-13-LogicElements.htm#C-13_1919394185_1091804" title="" alt="" xrefformat="{paratext}">Logic Elements</a>).</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

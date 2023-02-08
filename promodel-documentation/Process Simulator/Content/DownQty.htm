@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1282" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>DownQty()</h1>
+        <h5>
+            <MadCap:keyword term="functions:downqty;downqty" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>DownQty(&lt;activity&gt; or &lt;resource&gt;)</p>
+        <p>If DownQty(Act1) &gt; 3 Then aDest = Act2<br />Display “Total Res1 Down Now:” $ DownQty(Res1)</p>
+        <h2>Description</h2>
+        <p>Returns the number of activity or resource units down at the time of the call. Use this function to make decisions based on how many activity or resource units are down. For example, if too many units are down, a foreman could preempt several units back into service.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;activity&gt;</b> <![CDATA[ ]]></p>
+        <p>The name of the activity to examine. Loc() can be substituted for the name of an activity.</p>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>The name of the resource to examine. Res() can be substituted for the name of a resource.</p>
+        <h2>Example</h2>
+        <p>
+            Two Welder resources weld brackets onto steel frames at Man_Weld in 6.5 minutes. An automatic welding machine, Auto_Weld, can perform the same task, but it takes 9.3 minutes. However, if only one Welder is available and the other Welder is on a break (i.e. down), it takes one Welder 13.0 minutes to weld the brackets to the frames. Therefore, if one Welder is on a break, the frames should route to the automatic welding machine, Auto_Weld.
+</p>
+        <p class="p_11">If DownQty(Welder) &gt; 0 Then</p>
+        <p class="p_12">Route 1</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">Route 2  </p>
+        <h5>See Also</h5>
+        <p><a href="freecap.htm" class="a_11">FreeCap</a>, <a href="freeunits.htm" class="a_11">FreeUnits</a>, and Units. </p>
+    </body>
+</html>

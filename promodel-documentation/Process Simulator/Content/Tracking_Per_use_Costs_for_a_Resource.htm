@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1387" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3>Tracking Per-use Costs for a Resource</h3>
+        <p class="p">Increase the unit cost of an entity by some constant value each time a particular resource is used.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Open the resource dialog.</li>
+            <li class="li_1">Enter a cost per use for the resource.</li>
+            <li class="li_1">Each time during the simulation when this resource is used, the cost per use of the resource will be added to the unit cost of the entity.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">A dental X-ray machine is used at a dentist office that has a fixed charge of $50 per use. We want to add this cost to the patient cost.</p>
+        <p class="p">
+            <img src="Resources/Images/trackingperuseexample1.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/trackingperusesolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The cost per use for the X-ray machine is set to $50. Alternatively, we could have defined the X-ray as an activity and entered IncCost (Entity, 50) to increment the entity cost by $50.</p>
+    </body>
+</html>

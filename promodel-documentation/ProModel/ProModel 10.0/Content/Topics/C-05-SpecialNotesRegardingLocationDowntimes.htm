@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="323" MadCap:lastWidth="1153">
+    <head>
+    </head>
+    <body>
+        <h4>Special Notes Regarding Location Downtimes<MadCap:keyword term="Locations:downtimes:special notes;Downtimes:location:special notes" /></h4>
+        <ol>
+            <li class="li_1_how_to_step">When an entity preempts another entity (Example 1), or when an entity preempts a downtime (Example 2), or when a downtime preempts an entity (Example 3), any resources owned by the preempted entity or downtime will be freed temporarily until the preempting entity or downtime finishes at the location. At that time, the original entity or downtime will seek to claim the exact units of the resource or resources it owned before the preemption occurred.</li>
+            <li class="li_1_how_to_step">As shown in examples 5 and 6, an entity that requires a location setup will be treated differently depending on the preempting activity. If the preempting activity is another entity, the current setup in process will have to start over from the beginning. However, if the preempting activity is a downtime, the remaining setup time will finish upon completion of the preempting downtime.</li>
+            <li class="li_1_how_to_step">Locations will not go down if they are in a blocked state. A location is blocked if it has an entity that cannot be routed because of the unavailability of the next location. This may also include the time an entity waits to enter a location based on a routing condition, such as Load.</li>
+            <li class="li_1_how_to_step">Locations will not go down if any of the occupying entities are waiting for a resource or are waiting at any downtime inhibiting statement.</li>
+        </ol>
+        <p class="Component">Downtime inhibiting statements</p>
+        <p class="Syntax_body">
+            <MadCap:keyword term="WAIT UNTIL" />Wait Until, <MadCap:keyword term="ACCUM" />Accum, <MadCap:keyword term="COMBINE" />Combine, <MadCap:keyword term="MATCH" />Match, <MadCap:keyword term="GROUP" />Group, <MadCap:keyword term="JOIN" />Join, <MadCap:keyword term="LOAD" />Load	</p>
+        <ol MadCap:continue="true">
+            <li class="li_1_how_to_step">In cases where a downtime or other entity attempts to preempt an entity’s use of a location, a preemption process may be defined to override the default way of handling the preemption. See <MadCap:xref class="lowercase_no_see" href="C-07-PreemptionProcessLogic.htm#C-07_3886599965_1089500" target="" title="" alt="">Preemption Process Logic on page 1</MadCap:xref>.</li>
+        </ol>
+    </body>
+</html>

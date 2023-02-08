@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c6-276-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-276-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-276-3.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-277-1.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c6-276-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-276-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-276-3.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-277-1.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1121952" />
+    <Anchor
+      Name="C-06_1157716610_12152" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Entity:attributes:using"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Attributes:see Entity attributes"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Entity:attributes:processing time"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Processing time:using entity attributes"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Entity:attributes:operation time"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Operation:time:using entity attributes"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Entity:attributes:user condition routing"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Routing, user condition"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Entity:attributes:entity characteristics"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Entity:characteristics"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Entity:attributes:assigning values"
+      Conditions=""
+      LocalConditions=""
+      Position="31" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="712" MadCap:lastWidth="1277">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_461370"></a>
+            <MadCap:keyword term="PMEventsHandler" />PMEventsHandler</h2>
+        <p class="p">To use the ProModel Events Handler, add a reference to the ProModel Events 8.0 Type Library (<span class="_Override" style="font-weight: bold;">pmcp80.dll</span> typically found in your “C:\Program Files\Common Files\ProModel Corporation\Components” folder).  Then, add the following to the Class Module<MadCap:footnote style="mc-footnote-comment-format: '{n}';mc-footnote-format: '{n}';"><p class="Footnote"> class module:  A module that contains the definition of a class, including its property and method definitions.</p><p class="Footnote_Text" style="margin-left: 0in;margin-right: 0in;font-family: 'Times New Roman';font-weight: normal;font-style: normal;letter-spacing: 0em;color: #000000;text-indent: 0px;text-decoration: none;">&#160;</p></MadCap:footnote> where you will be calling the GetEvents method of the ProModel Object.</p>
+        <p class="p">&#160;</p>
+        <p class="Component">Private WithEvents pmEventsObject As PMCPLib.PmEvents</p>
+        <p class="Component">&#160;</p>
+        <p class="p">That will place a <span class="_Override" style="font-weight: bold;">pmEventsObject </span>variable in the Object drop-down list, and a procedure called <span class="_Override" style="font-weight: bold;">PmEventsHandler</span> in the Procedure/Events drop-down list at the top of the Code Window.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When you select the object variable (pmEventsObject) from the Object drop-down list and PmEventsHandler from the Procedure/Events drop-down list, it will create a function called <span class="_Override" style="font-weight: bold;">pmEventsObject_PmEventsHandler</span> in your Code Window.  In this function, you will create “If…Then” or “Select Case” statements to handle event codes returned to your program by ProModel.</p>
+        <p class="p">&#160;</p>
+        <p class="p">A list of Events that the PMEventsHandler handles can be found on <MadCap:xref class="lowercase_no_see" href="Locations Table (1)_ pmd.htm#AppendixA_4093679820_496227">Events on page 1</MadCap:xref>.</p>
+        <p class="p">&#160;</p>
+        <p class="Component">Example:</p>
+        <p class="objects">Private Function pmEventsObject_PmEventsHandler(ByVal PmEventID As Long, ByVal Description As String) As Long</p>
+        <p class="objects2">	Select Case PmEventID</p>
+        <p class="objects3">		Case 2:  								'PmEvtSaveBeforeQuit</p>
+        <p class="objects4">			pmEventsObject_PmEventsHandler = True <span class="_Override" style="font-style: italic;">skip save</span></p>
+        <p class="objects3">		Case Else:</p>
+        <p class="objects4">			Debug.Print PmEventID &amp; " " &amp; Description show event in immediate ‘window</p>
+        <p class="objects2">	End Select</p>
+        <p class="objects">End Function</p>
+        <p class="p">&#160;</p>
+        <p class="p">To activate the event handler in your program, include the ProModel Object GetEvents method at the beginning of your code.</p>
+        <p class="p">&#160;</p>
+        <p class="Component">Example:  </p>
+        <p class="objects">Private Sub CommandButton1_Click()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="Example">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects">Set pmEventsObject = pmObject.GetEventsObject</p>
+        <p class="objects">…</p>
+        <p class="p">&#160;</p>
+        <p class="p">Once the Events Object has been “Set”, as above, it will work on its own.  So, any event that you want to “handle” differently than the default ProModel action, you will place the code for it in the pmEventsObject_PmEventsHandler function.</p>
+    </body>
+</html>

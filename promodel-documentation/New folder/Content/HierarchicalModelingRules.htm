@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="996" MadCap:lastWidth="956">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Hierarchical Modeling Rules</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <link rel="StyleSheet" href="Resources/Stylesheets/Stylesheet - general.css" />
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+    </head>
+    <body>
+        <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1>
+            <MadCap:keyword term="hierarchical modeling" />Hierarchical Modeling Rules</h1>
+        <p>The following rules apply when simulating a hierarchical 
+ model.</p>
+        <ul>
+            <li class="li_1">If multiple hyperlinks are defined for an activity, 
+ the first hyperlink found that links another page or a .vsdx file 
+ with simulation properties is used. All other hyperlinks are ignored, 
+ even if they link to another page or .vsdx file.</li>
+            <li class="li_1">If the <b>Use Submodel</b> checkbox is checked for an 
+ activity, but no hyperlink is found linking a page or .vsdx file with 
+ simulation properties, then an error message will appear when the simulation 
+ is run.</li>
+            <li class="li_1">Resources, entities, attributes, 
+ variables, macros, and subroutines with the same names found in (external) Visio files linked as submodels from the main Visio document will be
+ assumed to be the same. </li>
+        </ul>
+        <ul>
+            <ul>
+                <li class="li_1">If the same resource, entity, attribute, variable, macro, or 
+subroutine is defined in both the main model and any external submodels, the duplicate object 
+ definitions in the submodels are ignored (as well as any associated graphics).</li>
+                <li class="li_1">If the same attribute, variable, macro or subroutine definition 
+ is in two separate external submodels (and not the main model), the first instance 
+ encountered will be the one defined, any others are ignored.</li>
+                <li class="li_1">If the same resource or entity is defined in 
+ two separate external submodels (and not the main model) linked as unique instances, the two objects will 
+ be given unique names (i.e. a prefix is added) and treated as two separate objects. &#160;For 
+ example, if two external unique instance submodels have a resource named Res1 defined, where submodel 
+1 is linked to activity Act1 in the main model and submodel 2 is linked 
+ to activity Act2, then the resources will be renamed Act1_Res1 and Act2 
+_Res1, respectively. (Activity names will be used as the prefix if a prefix is not specified in the shape properties.)</li>
+            </ul>
+        </ul>
+        <ul>
+            <li class="li_1">Activities that have a Submodel Input arrival into them or a Submodel Output route out of them cannot link to  Reference type submodels. They can link to Unique instance type submodels as long as the submodel they are contained in is also a Unique instance submodel.</li>
+            <li class="li_1">An activity linking to a Reference type submodel cannot have a route connection to an activity linking to a Unique instance type submodel. It can, however, have a route to an activity linking to a Reference submodel. An activity linking to a Unique instance submodel can have a route to an activity linking to either a Reference or Unique submodel.</li>
+            <li class="li_1">Models and submodels cannot be recursively/circularly 
+ referenced. For example, ModelA can reference SubmodelB but SubmodelB 
+ should not then also reference ModelA.</li>
+            <li class="li_1">Only Scenario Parameters in the main model will 
+ be used, and those in external submodels will be ignored. (See <a href="scenarioparametersInExternalSubmodels.htm" class="a_11">Scenario 
+ Parameters in External Submodels</a>.)</li>
+            <li class="li_1">At simulation time, all models are merged into 
+ a single large model with each layout being offset slightly from the other. 
+ To view only the main model or one of the submodels, right-click anywhere 
+ on the simulation layout and select a view from the Views menu or choose a view from the Simulation ribbon.</li>
+        </ul>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

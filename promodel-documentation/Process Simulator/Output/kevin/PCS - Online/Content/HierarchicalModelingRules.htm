@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Hierarchical Modeling">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Hierarchical Modeling Rules</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="HierarchicalModeling.htm">Hierarchical Modeling</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Hierarchical Modeling Rules</span>
+        </div>
+        <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1><a name="kanchor184"></a>Hierarchical Modeling Rules</h1>
+        <p>The following rules apply when simulating a hierarchical 
+ model.</p>
+        <ul>
+            <li class="li_1" value="1">If multiple hyperlinks are defined for an activity, 
+ the first hyperlink found that links another page or a .vsdx file 
+ with simulation properties is used. All other hyperlinks are ignored, 
+ even if they link to another page or .vsdx file.</li>
+            <li class="li_1" value="2">If the <b>Use Submodel</b> checkbox is checked for an 
+ activity, but no hyperlink is found linking a page or .vsdx file with 
+ simulation properties, then an error message will appear when the simulation 
+ is run.</li>
+            <li class="li_1" value="3">Resources, entities, attributes, 
+ variables, macros, and subroutines with the same names found in (external) Visio files linked as submodels from the main Visio document will be
+ assumed to be the same. </li>
+        </ul>
+        <ul>
+            <ul>
+                <li class="li_1" value="1">If the same resource, entity, attribute, variable, macro, or 
+subroutine is defined in both the main model and any external submodels, the duplicate object 
+ definitions in the submodels are ignored (as well as any associated graphics).</li>
+                <li class="li_1" value="2">If the same attribute, variable, macro or subroutine definition 
+ is in two separate external submodels (and not the main model), the first instance 
+ encountered will be the one defined, any others are ignored.</li>
+                <li class="li_1" value="3">If the same resource or entity is defined in 
+ two separate external submodels (and not the main model) linked as unique instances, the two objects will 
+ be given unique names (i.e. a prefix is added) and treated as two separate objects. &#160;For 
+ example, if two external unique instance submodels have a resource named Res1 defined, where submodel 
+1 is linked to activity Act1 in the main model and submodel 2 is linked 
+ to activity Act2, then the resources will be renamed Act1_Res1 and Act2 
+_Res1, respectively. (Activity names will be used as the prefix if a prefix is not specified in the shape properties.)</li>
+            </ul>
+        </ul>
+        <ul>
+            <li class="li_1" value="1">Activities that have a Submodel Input arrival into them or a Submodel Output route out of them cannot link to  Reference type submodels. They can link to Unique instance type submodels as long as the submodel they are contained in is also a Unique instance submodel.</li>
+            <li class="li_1" value="2">An activity linking to a Reference type submodel cannot have a route connection to an activity linking to a Unique instance type submodel. It can, however, have a route to an activity linking to a Reference submodel. An activity linking to a Unique instance submodel can have a route to an activity linking to either a Reference or Unique submodel.</li>
+            <li class="li_1" value="3">Models and submodels cannot be recursively/circularly 
+ referenced. For example, ModelA can reference SubmodelB but SubmodelB 
+ should not then also reference ModelA.</li>
+            <li class="li_1" value="4">Only Scenario Parameters in the main model will 
+ be used, and those in external submodels will be ignored. (See <a href="ScenarioParametersInExternalSubmodels.htm" class="a_11">Scenario 
+ Parameters in External Submodels</a>.)</li>
+            <li class="li_1" value="5">At simulation time, all models are merged into 
+ a single large model with each layout being offset slightly from the other. 
+ To view only the main model or one of the submodels, right-click anywhere 
+ on the simulation layout and select a view from the Views menu or choose a view from the Simulation ribbon.</li>
+        </ul>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Six Sigma Analysis with Minitab"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="Content/Resources/Images/SixSigmaRibbon.png" />
+    <Link
+      Url="Content/Resources/Images/6Sigmaconfiguration.png" />
+    <Link
+      Url="Content/Resources/Images/MiniTabRibbon.png" />
+    <Link
+      Url="Content/Resources/Images/cycle_time_sixpack chart.png" />
+    <Link
+      Url="Content/Resources/Images/cycle_time_project manager.png" />
+    <Link
+      Url="Content/Resources/Images/data in minitab.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet - general.css" />
+    <Link
+      Url="Content/Resources/Images/SixSigmaRibbon.png" />
+    <Link
+      Url="Content/Resources/Images/6Sigmaconfiguration.png" />
+    <Link
+      Url="Content/Resources/Images/MiniTabRibbon.png" />
+    <Link
+      Url="Content/Resources/Images/cycle_time_sixpack chart.png" />
+    <Link
+      Url="Content/Resources/Images/cycle_time_project manager.png" />
+    <Link
+      Url="Content/Resources/Images/data in minitab.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="configuredialog" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="six sigma analysis"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet - general.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourceexample1.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution1.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution2.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution3.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="http://www.promodel.com/solutionscafe/howto/" />
+    <Link
+      Url="http://www.youtube.com/watch?v=5qo8TbEPo4s&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=6&amp;feature=plcp" />
+    <Link
+      Url="http://www.youtube.com/watch?v=fOYhog4OcNY&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=5&amp;feature=plcp" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourceexample1.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution1.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution2.png" />
+    <Link
+      Url="Content/Resources/Images/usingalternativeresourcesolution3.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

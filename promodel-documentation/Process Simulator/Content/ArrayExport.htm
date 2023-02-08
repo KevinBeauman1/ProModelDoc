@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1461" MadCap:lastWidth="1345">
+    <!-- InstanceBegin template="/Templates/PIProcess.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head><title>Export Arrays to Spreadsheets</title>
+        <!-- InstanceBeginEditable name="doctitle" -->
+        <!-- InstanceEndEditable -->
+        <!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+        <link href="Resources/Stylesheets/Stylesheet for online.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body style="text-align: left;">
+        <h1>
+            <MadCap:keyword term="arrays" />Export Array Data to Spreadsheets</h1>
+        <p>When you export the contents of an array to a Microsoft Excel<sup>®</sup> worksheet, Process Simulator loads the data into the worksheet from left to right (i.e., within a row), and then from top to bottom (i.e., within a column).</p>
+        <p class="p_10">Note: Exporting data from an array to a worksheet requires Microsoft Excel 2016.</p>
+        <p><b>Steps to export the contents of an array to an Excel spreadsheet:</b>
+        </p>
+        <ol>
+            <li>Click <b>Arrays</b> from the Model Elements group in the Process Simulator ribbon.</li>
+            <li>Select the array record for which you want to import data.</li>
+            <li>Click in the cell of the <b>Export File</b> column. A drop down box will appear with the Export fields to define.</li>
+            <li>In the <b>File</b> field, type the name of the Excel file to which you want the array data to be exported. Alternatively, you may click the <b>Browse</b> button to navigate folders to find and select the Excel file.</li>
+            <li>In the <b>Sheet</b> field, type the name of the worksheet  to which the data should be exported.</li>
+            <li>In the <b>Cell Start</b> field, type the cell reference of the starting location for the export data to be written to the worksheet. This cell will receive the value stored in the first position (i.e. the first row and first column) of the array. Type the cell reference (e.g. B1), which is the column letter and row number in the worksheet.</li>
+            <li>In the <b>Cell End</b> field, type the cell reference of the ending location for the export data to be written to the worksheet. This cell will receive the value stored in the last position (i.e. the last row and last column) of the array. Type the cell reference (e.g. B10), which is the column letter and row number. Note: the numbers of rows and columns specified for the worksheet should be the same as those numbers for the size of the array. All rows and columns of the array will be exported to the Excel worksheet.</li>
+            <li>If you want the data export to occur only after the final replication, click the check box for <cite style="font-style: normal; font-weight: bold;">Export after final replication only</cite>; otherwise, the export of data will occur after each replication.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/ArrayExport.png" MadCap:mediastyle="@media print { max-width: auto;max-height: 2in; }" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Below are descriptions of the fields in the drop down box.</p>
+        <p><b>File</b> — the name of the Excel file to which you want to export the array data. You may type either a fully qualified path to your Excel file or a path relative to your Visio file. For example, if your Excel file is in the same directory as your .mod file, simply enter the name of the Excel file into this field.</p>
+        <p><b>Sheet</b> — the name of the worksheet in the Excel file to which you want to export the array data.</p>
+        <p><b>Cell Start</b> — the cell in the spreadsheet which is to receive the first piece of data exported from the array.</p>
+        <p><b>Cell End</b> — the cell in the spreadsheet which is to receive the last piece of data exported from the array. Note: the column letter and/or the row number for this cell must be greater than that provided in the Cell Start box.</p>
+        <p class="p_10">Note: If you export multiple times to the same spreadsheet, Process Simulator will overwrite the spreadsheet with new data for each run of the simulation. If you wish to prevent your data from being overwritten, you can make a backup of the spreadsheet between each run of the simulation.</p>
+        <p class="p_10">Note: When the simulation is run, the array data will be saved to the specified worksheet. If you run multiple scenarios and/or replications, array data from each run will be written to a separate, automatically created worksheet in the Excel file.</p>
+        <!-- InstanceEndEditable -->
+    </body>
+    <!-- InstanceEnd -->
+</html>

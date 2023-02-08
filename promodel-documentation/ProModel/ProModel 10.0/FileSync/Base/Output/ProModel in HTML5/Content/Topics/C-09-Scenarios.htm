@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Running the Model">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Scenarios</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-09-Scenarios.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-09-RunningtheModel.htm">Running the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Scenarios</span>
+        </div>
+        <h2><a name="C-09_ScenariosTitle"></a>
+            <MadCap:keyword term="Scenarios" />Scenarios</h2>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> gives you the option of defining several scenarios for a model using parameters.  A scenario is a set of parameters with settings defined by the user. Using scenarios allows you to alter various parameters to run a series of “what-if” scenarios without changing the model directly. Scenarios can also be helpful for allowing other users of your model, who may not have experience using model logic, to make changes to the model through scenario parameters. Scenarios are saved with the model for future use.</p>
+        <p class="p">A checkbox appears under each scenario in the <b>Simulate Scenario?</b> row. To enable the scenario to be simulated, make sure the checkbox is checked. To disable the scenario, leave the checkbox unchecked. </p>
+        <p class="p">Parameters are listed as rows under the Scenario columns. In addition, there is a row for the <b>Last Simulation Run</b>, which, if there is output for that scenario, lists the date and time that the scenario was last run. </p>
+        <p class="p_10">Please Note: After a scenario is run, the checkbox under  that scenario will default to be unchecked. This is so that the next time you want to run a new scenario, time is not spent generating results that already exist. To re-run a scenario, simply make sure the scenario’s checkbox is checked. </p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="cm-c9-333-2.png" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p"><b>Help</b> Click the Help icon [?] to launch the help system. </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Run Scenarios</span>   Runs the model with the defined scenarios. When running several scenarios, clicking on the Abort button during translation will terminate all scenarios instead of just the current scenario.</p>
+        <p class="p"><b>OK</b> Clicking OK allows you to exit the Scenario Manager without running the simulation. </p>
+        <p class="p"><b>Cancel</b> Clicking Cancel allows you to exit the Scenario Manager without applying any changes or running the simulation. </p>
+        <p class="p">Scenarios can be added, deleted or edited in the Scenario Manager. If you have scenario parameters that are different than the "Baseline," the change will show up in bolded, blue font, as seen in the image below. </p>
+        <p class="p">
+            <img src="cm-c9-333-2.png" />
+        </p>
+        <p class="How_to_title">How to define a Scenario<MadCap:keyword term="Scenarios:defining" /></p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Click the Add button [+] located at the top of the last column.</li>
+            <li class="li_1_how_to_step" value="2">A new column will appear with the default name, and will take on the same parameter values as the Baseline scenario. Define the scenario name by typing in the Scenario Name box. Click in the individual cells under the new scenario's column to change the scenario properties.</li>
+            <li class="li_1_how_to_step" value="3">Scenarios can also be duplicated by right-clicking on a scenario and selecting <b>Duplicate Scenario</b> from the context menu. </li>
+        </ol>
+        <p class="How_to_title">How to delete a Scenario</p>
+        <ol>
+            <li value="1">Hover over a scenario name until an [x] appears in the upper right hand corner of the cell. Press the [x] to delete the scenario. Or, right-click on any scenario and select <b>Delete Scenario</b> from the context menu. Any scenario except the Baseline can be deleted. </li>
+        </ol>
+        <p class="p">The Baseline Scenario can be renamed, but it cannot be deleted, nor can its values be modified in the Scenario Manager.</p>
+        <p class="p_10">Please Note: Only macros defined as scenario parameters will be displayed as parameters for the scenario. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-ScenarioParameters.htm#C-06_1157716610_1086107" title="" alt="" xrefformat="{paratext}">Scenario Parameters</a> and <a href="C-06-Macros.htm" title="" alt="" class="lowercase_no_see MCXref xref xreflowercase_no_see" xrefformat="{paratext}">Macros</a> for more information.)</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

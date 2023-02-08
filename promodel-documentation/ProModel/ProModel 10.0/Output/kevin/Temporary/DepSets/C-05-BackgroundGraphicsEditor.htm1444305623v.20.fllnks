@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/mmbackgroundgraphics.png" />
+    <Link
+      Url="Content/Resources/Images/pmgraphicseditor.png" />
+    <Link
+      Url="Content/Resources/Images/mmgraphics.png" />
+    <Link
+      Url="Content/Topics/5-9-5.jpg" />
+    <Link
+      Url="Content/Topics/C-04-InsertTab.htm" />
+    <Link
+      Url="Content/Resources/Images/InsertRibbonTab.png" />
+    <Link
+      Url="Content/Topics/5-9-8.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/mmbackgroundgraphics.png" />
+    <Link
+      Url="Content/Resources/Images/pmgraphicseditor.png" />
+    <Link
+      Url="Content/Resources/Images/mmgraphics.png" />
+    <Link
+      Url="Content/Topics/5-9-5.jpg" />
+    <Link
+      Url="Content/Topics/C-04-InsertTab.htm#C-04_InsertTabTitle" />
+    <Link
+      Url="Content/Resources/Images/InsertRibbonTab.png" />
+    <Link
+      Url="Content/Topics/5-9-8.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1089924" />
+    <Anchor
+      Name="C-05_2723800551_41520" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Background graphics:editor"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Background graphics:library graphics window"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="Background graphics:layout window"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Insert:ribbon"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Background graphics:shapes"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Background graphics:library graphics window"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+    <IndexCacheEntry
+      Term="Background graphics:importing"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Import:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Graphics:background:import"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Background graphics:move:imported background graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="Graphics:background:move:imported graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="56" />
+    <IndexCacheEntry
+      Term="Background graphics:sizing an imported background graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="60" />
+    <IndexCacheEntry
+      Term="Graphics:background:size an imported graphic"
+      Conditions=""
+      LocalConditions=""
+      Position="60" />
+    <IndexCacheEntry
+      Term="Background graphics:context menu"
+      Conditions=""
+      LocalConditions=""
+      Position="66" />
+    <IndexCacheEntry
+      Term="Background graphics:flip:horizontal"
+      Conditions=""
+      LocalConditions=""
+      Position="73" />
+    <IndexCacheEntry
+      Term="Graphics:background:flip:horizontal"
+      Conditions=""
+      LocalConditions=""
+      Position="73" />
+    <IndexCacheEntry
+      Term="Background graphics:flip:vertical"
+      Conditions=""
+      LocalConditions=""
+      Position="78" />
+    <IndexCacheEntry
+      Term="Graphics:background:flip:vertical"
+      Conditions=""
+      LocalConditions=""
+      Position="78" />
+    <IndexCacheEntry
+      Term="Background graphics:rotate"
+      Conditions=""
+      LocalConditions=""
+      Position="84" />
+    <IndexCacheEntry
+      Term="Graphics:background:rotate"
+      Conditions=""
+      LocalConditions=""
+      Position="84" />
+    <IndexCacheEntry
+      Term="Background graphics:bring to front"
+      Conditions=""
+      LocalConditions=""
+      Position="92" />
+    <IndexCacheEntry
+      Term="Graphics:background:bring to front"
+      Conditions=""
+      LocalConditions=""
+      Position="92" />
+    <IndexCacheEntry
+      Term="Background graphics:send to back"
+      Conditions=""
+      LocalConditions=""
+      Position="98" />
+    <IndexCacheEntry
+      Term="Graphics:background:send to back"
+      Conditions=""
+      LocalConditions=""
+      Position="98" />
+    <IndexCacheEntry
+      Term="Background graphics:behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Graphics:background:behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="104" />
+    <IndexCacheEntry
+      Term="Background graphics:group"
+      Conditions=""
+      LocalConditions=""
+      Position="110" />
+    <IndexCacheEntry
+      Term="Graphics:background:group"
+      Conditions=""
+      LocalConditions=""
+      Position="110" />
+    <IndexCacheEntry
+      Term="Group:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="110" />
+    <IndexCacheEntry
+      Term="Background graphics:lock"
+      Conditions=""
+      LocalConditions=""
+      Position="115" />
+    <IndexCacheEntry
+      Term="Graphics:background:lock"
+      Conditions=""
+      LocalConditions=""
+      Position="115" />
+    <IndexCacheEntry
+      Term="Lock:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="115" />
+    <IndexCacheEntry
+      Term="Background graphics:alignment"
+      Conditions=""
+      LocalConditions=""
+      Position="120" />
+    <IndexCacheEntry
+      Term="Graphics:background:alignment"
+      Conditions=""
+      LocalConditions=""
+      Position="120" />
+    <IndexCacheEntry
+      Term="Alignment:graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="120" />
+    <IndexCacheEntry
+      Term="Background graphics:line:styles"
+      Conditions=""
+      LocalConditions=""
+      Position="124" />
+    <IndexCacheEntry
+      Term="Line:styles:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="124" />
+    <IndexCacheEntry
+      Term="Graphics:background:line:styles"
+      Conditions=""
+      LocalConditions=""
+      Position="124" />
+    <IndexCacheEntry
+      Term="Fill:pattern:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="129" />
+    <IndexCacheEntry
+      Term="Background graphics:fill:patterns"
+      Conditions=""
+      LocalConditions=""
+      Position="129" />
+    <IndexCacheEntry
+      Term="Graphics:background:fill:patterns"
+      Conditions=""
+      LocalConditions=""
+      Position="129" />
+    <IndexCacheEntry
+      Term="Line:color:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="135" />
+    <IndexCacheEntry
+      Term="Background graphics:line:color"
+      Conditions=""
+      LocalConditions=""
+      Position="135" />
+    <IndexCacheEntry
+      Term="Graphics:background:line:color"
+      Conditions=""
+      LocalConditions=""
+      Position="135" />
+    <IndexCacheEntry
+      Term="Fill:color:background graphics"
+      Conditions=""
+      LocalConditions=""
+      Position="141" />
+    <IndexCacheEntry
+      Term="Background graphics:fill:color"
+      Conditions=""
+      LocalConditions=""
+      Position="141" />
+    <IndexCacheEntry
+      Term="Graphics:background:fill:color"
+      Conditions=""
+      LocalConditions=""
+      Position="141" />
+    <IndexCacheEntry
+      Term="Background graphics:move:behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="146" />
+    <IndexCacheEntry
+      Term="Graphics:background:move:behind grid"
+      Conditions=""
+      LocalConditions=""
+      Position="146" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

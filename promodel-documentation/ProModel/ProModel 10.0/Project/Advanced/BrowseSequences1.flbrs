@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="General Modeling Building Procedures"
+    Link="/Content/Topics/C-03-GeneralProcedure.htm"
+    ComputeToc="true"
+    ComputedTocDepth="3"
+    FrameName="_blank"
+    Skin="/Project/Skins/ProModel in HTML5.flskn"
+    HtmlHelpIconIndex="2"
+    ReplaceMergeNode="false">
+    <TocEntry
+      Title="Step 1: Planning the Study"
+      Link="/Content/Topics/C-03-Step1PlanningtheStudy.htm" />
+    <TocEntry
+      Title="Step 2: Defining the System"
+      Link="/Content/Topics/C-03-Step2DefiningtheSystem.htm" />
+    <TocEntry
+      Title="Step 3: Building the Model"
+      Link="/Content/Topics/C-03-Step3BuildingtheModel.htm" />
+    <TocEntry
+      Title="Step 4: Conducting Experiments"
+      Link="/Content/Topics/C-03-Step4ConductingExperiments.htm" />
+    <TocEntry
+      Title="Step 5: Analyzing the Output"
+      Link="/Content/Topics/C-03-Step5AnalyzingtheOutput.htm" />
+    <TocEntry
+      Title="Step 6: Reporting the Results"
+      Link="/Content/Topics/C-03-Step6ReportingtheResults.htm" />
+  </TocEntry>
+  <TocEntry
+    Title="Phased Modeling Approach"
+    Link="/Content/Topics/C-03-PhasedModelingApproach.htm">
+    <TocEntry
+      Title="Phase 1: Basic Model Elements"
+      Link="/Content/Topics/C-03-Phase1BasicModelElements.htm" />
+    <TocEntry
+      Title="Phase 2: Adding Resources &amp; Variability"
+      Link="/Content/Topics/C-03-Phase2AddingResourcesandVariability.htm" />
+    <TocEntry
+      Title="Phase 3: Additional Operations"
+      Link="/Content/Topics/C-03-Phase3AdditionalOperations.htm" />
+  </TocEntry>
+</CatapultToc>

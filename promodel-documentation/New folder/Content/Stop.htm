@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1142" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Stop</h1>
+        <h5>
+            <MadCap:keyword term="statements:stop;stop" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Stop {&lt;string expression&gt;}</p>
+        <p>Stop<br />Stop “Normal termination”</p>
+        <h2>Description</h2>
+        <p>Terminates the current replication and optionally displays a message. The simulation will then continue with the next replication. Use Stop to end a replication when the simulation has run long enough to provide sufficient statistical data.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;string expression&gt;</b>
+        </p>
+        <p>An optional message to display when the replication stops.</p>
+        <h2>Example</h2>
+        <p>In the example below, a Stop statement is used in Operation Logic to end the simulation whenever the variable Total_Complete reaches 100.</p>
+        <p class="p_11">Inc Total_Complete<br />If Total_Complete = 100 Then<br />{</p>
+        <p class="p_12">Stop</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p><a href="display.htm" class="a_11">Display</a>, <a href="pause.htm" class="a_11">Pause</a></p>
+    </body>
+</html>

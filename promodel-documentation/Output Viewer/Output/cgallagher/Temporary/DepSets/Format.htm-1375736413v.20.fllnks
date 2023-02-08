@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/formattab.png" />
+    <Link
+      Url="Content/Resources/Images/format1.png" />
+    <Link
+      Url="Content/Selected Item.htm" />
+    <Link
+      Url="Content/Font.htm" />
+    <Link
+      Url="Content/Text.htm" />
+    <Link
+      Url="Content/Range.htm" />
+    <Link
+      Url="Content/Decimal Precision.htm" />
+    <Link
+      Url="Content/Line.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/formattab.png" />
+    <Link
+      Url="Content/Resources/Images/format1.png" />
+    <Link
+      Url="Content/Selected Item.htm" />
+    <Link
+      Url="Content/Font.htm" />
+    <Link
+      Url="Content/Text.htm" />
+    <Link
+      Url="Content/Range.htm" />
+    <Link
+      Url="Content/Decimal Precision.htm" />
+    <Link
+      Url="Content/Line.htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="format"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

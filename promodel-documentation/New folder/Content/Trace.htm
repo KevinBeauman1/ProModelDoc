@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1597" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Trace</h1>
+        <h5>
+            <MadCap:keyword term="statements:trace;trace" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Trace {&lt;message&gt;}{Step or Cont or Off or Close}</p>
+        <p>Trace “Begin Test for Resource A”<br />Trace Cont<br />Trace Close</p>
+        <h2>Description</h2>
+        <p>Turns tracing on and off. Trace messages will appear in a separate window on the screen. Use trace to follow the event flow of a model.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;message&gt;</b>
+        </p>
+        <p>The message to appear in the trace window when the Trace statement is encountered. The message can be any string expression.</p>
+        <p><b>Step</b>
+        </p>
+        <p>Makes Process Simulator wait for the user to click the left mouse button to execute the next statement or trace continuously while the right mouse button is held down. Trace statements default to step.</p>
+        <p><b>Cont</b>
+        </p>
+        <p>Steps continuously without user intervention. Clicking the right mouse button will step through the logic.</p>
+        <p><b>Off</b>
+        </p>
+        <p>Turns tracing off but does not close the trace window.</p>
+        <p><b>Close</b>
+        </p>
+        <p>Turns tracing off and closes the trace listing.</p>
+        <h2>Example</h2>
+        <p>In this example, a message will appear in the trace window whenever Agent1 and Agent2 have been captured and the process step for Gate1 begins. Another message will appear in the trace listing at the end of the activity process.</p>
+        <p class="p_11">Get Agent1 and Agent2<br />Trace "Agent1 and Agent2 captured. Begin Gate1 process."<br />Wait 20 min<br />Trace "Gate1 process complete."<br />Free All</p>
+        <h5>See Also</h5>
+        <p><a href="debug.htm" class="a_11">Debug</a>
+        </p>
+    </body>
+</html>

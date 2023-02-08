@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Processing">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using the Processing Editor</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-UsingtheProcessingEditor.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Processing.htm#C-05_2723800551_1087167">Processing</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using the Processing Editor</span>
+        </div>
+        <h3><a name="C-05_2723800551_1087179"></a>Using the Processing Editor<MadCap:keyword term="Processing:editor:using" /></h3>
+        <p class="p">This discussion covers the procedures used to define operations and routings using the Processing Editor. As with most other procedures in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>, they may be performed graphically using the mouse, or manually by typing the information directly in the edit tables.</p>
+        <p class="p">Before you begin to specify the processing logic, define all locations and entities to be referenced in the processing. This is done through the Location and Entity Editors. If you reference a location or an entity that has not yet been defined in a location or entity field, you will be prompted to add that location or entity to the respective location or entity list. However, no graphic gets automatically assigned to the location or entity.</p>
+        <p class="p">The easiest way to define the processing logic is to define the routing or flow sequence using the tools in the Processing Tools window, which appears in the lower left corner of the Processing Editor. These tools have been designed to allow you to easily and rapidly define the flow of entities through the system. It is also a good idea to define the routing rule for each routing as it is created. Once you have defined the from-to relationships between locations for each entity, fill in the details of the operation and move logic for each location. This is typically done by typing the logic in the operation or move logic column manually or by using the Logic Builder, documented at the end of this section.</p>
+        <p class="p">Defining processes graphically in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> requires interaction with all four process editing windows.</p>
+        <p class="p_11">Process Edit Table</p>
+        <p class="p_11">Routing Edit Table</p>
+        <p class="p_11">Tools Window</p>
+        <p class="p_11">Layout Window</p>
+        <p class="p">Before discussing the procedures for using these windows interactively, let us look briefly at a process flowchart of a simple model.</p>
+        <h4>Example Model<MadCap:keyword term="Processing:example" /></h4>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Two entity types, EntA and EntB, arrive at Locations 1A and 1B, respectively, according to some specified arrival logic. After a short preparation time, both entities are routed to Location 2 where 1 EntB is joined to 1 EntA. At this point the resulting entity, EntC, is sent to Location 3 for consolidation. Twelve EntC's are accumulated at Location 3 and processed together for 3.0 minutes. Then they exit the system.</MadCap:conditionalText>
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="8_179.png" />
+        </p>
+        <p class="p">In the flowchart above, each block represents a process record for an entity at a location. The lower left portion of a block specifies the operation(s) performed on the entity at the location. The lower right portion of the block represents the number of entities output to the next location.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="666" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1104572"></a>If...Then...Else</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General control statements:IF...THEN...ELSE;IF...THEN...ELSE" />General Control Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">If &lt;Boolean expression&gt; Then &lt;statement 1&gt; {Else &lt;statement 2&gt;}</p>
+        <p class="Syntax_body">If Var1 = 5 Then Wait 2 min</p>
+        <p class="Syntax_body">If (Attr2 = 5) Or (Var5 &lt;&gt; 0) Then Wait 2 min</p>
+        <p class="Syntax_body"> Else Wait 3 min</p>
+        <p class="Syntax_body">&#160;</p>
+        <p class="Syntax_body">If Var1 &gt; Attr2 Then</p>
+        <p class="Syntax_body">	{</p>
+        <p class="syntax_body_indent">Var1 = Attr2<br />	Wait Attr1</p>
+        <p class="Syntax_body">}</p>
+        <p class="Syntax_body">Else</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">Inc Var1 <br />	Wait Attr2</p>
+        <p class="Syntax_body">}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Executes a statement or statement block if the Boolean expression is true. If an Else statement is included and the Boolean expression is false, an alternate statement or statement block is executed. For an If...Then statement to be broken into more than one line, the first item on the next line must be <MadCap:keyword term="THEN" />Then, <MadCap:keyword term="AND" />And, or <MadCap:keyword term="OR" />Or. <MadCap:keyword term="IF...THEN" />If...Then statements only apply to the next statement or statement block in a logic. Any statements outside of the Begin and End will execute normally. See Begin and End for examples.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Boolean expression&gt;</p>
+        <p class="p">The condition to be tested.</p>
+        <p class="Component">Then &lt;statement 1&gt; </p>
+        <p class="p">The statement or block to be executed if the condition is true.</p>
+        <p class="Component">Else &lt;statement 2&gt; </p>
+        <p class="p">The statement or block to be executed if the condition is false.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">In the following example an If...Then...Else test is made to see if the simulation clock is less than eight hours. If so, the Client is routed to Office1, otherwise the Client is routed to Office2.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">If Clock(Hr) &lt; 8 Then</p>
+                        <p class="Syntax_body">   Route 1</p>
+                        <p class="CellBody">Else</p>
+                        <p class="Syntax_body">   Route 2</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" />
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Office1</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Client</p>
+                    </td>
+                    <td class="BodyB-Column3-Body2">
+                        <p class="CellBody">Office2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body2">
+                        <p class="CellBody">Move For 5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Begin, End, Do...While, While...Do, and Do...Until.</p>
+    </body>
+</html>

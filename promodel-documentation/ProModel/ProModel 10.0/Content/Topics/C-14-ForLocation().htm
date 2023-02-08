@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1144" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103804"></a>ForLocation()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:system functions:FORLOCATION();FORLOCATION()" />Shift and Break System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">ForLocation()</p>
+        <p class="Syntax_body">If ForLocation() Then Priority 100</p>
+        <p class="Syntax_body">If ForLocation() Then </p>
+        <p class="syntax_body_indent">	Inc Arr1 [1, 2]</p>
+        <p class="Syntax_body">Else</p>
+        <p class="syntax_body_indent">	Inc Arr1 [2, 2]</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">This function returns TRUE if the object executing the shift or break logic is a location.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Shift or break logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Three resources (Agent1, Agent2, and Agent3) and two locations (Counter1 and Counter2) are assigned to a shift. When the locations go off-shift a resource called Manager is used for 10 minutes to close the counters. Because the same shift is assigned to locations and resources, we need to check if the object executing the off-shift logic is a location. The following logic is placed in the off-shift logic:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Three resources (Tech1, Tech2, and Tech3) and two locations (Lab1 and Lab2) are assigned to a shift. When the locations go off-shift a resource called Housekeeping is used for 10 minutes to clean the areas. Because the same shift is assigned to locations and resources, we need to check if the object executing the off-shift logic is a location. The following logic is placed in the off-shift logic:</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">We assign three resources (Oper1, Oper2, and Oper3) and two locations (Mill1 and Mill2) to a shift. When the locations go off-shift, the example uses a resource called Maint for 10 minutes to clean up around the machines. Because we assigned the same shift to locations and resources, we need to check if the object executing the off-shift logic is a location. We place the following logic in the off-shift logic:</MadCap:conditionalText>
+        </p>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">If ForLocation() Then Use Manager For 10 min</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">If ForLocation() Then Use Housekeeping For 10 min</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">If ForLocation() Then Use Maint For 10 min</MadCap:conditionalText>
+        </p>
+        <p class="_rules">See Also</p>
+        <p class="p">ForResource(). Also see <MadCap:xref class="lowercase_no_see" href="C-07-ShiftandBreakLogic.htm#C-07_3886599965_1089612" target="" title="" alt="">Shift and Break Logic on page 1</MadCap:xref>.</p>
+    </body>
+</html>

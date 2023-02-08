@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Running the Model|Simulation Environment">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Trace Controls</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-09-TraceOption.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-09-RunningtheModel.htm">Running the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-09-Run-TimeMenusandControls.htm">Simulation Environment</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Trace Controls</span>
+        </div>
+        <h3><a name="C-09_398201723_1091417"></a><a name="kanchor1517"></a><a name="C-09_398201723_11585"></a>Trace Controls</h3>
+        <p class="p">Controls for troubleshooting and verifying your model are found in the Trace group of the Simulation ribbon. Options such as stepping through simulation events and debugging your model logic.</p>
+        <p class="Graphic">
+            <img src="pm-c9-352-2.jpg" />
+        </p>
+        <p class="p">A trace is a list of events occurring over the course of a simulation in the order in which the simulation engine is executing them.   For example, a trace statement might state <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">“EntA arrives at Loc1, Downtime for Res1 begins.”</MadCap:conditionalText> A trace listing also displays assignments, such as variable and array element assignments. A trace listing of a simulation run may be viewed in several ways through the trace options provided.</p>
+        <h4>Step Events<span class="Bold"><a name="kanchor1518"></a></span></h4>
+        <p class="p">Select this option to step through the trace listing one event at a time. Each time you click the left mouse button, the trace will advance one event. Clicking and holding the right mouse button while in this mode generates a continuous trace.</p>
+        <h4>Continuous<span class="Bold"><a name="kanchor1519"></a></span></h4>
+        <p class="p">Select this option to advance the trace events continuously. This is useful when you do not know exactly where to begin or end the trace. Clicking and holding the right mouse button stops the trace until you release the button.</p>
+        <h4><a name="kanchor1520"></a>Trace Filter</h4>
+        <p class="p">When you view the Trace during simulation, you see a list of all the events that occur as your model is running. Although it may be helpful to view every event in the simulation, there are many times when you will want to focus on just the events that affect specific elements (locations, resources, variables, etc.) of your model.</p>
+        <p class="p">The Trace feature contains an optional, custom filter, which allows you to pick the elements of your model that you wish to view in the Trace window.</p>
+        <p class="Graphic">
+            <img src="pm-c9-352-1.jpg" />
+        </p>
+        <p class="p">From the Custom Trace Options dialog, you may choose which elements of your model you want displayed in the Trace window.</p>
+        <p class="p">The Trace Filter works by showing the specified elements in the trace according to the following:</p>
+        <ul>
+            <li class="li_1" value="1">Specified elements found in the main heading of the Trace will be displayed along with the entire contents of the sub-headings.</li>
+            <li class="li_1" value="2">Specified elements found in a sub-heading will only display the main heading and the sub-heading with the specified element. All other sub-headings of the main heading, which do not contain the specified elements, will not be displayed.</li>
+        </ul>
+        <p class="p">The Enabled button in the Custom Trace Options dialog must be checked for the Trace Filter to take effect.</p>
+        <p class="p">The Search String text box allows you to enter text or logical conditions to display in the Trace window. For example, if you want the Trace window to display only those events when an attribute has a specific value, you can enter something similar to "attr1 = 5" as a logical condition.</p>
+        <h4><a name="kanchor1521"></a>Trace to File</h4>
+        <p class="p">Select this option to log the trace messages out to a text file. Trace statements are automatically written to a &lt;model name&gt;.trc file.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

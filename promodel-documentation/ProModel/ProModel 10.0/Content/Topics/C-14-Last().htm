@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1208" MadCap:lastWidth="1204" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1105198"></a>Last()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Resource-specific system functions:LAST();LAST()" />Resource-Specific System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Last()</p>
+        <p class="Syntax_body">Var1=Last()</p>
+        <p class="Syntax_body">If Last() = 13 Then Var3 = 0</p>
+        <p class="Syntax_body">If Last() = PathNet1.N1 Then Inc Var1</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the name-index number of the node from which a resource has just traveled. Last() can be useful to choose the appropriate graphic or to reset a variable. You can also check the name-index number of the last node by specifying &lt;path network name&gt;. &lt;name of the node&gt;. For example, if you wanted to know if the last node was N5 on the network Net3, you could specify “If Last() = Net3.N5 Then...” in the node entry logic.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Node entry logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">This Entry Logic window shows that whenever a resource enters a particular node a check is made to see if the name-index number of the last node equals one. If so, the resource graphic is changed to Graphic 2, otherwise it is changed to Graphic 3.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Last - Entry Logic window.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5in;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="_rules">See Also</p>
+        <p class="p">Next() and Wait...Until.</p>
+    </body>
+</html>

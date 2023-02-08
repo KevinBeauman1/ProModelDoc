@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="508" MadCap:lastWidth="971">
+    <head>
+    </head>
+    <body>
+        <h1>States or Conditions</h1>
+        <p>States or Conditions Defined</p>
+        <p class="p">The simulation tracks the following conditions:</p>
+        <p class="p">&#160;</p>
+        <table class="table_1">
+            <col style="width: 190px;" />
+            <col style="width: 775px;" />
+            <tbody>
+                <tr>
+                    <td style="text-align: right;font-weight: bold;" class="td_1">% In Use:</td>
+                    <td class="td_1">The percentage of time the resource spent servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> or other resource that was down. This also includes downtime.</td>
+                </tr>
+                <tr MadCap:conditions="PM-PCS Conditionals.PM">
+                    <td style="text-align: right;font-weight: bold;" class="td_1">% Travel To Park:</td>
+                    <td class="td_1">The percentage of time the resource spent traveling to a path node to park or traveling to its downtime node.</td>
+                </tr>
+                <tr MadCap:conditions="PM-PCS Conditionals.PM">
+                    <td style="text-align: right;font-weight: bold;" class="td_1">% Travel to Use:</td>
+                    <td class="td_1">The percentage of time the resource spent traveling to a location or other resource to transport or process an entity, or to service a location or other resource. This includes pick-up time.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% In&#160;Move Logic:</td>
+                    <td class="td_1">The percentage of time the item was moving from one <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> to another during the simulation, including any delay time incurred in move logic, and including any time waiting for a resource to become available when that resource is requested in the move logic.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Waiting:</td>
+                    <td class="td_1">The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was waiting for a resource, another entity or a wait until condition in order to begin processing or move to the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. Any delays in processing move logic (even WAIT statements) are counted as waiting time, including <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Join, Load,</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach actions</MadCap:conditionalText> and Match statements.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% In Operation:</td>
+                    <td class="td_1">The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was actually processing an entity.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Blocked:</td>
+                    <td style="text-align: left;" class="td_1">The percentage of time entities spent waiting for a freed destination.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Empty:</td>
+                    <td class="td_1">The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> had no entities.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Partially Occupied:</td>
+                    <td class="td_1">The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> has entities, but is not filled to capacity.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Full:</td>
+                    <td class="td_1">The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was filled to capacity with entities.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Setup:</td>
+                    <td class="td_1">The percentage of time an operation was being set up during the simulation.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Idle:</td>
+                    <td class="td_1">The percentage of time a resource was available, but not in use.</td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10pt;text-align: right;font-weight: bold;" class="td_1">% Down:</td>
+                    <td class="td_1">The percentage of time a resource was not available due to unscheduled downtime.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

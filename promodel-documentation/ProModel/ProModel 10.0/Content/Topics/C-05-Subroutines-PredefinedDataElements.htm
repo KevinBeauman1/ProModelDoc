@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="2370" MadCap:lastWidth="1466" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089533"></a><a name="C-05_2723800551_Pre-defined data elements;Data elements, pre-defined"></a>Pre-defined Data Elements</h3>
+        <p class="p">The <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> tank submodel provides the following data elements for modeling tanks. Unless otherwise specified, all arrays are single-dimensional and of type integer. Initially, these arrays are 100 elements in size to allow for up to 100 locations. If you define more than 100 locations, you will need to enlarge the array or place tanks toward the beginning of the location list (within the first 100 locations). </p>
+        <p class="p"><a name="C-05_2723800551_TANK_LEVEL array;Array"></a>Tank_Level array   Stores the level of each tank. Since the values in this array directly control the tank gauge and tank statistics, the array MUST be present in every tank model. </p>
+        <p class="p"><a name="C-05_2723800551_TANK_STATE array;Array"></a>Tank_State array   Tracks the state of the tank. </p>
+        <p class="p"><a name="C-05_2723800551_TANK_PRODUCT array;Array"></a>Tank_Product array   An optional array used to record or test the product currently at a tank.</p>
+        <p class="p"><a name="C-05_2723800551_TANK_STATISTICS array;Array"></a>Tank_Statistics array   A two-dimensional array of type real used to record tank level statistics whenever the level changes. Generally, you will never need to reference this array since values automatically update when you use the pre-defined Tank subroutines. All times are in time units defined in the General Information dialog. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> always gathers these statistics but reports them only if you check Basic or Time Series statistics for the tank location. </p>
+        <table style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;width: 100%;" class="TableStyle-Process_Table" cellspacing="0">
+            <col width="48px" class="Column-Column1" />
+            <col width="108px" class="Column-Column2" />
+            <col width="108px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Column</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Description</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Reset After Warm-up</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Last level</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">NC</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Last change time</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Current time in time units defined in the General Information dialog</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">3</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time-weighted level</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">4</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Entries</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">Value of column 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">5</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Max contents</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Value of column 1</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">6</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Last State Change</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Current time in time units defined in the General Information dialog</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">7</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time Idle</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">8</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Cum time Operation</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">9</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Cum time Setup</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">10</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Cum time Filling</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">11</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Cum time Emptying</p>
+                    </td>
+                    <td class="BodyD-Column3-Body3">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyE-Column1-Body4">
+                        <p class="CellBody">12</p>
+                    </td>
+                    <td class="BodyE-Column2-Body4">
+                        <p class="CellBody">Cum time Blocked</p>
+                    </td>
+                    <td class="BodyD-Column3-Body4">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">13</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Cum time Down</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">0</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyB-Column1-Body2">
+                        <p class="CellBody">14</p>
+                    </td>
+                    <td class="BodyB-Column2-Body2">
+                        <p class="CellBody">Current downtime count</p>
+                    </td>
+                    <td class="BodyA-Column3-Body2">
+                        <p class="CellBody">NC</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">As shown in the previous table, the statistics collected in the Tank_Statistics array automatically reset after any warm-up period. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> reports output statistics under Location statistics and Location States by Percentage. When reporting Location statistics for tanks, note the following:</p>
+        <ul>
+            <li class="li_1">Total Entries   The number of units (e.g., gallons, pounds) to enter the tank.</li>
+            <li class="li_1">Avg Minutes Per Entry   Left blank since there is no individual entry for a tank.</li>
+        </ul>
+        <p class="p"><a name="C-05_2723800551_TANK_FILLS array;Array"></a>Tank_Fills array<a name="C-05_2723800551_ACTIVATE"></a>   An optional array used to track the number of transfers to a tank. This is especially useful when you activate multiple Tank_Fill or Tank_Transfer subroutines for a tank and you wish to know when the fills are complete. The user sets the value of Tank_Fills to zero before activating the subroutines, then defines a Wait Until statement after the Activate statement. The Tank_Fills array increments automatically when a Tank_Fill or a Tank_Transfer subroutine executes. See <MadCap:xref class="lowercase_no_see" href="C-05-Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref> for additional information.</p>
+        <h4><a name="C-05_2723800551_Statistics"></a>Statistics</h4>
+        <p class="p_10">Please Note: TS = Tank_Statistics array<br />n = Location index number of tank</p>
+        <h5>Calculating Location Statistics for Tanks</h5>
+        <p class="Syntax_body">Entries = TS [n, 4]</p>
+        <p class="Syntax_body">Avg. Time per Entry = (not applicable)</p>
+        <p class="Syntax_body">Avg. Contents = TS[n,3] / Scheduled Time</p>
+        <p class="Syntax_body">Max Contents = TS [n,5]</p>
+        <p class="Syntax_body">Current Contents = TS [n,1]</p>
+        <p class="Syntax_body">Utilization=100 x TS[n,3] / (Capacity x Scheduled Time)</p>
+        <h5>Calculating Location State Statistics for Tanks</h5>
+        <p class="Syntax_body">%Operation = 100 x TS[n, 8] / Scheduled Time</p>
+        <p class="Syntax_body">%Setup = 100 x TS[n, 9] / Scheduled Time</p>
+        <p class="Syntax_body">%Idle = 100 x TS[n, 7] / Scheduled Time </p>
+        <p class="Syntax_body">%Waiting = 100 - Sum of other percentages</p>
+        <p class="Syntax_body">%Blocked = 100 x TS[n, 12] / Scheduled Time</p>
+        <p class="Syntax_body">%Down = 100 x TS[n, 13] / Scheduled Time</p>
+        <p class="p">To gather statistics on how much of a particular product was processed, you may define variables to record product processing during the simulation.</p>
+    </body>
+</html>

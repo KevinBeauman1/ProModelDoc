@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="644" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120683"></a><a name="C-06_1157716610_68167"></a>Creating <MadCap:keyword term="Pull systems:creating" />Pull Systems</h3>
+        <h4>
+            <MadCap:keyword term="Pull systems:types of" />Types of Pull Systems</h4>
+        <p class="p">A pull system is a system in which locations produce parts only on downstream demand.  There are two types of pull systems: </p>
+        <ul>
+            <li class="li_1">those based on limited buffer or queue sizes.</li>
+            <li class="li_1">those based on more distant “downstream” demand.</li>
+        </ul>
+        <p class="p">The first method, that of limited buffer sizes, is quite easily to model using ProModel.  By simply defining limited capacity locations, a preceding location will not send parts until capacity is available.  This method works fine for most pull systems.  The second method, triggering part movement, based on more distant downstream demand requires use of the Send statement to trigger part movement.</p>
+        <p class="p">&#160;</p>
+        <p class="p">There are additional ways to model pull systems using ProModel.  As you review the modeling requirements of your own pull system, you should verify that these constructs will satisfy your needs.  </p>
+        <p class="p">&#160;</p>
+        <p class="p">This section shows how to use the <MadCap:keyword term="Pull systems:SEND statement:pull systems" />Send statement to model a pull system.  The diagram below shows the pull system we will model.  Orders for finished goods arrive at the OrderQue.  The arriving order triggers the release of a unit from the location Stores.  The order continues to wait at OrderQue until the unit goes through Processes 1 and 2.  At Process_1, Unit processes for two minutes.  At Process_2, Unit processes for four minutes.  Finally, the Unit joins to the requesting order waiting in the OrderQue.  </p>
+        <p class="Graphic">
+            <img src="9_103.jpg" style="width: 198px;height: 153px;" />
+        </p>
+        <h4>Creating the Pull System</h4>
+        <p class="p">Now let's examine the ProModel <MadCap:keyword term="Pull systems:steps to build" />steps to build this pull system. </p>
+        <ol>
+            <li class="li_1">	Define four locations:  Stores, Process_1, Process_2, and OrderQue.</li>
+            <li class="li_1">	Define two entities: Order and Unit.</li>
+            <li class="li_1">	Define the processing as shown previously.</li>
+            <li class="li_1">	Define the arrivals.  Schedule Units to arrive at location Stores.  Schedule Orders to arrive at location OrderQue.</li>
+            <li class="li_1">	The entity Order “drives” the system by sending Units to Process_1 to fulfill the order. In the operation logic at OrderQue, use the <MadCap:keyword term="SEND" />Send statement to send a Unit to Process_1 from location Stores. A corresponding Send rule must be used as a Routing Rule for Unit at Stores.</li>
+            <li class="li_1">	After the Send statement in the operation logic at the OrderQue, use a <MadCap:keyword term="JOIN" />Join statement to join a Unit to an Order.  A corresponding Join rule must be used as a Routing Rule for Unit at Process_2.</li>
+            <li class="li_1">	Place the processing times for the Unit at Process_1 and Process_2.</li>
+        </ol>
+        <p class="p">When you finish, the processing and routing should appear as shown below.</p>
+        <p class="Component">Process Table and Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="48px" class="Column-Column1" />
+            <col width="60px" class="Column-Column2" />
+            <col width="144px" class="Column-Column3" />
+            <col width="36px" class="Column-Column4" />
+            <col width="48px" class="Column-Column1" />
+            <col width="72px" class="Column-Column2" />
+            <col width="48px" class="Column-Column3" />
+            <col width="73px" class="Column-Column4" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Operation (min)</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">&#160;</td>
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Output</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Destination</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Rule</p>
+                    </td>
+                    <td class="HeadD-Column4-Header1">
+                        <p class="CellHeading">Move Logic</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Stores</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Process_1</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Send 1</p>
+                    </td>
+                    <td class="BodyD-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Process_1</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Wait 2</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Process_2</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column4-Body2">
+                        <p class="CellBody">Move For .5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Process_2</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Wait 5</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Unit</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">OrderQue</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">Join 1</p>
+                    </td>
+                    <td class="BodyD-Column4-Body3">
+                        <p class="CellBody">Move For .5</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Order</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">OrderQue</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">Send 1 Unit TO  Process_1</p>
+                        <p class="CellBody">Join 1 Unit</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Order</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">EXIT</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyA-Column4-Body4">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

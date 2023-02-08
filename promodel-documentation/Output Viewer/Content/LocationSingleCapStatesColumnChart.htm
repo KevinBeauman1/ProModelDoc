@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1863" MadCap:lastWidth="929">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText> Single Capacity Column Chart</h1>
+        <MadCap:keyword term="location single capacity column chart" MadCap:conditions="PM-PCS Conditionals.PM" />
+        <MadCap:keyword term="activity single capacity column chart" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        <p>
+            <img src="Resources/Images/LocationSingleCapColumnChart.png" MadCap:mediastyle="@media print { max-height: 4in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/LocationSingleCapColumnChart-pcs.png" MadCap:mediastyle="@media print { max-height: 4in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p">This chart shows the percentage of time single capacity <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> spent in various states during the simulation. Column charts can only display one statistic at a time. This example shows % Operation. Use the Statistics drop-down in the Filter Options panel to select other statistics.</p>
+        <p>
+            <img src="Resources/Images/LocationStatesSingleCapStatsOptions.png" MadCap:mediastyle="@media print { max-width: 1.75in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/LocationStatesSingleCapStatsOptions-pcs.png" MadCap:mediastyle="@media print { max-width: 1.75in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Scheduled Time:</b>	The total amount of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>% Operation:</b> The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was processing an entity.</p>
+        <p class="p"><b>% Setup:</b> The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> spent in setup in order to process the entities.</p>
+        <p class="p"><b>% Idle:</b>	The percentage of time no entities were at the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>, but the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was not down.</p>
+        <p class="p"><b>% Waiting:</b> The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was waiting for a resource, another entity, or a WAIT UNTIL condition in order to begin processing or move to the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>. Any delays in processing move logic (even WAIT statements) are counted as waiting and include <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">JOIN, LOAD,</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach actions</MadCap:conditionalText> and MATCH statements.</p>
+        <p class="p"><b>% Blocked:</b> The percentage of time entities spent waiting for a freed destination.</p>
+        <p class="p"><b>% Down:</b>	The percentage of time the <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> was down due to unscheduled downtimes.</p>
+    </body>
+</html>

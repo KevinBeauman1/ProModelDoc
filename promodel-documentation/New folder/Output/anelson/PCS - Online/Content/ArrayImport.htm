@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Model Elements|Arrays">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Import Data into Arrays</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningModelElements.htm">Defining Model Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Arrays.htm">Arrays</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Import Array Data</span>
+        </div>
+        <h1><a name="kanchor51"></a>Import Data into Arrays</h1>
+        <p>When you import data from a Microsoft Excel<sup>®</sup> spreadsheet into an array, Process Simulator loads the data from left to right (i.e., within a row), and then from top to bottom (i.e., within a column). The limit to the number of rows and columns your arrays have depends upon the version of Excel you are using, the type of array defined (integer, real, expression), and the memory limits of your computer and operating system.</p>
+        <p>Steps to import Excel data into an array:</p>
+        <ol>
+            <li value="1">Click <b>Arrays</b> from the Model Elements group in the Process Simulator ribbon.</li>
+            <li value="2">Select the array record for which you want to import data.</li>
+            <li value="3">Click in the cell of the <b>Import File</b> column. A drop down box will appear with the Import fields to define.</li>
+            <li value="4">In the <b>File</b> field, type the name of the Excel file that you want to use. Alternatively, you may click the <b>Browse</b> button to navigate folders to find and select the Excel file.</li>
+            <li value="5">In the <b>Sheet</b> field, type the exact name of the worksheet within the Excel file that contains the data you want to use.</li>
+            <li value="6">In the <b>Cell Start</b> field, type the cell reference of the starting location of the data. The value stored in this cell will occupy the first position (i.e. the first row and first column) in the array. Type the cell reference (e.g. A1), which is the column letter and row number in the worksheet.</li>
+            <li value="7">In the <b>Cell End</b> field, type the cell reference of the ending location of the data. The value stored in this cell will occupy the last position (i.e. the last row and last column) in the array. Type the cell reference (e.g. A10), which is the column letter and row number. Note: the number of rows and columns of the data to be imported should be no greater than those numbers for the size of the destination array. The data to be imported can be a subset of the full data set in the Excel worksheet.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/ArrayImport.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>Below are descriptions of the fields in the drop down box.</p>
+        <p><b>File</b> — the name of the Excel file from which you want to import data. You may type either a fully qualified path to your Excel file or a path relative to your Visio<sup>®</sup> file. For example, if your Excel file is in the same directory as your Visio file, simply enter the name of the Excel file into this field.</p>
+        <p><b>Sheet</b> — the name of the worksheet in the Excel file from which you will import the array data.</p>
+        <p class="p_10">Note: If your spreadsheet contains only a single data set, Process Simulator will automatically load the data into the array. You do not have to define any cell information unless you want to limit the contents of the array to a portion (i.e. a subset) of the import data set. Importing data into an array requires Microsoft Excel 2016.
+</p>
+        <p><b>Cell Start</b> — the cell in the spreadsheet with the first piece of data to import into the array.</p>
+        <p><b>Cell End</b> — the cell in the spreadsheet with the last piece of data to import into the array. Note: the column letter and/or the row number for this cell must be greater than that provided in the Cell Start box.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

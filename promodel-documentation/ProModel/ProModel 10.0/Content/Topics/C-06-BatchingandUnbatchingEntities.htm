@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="3393" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1120552"></a>
+            <MadCap:keyword term="Entity:batching;Entity:unbatching;Batching;Unbatching" /><a name="C-06_1157716610_87148"></a>Batching &amp; Unbatching Entities</h3>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Batching refers to congregating or consolidating multiple entities of the same or different type for processing or movement purposes.  Batching may be either temporary or permanent.  For temporary batching, use the Group statement.  For permanent batching, use the Combine statement.</p>
+        <h4><a name="C-06_1157716610_66110"></a>Temporary Batching Using <MadCap:keyword term="Entity:batching:GROUP/UNGROUP" />Group/Ungroup</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">The <MadCap:keyword term="GROUP"></MadCap:keyword>Group statement allows you to group entities together and ungroup them at a later time.  You may group entities by individual entity type by defining a process record for the type to group, or group them irrespective of entity type by defining an All process record.  To combine multiple entity types in which you must control the quantity of each type requires controlling the routing which sends parts to the grouping location.  ProModel maintains all of the identities and attributes of the grouped entities and allows them to remain with the individual entities after an <MadCap:keyword term="UNGROUP"></MadCap:keyword>Ungroup command.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">To illustrate how Group/Ungroup works, suppose we want to consolidate 20 incoming entities into a group called Batch. If the current location performs no additional operation steps once you group the entities, you can simply use the statement “Group 20” to group the 20 entities and then specify an output of 1 Batch in the routing. If, on the other hand, the current location performs additional operation steps after the grouping occurs, use the statement “Group 20 as Batch” and define no output routing for the grouped entities. Instead, the entities become a new entity called “Batch” that needs a process record defined afterwards for the same location where you batched them. </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-278-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-278-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Once you accomplish the purpose for which you grouped the entities, such as moving them, you can unbatch the entities using the Ungroup statement as shown next.  Note that after the ungrouping takes place, you must define processes for each potential entity that could have been in the group (alternatively you could define an All process record).</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-278-3.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-278-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <h4>
+            <MadCap:keyword term="Entity:batching:COMBINE" /><a name="C-06_1157716610_13100"></a>Combine Statement</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">ProModel uses the <MadCap:keyword term="COMBINE"></MadCap:keyword>Combine statement to accumulate and consolidate a specified quantity of entities into a single entity, optionally with a different name. The entities may be the same type of entity or they may be different. Combined entities lose their identities and attributes and you cannot ungroup them later. When defining the location, the location capacity where you use the Combine statement should be at least as large as the combined quantity. The following shows the correct syntax for combining 5 Castings into a single entity called Pallet (the location, Out, should have a capacity of at least 5).</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-278-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-279-2.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <h4>
+            <MadCap:keyword term="Entity:batching:LOAD/UNLOAD" /><a name="C-06_1157716610_73623"></a>Load/Unload Statements</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Another method of batching and unbatching involves the <MadCap:keyword term="LOAD"></MadCap:keyword>Load and <MadCap:keyword term="UNLOAD"></MadCap:keyword>Unload statements.  As with the Group statement, ProModel maintains the identities and attributes of the batched entities.  Therefore, when you use the Unload statement, each entity still has its attribute assignments.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">The difference between Load and Group is that Load requires a “base” entity on which you temporarily load other entities that might represent a pallet or container. Also, the entities you are going to load, travel to the loading location on an “If load request” routing rule. </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">In the following example, four Gears are loaded onto a pallet. Pallet is the entity which issues the Load statement. In addition, the example includes a time element (Load 4 in 10 min). This means “load 4 gears or wait 10 minutes, whichever occurs first.” If after 10 minutes only 3 gears arrive, the entity loaded with the 3 gears continues. </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-279-3.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-279-4.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Note that the loaded entity, Gear, has “Load” in the Routing Rule field as shown here. This tells ProModel that the gear only goes to Loc2 when a Load command requests it.</p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-279-3.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" style="text-indent: 6px;">
+            <img src="pm-c6-279-5.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Since the example does not specify an entity type as part of the Load statement, ProModel will load temporarily any entity type waiting for the Load request. To control which entity types the model loads, use the “Iff” option with the Load statement (e.g., Load 4 Iff Entity()=gear).</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">Once the batch moves to its destination, the model uses the Unload statement to break it into individual components (Gear and Pallet).  You must define a routing for the entity Gear after the Unload takes place.  Typical uses for Load/Unload are palletizing operations, AGV systems, and AS/RS systems.</p>
+        <h4>
+            <MadCap:keyword term="Entity:batching:ACCUM" /><a name="C-06_1157716610_36169"></a>Accum Statement</h4>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">The <MadCap:keyword term="ACCUM" />Accum statement is short for “<MadCap:keyword term="Accumulate:see ACCUM" />accumulate.” Its use is slightly different than the Group and Load statements. Accum does not “batch together” entities, but rather holds entities at a location until a certain number accumulate. It behaves much like a gate restricting entities until a certain number arrive at the location. After the required number accumulate, ProModel releases them for downstream processing. This allows you to model a certain type of batching which involves simply the accumulation of parts and their subsequent release—all at a single location.</p>
+        <p class="p" style="margin-top: 2pt;margin-bottom: 2pt;">When using the Accum statement, make sure the capacity of the location where you are using the Accum statement is at least as large as the amount accumulating.</p>
+    </body>
+</html>

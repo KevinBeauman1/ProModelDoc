@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Language Elements and Expressions|Expressions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>String Expressions</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-11-StringExpressions.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-11-LanguageElementsandExpressions.htm#C-11_756594771_1035124">Language Elements and Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-11-Expressions.htm">Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">String Expressions</span>
+        </div>
+        <h3><a name="C-11_756594771_1095062"></a><a name="kanchor1675"></a><a name="C-11_756594771_18883"></a>String Expressions</h3>
+        <p class="p">Any text to be written to a file or displayed on the screen is created with a string expression. String expressions are created from a combination of the following: </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col width="176px" class="Column-Column1" />
+            <col width="88px" class="Column-Column2" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="Normal"><a name="kanchor1676"></a>Character strings</p>
+                    </td>
+                    <td class="BodyD-Column2-Body1"><a name="kanchor1677"></a>Ent()</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2"><a name="kanchor1678"></a>Concatenation operators "$"</td>
+                    <td class="BodyD-Column2-Body2"><a name="kanchor1679"></a>Loc()</td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3"><a name="kanchor1680"></a>Numeric Expressions</td>
+                    <td class="BodyD-Column2-Body3"><a name="kanchor1681"></a>Res()</td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4"><a name="kanchor1682"></a>Char()</td>
+                    <td class="BodyA-Column2-Body4"><a name="kanchor1683"></a>Format()</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">A string expression must begin with a concatenation operator ($) or with a string constant in quotes (i.e., “...”). The concatenation operator combines components together, and must be between all components of a string expression. For example, if Attr1 is 7.83, then the expression <span class="Helv_Reg" style="font-family: Arial;">“STRING1”$ ATTR1 $ “STRING2”</span> evaluates to “String17.83String2.”</p>
+        <p class="p">To output the name of a location, entity, or resource, use the appropriate function inside a string expression: Loc() for locations, Ent() for entities, and Res() for resources. For example, the following logic checks the first ten locations in a model and displays the name of any location that is completely full. </p>
+        <p class="Component">Display name of full location </p>
+        <p class="Syntax_body"><span class="Helv_Reg">Var1 = 1</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Reg">While Var1 &lt;= 10 Do</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Reg">	Begin		If FreeCap(Loc(Var1)) = 0 Then			Display Loc(Var1) $ “is full.”		Inc Var1	End</span>
+        </p>
+        <p class="p">String expressions are valid only as part of the following statements and functions: Display, Pause, Prompt, Stop, Write, Writeline, Trace, Xsub(), and Xwrite.</p>
+        <p class="Component">String expressions</p>
+        <p class="p">If a model had been running for six days, the statement </p>
+        <p class="p_11"><a name="kanchor1684"></a>Display “The simulation ran \n” $ <a name="kanchor1685"></a>Clock(<a name="kanchor1686"></a>day) $ “days.”</p>
+        <p class="p">would display the following dialog box.</p>
+        <p class="Graphic">
+            <img src="mm-c14-397-1.jpg" />
+        </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

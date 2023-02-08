@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="404" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490171"></a>
+            <MadCap:keyword term="EndSimulation;ProModel Application Object:EndSimulation" />EndSimulation</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>EndSimulation</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Terminates a simulation run before completion.  The EndSimulation method will have no effect if called when there is no simulation running.  If running multiple replications, the entire simulation will end (remaining replications will not be run). The output viewer will be launched automatically. </p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">: </span> None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Example</span><span class="_Override" style="font-weight: bold;">: </span>This example loads a model, runs it for 30 minutes (1800 seconds), then terminates the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub QuitSimEarly()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim CurSimTime AS Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Set pmObject = CreateObject(“ProModel”)</p>
+        <p class="objects2">	pmObject.LoadModel (mfg_cost.mod)</p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

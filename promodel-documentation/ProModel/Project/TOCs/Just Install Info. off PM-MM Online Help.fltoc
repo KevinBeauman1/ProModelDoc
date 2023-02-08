@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc>
+  <TocEntry
+    Title="Installation and Registration"
+    Link="/Content/Topics/C-02-InstallationandLicensing.htm#C-02_3483315438_1022667">
+    <TocEntry
+      Title="General Setup Information"
+      Link="/Content/Topics/C-02-InstallationandLicensing.htm#C-02_3483315438_1022683">
+      <TocEntry
+        Title="Hardware Requirements"
+        Link="/Content/Topics/C-02-InstallationandLicensing.htm#C-02_3483315438_1022725" />
+    </TocEntry>
+    <TocEntry
+      Title="Installation Types"
+      Link="/Content/Topics/C-02-InstallationTypes.htm" />
+    <TocEntry
+      Title="Standard Installation Procedure"
+      Link="/Content/Topics/C-02-StandardInstallationProcedure.htm" />
+    <TocEntry
+      Title="Installing .NET Framework"
+      Link="/Content/Topics/Installing .NET Framework.htm" />
+    <TocEntry
+      Title="Network Installation Procedures"
+      Link="/Content/Topics/C-02-NetworkInstallationProcedures.htm">
+      <TocEntry
+        Title="Network Client Installation Procedure"
+        Link="/Content/Topics/OLDC-02 - Network Client Installation Procedure.htm" />
+      <TocEntry
+        Title="Network License Server Setup"
+        Link="/Content/Topics/C-02-NetworkLicenseServerSetup.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Licensing ServiceModel"
+      conditions="PM-MM Conditionals.ServiceModel"
+      Link="/Content/Topics/C-02-LicensingProModelMedModelServiceModel.htm">
+      <TocEntry
+        Title="Checking for Updates"
+        Link="/Content/Topics/C-02-CheckingforUpdates.htm" />
+      <TocEntry
+        Title="Software License Key FAQ"
+        Link="/Content/Topics/C-02-SoftwareLicenseKeyFAQ.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Licensing MedModel"
+      conditions="PM-MM Conditionals.MedModel"
+      Link="/Content/Topics/C-02-LicensingProModelMedModelServiceModel.htm">
+      <TocEntry
+        Title="Checking for Updates"
+        Link="/Content/Topics/C-02-CheckingforUpdates.htm" />
+      <TocEntry
+        Title="Software License Key FAQ"
+        Link="/Content/Topics/C-02-SoftwareLicenseKeyFAQ.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Licensing ProModel"
+      Link="/Content/Topics/C-02-LicensingProModelMedModelServiceModel.htm"
+      conditions="PM-MM Conditionals.ProModel">
+      <TocEntry
+        Title="Checking for Updates"
+        Link="/Content/Topics/C-02-CheckingforUpdates.htm" />
+      <TocEntry
+        Title="Software License Key FAQ"
+        Link="/Content/Topics/C-02-SoftwareLicenseKeyFAQ.htm" />
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

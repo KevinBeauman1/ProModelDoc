@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Processing">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Routing Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-RoutingEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Processing.htm#C-05_2723800551_1087167">Processing</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Routing Edit Table</span>
+        </div>
+        <h3><a name="C-05_2723800551_1087625"></a><a name="C-05_2723800551_23399"></a>Routing Edit Table<a name="kanchor794"></a></h3>
+        <p class="p">The Routing edit table defines the outputs for each process record defined in the Process edit table. The Routing edit table is really just a sub-table to the Process edit table (i.e., all routings that appear in the routing edit table apply to the currently highlighted process), though the two tables appear side by side. Not all process records need to have a corresponding routing. If the routing is omitted, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will search forward in the Process edit table for another process for that entity at that location. So an entity's complete processing at a location could be broken into several records. In that case, only the last process would have a routing. If no routing is defined for at least one of the process records for a given entity and location, an error occurs.</p>
+        <p class="p">Another situation that does not require routing is when an entity changes its name at a location after a <a name="kanchor795"></a>Rename As or <a name="kanchor796"></a>Split As statement. Any time during processing logic that an entity changes its name, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> searches forward in the Processing edit table until it finds a process for the new name at the same location. For example, if the identity of an entity is changed through a <a name="kanchor797"></a>Rename As statement in the operation logic, then no routing block will apply to the old entity. Instead, the newly named entity will be routed by the process for the new name. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Rename.htm#C-14_4292047180_1106612" title="" alt="">Rename</a>).</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-149-1.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p">The fields of the Routing edit table are as follows:</p>
+        <p class="p"><b>Blk</b><a name="kanchor798"></a>   This field contains the block number for the current routing block. A routing block consists of one or more alternative routings from which one is selected based on the block rule (e.g., a list of routings where one is selected based on the most available capacity). Since all of the routings using the same rule are part of the same block, only the first line of each routing block contains a route block number. If no routing blocks have been referenced explicitly in the operation logic (for example “Route n”), all routing blocks will be executed in sequence upon completion of the operation logic (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Route.htm#C-14_4292047180_1107007" title="" alt="">Route</a>). Multiple routing blocks are processed sequentially with the next block being processed when all of the entities in the previous block have begun executing any move logic defined. To change the routing block number or add a new routing block, see the discussion on the Routing Rule dialog box later in this section.</p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">The following example shows a process record with two separate routing blocks. Note that both routings will execute upon completion of the operation time because no <a name="kanchor799"></a>Route statement has been specified. One EntB gets routed to Loc2 and one EntC gets routed to Loc3. </MadCap:conditionalText>
+        </p>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait N(5,.3)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                        <p class="CellBody">2</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntB</p>
+                        <p class="CellBody">EntC</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2</p>
+                        <p class="CellBody">Loc3</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                        <p class="CellBody">Move For 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p"><b>Output</b><a name="kanchor800"></a>   If a routing is defined, the name of the entity resulting from the operation must be entered here. This name may be the same as the entity that entered, or it may be another name, or even several names, each on a different line. Using another name works much like a <a name="kanchor801"></a>Rename-As statement, except that the entity is routed according to the routing block instead of being processed further at the same location. Using several names on different lines is similar to having a <a name="kanchor802"></a>Split As statement in conjunction with a Rename-As statement. The difference is that multiple routing blocks are processed sequentially while split entities get processed concurrently. If the reserved word <a name="kanchor803"></a>All was used as the incoming entity type for this process, it may also be entered here. Otherwise, every entity entering the location will change to the specified output entity. (See the discussion on using All in the Entities section.)</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="5-5-6.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p">The entity list box defaults to the current field entity, the last entity selected, or the first entity defined.</p>
+        <p class="p">To better anticipate the entity entry likely to be made, the entity highlighted in the list box defaults first to the current field entity, then to the last entity selected, and finally to the first entity defined. </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">The example below shows how an incoming entity, EntA, changes identity and becomes an EntB upon exiting location Loc1. This is done by simply specifying the new entity name as the output entity.</MadCap:conditionalText>
+        </p>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Process Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="66px" class="Column-Column2" />
+            <col width="145px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="CellBody">Wait T(2,5,8)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Routing Table</MadCap:conditionalText>
+        </p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="66px" class="Column-Column3" />
+            <col width="44px" class="Column-Column4" />
+            <col width="77px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">&#160;</td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" data-mc-conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">EntB</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">Loc2</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">First</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">Move For 1</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p"><b>Destination</b><a name="kanchor804"></a>   This is the location to which entities are to move after the operation is complete. Optionally, the destination may be followed by a comma and a routing priority. If no priority is specified, the default is zero. The location name may be typed directly in the field, or selected by either clicking in the field and then on the heading button, or double clicking in the field. The resulting dialog box looks like this:</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="5-5-11.jpg" />
+        </p>
+        <p class="p">Instead of entering a location name, you may use the Loc() function which returns the location name corresponding to the index designated by an expression. For example, Loc(5) routes to the fifth location defined or the fifth record in the location edit table. You can also specify variable destinations such as Loc(Att4). However, the <a name="kanchor805"></a>Loc() function may not be used in conjunction with the <a name="kanchor806"></a>BY TURN, <a name="kanchor807"></a>Until FULL, <a name="kanchor808"></a>CONTINUE, and <a name="kanchor809"></a>If EMPTY routings. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Loc().htm#C-14_4292047180_1105383" title="" alt="">Loc()</a> for more information.)</p>
+        <p class="p"><b>Rule</b><a name="kanchor810"></a>   This field defines the rule for selecting the route destination. An output quantity may also be specified as part of the rule. This quantity works much like the <a name="kanchor811"></a>Split As statement. (See the following discussion on the Routing Rule dialog box.) To open the Routing Rule Dialog box, double click in the field or click in the field and then on the heading button. </p>
+        <p class="p"><b>Move Logic</b><a name="kanchor812"></a>   The Move Logic window allows you to define the method of movement as well as any other logic to be executed between the time the next location is claimed for routing to the time the entity arrives, but not yet enters, the next location. To open the Move Logic window, double click in the field or click the heading button. This window allows you to manually edit the logic or click on the Build button to use the Logic Builder. It also provides other convenient buttons for editing and printing the move logic. For single move statements it is easiest to right click in the move field to open the Logic Builder. If left blank, it is assumed that no time, resources, or path networks are needed to make the move. </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

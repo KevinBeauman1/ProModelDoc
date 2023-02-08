@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="4336" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-09_398201723_1093133"></a>
+            <MadCap:keyword term="Dynamic Plots" /><a name="C-09_398201723_22800"></a>Dynamic Plots</h3>
+        <p class="p">Dynamic plots allow you to select certain metrics for various model elements and observe value changes for those metrics dynamically as the model runs.  Configurations of one or more plot windows can be saved and later retrieved to quickly view a customized set of graphs.</p>
+        <p class="p">Features include:</p>
+        <ul>
+            <li class="li_1">Up to six elements many be graphed on the same chart at the same time.</li>
+            <li class="li_1">More than one chart may be active at a time.</li>
+            <li class="li_1">Charts can be resized.</li>
+            <li class="li_1">Plots display a meaningful scale for both axes.</li>
+            <li class="li_1">Improved customization for graph appearance</li>
+            <li class="li_1">Chart settings may be saved to use over from one simulation run to the next.</li>
+            <li class="li_1">Dynamic plots work with multiple replications and scenarios.</li>
+        </ul>
+        <h3>Basic Operation</h3>
+        <p class="p_10">Please Note: The Dynamic Plot dialog is only accessible during simulation run-time. If you will be creating saved chart views, you may wish to pause the simulation, define Chart views, then resume the simulation.</p>
+        <h4>Starting Dynamic Plots</h4>
+        <p class="p">Dynamic plots are set up using the <span class="Bold" style="font-weight: bold;">Create Plot</span> button during simulation.  In the View group on the Simulation ribbon you will find two buttons, <span class="Bold" style="font-weight: bold;">Create Plot</span><span class="_Override" style="font-weight: bold;"> <![CDATA[ ]]></span>and <span class="Bold" style="font-weight: bold;">Plot Configurations</span></p>
+        <p class="Graphic">
+            <img src="pm-c9-355-1.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">New</span> opens a window similar to the one below.</p>
+        <p class="Graphic">
+            <img src="pm-c9-355-2.jpg" MadCap:mediastyle="@media print { max-width: 3.0in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <h4>Setting up a Plot</h4>
+        <h5>Tree View</h5>
+        <p class="p">The tree view represents a hierarchical list of all plottable items in the model.  Expanding and collapsing of tree items works in a manner consistent with standard Windows tree controls, including, but not necessarily limited to, double-clicking on a parent item, clicking on plus or minus graphic next to a parent item, and using the plus and minus keys on the number pad of most keyboards.  When a subtree is fully expanded, individual plottable items are shown, as below:</p>
+        <p class="Graphic">
+            <img src="pm-c9-355-3.jpg" MadCap:mediastyle="@media print { max-width: 3.0in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p">Each plottable item displays a checkbox to its left.  When checked, the item is added to the list of currently plotted items below the tree view and the chart view begins to plot the value of the item.  When unchecked, the item is removed from the list of currently plotted items, and the item is removed from the chart view.  Items can also be added or removed from the chart view by double-clicking the item.  If the item was not checked, this will check the box next to the item, add it to the current item list and the chart view, and switch immediately to the chart display.  If the item was checked, this will uncheck the box next to the item, remove it from the current item list and the chart view, and switch immediately to the chart display.</p>
+        <p class="p">The maximum number of statistics that can be plotted on a single chart is six.  When six items are being charted and you attempt to add an additional item by either clicking the box next to the item or by double-clicking the item, nothing will happen and no changes to the chart will take place.</p>
+        <h5>Statistic List</h5>
+        <p class="p">The item list below the tree view contains the items currently being graphed, arranged into two columns:  a label and a statistic name.  The label initially consists of only the text directly right of the item icon in the tree view, while the statistic name is composed of the names of the items ancestor nodes and the name of the item node itself.  For example, for the "Avg Min per Entry" item under the Input location, the label would initially be set to "Avg Min per Entry" and the statistic name would be "Locations\Input\Avg Min per Entry."  </p>
+        <p class="p_10">Please Note: When you click on the Label portion of the item in the list to select it and then click again, the label becomes editable, and you can type over or edit the existing text.  This text becomes the new label for the item, and will now be displayed in the legend in the chart view.</p>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Remove</span> button removes the selected item, if any, from the list, unchecks it in the tree view, and removes it from the chart view.  Clicking the <span class="Bold">Clear</span> button does this for every item in the statistic list.</p>
+        <p class="p">Clicking the dividing lines between headings and dragging left or right resizes the columns in the statistic list.</p>
+        <h5>Chart View</h5>
+        <p class="p">The chart view is where graphical representations of changing model elements are displayed.  It consists of a chart area and, optionally, any combination of the following:  toolbar, legend, x- and y-axis scales, x- and y-axis labels, vertical and horizontal grid lines, and a chart title.  An example of a chart view is shown below.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Dynamic Plots - Option 1 Throughput.png" MadCap:mediastyle="@media print { max-width: 4in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p">The x-axis indicates time elapsed from the start of the simulation, measured in clock precision units specified in the Simulation Options dialog. The y-axis measures values of the items being plotted. Both axes are re-scaled when necessary so that all data points fit within the chart area. When in the chart view, the maximize button in the title bar expands the chart itself to completely fill the area within the dialog, removing the “Stats to Plot” and “Chart” tabs and extra spacing. This may be helpful when you want to size the chart window as small as possible and still view the chart update. Clicking the minimize button will restore the chart to its normal state. The items being plotted are color-coded and the key is on the right-hand side of the window.  Many of the chart options such as title and colors are customizable; simply click the right mouse button and select<span class="_Override" style="font-weight: bold;"> Properties…</span> from the context sensitive menu options.</p>
+        <h4>Dynamic Plot Configurations</h4>
+        <p class="p"><span class="Bold"><b>Plot Configurations</b> <![CDATA[ ]]></span> is disabled if no saved configurations exist for the model and no dynamic plot windows are open.  If enabled, selecting it opens a dialog box like the one below.  The dialog box consists of a list box containing the names of any saved dynamic plot configurations for the model, an edit field, and Load, Rename, Delete, Save, and Exit button.</p>
+        <p class="Graphic">
+            <img src="pm-c9-357-1.jpg" MadCap:mediastyle="@media print { max-width: 2.5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p">If you select a configuration from the list and click <span class="Bold">Load</span>, the indicated saved configuration of chart(s) will be loaded, with all of the previous settings as far as selected data items, chart style, colors, fonts, visible elements, screen position and size, etc.  If any of the previously selected data items no longer exist in the model, they will simply not be displayed.   For example, if a statistic had been selected for a location that was later deleted from the model, it will no longer be selected.</p>
+        <p class="p">Double-clicking on a configuration in the list has the same effect as selecting it and clicking the <span class="Bold">Load</span> button.</p>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Delete</span> button removes the selected configuration from the list and deletes the associated data from the model.</p>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Rename</span> button changes the name of the currently selected configuration to the text in the <span class="Bold">Save/Rename As</span> edit field.</p>
+        <p class="p">Clicking the <span class="Bold" style="font-weight: bold;">Save</span> button saves all settings of any open dynamic plot windows, including selected data items, chart style, colors, fonts, visible elements, screen position and size to a configuration with the name specified in the edit field.  If the name matches one of the configurations in the configuration list, this data will replace the previous data for that name.</p>
+        <p class="p">The <span class="Bold" style="font-weight: bold;">Save</span> button does not actually save data into the model file.  Rather, it creates or modifies a set of configuration data associated with a particular configuration name in memory and tags the model as being modified.  If you exit the program, load a model, or execute the New command from the File menu you will be prompted to save the model.  Using the <span class="Bold" style="font-weight: bold;">Delete</span> or <span class="Bold" style="font-weight: bold;">Rename</span> buttons in the configuration dialog also tags the model as modified. </p>
+        <h3>
+            <MadCap:keyword term="New &amp; modified statements and functions;What’s new:statements and functions;Statements:new;Functions:new">
+            </MadCap:keyword>Advanced Operation</h3>
+        <p class="p">To enhance your simulations and presentations you can turn your dynamic plots on and off using the <span class="Bold">DynPlot “”</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span> statement in your model logic.  Predefine the statistics to be graphed and a chart name, then open your plot through subroutines or processing logic. </p>
+    </body>
+</html>

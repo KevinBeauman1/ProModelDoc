@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="291" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490528"></a>
+            <MadCap:keyword term="ShowTranslationDlg;ProModel Application Object:ShowTranslationDlg" />ShowTranslationDlg</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>ShowTranslationDlg <span class="_Override" style="color: #0000ff;">Status</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Shows or hides the translation dialog.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>: </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Status</span>	(Boolean) True displays the dialog, False hides the dialog.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:  </span>Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, sets the option to hide the Translation dialog, then runs the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub HideIt()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.ShowTranslationDlg <span class="_Override" style="color: #0000ff;">False</span></p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

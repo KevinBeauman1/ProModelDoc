@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining a Process|Defining Connection Properties">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Conveyor Properties</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningAProcess.htm">Defining a Process</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="DefiningConnectionProperties.htm">Defining Connection Properties</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Conveyor Properties</span>
+        </div>
+        <h1><a name="kanchor31"></a>Conveyor Properties</h1>
+        <h4><i>(Available in the Material Handling Edition)</i>
+        </h4>
+        <p>The <b>Conveyor</b> properties allow you to define the material handling movement of entities from one activity or station to another. </p>
+        <p>Right-click on a connector, choose Properties, and the <b>Conveyor</b> shape properties window displays.</p>
+        <p>There are Five sections found in the <b>Conveyor</b> properties window.</p>
+        <ul>
+            <li value="1">Route Type</li>
+            <li value="2">Availability</li>
+            <li value="3">Downtimes</li>
+            <li value="4">Notes</li>
+            <li value="5">Advanced</li>
+        </ul>
+        <p>
+            <img src="Resources/Images/conveyor properties.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><b>Name</b>   The name of the conveyor.
+        </p>
+        <p><b>Capacity</b>   The limited number of entities that can reside on the conveyor. Typically this is set to infinite and capacity is defined by the size of the entity and length of the conveyor.</p>
+        <p><b>Length</b>   The length of the conveyor in feet or meters.</p>
+        <p><b>Speed</b>   The speed of the conveyor in FPM or MPM.<![CDATA[
+        ]]></p>
+        <p><b>Accumulating</b>   Check to set conveyor to be accumulating; unchecked to set as non-accumulating.</p>
+        <p><b>Entity Orientation</b>   Entities will enter the conveyor either lengthwise or widthwise.</p>
+        <p><b>Hourly Cost</b>   The cost assigned to the operation of the conveyor.</p>
+        <h2>Route Type</h2>
+        <p>The Route Type section of the Routing properties will change depending on the type of route selected:</p>
+        <ul>
+            <li value="1"><b>Percentage</b>   The entity will select this route the specified percentage of time.</li>
+            <li value="2"><b>Conditional</b>   The entity will select this route if the condition specified is true.</li>
+            <li value="3"><b>Most Available</b> Routes to the most available capacity. If no capacity is available at any of the activities listed, the first one that becomes available is selected. Use the Most routing rule to equalize queues in front of workers. This rule is useful in cases where inventory levels need to be balanced among several downstream queues.</li>
+            <li value="4"><b>Until Full</b>   This rule continues to direct all output to the first location specified until it fills to capacity and then to the next location until it fills and so on. If all locations are full, the first one that becomes available is selected.</li>
+            <li value="5"><b>Outlet</b>   The entity will select this route if all other routes are unavailable, because they are off-shift or have no available capacity.</li>
+        </ul>
+        <h2><a name="Availability"></a>Availability</h2>
+        <p>
+            <img src="Resources/Images/conveyor availability.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p><strong class="strong_1">Shift Calendar</strong> &#160;&#160;A shift calendar can also be assigned to this conveyor. If a shift calendar is assigned, the conveyor will only be available during the time defined. Use <b>Calendar Editor</b> to define your shift calendar (.pmcal) file. Enter the file name in the field or browse and select one from your computer.</p>
+        <p><strong class="strong_1">Interrupt</strong> Check this option to interrupt the resource from its current task when it is time to go on break or off shift.</p>
+        <h2><a name="Downtimes"></a>Downtimes</h2>
+        <p>
+			Downtimes are used to model interruptions in the processing of entities at conveyors. Downtimes may represent scheduled interruptions such as shifts, breaks, or scheduled maintenance. Or, they may represent unscheduled, random interruptions such as equipment failures. Usage based downtimes can only be defined for single capacity conveyors. The amount of time the conveyor is down and the timing for going down are defined in this section.
+</p>
+        <p>
+            <img src="Resources/Images/ActivityDowntimes.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" /><![CDATA[		]]></p>
+        <p><strong class="strong_1">Basis</strong> Three types of downtimes are available:</p>
+        <ul>
+            <li class="li_1" value="1"><strong class="strong_1">Scheduled:</strong> A scheduled downtime is one that is planned for, and thus taken into account in the output statistics as such. The time spent in a scheduled downtime will be deducted from the total scheduled hours reported in the output statistics and, therefore, will not be considered in computing utilization, percent down, and so on.</li>
+            <li class="li_1" value="2"><span class="c_Override_1" style="font-weight: bold;">Unscheduled:</span> Unscheduled downtimes are not planned for and will appear as such in the output statistics.</li>
+            <li class="li_1" value="3"><span class="c_Override_1" style="font-weight: bold;">Usage:</span> Usage downtimes are used to model downtimes that occur after being in use for a certain amount of time, such as if a machine fails due to wear after so many hours of operation. Usage downtimes are different from scheduled and unscheduled downtimes because usage downtimes are based on operation time, which does not include blocked time. Scheduled and unscheduled downtimes are based on total elapsed simulation time (operation time, blocked time, idle time).</li>
+        </ul>
+        <p><span class="c_Override_1" style="font-weight: bold;">Frequency</span>&#160;The clock time (usage time for usage downtimes) between the start of successive downtime occurrences. This option may be an expression. This field is evaluated as the simulation progresses, so the time between downtimes can vary.</p>
+        <p><strong class="strong_1">First Time</strong>&#160;The time of the first downtime occurrence. If this field is left blank, the first clock downtime will occur according to the time in the frequency field.</p>
+        <p><strong class="strong_1">Interruptive</strong> If this box is checked, any processing at the conveyor will be immediately put on hold for the duration of the downtime. If unchecked, the downtime will begin as soon as any in-progress processing at the conveyor is completed.</p>
+        <p><strong class="strong_1">Time</strong>&#160;The duration of the downtime.</p>
+        <p><span class="c_Override_1" style="font-weight: bold;">Resource</span> Optionally, select a resource required by the conveyor for the downtime.</p>
+        <p><strong class="strong_1">Priority</strong>&#160;If you have chosen a resource to use for the downtime, you may also choose a priority for capturing the resource. When the downtime occurs at the conveyor, it will attempt to get the resource using this priority. If the priority is set to Interrupt, the resource will be preempted from the work it is performing to perform the downtime at this conveyor.</p>
+        <p><strong class="strong_1">Disable</strong>&#160;Check this box to disable the downtime during simulation. This is useful for ignoring the downtime without deleting it from the list.</p>
+        <h2>Notes</h2>
+        <p>Enter any notes you would like to make in regards to the route. </p>
+        <h2>Advanced</h2>
+        <p><![CDATA[   ]]><b>Statistics</b> Checked if statistics are to be collected</p>
+        <p><i>(Autodesk Edition)</i>
+        </p>
+        <p><b>Export Asset</b> Checked if asset are to be exported to AutoCAD&#160;or Inventor</p>
+        <p>&#160;</p>
+        <h3>Conveyor Rules</h3>
+        <p>Conveyors are available in the Material Handling supported editions of Process Simulator. please see the below validation diagram for where they can and cannot be used:</p>
+        <table style="border-top-left-radius: 1px;border-top-right-radius: 1px;border-bottom-right-radius: 1px;border-bottom-left-radius: 1px;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">Incoming
+ connector</td>
+                    <td class="td_1">Object</td>
+                    <td class="td_1">Outgoing connectors</td>
+                    <td class="td_1">Allowed</td>
+                    <td class="td_1">Notes</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrival</td>
+                    <td class="td_1">Station</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">Yes</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrival</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrival</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">One Conveyor</td>
+                    <td class="td_1">Yes</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrival</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Multiple Conveyors</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrival</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">&lt;none&gt;</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&lt;any&gt;</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Routing to a storage</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">Station, with capacity</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">Yes</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">Since the station won't get
+ translated, its ambiguous on which route to really use</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Multiple Conveyors</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">One Conveyor</td>
+                    <td class="td_1">Yes</td>
+                    <td class="td_1">However, the route portion of
+ the conveyor is ignored and should be disabled in the UI</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Conveyor</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">Yes</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Multiple
+ Conveyors</td>
+                    <td class="td_1">Station, no capacity</td>
+                    <td class="td_1">Route</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Conveyor</td>
+                    <td class="td_1">Storage</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&lt;any&gt;</td>
+                    <td class="td_1">Storage</td>
+                    <td class="td_1">Conveyor</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Conveyor</td>
+                    <td class="td_1">Activity, is submodel</td>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">Activity, is submodel</td>
+                    <td class="td_1">Conveyor</td>
+                    <td class="td_1">No</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

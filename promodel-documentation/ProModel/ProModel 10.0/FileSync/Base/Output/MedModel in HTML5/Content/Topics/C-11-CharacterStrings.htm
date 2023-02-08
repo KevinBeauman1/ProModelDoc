@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Language Elements and Expressions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Character Strings</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-11-CharacterStrings.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-11-LanguageElementsandExpressions.htm#C-11_756594771_1035124">Language Elements and Expressions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Character Strings</span>
+        </div>
+        <h2><a name="C-11_756594771_1091021"></a>
+            <MadCap:keyword term="Language elements:character strings;Character strings;Strings:character" />Character <MadCap:keyword term="Expressions:string" />Strings</h2>
+        <p class="p">A string is any collection of characters enclosed in quotes, such as “Now Boarding.” Unlike some programming languages, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> uses character strings exclusively for output either to a file or to the screen. Strings may contain any of the 256 <MadCap:keyword term="ASCII:characters;Characters:ASCII" />ASCII characters. (ASCII characters not on the keyboard can be included in string expressions with the <MadCap:keyword term="CHAR()" />Char() function.) Strings may include keywords and names, but those keywords and names will not be executed in or used by the logic. </p>
+        <p class="p">Additionally, the symbol “\n” can be used to divide a string into multiple lines when it is output, as in the example below. </p>
+        <p class="p">The statement, <MadCap:keyword term="DISPLAY" />Display “The simulation \nis half over.” displays this dialog box:</p>
+        <p class="Graphic">
+            <img src="mm-c11-391-1.jpg" />
+        </p>
+        <p class="Component">Examples of character strings</p>
+        <p class="Syntax_body">	“EntA exited the system.”</p>
+        <p class="Syntax_body">	“Location 3 is operating at capacity.”</p>
+        <p class="Syntax_body">	“<MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>”</p>
+        <p class="p">Although <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> does not provide string variables, it does allow the names of model elements to be stored in variables and attributes as name-index numbers (see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-11-Numbers.htm#C-11_756594771_1091001" title="" alt="" xrefformat="{paratext}">Name-Index Numbers</a>). The name referenced by a name-index number may be used in statements and output to the screen or a file with the <MadCap:keyword term="ENT()" />Ent(), <MadCap:keyword term="LOC()" />Loc(), and<MadCap:keyword term="RES()" /> Res() functions. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-11-StringExpressions.htm#C-11_756594771_1095062" title="" alt="" xrefformat="{paratext}">String Expressions</a> for more information.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="461" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086608"></a>Multiple Resource Graphics<MadCap:keyword term="Resources:multiple resource graphics;Graphics:resource:multiple" /></h3>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows you to define several different graphic icons for the same resource. For example, you may wish to change the color of a resource whenever it becomes unavailable due to an unscheduled downtime. Resource graphics for dynamic resources may be changed during a simulation by using the <span class="_Override" style="text-transform: uppercase;"><MadCap:keyword term="GRAPHIC"></MadCap:keyword>Graphic </span>statement (see <MadCap:xref class="lowercase_no_see" href="C-14 - Graphic.htm#C-14_4292047180_1104295" target="" title="" alt="">Graphic on page 1</MadCap:xref>) in either the node or downtime logic. The Graphic statement for static resources can only be used in downtime logic, however, any second and third graphics are automatically used when static resources are busy or down, respectively. If no second and third graphics are defined, the resource graphic turns green when in use and red when down.</p>
+        <p class="How_to_title">How to assign <MadCap:keyword term="Graphics:multiple:assign to resource"></MadCap:keyword>multiple graphics to a resource:</p>
+        <ol>
+            <li class="li_1_how_to_step">Select <span class="_Override" style="font-weight: bold; text-decoration: none;">R</span><span class="_Override" style="font-weight: bold;">esources </span>from the <span class="_Override" style="font-weight: bold;">Build </span>menu.</li>
+            <li class="li_1_how_to_step">Highlight the desired resource in the Resources edit table.</li>
+            <li class="li_1_how_to_step"><span class="_Override" style="font-style: italic;">Uncheck </span>the New box in the Resource Graphics window.</li>
+            <li class="li_1_how_to_step">Click on the next blank resource graphic cell in the Resource Graphics window.</li>
+            <li class="li_1_how_to_step">Select the desired resource icon.</li>
+            <li class="li_1_how_to_step">Change the color, rotation, or other aspect of the new graphic by clicking on the Edit button. </li>
+            <li class="li_1_how_to_step">An example of a single resource with multiple graphics is given on the following page.</li>
+        </ol>
+        <h4>
+            <MadCap:keyword term="Resources:multiple resource graphics:example;Graphics:resource:multiple" />Multiple Resource Graphics Example</h4>
+        <p class="p" style="margin-top: 6pt;margin-bottom: 7pt;font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="8_156.png" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <p class="p" style="margin-top: 6pt;margin-bottom: 7pt;font-family: 'Times New Roman';font-weight: bold;font-size: 12pt;" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="8_158.png" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <p class="p">This example shows a forklift with two different orientations. You may define as many graphics as needed for each resource.</p>
+        <p class="p_10">Please Note: When changing the graphic for a resource in downtime logic, or in the case of dynamic resources, node logic, the number after the word <MadCap:keyword term="GRAPHIC" />Graphic refers to the cell number in the Resource Graphics window as shown above. For example the statement Graphic 2 would change the forklift to the icon in cell number 2. The default graphic is the graphic in cell number 1 if none is specified. See <MadCap:xref class="lowercase_no_see" href="C-14 - Graphic.htm#C-14_4292047180_1104295" target="" title="" alt="">Graphic on page 1</MadCap:xref> for more information.</p>
+    </body>
+</html>

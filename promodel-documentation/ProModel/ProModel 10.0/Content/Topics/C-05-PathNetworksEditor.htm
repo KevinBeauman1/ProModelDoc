@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2655" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086275"></a>Path Networks Editor<MadCap:keyword term="Path networks:editor" /></h3>
+        <p class="p">The Path Networks Editor consists of an edit table with fields for defining basic information about each network, such as the network name, the type of network (Non-Passing or Passing), and the basis for movement along the network (Speed and Distance or Time). Clicking on the appropriate heading button will bring up a table for defining nodes, path segments, and location node interfaces.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c3-53-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-118-1.jpg" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;">
+            </img>
+        </p>
+        <p class="p">The following explains each field of the Path Networks edit table.</p>
+        <p class="p"><b>Graphic</b>
+            <MadCap:keyword term="Path networks:define:color of path network">
+            </MadCap:keyword>   For passing or non-passing path networks, this button displays the Path Color dialog, which allows you to define the color of the path network. Click on the heading button or double click in this field to bring up the graphic dialog. Both dialogs allow you to specify whether or not the network will be visible at run time. </p>
+        <p class="p"><b>Name</b>
+            <MadCap:keyword term="Path networks:name">
+            </MadCap:keyword>   A name that identifies the path network. For more information about valid names, see <MadCap:xref class="lowercase_no_see" href="C-11-Names.htm#C-11_756594771_1090808" target="" title="" alt="">Names on page 1</MadCap:xref>.</p>
+        <p class="p"><b>Type</b>
+            <MadCap:keyword term="Path networks:types:passing;Path networks:types:non-passing">
+            </MadCap:keyword>   Set this field to Non-Passing if you want entities and resources to queue behind one another on the path network. If a path is Non-Passing, entities may not pass each other, even if an entity is traveling at a faster speed than the one in front of it. Set this field to Passing if you want entities or resources to pass each other on the path network.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">A "Crane" option is also available, which is described in more detail in the section <MadCap:xref class="lowercase_see" href="C-06-CraneSystems.htm#C-06_1157716610_1319505" target="" title="" alt="">Crane Systems</MadCap:xref>.</p>
+        <p class="p"><b>T/S</b>
+            <MadCap:keyword term="Path networks:time measurement;Path networks:speed/distance measurement">
+            </MadCap:keyword>   Set to either <MadCap:keyword term="Time"></MadCap:keyword><b>Time</b> <b>or</b> <MadCap:keyword term="Speed:and distance"></MadCap:keyword><b>Speed and Distance</b> as the basis for measuring movement along the network. See the discussion on Automatic Time and Distance Calculation later in this section for more information.</p>
+        <p class="p"><b>Paths</b>
+            <MadCap:keyword term="Path networks:paths">
+            </MadCap:keyword>   The number of path segments in the network. Clicking on the heading button opens the Path Segment edit table where the user may define the network's node to node connections. The Path Segment edit table is covered in more detail later in this section.</p>
+        <p class="p"><b>Interfaces</b>
+            <MadCap:keyword term="Path networks:location interface points">
+            </MadCap:keyword>   The number of location-node interfaces in the path network. If an entity will be picked up or dropped off at a particular location by a resource, that location must connect to a node through a location-node interface. Clicking on the heading button opens the Interfaces edit table where the user may define nodes that connect to processing locations. The Interfaces edit table is covered in more detail later in this section.</p>
+        <p class="p"><b>Mapping</b>
+            <MadCap:keyword term="Path networks:mapping">
+            </MadCap:keyword>   The number of entries in the Mapping edit table. Clicking on the heading button opens the Mapping edit table where the user may map destinations to particular branches of the network. (The Mapping edit table is covered in more detail later in this section.) </p>
+        <p class="p"><b>Nodes</b>
+            <MadCap:keyword term="Path networks:nodes">
+            </MadCap:keyword>   The number of nodes defined in the Nodes edit table. Nodes are created automatically when graphically defining path segments. Click on this heading button to open the Node edit table, which may be used to define nodes manually or set Node Limits on one or more nodes. Nodes may also be used to control a resource's behavior through node logic or search routines such as work and park searches (see <MadCap:xref class="lowercase_no_see" href="C-05-NodesEditTable.htm#C-05_2723800551_1086477" target="" title="" alt="">Nodes Edit Table on page 1</MadCap:xref>). The Nodes edit table is covered in more detail later in this section. </p>
+        <p class="How_to_title">How to create a path network graphically<MadCap:keyword term="Path networks:define:graphically"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Set the default time and distance values per grid unit from the Grid dialog box.</li>
+            <li class="li_1">Choose <span class="_Override" style="font-weight: bold;">Path </span><span class="_Override" style="font-weight: bold;text-decoration: underline;">N</span><span class="_Override" style="font-weight: bold;">etworks... </span>from the <span class="_Override" style="font-weight: bold;text-decoration: underline;">B</span><span class="_Override" style="font-weight: bold;">uild </span>menu.</li>
+            <li class="li_1">Enter the name of the network in the Path Networks edit table.</li>
+            <li class="li_1">Select either <span class="_Override" style="font-weight: bold;">Passing</span><span class="Normal_Char"> or</span><span class="_Override" style="font-weight: bold;"> Non-passing </span>as the network type. </li>
+            <li class="li_1">Select either <span class="_Override" style="font-weight: bold;">Speed and Distance </span>or <span class="_Override" style="font-weight: bold;">Time </span>as the travel basis.</li>
+            <li class="li_1">Click on the <span class="_Override" style="font-weight: bold;">Paths... </span>heading button to open the Path Segment edit table.</li>
+            <li class="li_1">Lay out the network using the mouse buttons as described below.</li>
+        </ol>
+        <p class="How_to_title">How to create path segments<MadCap:keyword term="Path networks:paths:creating segments;Segments"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1">Left click to create a node and begin a path segment.</li>
+            <li class="li_1">Additional left clicks produce path joints.</li>
+            <li class="li_1">A right click ends the segment and creates a new node.</li>
+        </ol>
+        <p class="How_to_title">How to modify path segments<MadCap:keyword term="Path networks:paths:segments"></MadCap:keyword>:</p>
+        <p>To create a new path from an existing node</p>
+        <ol>
+            <li class="li_1_how_to_step">Left click on that node.</li>
+        </ol>
+        <p>	To <MadCap:keyword term="Delete:joint;Joint:delete" />delete a joint</p>
+        <ol>
+            <li class="li_1_how_to_step">Right click on an existing joint.</li>
+        </ol>
+        <p>To add a <MadCap:keyword term="Joint:add;Add:joint" />joint</p>
+        <ol>
+            <li class="li_1">Right-click anywhere on a path segment.</li>
+            <li class="li_1">Select <span class="Helv_Bold" style="font-weight: bold;">Add Node</span> from the menu.</li>
+            <li class="li_1">Drag the joint to the desired position.</li>
+        </ol>
+        <p class="p_10">Please Note: If you hold down the CTRL key and move the cursor over a path segment or joint, the Add/Delete joint cursor will appear. From here, left click to add or delete a joint.</p>
+        <p class="How_to_title">To highlight a path on the layout and in the Path Segment edit table</p>
+        <ul>
+            <li class="li_1">Left click on that path.</li>
+        </ul>
+        <p class="How_to_title">How to create additional nodes or move existing nodes<MadCap:keyword term="Path networks:nodes:creating additional"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Click on the Nodes heading button in the Path Networks edit table.</li>
+            <li class="li_1_how_to_step">Click the left mouse button to create a node both on the layout and in the Nodes edit table.</li>
+            <li class="li_1_how_to_step">Drag an existing node to move that node.</li>
+        </ol>
+        <p class="How_to_title">How to move a <MadCap:keyword term="Move:path networks;Path networks:move"></MadCap:keyword>path network:<MadCap:keyword term="Path networks:move"></MadCap:keyword></p>
+        <ol>
+            <li class="li_1_how_to_step">Click on the Paths heading button in the Path Networks edit table.</li>
+            <li class="li_1_how_to_step">Left click on any path segment and drag to the desired position. The entire network will move.</li>
+        </ol>
+    </body>
+</html>

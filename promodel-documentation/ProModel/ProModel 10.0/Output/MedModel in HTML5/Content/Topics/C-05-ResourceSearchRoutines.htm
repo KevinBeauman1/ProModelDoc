@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Resource Search Routines</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-ResourceSearchRoutines.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resource Search Routines</span>
+        </div>
+        <h3><a name="C-05_2723800551_1087052"></a><a name="C-05_2723800551_30688"></a>Resource Search Routines<a name="kanchor905"></a></h3>
+        <p class="p">Search routines refer to the instructions a dynamic resource will follow after being freed at a path node where a search routine was defined. Two types of search routines may be specified.</p>
+        <p class="p"><span class="Bold"><b>Work Search</b><a name="kanchor906"></a></span><span class="Element" style="line-height: 12pt;">   A list of </span><span class="Element" style="font-style: italic;">locations </span><span class="Element">where entities may be waiting for the resource. Work searches may be either </span><span class="Element" style="font-style: italic;">exclusive</span><span class="Element"> or </span><span class="Element" style="font-style: italic;">non-exclusive</span><span class="Element">.</span>
+        </p>
+        <ul>
+            <li class="li_1" value="1">Use exclusive work searches to limit the locations a resource may search for work. An exclusive work search will cause the resource to search <span class="_Override" style="font-style: italic;">only </span>the locations in the list. If no work is found at any of the listed locations, the resource will either park at a node listed in its park search, go to its home node, or simply become idle until work is available at one of the locations in the exclusive work search list. </li>
+            <li class="li_1" value="2">Use non-exclusive work searches to have a resource check for work at certain locations first, and then move on to others. A non-exclusive work search will cause the resource to search the listed locations first and then resort to the default search rule listed in the Resource Search section of the Specifications dialog box (e.g., oldest waiting entity, closest waiting entity).</li>
+        </ul>
+        <p class="p"><span class="Bold"><b>Park Search</b><a name="kanchor907"></a></span>   Park searches are typically used to get a resource off a main path segment, or send the resource to the next most likely place work will become available. A park search is a list of nodes to which a resource may be sent to park if no work is waiting at either the work or default search locations. </p>
+        <p class="p_10">Please Note: A lockup can occur in the model if you define a park search at the home node and specify Return Home If Idle in the Resource Specifications.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

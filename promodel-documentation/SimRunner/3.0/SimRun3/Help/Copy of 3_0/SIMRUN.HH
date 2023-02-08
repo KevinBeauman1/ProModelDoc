@@ -1,0 +1,16 @@
+#define HLP_CONTENTS	93
+#define HLP_Introduction	94
+#define HLP_Whats_new	95
+#define HLP_Tech_Support	96
+#define HLP_Getting_Started	97
+#define HLP_Concepts_and_theories	98
+#define HLP_General_procedure	99
+#define HLP_Pitfalls	100
+#define HLP_Starting_a_new_project	102
+#define HLP_Stage_one_pre_analysis	103
+#define HLP_Stage_two_simulation_optimization	104
+#define Independent_variables	106
+#define Improved_Database_Technology	108
+#define Statistical_Advantage	109
+#define New_Optimization_Algorithms	110
+#define _D_Surface_Plotting_Output_Graphs	112

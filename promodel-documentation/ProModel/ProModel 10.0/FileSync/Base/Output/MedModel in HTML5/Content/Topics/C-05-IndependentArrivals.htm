@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Arrivals">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Independent Arrivals</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-IndependentArrivals.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Arrivals.htm#C-05_2723800551_1087908">Arrivals</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Independent Arrivals</span>
+        </div>
+        <h3>
+            <MadCap:keyword term="Arrivals:independent;Independent arrivals" />Independent Arrivals</h3>
+        <p class="p">An independent arrival is any arrival assigned to occur at a specific time or at a fixed interval. Independent arrivals include such things as appointments, meeting times, or pickup and delivery times. When defining independent arrivals, remember that simulation can model only predefined appointment schedules. This means that dynamically scheduled appointments (e.g., rescheduling return visits to fit into available slots) must take place where you define the appointment schedule.</p>
+        <p class="p">When defining independent arrivals, you may:</p>
+        <ul>
+            <li class="li_1" value="1">Define them by elapsed time, day and time, or calendar date.</li>
+            <li class="li_1" value="2">Assign them to occur at fixed intervals (e.g., interviews scheduled every fifteen minutes).</li>
+        </ul>
+        <p class="p_10">Please Note: When you define independent arrivals as intervals, the next arrival time is independent of the previous arrival. For example, applicants will arrive for appointments based on the clock time—not the time elapsed since the last arrival.</p>
+        <ul>
+            <li class="li_1" value="1">Allow a positive or negative offset to adjust the scheduled time of arrival (e.g., applicants must arrive at least ten minutes prior to their interviews).</li>
+            <li class="li_1" value="2">Define a distribution to allow variability from the adjusted arrival time.</li>
+            <li class="li_1" value="3">Allow the possibility that an entity will not arrive at all.</li>
+            <li class="li_1" value="4">Define specific appointment types for only certain resources or resource types.</li>
+        </ul>
+        <p class="How_to_title">How to define independent arrivals:</p>
+        <p class="p_14">Open the <span class="Helv_Bold" style="font-weight: bold;">Arrivals</span> module from the <span class="Helv_Bold" style="font-weight: bold;">Home</span> ribbon tab.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-158-1.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p_14">Click on the <span class="Helv_Bold" style="font-weight: bold;">Entity</span> button and select the entity type you want to schedule.</p>
+        <p class="p_14">Click on the <span class="Helv_Bold" style="font-weight: bold;">Location</span> button and select the location where you want the independent arrival to appear.</p>
+        <p class="p_14">Click on the <span class="Helv_Bold" style="font-weight: bold;">Qty Each</span> button and enter the number of entities to arrive at the scheduled time. To model <span class="_Override" style="font-style: italic;">no shows</span>, enter the expression “Rand(1) + &lt;<span class="Emphasis">probability of showing</span>&gt;”. For example, if only 90% of applicants show up for scheduled interviews, enter “Rand(1) + .9”</p>
+        <p class="p_14">Click on the <span class="_Override" style="font-weight: bold;">First Time</span> button to open the dialog used to define the independent arrival time for the entity. If you define a block of identical appointments occurring at equal intervals, this is the time of the first appointment in the block. (You may enter the arrival time by elapsed time—since the start of the simulation—by a weekday and time, or by calendar date.)</p>
+        <p class="p_10">Please Note: The arrival time must match the time units selected for the simulation run-length. If you defined the elapsed time by calendar date, you must also define the simulation length by calendar date. To edit arrival times, select either day and time or calendar date and click the Edit Arrival Time button.</p>
+        <p class="Graphic">
+            <img src="arrivals_first_time_dialog.jpg" />
+        </p>
+        <p class="p_14">In the offset field, enter any offset you wish to apply to the arrival time. This will direct incoming appointments to arrive earlier (or later) than scheduled. For example, if job applicants are to arrive 10 minutes prior to the time of their appointment, enter “-10”</p>
+        <p class="p_14">In the variation and offset fields of the First time dialog, enter any optional distribution to define the variation from the adjusted arrival time. Generally, to prevent the arrival from being unrealistically late, you should use a doubly-bound distribution (i.e., uniform, normal, triangular, or beta). The triangular and beta distributions provide the most realistic variation. </p>
+        <p class="p_14">In the Occurrences field of the arrivals edit table, enter the number of times to repeat this appointment definition. (Enter 1 if it will occur only once.)</p>
+        <p class="p_14">If the number of occurrences you entered is greater than zero, enter a time interval in the frequency field. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> assumes this interval to be fixed for each occurrence (if you enter an expression, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> evaluates it only once and applies it to each occurrence). The distribution defined in the First Arrival dialog applies it to each occurrence.</p>
+        <p class="p_14">In the Logic field of the arrivals edit table, enter any attribute assignments you will use to determine the processing of the entity. This might include the resource or appointment type (e.g., interview) and it will be helpful if you define these attributes beforehand.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c6-245-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-245-2.jpg" />
+    <Link
+      Url="Content/Topics/C-05-Arrivals.htm" />
+    <Link
+      Url="Content/Topics/pm-c6-245-3.png" />
+    <Link
+      Url="Content/Topics/pm-c6-245-4.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c6-245-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c6-245-2.jpg" />
+    <Link
+      Url="Content/Topics/C-05-Arrivals.htm#C-05_2723800551_1087908" />
+    <Link
+      Url="Content/Topics/pm-c6-245-3.png" />
+    <Link
+      Url="Content/Topics/pm-c6-245-4.jpg" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086391" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Arrivals:cycles:examples"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Arrivals:cycles:defining"
+      Conditions=""
+      LocalConditions=""
+      Position="39" />
+    <IndexCacheEntry
+      Term="Arrivals:cycles:assigning arrivals"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

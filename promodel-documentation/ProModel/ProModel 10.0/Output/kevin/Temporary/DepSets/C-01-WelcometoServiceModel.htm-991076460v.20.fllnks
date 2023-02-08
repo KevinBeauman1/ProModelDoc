@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-01_754432083_1106451" />
+    <Anchor
+      Name="C-01_754432083_1035380" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Facilities planning"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Staffing allocation"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Resource allocation"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Process reengineering"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Logistics management"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="Workflow analysis"
+      Conditions="PM-MM Conditionals.ServiceModel"
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="Training"
+      Conditions=""
+      LocalConditions=""
+      Position="47" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

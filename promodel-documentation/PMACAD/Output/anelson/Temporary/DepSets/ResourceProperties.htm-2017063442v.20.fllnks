@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Resource Dialog"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/ResourceProperties.htm" />
+    <Link
+      Url="Content/Resources/Images/ResourceProperties.png" />
+    <Link
+      Url="Content/Resources/Images/ResourceAvailability.png" />
+    <Link
+      Url="Content/CalendarEditor.htm" />
+    <Link
+      Url="Content/Resources/Images/ResourceDowntimes.png" />
+    <Link
+      Url="Content/Resources/Images/path network.png" />
+    <Link
+      Url="Content/Resources/Images/more elements.png" />
+    <Link
+      Url="Content/Resources/Images/path network window.png" />
+    <Link
+      Url="Content/Resources/Images/path network selection.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/ResourceProperties.htm#Availability" />
+    <Link
+      Url="Content/ResourceProperties.htm#Downtimes" />
+    <Link
+      Url="Content/ResourceProperties.htm#Notes" />
+    <Link
+      Url="Content/ResourceProperties.htm#Advanced" />
+    <Link
+      Url="Content/Resources/Images/ResourceProperties.png" />
+    <Link
+      Url="Content/Resources/Images/ResourceAvailability.png" />
+    <Link
+      Url="Content/CalendarEditor.htm" />
+    <Link
+      Url="Content/Resources/Images/ResourceDowntimes.png" />
+    <Link
+      Url="Content/Resources/Images/path network.png" />
+    <Link
+      Url="Content/Resources/Images/more elements.png" />
+    <Link
+      Url="Content/Resources/Images/path network window.png" />
+    <Link
+      Url="Content/Resources/Images/path network selection.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Availability" />
+    <Anchor
+      Name="Downtimes" />
+    <Anchor
+      Name="Notes" />
+    <Anchor
+      Name="Path Networks" />
+    <Anchor
+      Name="Advanced" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="resource properties"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="resource shift carryover"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

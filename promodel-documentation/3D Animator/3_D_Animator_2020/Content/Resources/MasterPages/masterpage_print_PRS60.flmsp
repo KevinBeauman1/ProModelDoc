@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="184" MadCap:lastWidth="1212">
+    <head>
+        <link href="../Stylesheets/PortfolioSimulatorStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <MadCap:pageHeader class="EvenPage">
+            <p class="headerevenleft" style="text-align: left;"><MadCap:variable name="System.PageNumber" style="font-style: normal;" /><i> </i> | 
+                </p>
+        </MadCap:pageHeader>
+        <MadCap:pageHeader class="OddPage">
+            <p class="headeroddright" style="text-align: right;"> |            <MadCap:variable name="System.PageNumber" /></p>
+        </MadCap:pageHeader>
+        <MadCap:bodyProxy style="mc-page-number-start-value: 1;mc-page-number-format: decimal;mc-printer-page-margin-bottom: 1in;mc-printer-page-margin-top: 1in;mc-printer-page-custom-height: 9in;mc-printer-page-custom-width: 7in;mc-printer-page-header-margin: 0.5in;mc-printer-page-margin-right: 1in;mc-printer-page-margin-left: 1in;mc-page-type: all;" class="" />
+        <MadCap:pageFooter class="FirstPage">
+            <p style="text-align: center;">&#160;</p>
+        </MadCap:pageFooter>
+        <MadCap:pageFooter class="EvenPage">
+            <p>&#160;</p>
+        </MadCap:pageFooter>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="890" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h4>Park Search Edit Table<MadCap:keyword term="Resources:park search:edit table;Park search:edit table" /></h4>
+        <p class="p">Park searches are defined for dynamic resources through the Park Search edit table shown next. If several resources share the same path network, each resource must have its own park search defined (i.e., resources cannot share park searches).</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="pm-c5-139-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-139-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The fields of the Park Search edit table are defined as follows:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Node</span> The node for which the park search is defined.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Parking Node List</span> A list of <span class="_Override" style="font-style: italic;">nodes </span>to which a resource may be sent to park. The resource will look for available capacity at the first node in the list (Node capacity is defined in the Path Networks edit table in the Nodes window). If there is no capacity at that node, the resource will look to the second node in the list and so on until a node with capacity is found. If no capacity is found at any node in the list, the resource will remain where it is until capacity becomes available at one of the nodes in the list.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">In the table above, a park search has been defined for each of the internal path nodes where a forklift might deliver an entity and then be in the way if it has nothing else to do. Specifically, if a forklift makes a delivery and then becomes available at node N3, it will park at node N4. From node N4 it will park at node N1, and from node N6 it will park at node N7.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">In the table above, a park search has been defined for each of the internal path nodes where a mobile X-ray unit might be placed when it’s not in use. Specifically, if the mobile X-ray unit has completed usage in the surgical clinic, it may be “parked” at Node N2 or N3. </p>
+    </body>
+</html>

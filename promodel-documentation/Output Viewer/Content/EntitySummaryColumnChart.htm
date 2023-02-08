@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1380" MadCap:lastWidth="916" MadCap:ignoredWords="UNGROUP;i">
+    <head>
+    </head>
+    <body>
+        <h1>Entity Summary Column Chart</h1>
+        <MadCap:keyword term="entity summary column chart" />
+        <p>
+            <img src="Resources/Images/entitysummarychart.png" MadCap:mediastyle="@media print { max-height: 4in; }" />
+        </p>
+        <p class="p">This bar chart shows entity summary data collected during the simulation. All scenarios can be displayed in the chart, however this example shows only the baseline. Column charts can only display one statistic at a time. This example shows Total Exits. Use the Statistics drop-down in the Filter Options panel to select other statistics.</p>
+        <p>
+            <img src="Resources/Images/statisticsoptions.tif" />
+        </p>
+        <p class="p"><b>Total Exits:</b> The number of entities that completely exited the system either through the EXIT routing or when they are <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">joined, renamed, or combined</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attached permanently or renamed</MadCap:conditionalText>. In some cases, entities also exit the system when you <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">use the SPLIT AS, UNGROUP, or ROUTE statements</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">unbatch entities</MadCap:conditionalText>.</p>
+        <p class="p"><b>Current Quantity In System:</b> The total number of entities remaining in the system at the time the simulation ended. These are entities that have not exited.</p>
+        <p class="p"><b>Average Time In System:</b> The average total time the entity spent in the system.</p>
+        <p class="p"><b>Average Time In Move Logic:</b> The average time the entity spent traveling between <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText>, including any delays incurred in move logic, and including any time waiting for a resource to become available when that resource is requested in the move logic.</p>
+        <p class="p"><b>Average Time In Waiting:</b> The average time the entity spent waiting for a resource or another entity (<MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">to join or combine</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach permanently</MadCap:conditionalText>). Also includes time waiting in queue behind a blocked entity.</p>
+        <p class="p"><b>Average Time In Operation:</b> The average time the entity spent processing (i.e., WAIT or USE statements) at <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location or traveling on a conveyor/queue</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText>.</p>
+        <p class="p"><b>Average Time Blocked:</b> The average time the entity spent waiting for a destination <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> to have available capacity.</p>
+    </body>
+</html>

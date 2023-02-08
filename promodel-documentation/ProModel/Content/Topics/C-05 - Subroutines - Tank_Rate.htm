@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="663" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089507"></a><a name="C-05_2723800551_11014"></a>Ta<MadCap:keyword term="TANK_RATE;Subroutines:tank:TANK_RATE" />nk_Rate</h3>
+        <h4 class="_rules_statements">Syntax sample</h4>
+        <p class="Syntax_body">TANK_RATE (&lt;FROM tank ID&gt;, &lt;TO tank ID&gt;)</p>
+        <p class="Syntax_body">TANK_RATE (TankA, TankB) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> calls this subroutine automatically if you pass a 0 value as the From Rate when using the Tank_Empty or Tank_Transfer subroutine. To return the desired rate value, enter the necessary logic in the subroutine—<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> calls the subroutine with each time step. A return value of 0 terminates the flow and returns the remaining amount in the Tank_QtyLeft variable.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;FROM Tank&gt;</p>
+        <p class="p">The name or location index number of the FROM tank (value should be 0 if there is no FROM tank).</p>
+        <p class="Component">&lt;TO Tank&gt;</p>
+        <p class="p">The name or location index number of the TO tank (this value should be 0 if there is no TO tank).</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">TankA fills with 10,000 gallons at a rate of 60 gpm until it reaches a level of 9,700 gallons. Then it fills at a rate of 30 gpm. To model this change of rate, define the following logic in the Tank_Rate subroutine:</p>
+        <p class="p">&#160;</p>
+        <p class="Syntax_body">If Tank_ToID=TankA Then </p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">If Tank_Level[TankA]&lt;9700 	Then</p>
+        <p class="syntax_indent_2"> RETURN 60</p>
+        <p class="syntax_body_indent">	Else</p>
+        <p class="syntax_indent_2"> RETURN 30</p>
+        <p class="Syntax_body">}</p>
+        <p class="p">Now when you fill TankA, enter the following:</p>
+        <p class="p">&#160;</p>
+        <p class="Syntax_body">	Tank_Fill(TankA, 10000, 0, 0)</p>
+        <p class="p">&#160;</p>
+        <p class="p">The first 0 in the expression above causes the logic defined in the Tank_Rate subroutine to execute and determine the flow rate.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Subroutines - Examples of Tank Logic.htm#C-05_2723800551_1089825" target="" title="" alt="">Varying the Transfer Rate on page 1</MadCap:xref>.</p>
+    </body>
+</html>

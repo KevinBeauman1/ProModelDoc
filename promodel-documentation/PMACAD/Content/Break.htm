@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="1240" MadCap:lastWidth="969" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Break</h1>
+        <h5>
+            <MadCap:keyword term="statements:break;break" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Break</p>
+        <h2>Description</h2>
+        <p>Exits the innermost While...Do, Do...While, or Do...Until loop. The next statement to be executed will be the one immediately following the end bracket associated with the innermost loop. If a Break is encountered outside any loop, then Process Simulator exits the entire logic.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Example</h2>
+        <p>Normally, a While loop repeats a statement block until a certain condition becomes false. This example shows the use of a Break statement to exit the loop based on a condition not included in the While condition. As long as the variable V1 is less than three and the variable V3 is less than or equal to five, both the three-minute wait and the five-minute wait will be executed for a total of eight minutes. However, if V3 becomes greater than five, the total wait will be six minutes: three minutes in the main part of the loop and another three minutes inside the If Then statement block. The five minute wait will not be executed because the Break statement exits the loop entirely. </p>
+        <p>The line “//Break to here” is a comment that marks the next line of logic executed after the Break.</p>
+        <p class="p_11">While V1 &lt; 3 Do<br />{</p>
+        <p class="p_12">Wait 3 min<br />If V3 &gt; 5 Then<br />{</p>
+        <p class="p_13">Wait 3 min<br />Break</p>
+        <p class="p_12">}<br />Wait 5 min</p>
+        <p class="p_11">}<br />//Break to here</p>
+        <h5>See Also</h5>
+        <p><a href="BreakBlk.htm" class="a_11">BreakBlk</a>, <a href="While.htm" class="a_11">While</a></p>
+    </body>
+</html>

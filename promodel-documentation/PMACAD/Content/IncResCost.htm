@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1427" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements">IncResCost</h2>
+        <h5>
+            <MadCap:keyword term="statements:increscost;increscost" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>IncResCost &lt;cost expression&gt; {,&lt;resource&gt;}</p>
+        <p>IncResCost 10<br />IncResCost GetResRate(Operator1)*20, Operator1 </p>
+        <h2>Description</h2>
+        <p>Enables you to increment the cost (positively or negatively) of a resource currently owned by the entity executing the statement. Use this function to add to the resource’s actual, accumulated dollar amount. When used without the optional &lt;resource&gt; parameter, this statement increments the cost rate of the entity’s most recently captured, owned resource. </p>
+        <p>If an entity owns multiple units of a resource, the cost distributes evenly to each unit.</p>
+        <h2>Valid In</h2>
+        <p>Activity and route logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;cost expression&gt;</b>
+        </p>
+        <p>  The positive or negative change to the value of cost.</p>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>A resource currently owned by the entity executing the statement. When used without the parameter, this statement increments the cost rate of the entity’s most recently captured resource.</p>
+        <h2>Example</h2>
+        <p>A clerk normally works an 8-hour shift. However, if the clerk does not finish entering all the orders in his Input_Queue at the end of the day, he must stay and finish them. Since the clerk is paid time-and-a-half for any overtime, you must increment the cost of the resource by an additional half of the normal rate to get the overtime rate. To do this, activate a subroutine that keeps track of when a resource should be on-shift and when it should be off. In the activated subroutine logic, set a variable equal to 1 indicating the resource should be off-shift and set it equal to 0 when it should be on. If the variable is equal to 1, increment the cost of a resource by half the original rate. </p>
+        <p class="p_11">Get Clerk, 100<br />Wait N(4.5, .3)<br />If Off_Shift_Var = 1 Then</p>
+        <p class="p_12">IncResCost GetResRate() * .5</p>
+        <p class="p_11">Free Clerk</p>
+        <h5>See Also</h5>
+        <p><a href="getcost.htm" class="a_11">GetCost</a>, <a href="getresrate.htm" class="a_11">GetResRate</a>, <a href="incentCost.htm" class="a_11">IncEntCost</a>, <a href="inclocCost.htm" class="a_11">IncLocCost</a>, <a href="#" class="a_11">IncResCost</a>, and <a href="setRate.htm" class="a_11">SetRate</a></p>
+    </body>
+</html>

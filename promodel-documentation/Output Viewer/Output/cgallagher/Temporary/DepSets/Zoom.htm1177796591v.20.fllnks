@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/zoom.png" />
+    <Link
+      Url="Content/Resources/Images/magnifyingglass1.png" />
+    <Link
+      Url="Content/Resources/Images/scroll1.png" />
+    <Link
+      Url="Content/Resources/Images/scroll2.png" />
+    <Link
+      Url="Content/Resources/Images/scroll3.png" />
+    <Link
+      Url="Content/Resources/Images/stripe1.png" />
+    <Link
+      Url="Content/Resources/Images/stripe2.png" />
+    <Link
+      Url="Content/Resources/Images/stripe3.png" />
+    <Link
+      Url="Content/Resources/Images/map1.png" />
+    <Link
+      Url="Content/Resources/Images/map2.png" />
+    <Link
+      Url="Content/Resources/Images/map3.png" />
+    <Link
+      Url="Content/Resources/Images/map100p.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/zoom.png" />
+    <Link
+      Url="Content/Resources/Images/magnifyingglass1.png" />
+    <Link
+      Url="Content/Resources/Images/scroll1.png" />
+    <Link
+      Url="Content/Resources/Images/scroll2.png" />
+    <Link
+      Url="Content/Resources/Images/scroll3.png" />
+    <Link
+      Url="Content/Resources/Images/stripe1.png" />
+    <Link
+      Url="Content/Resources/Images/stripe2.png" />
+    <Link
+      Url="Content/Resources/Images/stripe3.png" />
+    <Link
+      Url="Content/Resources/Images/map1.png" />
+    <Link
+      Url="Content/Resources/Images/map2.png" />
+    <Link
+      Url="Content/Resources/Images/map3.png" />
+    <Link
+      Url="Content/Resources/Images/map100p.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="zoom"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="scroll"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="stripe"
+      Conditions=""
+      LocalConditions=""
+      Position="34" />
+    <IndexCacheEntry
+      Term="map"
+      Conditions=""
+      LocalConditions=""
+      Position="53" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

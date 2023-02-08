@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="859" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h4>Work Search Edit Table<MadCap:keyword term="Resources:work search:edit table;Work search:edit table" /></h4>
+        <p class="p">Work searches are defined for dynamic resources through the Work Search edit table shown below. If several resources share the same path network, each resource must have its own work search defined (i.e., resources cannot share work searches).</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="pm-c5-139-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+/        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-138-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+/        </p>
+        <p class="p">The fields of the Work Search edit table are defined as follows:</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Node</span> The node for which the work search is defined.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Type</span> Exclusive or non-exclusive work search. See <MadCap:xref class="lowercase_no_see" href="C-05-ResourceSearchRoutines.htm#C-05_2723800551_1087052" target="" title="" alt="">Resource Search Routines on page 1</MadCap:xref> for an explanation of <span class="_Override" style="font-style: italic;">exclusive</span> and <span class="_Override" style="font-style: italic;">non</span>-<span class="_Override" style="font-style: italic;">exclusive</span> work searches<span class="_Override" style="font-style: italic;">.</span></p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Location List</span> A list of <span class="_Override" style="font-style: italic;">locations </span>to be searched for waiting entities when the resource becomes available.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">In the edit table above, work searches have been defined at each location where the forklift delivers entities. The purpose of the work search in this example is to force the forklifts to give priority to entities waiting to be delivered to processing locations before taking an entity to a non-processing location. This helps to keep the processing locations busy at all times.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">In the edit table above, work searches have been defined at each location where the Doctor may be after completing some task or action. The purpose of the work search in this example is to force the Doctor to give priority to parents or other entities based on the Doctor’s location at the time of completion of other activities.</p>
+    </body>
+</html>

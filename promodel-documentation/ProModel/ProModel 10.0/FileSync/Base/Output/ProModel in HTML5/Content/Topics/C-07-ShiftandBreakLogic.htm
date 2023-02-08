@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Logic">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Shift and Break Logic</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-07-ShiftandBreakLogic.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-07-BuildingtheLogic.htm#C-07_3886599965_1035124">Building the Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Shift and Break Logic</span>
+        </div>
+        <h2><a name="C-07_3886599965_1089612"></a>
+            <MadCap:keyword term="Logic:shift &amp; break;Shift:shift &amp; break logic;Breaks:see Shift &amp; break logic" /><a name="C-07_3886599965_28438"></a>Shift and Break Logic</h2>
+        <p class="p">Shift and break logic are optional and are defined in four distinct logic windows. Each logic window is executed in a specific sequence throughout the simulation run. You can define logic that controls how resources and locations go off duty or off line and what happens once they are off-line.</p>
+        <p class="p">To define shift or break logic, click on the Logic button in shift assignments to display a submenu of four shift events for which logic may be defined. Selecting an event from the submenu displays a standard logic window. You can enter separate logic for each of these four events to be executed when the event occurs. See <span class="_Override" style="font-style: italic;">Sequence of Events</span> below.</p>
+        <p class="Graphic">
+            <img src="pm-c6-297-1.jpg" />
+        </p>
+        <p class="p">You may want to use the Logic Builder to help you enter the logic.  Just click on the Build button in the logic window.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:shift &amp; break:pre-off shift logic;Shift:shift &amp; break logic:pre-off-shift logic" /><b>Pre-Off Shift or</b><MadCap:keyword term="Logic:shift &amp; break:pre-break logic;Shift:shift &amp; break logic:pre-break logic" /><b> Pre-Break Logic</b></span>   Executed whenever the location or resource is scheduled to go off shift or on break. This occurs before the location or resource is checked for availability, and is executed regardless of availability. This logic may be used to check certain conditions before actually taking the resource or location off line. The logic is executed for each resource and location listed as members for this shift assignment record. This allows some members to be taken off line while others may be forced to wait. (Pre-off shift and pre-break logic may be referred to in this manual as pre-start logic when speaking of either one.)</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:shift &amp; break:off-shift logic;Shift:shift &amp; break logic:off-shift logic" /><b>Off Shift &amp;</b><MadCap:keyword term="Logic:shift &amp; break:break logic;Shift:shift &amp; break logic:break logic" /><b> Break Logic</b></span>   Logic executed at the instant the location or resource actually goes off line.</p>
+        <p class="How_to_title">How to determine the sequence of events<MadCap:keyword term="Logic:shift &amp; break:sequence of events;Shift:shift &amp; break logic:sequence of events" /></p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">When a location or resource is scheduled to go off line due to a break or the end of a shift, the pre-start logic for that particular location or resource is executed.  </li>
+            <li class="li_1_how_to_step" value="2">After executing the pre-start logic, which may contain conditional (<MadCap:keyword term="WAIT UNTIL" />Wait Until) or time (<MadCap:keyword term="WAIT" />Wait) delays, the location or resource is taken off line, assuming it is either available or the priority is high enough for preemption.</li>
+            <li class="li_1_how_to_step" value="3">At the instant the location or resource is taken off line, the Off-Shift or Break logic is executed.</li>
+            <li class="li_1_how_to_step" value="4">After executing this logic, the location or resource waits until the time defined in the shift file expires before going back on line.</li>
+        </ol>
+        <p class="p_10">Please Note: If the off-shift and break nodes are not specified in the Resource Specs dialog, the resource will stay at the current node.  If no resources or locations are assigned to a shift, the shift is ignored.</p>
+        <h3>Functions and Statements<MadCap:keyword term="Logic:shift &amp; break:functions &amp; statements;Shift:shift &amp; break logic:functions &amp; statements" /></h3>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> uses several functions and statements specifically for off-shift and break logic: <MadCap:keyword term="SKIP" />Skip, <MadCap:keyword term="PRIORITY" />Priority, <MadCap:keyword term="DTLEFT()" />DTLeft(), <MadCap:keyword term="DTLENGTH()" />DTLength(), <MadCap:keyword term="FORLOCATION()" />ForLocation(), <MadCap:keyword term="FORRESOURCE()" />ForResource(), and <MadCap:keyword term="RESOURCE()" />Resource(). Following is a brief description of each. For more details, see <a class="Heading_And_Page MCXref xref xrefHeading_And_Page" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" xrefformat="{paratext}">Statements and Functions</a>.</p>
+        <p class="p"><span class="Bold">Skip</span> If used in pre-start logic, it causes the off-shift or break time (including any off-shift or break logic) to be skipped so that the location or resource never goes off line.  If used in the off-shift or break logic, it causes the off-line time defined in the shift file to be skipped.  This allows you to specify a Wait statement for the off-line time and then Skip the off-line time defined in the shift file.</p>
+        <p class="p"><span class="Bold">Priority</span> This statement provides an alternative way to specify off-shift or break priorities. It also allows the priority to be changed after some time being off-shift or on break. If the priority is changed to a value lower than the current value, the system will check if any preemption may occur at that time. This statement is not allowed in pre-off shift or pre-break logic.</p>
+        <p class="p"><span class="Bold">DTLeft()</span> This function returns the remaining off-shift time based on when the location or resource is scheduled to go back on shift as defined in the shift file. It may be used in off-shift and break logic to adjust the actual time that the location or resource is off-line.</p>
+        <p class="p"><span class="Bold">DTLength()</span> This function  returns the full length of the off-shift or break time for a location or resource before it resumes normal activities.</p>
+        <p class="p"><span class="Bold">ForLocation()</span> This function returns TRUE if the member for which the shift or break logic being executed is a location. This may be fol0lowed by a test using the Location() function to determine the precise location.</p>
+        <p class="p"><span class="Bold">ForResource()</span> This function returns TRUE if the member for which the shift or break logic being executed is a resource. The Resource() function may then be used to determine the precise resource if multiple resources are listed as members.</p>
+        <p class="p"><span class="Bold">Resource()</span>   This returns the name-index number of the resource currently processing the off-shift or break logic.</p>
+        <p class="p">In addition to these functions, the <MadCap:keyword term="LOCATION()" />Location() and <MadCap:keyword term="DTDELAY()" />DTDelay() functions are particularly useful when defining off-shift and break logic.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

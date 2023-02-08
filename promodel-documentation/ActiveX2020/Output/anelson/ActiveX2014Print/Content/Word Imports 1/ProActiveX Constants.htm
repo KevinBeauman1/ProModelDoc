@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="ActiveX User Guide, PDF.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Appendix: Table Definitions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>ProActiveX Constants</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2><a name="ProActiv"></a>ProActiveX Constants</h2>
+        <p>&#160;</p>
+        <p>PM = ProModel Application Object Constants</p>
+        <p>PMD = ProModel Data Object Constants</p>
+        <p>PME = ProModel Event Object Constants</p>
+        <p>RDB = RDB Data Server Object Constants</p>
+        <p>RTI = RunTime Object Constants</p>
+        <p>&#160;</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Status Codes</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Unknown = 0</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Empty = 1&#160;&#160;&#160; No Model Loaded</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Loading = 2</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Loaded = 3</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_LoadError = 4</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Translating = 5</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_Running = 6</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_RunAborted = 7&#160;&#160; Sim or Translation ended before completion</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_RunCompleted = 8</p>
+        <p>&#160;&#160;&#160; Public Const PM_Status_RunFrozen = 9</p>
+        <p>&#160;</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Error Codes</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160; Data</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_NoError = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_InvalidTableNumber = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_MethodNotApplicable = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_InvalidRecNumber = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_InvalidFieldNumber = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_DataTypeMismatch = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_FieldNotApplicable = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_NotImplemented = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_GfxNotImplemented = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_ValueNotApplicable = 9</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_ParentNotSelected = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_Obsolete = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_DataProtected = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_KeyNotFound = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_ReadOnly = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_JointNotFound = 16</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Error_Other = 999</p>
+        <p>&#160;&#160;&#160;&#160;&#160;&#160;&#160; </p>
+        <p>&#160;&#160; Run-Time Interface</p>
+        <p>&#160;&#160; Public Const RTI_Error_SimNotRunning = 1</p>
+        <p>&#160;&#160; Public Const RTI_Error_TableNotFound = 2</p>
+        <p>&#160;&#160; Public Const RTI_Error_RecordNotFound = 3</p>
+        <p>&#160;&#160; Public Const RTI_Error_FieldNotFound = 4</p>
+        <p>&#160;&#160; Public Const RTI_Error_SubRecNotFound = 5</p>
+        <p>&#160;&#160; Public Const RTI_Error_NoStatsForRec = 6</p>
+        <p>&#160;&#160; Public Const RTI_Error_TableNotApplicable = 7</p>
+        <p>&#160;&#160; Public Const RTI_Error_StatNotApplicable = 8</p>
+        <p>&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Module Codes</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_None = 0&#160;&#160; No Modules open</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Locations = 1</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Arrivals = 2</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Entities = 5</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Resources = 6</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Variables = 10</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Attributes = 11</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Arrays = 12</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_TableFunctions = 15</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_UserDistribs = 16</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_ArrivalCycles = 17</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Subroutines = 18</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Processing = 19</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_PathNetworks = 24</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Macros = 25</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Streams = 26</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_ExternalFiles = 27</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_Shifts = 34</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_BackGfxBehind = 36</p>
+        <p>&#160;&#160;&#160; Public Const PM_Module_BackGfxInFront = 37</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Event Codes</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_Undefined = 0</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_Quit = 1&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; True to cancel Quit</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SaveBeforeQuit = 2&#160;&#160; True to skip Save dialog</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimComplete = 3&#160; True to skip Stats dialog</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimUserEnd = 4&#160;&#160; True to skip Collect Data dialog</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimPauseOn = 5</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimPauseOff = 6</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimAbEnd = 7&#160;&#160;&#160;&#160; (not used?)</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_SimStart = 8</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_TranStart = 9</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_TranEnd = 10</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_EditModeOn = 11</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_ModLoaded = 12</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_AnimOn = 15</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_AnimOff = 16</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgInfo = 20</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgOk = 21</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgOkCancel = 22</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgRetryCancel = 23</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgYesNo = 24</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgYesNoCancel = 25</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgAbortRetryCancel = 26</p>
+        <p>&#160;&#160;&#160; Public Const PME_Event_MsgPrompt = 30</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>RunTime Tables</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160; Public Const RTI_Table_Locations = 1</p>
+        <p>&#160;&#160; Public Const RTI_Table_LocSingle = 2</p>
+        <p>&#160;&#160; Public Const RTI_Table_LocMulti = 3</p>
+        <p>&#160;&#160; Public Const RTI_Table_Resources = 5</p>
+        <p>&#160;&#160; Public Const RTI_Table_ResStates = 6</p>
+        <p>&#160;&#160; Public Const RTI_Table_NodeEntry = 7</p>
+        <p>&#160;&#160; Public Const RTI_Table_ArrivalFail = 8</p>
+        <p>&#160;&#160; Public Const RTI_Table_EntActivity = 9</p>
+        <p>&#160;&#160; Public Const RTI_Table_EntStates = 10</p>
+        <p>&#160;&#160; Public Const RTI_Table_Variables = 12</p>
+        <p>&#160;&#160; Public Const RTI_Table_Logs = 13</p>
+        <p>&#160;&#160; Public Const RTI_Table_LocCost = 14</p>
+        <p>&#160;&#160; Public Const RTI_Table_ResCost = 16</p>
+        <p>&#160;&#160; Public Const RTI_Table_EntActCost = 17</p>
+        <p>&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>RunTime Fields</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160; Locations (1)</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocTotEntry = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocAvgMinPer = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocAvgContent = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocMaxContent = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocCurContent = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_LocPctUtil = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Single Capacity Locations (2)</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctOper = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctSetup = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctIdle = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctWait = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctBlock = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_SLocPctDown = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Multiple Capacity Locations (3)</p>
+        <p>&#160;&#160; Public Const RTI_Field_MLocPctEmpty = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_MLocPctPartFull = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_MLocPctFull = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_MLocPctDown = 4</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Resources (5)</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResTimesUsed = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResAvgMinPer = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResTrvl2Use = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResTrvl2Park = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResPctBlockTrvl = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_ResPctUtil = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Resource States (6)</p>
+        <p>&#160;&#160; Public Const RTI_Field_RStPctUse = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_RStPctTrvl2Use = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_RStPctTrvl2Pk = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_RStPctIdle = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_RStPctDown = 5</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Node Entries (7)</p>
+        <p>&#160;&#160; Public Const RTI_Field_NodTotEntry = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_NodBlockEntry = 2</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Failed Arrivals (8)</p>
+        <p>&#160;&#160; Public Const RTI_Field_FailArrivlTot = 1</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Entity Activity (9)</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActTotExit = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActCurQty = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActAvgMinTot = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActAvgMinMove = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActAvgWait4Res = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActAvgMinOper = 6</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntActAvgMinBlock = 7</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Entity States (10)</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntStPctMove = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntStPctWaitRes = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntStPctOper = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_EntStPctBlock = 4</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Variables (12)</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarTotChange = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarAvgMinPer = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarMinValue = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarMaxValue = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarCurValue = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_VarAvgValue = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Logs (13)</p>
+        <p>&#160;&#160; Public Const RTI_Field_LogNumObserv = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_LogMinValue = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_LogMaxValue = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_LogAvgValue = 4</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Location Costing (14)</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostOperCost = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostOperPct = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostResCost = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostResPct = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostTotCost = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_LCostTotPct = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Resource Costing (16)</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostNonUseCost = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostNonUsePct = 2</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostUsageCost = 3</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostUsagePct = 4</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostTotCost = 5</p>
+        <p>&#160;&#160; Public Const RTI_Field_RCostTotPct = 6</p>
+        <p>&#160;&#160; </p>
+        <p>&#160;&#160; Entity Activity Costing (17)</p>
+        <p>&#160;&#160; Public Const RTI_Field_ECostTotCost = 1</p>
+        <p>&#160;&#160; Public Const RTI_Field_ECostTotPct = 2</p>
+        <p>&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Data Tables</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Locations = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Entities = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathNetworks = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Resources = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Arrivals = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Shifts = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Attributes = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Variables = 9</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Arrays = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Macros = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Subroutines = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ArrivalCycles = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_TableFunctions = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_UserDistribs = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ExternalFiles = 16</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Streams = 17</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_GenInfo = 18</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Processing = 19</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Routing = 20</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ModelParams = 21</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Scenarios = 22</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_SimOptions = 23</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocClockDTs = 25</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocEntryDTs = 26</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocUsageDTs = 27</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocSetupDTs = 28</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocCalledDTs = 63</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResClockDTs = 31</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResUsageDTs = 32</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResWorkSearch = 33</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResParkSearch = 34</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResNodeLogic = 35</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResPoints = 36</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ShiftLocations = 38</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ShiftResources = 39</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ShiftFiles = 40</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_SubRoutineParams = 41</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ArrivalCycleSubtable = 42</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_FunctionSubtable = 43</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_UserDistribSubtable = 44</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_LocationGraphics = 45</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ResourceGraphics = 46</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_EntityGraphics = 47</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_BackgroundGraphics = 49</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ModelDefaults = 50</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathSegments = 51</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathInterfaces = 52</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathMappings = 53</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathNodes = 54</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_Views = 55</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ScenarioParams = 56</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_PathMapDest = 57</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_WorkSearchLocs = 58</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_ParkNodes = 59</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_VariableGraphics = 60</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Table_QJoints = 61</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Data Fields</p>
+        <p>----------------------------------------------------------------------------------------</p>
+        <p>Downtimes (25 thru 32)</p>
+        <p>&#160;&#160;&#160; Locations &amp; Resources Tables:</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTFrequency = 1&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Entry, Usage)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTFirstTime = 2&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Entry, Usage)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTPriority = 3&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Usage, Called)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTScheduled = 4&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Called)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTLogic = 5&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Entry, Usage, Setup, Called)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTDisable = 6&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Entry, Usage, Setup)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTName = 11&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Called)</p>
+        <p>&#160;&#160;&#160; Locations Table Only:</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTEntity = 7&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Setup)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTPriorEnt = 8&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Setup)</p>
+        <p>&#160;&#160;&#160; Resources Table Only:</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTList = 9&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Usage)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_DTNode = 10&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Applies To:(Clock, Usage)</p>
+        <p>&#160;</p>
+        <p>Locations (1)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocName = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocCapacity = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocUnits = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocStats = 9 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocIncoming = 10 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocIncAttrib = 11 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocQueOutput = 12 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocQueOutAttrib = 13 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocSelectUnit = 14 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocNotes = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocCostRate = 16</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_LocCostTimeUnits = 20 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Entities (2)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntGfxNum = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntName = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntSpeed = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntStats = 4 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntNotes = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EntInitCost = 8</p>
+        <p>&#160;</p>
+        <p>Path Network (3)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathColor = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathVisible = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathName = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathType = 4&#160; (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathBasis = 5&#160; (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneBridgeSeparation = 20</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneHideBridge = 21</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneHideRail = 22</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneRailWidth = 23</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneRailBorderColor = 24</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneRailFillColor = 25</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneBridgeWidth = 26</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneBridgeBorderColor = 27</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Path Segments (51)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegFrom = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegTo = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegBiDi = 3&#160;&#160; BiDi = BiDirectional</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegSpeedFactor = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegDistance = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathSegTime = 6</p>
+        <p>&#160;</p>
+        <p>Path Interfaces (52)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathXfaceNode = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathXfaceLocation = 2</p>
+        <p>&#160;</p>
+        <p>Path Mapping (53)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathMapFromNode = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathMapSegmentNum = 2</p>
+        <p>&#160;</p>
+        <p>Path Mapping Destinations (57)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathMapDestNode = 3</p>
+        <p>&#160;</p>
+        <p>Path Nodes (54)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathNodeName = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathNodeCapacity = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathNodeXPosition = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PathNodeYPosition = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneNodeRailPosition = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_CraneNodeBridgePosition = 6</p>
+        <p>&#160;</p>
+        <p>Resources (4)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResName = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResUnits = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResStats = 6 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResNetwork = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResSearch = 8 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResEntSearch = 9 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResEntSrchMinAttrib = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResEntSrchMaxAttrib = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResSpeedEmpty = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResSpeedFull = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResAccel = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResDecel = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResPickupTime = 16</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResDepositTime = 17</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResHomeNode = 18</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResHomeIfIdle = 19 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResOffShiftNode = 20</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResBreakNode = 21</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResNotes = 26</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResCost = 27 (Cost per Cost Time Unit)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResOTCost = 28</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResCostPerUse = 29</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResCostTimeUnit = 30</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Resource Work Search (33)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResWorkSrchNode = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResWorkSrchType = 2</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Work Search Location List (58)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_WorkSrchLocName = 3</p>
+        <p>&#160;</p>
+        <p>Resource Park Search (34)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResParkSrchNode = 1</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Park Search Node List (59)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResParkNodeName = 2</p>
+        <p>&#160;</p>
+        <p>Resource Node Logic (35)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResNLogicNode = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResNLogicEntry = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ResNLogicExit = 3</p>
+        <p>&#160;</p>
+        <p>Resource Points (36)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PointsNode = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PointsXPosition = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_PointsYPosition = 3</p>
+        <p>&#160;</p>
+        <p>Arrivals (6)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalEntName = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalLocName = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalQtyEach = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalCycles = 4&#160;&#160;&#160; Subtable: ArrivalCycles</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalFirstTime = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalOccurrences = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalFrequency = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalLogic = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalDisable = 9&#160;&#160; (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalTimeBasis = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalMinutes = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalHour = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalWeekDay = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalMonthDay = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalWeek = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalMonth = 16</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalYear = 17</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalVariation = 18</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalOffset = 19</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrivalRepeatType = 20&#160;&#160; (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>Arrival Cycles (13)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrCycID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrCycQty = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrCycCumulative = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Arrival Cycle SubTable (42)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrCycTime = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrCycQtyPercent = 6</p>
+        <p>&#160;</p>
+        <p>Shift Assignments (7)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftPriority = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftOffShiftPriority = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftStartBreakPriority = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftBreakPriority = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftPreOffShiftLogic = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftOffShiftLogic = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftPreBreakLogic = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftBreakLogic = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftDisable = 9&#160;&#160;&#160;&#160; (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>Shift Locations (38)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftLocationNum = 10</p>
+        <p>&#160;</p>
+        <p>Shift Resources (39)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftResourceNum = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftResourceUnits = 12</p>
+        <p>&#160;</p>
+        <p>Shift Files (40)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftFileNum = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ShiftStartTime = 14</p>
+        <p>&#160;</p>
+        <p>Attributes (8)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_AttribID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_AttribType = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_AttribClass = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_AttribNotes = 4</p>
+        <p>&#160;</p>
+        <p>Variables (9)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarGraphicNum = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarID = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarType = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarInitValue = 4 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarStatsLevel = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarStatsBasis = 6 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_VarNotes = 7</p>
+        <p>&#160;</p>
+        <p>Arrays (10)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayDimensions = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayType = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayNotes = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayImportPath = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArraySheetName = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayFirstDataCell = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayStartCell = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayEndCell = 9</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExportPath = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExSheetName = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExStartCell = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExEndCell = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayImDBConnectString = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayImDBQuery_ProcString = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayImportType = 17</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExportType = 18 Not yet implemented</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayImDBQueryOrProc = 19</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayPersist = 20</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayExportLastRep = 21</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayDisableImport = 22</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ArrayDisableExport = 23</p>
+        <p>&#160;</p>
+        <p>Macros (11)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroText = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroGroup = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroRTIName = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroRTIPrompt = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroRTIMinValue = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroRTIMaxValue = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_MacroRTIType = 9 (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>SubRoutines (12)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SubRtnID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SubRtnOperation = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SubRtnType = 4 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>SubRoutine Parameters (41)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SubRtnParamName = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SubRtnParamType = 6 (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>Table Functions (14)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_TableFunID = 1</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Table Functions Subtable (43)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_TableFunIndepVal = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_TableFunDepVal = 4</p>
+        <p>&#160;</p>
+        <p>User Distributions (15)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_UserDistID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_UserDistType = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_UserDistCumulative = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>User Distributions Subtable (44)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_UserDistPercentage = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_UserDistValue = 5</p>
+        <p>&#160;</p>
+        <p>External Files (16)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_XfilesID = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_XfilesType = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_XfilesPath = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_XfilesPrompt = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_XfilesNotes = 5</p>
+        <p>&#160;</p>
+        <p>Streams (17)</p>
+        <p>&#160;&#160; Public Const PMD_Field_StreamNumber = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_StreamSeedNum = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_StreamReset = 3 (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>General Information (18)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoTitle = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoDfltTimeUnits = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoDfltDistUnits = 3 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoGLibFile = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoInitLogic = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoTerminateLogic = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoNotes = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoModFile = 9&#160;&#160; (Read Only)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_GenInfoZoomPct = 10</p>
+        <p>&#160;</p>
+        <p>Processing (19)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ProcEntName = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ProcPreempt = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ProcLocName = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ProcOpLogic = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ProcRouting = 20 Subtable: Routing</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Routing (20)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutEntName = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutLocName = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutPriority = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutNewBlock = 9 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutNewEntity = 10 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutQuantity = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutSelection = 12 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutProbability = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutCondition = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_RoutMoveLogic = 15</p>
+        <p>&#160;</p>
+        <p>Simulation Options (23)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptOutputPath = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptTimeBasis = 2 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptRunHours = 3&#160;&#160; Time Only</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupPeriod = 4&#160; Time Only</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupMonth = 5&#160;&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupDay = 6&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupYear = 7 Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupHour = 8 Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptWarmupMin = 9&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptBeginMonth = 10&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptBeginDay = 11&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptBeginYear = 12&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptBeginHour = 13&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptBeginMin = 14&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEndMonth = 15&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEndDay = 16&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEndYear = 17&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEndHour = 18&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEndMin = 19&#160; Calendar Date</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptRptMethod = 20 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptRptIntLength = 21</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptNumReps = 22</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptClockPrecision = 23 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptClockPrecUnits = 24 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDisTimeSeries = 25 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDisAnimation = 26 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDisCosts = 27 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptPause = 28 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDisplayNotes = 29 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptEnableWarmup = 30 (see Rules constants)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_WarmDay = 31&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_WarmWeek = 32&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_BeginDay = 33&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_BeginWeek = 34&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EndDay = 35&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_EndWeek = 36&#160;&#160; Weekly Time</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDaylightSav = 37</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptGenAnimScript = 38</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptCommonRandom = 39</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptSkipResDTs = 40</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptDisArrays = 41</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptInitAnimSpeed = 42</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptTrace = 43</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptRecompileMap = 44</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptRunName = 45</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptMinitab = 46</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptOutputViewer = 47</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_SimOptOVversionNum = 48</p>
+        <p>&#160;</p>
+        <p>Scenarios (22)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ScenName = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ScenDisable = 2</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Scenario Parameters (56)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ScenParamValue = 1</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Views (55)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ViewName = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ViewXOffset = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ViewYOffset = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ViewWidth = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Field_ViewHeight = 5</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Graphics - Library (Type = 1)</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxWidthI = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxHeightI = 3</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxWidthR = 4</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxHeightR = 5</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxRotation = 6</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxID = 7</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxHotXpos = 8</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxHotYpos = 9</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxXpos = 10</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxYpos = 11</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxColor = 12 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxEntConvWidth = 20</p>
+        <p>&#160;&#160; Public Const PMD_Field_LGfxEntConvLength = 21</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Queue/Conveyor (Type = 2)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxConvey = 2&#160; Boolean (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxSpeed = 3&#160;&#160; Conveyor Only</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxLength = 4&#160; Conveyor Only</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxAccum = 5&#160;&#160; Boolean (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxOrient = 6</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxBColor = 7 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxFColor = 8 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxStyle = 9 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxWidth = 10</p>
+        <p>&#160;&#160; Public Const PMD_Field_QGfxInvis = 11</p>
+        <p>&#160;&#160; </p>
+        <p>Queue/Conveyor Joints (61)</p>
+        <p>&#160;&#160; Public Const PMD_Field_QJointXPos = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_QJointYPos = 2</p>
+        <p>&#160;</p>
+        <p>Graphics - Gauge/Tank (Type = 3)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxLeft = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxTop = 3</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxRight = 4</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxBottom = 5</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxBColor = 6 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxEColor = 7 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxFColor = 8 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxMin = 9</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxMax = 10</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxDirxn = 11 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxShowScale = 12 Boolean (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxShowBrdr = 13&#160; Boolean (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_GGfxIsTank = 14&#160;&#160;&#160; Boolean (see Rules constants)</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Counter (Type = 4)</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxLeft = 10</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxTop = 11</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxRight = 12</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxBottom = 13</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFrmType = 14 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFrmShape = 15 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFrmColor = 16 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFrmBColor = 17 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFontSize = 20</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFontName = 21</p>
+        <p>&#160;&#160; Public Const PMD_Field_CGfxFontColor = 22 (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>Graphics - Text (Type = 5)</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxLblTxt = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxLeft = 10</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxTop = 11</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxRight = 12</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxBottom = 13</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFrmType = 14 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFrmShape = 15 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFrmColor = 16 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFrmBColor = 17 (see Rules constants)</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFontSize = 20</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFontName = 21</p>
+        <p>&#160;&#160; Public Const PMD_Field_TGfxFontColor = 22 (see Rules constants)</p>
+        <p>&#160;</p>
+        <p>Graphics - Status Light (Type = 6)</p>
+        <p>&#160;&#160; Public Const PMD_Field_SGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_SGfxXpos = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_SGfxYpos = 3</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Part Spot (Type = 7)</p>
+        <p>&#160;&#160; Public Const PMD_Field_PGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_PGfxXpos = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_PGfxYpos = 3</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Region (Type = 8)</p>
+        <p>&#160;&#160; Public Const PMD_Field_RGfxType = 1</p>
+        <p>&#160;&#160; Public Const PMD_Field_RGfxLeft = 2</p>
+        <p>&#160;&#160; Public Const PMD_Field_RGfxTop = 3</p>
+        <p>&#160;&#160; Public Const PMD_Field_RGfxRight = 4</p>
+        <p>&#160;&#160; Public Const PMD_Field_RGfxBottom = 5</p>
+        <p>&#160;</p>
+        <p>--------------------------------------------------------------------------------</p>
+        <p>Rules</p>
+        <p>--------------------------------------------------------------------------------</p>
+        <p>Data Types</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeNone = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeInteger = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeReal = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeString = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeExpression = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TypeInteractive = 8</p>
+        <p>&#160;</p>
+        <p>Boolean</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_NoFalse = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_YesTrue = 1</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Stats Type: Locations, Entities, Resources, Variables</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsNone = 1&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; (Loc, Ent, Res, Var)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsBasic = 2&#160;&#160;&#160;&#160;&#160;&#160;&#160; (Loc, Ent, Var)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsSummary = 2&#160;&#160;&#160;&#160;&#160; (Res)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsTimeSeries = 3&#160;&#160; (Loc, Ent, Var)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsByUnit = 3&#160;&#160;&#160;&#160;&#160;&#160; (Res)</p>
+        <p>&#160;</p>
+        <p>Stats Basis: Variables</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsBasisNone = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsBasisTime = 1&#160;&#160;&#160; Time Weighted</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_StatsBasisObserv = 2&#160; Observation Based</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Incoming Entities: Locations</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntOldestByPriority = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntNotUsed = 2 was "most contents"</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntLeastAvailCapacity = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntRandom = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntLastLoc = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntMinAttrib = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_IncomEntMaxAttrib = 7</p>
+        <p>&#160;</p>
+        <p>Incoming Entity Attribute Options</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_AttribQty = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_AttribCust = 2</p>
+        <p>&#160;</p>
+        <p>Queue Output: Locations</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutNone = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutFIFO = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutLIFO = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutMaxAttrib = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutMinAttrib = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_QOutByType = 6</p>
+        <p>&#160;</p>
+        <p>Unit Selection: Locations</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelNone = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelLongestEmpty = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelRandom = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelByTurn = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelMostAvailCapacity = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelFewestEntries = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_USelFirstAvail = 6</p>
+        <p>&#160;</p>
+        <p>Time Units: Locations</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TimeUSeconds = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TimeUMinutes = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TimeUHours = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_TimeUDays = 4</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>RTI Types: Macros</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_rtiTypeRange = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_rtiTypeText = 3</p>
+        <p>&#160;</p>
+        <p>Colors: Path Networks</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_White = 16777215</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Black = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Lt_Grey = 12632256</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Dk_Grey = 8421504</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Red = 255</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Maroon = 128</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Lt_Green = 65280</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Dk_Green = 32768</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Med_Blue = 16711680</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Dk_Blue = 8388608</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Cyan = 16776960</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Teal = 8421376</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Yellow = 65535</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Gold = 32896</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Pink = 16711935</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Color_Purple = 8388736</p>
+        <p>&#160;</p>
+        <p>Path Types :Path Networks</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathTypeNoPassing = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathTypePassing = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathTypeCrane = 2</p>
+        <p>&#160;</p>
+        <p>Basis: Path Networks</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathBasisTime = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathBasisSpeedDist = 1</p>
+        <p>&#160;</p>
+        <p>BiDirectional: Path Networks</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathUniDi = 0&#160; One Way</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_PathBiDi = 1&#160;&#160; Two Way</p>
+        <p>&#160;</p>
+        <p>Resource Search: Resources</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_ResSrchClosest = 1 (Closest Resource)</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_ResSrchLongestIdle = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_ResSrchLeastUtilized = 3</p>
+        <p>&#160;</p>
+        <p>Entity Search: Resources</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_EntSrchOldest = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_EntSrchClosest = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_EntSrchMinAttrib = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_EntSrchMaxAttrib = 4</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Scheduling Options: Arrivals</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RepeatNone = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RepeatDaily = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RepeatWeekly = 2</p>
+        <p>&#160;</p>
+        <p>Type: Attributes</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_AttribTypeEnt = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_AttribTypeLoc = 2</p>
+        <p>&#160;</p>
+        <p>Quantity: Arrival Cycles</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_ArrCycPercent = 0&#160; Percentage</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_ArrCycQuant = 1&#160;&#160;&#160; Quantity</p>
+        <p>&#160;</p>
+        <p>File Type: External Files</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeGenRead = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeGenWrite = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeEntLocMatrix = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeArrival = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeShift = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeDLL = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_FileTypeExcel = 7</p>
+        <p>&#160;</p>
+        <p>Distance/Size Units: General Info</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_DistUnitFeet = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_DistUnitMeters = 2</p>
+        <p>&#160;</p>
+        <p>Type: User Distributions</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_UDistribDiscrete = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_UDistribContinuous = 2</p>
+        <p>&#160;</p>
+        <p>Routing Rules</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutFirstAvail = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutMostAvailCap = 2&#160;&#160; Most Available Capacity</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutByTurn = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutJoinRequest = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutLoadRequest = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutIfSend = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutUntilFull = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutAsAlternate = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutProbability = 9</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutUserCondition = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutRandom = 11</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutLongestEmpty = 12</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutIfEmpty = 13</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutContinue = 14</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutAsBackup = 15</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_RoutDependent = 16</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Sim Options - Time Basis</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimOptTimeOnly = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimOptCalDate = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimOptWeeklyTime = 2</p>
+        <p>&#160;</p>
+        <p>Sim Options Reporting</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimRptStandard = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimRptBatchMean = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimRptPeriodic = 2</p>
+        <p>&#160;</p>
+        <p>Sim Options Clock Precision</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrecNone = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec1 = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec10 = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec100 = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec1000 = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec10000 = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec100000 = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Rule_SimClockPrec1000000 = 7</p>
+        <p>&#160;</p>
+        <p>Months - When used in ProModel, list starts on zero</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Jan = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Feb = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Mar = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Apr = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_May = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Jun = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Jul = 6</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Aug = 7</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Sep = 8</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Oct = 9</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Nov = 10</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Month_Dec = 11</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Days - When used in ProModel, list starts on zero</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Sun = 0</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Mon = 1</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Tue = 2</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Wed = 3</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Thu = 4</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Fri = 5</p>
+        <p>&#160;&#160;&#160; Public Const PMD_Day_Sat = 6</p>
+        <p>&#160;&#160;&#160; </p>
+        <p>Graphics Types</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Lib = 1</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Q = 2</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Tank = 3</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Count = 4</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Text = 5</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Light = 6</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Spot = 7</p>
+        <p>&#160;&#160; Public Const PMD_GfxType_Region = 8</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Frame Shapes</p>
+        <p>&#160;&#160; Public Const PMD_GfxShape_Rect = 1</p>
+        <p>&#160;&#160; Public Const PMD_GfxShape_RndRect = 2</p>
+        <p>&#160;&#160; Public Const PMD_GfxShape_Ellipse = 3</p>
+        <p>&#160;&#160; Public Const PMD_GfxShape_Diamond = 4</p>
+        <p>&#160;&#160; </p>
+        <p>Graphics - Frame Type</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_None = 1</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_Plain = 2</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_Raised = 3</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_Sunken = 4</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_Shadow = 5</p>
+        <p>&#160;&#160; Public Const PMD_GfxFrame_NoBorder = 6</p>
+        <p>&#160;</p>
+        <p>Graphics - Direction</p>
+        <p>&#160;&#160; Public Const PMD_GfxDir_Up = 1</p>
+        <p>&#160;&#160; Public Const PMD_GfxDir_Down = 2</p>
+        <p>&#160;&#160; Public Const PMD_GfxDir_Left = 3</p>
+        <p>&#160;&#160; Public Const PMD_GfxDir_Right = 4</p>
+    </body>
+</html>

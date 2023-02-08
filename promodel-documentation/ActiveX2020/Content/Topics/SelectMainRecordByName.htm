@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="413" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_463339"></a>
+            <MadCap:keyword term="SelectMainRecordByName;ProModel Data Object:SelectMainRecordByName" />SelectMainRecordByName</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SelectMainRecordByName <span class="_Override" style="color: #0000ff;">RecordType, RecordName</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Selects a record by its Name or ID value.  This method can only be used with record types that have a name or ID field.  If the table does not have a Name or ID field, you must use the <span class="_Override" style="font-style: italic;">SelectMainRecordByIndex</span> method.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordName</span><span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span>(	Long)  The Name or ID field value for the record (row) you wish to select.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads the mfg_cost model, selects the location record by the name “Inspect”, inserts a new record before it, and gives it a name.</p>
+        <p class="objects">Sub AddALoc()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.SelectMainRecordByName <span class="_Override" style="color: #0000ff;">1, "Inspect"</span></p>
+        <p class="objects2">	pmDataObject.InsertRecord 1</p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 1, 2, "My_New_Loc"</p>
+        <p class="objects2">	pmObject.MsgBox "Done"</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

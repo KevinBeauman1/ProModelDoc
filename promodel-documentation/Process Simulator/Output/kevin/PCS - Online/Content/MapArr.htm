@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Statements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>MapArr</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Statements.htm">Statements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">MapArr</span>
+        </div>
+        <h1>MapArr</h1>
+        <h5><a name="kanchor97"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>MapArr &lt;array name&gt; {To &lt;variable name&gt;}</p>
+        <p>MapArr Array1 To Var10<br />MapArr Array5</p>
+        <h2>Description</h2>
+        <p>Starting with the variable you specify, the MapArr statement maps each individual cell of an array to a unique variable (i.e. if you define 12 cells for the array, the array will map to 12 variables). To display the cell value of a mapped array, create a variable graphic for the variable to which you mapped the array cell. Process Simulator collects statistics for an array cell through the variable to which you mapped the cell.  The initial value of the array cells are not written to the variables. Only changes to the array are recorded. </p>
+        <p>If you do not specify the optional variable name in the MapArr statement, Process Simulator will unmap the array from the variables that you originally mapped it. You can remap arrays by using the MapArr statement again.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;array name&gt;</b>
+        </p>
+        <p>Map, unmap, or remap this array. The array brackets, [ ], are unnecessary after the array name in the statement.</p>
+        <p><b>To &lt;variable name&gt;</b>
+        </p>
+        <p class="p">The optional name of the variable to which you map the first cell in the array. If you do not specify a name, Process Simulator will unmap the array from the variables.</p>
+        <h2>Example</h2>
+        <p>Suppose you want to dynamically view an array, Inventory_Array, during simulation. The array has a dimension of 2x5 (a two-dimensional array with 2 cells in the first dimension and 5 cells in the second) and contains a total of 10 cells (multiply  dimensions together). </p>
+        <p>Since you already used the first 10 of the 30 variables defined in the model, Var1 through Var30, you will start mapping the array with Var11 and end with Var20 (the 10th variable from Var10 listed in the Variables grid). In the initialization logic, use the following statement:</p>
+        <p>MapArr Inventory_Array To Var11</p>
+        <p>The cells in Inventory_Array will map to variables Var11 to Var20 in the following order:</p>
+        <p>[1, 1] ... Var11<br />[1, 2] ... Var12<br />[1, 3] ... Var13<br />[1, 4] ... Var14<br />[1, 5] ... Var15<br />[2, 1] ... Var16<br />[2, 2] ... Var17<br />[2, 3] ... Var18<br />[2, 4] ... Var19<br />[2, 5] ... Var20<br /></p>
+        <p>In the Variables grid, create graphics for variables Var11 through Var20 and place them on the layout. This will allow you to view them during the simulation. </p>
+        <p class="p_10">Please Note: Changing the cell value of a mapped array will change the value stored in the array cell And the value of the variable to which you mapped the specific cell. Changing the value of a variable, however, will change ONLY the variable value and NOT the cell value of the mapped array cell. Also, when you use a mapped array in an expression, the array returns the value of the variable mapped to it.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

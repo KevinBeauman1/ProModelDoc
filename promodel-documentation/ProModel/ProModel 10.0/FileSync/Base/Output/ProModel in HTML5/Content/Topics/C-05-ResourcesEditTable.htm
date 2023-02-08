@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources|Resources Editor">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Resources Edit Table</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-ResourcesEditTable.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-ResourcesEditor.htm">Resources Editor</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resources Edit Table</span>
+        </div>
+        <h4>Resources Edit Table<MadCap:keyword term="Resources:edit:table" /></h4>
+        <p class="p">The Resources edit table defines the characteristics of each resource in the system. The fields of this table are defined below.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-127-1.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Resources:icon" /><b>Icon</b></span><span class="Element" style="line-height: 12pt;">   The icon selected for this resource. Icons are selected using the Resource Graphics Window. If more than one icon is selected for the resource, the first icon is shown here.</span>
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Resources:name" /><b>Name</b></span><span class="Element" style="line-height: 12pt;">   The name of the resource.</span>
+        </p>
+        <p class="p"><b>Units</b>
+            <MadCap:keyword term="Resources:units" />   The number of <MadCap:keyword term="Zero units" />units represented by this resource name between 0 and 999 (or a macro). If the entry is a numeric expression, the expression will be evaluated at the start of the simulation run. Consequently, the number of resource units cannot be changed during the simulation run. If you would like to vary the number of units of a resource during runtime, use downtimes to vary the number of resources available at a given time. (See also <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-ResourceDowntimes.htm#C-05_2723800551_1086660" title="" alt="" xrefformat="{paratext}">Resource Downtimes</a>.)</p>
+        <p class="p_10">Please Note: When you use a macro with a value of zero in the units field, you can use SimRunner to find the optimal number of resources needed for your model. </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">DTs...</span><span class="Helv_Bold" style="line-height: 12pt;"><MadCap:keyword term="Resources:downtimes" /></span><span class="Element">  Select this field to define any optional downtimes for this resource. Only clock and usage based downtimes are permitted for resources.</span>
+        </p>
+        <p class="p">
+            <MadCap:keyword term="Resources:statistics" /><b>Stats</b>...   The desired statistics, if any, to gather for this resource. Statistics can be collected as a summary report over all units of a resource, or individually for each unit of a resource. The options are as follows:</p>
+        <ul>
+            <li class="li_1" value="1"><span class="Bold"><b>None</b>:</span> No statistics are gathered.</li>
+            <li class="li_1" value="2"><span class="Bold"><b>Summary</b>:</span> Average utilization and activity times are recorded collectively for all units of the resource.</li>
+            <li class="li_1" value="3"><span class="Bold" style="font-weight: bold;">By Unit</span>: Statistics are gathered for each unit individually as well as collectively.</li>
+            <li class="li_1" style="font-weight: normal;" value="4"><b>Time Series</b>: Collects basic statistics and time series tracking the resource over time.</li>
+        </ul>
+        <p class="p"><span class="Helv_Bold" style="font-weight: bold;">Specs...</span>
+            <MadCap:keyword term="Resources:specifications" />   Select this field to open the Resource Specifications dialog box. From here you can assign a path network, set the resource speed, and define pickup and deposit times. For more information on the Specification dialog, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-ResourceSpecificationsDialogBox.htm#C-05_2723800551_1086999" title="" alt="" xrefformat="{paratext}">Resource Specifications Dialog Box</a>.</p>
+        <p class="p"><b>Search...</b>
+            <MadCap:keyword term="Resources:park search;Resources:work search;Park search;Work search" />  If a path network has been assigned, select this field to access the Work Search and Park Search edit tables, used to define optional work and park searches.</p>
+        <p class="p"><b>Logic...</b>
+            <MadCap:keyword term="Resources:logic;Node:logic" />   If a path network has been assigned, select this field to define any optional logic to be executed whenever a resource enters or leaves a particular path node. If you have defined a node entry and exit logic, the logic field will show the number of nodes where node entry and exit logic has been defined.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Pts...</span>
+            <MadCap:keyword term="Resources:resource points" />   If a path network has been assigned, select this field to define resource points. Resource points are auxiliary points where multiple resources may appear graphically when parked or in use at a multi-capacity node.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Notes...</span>
+            <MadCap:keyword term="Resources:notes" />   Enter any notes in this field, or click on the heading button to open a larger Notes window for entering notes.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

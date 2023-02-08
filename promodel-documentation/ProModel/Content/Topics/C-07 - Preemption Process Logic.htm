@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="664" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-07_3886599965_1089500"></a>
+            <MadCap:keyword term="Logic:preemption process;Preemption:process:logic" /><a name="C-07_3886599965_26971"></a>Preemption Process Logic</h2>
+        <p class="p">With Preemption Process Logic, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> makes it possible to control preemption rather than limit you to default preemption priority levels and values. This feature pertains only to the preemption of entities using a location. It does not include preemption of downtimes.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Normally, if an entity or downtime attempts to preempt an entity that is using a location, the location is immediately preempted (assuming it is preemptable). Once the location finishes the preempting activity, the original preempted entity regains possession of the location and resumes processing where it left off.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To override this default preemption procedure, in the case of entities that are preempted by another entity or a downtime, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows a Preemption Process Record to be defined which postpones the actual preemption of the location until after the current entity explicitly releases it.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Preemption Process Record, allows you to control if and when the location is given up.  In the case of a preemptive request for a location, the preemption process record allows the entity to be routed elsewhere if desired.  If a preemption process is defined, the actual preemption does not occur until the preemption process explicitly frees the location.  </p>
+        <p class="p">&#160;</p>
+        <p class="p">After the location is given up, the entity may (1) elect to use an alternative location to complete the process, or (2) seek to regain access to the same location to complete the process.</p>
+        <p class="p">&#160;</p>
+        <p class="p">While an entity is executing a preemption process, it cannot be preempted by any other entity or downtime.</p>
+        <p class="How_to_title">How to create a preemption process record<MadCap:keyword term="Preemption:creating a preemption process record" />: </p>
+        <ol>
+            <li class="li_1_how_to_step">Using the same entity and location names, create a process record somewhere following the process record where the preemption may occur.</li>
+        </ol>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c7-284-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c7-282-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c6-292-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in; }" />
+        </p>
+        <ol MadCap:continue="true">
+            <li class="li_1">Click on the Entity button to display the Entities dialog shown here.</li>
+        </ol>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-284-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c7-282-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c6-292-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <ol MadCap:continue="true">
+            <li class="li_1">Check the Preemption Process option box and click OK.</li>
+            <li class="li_1">Click on the Operation button to enter the preemption logic.  You can use any valid operation logic including delays. It is recommended that you enter a comment as the first line in the logic indicating that this is a preemption process. This will make the record easily identifiable as a preemption process.</li>
+        </ol>
+        <p class="p_10">Please Note: When a preemption occurs, the entity looks forward and then from the beginning of the process list trying to find a preemption process that matches the same entity and location (a process with <MadCap:keyword term="ALL" />All as the entity name will match any entity). If a match is found, the preemption process gets executed. Otherwise the default preemption occurs. Only the first preemption process encountered will be executed in the event that multiple preemption processes are defined with the same entity and location names.</p>
+        <h3>Possible Effects of Delayed Preemption<MadCap:keyword term="Logic:preemption process:possible effects of delayed preemption;Preemption:process:logic:possible effects of delayed preemption" /></h3>
+        <p class="p">Several circumstances can be created through the use of preemption process records.  An entity delaying a preemption, for example, may find at the conclusion of the delay that the preemption is no longer required, or that it faces an even higher preemption priority.</p>
+        <p class="p">&#160;</p>
+        <p class="p">In cases where an entity has multiple locations or resources from which to choose, a preemptive request for any one of them is not necessarily a commitment to select that particular location. If any of the alternative locations becomes available, the entity will select it and withdraw the preemption request.</p>
+        <h3>Functions for Defining Logic in a Preemption Process<MadCap:keyword term="Logic:preemption process:functions;Preemption:process:new functions" /></h3>
+        <p class="p">The Preemption Process Logic feature includes the following functions for use in the preemption logic.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="PREEMPTOR()" />Preemptor()   Identifies whether a downtime or entity is making the preemptive request. It returns a 0 if the preemptor is a downtime, otherwise it returns the index number of the preempting entity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="TIMELEFT()" />TimeLeft() Returns the amount of time remaining if the preemption occurred during a <MadCap:keyword term="WAIT" />Wait or <MadCap:keyword term="USE" />Use statement. It returns a time value in default time units (real). If multiple entities are preempted from a location, it returns the longest remaining time for all of the entities.</p>
+        <p class="p_10">Please Note: The values returned by these functions must be checked before any processing delay occurs since they are updated whenever a preemption takes place.  If the values must be referred to later, they should be assigned to the entity’s attribute or to a local variable.</p>
+        <h3 MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Preemption Process Example<MadCap:keyword term="Logic:preemption process:example;Preemption:process:example" /></MadCap:conditionalText>
+        </h3>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">Suppose a loan application (Application A) is being reviewed by a specific loan officer at a bank when another application (Application B) with a higher preemptive priority arrives at the loan officer’s desk. Also suppose that Application A cannot wait to be processed until after Application B is processed.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">Before the actual preemption can take place, the process time for Application A will be interrupted and the Application A entity will immediately begin processing the operational logic defined in the preemption process record as shown below.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">In the preemption process, the remaining time is stored in attribute Att1. Application A is then routed to another loan officer’s desk. Meanwhile, Application B will begin the process logic at the current location. When Application A arrives at another loan officer’s desk, the attribute Att1 can be used for the remaining application process time.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">In this example, a Gear may be preempted in its occupancy of the Lathe. This preemption may be because of either a preempting entity or downtime. Before the actual preemption takes place, the operation time for the Gear is interrupted and the Gear immediately begins processing the operation logic defined in the preemption process.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">In the preemption process, the remaining operation time is stored in Attr1. The Gear routes to Lathe_Backup where it finishes processing. Because the backup lathe is not as efficient as the other Lathe, it takes 50% longer to process the Gear on Lathe_Backup. Therefore, we multiply the time left to process the Gear by a factor of 1.5.</p>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.ProModel">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="53px" class="Column-Column1" />
+            <col width="74px" class="Column-Column2" />
+            <col width="137px" class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Lathe</p>
+                    </td>
+                    <td class="BodyD-Column3-Body1">
+                        <p class="CellBody">Wait 10 min</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Lathe</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2">
+                        <p class="CellBody">Attr1=TimeLeft()</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Lathe_Backup</p>
+                    </td>
+                    <td class="BodyA-Column3-Body3">
+                        <p class="CellBody">Wait Attr1*1.5</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Component" MadCap:conditions="PM-MM Conditionals.ProModel">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');" cellspacing="0">
+            <col width="33px" class="Column-Column1" />
+            <col width="44px" class="Column-Column2" />
+            <col width="73px" class="Column-Column3" />
+            <col width="51px" class="Column-Column4" />
+            <col width="64px" class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">Mill</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">Lathe_Backup</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3" MadCap:conditions="PM-MM Conditionals.ProModel">
+                    <td class="BodyB-Column1-Body3">
+                        <p class="CellBody">1</p>
+                    </td>
+                    <td class="BodyB-Column2-Body3">
+                        <p class="CellBody">Gear</p>
+                    </td>
+                    <td class="BodyB-Column3-Body3">
+                        <p class="CellBody">Mill</p>
+                    </td>
+                    <td class="BodyB-Column4-Body3">
+                        <p class="CellBody">First 1</p>
+                    </td>
+                    <td class="BodyA-Column1-Body3">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-286-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 2.75in; }" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Statements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Use</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Statements.htm">Statements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Use</span>
+        </div>
+        <h1>Use</h1>
+        <h5><a name="kanchor111"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Use {&lt;quantity&gt;} &lt;resource&gt; {,&lt;priority&gt;} For &lt;time&gt; {And or Or {&lt;quantity&gt;} &lt;resource&gt; {,&lt;priority&gt;}  For &lt;time&gt;... }</p>
+        <p>Use 2 Res2, 5 For 30 min<br />Use 2 Res1 For 2.0 min Or 3 Res2 For 1.5 min<br />Use Res1, 3 For 1 hr And (Res2 For 5 Or Res3 For 5)<br />Use Oper_Attr Res(Type_Attr) For Time_Var1 hr</p>
+        <h2>Description</h2>
+        <p>Captures a resource or combination of resources as each resource becomes available. Once the resource has been captured it is used for the specified amount of time, and then freed when the specified duration is over. If the entity already possesses one of the specified resources from a previous Get or Jointly Get statement, the entity will still try to capture an additional unit of that resource.	</p>
+        <p class="p_10">Please Note: If an entity uses a Use statement to capture a resource, the resource must complete its operation before you can preempt the entity. However, if the entity uses a Get, Wait, Free sequence, you may preempt the entity during the Wait portion of the logic.</p>
+        <p>If multiple units of a resource type are defined in the Use statement, the time specified after the For will be treated as "total man-hours". For example, in the statement "Use 2 Worker For 1 hr," a total of two man-hours is required (i.e. 2 units x 1 hour = 2 man-hours). In the case where only one unit of the Worker resource is available, that unit could be used for a total elapsed time of two hours if a second unit never becomes available during the process. However, if two units of the Worker resource are available at the same time, only one hour of elapsed processing time will occur. To further illustrate, if one unit is captured and used for one hour after which time the second unit is then captured, the remaining one man-hour of time will be divided between the two units and together will complete it in half an hour. In this case, the entity would be processed in an elapsed time of 1.5 hours.</p>
+        <h2>Valid In</h2>
+        <p>Activity and route logic. </p>
+        <h2>Components</h2>
+        <p><b>&lt;quantity&gt;</b>
+        </p>
+        <p>The number of resources to get. Process Simulator ignores a value of zero and values less than zero return an error. Process Simulator evaluates and truncates this numeric expression every time it encounters the Use statement.</p>
+        <p><b>&lt;resource&gt;</b>
+        </p>
+        <p>The name of the resource to use. You can substitute Res() for the resource name.</p>
+        <p><b>&lt;priority&gt;</b>
+        </p>
+        <p>When multiple entities request a resource, Process Simulator fills the requests in order of priority. This expression should be a number between 0 and 999.</p>
+        <p><b>&lt;time&gt;</b>
+        </p>
+        <p>The length of time the entity will tie up the resource. Process Simulator evaluates this expression whenever it encounters the statement. If you specify no time unit, Process Simulator applies the default time unit, which is minutes.</p>
+        <h2>Example</h2>
+        <p>This simple example shows how Clients arriving at location Reception must use the Secretary for some amount of time according to the user distribution, Dist1.  Clients are then sent to a waiting area until the desired next activity becomes available. </p>
+        <p class="p_11">Use Secretary For Dist1()</p>
+        <h5>See Also</h5>
+        <p><a href="Get.htm" class="a_11">Get</a>, Jointly Get</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

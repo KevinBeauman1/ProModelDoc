@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1323" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Comment</h1>
+        <h5>
+            <MadCap:keyword term="Documentation symbols: //, /*...*/;Special Characters;Comments" />Documentation Symbols</h5>
+        <h2>Syntax samples</h2>
+        <p>//</p>
+        <p>/*...*/</p>
+        <h2>Components</h2>
+        <p><b>//</b>
+        </p>
+        <p>	Two forward slashes signal the start of a one-line comment. Process Simulator will ignore any characters on the rest of the line.</p>
+        <p><b>/*...*/</b>
+        </p>
+        <p>A slash followed by an asterisk signals the start of a multi-line comment. Process Simulator will ignore all characters after the /* until it finds an asterisk followed by a slash, */. Use this type of comment for long explanations and to prevent Process Simulator from executing long portions of logic during debugging. Comments using // may be nested inside multi-line comments.</p>
+        <h2>Description</h2>
+        <p>Comments are notes to the modeler inside blocks of logic. Process Simulator ignores them, but they can be particularly useful to explain logic when more than one person will be using a model. </p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Example</h2>
+        <p>The logic below has several notes to explain it. Additionally, Process Simulator ignores the Else statement and the Else statement’s block.</p>
+        <p class="p_11">If Parts_Available &gt; Attr2 Then<br />{ //Parts to join are stored in Attr2</p>
+        <p class="p_12">Join Attr2 //Join the number of parts<br />// needed only if there are<br />// enough parts available.<br />Wait Attr1</p>
+        <p class="p_11">}<br />/* Else<br />{ //Start operation</p>
+        <p class="p_12">Inc Var1<br />Wait Attr3</p>
+        <p class="p_11">} */</p>
+    </body>
+</html>

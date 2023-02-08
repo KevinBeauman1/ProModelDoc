@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Planning the Model|Steps for Doing Simulation">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Step 3: Building the Model</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-03-Step3BuildingtheModel.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-03-PlanningtheModel.htm#C-03_1917231497_1035124">Planning the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-03-PlanningtheModel.htm#C-03_1917231497_1037812">Steps for Doing Simulation</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Step 3: Building the Model</span>
+        </div>
+        <h3><a name="C-03_1917231497_1038140"></a>Step 3: <MadCap:keyword term="Build:models;Model:build;Simulation:steps:building the model" />Building the Model</h3>
+        <p class="p">Once sufficient information has been compiled to define the basic system operation, the model building activity can begin. While starting to build a model too early can be a wasted exercise, waiting until all of the information is completely gathered and validated may unnecessarily postpone the building of the model. Getting the model started before the data is completely gathered may even help identify missing information needed to proceed. </p>
+        <p class="p">The goal of model building is to provide a valid representation of the defined system operation. Additionally, the model must be able to provide any other statistical or graphical representation needed to satisfy the objectives of the study. A model is neither true nor false, but rather useful or not useful. Once validated, a model is useful when it provides the needed information to meet the objectives of the simulation.</p>
+        <h4>
+            <MadCap:keyword term="Progressive refinement;Refinement, progressive" />Progressive Refinement</h4>
+        <p class="p">One nice feature of simulation is that models do not have to include all of the final detail before they will run. This allows a progressive refinement strategy to be used in which detail is added to the model in stages rather than all at once. Not only do models get built and running quicker this way, but it also makes models easier to debug. In the initial stages of a model, for example, attractive graphics are not very useful and, since they are likely to be changed anyway, should not be added until later when preparing for the final model presentation. </p>
+        <p class="p">The complexity of model building should never be underestimated and it is always better to begin simple and add complexity rather than create an entire complex model at once. It is also easier to add detail to a model than it is to remove it from a model. Building a model in stages enables bugs to be more readily identified and corrected. Emphasizing the importance of applying progressive refinement to model building, Law and Kelton (1991) have advised:</p>
+        <p class="p">Although there are few firm rules on how one should go about the modeling process, one point on which most authors agree is that it is always a good idea to start with a simple model which can later be made more sophisticated if necessary. A model should contain only enough detail to capture the essence of the system for the purposes for which the model is intended: it is not necessary to have a one-to-one correspondence between elements of the model and elements of the system. A model with excessive detail may be too expensive to program and to execute.</p>
+        <h4>
+            <MadCap:keyword term="Incremental expansion;Expansion, incremental" />Incremental Expansion</h4>
+        <p class="p">In addition to adding complexity to a model in stages, models that have a broad scope are sometimes easier to build in phases where additional sections are added incrementally to the model. This method of "eating the elephant one bite at a time" allows a portion of the model to be built, tested and debugged before adding new sections and makes a large task more manageable. </p>
+        <p class="p">For unusually large models, it may be useful to identify definable boundaries within a model to permit <span class="_Override" style="font-style: italic;"><MadCap:keyword term="Model:partitioning;Partitioning, model" /><b>model partitioning</b></span>. Model partitioning is the process of subdividing a model into two or more modules that represent physically separate sections within the system. The purpose of model partitioning is to allow model sections to be built and debugged, possibly even by separate individuals, independently of each other. Once sections are finished, they can be merged together to create the overall model. This “divide-and-conquer” method of model building can greatly reduce the time and difficulty in building and debugging large models.</p>
+        <h4>
+            <MadCap:keyword term="Model:verification;Verification, model" />Model Verification</h4>
+        <p class="p">Once a model is defined using a selected software tool, the model must generally be debugged to ensure that it works correctly. The process of demonstrating that a model works as intended is referred to in simulation literature as model <span class="_Override" style="font-style: italic;"><b>verification</b>. </span>It is much easier to debug a model built in stages and with minimal detail than to debug a large and complex model. Eliminating bugs in a program model can take a considerable amount of time, especially if a general purpose programming language (e.g., C++) in which frequent coding errors occur is used. Most simulation languages provide a trace capability in the form of audit trails, screen messages, graphic animation, or a combination of all three. A trace enables the user to look inside of the simulation to see if the simulation is performing the way it should. Good simulation products provide interactive debugging capability which further facilitates the debugging process. A thorough “walk-through” of the model input is always advisable.</p>
+        <h4>
+            <MadCap:keyword term="Model:validation;Validation, model" />Model Validation</h4>
+        <p class="p">During the process of model building, the modeler must be constantly concerned with how closely the model reflects the system definition. The process of determining the degree to which the model corresponds to the real system, or at least accurately represents the model specification document, is referred to as model <span class="_Override" style="font-style: italic; font-weight: bold;">validation</span>. Proving absolute validity is a non attainable goal. As Neelamkavil (1987) explains, “True validation is a philosophical impossibility and all we can do is either invalidate or fail to invalidate.” For this reason, what we actually seek to establish is a high degree of <span class="_Override" style="font-style: italic;"><MadCap:keyword term="Face validity" /><b>face validity</b></span>. Face validity means that, from all outward indications, the model appears to be an accurate representation of the system. From this standpoint, validating a model is the process of substantiating that the model, within its domain of applicability, is sufficiently accurate for the intended application (Schlesinger, 1979).</p>
+        <p class="p">There is no simple test to establish the validity of a model. Validation is an inductive process through which the modeler draws conclusions about the accuracy of the model based on the evidence available. Gathering evidence to determine model validity is largely accomplished by examining the model structure (i.e., the algorithms and relationships) to see how closely it corresponds to the actual system definition. For models having complex control logic, graphic animation can be used effectively as a validation tool. Finally, the output results should be analyzed to see if the results appear reasonable. If circumstances permit, the model may even be compared to that actual system to see how they correspond. If these procedures are performed without encountering a discrepancy between the real system and the model, the model is said to have face validity.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

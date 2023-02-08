@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Flow_Control - for print</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h2><a name="kanchor188"></a>Flow Control</h2>
+        <p class="p">Before defining the properties of the Process Simulator elements that 
+ have been placed on the layout, it is important to understand how entity 
+ flow occurs when a Process Simulator model is run. Entities start the 
+ process at the activities where Arrivals have been defined. The activity 
+ sequence in which each entity flows through the process is controlled 
+ by the routings that are defined from each activity. When an entity completes 
+ an activity for which there are no routings defined, it exits the system. 
+ Alternative routings from which to choose based on some percentage or 
+ condition can also be defined from any activity. </p>
+        <p class="p">&#160;</p>
+        <p class="p">Controlling the timing of entity flow is also important in order to model the 
+ correct behavior of the process. The timing of when entities 
+ start the first activity is controlled by the way the entity Arrival is 
+ defined for that activity. Controlling the timing of entity movement from 
+ activity to activity can be accomplished by any combination of the following:</p>
+        <ul>
+            <li class="li_1" value="1">Specify the amount of time an entity should wait 
+ at an activity before moving on.</li>
+            <li class="li_1" value="2">Specify a condition to be met (accumulation of 
+ a certain number of entities, waiting until a variable reaches a given 
+ value, etc.) before moving on. </li>
+            <li class="li_1" value="3">Limit the capacity of the activity or input buffer 
+ of the activity to which it is moved (movement doesn't occur until there 
+ is available capacity at the next activity).</li>
+            <li class="li_1" value="4">Require a resource to make the move (movement doesn't 
+ occur until the resource specified for making the move is available)</li>
+        </ul>
+        <p class="p">In Process Simulator, entities are not able to move from one activity 
+ to the next until; </p>
+        <p class="p">(1) any time delay or other activity logic specified 
+ for the current activity has been completed</p>
+        <p class="p">(2) there is available capacity 
+ at the next activity or at the input buffer of the next activity</p>
+        <p class="p">(3) any specified resource required to make the move can be obtained (i.e. 
+ it is available).</p>
+        <p class="p">&#160;</p>
+        <p class="p">When an entity arrives at an activity either by an arrival that was 
+ defined or by a routing that was completed, if an input buffer is defined 
+ for the activity, the entity enters the input buffer and waits until capacity 
+ is available at the activity. Once capacity is available, the entity gets 
+ any resource that has been defined for the activity and enters the activity. 
+ If no input buffer is defined, the entity enters directly into the activity 
+ and then gets any resource specified for the activity. Once the resource 
+ is obtained, the entity executes any logic defined for the activity and 
+ then takes whatever activity time has been defined. </p>
+        <p class="p">&#160;</p>
+        <p class="p">Once the entity completes any activity logic and time that is defined, 
+ if there is an output buffer defined, the entity waits until it is available 
+ and then enters into it. If no output buffer is defined, or once the entity 
+ has entered the output buffer, it selects the next activity to route to 
+ based on the rule defined in the routing connection(s).</p>
+        <p class="p">&#160;</p>
+        <p class="p">Once the next activity is selected for routing, the entity must wait 
+ until capacity is available at that activity (or its input buffer) before 
+ it can route (an Attach routing doesn't require capacity at the next location, 
+ but it does require a base entity to be present at the next activity for 
+ it to attach to). Once capacity is available, the entity gets any resource 
+ required for making the move, executes any logic defined for the routing, 
+ and then initiates the move to the next activity. After it travels for 
+ the specified move time, it enters into the next activity or, if defined, 
+ into the input buffer for the next activity.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1924" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Accumulating Entities without Batching Them</h3>
+        <p class="p">Accumulate a specified quantity of entities before allowing them to continue processing.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=2WSxpbsheII&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=22&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define a buffer by dragging a buffer onto the layout or by right-clicking on a layout shape and converting it to a buffer.</li>
+            <li class="li_1">In the buffer dialog, select Accumulate as the Batching Type.</li>
+            <li class="li_1">Enter the quantity to be accumulated (notice that this can be a constant or a variable).</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Boxes of finished goods are placed on an accumulation Conveyor until 10 boxes have been accumulated. Then they are moved one at a time by a Handler to a Shipping area for loading onto a carrier. The move time for each box is 20 seconds.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <img src="Resources/Images/accumulatingentiesnobatchexample1.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">The Conveyor dialog is shown below.</p>
+        <p class="p">
+            <img src="Resources/Images/accumulatingentiesnobatchsolution1.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The routing dialog is shown below showing the Handler resource being used 20 seconds for each box.</p>
+        <p class="p">
+            <img src="Resources/Images/accumulatingentiesnobatchsolution2.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Accumulate batching option for Conveyor causes 10 Boxes to accumulate before moving on.</p>
+    </body>
+</html>

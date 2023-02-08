@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Send</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Send</h1>
+        <h5><a name="kanchor312"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Send &lt;expression&gt; &lt;entity name&gt; To &lt;destination&gt;{,&lt;priority&gt;}</p>
+        <p>Send 2 EntA To Act2<br />Send 1 Grp_A To Grp_A_Processing, 10</p>
+        <h2>Description</h2>
+        <p>Sends the specified number of a particular entity type to the destination. The entities to be sent must be waiting with a Send routing. The entity that issued the Send command continues processing whether or not entities of the type requested are waiting to be sent. If no entities are waiting to be sent, a Send notice is automatically posted so that entities will be sent when they become available. </p>
+        <p>The Send statement can model a system based on demand, rather than on entity arrival, (called a pull system). Customer orders cause a Send to be issued for a main assembly. Main assembly issues Send commands for sub-assemblies.</p>
+        <p>The Send statement can also be used as a control device to limit the amount of work-in-progress (WIP) in certain critical areas. Quantities are only sent to the production area when the WIP level falls below a certain point. </p>
+        <p>If multiple Send statements are executed that trigger the sending of entities to the same activity, the order the entities are ultimately sent in could vary depending on the available capacity of that destination activity.  When the destination activity has available capacity, the order in which the entities are sent would be the order the Send statements were executed.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The number of entities to send to the destination. Negative values will generate an error message.</p>
+        <p><b>&lt;entity name&gt;</b>
+        </p>
+        <p>The type of entity to send to the destination. You may substitute Ent() for an entity name.</p>
+        <p><b>&lt;destination&gt;</b>
+        </p>
+        <p>The name of the activity to which the entities will be sent. You may substitute Loc() for the activity name.</p>
+        <p><b>&lt;priority&gt;</b>
+        </p>
+        <p>Multiple Send requests for the same entity type are filled according to the longest waiting request having the highest priority. This expression should be a number between 0 and 999.</p>
+        <h2>Example</h2>
+        <p>
+            In this example, Loan’s arrive at InQueue and trigger the sending of DebtCheck entities to Research. The value of Loan’s attribute aNum determines the number of DebtCheck’s sent to Research.
+</p>
+        <p class="p_11">Wait U(3, .5)<br />Send aNum DebtCheck To Research</p>
+        <h5>See Also</h5>
+        <p><a href="Order.htm" class="a_11">Order</a>, <a href="WaitUntil.htm" class="a_11">Wait Until</a>, and route types <a href="SendRouting.htm" class="a_11">Send</a> and <a href="Attach.htm" class="a_11">Attach</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

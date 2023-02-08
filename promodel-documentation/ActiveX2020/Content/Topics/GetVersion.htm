@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="276" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490326"></a>
+            <MadCap:keyword term="GetVersion" />GetVersion</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>GetVersion</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Returns the version of the product you are using. This could be used to make certain that the user’s version of ProModel is recent enough to contain certain features.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:  </span>None.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  (String)  Version number and build number shown in the ‘Help &gt; About’ dialog box in ProModel.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens ProModel then returns the version information to the variable.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub VerNum()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmVersion As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2"> <![CDATA[	]]><b>pmVersion = pmObject.GetVersion</b></p>
+        <p class="objects2">	MsgBox "You are using version " &amp; pmVersion</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

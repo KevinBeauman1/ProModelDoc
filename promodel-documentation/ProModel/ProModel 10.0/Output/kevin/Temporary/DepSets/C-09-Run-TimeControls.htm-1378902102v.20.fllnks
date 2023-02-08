@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/mmsimulationcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/pmsimulationcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/mmspeedcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/pmspeedcontrol.png" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm" />
+    <Link
+      Url="Content/Topics/mm-c9-350-1.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/mmsimulationcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/pmsimulationcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/mmspeedcontrol.png" />
+    <Link
+      Url="Content/Resources/Images/pmspeedcontrol.png" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm#C-14_4292047180_1102537" />
+    <Link
+      Url="Content/Topics/mm-c9-350-1.jpg" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1091711" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Run-time:controls"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Run-time:controls:animation panning"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Animation:panning during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="8" />
+    <IndexCacheEntry
+      Term="Run-time:controls:simulation speed"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Speed:simulation:run-time control"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="ANIMATE"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Run-time:controls:clock display"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="Clock:display during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="28" />
+    <IndexCacheEntry
+      Term="Run-time:controls:identifying location name"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+    <IndexCacheEntry
+      Term="Locations:identifying location name during run-time"
+      Conditions=""
+      LocalConditions=""
+      Position="35" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

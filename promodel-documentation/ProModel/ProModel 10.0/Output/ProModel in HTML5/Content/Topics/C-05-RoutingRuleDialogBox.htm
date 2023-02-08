@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Processing|Routing Edit Table">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Routing Rule Dialog Box</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-RoutingRuleDialogBox.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Processing.htm#C-05_2723800551_1087167">Processing</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-RoutingEditTable.htm">Routing Edit Table</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Routing Rules Dialog Box</span>
+        </div>
+        <h4><a name="Routing"></a>Routing Rule Dialog Box<a name="kanchor813"></a></h4>
+        <p class="p">The Routing Rule dialog box provides methods for selecting an entity's destination after finishing a process. The Rule heading button in the Routing edit table, brings up the Routing Rule dialog box. The fields of this dialog box are defined in the following example.</p>
+        <p class="Graphic">
+            <img src="5-5-12.jpg" />
+        </p>
+        <p class="p"><a name="kanchor814"></a><b>Start new block</b> Check this box to signal the beginning of a new routing block. Checking this box will place a number in the Blk field for that record.</p>
+        <p class="p"><b>New En</b><a name="kanchor815"></a><b>tity Check Box</b> In order to let you designate whether a routing block applies to the main entity or if you wish to create a new entity, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> includes a N<a name="kanchor816"></a>ew Entity check box in the routing rule dialog. By default, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> does not check the first routing block for a process record but does check subsequent blocks unless they share the same input and output name. If you check the New Entity box, an asteri<a name="kanchor817"></a>sk (*) appears after the block number in the block column of the routing table. 	Refer to the statements <a href="C-14-Create.htm" class="lowercase_no_see MCXref xref xreflowercase_no_see">Create</a> and <a href="C-14-Order.htm" class="lowercase_no_see MCXref xref xreflowercase_no_see">Order</a> for additional ways to create new entities.</p>
+        <p class="p">If you check the new entity box, the entity using the routing block will begin routing with new cost and time statistics, but it will inherit any attribute values from the original entity. If the new entity box remains unchecked, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> assumes the entity routing from this block is a main entity (the parent entity), carrying with it all cost and time statistics.</p>
+        <p class="p">If the new entity field remains unchecked and you enter a quantity field value greater than 1, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> behaves just as it does with a Split As statement, dividing the cost statistics between the split members and resetting all time statistics to zero.</p>
+        <p class="p_10">Please Note: A run-time error occurs if you fail to route one (and only one) main entity for a process. If no routing block executes for the main entity, a “N<a name="kanchor818"></a>o routing defined for main entity” error occurs. If more than one route block executes for the main entity, a “M<a name="kanchor819"></a>ain entity already routed” error occurs.</p>
+        <p class="p"><a name="kanchor820"></a><b>Quantity</b> The number of entities resulting from this routing block. The default is one. Several entities of the same name can be created from a single entity, much like a split As statement, by entering a number greater than one. Each of the new entities then processes the routing block one entity at a time. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">For example, suppose an entity called mail_bag enters a location and is separated into 30 individual pieces of mail, called Letters. Enter 30 as the quantity and Letter as the output entity, as in the example below. Only the first line in a routing block can specify a quantity.</MadCap:conditionalText></p>
+        <p class="p"><b>Routing Rules</b> Choose the rule for selecting the next location. Only one rule may be chosen for each routing line. Note that the last three routing rules, alternate, backup and dependent, may not be chosen as the start of a new routing block. Note also that no more than one of the other rules can appear in a single block (e.g., you cannot mix a First Available rule and a Most Available rule in the same block).</p>
+        <p class="p_10">Please Note: In the Probability text box you can type, as an alternative to a numeric probability value,  the name of either an array or a macro that refers to a probability value.</p>
+        <p class="p">	For exact syntax and examples of each routing rule, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-12-RoutingRules.htm#C-12_3485478126_1035124" title="" alt="">Routing Rules</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="839" MadCap:lastWidth="1204">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-11_756594771_1091021"></a>
+            <MadCap:keyword term="Language elements:character strings;Character strings;Strings:character" />Character <MadCap:keyword term="Expressions:string" />Strings</h2>
+        <p class="p">A string is any collection of characters enclosed in quotes, such as “Now Boarding.” Unlike some programming languages, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> uses character strings exclusively for output either to a file or to the screen. Strings may contain any of the 256 <MadCap:keyword term="ASCII:characters;Characters:ASCII" />ASCII characters. (ASCII characters not on the keyboard can be included in string expressions with the <MadCap:keyword term="CHAR()" />Char() function.) Strings may include keywords and names, but those keywords and names will not be executed in or used by the logic. </p>
+        <p class="p">Additionally, the symbol “\n” can be used to divide a string into multiple lines when it is output, as in the example below. </p>
+        <p class="p">The statement, <MadCap:keyword term="DISPLAY" />Display “The simulation \nis half over.” displays this dialog box:</p>
+        <p class="Graphic">
+            <img src="mm-c11-391-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Component">Examples of character strings</p>
+        <p class="Syntax_body">	“EntA exited the system.”</p>
+        <p class="Syntax_body">	“Location 3 is operating at capacity.”</p>
+        <p class="Syntax_body">	“<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>”</p>
+        <p class="p">Although <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does not provide string variables, it does allow the names of model elements to be stored in variables and attributes as name-index numbers (see <MadCap:xref class="lowercase_no_see" href="C-11-Numbers.htm#C-11_756594771_1091001" target="" title="" alt="">Name-Index Numbers on page 1</MadCap:xref>). The name referenced by a name-index number may be used in statements and output to the screen or a file with the <MadCap:keyword term="ENT()" />Ent(), <MadCap:keyword term="LOC()" />Loc(), and<MadCap:keyword term="RES()" /> Res() functions. See <MadCap:xref class="lowercase_no_see" href="C-11-StringExpressions.htm#C-11_756594771_1095062" target="" title="" alt="">String Expressions on page 1</MadCap:xref> for more information.</p>
+    </body>
+</html>

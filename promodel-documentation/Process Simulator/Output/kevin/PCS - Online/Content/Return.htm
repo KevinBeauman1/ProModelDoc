@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Statements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Return</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Statements.htm">Statements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Return</span>
+        </div>
+        <h1>Return</h1>
+        <h5><a name="kanchor104"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Return {&lt;expression&gt;}</p>
+        <p>Return<br />Return Attr1**Sqrt(Attr2)</p>
+        <h2>Description</h2>
+        <p>Sends a value from a subroutine to the logic that called the subroutine. In the same way that parameters send information from the calling logic to the subroutine, Return sends information from the subroutine to the calling logic. After the Return is executed, no more logic in the subroutine is executed.  When subroutines return values, the Returns statement must be followed by an expression. </p>
+        <p>When used in logic that is not a subroutine (or a subroutine of type None), Return functions like a very powerful Break or BreakBlk statement. Whereas Break and BreakBlk exit only the innermost loop or statement block, Return exits the logic completely, no matter how deeply nested inside loops and statement blocks. </p>
+        <h2>Valid In</h2>
+        <p>Any logic, but used most often in subroutines.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The value to return. This expression must be on the same line as the Return.  If a subroutine was activated, then the return value is ignored.</p>
+        <h2>Example</h2>
+        <p>The following example uses a subroutine to check the supply of items in an inventory activity whenever an order is shipped.  If the free capacity of the activity is greater than 10, the user is prompted for an order quantity; otherwise no new items will be ordered.  If an order is made, the order time is returned; otherwise the variable OrderTime remains unchanged.  </p>
+        <p>Shipping activity logic</p>
+        <p class="p_11">Wait N(3.2, .2)<br />OrderTime = Sub1()</p>
+        <p>Sub1 subroutine logic</p>
+        <p class="p_11">If FreeCap(Inventory) &gt; 10 Then<br />{</p>
+        <p class="p_12">Prompt "Enter an Order quantity for Items99", Qty99<br />Order Qty99 Items99 To Inventory<br />Return Clock(hr)</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p class="p"><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="Subroutines.htm" title="" alt="">Subroutines</a>. Also see <a href="Break.htm" class="a_11">Break</a> and <a href="BreakBlk.htm" class="a_11">BreakBlk</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

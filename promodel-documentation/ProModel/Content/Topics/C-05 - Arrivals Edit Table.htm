@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="660" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1087931"></a>Arrivals Edit Table<MadCap:keyword term="Arrivals:edit table" /></h3>
+        <p class="p">The Arrivals edit table lists all scheduled entity arrivals to the system. The various fields are explained next.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="pm-c5-156-3.jpg" MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 5in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-155-3.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 5in; }">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><b>Entity</b><MadCap:keyword term="Arrivals:entity field"></MadCap:keyword></span><span class="Element" style="line-height: 12pt;">   The name of the arriving entity.</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Location</b><MadCap:keyword term="Arrivals:location field"></MadCap:keyword></span><span class="Element" style="line-height: 12pt;">   The name of the location where the entity is to arrive.</span>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Qty each...</b>
+            <MadCap:keyword term="Arrivals:quantity each field">
+            </MadCap:keyword>   The number (1 to 999999) of entities to arrive at each arrival time interval. Any valid expression may be entered here except for attributes and non-general system functions. This field is evaluated throughout the simulation run and will change if the result of the expression changes.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To fill a location to capacity at every arrival time, use the keyword <span class="_Override" style="font-variant: small-caps;"><MadCap:keyword term="INFINITE"></MadCap:keyword>INFINITE, </span>abbreviated <span class="_Override" style="font-variant: small-caps;">INF</span>.</p>
+        <p class="p">&#160;</p>
+        <p class="p">If you have previously created an arrival cycle and want to use it for this arrival, enter the name of the arrival cycle followed optionally by a quantity. You may also click on the Qty each... heading button to select from the list of defined cycles. See the section on Arrival Cycles for more information about defining cycles.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>First Time</b>
+            <MadCap:keyword term="Arrivals:first time">
+            </MadCap:keyword>   This option allows you to dynamically vary the time of the first arrival to your model. You may define scheduled arrivals to occur at given intervals (e.g., appointments) or use an arrival cycle to define random arrivals over a period of time (this value is the start time for the first cycle). <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText><span class="Element"> evaluates this field only at the beginning of the simulation.</span></p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Occurrences</b>
+            <MadCap:keyword term="Arrivals:occurrences">
+            </MadCap:keyword>   The number of times per simulation run that <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will generate arrivals (1 - 999999). Entering the reserved word INFINITE (abbreviated INF) will cause <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> to send the specified number of arrivals at every arrival time without limit. This value may be any expression and is evaluated only at the beginning of the simulation. If an arrival cycle is used, this is the number of times to repeat the cycle.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Frequency</b>
+            <MadCap:keyword term="Arrivals:frequency">
+            </MadCap:keyword>   The inter-arrival time or time between arrivals. Any valid expression may be entered here except for attributes and non-general system functions. If an arrival cycle was entered for the arrival quantity, this is the time between the start of each cycle. This field is evaluated throughout the simulation run and will change if the result of the expression changes.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Logic</b>
+            <MadCap:keyword term="Arrivals:logic">
+            </MadCap:keyword>   This field defines any optional arrival logic, consisting of one or more general statements, to be executed by each entity upon its arrival (e.g., assigning attribute values to entities as they arrive). Double-click inside this field or click the logic button at the top of the column to define logic for an arrival.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Disable</b>
+            <MadCap:keyword term="Arrivals:disable">
+            </MadCap:keyword>   Set this field to YES or NO if you want to temporarily disable this arrival without deleting it. This is useful when debugging a model and for verification purposes where you want to follow a single entity through the system.</p>
+        <p class="p_10">Arrivals edit table notes: 1.  When several different entity types are scheduled to arrive at a location simultaneously, they will arrive in the order they are listed in the Arrivals table. To have them alternate their arrivals, enter a 1 in the “Qty each” field and the total entry quantity in the “Occurrences” field. 2.  <MadCap:keyword term="Arrivals:external arrival file" />Arrivals defined through an external arrival file will be appended to the arrival list. Therefore, if an external arrival file is the only source of arrivals, the Arrival edit table may be left blank. See the section on External Files for more information on arrival files. 3.  <MadCap:keyword term="Arrivals:destroyed" />If the capacity of the location is insufficient to hold all the arriving entities, the excess entities are destroyed. Therefore, the arrival location should have a capacity at least equal to the “Qty each” in the Arrivals edit table. If more entities are scheduled into the system than are exiting, the arrival location may not have enough capacity to handle all the arrivals. </p>
+    </body>
+</html>

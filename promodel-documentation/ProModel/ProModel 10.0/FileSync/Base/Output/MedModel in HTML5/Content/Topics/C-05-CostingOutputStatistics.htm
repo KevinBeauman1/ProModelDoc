@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Cost">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Costing Output Statistics</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-CostingOutputStatistics.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Cost.htm#C-05_2723800551_1088624">Cost</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Costing Output Statistics</span>
+        </div>
+        <h3><a name="C-05_2723800551_1088732"></a>
+            <MadCap:keyword term="Cost:output" />Costing Output Statistics<span class="_Override" style="font-size: 12pt;line-height: 14pt;"><MadCap:keyword term="Cost:statistics;Output:costing statistics" /></span></h3>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> collects costing statistics only if you uncheck the Disable Cost Statistics option in the Simulation Options menu (see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-05-EnableorDisableCosting.htm#C-05_2723800551_1088772" title="" alt="" xrefformat="{paratext}">Enable or Disable Costing</a>). Included in the General Statistics Report, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> calculates costing statistics.</p>
+        <h4><span class="Helv_Bold"><MadCap:keyword term="Locations:cost;Cost:locations" />Locations</span>
+        </h4>
+        <ul>
+            <li class="li_1" value="1">Operational Cost = (Active Operation Time * Rate) + (Any IncLocCost)</li>
+            <li class="li_1" value="2">% Operational Cost refers to the location’s percentage of the sum of all operation costs</li>
+            <li class="li_1" value="3">Resource Cost = (Utilization * Rate) + (TimesUsed * Cost per use)</li>
+        </ul>
+        <p class="p_10">Please Note; For Resource Cost, Utilization and TimesUsed refer to the utilization of a resource while at a location. This applies only to resource use through operation logic.</p>
+        <ul>
+            <li class="li_1" value="1">% Resource Cost refers to the location’s percentage of the sum of all resource costs</li>
+            <li class="li_1" value="2">Total Cost = (Operation Cost + Resource Cost)</li>
+            <li class="li_1" value="3">% Total Cost refers to location’s percentage of the sum of all location costs</li>
+        </ul>
+        <h4><span class="Helv_Bold"><MadCap:keyword term="Resources:cost;Cost:resources" />Resources</span>
+        </h4>
+        <ul>
+            <li class="li_1" value="1">NonUse Cost = (1-% Utilization) * Scheduled Time * Rate</li>
+            <li class="li_1" value="2">% NonUse Cost refers to the resource’s percentage of the sum of all nonuse costs</li>
+            <li class="li_1" value="3">Usage Cost = (% Utilization * Scheduled Time * Rate) + (TimesUsed * Cost per use)</li>
+            <li class="li_1" value="4">% Usage Cost refers to the resource’s percentage of the sum of all resource usage costs</li>
+            <li class="li_1" value="5">Total Cost = Usage Cost + NonUse Cost</li>
+            <li class="li_1" value="6">% Total Cost refers to the resource’s percentage of the sum of all resource costs</li>
+        </ul>
+        <h4 class="Heading4"><span class="Helv_Bold"><MadCap:keyword term="Entity:cost;Cost:entities" />Entities</span>
+        </h4>
+        <ul>
+            <li class="li_1" value="1"><span class="Bold" style="font-weight: bold;">Explicit Exits</span><span class="_Override" style="line-height: 12pt;">The number of entities that have explicitly exited. Whenever an entity exits the system, it is an explicit exit except in the following cases:</span>
+            </li>
+            <li class="li_1" value="2">- When an entity JOINS, permanently LOADS, or COMBINES with another entity, it implicitly exits the system, and is reported as an exit in the Entity Activity report. However, for costing purposes, the entity did not explicitly exit, but its costing information was added to the entity it was JOINED, permanently LOADS, or COMBINED with.</li>
+            <li class="li_1" value="3">- When an entity temporarily LOADS or GROUPS with another entity, and the entire LOADED or GROUPED entity exits the system, the original entity implicitly exits the system, and is reported as an exit in the Entity Activity report. However, for costing purposes, the original entity did not explicitly exit, but its costing information was added to the entire load or group.</li>
+            <li class="li_1" value="4"><span class="Bold" style="font-weight: bold;">Total Cost Dollars</span>Total Cost = cumulative entity cost, or the sum of costs incurred on all locations the entity passed through + the sum of all costs incurred by use of resource + initial cost + any IncEntCost</li>
+            <li class="li_1" value="5"><span class="Bold" style="font-weight: bold;">% Total Cost</span>% Total Cost refers to the entity’s percentage of sum of all entity costs</li>
+        </ul>
+        <p class="p">In the above calculations, the rate defined (per day, hour, minute, and second) converts to the default time units specified in the General Information dialog.</p>
+        <p class="p_10">Please Note: <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> does not allow you to generate a Costing Graph. However, if you set a variable equal to GetCost (e.g., Var1=GetCost), you can generate a time series graph to track changing entity costs. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-GetCost().htm#C-14_4292047180_1104121" title="" alt="" xrefformat="{paratext}">GetCost()</a> for more information.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

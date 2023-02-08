@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1606" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Log</h1>
+        <h5>
+            <MadCap:keyword term="statements:log;log" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Log &lt;string&gt;, &lt;expression&gt;</p>
+        <p>Log “Activity Time”, Attr1</p>
+        <h2>Description</h2>
+        <p>Process Simulator assumes that the time stored in the expression is in the model’s default time units, which is minutes. Use the Log statement to record the time from one point in the process to another by storing the time of the initial point in an attribute, variable, or array element with the Clock function and using the same attribute, variable, or array element as the expression in the Log statement. Use the Log statement to determine throughput time or throughput in a  section of the facility.</p>
+        <h2>Valid In</h2>
+        <p>Activity, arrival,  and routing logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;string&gt;</b>
+        </p>
+        <p>This string is used to identify the logged numbers in the statistics shown in Output Viewer.</p>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The result of this expression subtracted from the model’s current simulation time will be reported under the &lt;string&gt; identifier above.</p>
+        <h2>Example</h2>
+        <p>The example below shows a Log statement used to capture each Client’s total throughput time as they travel through the system.  Time starts when the Client arrives at Receptionist and stops when the Client exits through the door.  The first process sets attribute CT equal to the current clock time.  Next, Clients are sent randomly to one of three offices.  Finally, when a Client leaves the system at location OutDoor, the Log statement records the cycle time by subtracting the time stored in attribute CT from the current simulation time. </p>
+        <p>
+            <img src="Resources/Images/LogProcess.jpg" />
+        </p>
+        <p>Reception Activity Logic</p>
+        <p class="p_11">// Capture the initial time<br />CT = Clock()</p>
+        <p>OutDoor Activity Logic</p>
+        <p class="p_11">// Log the cycle time<br />Log "Cycle Time", CT<br /></p>
+        <h5>See Also</h5>
+        <p><a href="write.htm" class="a_11">Write</a>, <a href="writeline.htm" class="a_11">Writeline</a>, and <a href="read.htm" class="a_11">Read</a>. Also see <MadCap:xref class="lowercase_no_see" href="ExternaFiles.htm" target="" title="" alt="">External Files</MadCap:xref>.</p>
+    </body>
+</html>

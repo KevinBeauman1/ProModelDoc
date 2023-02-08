@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="4208" MadCap:lastWidth="989" MadCap:ignoredWords="que;75th;25th;ProModel">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="time plot;average;mean;median;minimum;mode;percentile" />Statistics</h1>
+        <p class="p">For Table, or Entity Count Histogram, a Statistics option appears in the Filter Options panel.</p>
+        <h2>Histogram Statistics</h2>
+        <p class="p">A histogram is a bar chart showing values that fall into specific ranges. Histograms for time-weighted data (e.g. the contents of <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText>) show the ranges as a percentage of the total simulation time. Histograms for observation based data (cycle times) show the ranges as a percentage of total observations. Select from the Statistics options to indicate on the histogram the following information.</p>
+        <p class="p"><b>Maximum:</b> The maximum value found in the time series data across all replications.</p>
+        <p class="p"><b>Mean:</b> <b>Time-weighted</b>:  The sum of the values, multiplied by the time at that value, divided by the overall simulation length.</p>
+        <p class="p"><b>Mean: Observation based:</b>  The sum of the values divided by the total number of observations.</p>
+        <p class="p"><b>Median:</b> The numeric value separating the upper half of the data distribution from the  lower half.<MadCap:keyword term="statistics;histogram;maximum;mean;median;minimum;mode;percentile" /></p>
+        <p class="p"><b>Minimum:</b>The minimum value found in the time series data across all replications.</p>
+        <p class="p"><b>Mode:</b> The range of values that occurs most frequently.</p>
+        <p class="p"><b>Percentile 75%:</b> The 75th percentile is the value (or score) below which 75 percent of the data distribution can be found during the simulation.</p>
+        <p class="p"><b>Percentile 25%:</b> The 25th percentile is the value (or score) below which 25 percent of the data distribution can be found.<MadCap:keyword term="statistics;histogram;maximum;mean;median;minimum;mode" /></p>
+        <p>
+            <img src="Resources/Images/histogramstatistics.png" MadCap:mediastyle="@media print { max-width: 4.0in; }" />
+        </p>
+        <p class="p">Click the check box next to the statistic you would like to see in your chart. Click in the Percentile check box and specify a percentile you would like to see in your chart. Unselect check boxes to remove statistics from the chart.</p>
+        <p>
+            <img src="Resources/Images/statisticsoptions51.png" />
+        </p>
+        <h2>Time Plot Statistics</h2>
+        <p class="p">Time plots show performance values as they occur over time. This allows you to see trends and spikes in activity as the simulation progresses. Time plots can only be displayed, if the user has selected Time series as the statistics type for elements of model. </p>
+        <p class="p_10">Note: can only be viewed for series with multiple replications.</p>
+        <p class="p"><b>Average:</b>&#160; The sum of the average values, for each interval, divided by the number of replications.</p>
+        <p class="p"><b>Minimum:</b> The minimum of the replication average values for each interval</p>
+        <p class="p"><b>Maximum:</b> The maximum of the replication average values for each interval</p>
+        <p class="p"><b>Confidence Intervals:</b> Depending on the degree of precision required in the output, you may want to determine a confidence interval for the output. A confidence interval is a range within which you can have a certain level of confidence that the true mean will fall. For example, if the 90% confidence level for the average contents of <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> is calculated to be between 75.5 and 80.8, we would then be able to say that there is a .90 probability that the true mean contents of the modeled <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> (not of the actual <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText>) falls between 75.5 and 80.8.</p>
+        <p>
+            <img src="Resources/Images/timeplotstatistics.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="p">Click the check box for the statistic you would like to see in your chart. &#160;</p>
+        <p>
+            <img src="Resources/Images/statisticsoptions6.png" />
+        </p>
+        <p class="p">Fortunately, our simulation products provide convenient facilities for conducting experiments, running multiple replications and automatically calculating confidence intervals. You must still decide, however, what types of experimentation are appropriate.</p>
+        <h2>Entity Count Statistics</h2>
+        <p class="p">Entity Count charts show entity throughput (exits) as it occurs over time. This allows you to see trends and spikes in activity as the simulation progresses.</p>
+        <p class="p_10">Note:  Filter Option Statistics can only be viewed for series with multiple replications.</p>
+        <p class="p"><b>Average:</b>  The sum of exits in each periodic interval over all replications, divided by the number of replications.</p>
+        <p class="p"><b>Minimum:</b>  The minimum number of exits, comparing replications, in each periodic interval.</p>
+        <p class="p"><b>Maximum:</b>  The maximum number of exits, comparing replications, in each periodic interval.</p>
+        <p class="p"><b>Confidence Interval:</b>  Shows the confidence level for each periodic interval.  A confidence interval is a range within which you can have a certain level of confidence that the true mean will fall. For example, if the 90% confidence level for the average throughput in a periodic interval is calculated to be between 4.12 and 6.68, we would then be able to say that there is a .90 probability that the true mean throughput of the modeled entity (not of the actual entity) falls between 4.12 and 6.68.</p>
+        <p>
+            <img src="Resources/Images/ecstaticsshown.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="p">Click the check box for the statistic you would like to see in your chart. &#160;</p>
+        <p>
+            <img src="Resources/Images/ecstatistics.png" />
+        </p>
+    </body>
+</html>

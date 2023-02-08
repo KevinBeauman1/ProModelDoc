@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="369" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_460270"></a><a name="C-01_2914010915_SaveAs"></a>
+            <MadCap:keyword term="SaveAs;ProModel Application Object:SaveAs" />SaveAs</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SaveA<span class="_Override" style="font-style: italic;">s </span><span class="_Override" style="color: #0000ff;">ModelName</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Saves the loaded model to a specified file. This method is only available with a professional license. </p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">ModelName</span>	(String)  Any valid model path &amp; filename.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads a model, adds a record to the Entities table, then saves the changes to a new file.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub SaveModAs()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">	pmDataObject.AppendRecord 2</p>
+        <p class="objects2">	pmDataObject.SetStringFieldValue 2, 2, "MyNewEntity"</p>
+        <p class="objects2">	pmObject.SaveAs <span class="_Override" style="color: #0000ff;">"mfg_cost_new.mod"</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

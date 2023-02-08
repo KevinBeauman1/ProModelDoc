@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="7118" MadCap:lastWidth="1167">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-07_3886599965_1094695"></a>Using the Logic Builder<MadCap:keyword term="Logic:builder:using" /></h3>
+        <p class="p">When the Logic Builder is opened from a logic window, it remains on the screen until you click the Close button or close the logic window or table from which it was invoked. This allows you to enter multiple statements in a logic window and even move around to other logic windows without having to constantly close and re-open the Logic Builder.  The Logic Builder closes automatically when pasting to an expression field.</p>
+        <p class="p">&#160;</p>
+        <p class="p">You can move to another logic window or field while the Logic Builder is still up by right clicking in that field or logic window. The Logic Builder is then reset with only valid statements and elements for that field or window, and will paste the logic you build into that field or window.</p>
+        <p class="How_to_title">How to build a statement or expression:<MadCap:keyword term="Logic:builder:building statements or expressions"></MadCap:keyword></p>
+        <ol>
+            <li class="li_1_how_to_step">Right click in an expression field or logic window to open the Logic Builder or click on the Build button in a logic window.</li>
+            <li class="li_1_how_to_step">Select the statement or expression you want to use from the list box.  When opened from a logic window, you have the option to click on the Build Expression button to create only an expression.</li>
+            <li class="li_1_how_to_step">Enter the parameters for the statement or expression. These may be expressions using model elements and/or functions or other statements.  Parameters may be edited or entered manually in the Parameter Entry field.</li>
+            <li class="li_1_how_to_step">Paste the results into the logic field or window by clicking the Paste button.</li>
+        </ol>
+        <h4>Logic Builder Components<MadCap:keyword term="Logic:builder:components" /></h4>
+        <p class="p">When invoking the Logic Builder from a logic window, you have the option of building either statements or expressions.  Different buttons and lists appear in the Logic Builder as you use the Logic Builder’s options depending upon whether you are selecting a statement or building an expression. The Logic Builder shown at the beginning of this section shows a statement being selected for building.</p>
+        <p class="p">&#160;</p>
+        <p class="p">At the top of the Logic Builder is a display (logic text box) of the statement or expression you are building exactly as it will appear after it is pasted into the logic window. A brief description of the selected statement or function is displayed in the logic text box.  This description is replaced with the statement or function syntax when you type a parameter, click a parameter or logic button, or double-click on the statement name.  Other components of the Logic Builder are as follows:</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Logic Builder - dialog box, components.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;" />
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:parameter:buttons"></MadCap:keyword><b>Parameter buttons</b></span>   Below the logic text box are one or more buttons to control which parameter to enter for the statement or expression. Parameters can be expressions, statements, or functions. These buttons only appear when parameters may be required by the statement, and may change when you select a different statement. The name of the currently selected button appears immediately below the row of buttons and indicates whether or not the parameter is optional.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:parameter:entry field"></MadCap:keyword><b>Parameter entry field</b></span>   This edit field allows you to enter or edit the current parameter. This only appears when parameters may be required by the statement. As soon as something is entered in this field, the Logic Builder switches to build mode to allow selection of functions or elements of the model.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:keypad button"></MadCap:keyword><b>Keypad button</b></span>   Click on this button to display the numeric keypad for entering numbers in the parameter entry field without using the keyboard.</p>
+        <p class="Graphic">
+            <img src="mm-c7-277-1.jpg" style="width: 103px;height: 140px;">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:logic:buttons"></MadCap:keyword><b>Logic buttons</b></span>   These buttons can be used to insert logical operators and other punctuation in the parameter entry field above. When you click the button, the operator is inserted at the cursor position in the field. A button appears only when the currently selected parameter can use that particular logical operator.</p>
+        <p class="Component"><span class="Helv_Bold">Logical &amp; String Operators: </span>
+        </p>
+        <p class="GraphicStep">
+            <img src="cc-c7-279-3.jpg">
+            </img>
+        </p>
+        <p class="Component"><span class="Helv_Bold">Time Unit Operators:</span>
+        </p>
+        <p class="GraphicStep">
+            <img src="cc-c7-279-2.jpg">
+            </img>
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Category</span>   This combo box allows you to select which type of statements appear in the statement selection list below it.  You can select all or a specific type.</p>
+        <p class="Graphic">
+            <img src="pm-c6-287-1.jpg" MadCap:mediastyle="@media print { max-width: 1in; }">
+            </img>
+        </p>
+        <p class="p"><a name="BuildExpression"></a><span class="Bold"><MadCap:keyword term="Logic:builder:build expression button;Build:expression button:logic builder" /><b>Build Expression button</b></span>   This button allows you to create only an expression. It displays the logic elements list (see below) for you to create the expression. An expression consists of a combination of numbers, model elements, and/or functions, but does not include statements.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><a name="StatementSelection"></a><span class="Bold"><MadCap:keyword term="Logic:builder:select:statements" /><b>Statement selection list</b></span><span class="Helv_Bold" style="line-height: 12pt;"> </span>  Choose which statement you wish to use from this list. Only valid statements are displayed for the logic window or field you are using.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><a name="Paste"></a><span class="Bold"><MadCap:keyword term="Logic:builder:paste:button" /><b>Paste button</b></span><span class="Helv_Bold" style="line-height: 12pt;"> </span>  This button pastes the text of the logic text box into your logic window or field. It is only available once the minimum requirements of the statement or expression have been completed. The Paste button closes the dialog if you are pasting to a field.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:clear button"></MadCap:keyword><b>Clear button</b></span>   This button clears whatever you have done since the last paste and allows you to start over.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Close button</span>   Closes the Logic Builder without pasting the current logic text box.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Help button</span>   Launches the context sensitive help system.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:logic:elements"></MadCap:keyword><b>Logic Elements</b></span><span class="Helv_Bold" style="line-height: 12pt;"> </span>  When editing an expression in the parameter entry field, the Statement selection list is replaced by Logic Elements. The box on the left lists logic and model element types. The box on the right lists individual selections from the logic or model element type selected.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Logic Builder - dialog box, Logic Elements list.png" MadCap:mediastyle="@media print { max-width: 2in;max-height: auto; }" style="max-height: auto;max-width: 3.00in;">
+            </img>
+        </p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Logic:builder:return button;Logic:builder:cancel button"></MadCap:keyword><b>Return and Cancel Buttons</b></span>   When editing the parameters of a function or nested statement, two additional buttons appear to the right of the parameter edit box: Return and Cancel.</p>
+        <ul>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">Return button</span>   This button (available only when required parameters have been entered) returns to the previous parameter entry field and pastes the function or statement at the last cursor position.</li>
+        </ul>
+        <p class="GraphicStep">
+            <img src="sm-c8-280-1.jpg" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <ul>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">Cancel button</span>   Aborts editing of the function or nested statement and returns to editing the previous statement or function.</li>
+        </ul>
+        <h4>Selecting Statements<MadCap:keyword term="Logic:builder:select:statements" /></h4>
+        <p class="p">The first thing to do in creating a statement with the Logic Builder is to select the desired statement from the statements list box. You can restrict the list of statements to choose from using the Statement Type combo box above the statement list.  If you are just starting to use <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText>, you may want to select the Basic Statements type to list only the most commonly used statements.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To select a statement, left click on the statement name in the list box. The statement name appears in the logic text box along with a brief description. The parameter buttons also appear just below the logic text box.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Before you begin editing the parameters of the statement, you can select a different statement. However, once you begin defining a parameter, you must click the Clear button to abandon that statement and select another.</p>
+        <h4>Editing Statement Parameters<MadCap:keyword term="Logic:builder:editing statement parameters" /></h4>
+        <p class="p">Building a statement is simply a matter of filling in the parameters.  To enter a parameter, click the appropriate parameter button below the logic text box.  The parameter name is displayed above the parameter entry field. Whatever you type in this field or select from the Logic Elements list replaces the parameter name in the logic text box.  The parameter name reappears when the entry field is cleared.  The names of optional parameters are not displayed in the logic text box.</p>
+        <p class="p">&#160;</p>
+        <p class="p">An optional shortcut to begin editing the statement’s first parameter is to double click on the statement name in the statement list box.</p>
+        <h4>Selecting Logic Elements<MadCap:keyword term="Logic:builder:select:logic elements" /></h4>
+        <p class="p">The Logic Elements list box, containing model elements and functions, appears with a selection list box to its right. A number pad element is included in the list, which can also be accessed using the Keypad button.</p>
+        <p class="p">&#160;</p>
+        <p class="p">When you click on an item in the Logic Elements list, the model elements or functions related to that item are listed in the selection box on the right. For example, when you click on Entities, the selection list is entitled Entities and it contains all the entities defined in the model.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-280-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" style="width: 313px;height: 334px;" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - Logic Builder - dialog box, selecting elements.png" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Logic Builder - dialog box, selecting elements.png" MadCap:conditions="PM-MM Conditionals.ProModel" style="max-height: auto;max-width: 5.00in;" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }">
+            </img>
+        </p>
+        <p class="How_to_title">How to place a model element in the parameter entry field:</p>
+        <ol>
+            <li class="li_1_how_to_step">Left click on the desired element type in the Logic Elements list box. The elements for that type will be placed in the selection list box.</li>
+            <li class="li_1_how_to_step">Left click on the desired element to paste it into the parameter entry field at its current cursor position. Note that the element is highlighted in the parameter field; clicking on another element will replace it.</li>
+        </ol>
+        <p class="How_to_title">How to place a function in the parameter entry field:</p>
+        <ol>
+            <li class="li_1_how_to_step">Left click on the desired function type or on All functions in the Logic Elements list box. The functions for that type will be placed in the selection list box.</li>
+            <li class="li_1_how_to_step">Left click on the desired function to paste it into the parameter entry field at its current cursor position. The Logic Builder jumps into build mode for that function’s parameter(s). Note that two new buttons are placed to the right of the parameter edit field: Return and Cancel.</li>
+            <li class="li_1_how_to_step">To fill in the function’s parameter(s), repeat steps one and two. If you do not want to use this function, abandon it by clicking on the Cancel button.</li>
+            <li class="li_1_how_to_step">Once the function’s parameters are complete, click on the Return button. The parameters you just completed will be pasted into the function’s parameter entry field, and the completed function with its parameters is pasted into the original statement’s parameter entry field.</li>
+        </ol>
+        <h4>Nested Functions &amp; Statements<MadCap:keyword term="Logic:builder:nested functions &amp; statements;Functions:nested;Statements:nested;Nested functions &amp; statements" /></h4>
+        <p class="p">When you select a function as the parameter for your statement, you must also define that function’s parameter(s). In defining the function’s parameter(s), you may use another function which will also require defined parameters.  This second function is called a nested function. In addition, a function may be nested within a nested function. Functions can be nested as many levels as you like. In this way, the logic builder helps you create complex expressions that would be difficult to enter manually.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Control statements such as <MadCap:keyword term="IF...THEN"></MadCap:keyword>If...Then and <MadCap:keyword term="WHILE...DO"></MadCap:keyword>While...Do contain parameters that are themselves statements. These are called nested statements. For example, an <MadCap:keyword term="IF...THEN...ELSE"></MadCap:keyword>If...Then...Else statement might look something like this:</p>
+        <p class="Component">Nested If, Then, Else</p>
+        <p class="Syntax_body"><span class="Helv_Bold" style="font-style: normal;">If (Variable1  &gt; 10) Then</span>
+            <br /><span class="Helv_Bold" style="font-style: normal;">{</span>
+        </p>
+        <p class="syntax_indent_2"><span class="Helv_Bold" style="font-style: italic;">&lt;Statement1&gt;</span>
+            <br /><span class="Helv_Bold" style="font-style: italic;">&lt;Statement2&gt;</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Bold">}</span>
+            <br />
+        </p>
+        <p class="Syntax_body"><span class="Helv_Bold">Else</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Bold">{		</span>
+        </p>
+        <p class="syntax_indent_2"><span class="Helv_Bold" style="font-style: italic;">&lt;Statement3&gt;</span>
+            <br /><span class="Helv_Bold" style="font-style: italic;">&lt;Statement4&gt;</span>
+        </p>
+        <p class="Syntax_body"><span class="Helv_Bold">			}</span>
+            <br />
+        </p>
+        <p class="p">One or more statements may appear in the block between the curly braces.  The Logic Builder allows you to define the first statement of the block. To add other statements to the block, place the cursor in the logic edit window where you want the next statement and use the Logic Builder to write the statement and paste it in.  For example, in the following Logic Builder window, an If...Then...Else statement is being built.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-282-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" style="width: 313px;height: 334px;" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - Logic Builder - dialog box, nested if.png" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Logic Builder - dialog box, nested if.png" MadCap:conditions="PM-MM Conditionals.ProModel" style="max-height: auto;max-width: 5.00in;" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }">
+            </img>
+        </p>
+        <p class="p">The <MadCap:keyword term="ELSE"></MadCap:keyword>Else statement is built with the parameter button labeled Else and the statement following <MadCap:keyword term="THEN"></MadCap:keyword>Then is built using the button labeled Statement. When you click on the parameter button labeled Statement, the statement list box is displayed where you can select from the list of valid logic statements. Click on paste in the above example and you get:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c1-282-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 3in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - PO Shift Logic window, nested if.png" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Operation - logic window, nested if.png" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5.00in;">
+            </img>
+        </p>
+        <p class="p">The parameters of nested statements may be model elements or functions, and within those functions you may have nested functions. This allows you to easily build complex control statements without worrying about syntax and placement of nested statements and functions.</p>
+        <h4>
+            <MadCap:keyword term="Logic:builder:expressions, creating;Logic:builder:paste:logic/model elements only" />Creating Expressions or Pasting Logic/Model Elements Only</h4>
+        <p class="p">In addition to creating statements, the Logic Builder can also be used to create just an expression or to simply paste a particular element such as a variable or resource name. You may not need to create a complete statement, or the field may not accept statements. Pressing the Build Expression button allows you to build and paste expressions, including individual logic or model element names, into your logic window or field.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The expression being built or element being selected is displayed at the top of the window in the logic text box. Use the parameter edit field to build the expression. You can use model elements and/or functions in your expression. When you are finished, click the Paste button to place the expression or selected logic/model element in the logic window or edit field.</p>
+    </body>
+</html>

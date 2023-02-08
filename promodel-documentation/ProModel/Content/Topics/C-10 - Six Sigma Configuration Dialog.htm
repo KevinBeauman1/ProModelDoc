@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="661" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3>Six Sigma Configuration Dialog</h3>
+        <p>
+            <img src="configurationdialog.jpg" MadCap:mediastyle="@media print { max-width: 3in; }" style="width: 405px;height: 264px;">
+            </img>
+        </p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Disabled </span>Click and place a checkmark in the box in the Disabled column for items to be temporarily removed from the analysis. This does not delete the items but rather disables them from being included in the Six Sigma analysis while preserving all the information about the item. </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Name</span> Name of the analysis item selected in the Add Analysis Item dialog.  This name can be modified by double-clicking in the cell.  This name will be used in the title of the graph generated in Minitab.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Type</span> Type of analysis item selected in the Add Analysis Item dialog.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Stat Collection</span> Choose a method of statistical summarization for Six Sigma Analysis of a particular item. </p>
+        <ul>
+            <li class="li_1"><span class="_Override" style="font-weight: bold;">Total/Final Value</span> For each replication run, a single value is reported which represents either a total or final value of the item being analyzed. </li>
+            <li class="li_1"><span class="_Override" style="font-weight: bold;">Observation</span> Over a simulation run, multiple values for an analysis item may be logged.  Choose this option if analyzing each individual value in the order they were logged.  When multiple replications are run, the corresponding logged values in each replication will be averaged.  For example, the first value logged in each replication will be averaged, the second value in each replication will be averaged, the third values will be averaged, and so forth.  The replication with the fewest number of observations will determine how many observations will be compared across replications.</li>
+            <li class="li_1"><span class="_Override" style="font-weight: bold;">Periodic Average</span> Allows the user to define a specific period of time over which the values logged within that period will be averaged and reported. A simulation that runs for 8 hours with a period defined as 2 hours will result in 4 averaged data points. When multiple replications are run, the replication with the fewest number of periods reported will determine how many periods to compare across replications.</li>
+        </ul>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Periodic Time</span> Applies only when <span class="_Override" style="font-weight: bold;">Periodic Average</span> is selected for the <span class="_Override" style="font-weight: bold;">Stat Collection</span>. It represents a range of time that all values logged within that range will be averaged.  The total number of periods depends upon the length of the simulation.  For example, if a simulation runs for 8 hours and a period is defined as 2 hours, then a total of 4 periods will be the result.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Periodic Unit</span> Applies only when Periodic Average is selected for the Stat Collection. It is the unit of time, be it seconds, minutes, hours, days, weeks, quarters, or years, for the value specified for Periodic Time.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">LSL</span> (Lower Spec Limit) – A user-defined limit that can be specified on its own or with an Upper Spec Limit. However, both the LSL and USL cannot remain blank. </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">USL</span> (Upper Spec Limit) – A user-defined limit that can be specified on its own or with a Lower Spec Limit selected. However, both the USL and LSL cannot remain blank.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">CI</span> (Confidence Interval) – This value is used in generating the Capability Analysis graph in Minitab.  By default, a confidence interval of 95 is automatically entered when a new Analysis Item is added to the Six Sigma Configuration table but can be modified if desired.  </p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Launch Minitab Button</span> – Clicking on this button will launch Minitab.  If a simulation has already been run and the statistical data has been generated, the analysis items in the Six Sigma Configuration table will be summarized and graphed in Minitab.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">OK Button</span> – Click the OK button to close the Six Sigma Configuration dialog and save any changes that were made.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Cancel Button</span> – Click the Cancel button to close the Six Sigma Configuration dialog and discard any changes that were made.</p>
+    </body>
+</html>

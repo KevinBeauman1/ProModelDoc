@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="929" MadCap:lastWidth="916">
+    <head>
+    </head>
+    <body>
+        <h1>Entity States Table</h1>
+        <MadCap:keyword term="entity states table" />
+        <p class="p">Click on the Tables drop-down and select States within the Entity group.</p>
+        <p>
+            <img src="Resources/Images/entitystatestable1.png" />
+        </p>
+        <p class="p">A table is generated, which shows entity conditions for those entities that have exited the system, and contains the following columns of information.</p>
+        <p>
+            <img src="Resources/Images/entitystatesnew.png" />
+        </p>
+        <p class="p"><b>Scenario:</b> The scenario to which the data applies.</p>
+        <p class="p"><b>Name:</b> The entity name.</p>
+        <p class="p"><b>% In Move Logic:</b> The percentage of time the entity spent traveling between <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText>, including any delay time incurred in move logic, and including any time waiting for a resource to become available when that resource is requested in the move logic.</p>
+        <p class="p"><b>% Waiting:</b> The percentage of time the entity spent waiting for a resource, a WAIT UNTIL condition, another entity to <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">join or combine</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">attach or batch</MadCap:conditionalText>, or behind other entities. (100% - (minus) Sum of %’s for all other states.)</p>
+        <p class="p"><b>% In Operation:</b> The percentage of time the entity spent in processing at <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location or traveling on a conveyor/queue</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText>. If an entity is <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">on a conveyor </MadCap:conditionalText>behind another entity which is blocked because the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> is unavailable, the time the entity spent behind the other entity is considered in Operation.</p>
+        <p class="p"><b>% Blocked:</b> The percentage of time the entity spent waiting for the next <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> to become available.</p>
+    </body>
+</html>

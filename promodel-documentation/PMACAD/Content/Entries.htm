@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1012" MadCap:lastWidth="995" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Entries()</h1>
+        <h5>
+            <MadCap:keyword term="functions:entries;entries" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>Entries(&lt;activity&gt;)</p>
+        <p>Display “Act1 has had” $ Entries(Act1) $ “entries.”</p>
+        <h2>Description</h2>
+        <p>Returns the total number of entity entries to an activity. This function returns an integer.</p>
+        <h2>Valid In</h2>
+        <p>Any logic</p>
+        <h2>Components</h2>
+        <p><b>&lt;activity&gt;</b>
+        </p>
+        <p class="p">The activity to examine.</p>
+        <h2>Example</h2>
+        <p>
+            The Stores activity sends Order entities to Shipping. A variable, Batch_Time, tracks the amount of time it takes to process 50 Orders. After Assembly processes 50 entities, we want to reset Batch_Time to zero.
+</p>
+        <p class="p_11">If Entries(Assembly) = 50 Then</p>
+        <p class="p_12">Batch_Time = 0</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="percentutil.htm" class="a_11">PercentUtil</a>
+        </p>
+    </body>
+</html>

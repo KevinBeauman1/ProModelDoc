@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Modeling Environment|Editing">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Editing and Moving Graphics</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-04-EditingandMovingGraphics.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-04-ModelingEnvironment.htm#C-04_4289884492_1035124">Modeling Environment</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-04-EditingTable.htm#C-04_4289884492_1092121">Editing</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Moving Graphics</span>
+        </div>
+        <h3><a name="C-04_4289884492_1092271"></a>Editing and Moving Graphics<a name="kanchor531"></a><a name="kanchor532"></a></h3>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> allows easy adjustment and fine tuning of the graphics in one window rather than opening individual modules to move each object. This makes it possible to move or rearrange a whole submodel or model after it has been merged. To move any or all graphics in a model, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> must be in <span class="_Override" style="font-weight: bold;font-style: italic;">Layout Only mode<a name="kanchor533"></a></span> (all modules must be closed, leaving only the layout window open)<span class="_Override" style="font-weight: bold;">.</span></p>
+        <p class="p">While in Layout Only mode, graphics that can be moved and arranged in the layout window include locations, path networks, static and dynamic resources, variables, and background graphics.  Multiple graphics can be selected and moved simultaneously.  When graphics are selected, the layout can be scrolled and the graphics will remain selected.</p>
+        <p class="How_to_title">How to move graphics:</p>
+        <ol>
+            <li class="li_1" value="1">Close all build modules leaving only the layout window open.</li>
+            <li class="li_1" value="2">Left click and drag the selected graphic to the desired position. </li>
+            <li class="li_1" value="3">To move multiple graphics, hold down the Shift key while left clicking the desired graphics to select them and then drag them to the desired position. Using the shift key with a left click deselects a selected graphic.</li>
+            <li class="li_1" value="4">Fine tune the position of the selected graphic(s) by using the arrow keys on the keyboard to move one pixel at a time.</li>
+        </ol>
+        <p class="p">When a submodel or model is merged into another model, all graphics associated with it are selected. This allows for immediate movement by left clicking on the graphics and dragging them to the desired position in the <span class="_Override" style="text-transform: uppercase;">l</span>ayout window. You may also scroll the layout first and then move the selected graphics.</p>
+        <p class="p_10">Please Note: Multiple graphics can also be selected by dragging a bounding box around the graphics. Holding the left mouse button down, drag the mouse from one corner of the graphics to the opposite corner.  The bounding box must completely enclose the graphics you wish to select.</p>
+        <h4><a name="kanchor534"></a>Special Considerations for Moving Graphics</h4>
+        <p class="p"><span class="Bold"><a name="kanchor535"></a><b>Locations</b></span>   When you click on a location with multiple graphics defined for it (i.e., counter, status light, label) in common mode, it is selected as one graphic. Multiple units of a location can be moved individually. Adjusting the position of an individual graphic in a multiple graphic location must be done in the locations module.</p>
+        <p class="p"><span class="Bold"><a name="kanchor536"></a><b>Routing Paths</b></span> Routing paths defined in the Processing module cannot be selected for movement but will move when a location to which they are connected is moved. If a routing path has multiple segments, only the segment connected to the location being moved gets readjusted. However, when both locations on the routing path are moved simultaneously, the whole routing path is moved.</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="7_73.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p>
+            <img src="7_74.jpg" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p">In the examples above, the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">examination table</MadCap:conditionalText> on the right is moved.  The routing paths remain connected to each graphic while the path segment connected to the moved graphic is adjusted accordingly.</p>
+        <p class="p"><span class="Bold"><a name="kanchor537"></a><b>Path Networks</b></span><span class="Element" style="line-height: 12pt;"></span> Path networks are not resized when moved. Any resource points defined for a dynamic resource are moved when the path network is moved. The resource points remain relative to the node for which they were defined.</p>
+        <p class="p"><span class="Bold"><a name="kanchor538"></a><b>Resources</b></span> When a dynamic resource is moved, the resource point associated with it moves but not the entire path network.</p>
+        <p class="p"><span class="Bold"><a name="kanchor539"></a><b>Sizing</b></span> Graphics cannot be sized in Layout Only mode.</p>
+        <p class="p"><span class="Bold"><a name="kanchor540"></a><b>Snap-to-Grid</b></span> Graphics will not snap to the grid in Layout Only mode, but their position can be fine-tuned using the arrow keys on the keyboard to move the selected graphic(s) one pixel at a time.</p>
+        <p class="p"><span class="Bold"><a name="kanchor541"></a><b>Labels</b></span> To view the label or edit a location, path network, resource, or variable graphic, right click on the item. If you double left click on an item, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> opens the build module and highlights the record where you defined the element.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

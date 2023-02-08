@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2908" MadCap:lastWidth="921">
+    <head>
+    </head>
+    <body>
+        <h1>Annotations<MadCap:keyword term="annotations" /></h1>
+        <p class="p">Annotations are used to alert you to information about the data displayed in a chart.  They will appear as little icons within the charting area. Annotations are not available for all charts in the Output Viewer. They are only available for Time Plot and Entity Count charts.</p>
+        <p>
+            <img src="Resources/Images/annotationschoices.png" />
+        </p>
+        <p class="p">Click the check box next to an annotation option to activate it for that chart. If an annotation is checked, that annotation will only appear if the data warrants it. If a chart has an annotation, there will be a small circle indicating so. Hover over the circle to view the annotation information.</p>
+        <p>
+            <img src="Resources/Images/DataTruncation.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+        <h3><a name="datatruncation"></a>Data Truncation</h3>
+        <p class="p_14">This annotation appears when the data in a chart has been truncated due to one or more replications running for a shorter amount of time than the other replications. For example, if periodic averaging is selected for a Time Plot and one replication ran shorter than the others, Output Viewer will only use the data up to that shortest simulation time in all replications to do the averaging. Because the chart will appear as if it did not run the expected amount of simulation time, Output Viewer will display this annotation. By default, this annotation is on.</p>
+        <p>
+            <img src="Resources/Images/Non-FullPeriod.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+        <h3><a name="nonfullperiod"></a>Non-Full Period</h3>
+        <p class="p_14">This annotation appears when data in a chart is being averaged across a period and displayed at the start of that period but the data actually started or stopped midway through the period. This situation can only happen for the first and the last periods. For example, if your simulation starts in the middle of a month and you set periodic averaging as Monthly, the data actually only spans part of the month. However, Output Viewer displays the averaged data point at the beginning of the month but averages the data based upon the partial month of time. This makes it appear as if the simulation and data collection began at the start of the month, which is not the case. A similar situation occurs if the simulation ends in the middle of a month. An annotation alerts you to these issues. By default, this annotation is turned off.</p>
+        <p class="p_14">
+            <img src="Resources/Images/Information.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+        <h3><a name="information"></a>Information</h3>
+        <p class="p_14">This is a general annotation that is used to alert you to various issues with the data in a chart. For example, if a simulation ran only one replication and then you choose to display the minimum or a confidence interval, an information annotation will appear in the chart informing you that they cannot be displayed because not enough replications were run. This annotation is on by default.</p>
+    </body>
+</html>

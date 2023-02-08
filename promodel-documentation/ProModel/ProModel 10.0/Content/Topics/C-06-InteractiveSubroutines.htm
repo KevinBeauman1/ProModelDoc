@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="541" MadCap:lastWidth="1167">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086332"></a>Interactive Subroutines<MadCap:keyword term="Subroutines:interactive;Interactive subroutines" /></h3>
+        <p class="p">Interactive subroutines are subroutines activated by the user anytime during run-time by choosing the subroutine from the Interact menu. The name appearing in the Interact menu is either the subroutine name or if a string is entered as a comment statement at the beginning of the subroutine logic, the string is used as the name (e.g., // “Arrival Frequency”). Interactive subroutines allow the user to interact with the simulation during run-time. Subroutines are defined as type Interactive in the Subroutine edit table. Normally, subroutines are activated by entities. However, interactive subroutines can be user-activated in addition to being entity-activated. Interactive subroutines can be used for:</p>
+        <ul>
+            <li class="li_1">changing model variables during a simulation run</li>
+            <li class="li_1">changing routings</li>
+            <li class="li_1">calculating and reporting user-defined statistics </li>
+        </ul>
+        <p class="p">Suppose you want to interactively change the arrival frequency for a certain entity, customers, during run time. Define a variable, Var1, and assign it an initial value to be used for the initial arrival frequency. Enter Var1 in the arrival frequency field for the entity customers. Create a subroutine of type Interactive and enter the following logic:</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Interactive Subroutines - Logic window.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 4.00in;">
+            </img>
+        </p>
+        <p class="p">During run-time, you can then change the arrival frequency for the customers by choosing the Customer Arrivals from the Interact menu. See <MadCap:xref class="lowercase_no_see" href="C-09-Run-TimeInteractMenu.htm#C-09_398201723_1091688" target="" title="" alt="">Run-Time Interact Menu on page 1</MadCap:xref> for more information. </p>
+        <p class="p_10">Please Note: Interactive subroutines may also be called from any logic or expression where no return value is required. See <MadCap:xref class="lowercase_no_see" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" target="" title="" alt="">Statements and Functions on page 1</MadCap:xref> for more information.</p>
+    </body>
+</html>

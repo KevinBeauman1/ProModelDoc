@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1420" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>IncEntCost</h1>
+        <h5>
+            <MadCap:keyword term="statements:incentcost;incentcost" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>IncEntCost &lt;expression&gt;</p>
+        <p>IncEntCost 15<br />IncEntCost -15<br />IncEntCost ValueAddedAttr</p>
+        <h2>Description</h2>
+        <p>Enables you to increment the cost (positively or negatively) of the current entity by a given amount. Use this function to add to the entity’s actual, accumulated dollar amount.</p>
+        <h2>Valid In</h2>
+        <p class="p">Activity and route logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The positive or negative change to the value of cost.</p>
+        <h2>Example</h2>
+        <p>The logic below allows you to add an initial cost to an entity implicitly created through the Route statement. In the following example, a Pallet of entities, PalletA, arrives at ShippingDock where workers unload entities called Box every 20 seconds until the pallet is empty. Process Simulator determines the number of Boxes unloaded from PalletA by the value of PalletA’s attribute, Qty_Attr. In activity logic at Unload, the statement “IncEntCost 10” adds an initial cost of 10 dollars to each created entity, Box.</p>
+        <p>ShippingDock Activity Logic</p>
+        <p class="p_11">Int x = 0<br />While x &lt; Qty_Attr Do<br />{</p>
+        <p class="p_12">Inc x<br />Wait 20 sec<br />Order 1 Box To Unload</p>
+        <p class="p_11">}</p>
+        <p>Unload Activity Logic</p>
+        <p class="p_11">IncEntCost 10</p>
+        <h5>See Also</h5>
+        <p><a href="getcost.htm" class="a_11">GetCost</a>, <a href="getresRate.htm" class="a_11">GetResRate</a>, <a href="inclocCost.htm" class="a_11">IncLocCost</a>, <a href="incresCost.htm" class="a_11">IncResCost</a>, and <a href="setrate.htm" class="a_11">SetRate</a></p>
+    </body>
+</html>

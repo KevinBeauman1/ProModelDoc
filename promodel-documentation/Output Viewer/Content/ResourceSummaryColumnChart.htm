@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1606" MadCap:lastWidth="929">
+    <head>
+    </head>
+    <body>
+        <h1>Resource Summary Column Chart</h1>
+        <MadCap:keyword term="resource summary column chart" />
+        <p>
+            <img src="Resources/Images/resourcesummarycc.png" MadCap:mediastyle="@media print { max-height: 4in; }" />
+        </p>
+        <p class="p">This chart shows resource summary data collected during the simulation. Column charts can only display one statistic at a time. This example shows % Utilization. Use the Statistics drop-down in the Filter Options panel to select other statistics.</p>
+        <p>
+            <img src="Resources/Images/ResourceSummaryStatOptions.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/ResourceSummaryStatOptions-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Units:</b>	The number of units defined in the Resources <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">module</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">properties</MadCap:conditionalText> for that resource.</p>
+        <p class="p"><b>Schedule Time</b>	 The total amount of time the resource was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>Work Time:</b>	The total amount of time the resource was in use.</p>
+        <p class="p"><b>Number Times Used:</b>	The total number of times the resource was acquired to transport or process an entity or to service <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">locations</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activities</MadCap:conditionalText> or other downed resources.</p>
+        <p class="p"><b>Average Time Per Usage:</b>	 The average time the resource spent transporting or processing an entity, or servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> or other resource. Includes any pickup and drop-off time as well as any blocked time while in use.</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>Average Time Travel To Use:</b>	The average time the resource spent traveling to a location or other resource to transport or process an entity, or to service a location or other resource. Does not include any pickup time, but does include any blocked time. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM">Average Time Travel to Use = total Time Travel to Use / (divided by) Number of Times Used</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>Average Time Travel To Park:</b>	The average time the resource spent traveling to either a park node or a downtime node. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Blocked In Travel:</b> The percentage of time the resource was unable to move to a destination because the next path node along the route of travel was blocked (occupied by another resource). (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p"><b>% Utilization:</b>	The percentage of time the resource spent <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">traveling to be used, </MadCap:conditionalText>transporting or processing an entity, or servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> or other resource.</p>
+        <p class="p" style="margin-left: 40px;">% Utilization = (<MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Total Travel to Use Time + </MadCap:conditionalText>Total Time In Usage) / (divided by) Total Scheduled Time</p>
+    </body>
+</html>

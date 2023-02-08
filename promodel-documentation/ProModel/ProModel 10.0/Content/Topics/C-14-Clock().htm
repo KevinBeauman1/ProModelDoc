@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="959" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1102904"></a>Clock()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:CLOCK();CLOCK()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Clock({&lt;time unit&gt;})</p>
+        <p class="Syntax_body">If Clock(day) &gt;= 1.5 Then Pause</p>
+        <p class="Syntax_body">Attr1 = Clock()</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns value of the elapsed simulation time in the units specified. Clock units should be kept consistent when comparing values. If an attribute has been assigned a time in minutes, any time value compared with that attribute should also be in minutes.</p>
+        <p class="p">When no units are specified in the parentheses in the clock function, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> returns the default time unit specified in the General Information. </p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic and most fields, except those fields evaluated at translation. For a list of fields evaluated at translation, see  <MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref>.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;time unit&gt;</p>
+        <p class="p">The elapsed simulation time will be returned in this unit. This may be <MadCap:keyword term="HR;Hours" />hr, <MadCap:keyword term="MIN" />min, <MadCap:keyword term="SEC" />sec, <MadCap:keyword term="DAY" />day, <MadCap:keyword term="WK;Weeks" />wk. If omitted, the value returned will be in the default time units as specified in the General Information dialog box. When using Clock() to capture a time for later use with the <MadCap:keyword term="LOG" />Log statement, the units should be omitted.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05-GeneralInformation.htm#C-05_2723800551_1088499" target="" title="" alt="">General Information on page 1</MadCap:xref> and <MadCap:xref class="lowercase_no_see" href="C-11-TimeExpressions.htm#C-11_756594771_1095008" target="" title="" alt="">Time Expressions on page 1</MadCap:xref>.</p>
+    </body>
+</html>

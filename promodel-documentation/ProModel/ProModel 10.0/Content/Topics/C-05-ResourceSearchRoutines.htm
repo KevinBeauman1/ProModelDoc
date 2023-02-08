@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="257" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1087052"></a><a name="C-05_2723800551_30688"></a>Resource Search Routines<MadCap:keyword term="Search:routines;Resources:search:routines" /></h3>
+        <p class="p">Search routines refer to the instructions a dynamic resource will follow after being freed at a path node where a search routine was defined. Two types of search routines may be specified.</p>
+        <p class="p"><span class="Bold"><b>Work Search</b><MadCap:keyword term="Resources:work search;Work search;Search:work"></MadCap:keyword></span><span class="Element" style="line-height: 12pt;">   A list of </span><span class="Element" style="font-style: italic;">locations </span><span class="Element">where entities may be waiting for the resource. Work searches may be either </span><span class="Element" style="font-style: italic;">exclusive</span><span class="Element"> or </span><span class="Element" style="font-style: italic;">non-exclusive</span><span class="Element">.</span>
+        </p>
+        <ul>
+            <li class="li_1">Use exclusive work searches to limit the locations a resource may search for work. An exclusive work search will cause the resource to search <span class="_Override" style="font-style: italic;">only </span>the locations in the list. If no work is found at any of the listed locations, the resource will either park at a node listed in its park search, go to its home node, or simply become idle until work is available at one of the locations in the exclusive work search list. </li>
+            <li class="li_1">Use non-exclusive work searches to have a resource check for work at certain locations first, and then move on to others. A non-exclusive work search will cause the resource to search the listed locations first and then resort to the default search rule listed in the Resource Search section of the Specifications dialog box (e.g., oldest waiting entity, closest waiting entity).</li>
+        </ul>
+        <p class="p"><span class="Bold"><b>Park Search</b><MadCap:keyword term="Resources:park search;Park search;Search:park"></MadCap:keyword></span>   Park searches are typically used to get a resource off a main path segment, or send the resource to the next most likely place work will become available. A park search is a list of nodes to which a resource may be sent to park if no work is waiting at either the work or default search locations. </p>
+        <p class="p_10">Please Note: A lockup can occur in the model if you define a park search at the home node and specify Return Home If Idle in the Resource Specifications.</p>
+    </body>
+</html>

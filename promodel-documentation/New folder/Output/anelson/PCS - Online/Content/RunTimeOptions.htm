@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Simulation and Options|Simulation">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Run-Time Options</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="SimulationAndOptions.htm">Simulation and Options</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Simulation.htm">Simulation</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Run-time Options</span>
+        </div>
+        <h1><a name="kanchor149"></a>Run-Time Options</h1>
+        <p>When the simulation begins, the Visio layout will change to a run-time 
+ layout to show the simulation's animation. You may click and drag on the 
+ run-time layout to pan the view of your process. In the run-time layout, there are several options.</p>
+        <h2>Run-Time Toolbar</h2>
+        <p>
+            <img src="Resources/Images/RunTimeControls.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h3>Info Controls</h3>
+        <p><b>Variables</b> Select this option to show the current state of all real and integer global variables.</p>
+        <p><b>Arrays</b> Select this option to show the current value of all cells for arrays.</p>
+        <p><b>Activities</b> Select this option and choose to view information about all activities.</p>
+        <p><b>One Activity</b> Select this option and choose an activity to view an informational window with run-time information about the activity.</p>
+        <h3>View Controls</h3>
+        <p><b>Zoom to Fit</b> Select this option to bring all graphical elements of the model into view.</p>
+        <p><b>Zoom</b> Select this option to Zoom in or out on the animation. When this option is selected, you may choose a preset zoom level or enter your own zoom level. The Zoom function zooms to the center of the screen.</p>
+        <p class="p_10">Note: To zoom in a specific area of the simulation layout, press and hold the <b>Ctrl</b> key, then click and drag the mouse to create a rectangle around the area in which you would like to zoom. Release the mouse, then the Ctrl key. The layout will zoom in on the selected area.</p>
+        <p><b>Views Panel</b> Opens a window panel listing all auto-defined views. Selecting a view from the list will zoom and pan the layout to show that view.</p>
+        <p><b>Views List</b> Click on this menu item to display a list of the available views. Select the desired view to show it in the Layout.</p>
+        <h3>Simulate Controls</h3>
+        <p><b>Play</b> Choose Play when the simulation is paused to resume running the simulation.</p>
+        <p><b>Pause</b> Choose Pause to pause the simulation for an indefinite amount of time. With the simulation paused, you may begin a trace, zoom in or out, set up the next pause, examine different activities in the model, or interact with the model in a number of other ways.</p>
+        <p><b>Stop</b> Choose this option to end the simulation. You will then be prompted to collect statistics or return to the model editor without collecting statistics. If running multiple scenarios, End Simulation will terminate all scenarios.</p>
+        <p><b>Animation</b> Toggles the animation on or off. Off greatly speeds up the simulation. Animation speed may also be set with the <a href="Animate.htm" class="a_11">Animate</a> statement. </p>
+        <p><b>User Pause by Time</b> Allows the user to enter a simulation clock time for the simulation to pause at.</p>
+        <p><b>User Pause by Date</b> Allows the user to enter a calendar date and time for the simulation to pause at. This option is only available if you chose "Calendar Date" as the Run Length in the Simulation Options dialog.</p>
+        <h3><a name="kanchor150"></a>Trace/Debug Controls</h3>
+        <p>Allows access to the trace and debug options.  
+ &#160;&#160;A 
+ trace is a list of events occurring over the course of a simulation. “Work_Unit
+ arrives at Activity1.” A trace listing also displays assignments, such 
+ as variable and array element assignments. When the Trace window is opened, the simulation 
+ is paused. </p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/trace.png" />
+        </p>
+        <p>A trace listing of a simulation run may be viewed in several ways through the trace options provided.</p>
+        <p><b>Step Events</b> Select this option to step through the trace listing one event at a time. Each time you click the left mouse button, the trace will advance one event. Clicking and holding the right mouse button while in this mode generates a continuous trace.</p>
+        <p><b>Continuous</b> Select this option to advance the trace events continuously. This is useful when you do not know exactly where to begin or end the trace. Clicking and holding the right mouse button stops the trace until you release the button.</p>
+        <p><b>Trace Filter</b> When you view the Trace during simulation, you see a list of all the events that occur as your model is running. Although it may be helpful to view every event in the simulation, there are many times when you will want to focus on just the events that affect specific elements (activities, resources, variables, etc.) of your model.</p>
+        <p>The Trace feature contains an optional, custom filter, which allows you to pick the elements of your model that you wish to view in the Trace window.</p>
+        <blockquote>
+            <p>From the <b>Custom Trace Options</b> dialog, you may choose which elements of your model you want displayed in the Trace window.</p>
+            <p>The Trace Filter works by showing the specified elements in the trace according to the following:</p>
+            <ul>
+                <li value="1">Specified elements found in the main heading of the Trace will be displayed along with the entire contents of the sub-headings.</li>
+                <li value="2">Specified elements found in a sub-heading will only display the main heading and the sub-heading with the specified element. All other sub-headings of the main heading, which do not contain the specified elements, will not be displayed.</li>
+            </ul>
+            <p>The Enabled button in the Custom Trace Options dialog must be checked for the Trace Filter to take effect.</p>
+            <p>The Search String text box allows you to enter text or logical conditions to display in the Trace window. For example, if you want the Trace window to display only those events when an attribute has a specific value, you can enter something similar to "attr1 = 5" as a logical condition.</p>
+        </blockquote>
+        <p><b>Trace to File</b> Select this option to log the trace messages out to a text file. Trace statements are automatically written to a &lt;model name&gt;.trc file.</p>
+        <h3>Simulation Clock</h3>
+        <p class="p">
+            <img src="Resources/Images/simclock.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>The simulation clock contains information about the time during simulation 
+ and the currently running replication. To the left of the clock is a slide bar, which controls the speed of 
+ the simulation.</p>
+        <h3>Run-Time Right-Click Menu</h3>
+        <p>Right-clicking on the run-time layout will display the following context
+ menu:</p>
+        <p style="text-align: left;">
+            <img src="Resources/Images/run-timerightclick.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">These options are the same as found in 
+ the Simulation ribbon.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

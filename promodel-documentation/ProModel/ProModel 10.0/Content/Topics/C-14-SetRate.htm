@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1976" MadCap:lastWidth="1204" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1107243"></a><a name="C-14_4292047180_39376"></a>S<MadCap:keyword term="SETRATE" />etRate</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General operation statements:SETRATE;SETRATE" />General Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">SetRate &lt;resource name&gt;, &lt;expression&gt;, &lt;unit&#160;#&gt;</p>
+        <p class="Syntax_body">SetRate Operator, 25, 3</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Allows you to define the regular rate of cost for resources contained in a model. If you have already defined the regular rate in the Cost module, this statement will override that rate. You can use SetRate to set different rates for each unit of a resource.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Initialization logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;resource name&gt;	</p>
+        <p class="p">The name of the resource whose rate you wish to set.</p>
+        <p class="Component">&lt;expression&gt;</p>
+        <p class="p">The rate assigned to the resource. </p>
+        <p class="Component">&lt;unit #&gt;</p>
+        <p class="p">The unit number of the resource. Where multiple instances of a resource exist, you must specify which instance of the resource to use (e.g., Tech1, Tech2, Tech3, etc.). The keyword <MadCap:keyword term="ALL" />All may be used to indicate all instances of a resource.</p>
+        <p class="p_10">Please Note: SetRate uses the time units defined for the model. (By default, SetRate uses hours.)</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below displays how you can uniquely assign the regular rate for each unit of a resource, Operator. Operator has three units, meaning that each unit can perform the same task. However, each of the three Operators has a different hourly rate. We set these rates in the Initialization logic using the following:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/Setrate - Initialization Logic windowMM.png" MadCap:mediastyle="@media print { max-width: 3in;max-height: auto; }" style="max-height: auto;max-width: 5in;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/Setrate - Initialization Logic windowPM.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="_rules">See Also</p>
+        <p class="p">GetCost, GetResRate(), IncEntCost, IncLocCost, and IncResCost.</p>
+    </body>
+</html>

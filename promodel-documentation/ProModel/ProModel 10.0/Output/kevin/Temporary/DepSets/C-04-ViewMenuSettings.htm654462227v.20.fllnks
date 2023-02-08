@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/cm-c4-77-2.jpg" />
+    <Link
+      Url="Content/Topics/C-04-ViewMenuView.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/cm-c4-77-2.jpg" />
+    <Link
+      Url="Content/Topics/C-04-ViewMenuView.htm" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_4289884492_1092348" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="View:menu:settings"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Settings"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="View:menu:views"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="View"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="View:menu:zoom:to fit layout"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Zoom:to fit layout"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="View:menu:zoom"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="Zoom"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

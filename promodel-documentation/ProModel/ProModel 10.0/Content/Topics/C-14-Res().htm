@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1428" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106745"></a><a name="C-14_4292047180_13512"></a>Res()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Name-index numbers:conversion functions:RES();RES()" />Name-Index-Number Conversion Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Res(&lt;resource name-index number&gt;)</p>
+        <p class="Syntax_body">Use 10 Res(Var1) for 1.5 min</p>
+        <p class="Syntax_body">Free Res(Var1)</p>
+        <p class="Syntax_body">Display “Now using” $ Res(Var1)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Converts a name-index number or integer to a resource name. Use this function when a statement or function needs the name of a resource whose name index number is stored in an attribute, variable, or some other expression. When used in a string expression expecting, such as in the third syntax example above, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will output the actual name of the resource.</p>
+        <p class="p">Use Res() to assign a properly skilled operator according to the attribute of the part or to change the duties of resources as the simulation progresses.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any statement where a resource name is normally used.  Also used in string expressions.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;resource name-index number&gt;</p>
+        <p class="p">The name-index number of the resource desired. This component may be an expression. Real numbers will be truncated to integers.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The logic below uses five different resource types for ten minutes in rotation.</p>
+        <p class="Syntax_body">Int Var1 = 1</p>
+        <p class="Syntax_body">While Var1 &lt;= 5 Do</p>
+        <p class="Syntax_body">	{</p>
+        <p class="syntax_indent_2">		Use Res(Var1) For 10 min</p>
+        <p class="syntax_indent_2">		Inc Var1</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Ent(), Loc(), and Graphic.</p>
+    </body>
+</html>

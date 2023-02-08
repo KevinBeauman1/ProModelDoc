@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1559" MadCap:lastWidth="1427">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-09_398201723_1091417"></a>
+            <MadCap:keyword term="Trace:options" /><a name="C-09_398201723_11585"></a>Trace Options</h3>
+        <p class="p">A trace is a list of events occurring over the course of a simulation.   For example, a trace statement might state <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">“Customer arrives at Reception1, Downtime for Worker1 begins.”</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">“EntA arrives at Loc1, Downtime for Res1 begins.”</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">“EntA arrives at Loc1, Downtime for Res1 begins.”</MadCap:conditionalText> A trace listing also displays assignments, such as variable and array element assignments. A trace listing of a simulation run may be viewed in several ways through the trace options provided.</p>
+        <h4><a name="C-09_398201723_1091419"></a><a name="C-09_398201723_33477"></a>Trace Mode</h4>
+        <p class="p">A trace listing is generated in one of three modes, Step, Continuous, or Filtered.</p>
+        <h5>Trace Off<span class="Bold"><MadCap:keyword term="Trace:off" /></span></h5>
+        <p class="p">Select this option to discontinue a current trace.</p>
+        <h5>Trace Step<span class="Bold"><MadCap:keyword term="Trace:step" /></span></h5>
+        <p class="p">Select this option to step through the trace listing one event at a time. Each time you click the left mouse button, the trace will advance one event. Clicking and holding the right mouse button while in this mode generates a continuous trace.</p>
+        <h5>Trace Continuous<span class="Bold"><MadCap:keyword term="Trace:continuous" /></span></h5>
+        <p class="p">Select this option to write the trace continuously to the output device selected from the Trace Output submenu. This is useful when you do not know exactly where to begin or end the trace. Clicking and holding the right mouse button stops the trace until you release the button.</p>
+        <h5>F<MadCap:keyword term="Trace:filtered" />iltered Trace...</h5>
+        <p class="p">When you view the Trace during simulation, you see a list of all the events that occur as your model is running.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Although it may be helpful to view every event in the simulation, there are many times when you will want to focus on just the events that affect specific elements (locations, resources, variables, etc.) of your model.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Trace feature contains an optional, custom filter, which allows you to pick the elements of your model, or custom text string, that you wish to view in the Trace window.</p>
+        <p class="Graphic">
+            <img src="pm-c9-352-1.jpg" MadCap:mediastyle="@media print { max-width: 2in; }">
+            </img>
+        </p>
+        <p class="p">From the Custom Trace Options dialog, you may choose which elements of your model you want displayed in the Trace window.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Custom Filter works by showing the specified elements in the trace according to the following:</p>
+        <ul>
+            <li class="li_1">Specified elements found in the main heading of the Trace will be displayed along with the entire contents of the sub-headings.</li>
+            <li class="li_1">Specified elements found in a sub-heading will only display the main heading and the sub-heading with the specified element. All other sub-headings of the main heading, which do not contain the specified elements, will not be displayed.</li>
+        </ul>
+        <p class="p">The Enabled button in the Custom Trace Options dialog must be checked for the Trace Filter to take effect.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Search String text box allows you to enter text or logical conditions to display in the Trace window. For example, if you want the Trace window to display only those events when an attribute has a specific value, you can enter something similar to "attr1 = 5" as a logical condition.</p>
+        <p class="p">&#160;</p>
+        <h5>
+            <MadCap:keyword term="Trace:output to file" />Output to File</h5>
+        <p class="p">Select this option to send the trace listing to a text file. Trace statements are automatically written to a &lt;model name&gt;.TRC file.</p>
+    </body>
+</html>

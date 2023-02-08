@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/LayoutCat.bmp" />
+    <Link
+      Url="Content/Topics/Layout.bmp" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/LayoutCat.bmp" />
+    <Link
+      Url="Content/Topics/Layout.bmp" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_1942222156_1076683" />
+    <Anchor
+      Name="C-04_1942222156_1079370" />
+    <Anchor
+      Name="C-04_1942222156_Scale" />
+    <Anchor
+      Name="Scale" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Layout"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Layout Category"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Initial Camera Position"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+    <IndexCacheEntry
+      Term="Floor Properties"
+      Conditions=""
+      LocalConditions=""
+      Position="20" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Promodel.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

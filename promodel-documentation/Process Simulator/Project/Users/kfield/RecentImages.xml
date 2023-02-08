@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UrlList>
+    <Url Source="Resources/Images/SubmodelExitPoints.png" />
+    <Url Source="Resources/Images/SubmodelEntry.png" />
+    <Url Source="Resources/Images/SubmodelPrefix.png" />
+    <Url Source="Resources/Images/SubmodelUniqueInstance.png" />
+    <Url Source="Resources/Images/HyperlinkDefined.png" />
+    <Url Source="Resources/Images/Hyperlink2.png" />
+    <Url Source="Resources/Images/ActivityUseSubmodelProperties.png" />
+    <Url Source="Resources/Images/SimulationOptionsAnimation.png" />
+    <Url Source="Resources/Images/PromptChoices.jpg" />
+    <Url Source="Resources/Images/PromptSimple.jpg" />
+    <Url Source="Resources/Images/LogProcess.jpg" />
+    <Url Source="Resources/Images/Debugger.png" />
+    <Url Source="Resources/Images/StatementList.png" />
+    <Url Source="Resources/Images/SubroutineLogicToolbar.png" />
+    <Url Source="Resources/Images/ArrivalPatternDialog.png" />
+    <Url Source="Resources/Images/ArrivalScheduledDialog.png" />
+    <Url Source="Resources/Images/StorageTriggerByLevel.png" />
+    <Url Source="Resources/Images/ResourceCost.png" />
+    <Url Source="Resources/Images/ResourceAvailability.png" />
+    <Url Source="Resources/Images/ActivityAdvanced.png" />
+    <Url Source="Resources/Images/ActivityDowntimes.png" />
+    <Url Source="Resources/Images/ActivitySetup.png" />
+    <Url Source="Resources/Images/ActivityBuffers.png" />
+    <Url Source="Resources/Images/ActivityResource.png" />
+    <Url Source="Resources/Images/ActivityAvailability.png" />
+    <Url Source="Resources/Images/newribbon1.png" />
+    <Url Source="Resources/Images/OpenNewProcessSimulatorDiagram.png" />
+</UrlList>

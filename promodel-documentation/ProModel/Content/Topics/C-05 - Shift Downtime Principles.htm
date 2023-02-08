@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2493" MadCap:lastWidth="1193">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088299"></a>Shift Downtime Principles<MadCap:keyword term="Shift:downtime:principles" /></h3>
+        <h4>Locations Shift Downtime Principles<MadCap:keyword term="Shift:downtime:principles:locations" /></h4>
+        <p class="p">It is important to understand that when a location or resource goes off shift, it is essentially down. We call this type of downtime a <span class="_Override" style="font-style: italic;">shift downtime</span> and it is treated slightly differently from other downtimes. Breaks, which are also part of the shift schedule, are treated exactly like clock-based downtimes. These downtimes are discussed in <MadCap:xref class="lowercase_no_see" href="C-05 - Locations.htm#C-05_2723800551_1085243" target="" title="" alt="">Locations on page 1</MadCap:xref> and <MadCap:xref class="lowercase_no_see" href="C-05 - Resources.htm#C-05_2723800551_1086477" target="" title="" alt="">Resources on page 1</MadCap:xref>.</p>
+        <h5>Shift Downtimes for Locations</h5>
+        <p class="p">All location shift downtimes have a default priority of 99, the highest non-preemptive priority possible. This means that when a location is scheduled to go off-shift, this downtime will take priority over all other entities with a priority less than 99 waiting for the location. If the location is currently in use, shift downtimes allow the current entity to complete its process at the location. After the entity is finished, the shift downtime proceeds as if it started at its scheduled time. This means that the location becomes available at the start of the next shift regardless of when it actually went off shift. This procedure is demonstrated in the following example.</p>
+        <h4>Example 1 (a)<MadCap:keyword term="Shift:downtime:principles:examples"></MadCap:keyword></h4>
+        <p>
+            <img src="8_116.jpg">
+            </img>
+        </p>
+        <p class="p">Although the downtime is scheduled to last from time T2 to T4, the actual downtime does not begin until time T3. This is what happens for both locations and resources currently busy when the shift downtime is scheduled to occur.</p>
+        <p class="p">To preempt a location in which an entity is currently processing, set the priority for going off shift to a number one level higher than the entity’s priority.</p>
+        <h4>Example 1 (b)</h4>
+        <p>
+            <img src="8_117.jpg">
+            </img>
+        </p>
+        <p class="p_10">Please Note: Since the entity was preempted, the remaining time for the entity to be processed at the location was completed after the location shift downtime was completed.</p>
+        <h5>Preempting Off-Shift Locations<MadCap:keyword term="Shift:downtime:principles:preemption;Preemption:off-shift locations;Off-shift:locations, preempting" /></h5>
+        <p class="p">An off-shift location may be preempted back into service by an entity. Following the preemption, the shift downtime will resume for any remaining time before the start of the next shift. The following example demonstrates this principle.</p>
+        <h4>Example 2</h4>
+        <p class="p">In this example an entity with priority of 200 or greater preempts an off-shift location. The location becomes available to process the entity. Once processing is complete, the location returns to its off-shift status.</p>
+        <p>
+            <img src="8_118.jpg">
+            </img>
+        </p>
+        <p class="p">In order for an entity to preempt <span class="_Override" style="font-style: italic;">any </span>location downtime (shift or otherwise), it must have a priority level that is at least 2 levels higher than the downtime's priority. In this example the location shift downtime has a priority level of 99 so the entity must have a priority level of 200 or greater to preempt the shift.</p>
+        <h5>Overlapping Downtimes<MadCap:keyword term="Shift:assignments:overlapping downtimes;Shift:downtime:principles:overlapping downtimes;Downtimes:overlapping shift downtimes" /></h5>
+        <p class="p">If a preemptive clock downtime occurs during a shift downtime, the downtimes simply overlap.</p>
+        <h4>Example 3</h4>
+        <p class="p">This example shows the effect of a preemptive downtime occurring for a <span class="_Override" style="font-style: italic;">location </span>already off-shift due to a shift downtime. Because location downtimes always overlap, the effect is as if the preemptive downtime never occurred. The location remains off-shift for the total duration of the shift downtime.</p>
+        <p>
+            <img src="8_119.jpg">
+            </img>
+        </p>
+        <p class="p">The example above could represent the situation where a recurring downtime, such as a lunch or dinner break, has been defined for a single location that is scheduled to be available for a two-shift period. It would be simpler to specify a single downtime for lunch and dinner that occurs once every 8 hours continuously than to define separate downtimes for lunch and dinner. In this case the preempting downtime would represent a meal break occurring while the location was off-shift.</p>
+        <h4>Resource Downtime Principles<MadCap:keyword term="Shift:downtime:principles:resources" /></h4>
+        <h5>Shift Downtimes for Resources</h5>
+        <p class="p">Resource shift downtimes work exactly like location shift downtimes with the exception that if the off-shift downtime is preempted by some other downtime, the original off-shift downtime never resumes. The following examples show how a resource that is off shift is affected by a preemptive request by another entity (example 1) and by downtime preemption (example 2).</p>
+        <h4>Example 1</h4>
+        <p class="p">Suppose a resource, repairman, is off-shift. An important machine goes down unexpectedly. Because this machine is a bottleneck in the operation, it is vital to repair the machine as quickly as possible. The repairman is called in and takes 30 minutes to fix the machine. The logic for the downtime to call him back is “Use Repairman, 600 For 30 min”. This will preempt the shift downtime and use the repairman to repair the machine even though the repairman is off-shift. Once the repairman has repaired the machine, he returns to his shift downtime until he is scheduled to go back on shift. The repairman's shift downtime will end at the originally scheduled time regardless of the fact it was preempted by a repair activity.</p>
+        <p>
+            <img src="8_120.png" />
+        </p>
+        <p class="p">Although the shift downtime is scheduled to last from time T1 to T4, the actual downtime lasts from T1 to T2 and then from T3 to T4.</p>
+        <h4>Example 2</h4>
+        <p class="p">This example shows the effect of a preemptive downtime occurring for a resource already off-shift due to a shift downtime. Since resource downtimes are <span class="_Override" style="font-style: italic;">not </span>overlapping, as in the case of location downtimes, the shift downtime in progress is discontinued and the preemptive downtime takes control of the resource because it has a priority greater than or equal to five-hundred (remember that a downtime priority needs to be only one level higher than another downtime priority to preempt it). The effect in this example is that the total downtime is actually shorter than it would have been had the original shift downtime been completed.</p>
+        <p>
+            <img src="8_121.png" />
+        </p>
+        <p class="p">Although in practice, situations like the example above are unlikely to occur, it is important to understand that the above condition is possible. Typically, preemptive downtimes are due only to some type of location or resource failure, in which case, the downtime occurrence would be based on usage and not clock time. If a preemptive downtime is based on usage, the situation in the example above could not occur because the location or resource would not be in use, and would not accumulate usage time.</p>
+    </body>
+</html>

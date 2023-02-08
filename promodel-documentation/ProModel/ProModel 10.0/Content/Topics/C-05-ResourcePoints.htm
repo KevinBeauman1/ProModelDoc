@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1620" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1087123"></a>
+            <MadCap:keyword term="Resources:resource points;Points:resource" /><a name="C-05_2723800551_25328"></a>Resource Points</h3>
+        <p class="p">For a static resource, resource points are the layout coordinates of the resource graphics. For dynamic resources, resource points are auxiliary points where multiple resources may appear graphically when in use or parked at a multi-capacity node. When a resource arrives at a node, it will appear on that node unless a resource point is defined for that resource at that node. The resource will appear on the resource point when it arrives to park or perform a task at a particular node. Resource points prevent resources from appearing on top of each other. In the case of dynamic resources, resource points are defined in terms of an offset from the node to which they are connected. Resource points are defined in terms of an offset from the upper left corner of the layout for static resources.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">The following Resource Points edit table shows that node N8 has two resource points attached to it. The horizontal offset is 0 units for each point. The vertical offset is 13 units both up and down from the node position. (For resource points positive distances are up and to the right.)</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">The following Resource Points edit table shows that node MD_Home has two resource points attached to it. The horizontal offset is 45 units for the first point and - 14 for the second. The vertical offset is - 40 down for the first point and 20 units up from the node position for the second. (For resource points positive distances are up and to the right.)</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="sm-c5-144-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-140-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel,PM-MM Conditionals.ServiceModel">Whenever a forklift arrives or parks at node N8, it will automatically go to one of the two resource points. This prevents the forklifts from graphically appearing on top of each other if they are both at node N8 simultaneously.</MadCap:conditionalText>
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">Whenever physicians arrive at node MD_Home, they will automatically go to one of the two resource points. This prevents the physicians from graphically appearing on top of each other if they are both at node MD_Home simultaneously.</p>
+        <p class="How_to_title">How to add resource points to a node<MadCap:keyword term="Resources:resource points:adding;Add:resource points;Node:add resource points to"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Select <span class="_Override" style="font-weight: bold; text-decoration: none;">R</span><span class="_Override" style="font-weight: bold;">esources </span>from the <span class="_Override" style="font-weight: bold; text-decoration: none;">B</span><span class="_Override" style="font-weight: bold;">uild </span>menu.</li>
+            <li class="li_1_how_to_step">Click on the resource points heading button, <span class="_Override" style="font-weight: bold;">Pts....</span></li>
+            <li class="li_1_how_to_step">Click on the node for which a resource point is to be added.</li>
+            <li class="li_1_how_to_step">Click on the layout where the resource point is to appear.</li>
+            <li class="li_1_how_to_step">Repeat steps 3 and 4 for each resource point to be added.<br></br></li>
+        </ol>
+        <p class="p_10">Please Note: Resource points are automatically added to the home node for each resource graphic placed on the layout.</p>
+        <p class="How_to_title">How to delete resource points<MadCap:keyword term="Resources:resource points:deleting;Points:resource"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Bring up the Resource Points edit table by clicking on the <span class="_Override" style="font-weight: bold;">Pts... </span>heading button in the Resources edit table.</li>
+            <li class="li_1_how_to_step">Select the point to be deleted by highlighting the edit table record or clicking on the resource point in the layout. (If you click on the point to select it, you must then reactivate the Resource Points window by clicking on the title bar of the table.)</li>
+            <li class="li_1_how_to_step">Select <span class="_Override" style="font-weight: bold; text-decoration: none;">D</span><span class="_Override" style="font-weight: bold;">elete </span>from the <span class="_Override" style="font-weight: bold; text-decoration: none;">E</span><span class="_Override" style="font-weight: bold;">dit </span>menu.</li>
+        </ol>
+        <p class="How_to_title">How to move resource points<MadCap:keyword term="Resources:resource points:moving;Move:resource:points"></MadCap:keyword>:</p>
+        <ol>
+            <li class="li_1_how_to_step">Bring up the Resource Points edit table by clicking on the <span class="_Override" style="font-weight: bold;">Pts... </span>heading button from the Resources edit table.</li>
+            <li class="li_1_how_to_step">Drag the resource point to a new location with the mouse.</li>
+        </ol>
+    </body>
+</html>

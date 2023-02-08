@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="621" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1088967"></a><a name="C-05_2723800551_30783"></a>Tank<MadCap:keyword term="TANK_FILL;Subroutines:tank:TANK_FILL" />_Fill</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_FILL (&lt;Tank ID&gt;, &lt;Fill Quantity&gt;, &lt;Fill Rate&gt;, &lt;Resume Level&gt;)</p>
+        <p class="Syntax_body">TANK_FILL (HoldingTank, 2000, 75, 1500)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Fills a tank using a specific quantity and rate. The default tank state sets to Tank_Filling, then to Tank_Blocked if the tank becomes full.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Use Tank_Fill when the source of the material is not another tank, but an arriving entity or a source that is not part of the model.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Fill Quantity&gt;</p>
+        <p class="p">The number of units (gallons, pounds) to fill into the tank. To fill the tank to capacity, enter Tank_Cap(&lt;Tank ID&gt;).</p>
+        <p class="Component">&lt;Fill Rate&gt;</p>
+        <p class="p">The rate in units (gallons, pounds) per time unit defined in the General Information dialog. To instantly increase the level of a tank, use the Tank_Inc subroutine. To initialize the level of a tank (e.g., at the start of the simulation), use the Tank_SetLevel subroutine. To use a dynamically calculated rate in the Tank_Rate subroutine, enter 0.</p>
+        <p class="Component">&lt;Resume level&gt;</p>
+        <p class="p">If the tank level reaches capacity before you add the specified quantity, the tank must drop to the resume level before it can continue filling. To terminate filling if the tank reaches capacity, enter Tank_Stop as the resume level. A value of 0 causes an error to occur if the tank becomes full before reaching the fill quantity.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A tanker arrives and fills a storage tank by the quantity stored in the tanker’s attribute, Load_Qty. The rate of fill is 80 gpm and, if the tank fills to capacity before the tanker discharges the entire quantity, the level of the storage tank must drop to 12,000 gallons before it resumes filling. To represent this, enter the following statement in the operation logic for the tanker at the unloading station.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Tank_Fill(StorageTank, Load_Qty, 80, 12000)</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-05 - Tanks.htm#C-05_2723800551_1088785" target="" title="" alt="">Tanks on page 1</MadCap:xref> and <MadCap:xref class="lowercase_no_see" href="C-05 - Subroutines - Examples of Tank Logic.htm#C-05_2723800551_1089736" target="" title="" alt="">Initializing and Replenishing Supply Tanks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2231" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Modeling Random Failures</h3>
+        <p class="p">An activity randomly fails, interrupting the current entity being processed. When it is repaired, the current entity resumes its activity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=VPzaBMCD6Ig&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=10&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution A (If you only know roughly the percentage of time the activity is available (i.e., not down)</h4>
+        <ol>
+            <li class="li_1">Enter the percent availability in the Availability field of the activity Properties dialog.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/modelrandomfailuresolutiona.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution B (If you have a good idea of the time between failures and the time to repair)</h4>
+        <ol>
+            <li class="li_1">In the activity Properties , click on the Downtimes section and click on the green plus to add a downtime.</li>
+            <li class="li_1">In the Basis field of the Downtime, select Usage, since most equipment failures occur only while in use.</li>
+            <li class="li_1">Complete the rest of the data for the downtime. Since this is a random failure, the Interrupt option should be selected.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">A printing machine in a publishing process goes down randomly every 10 minutes exponentially distributed. The repair time is roughly triangularly distributed with a min, mode and max of 1, 4 and 15 minutes respectively.</p>
+        <p class="p">
+            <img src="Resources/Images/modelrandomfailureexample.png" MadCap:mediastyle="@media print { max-width: 3.5in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/modelrandomfailuresolutionb.png" MadCap:mediastyle="@media print { max-width: 5in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Downtimes shows the entries which define this random failure for the Printer activity.</p>
+    </body>
+</html>

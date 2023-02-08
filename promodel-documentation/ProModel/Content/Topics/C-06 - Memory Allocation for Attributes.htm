@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="118" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1085258"></a>Memory Allocation for Attributes<MadCap:keyword term="Attributes:memory allocation:for attributes;Memory:allocation:for attributes" /></h3>
+        <p class="p">Because locations always exist during a simulation, location attributes always use memory.  However, attributes for entities are not created until the first time any of the entity’s attributes are examined or set.  At that time, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allocates enough memory for all of the entity’s attributes.  When the entity exits the system or is absorbed by another entity through a Combine or Join statement, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> automatically frees the memory allocated for its attributes.</p>
+    </body>
+</html>

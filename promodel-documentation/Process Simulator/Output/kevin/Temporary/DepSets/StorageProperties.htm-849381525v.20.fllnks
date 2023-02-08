@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Storage Dialog"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/StorageProperties.htm" />
+    <Link
+      Url="Content/Resources/Images/StorageProperties.png" />
+    <Link
+      Url="Content/Resources/Images/StackedStorage.gif" />
+    <Link
+      Url="Content/Resources/Images/StackedStorageConPoint.gif" />
+    <Link
+      Url="Content/Resources/Images/StorageTriggerByLevel.png" />
+    <Link
+      Url="Content/Resources/Images/StorageTriggerByTime.png" />
+    <Link
+      Url="Content/Resources/Images/StorageOrder.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/StorageProperties.htm#Trigger" />
+    <Link
+      Url="Content/StorageProperties.htm#Order" />
+    <Link
+      Url="Content/StorageProperties.htm#Notes" />
+    <Link
+      Url="Content/StorageProperties.htm#Advanced" />
+    <Link
+      Url="Content/Resources/Images/StorageProperties.png" />
+    <Link
+      Url="Content/Resources/Images/StackedStorage.gif" />
+    <Link
+      Url="Content/Resources/Images/StackedStorageConPoint.gif" />
+    <Link
+      Url="Content/Resources/Images/StorageTriggerByLevel.png" />
+    <Link
+      Url="Content/Resources/Images/StorageTriggerByTime.png" />
+    <Link
+      Url="Content/Resources/Images/StorageOrder.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="Trigger" />
+    <Anchor
+      Name="Order" />
+    <Anchor
+      Name="Notes" />
+    <Anchor
+      Name="Advanced" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="storage properties"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

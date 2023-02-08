@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Import-Export Model Data</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor190"></a>Import-Export Model Data</h1>
+        <p>Exporting Process Simulator model data allows you to view and validate the details of all activities, entities, resources, arrivals, routings, etc. in Microsoft Office Excel. You can then modify many of the details and import those changes back into your Process Simulator model.</p>
+        <p> To import from or export to an Excel file, select <b>Data Import/Export</b> from the <b>Process Simulator</b> menu and choose either Import or Export from the sub menu.</p>
+        <p class="p">
+            <img src="Resources/Images/newimportexport1.png" style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;" />
+        </p>
+        <h2><a name="kanchor191"></a>Export</h2>
+        <p>When you select the option to export the data from your Process Simulator model, you will be prompted to choose the file name and directory where you would like to export your data. A suggested filename will be automatically entered as &lt;model name&gt;.xlsx, however, it can be changed before the export occurs.</p>
+        <ol>
+            <li class="li_1" value="1">To export a file from the <b>Process Simulator</b> menu, select <b>Data Import/Export &gt; Export</b>.</li>
+        </ol>
+        <p class="p">
+            <img src="Resources/Images/pcsribbon_import_export_buttons.png" style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;" />
+        </p>
+        <ol start="2">
+            <li class="li_1" value="2">Select the file location where you would like to save your exported file. The file will be saved as an Excel spread sheet (.xlsx or.xls) file.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/export_to_904x566.png" style="width: 904;height: 566;" />
+        </p>
+        <ol start="3">
+            <li class="li_1" value="3">Once <b>Save</b> is selected, a progress dialog appears as your file is exporting.</li>
+        </ol>
+        <p class="p">
+            <img src="Resources/Images/exporting_progress.png" />
+        </p>
+        <ol start="4">
+            <li class="li_1" value="4">When the file is successfully exported, another dialog will appear asking whether or not you would like to open the file. </li>
+        </ol>
+        <p class="p">
+            <img src="Resources/Images/view_exported_file.png" />
+        </p>
+        <p class="p">
+            <img src="Resources/Images/after export view.png" />
+        </p>
+        <p>After exporting to Excel, the model elements will be separated and organized into individual sheets in the workbook. To view the different sheets, select the desired tab at the bottom of the workbook. The specific sheets created are:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;">
+            <col style="width: 216px;" />
+            <col style="width: 937px;" />
+            <tbody>
+                <tr>
+                    <td class="td_1">Activities</td>
+                    <td class="td_1">Scheduled Arrivals</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Activity Multi Entity</td>
+                    <td class="td_1">Routing</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Activity Setup</td>
+                    <td class="td_1">Variables</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Activity Downtimes</td>
+                    <td class="td_1">Attributes</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Entities</td>
+                    <td class="td_1">Buffers</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Resources</td>
+                    <td class="td_1">Storages</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Resource Downtimes</td>
+                    <td class="td_1">Scenarios</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Resource Groups</td>
+                    <td class="td_1">Six Sigma Analysis</td>
+                </tr>
+                <tr>
+                    <td class="td_1">Arrivals</td>
+                    <td class="td_1">Simulation Properties</td>
+                </tr>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p_10">Please note: The order in which model objects are exported and appear on each sheet is established by their order in the <a href="ObjectExplorer.htm" title="" alt="" class="text_page_in_parenthesis MCXref xref xreftext_page_in_parenthesis">Object Explorer</a>.     </p>
+        <h2><a name="kanchor192"></a>Import</h2>
+        <p>Exported Process Simulator files can be modified and then imported back into Process Simulator which updates the model with the changes. When a Process Simulator file is exported, only the columns and fields that are colored black can be modified for importing back into Process Simulator. The blue columns and fields should not be modified and cannot be imported back into Process Simulator.</p>
+        <p><span style="font-weight: normal;">To import an exported model file into Process Simulator, select the <b>Process Simulator</b> menu and choose</span> Data Import/Export &gt; Import.</p>
+        <ol>
+            <li class="li_1" value="1">Choose the file you would like to import from a directory on your computer and select <b>Open</b>.</li>
+            <li class="li_1" value="2">A status dialog will appear showing the progress of the import.</li>
+        </ol>
+        <p>
+            <img src="Resources/Images/importing status.png" />
+        </p>
+        <ol start="3">
+            <li class="li_1" value="3">If your file successfully imported, the screen will return to the Process Simulator layout view.</li>
+        </ol>
+        <p class="p_10">Please note:  If there was a problem with importing the file, you will see the Errors table open after you click Okay in the below window. You will be able to see all the errors encountered during the import process. Your Process Simulator model will not be modified with the imported changes until all the import errors are resolved.</p>
+        <p class="p">
+            <img src="Resources/Images/import errors.png" />
+        </p>
+        <p class="p">
+            <img src="Resources/Images/import errors.1.png" style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;" />
+        </p>
+        <p>Each import error is listed on a separate row  in the Errors Table. Each error listed specifies the Excel sheet in which the error occurred, the row number on the specified sheet, and the description of the error to be fixed.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

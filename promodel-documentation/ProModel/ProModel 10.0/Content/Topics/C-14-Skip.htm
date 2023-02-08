@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="860" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h2 class="statements">Skip</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Shifts &amp; breaks:logic statements:SKIP;SKIP" />Shift and Break Logic Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Skip</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">In pre-off-shift or pre-break logic, a Skip statement causes any off-shift or break main logic to be skipped as well as the off-shift or break time defined in the shift file so that the affected location or resource stays on line.</p>
+        <p class="p">In off-shift or break logic, a Skip statement causes the off-shift or break time defined in the shift file to be ignored. This is useful if you want to define your own off-shift or break time as part of the logic rather than use the time defined in the shift file.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">This function can only be referenced in off-shift and break logic (either the pre-start or main logic).</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose a <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Teller</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Worker</MadCap:conditionalText> is scheduled to go on break at 10:15 for fifteen minutes. However, if there are more than two <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">customers</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">patients</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">parts</MadCap:conditionalText> in queue, the <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Teller</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Worker</MadCap:conditionalText> will skip his or her break to stay on schedule. The following logic is entered in the pre-break logic for the resource, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Teller</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Worker</MadCap:conditionalText>.</p>
+        <p class="p">	If Contents(<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">Teller</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">Nurse</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">Worker</MadCap:conditionalText>_Que) &gt; 2 Then Skip</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref class="lowercase_no_see" href="C-07-ShiftandBreakLogic.htm#C-07_3886599965_1089612" target="" title="" alt="">Shift and Break Logic on page 1</MadCap:xref>. Also see ForLocation() and ForResource().</p>
+    </body>
+</html>

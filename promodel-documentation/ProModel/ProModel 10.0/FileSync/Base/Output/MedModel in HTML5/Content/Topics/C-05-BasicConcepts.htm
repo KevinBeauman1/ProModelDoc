@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Tanks">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Basic Concepts</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-05-BasicConcepts.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-05-Tanks.htm#C-05_2723800551_1088785">Tanks</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Basic Concepts</span>
+        </div>
+        <h3><a name="C-05_2723800551_1088825"></a>
+            <MadCap:keyword term="Tanks:basic concepts" />Basic Concepts</h3>
+        <p class="p">Since tanks do not process discrete entities, you may not define routings to or from tanks. To control a tank level, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> provides predefined subroutines that fill, empty, and transfer tank contents. To monitor tank levels and initiate flows, you must define control subroutines using the Subroutine module. To call these subroutines and operate them independently in the model, use the <MadCap:keyword term="ACTIVATE" />Activate statement. For examples of how to use these subroutines, see the discussion at the end of this section. To model tanks effectively, you must understand the following concepts.</p>
+        <h4>
+            <MadCap:keyword term="Tanks:levels;Level:tank" />Tank Levels</h4>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> records tank levels in a pre-defined array called Tank_Level where each element of the array corresponds to each tank location in the location list. For example, the level of TankA is the value of Tank_Level [TankA]. If TankA were the third location in the location list, you could also reference the level of TankA with Tank_Level[3]. For best results, you should control all tank levels using only the pre-defined tank filling and emptying subroutines rather than change the Tank_Level array values directly. This will prevent overfilling or overdrawing and will accurately gather statistics for each tank. For example, calling Tank_Fill (TankA, 500, 30, 0) automatically fills TankA to 500 units at a rate of 30 units per minute. The 0 signifies that the tank will not accept excess material and, as a result, an error message will occur if the tank reaches capacity before the specified amount fills into the tank.</p>
+        <h4>
+            <MadCap:keyword term="Tanks:flow time step;Flow:time step:tanks" />The Flow Time Step </h4>
+        <p class="p">To model continuous flow, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> uses a Tank_TimeStep macro. This macro is the time step used when filling/emptying tanks and is a scenario parameter. Initially, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> sets this value to .2 minutes. If you wish to use a different value for the time step, you may change it <span class="_Override" style="font-style: italic;">temporarily</span> (for a particular model) in the Scenario Manager or     <span class="_Override" style="font-style: italic;">permanently</span> by changing the macro itself. The larger the time step, the longer the interval between filling and emptying (which speeds up the simulation). For example, suppose you set the time step to .1 minutes. If a tank empties at a rate of 60 gpm, the simulation would actually empty the tank by a discrete amount of 6 gallons every .1 minutes. When filling or emptying a tank, if the remaining quantity doesn't require the full time step, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> reduces the time step using a linear interpolation. </p>
+        <p class="p_10">Please Note: The only adverse effect of using a large time step is that any <MadCap:keyword term="WAIT UNTIL" />Wait Until statement or other test based on the Tank_Level array may be off by as much as the flow amount for the time step. For example, if the time step is .5 minutes and the rate of flow is 60&#160;gpm, the level will change in 30 gallon increments. This means that the tank will not satisfy the statement “Wait Until Tank_Level[TankA]&gt;=31” until the level reaches 60.</p>
+        <h4>
+            <MadCap:keyword term="Rate of flow;Flow:rate of flow;Tanks:rate of flow" />Rate of Flow</h4>
+        <p class="p">To use flow rates properly, you must define all rates in terms of units (i.e., gallons, pounds) per <MadCap:keyword term="Time units, tank;Tanks, time units;Rate, tank flow" />time unit defined in the General Information dialog. Whenever you call one of the empty, fill, or transfer subroutines, you must specify the rate of flow. The units of flow, however, may change when you move material from one tank to another (e.g., pounds of dry material may transfer into a tank containing gallons of liquid). </p>
+        <p class="p">To specify a variable rate of flow that changes dynamically with each time step, pass a value of 0. This signals the subroutine to call the Tank_Rate subroutine with each time step. To return the desired rate value for each time step when you use a variable rate, you must modify the Tank_Rate subroutine appropriately.</p>
+        <h4><a name="C-05_2723800551_1088843"></a><a name="C-05_2723800551_33180"></a>Tank States</h4>
+        <p class="p">Like other model elements, tanks use states to test and track statistics. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> automatically sets these states when you use the predefined tank subroutines to control the tank. The following are defined states:</p>
+        <p class="p"><span class="Bold">Tank_Idle:</span> The tank is empty and not in use. Set automatically when a tank empties and at the end of a Tank_Prep or Tank_GoDown subroutine.</p>
+        <p class="p"><span class="Bold">Tank_Operation:</span>   The tank is active (e.g., mixing, reacting, heating). Set automatically when the model calls the Tank_DoOperation subroutine.</p>
+        <p class="p"><span class="Bold">Tank_Setup:</span>   The tank is cleaning or preparing for future use. Set automatically whenever you call the Tank_Prep subroutine.</p>
+        <p class="p"><span class="Bold">Tank_Filling:</span>   The tank is filling. Set automatically whenever you fill the tank. </p>
+        <p class="p"><span class="Bold">Tank_Emptying:</span>   The tank is emptying. Set automatically whenever you empty the tank.</p>
+        <p class="p"><span class="Bold">Tank_Blocked:</span>   The tank is full and ready to transfer. Set automatically when the tank fills to capacity. </p>
+        <p class="p"><span class="Bold">Tank_Down:</span>   The tank is down. Set automatically whenever you call Tank_GoDown.</p>
+        <p class="p"><span class="Bold">Tank_ScheduledDown:</span>Similar to the Tank_Down state, except statistics are not collected.</p>
+        <p class="p">While <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> sets these states automatically, you may change the state of the tank at any time by calling the Tank_SetState subroutine. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> records statistics for these states in the output report under Locations. Since a tank may fill and empty simultaneously, the output report combines Tank_Filling with Tank_Emptying and reports it all as waiting time.</p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Over Filling/Emptying Tanks</h4>
+        <p class="p">When using the predefined subroutines to fill, empty, or transfer from one tank to another, you may accidentally attempt to over fill or over empty a tank. To prevent these situations, you have the option to terminate the fill/empty subroutine or suspend further filling/emptying until the tank reaches a resume level. If you terminate the subroutine, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> temporarily stores the un-filled or un-emptied quantity for immediate access in the global variable, Tank_QtyLeft. </p>
+        <h4><a name="C-05_2723800551_Tanks"></a>Tank Downtimes </h4>
+        <p class="p">For Tanks, you must define downtimes and shifts in a special way. First, you may define only clock downtimes for tanks. Second, when defining a clock downtime for a tank, use the Tank_GoDown subroutine in the Downtime Logic field instead of just a Wait statement. This sets the state of the tank to Tank_Down and gathers the appropriate statistics. Third, when defining a shift for a tank, you should call the Tank_GoDownSched subroutine in the off-shift logic using the DTLeft() function as the time parameter. A Skip statement should follow this function as shown next.</p>
+        <p class="Syntax_body">Skip example</p>
+        <p class="Syntax_body">Tank_GoDownSched (&lt;TankID&gt;, DTLeft())<br />Skip</p>
+        <p class="p">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> temporarily suspends tank flow while a tank is down or off shift.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

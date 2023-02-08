@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1178" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1103558"></a>DTDelay()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="Downtimes:downtime-specific system functions;DTDELAY()" />Downtime-Specific System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">DTDelay(&lt;time unit&gt;)</p>
+        <p class="Syntax_body">Wait Att1 - DTDelay(Min)</p>
+        <p class="Syntax_body">Display “The downtime delay was”$DTDelay(day)$“days.”</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the difference between the time when you scheduled a non-preemptive downtime to occur and the time it actually occurred. Use DTDelay to determine if downtimes are being postponed because of incompleted work. You can use DTDelay in downtime logic to ensure that a location comes back up at a specific time. </p>
+        <p class="p">Also returns the difference between the time when a downtime is preempted and the time it resumes.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any downtime logic including off-shift and break logic. This function returns a real number.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;time unit&gt;</p>
+        <p class="p">The function will return the downtime delay in any of the following units: <MadCap:keyword term="SEC;Seconds" />sec, <MadCap:keyword term="MIN;Minutes" />min, <MadCap:keyword term="HR;Hours" />hr, <MadCap:keyword term="DAY" />day, and <MadCap:keyword term="WK;Weeks" />wk.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The following statement models a situation where a location is supposed to go down at 12:00 and always goes back up at 1:00, even if it stays up past 12:00 to finish processing an entity. If the downtime was missed entirely (meaning that the downtime delay was greater than an hour), then the downtime takes no time at all. If the downtime was not missed entirely, then it lasts one hour minus the delay.</p>
+        <p class="Syntax_body">If 60 - DTDelay(min) &gt; 0 Then </p>
+        <p class="syntax_body_indent">Wait (60 - DTDelay(min))</p>
+        <p class="_rules">See Also</p>
+        <p class="p">DownQty().</p>
+    </body>
+</html>

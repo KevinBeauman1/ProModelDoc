@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="805" MadCap:lastWidth="1518">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-07_3886599965_1089568"></a>Move-Related Statements<MadCap:keyword term="Logic:routing move:move-related statements;Move:logic:move-related statements" /></h3>
+        <p class="p">Admissible statements in the Move Logic window include the new move-related statements listed here. A brief description of how each statement functions in <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> follows the list. See <MadCap:xref class="lowercase_no_see" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" target="" title="" alt="">Statements and Functions on page 1</MadCap:xref> for complete syntax, description, and examples of these statements.</p>
+        <p class="Component">Move statements</p>
+        <p class="Syntax_body"><span class="_Override" style="font-weight: bold;">Move For</span> &lt;time&gt;</p>
+        <p class="Syntax_body"><span class="_Override" style="font-weight: bold;">Move With</span>	&lt;res1&gt;{,{p1}} {For &lt;time&gt;} {Then Free} </p>
+        <p class="Syntax_body"><span class="_Override" style="font-weight: bold;">Move On </span>&lt;path network&gt;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="MOVE FOR" /><b>Move For &lt;time&gt;</b></span><span class="Helv_Bold" style="line-height: 12pt;"> <![CDATA[ ]]></span>  Used to specify the amount of time required to move the entity. If the &lt;time&gt; is zero, events for other entities occurring at the same simulation time will be processed before any additional logic is processed for the current entity.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="MOVE WITH" /><b>Move With</b></span>   This statement is used to move an entity using a designated resource, such as a forklift. With the Or operator, you can designate alternative resources for making the move. In this case, the statement captures the first available alternative resource designated in the expression and makes the move. If one of the resources is already owned by the entity, that resource will be used. Please note that you cannot use the And operator to capture (and move with) more than one resource with this statement. To move an entity with multiple resources, you must use a <MadCap:keyword term="GET" />Get statement to capture the additional resources.</p>
+        <p class="p">This statement also allows you to set the priority (p1) for accessing the designated resource. If the resource is already owned by the entity, this priority is ignored.</p>
+        <p class="p">If the resource is static, a time (For &lt;time&gt;) may be specified for the move.</p>
+        <p class="p">The resource used to make the move is only freed if the <MadCap:keyword term="THEN FREE" />Then Free option is used.</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="MOVE ON" /><b>Move On &lt;path network&gt;</b></span>   Use this statement to move an entity along a path network. </p>
+        <p class="p_10">Please Note: Not entering no move related statement in the Move Logic window causes entities to move immediately to the next location when the move logic is completed and begin executing the operation logic for that location.</p>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="827" MadCap:lastWidth="845">
+    <head>
+    </head>
+    <body>
+        <h3>Network License Server Setup<a name="C-02_3483315438_1051599"></a></h3>
+        <p class="p">Included on the CD-ROM is the HASP Driver and HASP License Manager Setup programs. Once these are installed, insert the network USB key in an open USB port on the license server.</p>
+        <ul>
+            <li>Install the HASP Driver from the CD-ROM (CD drive:\License Server Setup\HASP Driver\HASPUserSetup.exe).</li>
+            <li>Install the HASP License Manager from the CD-ROM (CD drive:\License Server Setup\HASP License Manager\Imsetup.exe).</li>
+        </ul>
+        <h4>Setup License Server Manually</h4>
+        <p class="p">After successfully running the setup for the license manager, if you chose to manually install the device driver for the security key and launch the license manager software, follow the steps below.</p>
+        <ol>
+            <li class="li_1">Install the Device Driver.</li>
+            <li class="li_1">Open a Command Prompt and run <span class="_Override" style="font-weight: bold;">HINSTALL -i</span> from the directory to which you installed the license manager.</li>
+            <li class="li_1">After you receive a confirmation that the driver installed successfully, reboot the workstation.</li>
+            <li class="li_1">Start the HASP License Manager software:</li>
+        </ol>
+        <p class="p">From the directory to which you installed the license server, run NHSRVW32.EXE. A window will appear and show the network protocols to which the license manager will listen for license requests..</p>
+        <p class="p_10">Please Note: You need to install the device driver only once. However, you must launch the license manager program each time you reboot the license server. To automatically start the license manager each time you reboot the server, create and place an icon for NHSRVW32.EXE in the server’s Startup folder.</p>
+        <h4><a name="C-02_3483315438_38150"></a>Find a License Key Server on a Routed Network</h4>
+        <p class="p">In order for a workstation to run the network client edition of <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> properly, the workstation must check out a license from a license server. To make a license request, the computer sends a broadcast message out on the network and awaits a response from the license server. If the license server and the computer running <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> are on the same sub net of a routed network (or on the same network of a non-routed network), the license server receives the request and responds. Due to the nature of routed networks, if the license server and computer running <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> are not on the same sub net of a routed network, the key server will not receive the license request broadcast. </p>
+        <p class="p">&#160;</p>
+        <p class="p">To resolve this problem, the workstation must send a license request directly to the computer on the network set up as the license server. For the workstation to identify which computer on the network is the license server, you must create and store a text file called NETHASP.INI in the directory to which you installed <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><span class="_Override" style="line-height: 12pt;"><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> on the workstation.</span></p>
+        <p class="p">&#160;</p>
+        <p class="p">For TCPIP-based networks the NETHASP.INI file must contain the following lines</p>
+        <p class="p_11">[NH_COMMON]</p>
+        <p class="p_11">NH_TCPIP=Enabled;</p>
+        <p class="p_11">[NH_TCPIP]</p>
+        <p class="p_11">NH_TCPIP_METHOD=TCP</p>
+        <p class="p_11">NH_SERVER_ADDR=<span class="_Override" style="font-style: italic;">&lt;Enter the license server’s IP address here&gt;</span></p>
+        <p class="p_10">Please Note: If you followed step 6 in the <MadCap:xref href="C-02-NetworkClientInstallaqtionProcedure.htm">Network Client Installation</MadCap:xref> instructions for <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>, the NETHASP.INI file is generated automatically.</p>
+    </body>
+</html>

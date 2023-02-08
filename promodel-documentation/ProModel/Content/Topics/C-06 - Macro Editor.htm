@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="663" MadCap:lastWidth="559">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086118"></a>Macro Editor<MadCap:keyword term="Macros:edit:table" /></h3>
+        <p class="p">The Macro edit table is used to assign recurring text to a reference name.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c6-233-2.png" MadCap:mediastyle="@media print { max-width: 3in; }" MadCap:conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-233-2.png" MadCap:mediastyle="@media print { max-width: 3in; }" MadCap:conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p>
+            <img src="sm-c6-233-2.png" MadCap:mediastyle="@media print { max-width: 3in; }" MadCap:conditions="PM-MM Conditionals.ServiceModel" />
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">ID</span>   A name to identify the macro.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Text</b><MadCap:keyword term="Macros:text"></MadCap:keyword></span>   Any text to be substituted where the macro name is called. This text may be a complete expression, an entire logic block, or even part of a logic block.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><b>Options</b><MadCap:keyword term="Macros:scenario parameter" /></span>   Allows you to define the macro as a scenario parameter or select a reso<MadCap:keyword term="Resources:group;Group:resource" />urce group.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">The example table above defines two macros. The first macro is simply a conversion factor for converting from miles per hour to feet per minute   The second macro is a service time defined as a normal distribution with a mean of 30 minutes and a standard deviation of 5 minutes. The third parameter in the normal distribution is a stream value. (<MadCap:xref class="lowercase_no_see" href="C-06 - Scenario Parameters.htm#C-06_1157716610_1086161" target="" title="" alt="">Scenario Parameters on page 1</MadCap:xref>.)</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">The example table above defines three macros. The first two macros are care profiles. They each contain a complete set of logic describing a specific care process or procedure that a patient might undergo at several different or similar locations. The use of a macro makes it possible to simply enter the macro name anytime and anywhere in operational logic that the patient might require either type of care. The third macro, AMIC_patients, is a scenario parameter used to define the number of acute minor illness clinic (AMIC) patients to be seen in the clinical simulation model (see <MadCap:xref class="lowercase_see" href="C-06 - Scenario Parameters.htm#C-06_1157716610_1086161" target="" title="" alt="">Run-Time Interface</MadCap:xref>).</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">The example table above defines three macros. The first macro is simply a numeric constant, with fpm representing a conversion factor from miles per hour to feet per minute. If a number is used in multiple places in a model, then a macro makes it possible to change that number throughout the model simply by changing the macro itself. The second macro, Operation_Time, calculates the various operation times at different locations depending on the attributes at the locations. The last macro, Number_of_AGVs, is a scenario parameter used to define the number of AGVs in the simulation model. See <MadCap:xref class="lowercase_see" href="C-06 - Scenario Parameters.htm#C-06_1157716610_1086161" target="" title="" alt="">Run-Time Interface</MadCap:xref> for more information. </p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="Macros:macros vs. subroutines">
+            </MadCap:keyword>A macro is different from a subroutine because a macro cannot pass or return a value. However, because it is simply a text replacement, a macro can reference any expression valid in the expression or logic field that called the macro. For instance, the string “the number of entries is” might be a macro called mac1. This macro by itself is not a valid expression. However, when used with the Display statement in the operation logic (i.e., Display mac1), the compiler will recognize the macro as a string.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <MadCap:keyword term="Macros:valid usage">
+            </MadCap:keyword>A macro may be used in any expression field, but may only contain a numeric expression (e.g., Entries (LOC1), U(5,1), Var1+Att2, etc.). In addition, a macro used in an expression field may not contain multiple lines of text. When used in a logic field, the macro may include any logic element valid in that logic field.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <MadCap:keyword term="Macros:example">
+            </MadCap:keyword>Suppose ten different locations use the same lines of code. Instead of entering the same logic ten times in ten different fields, reference the following macro by typing the macro ID, Activity, in the operation logic at each location:</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <MadCap:keyword term="Macros:example">
+            </MadCap:keyword>Suppose five different locations use the same lines of code. Instead of entering the same logic in five different fields, reference the following macro by typing the macro ID, Care_profile_1, in the operation logic of the patient:</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <MadCap:keyword term="Macros:example">
+            </MadCap:keyword>Suppose five different locations use the same lines of code.  Instead of entering the same logic five times in five different fields, reference the following macro by typing the macro ID, Mac1, in the operation logic of the machine:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="cc-C6-234-1.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel,PM-MM Conditionals.MedModel">
+            </img>
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p">Every time the macro is referenced, the logic is executed.  Macros can also be nested within other macros.  This means that a macro can consist of one or more other macros.  Consider the following Macro edit table:</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel,PM-MM Conditionals.ProModel">
+            <img src="cc-c6-236-2.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-234-2.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">Macros FRM_T1_Time, FR_T2_Time, and others are nested inside of macro Activity.  These macros are also defined as Run-Time Interface parameters and allow the end user to easily change the time distributions they represent.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">The macro, Cardiac_Patient references other macros, such as Patient and Blood. Note that some of the other macros, such as Needs, are only portions of a complete line of code. Although the macro is valid, it will not compile as a part of macro logic because the create statement requires an expression and an entity name. The line Cardiac_Patient in a logic field would be interpreted as Create 2 As Blood_Sample Take 1 Lab_Tech.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">The macro, Favorite_Quote references other macros, such as Race and Finish.  Note that some of the other macros, such as For_Quality, are only portions of a complete line of code.  Although the macro is valid, it will not compile as a part of macro logic because the create statement requires an expression and an entity name.  The line Favorite_Quote in a logic field would be interpreted as the following line,  Create 2 As EntB Take 1 Res1.</p>
+        <p class="p_10">Macro Notes: 1.  	<MadCap:keyword term="Macros:valid usage"></MadCap:keyword>A macro may be used only when the elements contained in the macro are appropriate to the context from which it was called. This restriction means that the macro in the previous example is only valid in operation logic.  2.  	<MadCap:keyword term="Macros:usage with BEGIN/END" />Because a macro simply substitutes some text for its name, if a macro represents a statement block, then it should contain a <MadCap:keyword term="BEGIN" />Begin at the beginning of the block, and an End at the end of the block. This technique is especially important when using a macro immediately after a control statement, such as <MadCap:keyword term="IF...THEN" />If...Then or <MadCap:keyword term="WHILE...DO" />While...Do. For more information, see <MadCap:xref class="lowercase_no_see" href="C-13 - Statements.htm#C-13_1919394185_1091837" target="" title="" alt="">Statement Blocks on page 1</MadCap:xref>.</p>
+    </body>
+</html>

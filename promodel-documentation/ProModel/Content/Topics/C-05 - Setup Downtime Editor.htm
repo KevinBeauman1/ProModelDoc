@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="670" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h4>Setup Downtime Editor<MadCap:keyword term="Locations:downtimes:setup;Downtimes:location:setup" /></h4>
+        <p class="p">Setup downtimes should be used to model situations where a location can process different types of entities, but needs to be setup to do so. Setup downtimes will not overlap but will preempt other downtimes in a manner similar to that of an entity. Setup downtimes are only available for single capacity locations. </p>
+        <p class="p">&#160;</p>
+        <p class="p">Note that a setup downtime is assumed to occur only when an entity arrives at a location and is different from the previous entity to arrive at the location. Consequently, the word All in the prior entity field means all except the same entity type.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The Setup Downtime Editor consists of the edit table shown below. It contains fields for defining location downtimes based on the arrival of a new entity type.</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-106-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-104-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 3.75in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-104-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel">
+            </img>
+        </p>
+        <p class="p"><b>Entity</b> The incoming entity for which the setup occurs. If the setup time for all entity types is identical when shifting from the same prior entity, the reserved word All may be entered.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Prior Entity</b> The entity preceding the entity for which the setup occurs. If the setup is the same regardless of the preceding entity, you may enter the reserved word All.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Logic</b> Enter any logic statements to be processed when the downtime occurs. Click on the heading button to open a larger edit window.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><b>Disable</b> Select YES to temporarily disable the downtime without deleting it from the table.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ServiceModel">The example above shows how the arrival of an Assist type customer following any other customer type at location Cashier triggers a request for resource Clerk1 for 15 seconds. For example, this could be a request for special authorization by a supervisor before accepting an out-of-state personal check.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">This example shows that X-Ray Room 1 will close for 20 minutes every time there is a change in the type of patient being treated. </p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">&#160;</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">This example shows that the time to setup Robot3 depends on the arriving entity and the prior entity. If a GearB follows a GearC, the setup time for the machine will be based on a Lognormal distribution with a mean of 4.5 minutes and a standard deviation of .95 min. But if a GearC follows a GearA, the setup time will be based on a Lognormal distribution with a mean of 2.3 min and a standard deviation of .2 min.</p>
+    </body>
+</html>

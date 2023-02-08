@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1138" MadCap:lastWidth="1492">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3><a name="C-11_756594771_1095110"></a>
+            <MadCap:keyword term="Operator precedence" /><a name="C-11_756594771_14142"></a>Operator Precedence</h3>
+        <p class="p">As in conventional mathematics, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> evaluates expressions with more than one operator according to certain rules of precedence. Expressions with more than one operator are evaluated in the following order:</p>
+        <ol>
+            <li class="li_1">Terms inside <MadCap:keyword term="Parentheses;Operator precedence:parentheses, ( )" />parentheses: ( )</li>
+            <li class="li_1">
+                <MadCap:keyword term="Exponentiation;Operator precedence:exponentiation, **" />Exponentiation: **</li>
+            <li class="li_1">
+                <MadCap:keyword term="Multiplication;Operator precedence:multiplication, *" />Multiplication: *; <MadCap:keyword term="Division;Operator precedence:division, /" />Division: /; and <MadCap:keyword term="Modulus;Special Characters;Operator precedence:modulus, @ or Mod" />Modulus: @</li>
+            <li class="li_1">
+                <MadCap:keyword term="Addition;Operator precedence:addition, +" />Addition: +; <MadCap:keyword term="Subtraction;Operator precedence:subtraction, -" />Subtraction: -</li>
+            <li class="li_1">
+                <MadCap:keyword term="Operator precedence:equalities;Operator precedence:inequalities" />Equalities and Inequalities: =, &lt;&gt;, &gt;, &gt;=, &lt;, &lt;=</li>
+            <li class="li_1">
+                <MadCap:keyword term="NOT;Operator precedence:NOT" />Not</li>
+            <li class="li_1">
+                <MadCap:keyword term="AND;Operator precedence:AND" />And</li>
+            <li class="li_1">
+                <MadCap:keyword term="OR;Operator precedence:OR" />Or</li>
+            <li class="li_1">
+                <MadCap:keyword term="Concatenation operators;Special Characters;Operator precedence:concatenation, $" />Concatenation: $; (For string expressions only.)</li>
+        </ol>
+        <p class="p">When evaluating more than one operator with the same precedence, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> works from left to right.</p>
+        <p class="p">Arithmetic and boolean expressions may include nested expressions (expressions in parentheses) to indicate precedence in complex expressions such as the following examples:</p>
+        <p class="Component">Nested expressions</p>
+        <p class="p">	A+B*(C+D)</p>
+        <p class="p">	((A&gt;B) Or (B&gt;C)) And (C&gt;D)</p>
+        <p class="p">The expression (C+D) is a nested expression which is evaluated first. Multiple nesting is permitted, with the innermost nesting being evaluated first.</p>
+        <p class="Component">E<MadCap:keyword term="Operator precedence:examples" />xample 1</p>
+        <p class="Syntax_body">15 - MATRIX[4]**2 + Clock(min) / 60 </p>
+        <p class="p">In this expression, Matrix[4]**2 is evaluated first, with the result being subtracted from 15. This value is then added to the value obtained from Clock(min)/60.</p>
+        <p class="Component">Example 2</p>
+        <p class="Syntax_body"><span class="Helv_Reg">(A&gt;B) Or (A&gt;C) And (A=D)</span> <![CDATA[ ]]></p>
+        <p class="Syntax_body">would evaluate </p>
+        <p class="Syntax_body"><span class="Helv_Reg">(A&gt;B) Or ((A&gt;C) And (A=D))</span>
+        </p>
+    </body>
+</html>

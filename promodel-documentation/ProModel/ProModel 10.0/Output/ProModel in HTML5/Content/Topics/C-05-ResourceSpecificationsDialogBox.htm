@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: General Elements|Resources">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Resource Specifications Dialog Box</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-05-ResourceSpecificationsDialogBox.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-05-BuildingtheModelGeneral.htm#C-05_2723800551_1035124">Building the Model: General Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-05-Resources.htm#C-05_2723800551_1086477">Resources</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Resource Specifications Dialog Box</span>
+        </div>
+        <h3><a name="C-05_2723800551_1086999"></a><a name="C-05_2723800551_21144"></a>Resource Specifications Dialog Box<a name="kanchor889"></a></h3>
+        <p class="p">The Specifications dialog box contains information for defining the operating characteristics of each resource in the system. Many of the items pertain only to dynamic resources (i.e., resources with path networks). If the resource is static (i.e., not assigned to a path network) many of the options will be disabled. The Resource Specifications dialog box includes the following fields:</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/ProModel 2014, Specifications dialog box_480x298.png" style="width: 480;height: 298;" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor890"></a><b>Path Network</b></span> The name of the path network along which the resource travels. This should be “none” for a static resource.</p>
+        <p class="p"><b>Home</b><a name="kanchor891"></a>   If a path network has been assigned, this is the name of the home node where the resource is positioned at the beginning of the simulation.</p>
+        <p class="p"><span class="Bold"><a name="kanchor892"></a><b>Return Home If Idle</b></span>If a path network has been assigned, check this box to return the resource to the home node when no other tasks are waiting to be performed and no park searches are defined.</p>
+        <p class="p"><span class="Bold"><b>Off Shift</b><a name="kanchor893"></a></span>  If the resource is assigned to a path network and shift, this is the node to which the resource travels to go off shift.</p>
+        <p class="p"><span class="Bold"><a name="kanchor894"></a><b>Break</b></span>   If the resource is assigned to a path network and shift, this is the node to which the resource travels to go on break.</p>
+        <p class="p"><span class="Bold"><b>Resource Search</b><a name="kanchor895"></a></span><span class="Helv_Bold" style="line-height: 12pt;"> </span>  When an entity that needs a resource must select between several available resource units, it follows this rule. This only applies to multi-unit resources. The following rules may be specified:</p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;" value="1"><span class="Bold"><a name="kanchor896"></a>Closest Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="2"><span class="Bold"><a name="kanchor897"></a>Least Utilized Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="3"><span class="Bold"><a name="kanchor898"></a>Longest Idle Resource</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="4"><span class="Bold"><a name="kanchor899"></a>First Available Resource</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: For a non-passing path network, only the Closest Resource rule is allowed since the other rules could cause the network to jam. Static resources only allow Least Utilized and Longest Idle rules since there is no traveling to be done.</p>
+        <p class="p"><span class="Bold"><b>Entity Search</b><a name="kanchor900"></a></span><span class="Element" style="line-height: 12pt;">   When two or more entities of equal priority request a resource at the same time, the resource follows this rule to choose the one to service. The resource first checks for any entities waiting at locations listed in a work search before defaulting to this rule and, if an </span><span class="Element" style="font-style: italic;">exclusive</span><span class="Element"> work search has been defined, the default entity search rule is not used. The following rules may be specified:</span>
+        </p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;" value="1"><span class="Bold">Longest waiting entity (with highest priority)</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="2"><span class="Bold">Closest entity (with highest priority)</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="3"><span class="Bold">Entity with the minimum value of a specified attribute</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="4"><span class="Bold">Entity with the maximum value of a specified attribute</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: Entities look for resources to move them after they capture a location. If several entities are waiting to be transported to one location by a resource and you want the entity with the minimum attribute value to arrive next at the location, you must use the Locations edit table to define the rule at the location for incoming entities as minimum attribute value. The Closest entity rule applies to dynamic resources only. <br style="font-style: italic;" /><br style="font-style: italic;" />If the path network that the dynamic resource is using is time-based, the closest entity is the entity with the least number of nodes from the resource. If the path network is defined by speed and distance, the closest entity is the entity the shortest distance from the resource.</p>
+        <p class="p"><span class="Bold">Motion<a name="kanchor901"></a></span>   If a path network has been assigned, the motion fields define the speeds and times required for basic resource movement and contain the following information:</p>
+        <ul>
+            <li class="li_1" style="font-weight: bold;" value="1"><span class="Bold"><a name="kanchor902"></a>Speed traveling empty/full*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="2"><span class="Bold"><a name="kanchor903"></a>Acceleration rate*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="3"><span class="Bold"><a name="kanchor904"></a>Deceleration rate*</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="4"><span class="Bold"><a name="kanchor905"></a>Pickup time</span>
+            </li>
+            <li class="li_1" style="font-weight: bold;" value="5"><span class="Bold"><a name="kanchor906"></a>Deposit time</span>
+            </li>
+        </ul>
+        <p class="p_10">Please Note: Resource Specification Notes:1.  The units to the side of these fields change automatically from feet to meters (and vice-versa) depending on the default distance units selected in the General Information dialog box. 2.  Pickup and deposit times for resources are included as transit time in the output statistics.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

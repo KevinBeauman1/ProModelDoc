@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1194" MadCap:lastWidth="1447" MadCap:ignoredWords="endregion">
+    <head><title></title>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements">
+            <MadCap:keyword term="Logic:window:#region" />Region</h2>
+        <h4 class="_rules_statements"><span class="Helv_Bold">Syntax samples</span>
+        </h4>
+        <p class="Syntax_body">#region &lt;Optional region name or description&gt;</p>
+        <p class="syntax_indent_2">&lt;logic&gt;</p>
+        <p class="Syntax_body">#endregion</p>
+        <p class="Syntax_body">&#160;</p>
+        <p class="Syntax_body">#region Declare Local Variables</p>
+        <p class="syntax_indent_2">Int myInt</p>
+        <p class="syntax_indent_2">Real myReal</p>
+        <p class="Syntax_body">#endregion</p>
+        <h5 class="_rules_statements"><span class="Helv_Bold">Description</span>
+        </h5>
+        <p class="p"> Collapsible regions facilitate the readability and understandability of the logic and the visual compartmentalization of various portions of the logic. With it, you can hide selected portions of the logic in order to better understand the overall processing flow of the logic, or you can hide from view specific portions of the logic on which you do not want to concentrate.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To access this feature, you can either insert a blank line within existing logic, or you can add a blank line after existing logic. At the beginning of a blank line, type the number sign or pound sign (i.e., #), and the Intellisense feature will display the <i>#region</i> and <i>#endregion</i> delimiter statements. Select <i>#region</i>. The end of the region is delimited by <i>#endregion</i>, so you need to add a blank line after the last line of logic that you want contained within the logic region, and then similarly select <i>#endregion</i> to define the end of the region. Note that you can arbitrarily label any region with a comment by typing a space and some text after <i>#region</i>. Such a label can be a helpful reminder about the logic contained within a collapsed region.</p>
+        <p class="p">&#160;</p>
+        <p class="p">To collapse a region of logic, click the minus sign immediately to the left of <i>#region</i>. Note that when a region is collapsed the remaining displayed line numbers are out of numerical sequence, and that the missing line numbers are hidden within the collapsed region. To expand a collapsed region, click the plus sign immediately to the left of the <i>{...}</i> region marker, which will appear where there are missing line numbers.  If a label was given to the region, click the plus sign immediately to the left of the label. To remove the region, delete the two region delimiters and then delete the corresponding blank lines.</p>
+        <h5 class="_valid_in"><span class="Helv_Bold">Valid In</span>
+        </h5>
+        <p class="p">Any Logic</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">
+            <img src="../Resources/Images/Operation - logic window, region expanded.png" MadCap:mediastyle="@media print { max-height: auto;max-width: 3in; }" style="max-height: auto;max-width: 5in;">
+            </img>
+        </p>
+        <p class="p">
+            <img src="../Resources/Images/Operation - logic window, region collapsed.png" MadCap:mediastyle="@media print { max-height: auto;max-width: 3in; }" style="max-height: auto;max-width: 5in;">
+            </img>
+        </p>
+        <p class="p">&#160;</p>
+    </body>
+</html>

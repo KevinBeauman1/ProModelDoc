@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1332" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-06_1157716610_1086482"></a>Table Function Edit Table<MadCap:keyword term="Table:functions:edit table" /></h3>
+        <p class="p">The Function Table Editor is where all function tables are created and edited.  The fields of the Function Table editor are defined below.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/tablefunctions.png" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">ID</span>   The name of the function table.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Table...</span>   Click on this heading button to open a table for defining the independent and dependent values of the function.</p>
+        <p class="p">
+            <MadCap:keyword term="Table:functions:examples">
+            </MadCap:keyword>The tables for the two example functions are given below.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/table4processtime.png" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>
+            <img src="../Resources/Images/table4qualfactor.png" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The independent and dependent values allow any general expression such as numbers, variables, and math functions. The fields are evaluated only at translation, and cannot vary during the simulation.</p>
+        <p class="p">When calling a user-defined table function, if the independent value is out of range, then the table function will return a zero for the dependent value.  Consider the following function table, Operation_Time:</p>
+        <p class="Graphic">
+            <img src="pm-c6-249-4.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">If the function were called with the command “Operation_Time(5),” the independent value passed to the table function Operation_Time would be five. But five is beyond the limits of the table, so the dependent value returned will be zero. Likewise, if the independent value is 1, the dependent value returned will be zero. However, if 2.7 is entered as the independent value, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will interpolate and return a value between 30 and 50.</p>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Running the Model|Simulation Environment">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Debug Option</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-09-DebugOption.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-09-RunningtheModel.htm">Running the Model</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-09-Run-TimeMenusandControls.htm">Simulation Environment</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Debug Control</span>
+        </div>
+        <h3><a name="C-09_398201723_1091207"></a><a name="kanchor1601"></a><a name="C-09_398201723_18971"></a>Debug Option</h3>
+        <h4>Debugging <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> Logic</h4>
+        <p class="p">The Debugger is a convenient and efficient way to test or follow the processing of any logic defined in your model. The debugger is used to step through logic one statement at a time and examine variables and attributes while a model is running. </p>
+        <p class="p">Before discussing the details of the Debug option, it is important to understand the following terms:</p>
+        <p class="p"><span class="Bold"><a name="kanchor1602"></a><b>Statement</b></span>   A statement causes <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> to take some action or perform some operation. This includes statements such as Get, Join, and Split As. (See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-StatementsandFunctions.htm#C-14_4292047180_1035124" title="" alt="">Statements and Functions</a> for more information).</p>
+        <p class="p"><span class="Bold"><a name="kanchor1603"></a><b>Logic</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"></span> Logic refers to the complete set of statements defined for a particular process record, downtime event, initialization logic, or termination logic for a simulation.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1604"></a><b>Thread</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  A thread is a specific execution of any logic. A thread is initiated whenever a logic needs to be executed. This can be an entity running through an operation logic, the initialization logic, a resource running a node logic, a downtime logic, or any other logic. Note that the same logic may be running in several threads at the same time. For example, three entities of the same type being processed simultaneously at the same multi-capacity location would constitute three threads.</p>
+        <p class="p">A thread or logic execution can be suspended by any statement, causing simulation time to pass (e.g., Get Res1, Wait 5, etc.). After such a statement completes its task, the thread is resumed. During the time a thread is suspended, other threads may be initiated, suspended, resumed, or completed. This is called thread switching.</p>
+        <p class="p_10">Please Note: Even though several threads can execute the same logic at the same time in the simulation, the simulation processor can only process them one at a time. So there is really only one current thread while all other threads are suspended (either scheduled for some future simulation time, or waiting to be executed after the current thread at the same simulation instant).</p>
+        <h5><a name="kanchor1605"></a>Example</h5>
+        <p class="p">To better explain the above concepts, consider the following operation logic for a multi-capacity location. </p>
+        <p class="Example_body" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c9-347-1.jpg" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">The logic includes all statements shown on previous page. Let’s assume that there are three different entities currently executing this operation logic. Each executing entity constitutes a thread. A possible scenario for this case is the following: Thread 1 is an entity using two units of resource Oper_3 for N(35,5) minutes. Thread 2 is an entity waiting for resource Oper_1 to become available. The last thread is a different entity which has completed 10 minutes of the 15 minute wait executed at the beginning of the logic. Note that two entities arriving at a multi-capacity location at nearly the same time could both execute the same <a name="kanchor1606"></a>Wait or <a name="kanchor1607"></a>Use time in the logic, only in different threads.</MadCap:conditionalText>
+        </p>
+        <p class="p">In general, for a logic block containing statements that pass simulation time, any number of threads can wait for the required simulation time to elapse, corresponding to each time elapsing statement. These threads are scheduled to resume at some future simulation time.</p>
+        <p class="p">There can also be many threads (any number of threads corresponding to each of the time elapsing statements within the logic) which have completed their waiting time, but await their turn to continue execution. These threads are on hold because the simulation engine is busy with another thread scheduled for the same simulation time. There is only one thread executed at any real time instant by the simulation engine.</p>
+        <p class="p">The debugger window will display a unique identification number for the current, active thread. This thread ID number will help you differentiate between different instances of the same logic block while you are debugging your models.</p>
+        <h4><a name="kanchor1608"></a>Debugger Options Dialog Box</h4>
+        <p class="p">The Debugger Options dialog box allows the user to specify when to display the Debugger dialog box during the simulation run.</p>
+        <p class="Graphic">
+            <img src="pm-c9-348-1.jpg" />
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor1609"></a><b>Disable debugger</b></span>   Disables the debugger completely. By default the debugger is enabled. Running the model with the debugger disabled increases the run speed. When running multiple replications or scenarios, or when the animation is disabled, the debugger will automatically be disabled.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1610"></a><b>Debug statement</b></span>   Displays the Debugger dialog box every time a Debug statement is encountered in an enabled process while running the simulation. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-14-Debug.htm#C-14_4292047180_1103224" title="" alt="">Debug</a> for more information.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1611"></a><b>Global Change</b></span>   Displays the Debugger dialog box every time a global change occurs to a specified variable or array. The Debugger dialog box shows the original and new value of the element. Only one global name can be specified in this box. </p>
+        <p class="p"><span class="Bold"><a name="kanchor1612"></a><b>User Condition</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Displays the Debugger dialog box when a defined user condition written as a Boolean expression becomes true, for example, when Var1=5. Only one expression can be specified in this box, although several conditions can be tested by using the Or operator. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-11-BooleanExpressions.htm#C-11_756594771_1094936" title="" alt="">Boolean Expressions</a> for more information.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1613"></a><b>Check Condition</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Allows the user to define how often to check the user condition. The options include:</p>
+        <ul>
+            <li class="li_1" value="1"><span class="Bold">Before each statement</span>  The condition, such as Var1=1, will be checked before each statement is executed. This option is the most precise way to tell exactly when the user condition becomes true, but it slows down the simulation the most. </li>
+            <li class="li_1" value="2"><span class="Bold">At each thread switch</span>  The condition, such as Var3&gt;17, will be checked only if a statement from a different thread follows the current statement being executed. </li>
+            <li class="li_1" value="3"><span class="Bold">At each thread initiation</span>  The condition, such as Att1=5, will be checked only if the next statement to be executed is the first statement in a thread (the first statement in a thread is also the first statement of a logic). </li>
+        </ul>
+        <p class="p"><span class="Bold"><b>D</b><a name="kanchor1614"></a><b>ebug button</b></span>   Pressing the Debug button displays the Debugger dialog box before the next statement executes.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">OK</span>   Closes the Debugger Options dialog box and continues to run the simulation model.</p>
+        <h4><a name="kanchor1615"></a>Debugger Dialog Box</h4>
+        <p class="p">The Debugger can be used in two modes: Basic and Advanced. The Basic Debugger appears initially with the option of using the Advanced Debugger. The Basic Debugger dialog box is shown below:</p>
+        <p class="p"><span class="Bold"><a name="kanchor1616"></a><b>Error Display Box</b></span>   Displays the error message or reason why the Debugger dialog box is displayed, such as the User-Condition becoming true.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1617"></a><b>Logic</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;"> Display Box</span>   Displays the statements of the current logic being executed.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1618"></a><b>Context Box</b></span> Displays the module, operation, and line number (in which the debugger stopped) in the Information box.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Information Box </span>Displays local variables and entity attributes with non-zero values in the Information box.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1619"></a><b>End Simulation</b></span>   Choose this option to terminate the simulation. This will prompt you about collecting statistics.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1620"></a><b>Run</b></span>   Continues to run the simulation, but still checks the debugger options selected in the Debugger Options dialog box.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1621"></a><b>Next Statement</b></span>   Jumps to the next statement in the current thread. If the last statement executed suspends the thread (e.g., the entity is waiting to capture a resource), another thread meeting the debugger conditions may be displayed as the next statement.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1622"></a><b>Next Thread</b></span>   Brings up the Debugger at the next initiated or resumed thread.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1623"></a><b>Into Subroutine</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Steps to the first statement in the next subroutine executed by this thread. Again, if the last statement executed suspends the thread, another thread meeting debugger conditions may be displayed first. If no subroutine is found in the current thread, a message is displayed in the Error Display box.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1624"></a><b>Options</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Brings up the Debugger Options dialog box. You may also bring up this dialog box from the Simulation menu.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1625"></a><b>Advanced</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Changes the Debugger to Advanced mode, provides additional options discussed next.</p>
+        <h4><a name="kanchor1626"></a>Advanced Debugger Dialog Box</h4>
+        <p class="p">The Advanced Debugger contains all options in the Basic Debugger plus a few advanced features.</p>
+        <p class="Graphic">
+            <img src="../Resources/Images/Debug - Debugger window.png" style="max-height: auto;max-width: 5.00in;" />
+        </p>
+        <p class="p"><span class="Bold"><a name="kanchor1627"></a><b>Next (Thread)</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Jumps to the next initiated or resumed thread. This button has the same functionality as the Next Thread button in the Basic debugger.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1628"></a><b>New (Thread)</b> <![CDATA[ ]]></span>  Jumps to the next initiated thread.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1629"></a><b>Disable (Thread)</b></span>   Temporarily disables the debugger for the current thread (see also enable).</p>
+        <p class="p"><span class="Bold"><a name="kanchor1630"></a><b>Exclusive (Thread)</b> <![CDATA[  ]]></span> The debugger displays the statements executed within the current thread only. When the thread terminates, the exclusive setting is removed.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1631"></a><b>Next (Logic)</b></span><span class="Helv_Bold" style="font-family: Arial;line-height: 12pt;">  <![CDATA[ ]]></span>  Jumps to the next initiated or resumed thread that is not executing the same logic as the current thread.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1632"></a><b>New (Logic)</b></span>   Jumps over any resumed threads to the next initiated thread not executing the same logic as the current thread. </p>
+        <p class="p"><span class="Bold"><a name="kanchor1633"></a><b>Disable (Logic)</b></span>   Temporarily disables the debugger for all threads executing the current logic (see also enable).</p>
+        <p class="p"><span class="Bold"><a name="kanchor1634"></a><b>Exclusive (Logic) </b></span>  The debugger displays only the statements executed in any thread executing the current logic.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1635"></a><b>Enable disabled threads and logic</b></span>   Enables the threads and logic which were disabled previously.</p>
+        <h4><a name="kanchor1636"></a>Debugger Options Examples</h4>
+        <h5><a name="kanchor1637"></a>Debug Statement Example</h5>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">A simulation model demonstrates a proposed flexible manufacturing system which produces castings. A variable, <a name="kanchor1638"></a>WIP, is used to track the work in process for the system. Suppose we want to display the Debugger when the variable, WIP, reaches a value of 300. We could place an <a name="kanchor1639"></a>If...Then statement including <a name="kanchor1640"></a>Debug after the statement incrementing the variable, WIP, as shown below: </p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.ProModel">
+            <img src="../Resources/Images/PM - Debug Option - Operation logic window.png" style="max-height: auto;max-width: 5in;" data-mc-conditions="PM-MM Conditionals.ProModel" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.ProModel">	By checking the box next to the <a name="kanchor1641"></a>Debug statement in the Debugger Options dialog, the Debugger is displayed when the variable, WIP, reaches 300.</p>
+        <h5><a name="kanchor1642"></a>Global Change Example</h5>
+        <p class="p">Suppose we want to know when the variable, COUNT, is incremented. We would check the box to the left of Global Change and type COUNT in the Global Change field. This will display the Debugger dialog box each time COUNT changes. It will also display the previous and changed value of COUNT. </p>
+        <h5><a name="kanchor1643"></a>User Condition Example</h5>
+        <p class="p">Suppose we want to follow a <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">casting</MadCap:conditionalText> through the entire system (i.e., from when an entity enters the system to when it exits). We would set an attribute equal to a unique number in the arrival logic for a single <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">casting</MadCap:conditionalText> (Att1=3). In other words, only one <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">casting</MadCap:conditionalText> in the system should have Att1=3. We would then check the User Condition box and enter the condition as “Att1=3.” We would then select At Each Thread Initiation as the Check Condition. The debugger is displayed each time a particular customer initiates a new thread. For example, the debugger may display the following information:</p>
+        <p class="Component">Debugger syntax</p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Casting</MadCap:conditionalText> @ loc1: Get <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Oper_1</MadCap:conditionalText></p>
+        <p class="Syntax_body">	Wait N(5,3)</p>
+        <p class="Syntax_body">	Inc Var1</p>
+        <p class="Syntax_body">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Casting</MadCap:conditionalText> @ loc2: Join 1 <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">Fixture</MadCap:conditionalText></p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

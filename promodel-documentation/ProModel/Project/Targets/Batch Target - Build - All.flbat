@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultBatchTarget
+  Version="1"
+  Comment="New Batch Target">
+  <Targets>
+    <Target
+      Name="MedModel in HTML5"
+      Type="HTML5"
+      Build="true"
+      LastBuilt="2014-06-17T11:05:18.0012327-04:00"
+      LastPublished="" />
+    <Target
+      Name="MedModelPrint"
+      Type="PDF"
+      Build="true"
+      LastBuilt="2014-06-17T11:08:11.0914750-04:00"
+      LastPublished="" />
+    <Target
+      Name="ProModel in HTML5"
+      Type="HTML5"
+      Build="true"
+      LastBuilt="2014-06-17T11:10:23.9816610-04:00"
+      LastPublished="" />
+    <Target
+      Name="ProModelPrint"
+      Type="PDF"
+      Build="true"
+      LastBuilt="2014-06-17T11:13:22.1019104-04:00"
+      LastPublished="" />
+    <Target
+      Name="ServiceModel in HTML5"
+      Type="HTML5"
+      Build="false"
+      LastBuilt=""
+      LastPublished="" />
+    <Target
+      Name="ServiceModelPrint"
+      Type="PDF"
+      Build="false"
+      LastBuilt=""
+      LastPublished="" />
+  </Targets>
+</CatapultBatchTarget>

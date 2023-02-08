@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/scenarios.png" />
+    <Link
+      Url="Content/Resources/Images/replications.png" />
+    <Link
+      Url="Content/Resources/Images/allrepsNscens.png" />
+    <Link
+      Url="Content/Resources/Images/Period2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/scenarios.png" />
+    <Link
+      Url="Content/Resources/Images/replications.png" />
+    <Link
+      Url="Content/Resources/Images/allrepsNscens.png" />
+    <Link
+      Url="Content/Resources/Images/Period2.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="scenarios"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="replications"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="period"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

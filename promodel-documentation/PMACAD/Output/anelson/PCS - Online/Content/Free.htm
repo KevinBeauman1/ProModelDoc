@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic|Statements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Free</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="Statements.htm">Statements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Free</span>
+        </div>
+        <h1>Free</h1>
+        <h5><a name="kanchor87"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Free {&lt;quantity&gt;} &lt;resource&gt;{, {quantity} &lt;resource&gt;...} </p>
+        <p>Free Res1, 2 Res2, 5 Res3A<br />Free All<br />Free Res(Attr1)</p>
+        <h2>Description</h2>
+        <p>Frees resources which are currently “owned” by the entity. These resources must have been captured through a Get or Jointly Get statement.</p>
+        <h2>Valid In</h2>
+        <p class="p">Activity and route logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;quantity&gt;</b>
+        </p>
+        <p>The number of the following resource to free. A value of zero is ignored and values less than zero result in an error. This quantity may be any numeric expression and is evaluated and truncated to an integer every time the Free statement is encountered.</p>
+        <p> <b>&lt;resource&gt;</b></p>
+        <p>The name of the resource to free. The All keyword may be used here to free all resources owned by an entity. Any resource which is not owned by the entity will be ignored.</p>
+        <h2>Example</h2>
+        <p>
+            In the following example, Cars arrive at Garage for a multi-step process that requires the use of two resources, Mechanic and Assistant.  The first step requires the simultaneous use of both the Mechanic and the Assistant for a normally distributed amount of time.  The Mechanic is then freed while the Assistant performs the second step of the process according to a Lognormal distribution.
+</p>
+        <p class="p_11">Jointly Get Mechanic And Assistant<br />Wait N(4.5, .2)<br />Free Mechanic<br />Wait L(3.4, .23)<br />Free Assistant</p>
+        <h5>See Also</h5>
+        <p><a href="Get.htm" class="a_11">Get</a> and Jointly Get.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

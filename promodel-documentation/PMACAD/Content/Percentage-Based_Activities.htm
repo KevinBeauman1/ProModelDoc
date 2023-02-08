@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2676" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Percentage-Based Activities (when there are only two percentage options)</h3>
+        <p class="p">For a given activity, a different activity time or activity action should occur a certain percentage of the time.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=wmkwhbrBPZY&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=23&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution A</h4>
+        <ol>
+            <li class="li_1">Click on the Logic button in the activity Properties dialog.</li>
+            <li class="li_1">Define an IF statement to test whether the system function Rand(100) is less than or equal to the percentage value of interest. (The Rand(100) function returns a random value between 0 and 100.)</li>
+            <li class="li_1">Define a WAIT statement (or other action statement) that applies when this percentage value is met.</li>
+            <li class="li_1">Define an alternative ELSE and an associated WAIT statement (or other action statement) for the remaining percentage option.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">20% of those who get a flu vaccination at a certain health facility also get a pneumonia vaccination at the same time. It takes only 1 minute to get a flu vaccination but 2 minutes if both are obtained.</p>
+        <p class="p">
+            <img src="Resources/Images/percentagebaseexamplea.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/percentagebasedsolutionA.png" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Logic Builder for the Vaccination activity tests for the Rand(100) function to be less than or equal to 80 and is followed by a 1 minute WAIT time. This is followed by an ELSE statement to catch the remaining 20% of the patients who get both vaccinations and therefore take 2 minutes.</p>
+        <h3>Percentage-based Activities (when there are more than two percentage options)</h3>
+        <p class="p">The activity time is based on one of several percentage options or percentages of total entries.</p>
+        <h4>Solution B (Note that this solution tests on the cumulative percentages of interest)</h4>
+        <ol>
+            <li class="li_1">Click on the Logic button in the activity Properties dialog.</li>
+            <li class="li_1">Define a Local Variable giving it a name and selecting Real for its type.</li>
+            <li class="li_1">Define an Assign statement assigning the Rand(100) function to the local variable. This assigns a random number between 0 and 100 to the local variable. You will be comparing this value to the percentage value of interest expressed as a cumulative percentage value.</li>
+            <li class="li_1">Define an IF statement to test whether the local variable is less than or equal to the first percentage value of interest.</li>
+            <li>
+                <p>Define a WAIT statement or other desired Action statement for the percentage value being tested.</p>
+            </li>
+            <li>
+                <p>Define ELSE IF statements and associated tests for the local variable being less than or equal to the cumulative percentage value of each remaining percentage test.</p>
+            </li>
+            <li>
+                <p>Define a WAIT (or other) statement for each of the above ELSE IF statements.</p>
+            </li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Calls coming into a call center Support activity take different times depending on the nature of the problem. The four basic classes of problems and their percentage of occurrence are as follows: simple (30%), moderate (40%), difficult (20%) and very difficult (10%). Simple problems take .5 minutes, moderate problems 1.5 minutes, difficult problems 5 minutes and very difficult problems 15 minutes. </p>
+        <p class="p">
+            <img src="Resources/Images/percentagebaseexampleb.png" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/percentagebasedsolutionB.png" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Logic for the Support activity shows a local variable called vProblem that is assigned a random number between 0 and 100 using the Rand() function. The first IF statement tests for vProblem being less than or equal to 30 and is followed by a .5 minute WAIT time. Subsequent ELSE IF statements compare Percentage with the cumulative percentage of each subsequent percentage option, i.e., 70, 90. The last ELSE statement is assumed to catch the remaining 10% (100% cumulative), which comprise the very difficult problems.</p>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="861" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_471584"></a>
+            <MadCap:keyword term="GetStatValue;ProModel Runtime Object:GetStatValue" />GetStatValue</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>GetStatValue<span class="_Override" style="font-style: italic;"> <![CDATA[ ]]></span><span class="_Override" style="color: #0000ff;">TableID, RecordNum, StatID, SubRec, Value</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Gets the current value for the specified statistics element.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:</span>
+        </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">TableID</span> (Long)  Table (Section) Number containing the data element you wish to retrieve.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordNum</span> (Long)  Record (Row) Number containing the data element you wish to retrieve.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">StatID</span> (Long)  Statistic element you wish to retrieve.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">SubRec</span> (Long) For Resource Stats &gt; Unit Number (0 = parent); For Node Entry Stats &gt; Node Index;  For Failed Arrivals &gt; RecordNum = Entity Index, SubRec = Location Index</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Value</span> (Double)  Variable or object in which to place the statistics value retrieved.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>The numeric value of the statistic element at the moment the method is executed.  The value will be placed in the variable or object specified in the <span class="_Override" style="font-style: italic;">Value</span> parameter.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example loads Receive.mod, runs the simulation, then pauses 3 times at 30 minute intervals and displays the Current Contents of the Pallet_Storage location, then ends the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub ShowSomeStats()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmRuntime As ProModel.CRuntime</p>
+        <p class="objects2">	Dim CurSimTime As Double</p>
+        <p class="objects2">	Dim MyStatVal As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	CurSimTime = 0</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmRuntime = CreateObject("Promodel.CRuntime")</p>
+        <p class="objects2">	pmObject.LoadModel ("receive.mod")</p>
+        <p class="objects2">	pmObject.Simulate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 1800</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.GetStatValue <span class="_Override" style="color: #0000ff;">1, 21, 5, MyStatVal</span></p>
+        <p class="objects2">	pmObject.MsgBox MyStatVal</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 3600</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0 ’Pauses Simulation</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.GetStatValue <span class="_Override" style="color: #0000ff;">1, 21, 5, MyStatVal</span></p>
+        <p class="objects2">	pmObject.MsgBox MyStatVal</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0 ’Resumes Simulation</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Do While CurSimTime &lt; 5400</p>
+        <p class="objects3">		pmObject.GetSimTime CurSimTime</p>
+        <p class="objects3">		DoEvents</p>
+        <p class="objects2">	Loop</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0</p>
+        <p class="objects2" style="font-weight: bold;">	pmRuntime.GetStatValue <span class="_Override" style="color: #0000ff;">1, 21, 5, MyStatVal</span></p>
+        <p class="objects2">	pmObject.MsgBox MyStatVal</p>
+        <p class="objects2">	pmObject.MenuCommand 4816, 0</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.EndSimulation</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment=""
+  Type="WebHelp"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/3D Animator.flskn"
+  MasterToc="/Project/TOCs/3DA.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/Promodel.css"
+  OutputFolder="C:\_git\ProModel.Documentation\3D Animator\3_D_Animator_2020\Output"
+  ConditionTagExpression="exclude[Default.PrintOnly] "
+  DefaultUrl="/Content/Topics/Welcome to 3D Animator.htm"
+  Medium="webhelp"
+  GenerateWebSafeImages="true"
+  WebSafeFileExtension="png"
+  MasterPage="/Content/Resources/MasterPages/epswebhelp.flmsp"
+  OutputFile="Welcome to 3D Animator.htm"></CatapultTarget>

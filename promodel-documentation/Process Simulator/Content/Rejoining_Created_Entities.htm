@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1938" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3>Rejoining Created Entities</h3>
+        <p class="p">One or more new entities are created by an entity and later rejoined to the parent entity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=vIQe7vYKOYA&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=21&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Create one or more entities at an activity (see <a href="EntityCreatingActivities.htm">Entity Creating Activities</a>).</li>
+            <li class="li_1">From the activity where a child entity is to rejoin its parent entity, define an Attach routing to the activity where the parent resides.</li>
+            <li class="li_1">In the  Attach routing dialog, select Attach to Creator and enter the quantity to be attached.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Customers enter a fast-food restaurant, place (i.e., create) an order and receive a number for their order. While the order gets filled, customers wait in a Pickup area for their number to be called.</p>
+        <p class="p">
+            <img src="Resources/Images/rejoiningcreatedentitiesexample.png" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">The Create route is shown below.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <img src="Resources/Images/rejoiningcreatedentitiessolution1.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" style="max-width: 7in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">&#160;</p>
+        <p class="p">The Attach route is shown below.</p>
+        <p class="p">
+            <img src="Resources/Images/rejoiningcreatedentitiessolution2.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" style="max-width: 7in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Under the <b>Quantity Mode</b>, be sure to select <b>Entire Quantity</b>from the list.</p>
+        <p class="p">&#160;</p>
+        <p class="p">A Create routing is defined from the Place Order activity which places the order. An Attach routing is then defined from the Fill Order activity to the Pickup activity. Notice that the Attach to Creator is specified so that the right order gets attached to the right customer.</p>
+    </body>
+</html>

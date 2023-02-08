@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, default.png" />
+    <Link
+      Url="Content/Resources/Images/Intellisense - region.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, region expanded.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, region collapsed.png" />
+    <Link
+      Url="Content/Resources/Images/Compile Error - dialog box.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, default.png" />
+    <Link
+      Url="Content/Resources/Images/Intellisense - region.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, region expanded.png" />
+    <Link
+      Url="Content/Resources/Images/Operation - logic window, region collapsed.png" />
+    <Link
+      Url="Content/Resources/Images/Compile Error - dialog box.png" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_4289884492_1092211" />
+    <Anchor
+      Name="C-04_4289884492_32025" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Edit:logic windows"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Logic:windows:edit"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Logic:builder:accessing"
+      Conditions=""
+      LocalConditions=""
+      Position="37" />
+    <IndexCacheEntry
+      Term="Compiling within a logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="42" />
+    <IndexCacheEntry
+      Term="Printing text within a logic window"
+      Conditions=""
+      LocalConditions=""
+      Position="49" />
+    <IndexCacheEntry
+      Term="Help:on-line:accessing"
+      Conditions=""
+      LocalConditions=""
+      Position="54" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

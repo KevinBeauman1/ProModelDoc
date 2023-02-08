@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/pm-c9-340-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c9-337-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c9-337.jpg" />
+    <Link
+      Url="Content/Topics/cc-c9-337-1.jpg" />
+    <Link
+      Url="Content/Topics/C-09-CustomizedReporting.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/pm-c9-340-1.jpg" />
+    <Link
+      Url="Content/Topics/sm-c9-337-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c9-337.jpg" />
+    <Link
+      Url="Content/Topics/cc-c9-337-1.jpg" />
+    <Link
+      Url="Content/Topics/C-09-CustomizedReporting.htm#C-09_398201723_1091055" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1090987" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Output:reporting options"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="Output:reporting options:standard"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options:standard"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Output:reporting options:batch mean"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options:batch mean"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Output:reporting options:periodic"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options:periodic"
+      Conditions=""
+      LocalConditions=""
+      Position="33" />
+    <IndexCacheEntry
+      Term="Output:reporting options:interval length"
+      Conditions=""
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options:interval length"
+      Conditions=""
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="Output:reporting options:number of replications"
+      Conditions=""
+      LocalConditions=""
+      Position="93" />
+    <IndexCacheEntry
+      Term="Simulation:options:output:reporting options:number of replications"
+      Conditions=""
+      LocalConditions=""
+      Position="93" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

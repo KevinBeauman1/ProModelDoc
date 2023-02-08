@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-US" xml:lang="en-US" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Configuring and Animating|Compose Navigation Tab">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>Defining an Event</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h3>Defining an <a name="kanchor117"></a>Event</h3>
+        <p class="p">Events are added to the compose table by clicking on the asterisk row’s down arrow in the Type of Event column.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Some events can be defined before or during animation, while others can only be defined during animation. A list of available events is given below:</p>
+        <h4><a name="kanchor118"></a>User Pause</h4>
+        <p class="p">The User Pause will pause the animation at the specified time and can display text or resume the animation after a given amount of time.</p>
+        <p class="Graphic">
+            <img src="CompUserPause.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Display Text:</b> Opens a dialog that displays the specified text during the pause.</li>
+            <li value="2"><b>Auto Resume Timeout:</b> Allows you to set a value in real time that will elapse before the animation resumes.</li>
+        </ul>
+        <h4><a name="kanchor119"></a>Animation Speed</h4>
+        <p class="p">The Animation Speed option allows you to dynamically change the animation speed at the event time.</p>
+        <p class="Graphic">
+            <img src="CompAnimationSpeed.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Off:</b> Selecting off will disable the animation. This is useful for quickly fast forwarding an animation, for which you would use another event to turn the animation back on at a later time.</li>
+            <li value="2"><b>On:</b> Use the slider to set the new animation speed. You can also directly edit the speed by entering a number in the speed text-box.</li>
+        </ul>
+        <h4><a name="kanchor120"></a>Camera</h4>
+        <p class="p">The Camera option allows you to set new camera positions, according to timed events, during animation. You will be able to choose between saved views or custom views that are defined in the following dialog.</p>
+        <p class="Graphic">
+            <img src="CompCamera.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Preset:</b> Allows you to choose one of the saved views from the drop-down list. For information on defining saved views see <a href="3D Layout Menu.htm#Views" title="" alt="" class="lowercase_no_see MCXref xref xreflowercase_no_see">3D Layout Menu on page 1</a>. The Preset drop-down contains previously defined views, as well as the factory-set "Home" and "Top" views. Click the drop-down to see a list of available views.</li>
+            <li value="2"><b>Custom:</b> Allows you to custom define the view you wish to have displayed when this event occurs.<ul><li value="1"><b>Name:</b> Enter a name for this view. Please note that this view is not saved to your saved view list, but only saved for this event.</li><li value="2"><b>Time:</b> The time the camera will take to move to the saved position. A value of 0 in this field will cause the camera to move instantaneously.</li><li value="3"><b>Save:</b> After moving the camera in the layout to where you would like the view to be saved, click the Save button to set that view for this event.</li><li value="4"><b>View:</b> Immediately moves the camera to the saved position. This is useful for seeing where the camera was previously saved for this event.</li></ul></li>
+        </ul>
+        <h4><a name="kanchor121"></a>Movie</h4>
+        <p class="p">Allows you to control the behavior of your animation presentation around a movie event. </p>
+        <p class="Graphic">
+            <img src="CompMovie.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Movie:</b> Contains a list of movie files that can be added to the event list. For more information about defining a movie event, see <a href="3D Layout Menu.htm#Defineamovie" title="" alt="" class="MCXref xref">How to Define a Movie</a>.</li>
+            <li value="2"><b>Pause animation:</b> Select this checkbox if you wish to pause the animation when the movie event begins to play. </li>
+            <li value="3"><b>Resume animation on completion of movie:</b> This checkbox can only be selected if you first checked the <b>Pause animation</b> checkbox. Check the <b>Resume animation on completion of movie</b> if you would like the animation to unpause and continue once the movie has finished playing. </li>
+        </ul>
+        <h4><a name="kanchor122"></a>Scoreboard</h4>
+        <p class="p">Allows you to display, hide, or move scoreboards at the specified time.</p>
+        <p class="Graphic">
+            <img src="CompScoreboard.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Scoreboard:</b> Choose the scoreboard you want to display/hide/move with this event from the drop-down list. For information on defining scoreboards see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="Scoreboards.htm#C-04_1942222156_1077066">Scoreboards on page 1</a>.</li>
+            <li value="2"><b>Hidden:</b> Leaving this box unchecked will cause the scoreboard to be displayed when the event occurs. Checking the box will hide the scoreboard when the event fires.</li>
+            <li value="3"><b>Set Position:</b> Checking this box will allow you to reposition the scoreboard. Leaving it unchecked will use the scoreboards default position. Since scoreboards are placed on top of the 3D layout as an overlay, all X/Y coordinates for scoreboards are measured from the top-left of the layout, and not the floor.</li>
+        </ul>
+        <h4><a name="kanchor123"></a>Track</h4>
+        <p class="p">The track option must be defined during animation. This feature allows you to set an event where the camera will follow an object until the camera is moved elsewhere.</p>
+        <p class="Graphic">
+            <img src="CompTrack.bmp" />
+        </p>
+        <ul>
+            <li value="1"><b>Object ID:</b> As the animation is running, click on an object to select it to be tracked when this event occurs.</li>
+            <li value="2"><b>Distance:</b> The distance the camera will maintain as it tracks the object.</li>
+        </ul>
+    </body>
+</html>

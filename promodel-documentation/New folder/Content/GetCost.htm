@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="862" MadCap:lastWidth="977" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>GetCost</h1>
+        <h5>
+            <MadCap:keyword term="functions:getcost;getcost" />Function</h5>
+        <h2>Syntax samples</h2>
+        <p>GetCost()</p>
+        <h2>Description</h2>
+        <p>Returns the cost of the current entity executing the logic. Use this function to return the entity’s actual, accumulated dollar amount.</p>
+        <h2>Valid In</h2>
+        <p>Activity logic only.</p>
+        <h2>Example</h2>
+        <p>The following example shows how to use the GetCost() function to generate a Time Series plot that tracks changing entity cost as entities exit the system. (See table below.)</p>
+        <ul>
+            <li>Create a variable (e.g. Var1), select it to be of type real, and select time series statistics.</li>
+            <li>For any activity where an entity exits the system, place the following as the last line in activity logic:</li>
+        </ul>
+        <p>Var1 = GetCost()</p>
+        <h5>See Also</h5>
+        <p><a href="incentCost.htm" class="a_11">IncEntCost</a>, <a href="inclocCost.htm" class="a_11">IncLocCost</a>, and <a href="setrate.htm" class="a_11">SetRate</a></p>
+    </body>
+</html>

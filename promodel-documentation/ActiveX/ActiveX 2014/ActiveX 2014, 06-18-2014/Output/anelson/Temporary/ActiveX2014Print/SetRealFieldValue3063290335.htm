@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="522" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>SetRealFieldValue</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="SetRealFieldValue"><a MadCap:generatedBookmark="TOC" name="SetRealFieldValue"></a><a name="C-01_2914010915_463457"></a>
+            <MadCap:keyword term="SetRealFieldValue;ProModel Data Object:SetRealFieldValue" />SetRealFieldValue</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span><span class="_Override" style="color: #0000ff;">RecordType, FieldIndex, FieldValue</span>
+        </p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Changes the value for the specified real field of the selected record.  When setting values for real fields, it is best to place the number into a variable of the correct type, then use the variable in the method call.  This will avoid incorrect numeric conversions.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span><span class="_Override" style="font-style: italic;">  <![CDATA[ ]]></span>	(Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldIndex</span> 	(Long)  The Field Index (Column Number) of the field for which you want to change the value.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldValue</span> (Double)  The real number value you wish to place in the specified field for the selected record.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads the Orders model, selects the third processing record, then changes the probabilities for the routing records to 70/30.  Be cautious with using this method to set probabilities or percentages that must total 100 (make sure the records still have the correct total after changes).</p>
+        <p class="objects">Sub GetRoutingProbability()</p>
+        <p class="objects2">   Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">   Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">   Dim ProbVal1 As Double</p>
+        <p class="objects2">   Dim ProbVal2 As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">   Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">   Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">   pmObject.LoadModel "Orders.mod"</p>
+        <p class="objects2">   pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">   ProbVal1 = 0.7</p>
+        <p class="objects2">   ProbVal2 = 0.3</p>
+        <p class="objects2">   pmDataObject.SelectMainRecordByIndex 19, 3</p>
+        <p class="objects2">   pmDataObject.SelectMainRecordByIndex 20, 1</p>
+        <p class="objects2" style="font-weight: bold;">   pmDataObject.SetRealFieldValue <span class="_Override" style="color: #0000ff;">20, 13, ProbVal1</span></p>
+        <p class="objects2">   pmDataObject.SelectMainRecordByIndex 20, 2</p>
+        <p class="objects2" style="font-weight: bold;">   pmDataObject.SetRealFieldValue <span class="_Override" style="color: #0000ff;">20, 13, ProbVal2</span></p>
+        <p class="objects2">   pmObject.MsgBox ("Done")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">   Set pmDataObject = Nothing</p>
+        <p class="objects2">   Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

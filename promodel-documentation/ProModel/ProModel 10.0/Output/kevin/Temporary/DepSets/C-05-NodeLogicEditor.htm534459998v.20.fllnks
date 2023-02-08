@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/mm-c5-139-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-140-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-122-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-140-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/Entry Logic and Exit Logic windows.png" />
+    <Link
+      Url="Content/Topics/C-13-LogicElements.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/mm-c5-139-2.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-140-1.jpg" />
+    <Link
+      Url="Content/Topics/mm-c5-122-1.jpg" />
+    <Link
+      Url="Content/Topics/pm-c5-140-2.jpg" />
+    <Link
+      Url="Content/Resources/Images/Entry Logic and Exit Logic windows.png" />
+    <Link
+      Url="Content/Topics/C-13-LogicElements.htm#C-13_1919394185_1091804" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1087088" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Resources:node logic:editor"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Node:logic:editor"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="GRAPHIC"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+    <IndexCacheEntry
+      Term="WAIT UNTIL"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Resources:node logic:example"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+    <IndexCacheEntry
+      Term="Node:logic:example"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

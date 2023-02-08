@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="432" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_490474"></a><a name="C-01_2914010915_New"></a><a name="C-01_2914010915_OpenModule"></a><a name="C-01_2914010915_Quit"></a><a name="C-01_2914010915_RedrawLayout"></a>
+            <MadCap:keyword term="RedrawLayout;ProModel Application Object:RedrawLayout" />RedrawLayout</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>RedrawLayout</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Refreshes the layout window. Useful when you add graphical objects via the ProModelData interface.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><span class="_Override" style="font-weight: bold;">:</span>  None</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following examples loads a model, adds a location record, attaches a library graphic to the location , and redraws the layout.</p>
+        <p class="p">&#160;</p>
+        <p class="objects">Sub AddLoc()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim Xpos As Double</p>
+        <p class="objects2">	Dim Ypos As Double</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	Xpos = 20</p>
+        <p class="objects2">	Ypos = 20</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">	pmDataObject.AppendRecord pmdTblLocation</p>
+        <p class="objects2">	pmDataObject.AppendGraphicIcon pmdTblLocation, 1, 1, Xpos, Ypos</p>
+        <p class="objects2" style="font-weight: bold;">	pmObject.RedrawLayout</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

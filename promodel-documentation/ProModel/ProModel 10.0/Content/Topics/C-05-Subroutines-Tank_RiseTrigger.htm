@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="992" MadCap:lastWidth="1518" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h3 class="tanks"><a name="C-05_2723800551_1089183"></a><a name="C-05_2723800551_34338"></a>Tan<MadCap:keyword term="TANK_RISETRIGGER;Submodels:tank:TANK_RISETRIGGER" />k_RiseTrigger</h3>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">TANK_RISETRIGGER (&lt;Tank ID&gt;, &lt;Level&gt;)</p>
+        <p class="Syntax_body">TANK_RISETRIGGER (TankA, 3000) </p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Waits until tank contents rises to a specific level. Use Tank_RiseTrigger to initiate some action when a tank rises to a certain level.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;Tank ID&gt;</p>
+        <p class="p">The tank name or location index number.</p>
+        <p class="Component">&lt;Level&gt;</p>
+        <p class="p">When the tank level rises to this value, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> executes any subsequent logic.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">A tanker waits at a dispatch station until the level of a finished goods tank rises to 2,000 gallons. Once the tank level reaches this point, a signal dispatches the tanker to the finished goods tank for loading. Meanwhile, the finished goods tank continues filling. To model this situation, define the following process logic for the tanker at the dispatch station:</p>
+        <p class="Syntax_body">Tank_RiseTrigger (FGTank, 2000)</p>
+        <p class="p_10">Please Note: <a name="C-05_2723800551_WAIT UNTIL"></a>Using the Tank_RiseTrigger subroutine instead of a Wait Until statement prevents the next tanker from dispatching until the finished goods tank falls back below 2,000 gallons.</p>
+        <p class="_rules">See Also</p>
+        <p class="p">
+            <MadCap:xref href="C-05-Subroutines-ExamplesofTankLogic.htm#C-05_2723800551_1089840" target="" title="" alt="" class="lowercase_no_see">Defining Trigger Levels on page 1</MadCap:xref>.</p>
+    </body>
+</html>

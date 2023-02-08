@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm" />
+    <Link
+      Url="Content/Topics/C-05-LocationDowntimes.htm" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/C-05-LocationPrioritiesandPreemption.htm#C-05_2723800551_1085757" />
+    <Link
+      Url="Content/Topics/C-05-LocationDowntimes.htm#C-05_2723800551_1085676" />
+    <Link
+      Url="Content/Topics/C-05-Resources.htm#C-05_2723800551_1086660" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-05_2723800551_1086199" />
+    <Anchor
+      Name="C-05_2723800551_30141" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Entity:preemptive"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="Preemption:entities"
+      Conditions=""
+      LocalConditions=""
+      Position="7" />
+    <IndexCacheEntry
+      Term="GET"
+      Conditions=""
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="JOINTLY GET"
+      Conditions=""
+      LocalConditions=""
+      Position="14" />
+    <IndexCacheEntry
+      Term="USE"
+      Conditions=""
+      LocalConditions=""
+      Position="15" />
+    <IndexCacheEntry
+      Term="Entity:preemptive:example"
+      Conditions=""
+      LocalConditions=""
+      Position="17" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

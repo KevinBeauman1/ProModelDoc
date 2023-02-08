@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Hierarchical Modeling</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1><a name="kanchor239"></a>Hierarchical Modeling</h1>
+        <p>Hierarchical modeling is used to link a model (process) to one or more 
+ submodels (subprocesses), which can have submodels of their own. This technique 
+ is useful for modeling at a high-level, which then uses submodels to 
+ define the specific lower-level events of the process. It can also be used 
+ to combine separate models into one large model without recreating the 
+ work in Visio.</p>
+        <p>Any activity in a model can be linked to a submodel that defines 
+ the events that occur at that parent activity. The parent activity is 
+ linked to the submodel by defining a hyperlink for the activity that references 
+ the submodel, which resides on another page within the same document or in a completely different Visio document. To implement hierarchical modeling you need to <a href="LinkingASubmodel.htm" class="a_11">link 
+ to a subprocess</a> and understand the <a href="HierarchicalModelingRules.htm" class="a_11">assumptions 
+ of hierarchical modeling</a>.</p>
+        <h2>Activity Submodel Properties</h2>
+        <p>When you want an activity to link to a submodel, we suggest you use one of the techniques described in <a href="LinkingASubmodel.htm" class="a_11">Linking a Submodel</a>. However, you can also go to the activity's Advanced section and link to a submodel from there.</p>
+        <p>When you check the <b>Use Submodel</b> checkbox in the activity Advanced section of its Shape Properties, a <b>Select Submodel</b> button will appear.</p>
+        <p>
+            <img src="Resources/Images/ActivityUseSubmodelProperties.png" class="img_2" />
+        </p>
+        <h3>Select a Submodel</h3>
+        <p>Click the <b>Select Submodel</b> but to open Visio's <b>Hyperlinks</b> dialog. From here you can choose to link to a submodel in another Visio document in the <b>Address</b> field or on another page in the <b>Sub-address</b> field.</p>
+        <p>
+            <img src="Resources/Images/Hyperlink2.png" class="img_2" />
+        </p>
+        <p>Once a submodel has been linked to the activity, the button text changes to <b>Edit Link</b> to signify that a submodel link currently is defined.</p>
+        <p>
+            <img src="Resources/Images/HyperlinkDefined.png" class="img_2" />
+        </p>
+        <h3><a name="kanchor240"></a>Unique Instance Option</h3>
+        <p>By default, your submodel will be a <b>Reference</b> type of submodel. This means that every activity that links to the same submodel will send their entities to the same subprocess and compete for the same capacity and resources in the subprocess. If you want each activity to send its entities to the same subprocess but independent of another activity, then select the <b>Unique Instance</b> checkbox. </p>
+        <p>
+            <img src="Resources/Images/SubmodelUniqueInstance.png" class="img_2" />
+        </p>
+        <p><b>Unique Instance</b> will, during simulation, make a copy of the submodel for each activity that links to it and has this option checked. Each activity in the subprocess will be uniquely named as well, using the name of the parent activity as a prefix (if the Submodel Prefix field is left blank). However, if text is entered in the <b>Submodel Prefix</b> field, each subprocess activity will use that text as a prefix to its name.</p>
+        <h3><a name="kanchor241"></a>Submodel Prefix</h3>
+        <p>
+            <img src="Resources/Images/SubmodelPrefix.png" class="img_2" />
+        </p>
+        <p><b>Submodel Prefix</b> will only be visible if Unique Instance is checked. This means a prefix is not needed for Reference type submodels. Adding text in the Submodel Prefix field will use it as the prefix to be added to all activities in a Unique Instance submodel during simulation. So if you enter "S1" as your prefix text, for example, and the submodel has two activities named Activity1 and Activity2, during simulation (and in the Output Viewer reports) these activities show up as S1_Activity1 and S1_Activity2, respectively.</p>
+        <p class="p_10">Note: the Submodel Prefix field is not required and can be left blank. If it is left blank, Process Simulator will use the parent activity name as the prefix to all subprocess activity names.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

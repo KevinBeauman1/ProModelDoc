@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="313" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2><a name="C-02_1946547532_Step_2"><a name="C-02_1946547532_1065390"></a></a>Step 2: Generate the Animation Script<a name="C-02_1946547532_Step_2"></a></h2>
+        <p class="p">3D animation scripts are created in your ProModel Product during simulation, and then viewed later in 3D Animator.</p>
+        <p class="p">&#160;</p>
+        <p class="p">ProModel, MedModel, and ServiceModel version 6.2 and greater can generate 3D setup files and animation scripts. The setup (.sup) file defines all of the 3D graphics to use in the animation as well as their layout positions. Animation (.anim) script files contain a record of all the graphical events that occurred during the simulation.</p>
+        <p class="p">&#160;</p>
+        <p class="How_to_title">How to <MadCap:keyword term="Generate 3D Script" />Generate a 3D Script in Your ProModel Product</p>
+        <ol>
+            <li class="li_1_how_to_step">Open any model file in your ProModel product.</li>
+            <li class="li_1_how_to_step">In the Simulation menu, choose the “Options” item. This will open the Simulation Options dialog.</li>
+            <li class="li_1_how_to_step">Check the “Generate Animation Script” option:</li>
+        </ol>
+        <p class="How_to_step_indent">
+            <img src="PMOptionsDialog.bmp" />
+        </p>
+        <ol MadCap:continue="true">
+            <li class="li_1_how_to_step">Click Run to start the simulation. You may also click the OK button to save the change to the Simulation Options dialog, and run the simulation later. </li>
+        </ol>
+        <p class="p_10">Please Note</p>
+        <p class="p_10">If the "Disable Animation" option is checked, you will not be able to select the "Generate Animation Script" option. To generate the 3D script without viewing the 2D animation during simulation, turn off the 2D animation as soon as the simulation starts. </p>
+        <ol MadCap:continue="true">
+            <li class="li_1_how_to_step">If you have previously run the simulation with 3D script generation enabled, you will prompted to overwrite the setup file. Choosing "Yes" will overwrite your setup file, and you will lose any custom setup information. Choosing "No" will retain your custom setup information, and synchronize the setup file with any model changes. See <MadCap:xref href="Synchronization.htm" target="" title="" alt="" class="lowercase_no_see">Synchronization on page 1</MadCap:xref> for more information. </li>
+            <li class="li_1_how_to_step">As the simulation runs, a 3D setup file and an animation file are generated and saved in the same directory on your computer as the model file. These files have the same name as your model file, but with the extensions .sup and .anim.</li>
+            <li class="li_1_how_to_step">When the simulation is complete, your 3D script will be completed as well. If you choose to cancel the simulation, the 3D script will be complete up to the time you canceled the simulation. </li>
+            <li class="li_1_how_to_step">At this point you may move to the next step,<MadCap:xref href="Step 3_ Opening the 3D S.htm" target="" title="" alt="" class="lowercase_no_see">Step 3: Opening the 3D Setup File in 3D Animator</MadCap:xref>, or you may continue to work on your model. Whenever you resimulate, the 3D animation script will be updated. </li>
+        </ol>
+    </body>
+    <body>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="3DA.Help_Only"><a href="Step 3_ Opening the 3D S.htm#C-02_1946547532_Step_1">Proceed to Step 3</a>
+            </MadCap:conditionalText>
+        </p>
+    </body>
+</html>

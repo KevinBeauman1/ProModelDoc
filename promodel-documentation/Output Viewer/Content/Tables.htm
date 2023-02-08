@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2353" MadCap:lastWidth="1022">
+    <head>
+    </head>
+    <body>
+        <h1>Tables<MadCap:keyword term="tables" /></h1>
+        <p class="p">The tables in Output Viewer provide a spreadsheet-like chart of a model's summary or basic statistics. Tables enable you to view many statistics across multiple scenarios all at once. Click Tables and the following drop-down menu of available tables will appear.</p>
+        <p>
+            <img src="Resources/Images/tablemenu.png" MadCap:mediastyle="@media print { max-width: 3.00in; }" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/tablemenu-pcs.png" MadCap:mediastyle="@media print { max-width: 3.00in; }" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p">Click on any of the tables listed and that table and its associated filter options appear in the Report View. Click on each table listed below for more information.</p>
+        <ul>
+            <li class="li_1">Entity<ul><li class="li_1"><MadCap:xref href="EntitySummaryTable.htm" class="lowercase_see">Entity Summary Table</MadCap:xref></li><li class="li_1"><MadCap:xref href="EntityStatesTable.htm" class="lowercase_see">Entity States Table</MadCap:xref></li><li class="li_1"><MadCap:xref href="EntityCostTable.htm" class="lowercase_see">Entity Costs Table</MadCap:xref></li><li class="li_1"><MadCap:xref href="EntityFailedArrivalsTable.htm" class="lowercase_see">Entity Failed Arrivals Table</MadCap:xref></li></ul></li>
+            <li class="li_1">
+                <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">Location</MadCap:conditionalText>
+                <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">Activity</MadCap:conditionalText>
+                <ul>
+                    <li class="li_1">
+                        <MadCap:xref href="LocationSummaryTable.htm" class="lowercase_see">Location or Activity Summary Table
+		</MadCap:xref>
+                    </li>
+                    <li class="li_1">
+                        <MadCap:xref href="LocationSingleCapStatesTable.htm" class="lowercase_see">Location or Activity Single Capacity States Table
+		</MadCap:xref>
+                    </li>
+                    <li class="li_1">
+                        <MadCap:xref href="LocationMultiCapStatesTable.htm" class="lowercase_see">Location or Activity Multi-Capacity States Table
+		</MadCap:xref>
+                    </li>
+                    <li class="li_1">
+                        <MadCap:xref href="LocationSetupTable.htm" class="lowercase_see">Location or Activity Setup Table
+		</MadCap:xref>
+                    </li>
+                    <li class="li_1">
+                        <MadCap:xref href="LocationCostsTable.htm" class="lowercase_see">Location or Activity Costs Table
+		</MadCap:xref>
+                    </li>
+                </ul>
+            </li>
+            <li class="li_1">Resource<ul><li><MadCap:xref href="ResourceSummaryTable.htm" class="lowercase_see">Resource Summary Table</MadCap:xref></li><li><MadCap:xref href="ResourceStatesTable.htm" class="lowercase_see">Resource States Table</MadCap:xref></li><li><MadCap:xref href="ResourceCostsTable.htm" class="lowercase_see">Resource Costs Table</MadCap:xref></li></ul></li>
+            <li class="li_1">Variable<ul><li class="li_1"><MadCap:xref href="VariableSummaryTable.htm" class="lowercase_see">Variable Summary Table</MadCap:xref></li></ul></li>
+            <li class="li_1">Other<ul><li class="li_1"><MadCap:xref href="SimulationInformation.htm" class="lowercase_see">Simulation Information Table</MadCap:xref></li><li class="li_1"><MadCap:xref href="Logs.htm" class="lowercase_see">Logs</MadCap:xref></li><li class="li_1"><MadCap:xref href="NodeEntries.htm" class="lowercase_see" MadCap:conditions="PM-PCS Conditionals.PM">Node Entries</MadCap:xref></li><li class="li_1"><MadCap:xref href="Scoreboard.htm" class="lowercase_see">Scoreboard</MadCap:xref></li></ul></li>
+        </ul>
+        <p class="p_10">Note: The default time units used in the table will be one unit greater than the unit selected in the Simulation Options dialog box. For example, if you select Minutes in Simulation Options, the time displayed in the table will be in Hours. You may also notice that Day is the last option available in Simulation Options, in which case the time unit will be in weeks for the table.</p>
+        <p class="p_10">Also, if replications are run with multiple periods of data collected in each  replication, and if there are fewer periods reported in one replication than the  other replications, Output Viewer will use that minimum period number when  averaging the data. In other words, the data in replications with the extra  periods will not be used when determining the average.</p>
+        <h2>Replication and Period Columns<MadCap:keyword term="replications" /></h2>
+        <p class="p">Tables in Output Viewer provide a spreadsheet-like chart. Each table includes a Replication and Period column. If you run only one replication and period in your simulation, these columns will contain a "1" as shown in the example below. However, if you run several replications or periods, these columns will allow you to view statistics for certain replications or periods.</p>
+        <p>
+            <img src="Resources/Images/repsandperiods.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+        <p class="p">Since in this example, the Replication and Period columns contain 1's, you can remove them from your table by un-checking the box next to these columns in your Columns option in the Filter Options panel.</p>
+        <p>
+            <img src="Resources/Images/norepsNperiods1.png" MadCap:mediastyle="@media print { max-width: 4.5in; }" />
+        </p>
+    </body>
+</html>

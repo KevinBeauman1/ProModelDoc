@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/C-10-ReportsandGraphs.htm" />
+    <Link
+      Url="Content/Topics/pm-c1-12-3.png" />
+    <Link
+      Url="Content/Topics/pm-c1-12-4.png" />
+    <Link
+      Url="Content/Topics/pm-c1-12-5.png" />
+    <Link
+      Url="Content/Topics/pm-c1-14-2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/C-10-ReportsandGraphs.htm#C-10_2322678712_1035124" />
+    <Link
+      Url="Content/Topics/pm-c1-12-3.png" />
+    <Link
+      Url="Content/Topics/pm-c1-12-4.png" />
+    <Link
+      Url="Content/Topics/pm-c1-12-5.png" />
+    <Link
+      Url="Content/Topics/pm-c1-14-2.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-01_754432083_1036876" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Output:viewing"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="View:output"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Graphical analysis"
+      Conditions=""
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Analysis:graphical"
+      Conditions=""
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Utilization:graphs"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+    <IndexCacheEntry
+      Term="Graphs:utilization"
+      Conditions=""
+      LocalConditions=""
+      Position="18" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

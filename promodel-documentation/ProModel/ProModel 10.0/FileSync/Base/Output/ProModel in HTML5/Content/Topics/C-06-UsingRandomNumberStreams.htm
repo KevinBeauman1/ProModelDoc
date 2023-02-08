@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoProModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Streams">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Using Random Number Streams</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoProModel.htm#Topics/C-06-UsingRandomNumberStreams.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-06-Streams.htm#C-06_1157716610_1086820">Streams</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Using Random Number Streams</span>
+        </div>
+        <h3><a name="C-06_1157716610_1086844"></a><a name="C-06_1157716610_16780"></a>Using Random Number Streams<MadCap:keyword term="Streams:usage;Streams:random number;Random:numbers;Numbers:random:streams" /></h3>
+        <p class="p">One of the most valuable characteristics of simulation is the ability to replicate and isolate probabilistic functions and activities within a system for specific study. In the real world, events tend to occur randomly, according to a certain statistical pattern or distribution. To help you model this randomness, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> uses distributions. </p>
+        <p class="p">When you include a distribution (e.g., Normal, Beta, and Gamma) in your model, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> uses a random number generator to produce a set sequence or <span class="_Override" style="font-style: italic;">stream </span>of numbers between 0 and 1 (0&#160;&lt;=&#160;x&#160;&lt;&#160;1) to use in the distribution. Before it can select any numbers, however, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> requires an <span class="_Override" style="font-style: italic;">initial seed</span> <span class="_Override" style="font-style: italic;">value</span> to identify the point in the stream at which to begin. Once you specify a seed value, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> “shifts” the random number selection (in increments of 100,000 numbers) by that number of positions and starts sampling values. Since there is only one random number stream, this will ensure that the selected values do not overlap. <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> includes 100 seed values, and each seed produces a unique set of random numbers. If you do not specify an initial seed value, <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> will use the stream number as the seed value (i.e., stream 3 uses seed 3). </p>
+        <p class="p">When you use a specific seed value (e.g., 17), <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText> produces a unique sequence of numbers to use each time you apply that seed value. This allows you to maintain the consistency of some model elements and permit other elements to vary. (To do this, specify one random number stream for the set of activities you wish to maintain constant, and another random number stream for all other sets of activities.) In fact, because each seed value produces the same sequence of values every time, completely independent model functions must use their own streams. For example, Arrival distributions specified in the Arrival Module should have a random number stream used nowhere else in the model. This will prevent activities that sample random stream values from inadvertently altering the arrival pattern (i.e., the activities will not affect the sample values generated from the arrival distribution).</p>
+        <p class="p_10">Please Note: The random number generator is a prime modulus multiplicative linear congruential generator. The C code implementation for most of the random variates was written by Stephen Vincent and based on the algorithms described by Law and Kelton. See the <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="Appendix.htm#Appendix_1815675363_1098125" title="" alt="" xrefformat="{paratext}">Appendix</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

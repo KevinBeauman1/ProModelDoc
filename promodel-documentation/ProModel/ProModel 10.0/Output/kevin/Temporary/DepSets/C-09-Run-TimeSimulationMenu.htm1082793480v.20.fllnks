@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c9-346-1.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c9-346-1.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm#C-14_4292047180_1102537" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1091173" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Run-time:simulation menu"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Simulation:menu:during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Run-time:resume simulation"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Simulation:menu:run-time:resume"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="Run-time:pause simulation"
+      Conditions=""
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Simulation:menu:run-time:pause"
+      Conditions=""
+      LocalConditions=""
+      Position="13" />
+    <IndexCacheEntry
+      Term="Run-time:end simulation"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Simulation:menu:run-time:end simulation"
+      Conditions=""
+      LocalConditions=""
+      Position="16" />
+    <IndexCacheEntry
+      Term="Run-time:animation off/on"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Animation:on/off during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Run-time:user pause by time"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="Run-time:user pause by date"
+      Conditions=""
+      LocalConditions=""
+      Position="26" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

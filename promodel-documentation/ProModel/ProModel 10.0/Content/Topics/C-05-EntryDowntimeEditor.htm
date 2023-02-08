@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1154" MadCap:lastWidth="1204">
+    <head>
+    </head>
+    <body>
+        <h4>Entry Downtime Editor<MadCap:keyword term="Locations:downtimes:entry;Downtimes:location:entry" /></h4>
+        <p class="p">Entry downtimes are used to model downtimes when a location needs to be serviced after processing a certain number of entities. For example, if a printer needs a new cartridge after printing 2000 shipping orders, an entry downtime should be defined. The downtime occurs after the entity that triggered the downtime leaves the location.</p>
+        <p class="p">The Entry Downtime Editor consists of the edit table shown below. To access the Entry Downtime editor, select Entry from the menu that appears after clicking the DT... heading button. Entry downtimes are only available for single capacity locations. The Downtime Editor contains fields for defining downtimes based on the number of entries processed at a location. Most functions, including distributions, can be included in the Frequency and First Occurrence fields. (See         <MadCap:xref class="lowercase_no_see" href="Appendix.htm#Appendix_1815675363_1110718" target="" title="" alt="">Appendix A on page 1</MadCap:xref> to see if the specific statement or function is valid in a particular field.)</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-103-1.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-103-1.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 4in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p"><b>Frequency</b> The number of entities to be processed between downtime occurrences. This may be a constant value or a numeric expression and is evaluated as the simulation progresses.</p>
+        <p class="p"><b>First Occurrence</b>   The number of entities to be processed before the first downtime. This may be a value or a numeric expression. If left blank, the first downtime will be based on the frequency entered.</p>
+        <p class="p"><b>Logic</b> Any logic statements to execute when the downtime occurs. Normally, this logic is simply a time expression representing the length of the downtime. Click on the heading button to open a larger edit window.</p>
+        <p class="p"><b>Disable</b> Select YES to temporarily disable the downtime without deleting it from the table.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.MedModel">In the example above, X-Ray Room 1 will be closed after every 100 patients. It will re-open after the X-Ray Technician spends 20 minutes cleaning, repairing or re-setting whatever needs to be serviced.</p>
+        <p class="p" MadCap:conditions="PM-MM Conditionals.ProModel">In the example above, Robot1 will go down every 100 entries, with the first downtime occurring after only 50 entries. When the downtime occurs, it will require a resource (Machinist) to service the machine for some amount of time between 3.8 and 4.2 minutes. If the Machinist is unavailable when requested, the robot will remain down until Machinist becomes available.</p>
+        <p class="p_10">Please Note: Entry-based downtimes do not accumulate. For example, if a downtime cannot occur because the priorities of the entities being processed are at least 2 levels higher than the priority of the downtime, only the first downtime resumes after processing the entities. All others are ignored.</p>
+    </body>
+</html>

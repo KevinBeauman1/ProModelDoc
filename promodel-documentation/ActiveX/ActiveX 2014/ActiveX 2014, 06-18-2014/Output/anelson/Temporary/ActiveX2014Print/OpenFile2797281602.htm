@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="327" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The RDBDataServer Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>OpenFile</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="OpenFile"><a MadCap:generatedBookmark="TOC" name="OpenFile"></a><a name="C-01_2914010915_463847"></a>
+            <MadCap:keyword term="OpenFile;RDBDataServer Object:OpenFile" />OpenFile</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>OpenFile<span class="_Override" style="color: #0000ff;"> FileName</span></p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Call this function first to open and load the proper .RDB file.</p>
+        <p class="p">Parameters:  </p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FileName</span> (String)  Path and filename of any valid .rdb file.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>Nothing</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, gets and displays some of the data, then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim x</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2" style="font-weight: bold;">	RDBObj.OpenFile <span class="_Override" style="color: #0000ff;">"mfg_cost.rdb"</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.SelectData 1, 1, 1, 1, 1, 1</p>
+        <p class="objects2">	x = RDBObj.GetPositionInfo</p>
+        <p class="objects2">	MsgBox (x)</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

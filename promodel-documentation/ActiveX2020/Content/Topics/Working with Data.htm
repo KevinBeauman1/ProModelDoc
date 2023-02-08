@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="845" MadCap:lastWidth="1212">
+    <head>
+        <link href="../Resources/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 style="font-family: 'Segoe UI';">Working with Data</h2>
+        <p class="p" style="font-family: 'Segoe UI';">When you create a model, what you are actually doing is recording information about your business processes.  When you run a simulation, ProModel takes that information and uses it to display an animated representation of your processes and to generate the statistical information about your processes.</p>
+        <p class="p" style="font-family: 'Segoe UI';">You can think of each model you create as a database.  Within each model database there are many tables, such as Locations, Path Networks, and Processing.  ProModel’s ActiveX uses numbers to reference each table.  In the appendix, you will find a list of tables and their corresponding numbers.</p>
+        <p class="p" style="font-family: 'Segoe UI';">Each table contains one or more fields.  You may have records in many of these tables, with information in some of the fields.  If you are accustomed to spreadsheets, each model would be a workbook, each table a sheet.  Fields would correspond to columns and records would be the rows.  Fields and records are also referenced by number. A complete list of tables and fields, along with their reference numbers, can be found in Appendix A on <MadCap:xref class="lowercase_no_see" href="AppendixA.htm#AppendixA_4093679820_506437">Appendix: Table Definitions on page 1</MadCap:xref>.</p>
+        <p class="p" style="font-family: 'Segoe UI';">With a database, you have an element that is not as easy to create in a spreadsheet, the parent-child relationship.  Since ProModel is a database environment, there are many tables that have that type of relationship.  Let’s look at something a little more concrete.</p>
+        <p class="p" style="font-family: 'Segoe UI';">Suppose you have just started a new model and have defined the locations shown below:</p>
+        <p class="p" style="font-family: 'Segoe UI';">
+            <img src="3_4.png" style="width: 361.92px;height: 102.72px;margin-right: 2.304016px;margin-bottom: 0.935997px;" />
+        </p>
+        <p class="p" style="font-family: 'Segoe UI';">For each of these three locations, there is more that one graphic icon.  In addition, the conveyor for Loc2 has a couple of joints (bends) in it.  So, your Locations table would have three records.  Each of these records would have more than one graphic.  Information about the graphics is stored in a different table, which is a child of the Locations table.  The child table (Location Graphics) also has a child of its own, the Q/Conveyor Joints table.  A diagram of the table relationships would look something like this:</p>
+        <table style="width: 100%; mc-table-style: url('../Resources/TableStyles/Process_Table.css'); margin-left: 0; margin-right: auto;" class="TableStyle-Process_Table" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1" style="font-family: 'Segoe UI';">Locations	</td>
+                    <td class="BodyE-Column2-Body1" style="font-family: 'Segoe UI';">Location Graphics	</td>
+                    <td class="BodyD-Column3-Body1" style="font-family: 'Segoe UI';">	Q/Conveyor Joints</td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2" style="font-family: 'Segoe UI';">1. Loc1</td>
+                    <td class="BodyE-Column2-Body2">
+                        <p style="font-family: 'Segoe UI';">	1. Part Spot</p>
+                        <p style="font-family: 'Segoe UI';">2. Text Box</p>
+                        <p style="font-family: 'Segoe UI';">	3. Counter</p>
+                    </td>
+                    <td class="BodyD-Column3-Body2" style="font-family: 'Segoe UI';">&#160;</td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3" style="font-family: 'Segoe UI';">2. Loc2</td>
+                    <td class="BodyE-Column2-Body3" style="font-family: 'Segoe UI';">	1. Conveyor	</td>
+                    <td class="BodyD-Column3-Body3">
+                        <p style="font-family: 'Segoe UI';">1. Start Point</p>
+                        <p style="font-family: 'Segoe UI';">		2. First Bend</p>
+                        <p style="font-family: 'Segoe UI';">		3. Second Bend</p>
+                        <p style="font-family: 'Segoe UI';">		4. End Point</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4" style="font-family: 'Segoe UI';">3. Loc3	</td>
+                    <td class="BodyB-Column2-Body4">
+                        <p style="font-family: 'Segoe UI';">	2. Text Box</p>
+                        <p style="font-family: 'Segoe UI';">1. Part Spot</p>
+                        <p style="font-family: 'Segoe UI';">2. Text Box<br /></p>
+                    </td>
+                    <td class="BodyA-Column3-Body4" style="font-family: 'Segoe UI';">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p" style="font-family: 'Segoe UI';">If we want to change the name of Loc1 to “EntryPoint”, we would need to make that change in the first record of the Locations table (table number 1).  So, we would select record one in table one.</p>
+        <p class="p" style="font-family: 'Segoe UI';">If we want to move Loc3 to a different place in the layout, we would first need to select the Loc3 record in the parent table (Locations).  Then we can select records in the child table (Location Graphics – table 45) and change the X and Y values of each.</p>
+        <p class="p" style="font-family: 'Segoe UI';"> Now, if we want to move the end of the Loc2 conveyor closer to our new Loc3 position, we first need to select Loc2 in the parent table (Locations).  Then, we would select Conveyor in the child table (Location Graphics) for Loc2.  Finally, we can select the End Point record in the second level child table (Q/Conveyor Joints – table 61) and change its X and Y values.</p>
+        <p class="p" style="font-family: 'Segoe UI';">You may have realized from the description above that you must always <span class="_Override" style="text-decoration: underline;">select</span> a record before you can work with any of the information in that record.  This holds true for all of the data tables in ProModel.  Records can be selected either by name (if it has one) or by index number.  The index number is the number in the upper right corner of the data window in ProModel and represents the record’s position in the table (its row number).  When a new record is added to a table in ProModel, that record is automatically selected.  If a record is deleted from a table, the index numbers of following records will be changed to close the gap. </p>
+        <p class="p" style="font-family: 'Segoe UI';">The fields (columns) are also numbered, from left to right.  One caveat:  the first field is not always the one you might think it is.  For example, the Name field in the Locations table is actually number two.  Field one is no longer used.</p>
+    </body>
+</html>

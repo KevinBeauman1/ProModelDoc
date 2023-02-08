@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="5" MadCap:lastHeight="639" MadCap:lastWidth="1366" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1231954"></a>
+            <MadCap:keyword term="PercentUtil()" />PercentUtil()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General system functions:percentutil()" />General System Function</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="p">PercentUtil (&lt;loc or res name&gt; {, &lt;res unit})</p>
+        <p class="p">PercentUtil (Lathe)</p>
+        <p class="p">PercentUtil (Operator)</p>
+        <p class="p">PercentUtil (Operator, 3)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Returns the cumulative utilization percentage for the specified location or resource. If a resource is specified without the optional unit number, the function returns the average percent utilization of all units.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The value returned by this function represents the cumulative percentage of capacity occupied (if a location) or units captured (if a resource), on average, at the time the function was called.</p>
+        <p class="p">&#160;</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">Cumulative Occupancy or In Use Time x 100</td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: center;border-left-style: solid;border-left-width: 0px;border-left-color: #000000;border-right-style: solid;border-right-width: 0px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #000000;padding-left: 0px;padding-right: 0px;">Capacity or Unit(s) x Scheduled Time</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">&#160;</p>
+        <p class="p"> Cumulative Occupancy Time in the above equation refers to the sum of the clock time each entity spends at a location for processing.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Cumulative In Use time in the above equation refers to the sum of the clock time all units of a resource are captured for use by an entity or downtime. If the optional resource unit number is specified in the function, only the Cumulative In Use time for that unit is calculated.</p>
+        <p class="p">&#160;</p>
+        <p class="p">PercentUtil() may be called to return percent utilization for both multi- and single-capacity locations, all resource units, or an individual resource unit.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Please Note: The method used to calculate utilization percentage for this function is the same method used in the output statistics.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any Logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;location or resource name&gt;</p>
+        <p class="p">The name of the location.</p>
+        <p class="p"><b>&lt;resource unit&gt;</b>
+        </p>
+        <p class="p">The optional unit number of the resource. If omitted, the function returns the average of all units.</p>
+    </body>
+</html>

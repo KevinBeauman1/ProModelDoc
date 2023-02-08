@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="3229" MadCap:lastWidth="1152" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h3><a name="C-09_398201723_1123308"></a><a name="C-09_398201723_40515"></a>General Options and Settings</h3>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:output:path" />Output Path Contains the path of the output file (the name of the file is automatically created using the name of the model). <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> records all statistical output in this file for your analysis.</p>
+        <p class="p">If this field is left blank, the default path is used, which points to the Output directory in the <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> directory.</p>
+        <p class="p">When you change the default path, be sure the path you enter actually exists, or an error will occur at run time.</p>
+        <p class="p"><b>Run Name</b> The name of the default scenario, used whether or not you run your own scenarios. By default, the run name is "Baseline." You may edit or change the name of the default or baseline run in this field. An error message will occur if this field is left blank.  </p>
+        <p class="p"><b>Define </b>
+            <MadCap:keyword term="Simulation:options:run length:time only;Simulation:options:run length:weekly time;Simulation:options:run length:calendar date;Run:length:time only;Run:length:weekly time;Run:length:calendar date" />Run Length by<MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> allows you to define a run length for your model based on the duration you will test.</p>
+        <ul>
+            <li class="li_1"><b>Time Only</b>  The total run length. Time Only will run in hours by default, but can also run in time periods of weeks (wk), days (day), hours (hr), minutes (min) or seconds (sec).</li>
+        </ul>
+        <p class="GraphicStep">
+            <img src="pm-c9-338-2.jpg" style="width: 283px;height: 147px;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <ul>
+            <li class="li_1"><b>Weekly Time</b>  The total run length by week, day, and time.</li>
+        </ul>
+        <p class="GraphicStep">
+            <img src="pm-c9-338-3.jpg" style="width: 280px;height: 150px;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <ul>
+            <li class="li_1"><b>Calendar Date</b>  The total run length by a specific calendar date and time.</li>
+        </ul>
+        <p class="GraphicStep">
+            <img src="pm-c9-339-1.jpg" style="width: 273px;height: 148px;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" MadCap:mediastyle="@media print { max-width: 2in; }" />
+        </p>
+        <ul>
+            <li class="li_1"><b>Warm-up Period</b>   The amount of time to run the simulation before collecting statistics. Usually this is the amount of time it takes for the model to reach steady state. The warm-up period uses the same units as the run length.</li>
+            <li class="li_1">
+                <MadCap:keyword term="Simulation:options:clock precision" /><b>Clock Precision</b>   Select the clock precision value from the drop down box. Then click the radio button for the clock units you want to display at run time.</li>
+        </ul>
+        <p class="Graphic">
+            <img src="pm-c9-339-2.jpg" MadCap:mediastyle="@media print { max-width: 2in; }" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p_10">Please Note: The <MadCap:keyword term="Simulation:options:maximum run length;Maximum run length" />maximum run length depends on the clock precision and time unit selected. The following table shows the maximum run hours for each precision setting.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">&#160;</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">CLOCK PRECISION</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">&#160;</td>
+                    <td class="HeadE-Column4-Header1">&#160;</td>
+                    <td class="HeadD-Column1-Header1">&#160;</td>
+                </tr>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Time Unit</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">.01</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">.001</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">.0001</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">.00001</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellHeading">Seconds (sec)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">11,930 hrs</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">1,193 hrs</p>
+                    </td>
+                    <td class="BodyE-Column4-Body1">
+                        <p class="CellBody">119 hrs</p>
+                    </td>
+                    <td class="BodyD-Column1-Body1">
+                        <p class="CellBody">11 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellHeading">Minutes (min)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">715,827 hrs</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">71,582 hrs</p>
+                    </td>
+                    <td class="BodyE-Column4-Body2">
+                        <p class="CellBody">7,158 hrs</p>
+                    </td>
+                    <td class="BodyD-Column1-Body2">
+                        <p class="CellBody">715 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellHeading">Hours (hr)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">42,949,672 hrs</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">4, 294,967 hrs</p>
+                    </td>
+                    <td class="BodyE-Column4-Body3">
+                        <p class="CellBody">429,496 hrs</p>
+                    </td>
+                    <td class="BodyD-Column1-Body3">
+                        <p class="CellBody">42,949 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellHeading">Days (day)</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">1,030,792,128 hrs</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">103,079,208 hrs</p>
+                    </td>
+                    <td class="BodyB-Column4-Body4">
+                        <p class="CellBody">10,307,904 hrs</p>
+                    </td>
+                    <td class="BodyA-Column1-Body4">
+                        <p class="CellBody">1,030,776 hrs</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">The following table shows the default precision selections based on the time unit selected in the General Information dialog.</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td rowspan="2" class="HeadE-Column1-Header1">
+                        <p class="CellHeading">TIME UNIT</p>
+                    </td>
+                    <td colspan="3" class="HeadD-Column2-Header1">
+                        <p class="CellHeading">DEFAULT CLOCK PRECISION SELECTIONS</p>
+                    </td>
+                </tr>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Clock Unit</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Clock Precision</p>
+                    </td>
+                    <td class="HeadD-Column4-Header1">
+                        <p class="CellHeading">Maximum Run</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyE-Column1-Body1">
+                        <p class="CellBody">Seconds (sec)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body1">
+                        <p class="CellBody">Seconds</p>
+                    </td>
+                    <td class="BodyE-Column3-Body1">
+                        <p class="CellBody">.01</p>
+                    </td>
+                    <td class="BodyD-Column4-Body1">
+                        <p class="CellBody">11,930 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body2">
+                    <td class="BodyE-Column1-Body2">
+                        <p class="CellBody">Minutes (min)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body2">
+                        <p class="CellBody">Minutes</p>
+                    </td>
+                    <td class="BodyE-Column3-Body2">
+                        <p class="CellBody">.001</p>
+                    </td>
+                    <td class="BodyD-Column4-Body2">
+                        <p class="CellBody">71,582 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body3">
+                    <td class="BodyE-Column1-Body3">
+                        <p class="CellBody">Hours (hr)</p>
+                    </td>
+                    <td class="BodyE-Column2-Body3">
+                        <p class="CellBody">Hours</p>
+                    </td>
+                    <td class="BodyE-Column3-Body3">
+                        <p class="CellBody">.001</p>
+                    </td>
+                    <td class="BodyD-Column4-Body3">
+                        <p class="CellBody">4,294,967 hrs</p>
+                    </td>
+                </tr>
+                <tr class="Body-Body4">
+                    <td class="BodyB-Column1-Body4">
+                        <p class="CellBody">Days (day)</p>
+                    </td>
+                    <td class="BodyB-Column2-Body4">
+                        <p class="CellBody">Hours</p>
+                    </td>
+                    <td class="BodyB-Column3-Body4">
+                        <p class="CellBody">.001</p>
+                    </td>
+                    <td class="BodyA-Column4-Body4">
+                        <p class="CellBody">1,030,792,128 hrs</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:disable:animation" /><b>Disable: Animation</b>   Use this option to improve run-time speed by shutting down the animation. If you choose to disable animation, you cannot choose the Generate Animation Script option.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:disable:time series" /><b>Disable Array Exports</b> This option disables the exporting of data to external arrays. This is helpful for skipping the array exporting at the end of simulation, which may save time if the data being exported is large.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:disable:cost" /><b>Disable Cost</b>  When you select this option, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> disables all cost information collection for in the model.</p>
+        <p class="p"><b>Disable: Time Series</b>   Use this option to improve run-time speed by foregoing time series statistics. This also saves disk space used to store the collected statistics.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:pause at start" /><b>At Start: Pause</b> To pause the simulation at the start of the run, use this option. The simulation will pause until you select Resume from the Simulation menu in the Simulation module.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:display notes" /><b>At Start: Display Notes</b>   Use this option to display the notes from the General Information dialog at the beginning of the simulation.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:display notes" /><b>At Start: Trace</b> Use this option to cause the simulation to begin in Step Trace mode.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:display notes" /><b>At Start: Show Views Panel</b> Use this option to display the Views Panel when a model begins simulating. The Views Panel lists all defined model views and when one of the view names is clicked on, the layout will switch to that view of the model.</p>
+        <p class="p"><b>General: Adjust for Daylight Saving</b> This option is only available when you have defined Run Length by Calendar Date. When checked, the simulation clock will account for the hour shift of daylight saving time as defined by your computer's operating system.</p>
+        <p class="p"><b>General: Generate Animation Script</b> When checked, the simulation will generate a 3D animation script for use with ProModel Corporation’s 3D Animator application. The animation script records the graphical events of the simulation for later 3D rendering in 3D Animator.</p>
+        <p class="p">
+            <MadCap:keyword term="Simulation:options:common random numbers" /><b>General: Common Random Numbers</b> This feature is a variance reduction technique used primarily when running multiple scenarios, each with multiple replications. It is intended to help reduce the number of replications required to determine the statistical significance of differences between scenario results. When enabled, common random numbers will ensure that the sequence of starting seed values for each stream in a set of replications for one scenario is identical to the starting seed values for corresponding replications in every other scenario.</p>
+        <p class="p">For example, if you have this option disabled, the match between starting seed values for each stream in corresponding replications for each scenario will not be guaranteed. The net effect of this is that you may have to run more replications to get the same confidence interval that you are able to obtain by running with common random numbers.</p>
+        <p class="p">When common random numbers are enabled, you can theoretically establish the statistical significance of differences in output results between multiple scenarios with fewer replications than by not enabling common random numbers. Specifically, it reduces the amount of variation in differences between outputs of corresponding replications by ensuring that these differences are due to true differences in performance and not to differences due to randomness of the streams. </p>
+        <p class="p">For more information on random number streams, see <MadCap:xref class="lowercase_no_see" href="C-06-UsingRandomNumberStreams.htm#C-06_1157716610_1086844" target="" title="" alt="">Using Random Number Streams on page 1</MadCap:xref>.</p>
+        <p class="p"><b>General: Skip Resource DTs if Off-shift</b> When checked, the simulation will ignore resource downtimes if the resource is off-shift.</p>
+        <p class="p"><b>General: Recompile Mappings</b> When checked, at the beginning of each run of a scenario, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will recompile your path network mappings. If you do not make a change to your path network, then there is no reason to recompile. During recompile, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> will determine the shortest distance between locations. </p>
+    </body>
+</html>

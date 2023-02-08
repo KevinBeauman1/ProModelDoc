@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Building the Model: Advanced Elements|Macros">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Scenario Parameters</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-06-ScenarioParameters.htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="C-06-BuildingtheModelAdvanced.htm#C-06_1157716610_1035124">Building the Model: Advanced Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><a class="MCBreadcrumbsLink" href="C-06-Macros.htm">Macros</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Scenario Parameters</span>
+        </div>
+        <h3><a name="C-06_1157716610_1086161"></a><a name="kanchor1112"></a><a name="C-06_1157716610_23243"></a>Scenario Parameters</h3>
+        <p class="p"><a name="kanchor1113"></a>Defining a scenario parameter for a macro allows the user to easily change parameters before the simulation starts. It provides an experimental framework for defining multiple scenarios to be run in a batch. See <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-09-Scenarios.htm#C-09_398201723_1091105" title="" alt="">Scenarios</a> for more information. A scenario parameter for a macro allows a macro’s text to be changed by the user whenever a simulation run begins. Since macros are allowed in any expression, this gives the user flexibility to edit most scenario parameters every time a simulation starts without having to directly edit the model data.</p>
+        <p class="p">The key difference between a macro defined as a scenario parameter and  one  that is not, is that the macro will be listed as a parameter in the scenario manager.  A scenario parameter allows you to request a variety of information to substitute for a macro; from simple values (e.g., the initial value of a location’s capacity) to complex text (e.g., a line of logic). You may create scenario parameters using the macros table, under the Type column. </p>
+        <p class="Graphic">
+            <img src="6-4-5.png" />
+        </p>
+        <p class="p"><span class="Bold"><b>Parameter Name</b><a name="kanchor1114"></a></span>   This text will identify the parameter represented by this macro. It should consist of text that clearly describes the parameter to be changed, for example, Operation Time. The macro name and the parameter name can be different. This provides more flexibility and allows you to view a more descriptive parameter name when defining scenarios.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1115"></a><b>Prompt</b></span>   This text will appear as a tool tip in the scenario manager.  You should use it to further specify the information to be entered, for example, “Please enter the amount of time the simulation should run.”</p>
+        <p class="p"><span class="Bold"><b>Unrestricted </b><a name="kanchor1116"></a><b>Text</b></span>   This option allows the user to enter any text, such as the distribution U(8,2). Note that any text that the user enters will be substituted for the macro name in the model. Therefore, the text the user enters must be syntactically correct and valid anywhere the macro name appears.</p>
+        <p class="p"><span class="Bold"><b>Re</b><a name="kanchor1117"></a><b>cord Range</b></span>  Allows you to enable an arrival or shift record from a range of records. This allows you to test a variety of shift and arrival combinations to find the combination that works best with your model.</p>
+        <p class="p"><span class="Bold"><a name="kanchor1118"></a><b>Numeric Range</b></span>   This specifies the lower and upper limits for the parameter if the type is numeric.</p>
+        <p class="How_to_title">How to define a macro as a Scenario Parameter<a name="kanchor1119"></a>:</p>
+        <ol>
+            <li class="li_1_how_to_step" value="1">Select <span class="_Override" style="font-weight: bold;">Macros</span> from the <span class="_Override" style="font-weight: bold; text-decoration: none;">Home</span> ribbon.</li>
+            <li class="li_1_how_to_step" value="2">Type the macro name and click on the <span class="_Override" style="font-weight: bold;">Options</span> button.</li>
+            <li class="li_1_how_to_step" value="3">Choose <span class="_Override" style="font-weight: bold; text-decoration: none;">D</span><span class="_Override" style="font-weight: bold;">efine</span> from the <b>Scenario Parameter</b> submenu.</li>
+            <li class="li_1_how_to_step" value="4">Define the Parameter Name and enter the prompt (optional).</li>
+            <li class="li_1_how_to_step" value="5">Select the parameter type: <span class="_Override" style="font-weight: bold;">Unrestricted Text</span>, <span class="_Override" style="font-weight: bold;">Record Range</span>, or <span class="_Override" style="font-weight: bold;">Numeric Range</span>.</li>
+            <li class="li_1_how_to_step" value="6">If the parameter is numeric, enter the lower value in the From box and the upper value in the To box.</li>
+            <li class="li_1_how_to_step" value="7">Click <span class="_Override" style="font-weight: bold;">OK</span>.</li>
+            <li class="li_1_how_to_step" value="8">Enter the default text or numeric value in the Macro Text field.</li>
+            <li class="li_1_how_to_step" value="9">Use the macro ID in the model (e.g., in operation or resource usage time).</li>
+        </ol>
+        <p class="p_10">Please Note: When using a record range, be sure to group all arrival and shift records. This will allow you to select which series of records to include in the macro.</p>
+        <h3>Scenario Parameter Example<a name="kanchor1120"></a></h3>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">Suppose you build a clinic model that seems to indicate that the time it takes to care for minor illness patients is producing a bottleneck. In essence, model results indicate fewer patients are able to receive treatment than expected and you decide to perform several what-if scenarios with the model by changing the treatment time for minor illness patients. Instead of changing the treatment time within the Process edit table, it is easier to define a macro as a scenario parameter. This technique allows you to see the effect of increasing and decreasing treatment times easily, without editing the model itself. The following example represents the dialog used to define a scenario parameter for the macro where the treatment time is a numeric value between 10 and 20 minutes:</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c6-236-1.png" />
+        </p>
+        <p class="p" data-mc-conditions="PM-MM Conditionals.MedModel">After defining the scenario parameter for the macro, substitute the macro, Treatment_time, in the operation logic of the Process edit table for Treatment_room as shown below:</p>
+        <p class="Graphic" data-mc-conditions="PM-MM Conditionals.MedModel">
+            <img src="../Resources/Images/MM - Scenario Parameters - Operation logic window.png" style="max-height: auto;max-width: 4.00in;" data-mc-conditions="PM-MM Conditionals.MedModel" />
+        </p>
+        <p class="p">You are now able to change the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">operation time at Treatment_room</MadCap:conditionalText> using the Macros table or the scenario manager. For more information on changing parameters in the scenario manager,  <a href="C-09-Scenarios.htm#C-09_398201723_1091105" title="" alt="" class="lowercase_see MCXref xref xreflowercase_see">Scenarios</a>.</p>
+        <p class="p_10">Please Note: For more information concerning the differences between macros and subroutines, see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Macros.htm#C-06_1157716610_1086107" title="" alt="">Macros</a> and <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-Subroutines.htm#C-06_1157716610_1086242" title="" alt="">Subroutines</a>. </p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

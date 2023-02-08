@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="249" MadCap:lastWidth="624">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_461443"></a>
+            <MadCap:keyword term="AnimSpeedChange;PMEventsHandler:AnimSpeedChange" />AnimSpeedChange</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span><span class="_Override" style="font-style: italic;">ObjectVariable</span>_AnimSpeedChange(ByVal <span class="_Override" style="color: #0000ff;">Speed</span> As Long) As Long</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>This event occurs whenever animation speed is changed by the user, by <span class="_Override" style="font-variant: small-caps;">animate</span> command encountered in model code, or via COM interface (VB program code).</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span>:</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">Speed</span> 	 (Long) – Integer from 0 through 100 representing the relative setting of the animation speed control.  This number corresponds to the values used in <span class="_Override" style="font-variant: small-caps;">animate</span> statements in models and the values set and returned by SetAnimationSpeed and GetAnimationSpeed methods of the Runtime object.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Returns</span><span class="_Override" style="font-weight: bold;">:</span>  Not used yet.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The code below will place descriptive text and the new animation speed into a textbox each time the animation speed is changed (e.g. – “Animation speed changed to 39”).</p>
+        <p class="objects">Private Function pmEventsObject_AnimSpeedChange(ByVal <span class="_Override" style="font-weight: bold;color: #0000ff;">Speed</span> As Long) As Long</p>
+        <p class="objects2">    Textbox1.Text = Textbox1.Text &amp; "Animation speed changed to " &amp; <span class="_Override" style="font-weight: bold;color: #0000ff;">Speed</span> &amp; VBCRLF</p>
+        <p class="objects">End Function</p>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="C-01-WelcometoMedModel.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="webhelp" data-mc-toc-path="Statements and Functions">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Xsub()</title>
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <p class="MCWebHelpFramesetLink MCWebHelpFramesetLinkTop"><a href="../../C-01-WelcometoMedModel.htm#Topics/C-14-Xsub().htm">Open topic with navigation</a>
+        </p>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="file:///C:/Users/kevin/OneDrive/Documents/BigBear/ProModelDoc/promodel-documentation/ProModel/ProModel 10.0/Content/Topics/C-14-StatementsandFunctions.htm#C-14_4292047180_1035124">Statements and Functions</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Xsub()</span>
+        </div>
+        <h2 class="statements"><a name="C-14_4292047180_1108554"></a><a name="C-14_4292047180_33106"></a>Xsub()</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="External subroutine calls:XSUB();XSUB():external subroutine calls" />External Subroutine Call</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Xsub(&lt;file ID&gt;, &lt;ordinal function number&gt; or &lt;function name&gt; {, &lt;parameter1&gt;, &lt;parameter2&gt;...})</p>
+        <p class="Syntax_body">Xsub(Interface,1, 5)</p>
+        <p class="Syntax_body">Xsub(LogDLL, “_Log_B_of_X”,10,5)</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Calls an external subroutine inside a DLL file. Xsub() is perhaps the most powerful statement in <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>, because by using it the user can access the entire functionality of any 32-bit Windows programming language such as C, C++, Delphi, or Visual Basic. Xsub() can be used for sophisticated file IO and to make simulations interactive. In fact, subroutines called with Xsub() can do anything that the language they were written in allows. Because of its power, however, Xsub() should be used with caution. When called, the simulation is suspended until the external subroutine finishes execution.</p>
+        <p class="p">The subroutine inside the DLL must have been compiled as exportable by a Windows 32-bit compiler and have a return type of IEEE format double real. Xsub() will copy the parameters following the function name to a block of memory, then pass the function a pointer to that block of memory. </p>
+        <p class="p">The function can take only one parameter: a pointer to void. But the function may access any number of parameters through structure overlaying. The function should define a structure to match the type and order of the parameters, and assign the pointer just passed to a pointer to that type of structure. The parameters can then be used through structure overlaying. Integers are passed as four byte values and reals are passed as eight byte IEEE values.</p>
+        <p class="p_10">Please Note: For Windows Programmers Only   The handle to the run-time simulation frame window will be the last parameter passed. Most subroutines can completely ignore this parameter, but it will be needed if the subroutine displays a window.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any expression or logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;file ID&gt;</p>
+        <p class="p">The file ID assigned to an external DLL file as defined in the External Files editor. This file should be a 32-bit Windows DLL file.</p>
+        <p class="Component">&lt;ordinal function number&gt;</p>
+        <p class="p">The ordinal number of the function inside the DLL. This function must be exportable. When DLL’s are compiled, every exported function inside them is numbered. The individual functions can then be accessed by calling the program by number. This field may be an expression that evaluates to an ordinal function number that is valid inside the DLL. Use an ordinal function number or the function name.</p>
+        <p class="Component">&lt;function name&gt;</p>
+        <p class="p">The name of the function inside the DLL. This function must be exportable. Note that when most compilers compile DLL’s, they adjust the name of the functions inside them. The function name inside the <MadCap:keyword term="XSUB()" />Xsub statement  must be the adjusted name, not the original name. </p>
+        <p class="p">Most C compilers add an underscore to the function name; so a function called “Test1” would be compiled as “_Test1.” For most C++ compilers, valid <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> external function names will be mangled to “@&lt;function name&gt;$pv.” Different compilers will vary, however, so the user should be aware of the particular compiler’s quirks.</p>
+        <p class="Component">&lt;parameters&gt;</p>
+        <p class="p">The parameters to pass to the function. These may be any variable, number, or expression. They are only limited by the type of field or logic that uses the Xsub function. Each parameter should be separated by a comma. See above for how the external subroutine will access these parameters.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">An external function written to the <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> specification, called Log_B_of_X and written in C, returns the log of a value to a variable base. The function, reproduced below, has been compiled into the DLL, “XSUB.DLL.” The function itself is reproduced on the left below, and the source code can be found in the file “XSUB.CPP.”</p>
+        <p class="p">The <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> logic statements assign the base five logarithm of the real variable R1 to the real variable R2. Each statement assumes that the file XSUB.DLL has been assigned the identifier “Log” in the External Files Editor. The first statement accesses the function as if the DLL had been compiled in C++ by using the mangled function name. The second statement accesses the function as if it had been compiled in C by using the C adjusted function name. The third statement accesses the function using the ordinal function number. </p>
+        <p class="Component">
+            <MadCap:conditionalText data-mc-conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText> Logic</p>
+        <p class="Syntax_body">R2 = Xsub(Log, “@Log_B_X$pv”,5.0,R1)<br />R2 = Xsub(Log, ”_Log_B_X”,5.0,R1)<br />R2 = Xsub(Log, 2, 5.0, R1)</p>
+        <p class="Component">XSUB.CPP Logic</p>
+        <p class="Syntax_body">struct TEST_SUB_PARAMS</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">double base;</p>
+        <p class="syntax_body_indent">double x;</p>
+        <p class="syntax_body_indent">HWND hWndFrame;</p>
+        <p class="Syntax_body">};</p>
+        <p class="Syntax_body"> 			// This makes it a C function rather than a C++</p>
+        <p class="Syntax_body">extern “C”</p>
+        <p class="Syntax_body">{</p>
+        <p class="syntax_body_indent">/* On compile, Borland and Microsoft add a leading underscore  to a 'C' name! */</p>
+        <p class="syntax_body_indent">double _export Log_B_of_X(void *p)<br />{</p>
+        <p class="syntax_indent_2">// Parameters come in a<br />// structure pointed to by p</p>
+        <p class="syntax_indent_2">TEST_SUB_PARAMS * params;</p>
+        <p class="syntax_indent_2">params = (TEST_SUB_PARAMS*) p;</p>
+        <p class="syntax_indent_2">MessageBox (GetTopWindow <br />(params-&gt;hWndFrame),<br />“Executing Log_B_of_X function.”,<br />“XSUB”, MB_OK);</p>
+        <p class="syntax_indent_2">return log (params-&gt;x) / log(params-&gt;base);</p>
+        <p class="syntax_body_indent">}</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also</p>
+        <p class="p"><a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="C-06-ExternalSubroutines.htm#C-06_1157716610_1086242" title="" alt="" xrefformat="{paratext}">External Subroutines</a> (normal subroutines are less powerful, but much easier to create and use).</p>
+        <hr width="100%" size="0" align="center" />
+        <table style="border-spacing: 2px 2px;border-collapse: collapse;border-left-style: solid;border-left-width: 0px;border-left-color: #ffffff;border-right-style: solid;border-right-width: 0px;border-right-color: #ffffff;border-top-style: solid;border-top-width: 4px;border-top-color: #ffffff;border-bottom-style: solid;border-bottom-width: 4px;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="td_1">&#160;</td>
+                    <td class="td_1">
+                        <p> © 2019 ProModel Corporation • 705 E Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+                        <p><a href="http://www.promodel.com/"><img src="../Resources/Images/bluedocfeedbackbutton.gif" class="img_1" style="max-width: 6in;" />&#160;</a><a href="http://www.promodel.com/">&#160;</a><a href="http://www.promodel.com/"><a href="http://freeonlinesurveys.com/app/rendersurvey.asp?sid=1z9zba53tk5ujp4118915&amp;refer=www%2Epromodel%2Ecom" target="_blank"></a></a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

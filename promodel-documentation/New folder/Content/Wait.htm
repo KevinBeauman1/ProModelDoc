@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1247" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Wait</h1>
+        <h5>
+            <MadCap:keyword term="statements:wait;wait" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Wait  &lt;time expression&gt;</p>
+        <p>Wait 3 min<br />Wait 0<br />Wait 2.5 + CleanupTime<br />Wait N(8, .5) + 3 sec</p>
+        <h2>Description</h2>
+        <p>Simulates the time it takes to process an entity. Wait delays further processing of the entity until the specified time has elapsed. The rest of the model continues to process while an entity waits. If the expression evaluates to zero, the current entity will not finish processing until all other processes scheduled for that moment in the simulation have finished.</p>
+        <h2>Valid In</h2>
+        <p>Activity and route logic. Activated subroutines may also use Wait statements which function as timers. (For more information about activated subroutines, see <MadCap:xref class="lowercase_no_see" href="Subroutines.htm" target="" title="" alt="">Subroutines</MadCap:xref> and the <a href="Activate.htm" class="a_11">Activate</a> statement.)</p>
+        <h2>Components</h2>
+        <p><b>&lt;time expression&gt;</b>
+        </p>
+        <p>The length of the Wait. This expression is evaluated whenever the statement is encountered. If no time unit is specified, the default time unit, which is minutes, is applied.</p>
+        <h2>Example</h2>
+        <p>In the following example, customers arrive at a fast-food restaurant and place their orders at the Counter activity.  How long customers wait depends on the type of meal ordered.  If they order meal one, two, or three, they wait only 2 minutes.  Otherwise they wait 5 minutes.</p>
+        <p class="p_11">If aMealNum &lt;= 3 Then</p>
+        <p class="p_12">Wait 2 min</p>
+        <p class="p_11">Else</p>
+        <p class="p_12">Wait 5 min</p>
+        <h5>See Also</h5>
+        <p><a href="WaitUntil.htm" class="a_11">Wait Until</a> can stop additional processing until a condition is true.</p>
+    </body>
+</html>

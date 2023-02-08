@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Logic">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Distributions</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningLogic.htm">Defining Logic</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">Distributions</span>
+        </div>
+        <h1><a name="kanchor150"></a>Distributions</h1>
+        <p>Data is seldom in a form ready for use in a simulation model. Usually some analysis and conversion needs to be performed for the data to be useful as an input parameter to the simulation. Random phenomena must be fitted to some standard, theoretical distribution such as a normal or exponential distribution (Law and Kelton, 1991), or be input as a frequency distribution.</p>
+        <p>To define a distribution using a theoretical distribution requires that the data, if available, be fit to an appropriate distribution that best describes the variable. An alternative to using a standard theoretical distribution is to summarize the data in the form of a frequency distribution that can be used directly in the model. A frequency distribution is sometimes referred to as an empirical or user-defined distribution.</p>
+        <p>Whether fitting data to a theoretical distribution, or using an empirical distribution, it is often useful to organize the data into a frequency distribution table. Defining a frequency distribution is done by grouping the data into intervals and stating the frequency of occurrence for each particular interval. To illustrate how this is done, the following frequency table tabulates the number and frequency of observations for a particular task requiring a certain range of time to perform.</p>
+        <table style="caption-side: top;margin-left: 0;margin-right: auto;width: 100%;">
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="td_10">Delivery Time(days)</td>
+                    <td class="td_10">Number of Observations</td>
+                    <td class="td_10">Percentage</td>
+                    <td class="td_10">Cumulative Percentage</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_1">0-1</td>
+                    <td class="td_1">25</td>
+                    <td class="td_1">16.5</td>
+                    <td class="td_1">16.5</td>
+                </tr>
+                <tr>
+                    <td class="td_1">1-2</td>
+                    <td class="td_1">33</td>
+                    <td class="td_1">21.7</td>
+                    <td class="td_1">38.2</td>
+                </tr>
+                <tr>
+                    <td class="td_1">2-3</td>
+                    <td class="td_1">30</td>
+                    <td class="td_1">19.7</td>
+                    <td class="td_1">57.9</td>
+                </tr>
+                <tr>
+                    <td class="td_1">3-4</td>
+                    <td class="td_1">22</td>
+                    <td class="td_1">14.5</td>
+                    <td class="td_1">72.4</td>
+                </tr>
+                <tr>
+                    <td class="td_1">4-5</td>
+                    <td class="td_1">14</td>
+                    <td class="td_1">9.2</td>
+                    <td class="td_1">81.6</td>
+                </tr>
+                <tr>
+                    <td class="td_1">5-6</td>
+                    <td class="td_1">10</td>
+                    <td class="td_1">6.6</td>
+                    <td class="td_1">88.2</td>
+                </tr>
+                <tr>
+                    <td class="td_1">6-7</td>
+                    <td class="td_1">7</td>
+                    <td class="td_1">4.6</td>
+                    <td class="td_1">92.8</td>
+                </tr>
+                <tr>
+                    <td class="td_1">7-8</td>
+                    <td class="td_1">5</td>
+                    <td class="td_1">3.3</td>
+                    <td class="td_1">96.1</td>
+                </tr>
+                <tr>
+                    <td class="td_1">8-9</td>
+                    <td class="td_1">4</td>
+                    <td class="td_1">2.6</td>
+                    <td class="td_1">98.7</td>
+                </tr>
+                <tr>
+                    <td class="td_1">9-10</td>
+                    <td class="td_1">2</td>
+                    <td class="td_1">1.3</td>
+                    <td class="td_1">100.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Total Number of Observations = 152</b>
+        </p>
+        <p>While there are rules that have been proposed for determining the interval or cell size, the best approach is to make sure that enough cells are defined to show a gradual transition in values, yet not so many cells that groupings become obscured.</p>
+        <p>Note in the last column of the frequency table that the percentage for each interval may be expressed optionally as a cumulative percentage. This helps verify that all 100% of the possibilities are included.</p>
+        <p>When gathering samples from a static population, one can apply descriptive statistics and draw reasonable inferences about the population. When gathering data from a dynamic and possibly time varying system, however, one must be sensitive to trends, patterns, and cycles that may occur with time. The samples drawn may not actually be homogenous samples and, therefore, unsuitable for applying simple descriptive techniques.</p>
+        <h2>Process Simulator Distributions</h2>
+        <table style="width: 100%;border-collapse: separate;border-spacing: 0px 0px;border-left-style: solid;border-left-width: 0px;border-left-color: #dcdcdc;border-right-style: solid;border-right-width: 0px;border-right-color: #dcdcdc;border-top-style: solid;border-top-width: 0px;border-top-color: #dcdcdc;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: #dcdcdc;margin-left: 0;margin-right: auto;">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="td_10" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Distribution</td>
+                    <td class="td_10" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Syntax</td>
+                    <td class="td_10" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Individual Components</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Beta</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">B(a,b,c,d)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=shape value 1</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=shape value 2</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">c=lower boundary</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">d=upper boundary</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Binomial</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">B(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">a=batch size</p>
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">b=probability of success</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Erlang</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">ER(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=batch size</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=integer shape parameter</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Exponential</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">E(a)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;margin-top: 0;margin-bottom: 0;">a=mean</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Gamma</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">G(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=shape value</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=scale value</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Geometric</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">GEO(a)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">a=probability of success</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Inverse Gaussian</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">IG(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=shape value</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=scale value</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Lognormal</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">L(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=mean</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=standard deviation</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Normal</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">N(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=mean</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=standard deviation</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Pearson5</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">P5(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">a=shape value</p>
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">b=scale value</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Pearson6</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">P6(a,b,c)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=shape value</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=shape value</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">c=scale value</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Poisson</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">P(a)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;margin-top: 0;margin-bottom: 0;">a=quantity</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Triangular</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">T(a,b,c)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=minimum</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=mode</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">c=maximum</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Uniform</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">U(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">a=mean</p>
+                        <p class="p" style="padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;line-height: 10pt;">b=half range</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">Weibull</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: ;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: ;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: ;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: ;border-bottom-width: 1;border-bottom-color: #dcdcdc;">W(a,b)</td>
+                    <td class="td_1" style="text-align: left;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;border-left-style: Solid;border-left-width: 1;border-left-color: #dcdcdc;border-right-style: Solid;border-right-width: 1;border-right-color: #dcdcdc;border-top-style: Solid;border-top-width: 1;border-top-color: #dcdcdc;border-bottom-style: Solid;border-bottom-width: 1;border-bottom-color: #dcdcdc;">
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">a=shape value</p>
+                        <p class="p" style="line-height: 10pt;padding-left: 5px;padding-right: 5px;padding-top: 5px;padding-bottom: 5px;">b=scale value</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>General Components</h4>
+        <p class="p"> Any negative value returned by a distribution that is used for a time expression will be automatically converted to zero.</p>
+        <!-- InstanceEndEditable -->
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

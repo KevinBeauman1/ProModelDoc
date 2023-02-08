@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1938" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Disassembly Activities</h3>
+        <p class="p">One or more entities are detached from a base entity at an activity. It is assumed that the entities to be detached have been previously attached to the base entity (see <a href="AssemblyActivities.htm">Assembly Activities</a>). If you want to detach entities that weren’t previously attached at some activity in the model, you must create them as new entities (See <MadCap:xref href="EntityCreatingActivities.htm">Entity Creating Activities</MadCap:xref>).</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=D1DkNbO_QZo&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=21&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here.</a></p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">For the activity where the disassembly of entities is to occur, enter the Time required for the disassembly in the Activity dialog Time field.</li>
+            <li class="li_1">For each entity being detached from the base entity, define a Detach routing leading to another activity, buffer, etc. where the detached entities are to be placed or sent.</li>
+            <li class="li_1">Define a routing other than a Detach routing for the base or main entity from which the others were detached.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">A bicycle rental shop rents bikes to customers who return them when they are finished. It takes 1 minute to check in the bike upon return.</p>
+        <p class="p">
+            <img src="Resources/Images/disassebleactivitiesexample1.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p>
+            <img src="Resources/Images/disassebleactivitiessolution1.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" style="max-width: 7in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">Be sure to select <b>Entire Quantity</b> in the <b>Quantity Mode</b> list.</p>
+        <p>
+            <img src="Resources/Images/disassebleactivitiessolution3.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" style="max-width: 7in;max-height: auto;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Time field in the Return Bike activity dialog is set to 1 minute. A Detach routing is defined from Return Bike to Bicycle Inventory. After Activity is also selected in the routing dialog to allow for the 1 minute activity time to transpire before the bike is returned to the Bicycle Inventory. Notice that the Condition is set to None, since only Bicycles are attached to the customers so there is no decision to be made as to what gets detached.</p>
+    </body>
+</html>

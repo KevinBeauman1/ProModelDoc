@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="Defining Model Elements">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>External Arrivals</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <div class="MCBreadcrumbsBox_0"><span class="MCBreadcrumbsPrefix">You are here: </span><a class="MCBreadcrumbsLink" href="DefiningModelElements.htm">Defining Model Elements</a><span class="MCBreadcrumbsDivider"> &gt; </span><span class="MCBreadcrumbs">External Arrivals</span>
+        </div>
+        <h1><a name="kanchor59"></a>External Arrivals</h1>
+        <p>
+            <img src="Resources/Images/ExternalArrivals.png" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p>An <b>External Arrivals</b> file is an Excel spreadsheet (.xls or .xlsx format only) file containing arrival information normally specified in a Periodic arrival connection. One or more arrival files may be referenced in the External Arrivals table. External arrival files are automatically read in at the start of the simulation following the scheduling of all other arrivals defined in arrival connections in the model. The column entries in the spreadsheet must be as follows:</p>
+        <table style="width: 600;margin-left: 0;margin-right: auto;" class="table_1">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;font-weight: bold;">Columns</td>
+                    <td style="font-family: Arial;font-size: 10pt;font-weight: bold;">Data</td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">A</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Entity Name</td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">B</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Activity Name</td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">C</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Quantity per Arrival </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">D</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Start time of first Arrival </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">E</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Number of Occurrences</td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">F
+                    </td>
+                    <td style="font-family: Arial;font-size: 10pt;">Interval between Arrivals </td>
+                </tr>
+                <tr>
+                    <td style="font-family: Arial;font-size: 10pt;">G through...</td>
+                    <td style="font-family: Arial;font-size: 10pt;">Attribute assignments </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The first row in the spreadsheet must be used as a header row. Columns A through F may have any heading desired as long as the data in the respective columns is of the proper type. Attributes can also be initialized with specific values for each arrival defined on a separate row. This is accomplished by assigning columns G and higher headings that match the names of the attributes being assigned. The values of the attributes you want assigned should be entered in the row and column of the respective arrival and attribute.</p>
+        <h2>Example</h2>
+        <p>
+            <img src="Resources/Images/periodic arrivals spreadsheet.png" />
+        </p>
+        <p>The arrival of the Work entity at activity Op_10 will occur for the first time eight hours after the start of the simulation. Each arrival brings 1 new Work entity. The arrival will be repeated 30 times (unless the simulation run length is too short) with an interval of 7 days between arrivals. The attribute Att1 is initialized with a value of 20, whereas Att2 will be assigned an initial value from the distribution N(5, 2).</p>
+        <p class="p_10">Please note: If no time unit (sec, min, hr, day, wk) is specified with a time value for Start Time or Interval in the External Arrival, the time value will be evaluated as minutes. </p>
+        <p>When defining an External Arrivals file, you do not need to define an arrival connection in the model. If several entities are scheduled to arrive at the same time, entities arrive in the system according to the order in which they appear listed in the spreadsheet. However, when there is more than one occurrence defined for a given arrival, the next entity will not arrive until the interval has elapsed. Meanwhile, other entities listed below the row               may be allowed to arrive. </p>
+        <p class="p_10">Please note: If the Excel file contains more than one sheet of data, only the first sheet will be read in.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2019 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

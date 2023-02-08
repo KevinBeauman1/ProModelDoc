@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1134" MadCap:lastWidth="1178">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086402"></a>
+            <MadCap:keyword term="Interfaces:edit table;Path networks:interfaces edit table" />Interfaces Edit Table</h3>
+        <p class="p">If an entity will be picked up or dropped off at a particular location by a resource, that location must connect to a node through a location-node interface. The Interfaces edit table is used to define location-node interfaces. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">The graphic below shows how to set node N1 to interface with location Cashier, node N4 to interface with location OpAsist1, and so on, as in the example at the beginning of this section.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">The graphic below shows how to set node N1 to interface with location ENTER, node N6 to interface with Location LEAVE, and so on, as in the example at the beginning of this section.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">The graphic below shows how to set node N1 to interface with location Loc1, node N3 to interface with Location Loc2, and so on, as in the example at the beginning of this section.</MadCap:conditionalText></p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-120-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-122-1.jpg" style="border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The fields of the Interfaces edit table are described as follows.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Node</span> The node name.</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">Location</span> The name of any locations which interface with the node. Nodes can interface with several locations, but a location may interface with only one node on the same path network.</p>
+        <p class="How_to_title" style="mc-hyphenate: never;">How to create location-node <MadCap:keyword term="Interfaces:location-node;Locations:node interface"></MadCap:keyword>interfaces</p>
+        <ol>
+            <li class="li_1_how_to_step">Left click on the desired node to begin rubber-banding a link or interface.</li>
+            <li class="li_1_how_to_step">Left click on the desired location to complete the interface.</li>
+        </ol>
+        <p class="p_10">Please Note: A node on a path network may not interface with a particular unit of a multi-unit location (i.e., Loc1.2). A node may interface only with the “parent” location (i.e., Loc1) of a multi-unit location.</p>
+    </body>
+</html>

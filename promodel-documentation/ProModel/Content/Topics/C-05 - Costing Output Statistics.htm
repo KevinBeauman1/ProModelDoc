@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="754" MadCap:lastWidth="1153">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088732"></a>
+            <MadCap:keyword term="Cost:output" />Costing Output Statistics<span class="_Override" style="font-size: 12pt;line-height: 14pt;"><MadCap:keyword term="Cost:statistics;Output:costing statistics" /></span></h3>
+        <p class="p">
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> collects costing statistics only if you uncheck the Disable Cost Statistics option in the Simulation Options menu (see <MadCap:xref class="lowercase_no_see" href="C-05 - Enable or Disable Costing.htm#C-05_2723800551_1088772" target="" title="" alt="">Enable or Disable Costing on page 1</MadCap:xref>). Included in the General Statistics Report, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> calculates costing statistics.</p>
+        <h4><span class="Helv_Bold"><MadCap:keyword term="Locations:cost;Cost:locations"></MadCap:keyword>Locations</span>
+        </h4>
+        <ul>
+            <li class="li_1">Operational Cost = (Active Operation Time * Rate) + (Any IncLocCost)</li>
+            <li class="li_1">% Operational Cost refers to the location’s percentage of the sum of all operation costs</li>
+            <li class="li_1">Resource Cost = (Utilization * Rate) + (TimesUsed * Cost per use)</li>
+        </ul>
+        <p class="p_10">Please Note; For Resource Cost, Utilization and TimesUsed refer to the utilization of a resource while at a location. This applies only to resource use through operation logic.</p>
+        <ul>
+            <li class="li_1">% Resource Cost refers to the location’s percentage of the sum of all resource costs</li>
+            <li class="li_1">Total Cost = (Operation Cost + Resource Cost)</li>
+            <li class="li_1">% Total Cost refers to location’s percentage of the sum of all location costs</li>
+        </ul>
+        <h4><span class="Helv_Bold"><MadCap:keyword term="Resources:cost;Cost:resources"></MadCap:keyword>Resources</span>
+        </h4>
+        <ul>
+            <li class="li_1">NonUse Cost = (1-% Utilization) * Scheduled Time * Rate</li>
+            <li class="li_1">% NonUse Cost refers to the resource’s percentage of the sum of all nonuse costs</li>
+            <li class="li_1">Usage Cost = (% Utilization * Scheduled Time * Rate) + (TimesUsed * Cost per use)</li>
+            <li class="li_1">% Usage Cost refers to the resource’s percentage of the sum of all resource usage costs</li>
+            <li class="li_1">Total Cost = Usage Cost + NonUse Cost</li>
+            <li class="li_1">% Total Cost refers to the resource’s percentage of the sum of all resource costs</li>
+        </ul>
+        <h4 class="Heading4"><span class="Helv_Bold"><MadCap:keyword term="Entity:cost;Cost:entities"></MadCap:keyword>Entities</span>
+        </h4>
+        <ul>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">Explicit Exits</span><span class="_Override" style="line-height: 12pt;">The number of entities that have explicitly exited. Whenever an entity exits the system, it is an explicit exit except in the following cases:</span>
+            </li>
+            <li class="li_1">- When an entity JOINS, permanently LOADS, or COMBINES with another entity, it implicitly exits the system, and is reported as an exit in the Entity Activity report. However, for costing purposes, the entity did not explicitly exit, but its costing information was added to the entity it was JOINED, permanently LOADS, or COMBINED with.</li>
+            <li class="li_1">- When an entity temporarily LOADS or GROUPS with another entity, and the entire LOADED or GROUPED entity exits the system, the original entity implicitly exits the system, and is reported as an exit in the Entity Activity report. However, for costing purposes, the original entity did not explicitly exit, but its costing information was added to the entire load or group.</li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">Total Cost Dollars</span>Total Cost = cumulative entity cost, or the sum of costs incurred on all locations the entity passed through + the sum of all costs incurred by use of resource + initial cost + any IncEntCost</li>
+            <li class="li_1"><span class="Bold" style="font-weight: bold;">% Total Cost</span>% Total Cost refers to the entity’s percentage of sum of all entity costs</li>
+        </ul>
+        <p class="p">In the above calculations, the rate defined (per day, hour, minute, and second) converts to the default time units specified in the General Information dialog.</p>
+        <p class="p_10">Please Note: <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> does not allow you to generate a Costing Graph. However, if you set a variable equal to GetCost (e.g., Var1=GetCost), you can generate a time series graph to track changing entity costs. See <MadCap:xref class="lowercase_no_see" href="C-14 - GetCost().htm#C-14_4292047180_1104121" target="" title="" alt="">GetCost() on page 1</MadCap:xref> for more information.</p>
+    </body>
+</html>

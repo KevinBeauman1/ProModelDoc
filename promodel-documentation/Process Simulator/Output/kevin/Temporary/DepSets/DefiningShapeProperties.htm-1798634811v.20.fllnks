@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle="Defining Shape Properties"
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/EntityProperties.htm" />
+    <Link
+      Url="Content/ActivityProperties.htm" />
+    <Link
+      Url="Content/BufferProperties.htm" />
+    <Link
+      Url="Content/StorageProperties.htm" />
+    <Link
+      Url="Content/ResourceProperties.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Stylesheet for online.css" />
+    <Link
+      Url="Content/EntityProperties.htm" />
+    <Link
+      Url="Content/ActivityProperties.htm" />
+    <Link
+      Url="Content/BufferProperties.htm" />
+    <Link
+      Url="Content/StorageProperties.htm" />
+    <Link
+      Url="Content/ResourceProperties.htm" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="shapes:defining shape properties"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Stylesheet for online.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

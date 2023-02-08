@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RecentLinks>
+    <Dialog Name="B3.XmlMdiEditorKit.ImageGeneralDialogPage">
+        <Link Value="C:\_git\ProModel.Documentation\Process Simulator\Content\Resources\Images\PCS auto orentation.gif" />
+    </Dialog>
+    <Dialog Name="B3.XmlTextKit.InsertHyperlinkDialog">
+        <Link Value="C:\_git\ProModel.Documentation\Process Simulator\Content\ActivityTime.htm" />
+    </Dialog>
+</RecentLinks>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="176" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1088703"></a>J<MadCap:keyword term="Cost:join/load;Join;LOAD" />oin/Load</h3>
+        <ul>
+            <li class="li_1">Joined and permanently loaded entities add their costs to their base entities, but not their time statistics.</li>
+            <li class="li_1">Loaded entities do<span class="Emphasis"> not</span> add their costs or time statistics to their base entities.</li>
+            <li class="li_1">When an Unload occurs, <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> divides all costs accrued by a loaded entity among the unloaded entities. <MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.MedModel">MedModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ProModel">ProModel</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-MM Conditionals.ServiceModel">ServiceModel</MadCap:conditionalText> adds all other entity statistics calculated during the loaded period to each of the unloaded entities.</li>
+            <li class="li_1">Entities leaving the system that were temporarily loaded onto other entities do NOT report their individual costs, but <span class="_Override" style="font-style: italic;">do</span> report all other statistics. To get the cost of each entity, you must unload the entities before they exit or permanently load them when they are initially loaded using the Load Perm statement.</li>
+        </ul>
+    </body>
+</html>

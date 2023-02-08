@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/TableStyles/Format_A.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/ObjectsNavTab.bmp" />
+    <Link
+      Url="Content/Topics/ObjectCategories.bmp" />
+    <Link
+      Url="Content/Topics/Locations.htm" />
+    <Link
+      Url="Content/Topics/Entities.htm" />
+    <Link
+      Url="Content/Topics/Resources.htm" />
+    <Link
+      Url="Content/Topics/Paths.htm" />
+    <Link
+      Url="Content/Topics/Conveyors.htm" />
+    <Link
+      Url="Content/Topics/Background Graphics.htm" />
+    <Link
+      Url="Content/Topics/Labels.htm" />
+    <Link
+      Url="Content/Topics/Scoreboards.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/TableStyles/Format_A.css" />
+    <Link
+      Url="Content/Resources/Stylesheets/Promodel.css" />
+    <Link
+      Url="Content/Topics/ObjectsNavTab.bmp" />
+    <Link
+      Url="Content/Topics/ObjectCategories.bmp" />
+    <Link
+      Url="Content/Topics/Locations.htm" />
+    <Link
+      Url="Content/Topics/Entities.htm" />
+    <Link
+      Url="Content/Topics/Resources.htm" />
+    <Link
+      Url="Content/Topics/Paths.htm" />
+    <Link
+      Url="Content/Topics/Conveyors.htm" />
+    <Link
+      Url="Content/Topics/Background Graphics.htm" />
+    <Link
+      Url="Content/Topics/Labels.htm" />
+    <Link
+      Url="Content/Topics/Scoreboards.htm" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-04_1942222156_1076584" />
+    <Anchor
+      Name="C-04_1942222156_11459" />
+    <Anchor
+      Name="C-04_1942222156_Objects_Navigation_Tab" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Objects Navigation Tab"
+      Conditions=""
+      LocalConditions=""
+      Position="9" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/TableStyles/Format_A.css" />
+    <Url
+      Source="Content/Resources/Stylesheets/Promodel.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

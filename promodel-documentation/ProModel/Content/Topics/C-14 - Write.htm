@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="665.5" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/TableStyles/Process_Table.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1108417"></a><a name="C-14_4292047180_25979"></a>Write</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General operation statements:WRITE;WRITE" />General Operation Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Write &lt;file ID&gt;, &lt;string or numeric expression&gt;<br />	{,&lt;maximum digits before decimal&gt;,<br />	&lt;digits after decimal&gt;}</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Writes information to a general write file. The next item written to the file will appear immediately after this item. Write always appends to the file unless the file is <MadCap:keyword term="RESET" />Reset. This holds true for multiple replications as well as single, independent runs. Any file that is written to with Write automatically becomes a text file and will have an end of file marker attached automatically to the end when it is closed. For more flexible Write capability, use <MadCap:keyword term="XWRITE" />Xwrite.</p>
+        <p class="p">&#160;</p>
+        <p class="p">Write and Writeline automatically separate values by commas</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic.</p>
+        <h4 class="_rules_statements">Components</h4>
+        <p class="Component">&lt;file ID&gt;</p>
+        <p class="p">The name of the file as previously defined in the External Files Editor.</p>
+        <p class="Component">&lt;string or numeric expression&gt; </p>
+        <p class="p">The string or numeric expression to be written to the file. In the output file, quotes will automatically be added to string expressions so that most spreadsheet programs can easily read the file. </p>
+        <p class="Component">&lt;maximum digits before decimal&gt; </p>
+        <p class="p">The maximum number of digits before the decimal. This value is used to line up any numeric values into columns on the decimal point. This value may be any numeric expression.</p>
+        <p class="Component">&lt;digits after decimal&gt;</p>
+        <p class="p">The number of spaces to save after the decimal point. Use this option to line up any labels appearing after numbers.</p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">The following example uses both Write and Writeline to record the time when EntA completes processing at Loc1 in a general write file called Rpt.</p>
+        <p class="_rules">Process Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');caption-side: top;margin-left: 0;margin-right: auto;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Entity...</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Location...</p>
+                    </td>
+                    <td class="HeadD-Column3-Header1">
+                        <p class="CellHeading">Operation (min)...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">EntA</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">Loc1</p>
+                    </td>
+                    <td class="BodyA-Column3-Body1">
+                        <p class="p">Wait N(7.3,.4)</p>
+                        <p class="p">Write Rpt,”EntA Complete at:”</p>
+                        <p class="p">Writeline Rpt, Clock(min), 3, 2</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">Routing Table</p>
+        <table class="TableStyle-Process_Table" style="mc-table-style: url('../Resources/Stylesheets/TableStyles/Process_Table.css');margin-left: 0;margin-right: auto;caption-side: top;" cellspacing="0">
+            <col class="Column-Column1" />
+            <col class="Column-Column2" />
+            <col class="Column-Column3" />
+            <col class="Column-Column4" />
+            <col class="Column-Column1" />
+            <thead>
+                <tr class="Head-Header1">
+                    <td class="HeadE-Column1-Header1">
+                        <p class="CellHeading">Blk</p>
+                    </td>
+                    <td class="HeadE-Column2-Header1">
+                        <p class="CellHeading">Output...</p>
+                    </td>
+                    <td class="HeadE-Column3-Header1">
+                        <p class="CellHeading">Destination...</p>
+                    </td>
+                    <td class="HeadE-Column4-Header1">
+                        <p class="CellHeading">Rule...</p>
+                    </td>
+                    <td class="HeadD-Column1-Header1">
+                        <p class="CellHeading">Move Logic...</p>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="Body-Body1">
+                    <td class="BodyB-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyB-Column2-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyB-Column3-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyB-Column4-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                    <td class="BodyA-Column1-Body1">
+                        <p class="CellBody">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="_rules">See Also</p>
+        <p class="p">Xwrite, Writeline, Reset, Read, and Format(). Also see <MadCap:xref class="lowercase_no_see" href="C-06 - File Types.htm#General2" target="" title="" alt="">General Write File on page 1</MadCap:xref>.</p>
+        <p class="p_10">Please Note: The sum of the maximum digits before and after the decimal must be less than 20.</p>
+    </body>
+</html>

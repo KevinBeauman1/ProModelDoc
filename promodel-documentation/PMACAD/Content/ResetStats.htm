@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="866" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Reset Stats</h1>
+        <h5>
+            <MadCap:keyword term="statements:reset stats;reset stats" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Reset Stats</p>
+        <p>If Total = 20 Then Reset Stats</p>
+        <h2>Description</h2>
+        <p>Resets the simulation statistics.  Useful in connection with the Report statement to manually control statistics for reporting purposes in case specific or event logic.</p>
+        <h2>Valid In</h2>
+        <p>Any logic. </p>
+        <h2>Example</h2>
+        <p>Suppose you want to generate a new output report for each 20-hour period of the simulation. Enter the following logic in an activated subroutine from Initialization logic:</p>
+        <p class="p_11">While Clock(hr) &lt; 10000 Do<br />{</p>
+        <p class="p_12">		Wait 20 hr<br />Report<br />Reset Stats</p>
+        <p class="p_11">}</p>
+    </body>
+</html>

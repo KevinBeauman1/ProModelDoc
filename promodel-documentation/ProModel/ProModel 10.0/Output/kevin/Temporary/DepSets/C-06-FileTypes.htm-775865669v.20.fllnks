@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/C-14-Read.htm" />
+    <Link
+      Url="Content/Topics/C-14-Write.htm" />
+    <Link
+      Url="Content/Topics/C-14-WriteLine.htm" />
+    <Link
+      Url="Content/Topics/C-14-Xwrite.htm" />
+    <Link
+      Url="Content/Resources/Images/Entity Location file - Excel sheet.png" />
+    <Link
+      Url="Content/Resources/Images/Arrivals file - Excel sheet.png" />
+    <Link
+      Url="Content/Topics/C-06-Subroutines.htm" />
+    <Link
+      Url="Content/Topics/C-06-AccessingFilesforArraysonSharePoint.htm" />
+    <Link
+      Url="Content/Topics/C-06-AccessingExternalFileswithSharePoint.htm" />
+    <Link
+      Url="Content/Topics/C-14-Close.htm" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+    <Link
+      Url="Content/Topics/C-14-Read.htm#C-14_4292047180_1106477" />
+    <Link
+      Url="Content/Topics/C-14-Write.htm#C-14_4292047180_1108417" />
+    <Link
+      Url="Content/Topics/C-14-WriteLine.htm#C-14_4292047180_1108486" />
+    <Link
+      Url="Content/Topics/C-14-Xwrite.htm#C-14_4292047180_1108596" />
+    <Link
+      Url="Content/Resources/Images/Entity Location file - Excel sheet.png" />
+    <Link
+      Url="Content/Resources/Images/Arrivals file - Excel sheet.png" />
+    <Link
+      Url="Content/Topics/C-06-Subroutines.htm#C-06_1157716610_1086242" />
+    <Link
+      Url="Content/Topics/C-06-AccessingFilesforArraysonSharePoint.htm#C-06_1157716610_1086242" />
+    <Link
+      Url="Content/Topics/C-06-AccessingExternalFileswithSharePoint.htm#C-06_1157716610_1086242" />
+    <Link
+      Url="Content/Topics/C-14-Close.htm#C-14_4292047180_1102938" />
+    <Link
+      Url="Project/ConditionTagSets/PM-MM Conditionals.flcts" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-06_1157716610_1086685" />
+    <Anchor
+      Name="General" />
+    <Anchor
+      Name="General2" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="External files:types"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="File:external:types"
+      Conditions=""
+      LocalConditions=""
+      Position="6" />
+    <IndexCacheEntry
+      Term="External files:types:general read file"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="File:types:general read"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="General read file"
+      Conditions=""
+      LocalConditions=""
+      Position="10" />
+    <IndexCacheEntry
+      Term="External files:types:general write file"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="File:types:general write"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="General write file"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="WRITE"
+      Conditions=""
+      LocalConditions=""
+      Position="21" />
+    <IndexCacheEntry
+      Term="WRITELINE"
+      Conditions=""
+      LocalConditions=""
+      Position="22" />
+    <IndexCacheEntry
+      Term="XWRITE"
+      Conditions=""
+      LocalConditions=""
+      Position="23" />
+    <IndexCacheEntry
+      Term="External files:types:entity-location file"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="File:types:entity-location"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="Entity:location file"
+      Conditions=""
+      LocalConditions=""
+      Position="29" />
+    <IndexCacheEntry
+      Term="External files:types:arrivals file"
+      Conditions=""
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="File:types:arrivals file"
+      Conditions=""
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="Arrivals:files"
+      Conditions=""
+      LocalConditions=""
+      Position="88" />
+    <IndexCacheEntry
+      Term="Arrivals:files:example"
+      Conditions=""
+      LocalConditions=""
+      Position="100" />
+    <IndexCacheEntry
+      Term="External files:types:shift file"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="File:types:shift file"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="Shift:file"
+      Conditions=""
+      LocalConditions=""
+      Position="114" />
+    <IndexCacheEntry
+      Term="External files:types:DLL file"
+      Conditions=""
+      LocalConditions=""
+      Position="121" />
+    <IndexCacheEntry
+      Term="External files:types:Array file"
+      Conditions=""
+      LocalConditions=""
+      Position="125" />
+    <IndexCacheEntry
+      Term="External files:types:other"
+      Conditions=""
+      LocalConditions=""
+      Position="132" />
+    <IndexCacheEntry
+      Term="File:extensions"
+      Conditions=""
+      LocalConditions=""
+      Position="132" />
+    <IndexCacheEntry
+      Term="File:external:other"
+      Conditions=""
+      LocalConditions=""
+      Position="132" />
+    <IndexCacheEntry
+      Term="CSV files"
+      Conditions=""
+      LocalConditions=""
+      Position="146" />
+    <IndexCacheEntry
+      Term="MOD files"
+      Conditions=""
+      LocalConditions=""
+      Position="148" />
+    <IndexCacheEntry
+      Term="RDB files"
+      Conditions=""
+      LocalConditions=""
+      Position="150" />
+    <IndexCacheEntry
+      Term="RDT files"
+      Conditions=""
+      LocalConditions=""
+      Position="152" />
+    <IndexCacheEntry
+      Term="SED files"
+      Conditions=""
+      LocalConditions=""
+      Position="154" />
+    <IndexCacheEntry
+      Term="TRC files"
+      Conditions=""
+      LocalConditions=""
+      Position="156" />
+    <IndexCacheEntry
+      Term="GLB files"
+      Conditions=""
+      LocalConditions=""
+      Position="158" />
+    <IndexCacheEntry
+      Term="PMOV files"
+      Conditions=""
+      LocalConditions=""
+      Position="160" />
+    <IndexCacheEntry
+      Term="PMCAL files"
+      Conditions=""
+      LocalConditions=""
+      Position="162" />
+    <IndexCacheEntry
+      Term="External files:open files"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+    <IndexCacheEntry
+      Term="File:open external"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+    <IndexCacheEntry
+      Term="File:external:open"
+      Conditions=""
+      LocalConditions=""
+      Position="164" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="PM-MM Conditionals.MedModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ProModel" />
+    <Condition
+      Tag="PM-MM Conditionals.ServiceModel" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/TableStyles/Process_Table.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

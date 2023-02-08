@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/pm-c9-346-2.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/pm-c9-346-2.jpg" />
+    <Link
+      Url="Content/Topics/C-14-Animate.htm#C-14_4292047180_1102537" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="C-09_398201723_1091183" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="Run-time:options menu"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Options:menu:during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="5" />
+    <IndexCacheEntry
+      Term="Debug"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:debug option"
+      Conditions=""
+      LocalConditions=""
+      Position="11" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:animation off/on"
+      Conditions=""
+      LocalConditions=""
+      Position="12" />
+    <IndexCacheEntry
+      Term="Animation:on/off during run time"
+      Conditions=""
+      LocalConditions=""
+      Position="12" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:zoom"
+      Conditions=""
+      LocalConditions=""
+      Position="19" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:zoom"
+      Conditions=""
+      LocalConditions=""
+      Position="25" />
+    <IndexCacheEntry
+      Term="Trace"
+      Conditions=""
+      LocalConditions=""
+      Position="31" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:trace output"
+      Conditions=""
+      LocalConditions=""
+      Position="31" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:user pause"
+      Conditions=""
+      LocalConditions=""
+      Position="39" />
+    <IndexCacheEntry
+      Term="Run-time:options menu:user pause"
+      Conditions=""
+      LocalConditions=""
+      Position="44" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

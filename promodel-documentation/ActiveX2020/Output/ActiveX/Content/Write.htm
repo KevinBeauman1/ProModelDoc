@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Write</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>Write</h1>
+        <h5><a name="kanchor345"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Write &lt;file ID&gt;, &lt;string or numeric expression&gt; {,&lt;maximum digits before decimal&gt;, &lt;digits after decimal&gt;}</p>
+        <p>Write File1, "Avg Cycle Time"<br />Write File1, CycleTimeVar, 5, 2</p>
+        <h2>Description</h2>
+        <p>Writes information to a text file. The next item written to the file will appear immediately after this item. Write always appends to the file unless the file is Reset. This holds true for multiple replications as well as single, independent runs. Any file that is written to with Write automatically becomes a text file and will have an end of file marker attached automatically to the end when it is closed. For more flexible Write capability, use <a href="XWrite.htm" class="a_11">Xwrite</a>.</p>
+        <p>Write and Writeline automatically separate values with commas.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;file ID&gt;</b>
+        </p>
+        <p>The name of the file as previously defined in the External Files grid.</p>
+        <p><b>&lt;string or numeric expression&gt;</b>
+        </p>
+        <p>The string or numeric expression to be written to the file.</p>
+        <p><b>&lt;maximum digits before decimal&gt;</b> <![CDATA[ ]]></p>
+        <p>The maximum number of digits before the decimal. This value is used to line up any numeric values into columns on the decimal point. This value may be any numeric expression.</p>
+        <p><b>&lt;digits after decimal&gt;</b>
+        </p>
+        <p>The number of spaces to save after the decimal point. Use this option to line up any labels appearing after numbers.</p>
+        <p class="p_10">Please Note: The sum of the maximum digits before and after the decimal must be less than 20.</p>
+        <h2>Example</h2>
+        <p>The following example uses both Write and Writeline to record the time when EntA completes processing at Act1 in a write file called Rpt.</p>
+        <p class="p_11">Wait N(7.3, .4)<br />Write Rpt, "EntA complete at:"<br />Writeline Rpt, Clock(min), 3, 2</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="XWrite.htm" class="a_11">Xwrite</a>, <a href="Writeline.htm" class="a_11">Writeline</a>, Reset, <a href="Read.htm" class="a_11">Read</a>, and Format. Also see <a class="lowercase_no_see MCXref xref xreflowercase_no_see" href="ExternalFiles.htm" title="" alt="">External Files on page 1</a>.</p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

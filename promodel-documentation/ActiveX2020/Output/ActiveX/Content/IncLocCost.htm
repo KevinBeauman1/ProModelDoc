@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>IncLocCost</title>
+        <link href="../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" data-mc-generated="True" />
+        <link href="Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+        <script src="../Resources/Scripts/custom.modernizr.js">
+        </script>
+        <script src="../Resources/Scripts/jquery.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.min.js">
+        </script>
+        <script src="../Resources/Scripts/require.config.js">
+        </script>
+        <script src="../Resources/Scripts/foundation.min.js">
+        </script>
+        <script src="../Resources/Scripts/plugins.min.js">
+        </script>
+        <script src="../Resources/Scripts/MadCapAll.js">
+        </script>
+    </head>
+    <body>
+        <h1>IncLocCost</h1>
+        <h5><a name="kanchor250"></a>Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>IncLocCost &lt;expression&gt;</p>
+        <p>IncLocCost 15<br />IncLocCost -15 <br />IncLocCost SetupCostVar</p>
+        <h2>Description</h2>
+        <p>Enables you to increment the cost (positively or negatively) of the current activity by a given amount. Use this function to add to the activity’s actual, accumulated dollar amount.</p>
+        <h2>Valid In</h2>
+        <p>Operation logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;expression&gt;</b>
+        </p>
+        <p>The positive or negative change to the value of cost.</p>
+        <h2>Example</h2>
+        <p>The logic below shows how to add a cost per entry to a location for an entering entity. Process Simulator automatically tracks operation cost per time unit specified in the cost dialog, however, you may assign a one time cost each time an entity enters a location. </p>
+        <p>In the following example, an entity, EntA, arrives for inspection at Inspect. We define no rate of operation cost for Inspect because each inspection accrues a one time cost regardless of how long the entity remains at Inspect. At Inspect, workers inspect EntA. After inspection, Process Simulator adds the cost to the activity through the IncLocCost statement and then to the entity with the IncEntCost statement.</p>
+        <p class="p_11">Wait N(3, .7)<br />IncLocCost 3<br />IncEntCost 3</p>
+        <h5>See Also</h5>
+        <p class="p"><a href="GetCost.htm" class="a_11">GetCost</a>, <a href="GetResRate.htm" class="a_11">GetResRate</a>, <a href="IncEntCost.htm" class="a_11">IncEntCost</a>, <a href="IncResCost.htm" class="a_11">IncResCost</a>, and <a href="SetRate.htm" class="a_11">SetRate</a></p>
+        <hr width="100%" size="0" align="center" />
+        <p class="p" style="text-align: center;font-size: 10pt;">© 2020 ProModel Corporation • 705 East Timpanogos Parkway • Orem, UT 84097 • Support: 888-776-6633 • <a href="http://www.promodel.com/">www.promodel.com</a></p>
+    </body>
+</html>

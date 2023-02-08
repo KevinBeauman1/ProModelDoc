@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1355" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>While</title>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>While</h1>
+        <h5>
+            <MadCap:keyword term="statements:while;while" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>While &lt;Boolean expression&gt; Do &lt;statement block&gt;</p>
+        <p class="p_1">While Array1[n] &lt;&gt; 10 Do Inc n </p>
+        <p class="p_1">While FreeCap(Loc1) &gt; 5 Do <br />{</p>
+        <p class="p_11">Inc Var2, 5 <br />Wait 5 sec</p>
+        <p class="p_1">}</p>
+        <h2>Description</h2>
+        <p>Repeats a statement or statement block continuously while a condition remains true. While is an entry-condition loop, meaning that the loop will not be executed once unless the Boolean expression is true.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;Boolean expression&gt;</b>
+        </p>
+        <p>As long as this expression is True, the loop will continue. This expression is evaluated for each iteration of the loop.</p>
+        <p><b>&lt;statement block&gt;</b>
+        </p>
+        <p>The statement or block of statements to execute.</p>
+        <h2>Example</h2>
+        <p>The example below shows the logic for setting the values of Array1 elements 1 through 100 to the incremented value of the variable Count.</p>
+        <p class="p_11">Int Count = 1<br />While Count &lt;= 100 Do<br />{</p>
+        <p class="p_12">CountArray1[Count] = Count<br />Inc Count</p>
+        <p class="p_11">}</p>
+        <h5>See Also</h5>
+        <p>Do Until</p>
+    </body>
+</html>

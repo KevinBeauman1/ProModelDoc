@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="672" MadCap:lastWidth="558">
+    <head>
+    </head>
+    <body>
+        <h3><a name="C-05_2723800551_1086362"></a>Path Segment Edit Table<MadCap:keyword term="Path networks:paths:segment edit table" /></h3>
+        <p class="p">This table is used to define the Path Segments that make up a path network. When specifying travel according to time between nodes, the heading “Distance” changes automatically to “Time.”</p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ServiceModel">
+            <img src="sm-c5-122-2.jpg" MadCap:conditions="PM-MM Conditionals.ServiceModel" MadCap:mediastyle="@media print { max-width: 2in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.MedModel">
+            <img src="mm-c5-119-2.jpg" MadCap:conditions="PM-MM Conditionals.MedModel" MadCap:mediastyle="@media print { max-width: 2in; }">
+            </img>
+        </p>
+        <p class="Graphic" MadCap:conditions="PM-MM Conditionals.ProModel">
+            <img src="pm-c5-120-2.jpg" MadCap:conditions="PM-MM Conditionals.ProModel" MadCap:mediastyle="@media print { max-width: 2in; }">
+            </img>
+        </p>
+        <p class="p">The following defines the fields of the Path Segment edit table.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">From</span> The beginning node of the path segment.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">To</span> The ending node of the path segment.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold" style="font-weight: bold;">BI</span> Set to <span class="_Override" style="font-weight: bold;">Uni</span>-directional or <span class="_Override" style="font-weight: bold;">Bi</span>-directional depending on whether traffic can travel in only one or either direction.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Time" /><b>Time</b></span> If travel along the network is to be measured in time rather than in speed and distance, then enter the time required for a resource or entity to traverse the path segment. This value may be any numeric expression except for resource and downtime system functions. When travel along a path is measured in time, all resources and entities traveling along the path take the same amount of time to travel it, regardless of their speed. This field's title changes to “Distance” if the T/S field in the Path Networks edit table is set to Speed and Distance.</p>
+        <p class="p">&#160;</p>
+        <p class="p"><span class="Bold"><MadCap:keyword term="Distance" /><b>Distance</b></span> If travel along the network is to be measured in terms of speed and distance, enter the length of the segment which determines the travel time along the path in conjunction with the speed of the resource or entity.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The value entered may be any numeric expression except for attributes, arrays, and system functions. This expression is evaluated only when the simulation begins.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The distance may be followed by a comma and a speed factor between .01 and 99. This speed factor<MadCap:keyword term="Speed:factor"></MadCap:keyword> may be used to model any circumstance affecting the speed of items traveling the path. For example, a resource may normally travel at 150 fpm, but may slow down as it goes around a corner to 80% of the original speed, 120 fpm. This would be entered as 100, .8 for a path segment 100 feet long which traversed the corner. This field's title changes to “Time” if the T/S field in the Path Networks edit table is set to Time.</p>
+        <p class="p_10">Please Note: Path segment editing notes: 1. If no path segments have been defined for a network, resources and entities will move from node to node in zero time. See <MadCap:xref href="C-05 - Processing.htm#Routing" target="" title="" alt="">Routing Rule Dialog Box</MadCap:xref> for more information about the Routing Move dialog box. 2. To move nodes already defined on the layout, click on the Nodes button and move the desired nodes. 3. To insure that all nodes can be seen by the user, two nodes cannot be located at the same point.</p>
+    </body>
+</html>

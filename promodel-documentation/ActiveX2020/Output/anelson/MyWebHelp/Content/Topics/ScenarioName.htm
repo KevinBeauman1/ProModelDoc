@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" lang="en-us" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="The RDBDataServer Object">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="../../Skins/Default/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../../Skins/Default/Stylesheets/Components/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" /><title>ScenarioName</title>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+        <script src="../../Resources/Scripts/custom.modernizr.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/jquery.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/require.config.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/foundation.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/plugins.min.js" type="text/javascript">
+        </script>
+        <script src="../../Resources/Scripts/MadCapAll.js" type="text/javascript">
+        </script>
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_464125"></a><a name="kanchor80"></a>ScenarioName</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>ScenarioName</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Returns the name of the Scenario in the current data selection.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:  </span>None</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>The current scenario name, or “invalid” if the current selection is not valid.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, gets and displays some of the data, then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim MyScenario As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2">	RDBObj.OpenFile("mfg_cost.rdb")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.SelectData 1, 1, 1, 1, 1, 1</p>
+        <p class="objects2">	If RDBObj.PositionIsValid = True Then</p>
+        <p class="objects3">		MyScenario = RDBObj.ScenarioName</p>
+        <p class="objects3">		MsgBox ("Selected Scenario =  " &amp; MyScenario)</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		MsgBox ("Data Selection Invalid")</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

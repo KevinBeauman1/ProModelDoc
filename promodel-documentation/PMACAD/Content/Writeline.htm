@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1437" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>WriteLine</h1>
+        <h2>
+            <MadCap:keyword term="statements:writeline;writeline" />Statement</h2>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p>Writeline &lt;file ID&gt;, &lt;string or numeric expression&gt;{,&lt;maximum digits before decimal&gt;, &lt;digits after decimal&gt;}</p>
+        <h2>Description</h2>
+        <p>Writes information to a text file and starts a new line. Writeline always appends to the file unless the file is Reset. Any file that is written to with Writeline automatically becomes a text file and will have an end of file marker attached to the end when it is closed.</p>
+        <p><a href="write.htm" class="a_11">Write</a> and Writeline automatically separate values by commas</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;file ID&gt;</b>
+        </p>
+        <p>The name of the file as previously defined in the <a href="externalfiles.htm" class="a_11">External Files</a> grid.</p>
+        <p><b>&lt;string or numeric expression&gt;</b> </p>
+        <p> The string or numeric expression to be written to the file. </p>
+        <p><b>&lt;maximum digits before decimal&gt;</b> </p>
+        <p>When writing real numbers, the maximum number of digits before the decimal. Use this value to line numbers on different lines up on the decimal.</p>
+        <p><b>&lt;digits after decimal&gt;</b>
+        </p>
+        <p>When writing real numbers, the maximum number of digits after the decimal.</p>
+        <p class="p_10">Please Note: The sum of the maximum digits before and after the decimal must be less than 20.</p>
+        <h2>Example</h2>
+        <p>The following example uses both Write and Writeline to record the time when EntA completes processing at Act1 in a write file called Rpt.</p>
+        <p class="p_11">Wait N(7.3, .4)<br />Write Rpt, "EntA complete at:"<br />Writeline Rpt, Clock(min), 3, 2</p>
+        <h5>See Also</h5>
+        <p><a href="write.htm" class="a_11">Write</a>, Reset, <a href="xWrite.htm" class="a_11">Xwrite</a>, <a href="read.htm" class="a_11">Read</a>, and Format. Also see <MadCap:xref class="lowercase_no_see" href="ExternalFiles.htm" target="" title="" alt="">External Files</MadCap:xref>.</p>
+    </body>
+</html>

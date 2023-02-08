@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1764" MadCap:lastWidth="1345">
+    <head>
+    </head>
+    <body>
+        <h3>Mixed-model Assembly</h3>
+        <p class="p">Sometimes different products are assembled at the same activity requiring different components to complete the assembly.</p>
+        <p class="p">&#160;</p>
+        <p class="p">The model used for this example, as well as all of the modeling "how-to" examples,  can be found in the ProModel Solutions Café (<a href="http://www.promodel.com/solutionscafe/howto/">http://www.promodel.com/solutionscafe/howto/)</a>. <a href="http://www.youtube.com/watch?v=EWlt0rLMJlY&amp;list=UUjdNEjUGmpb-U5ifC2eBJEg&amp;index=19&amp;feature=plcp" target="_blank">A video demonstrating this solution can be found here</a>.</p>
+        <h4>Solution</h4>
+        <ol>
+            <li class="li_1">Define an attach routing from each of the feeding component inventories to the assembly activity.  (Different component parts could come from the same feeding component inventory, but that would require a send routing to ensure that the right parts get fed.)</li>
+            <li class="li_1">In the routing dialog of each of the component routings select Attach as the routing type and designate the specific entity type it is to be attached to including the quantity of components to attach.</li>
+        </ol>
+        <h5>Example</h5>
+        <p class="p">Two different products are assembled at a particular assembly station. Product A has 2 Component A’s attached to it while Product B has 1 Component B attached to it. The component parts are fed from two separate inventories and you want to ensure that the right component parts and quantities get assembled to the right product.</p>
+        <p class="p">&#160;</p>
+        <p class="p">
+            <img src="Resources/Images/mixedmodelassemblyexample.png" MadCap:mediastyle="@media print { max-width: 4in; }" />
+        </p>
+        <h4>Solution</h4>
+        <p class="p">
+            <img src="Resources/Images/mixedmodelassemblysolution1.png" MadCap:mediastyle="@media print { max-width: 5in;max-height: auto; }" style="max-height: auto;max-width: 7in;border-left-style: solid;border-left-width: 1px;border-left-color: #1e90ff;border-right-style: solid;border-right-width: 1px;border-right-color: #1e90ff;border-top-style: solid;border-top-width: 1px;border-top-color: #1e90ff;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #1e90ff;" />
+        </p>
+        <p class="p">The Attach routing designate the specific product that each component is to assemble to and the quantity to be assembled. Be sure to select <b>Entire Quantity</b>under Quantity Mode.</p>
+    </body>
+</html>

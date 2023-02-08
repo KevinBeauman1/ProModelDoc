@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="405" MadCap:lastWidth="628">
+    <head>
+        <link href="../Resources/Stylesheets/Promodel.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-01_2914010915_463953"></a>
+            <MadCap:keyword term="PositionIsValid;RDBDataServer Object:PositionIsValid" />PositionIsValid</h2>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Syntax:  </span>PositionIsValid</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Description:  </span>Check the data for the most recent data selection &amp; return “True” if it is valid, “False” if it is not.  This method is a little tricky, because it really doesn’t do much unless it is used in an “If…Then” or “Select Case” statement (the ‘x = RDBObj.PositionIsValid’ format is not allowed)</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Parameters:  </span>None</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Returns:  </span>TRUE if the last SelectData function points to valid data.  FALSE if it does not.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>This example opens the mfg_cost.rdb, selects data, checks to see if selection is valid, displays the data or an error message, then closes the file.</p>
+        <p class="objects">Sub Get_Data()</p>
+        <p class="objects2">	Dim RDBObj As Object</p>
+        <p class="objects2">	Dim MyPeriod As String</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set RDBObj = CreateObject("RDBDataServer")</p>
+        <p class="objects2">	RDBObj.OpenFile("mfg_cost.rdb")</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.SelectData 1, 1, 1, 1, 1, 1</p>
+        <p class="objects2" style="font-weight: bold;">	If RDBObj.PositionIsValid = True Then</p>
+        <p class="objects3">		MyPeriod = RDBObj.PeriodName</p>
+        <p class="objects3">		MsgBox ("Selected Period =  " &amp; MyPeriod)</p>
+        <p class="objects2">	Else</p>
+        <p class="objects3">		MsgBox ("Data Selection Invalid")</p>
+        <p class="objects2">	End If</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	RDBObj.CloseFile</p>
+        <p class="objects2">	Set RDBObj = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="3" MadCap:lastHeight="1742" MadCap:lastWidth="982" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Activate</h1>
+        <h5>
+            <MadCap:keyword term="statement:activate;activate" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Activate &lt;subroutine&gt;({parameter1&gt;,&lt;parameter2&gt;...})</p>
+        <p>Activate Sub1()</p>
+        <h2>Description
+        </h2>
+        <p>Starts an independent subroutine. The calling logic then continues without waiting for the called subroutine to finish. Therefore, independent subroutines can run in parallel with the logic that called them. Independent subroutines are not entity or activity dependent and run without regard to what happens inside the logic that called them.</p>
+        <p>Use Activate to process logic that has Wait or Wait...Until statements when you do not want to use an entity to process the Wait or Wait...Until statements. For example, an Activate in the initialization logic could call a subroutine that adjusts the arrival frequency for a type of entity depending on the time of day. </p>
+        <p>Independent subroutines called with Activate cannot use entity-specific or activity-specific system functions. If the subroutine has a return value, then that value is ignored. </p>
+        <h2>Valid In
+        </h2>
+        <p>Any logic. </p>
+        <h4 class="_rules_statements">Components</h4>
+        <p><b>&lt;subroutine&gt;</b>
+        </p>
+        <p>The name of the subroutine to run. This name should appear exactly as if the subroutine were being called normally. Any return value for this function is ignored. See <MadCap:xref class="lowercase_no_see" href="Subroutines.htm" target="" title="" alt="">Subroutines</MadCap:xref>.</p>
+        <p><b>&lt;parameters&gt;</b>
+        </p>
+        <p>The parameters that the subroutine normally takes.</p>
+        <h2>Example</h2>
+        <p>This example uses Activate in a model’s initialization logic to start a subroutine named Res_Log(). Res_Log() is a user-defined subroutine that logs every time that all units of a resource named Worker are in use. After it logs the time that all units were busy, it waits ten minutes to check again. Note that the While loop in the subroutine is never exited. This technique allows the subroutine to run during the entire simulation.</p>
+        <p>Initialization Logic:
+        </p>
+        <p class="p_11">Activate Res_Log()
+
+        </p>
+        <p>
+            <br />Res_Log Subroutine Logic:       </p>
+        <p class="p_11">Int x = 1<br />While x = 1 Do<br />{</p>
+        <p class="p_12">If FreeUnits(Worker) = 0 Then<br />Log "All workers busy", aEntryTime<br />Wait 10</p>
+        <p class="p_11">}</p>
+        <h5>See Also
+        </h5>
+        <p>
+            <MadCap:xref class="lowercase_no_see" href="Subroutines.htm" target="" title="" alt="">Subroutines</MadCap:xref>
+        </p>
+    </body>
+</html>

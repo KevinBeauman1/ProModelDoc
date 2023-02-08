@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1389" MadCap:lastWidth="929">
+    <head>
+    </head>
+    <body>
+        <h1>Resource States Table</h1>
+        <MadCap:keyword term="resource states table" />
+        <p class="p">Click on the Tables drop-down and select States in the Resource group.</p>
+        <p>
+            <img src="Resources/Images/ResourceStatesTable1.png" />
+        </p>
+        <p class="p">A table is generated, which lists information regarding each resource and how much time it spent in each condition, and contains the following columns of information.</p>
+        <p>
+            <img src="Resources/Images/ResourceStatesTable2.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/ResourceStatesTable2-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Scenario:</b> The scenario to which the data in the row applies.</p>
+        <p class="p"><b>Name:</b> The resource name.</p>
+        <p class="p"><b>Scheduled Time:</b> The total amount of time the resource was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>% In Use:</b> The percentage of time the resource spent <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">transporting or </MadCap:conditionalText>processing an entity, or servicing a <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">activity</MadCap:conditionalText> or other resource that was down. This also includes deposit time.</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Travel To Use:</b> The percentage of time the resource spent traveling to a location or other resource to transport or process an entity, or to service a location or other resource. This also includes pickup time. (This information is not available, if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Travel To Park</b>: The percentage of time the resource spent traveling to a path node to park or traveling to its downtime node. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p"><b>% Idle:</b>	The percentage of time the resource was available but not in use.</p>
+        <p class="p"><b>% Down:</b> The percentage of time the resource was unavailable due to unscheduled downtimes.</p>
+    </body>
+</html>

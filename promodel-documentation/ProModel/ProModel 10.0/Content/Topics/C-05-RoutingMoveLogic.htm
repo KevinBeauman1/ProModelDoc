@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="422" MadCap:lastWidth="1518">
+    <head>
+    </head>
+    <body>
+        <h4><a name="C-05_2723800551_1087821"></a><a name="C-05_2723800551_27446"></a>Routing Move Logic<MadCap:keyword term="Processing:move logic;Move:logic;Routing:move logic" /></h4>
+        <p class="p">The Move Logic window allows you to define the method of movement as well as any other logic to be executed prior to or after the move actually takes place.</p>
+        <p class="p">Once the route condition or rule has been satisfied for allowing an entity to route to a particular location, the move logic is immediately executed. The entity does not actually leave the current location until a move related statement (<MadCap:keyword term="MOVE FOR"></MadCap:keyword>Move For, <MadCap:keyword term="MOVE ON"></MadCap:keyword>Move On, <MadCap:keyword term="MOVE WITH"></MadCap:keyword>Move With) is executed or the move logic is completed, whichever happens first. This allows the entity to get one or more resources, wait additional time, or wait until a condition is satisfied before actually leaving the location.</p>
+        <p class="p">Any statements encountered in the move logic after the move related statement are executed after the move is complete but before the entity actually enters the next location. This is often useful for freeing multiple resources that may have been used to transport the entity.</p>
+        <p class="p">When defining exit logic, such as incrementing a variable used to track the number of exits from a location, it can generally go before the move statement unless a Move With statement is used and the entity must capture the resource before making the move. In this situation, a <MadCap:keyword term="GET"></MadCap:keyword>Get statement should be specified first to get the resource. Then the exit logic may be specified followed by the Move With statement.</p>
+        <p class="p">Any delay occurring as a result of move logic is reported as part of the entity’s move time. For more information on <MadCap:xref class="lowercase_see" href="#C-05_2723800551_1087821" target="" title="" alt="">Routing Move Logic</MadCap:xref>.</p>
+    </body>
+</html>

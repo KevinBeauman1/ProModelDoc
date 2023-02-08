@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1261" MadCap:lastWidth="929">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:keyword term="resource states column chart" />Resource States Column Chart</h1>
+        <p>
+            <img src="Resources/Images/resourcestatescc.png" MadCap:mediastyle="@media print { max-height: 4in; }" />
+        </p>
+        <p class="p">This chart shows the percentage of time each resource spent in each state. Column charts can only display one statistic at a time. This example shows % In Use. Use the Statistics drop-down in the Filter Options panel to select other statistics.</p>
+        <p>
+            <img src="Resources/Images/ResourceStatesStatsOptions.png" MadCap:conditions="PM-PCS Conditionals.PM" />
+            <img src="Resources/Images/ResourceStatesStatsOptions-pcs.png" MadCap:conditions="PM-PCS Conditionals.PCS" />
+        </p>
+        <p class="p"><b>Scheduled Time:</b>	The total amount of time the resource was scheduled to be available. (Excludes off-shift time, break time, and scheduled downtimes.)</p>
+        <p class="p"><b>% In Use:</b>	The percentage of time the resource spent transporting or processing an entity, or servicing <MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PM">a location</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="PM-PCS Conditionals.PCS">an activity</MadCap:conditionalText> or other resource that was down. This also includes deposit time.</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Travel To Use:</b>	The percentage of time the resource spent traveling to a location or other resource to transport or process an entity, or to service a location or other resource. This also includes pickup time. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p" MadCap:conditions="PM-PCS Conditionals.PM"><b>% Travel To Park:</b>	The percentage of time the resource spent traveling to a path node to park or traveling to its downtime node. (This information is not available if your model does not have dynamic resources.)</p>
+        <p class="p"><b>% Idle:</b>	The percentage of time the resource was available but not in use.</p>
+        <p class="p"><b>% Down:</b>	The percentage of time the resource was unavailable due to unscheduled downtimes.</p>
+    </body>
+</html>

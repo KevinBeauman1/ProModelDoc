@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1182" MadCap:lastWidth="995">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Animate</h1>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="statements:animate;animate" />Statement</h5>
+        <h2>Syntax samples
+        </h2>
+        <p>Animate &lt;<span class="_Override" style="font-style: italic;">expression</span>&gt;</p>
+        <p>Animate 70<br />Animate Var1
+            <br /></p>
+        <h2>Description
+        </h2>
+        <p>Sets the simulation’s animation speed. The higher the value, the faster the animation. Animate is used primarily to speed up or slow down a model for cursory or detailed observation whenever a particular condition is encountered. Another common use is to set the animation speed to one-hundred in the Initialization Logic to rapidly advance the simulation to some point in time.</p>
+        <h2>Valid In
+        </h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p>&lt;expression&gt;</p>
+        <p>The new speed of the animation. This expression can be any number from 0 to 100 and is evaluated every time the Animate statement is encountered. The default speed is 56. A value of 0 will turn off animation.</p>
+        <h2>Example</h2>
+        <p>
+            This example shows the use of the Animate statement in the logic for the activity Inspect. Whenever a part goes to Inspect for evaluation, the animation speed is slowed to 30 percent of maximum. This allows the modeler to more easily view which resource (Inspector or ProductionMgr) is captured to service the activity.
+        </p>
+        <p class="p_11">Animate 30.0<br />Get Inspector Or ProductionMgr<br />Wait N(5, .1)<br />Free All
+        </p>
+        <h5>See Also
+        </h5>
+        <p class="p"><a href="prompt.htm" class="a_11">Prompt</a>
+        </p>
+    </body>
+</html>

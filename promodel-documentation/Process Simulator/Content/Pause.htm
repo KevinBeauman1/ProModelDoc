@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="1132" MadCap:lastWidth="1003" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h1>Pause</h1>
+        <h5>
+            <MadCap:keyword term="statements:pause;pause" />Statement</h5>
+        <h2>Syntax samples</h2>
+        <p>Pause {&lt;string expression&gt;}</p>
+        <p>Pause<br />Pause “Var1 =” $ Var1<br />Pause “Reached the midpoint of the simulation.”</p>
+        <h2>Description</h2>
+        <p>Pauses the simulation and optionally displays a message at some point of interest. This pause allows the user to examine the system in detail. An information dialog box will appear on the animation screen when the pause occurs. The simulation will continue only when the user selects Resume Simulation from the Simulation ribbon.</p>
+        <h2>Valid In</h2>
+        <p>Any logic.</p>
+        <h2>Components</h2>
+        <p><b>&lt;string expression&gt;</b> <![CDATA[ ]]></p>
+        <p>The optional message to display.</p>
+        <h2>Example</h2>
+        <p>
+            The simple example below pauses the simulation after the 100th Claim has been processed at activity Quality_Check. The purpose for doing this might be to view the current state of the system at this particular point in time.
+</p>
+        <p class="p_11">Wait N(3.2, .1)<br />Inc Total<br />If Total &gt;= 100 Then Pause</p>
+        <h5>See Also</h5>
+        <p> <a href="stop.htm" class="a_11">Stop</a>, <a href="display.htm" class="a_11">Display</a>, and <a href="prompt.htm" class="a_11">Prompt</a></p>
+    </body>
+</html>

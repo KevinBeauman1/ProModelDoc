@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="2" MadCap:lastHeight="493" MadCap:lastWidth="558" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/PM-MM Stylesheet 2, linked.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="statements"><a name="C-14_4292047180_1106798"></a><a name="C-14_4292047180_26457"></a>Reset Stats</h2>
+        <h5 class="_valid_in">
+            <MadCap:keyword term="General action statements:RESET STATS;RESET STATS" />General Action Statement</h5>
+        <h4 class="_rules_statements">Syntax samples</h4>
+        <p class="Syntax_body">Reset Stats</p>
+        <p class="Syntax_body">If Total = 20 Then Reset Stats</p>
+        <h5 class="_rules_statements">Description</h5>
+        <p class="p">Resets the simulation statistics.  Useful in connection with the <MadCap:keyword term="REPORT" />Report statement to manually control statistics for reporting purposes in case specific or event logic.</p>
+        <h5 class="_valid_in">Valid In</h5>
+        <p class="p">Any logic. </p>
+        <h4 class="_rules_statements">Example</h4>
+        <p class="p">Suppose you want to generate a new output report for each 20-hour period of the simulation. Enter the following logic in an independent subroutine which is activated at the beginning of the simulation:</p>
+        <p class="Syntax_body">While Clock(hr) &lt; 10000 Do</p>
+        <p class="Syntax_body">	{</p>
+        <p class="syntax_body_indent">		Wait 20 hr</p>
+        <p class="syntax_body_indent">		Report</p>
+        <p class="syntax_body_indent">		Reset Stats</p>
+        <p class="Syntax_body">}</p>
+        <p class="_rules">See Also</p>
+        <p class="p">Report and Warmup.</p>
+    </body>
+</html>

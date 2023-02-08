@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  OnlyLocalStylesheets="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Images/formatfortables.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecision.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecisiontable.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumns1.png" />
+    <Link
+      Url="Content/Resources/Images/group13.png" />
+    <Link
+      Url="Content/Resources/Images/group22.png" />
+    <Link
+      Url="Content/Resources/Images/filter1.png" />
+    <Link
+      Url="Content/Resources/Images/filter21.png" />
+    <Link
+      Url="Content/Resources/Images/filter3.png" />
+    <Link
+      Url="Content/Resources/Images/filter5.png" />
+    <Link
+      Url="Content/Resources/Images/filter4.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumnsfrozen.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumnsfrozen2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Images/formatfortables.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecision.png" />
+    <Link
+      Url="Content/Resources/Images/decimalprecisiontable.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumns1.png" />
+    <Link
+      Url="Content/Resources/Images/group13.png" />
+    <Link
+      Url="Content/Resources/Images/group22.png" />
+    <Link
+      Url="Content/Resources/Images/filter1.png" />
+    <Link
+      Url="Content/Resources/Images/filter21.png" />
+    <Link
+      Url="Content/Resources/Images/filter3.png" />
+    <Link
+      Url="Content/Resources/Images/filter5.png" />
+    <Link
+      Url="Content/Resources/Images/filter4.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumnsfrozen.png" />
+    <Link
+      Url="Content/Resources/Images/formattablecolumnsfrozen2.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="decimalprecision" />
+    <Anchor
+      Name="columns" />
+    <Anchor
+      Name="allowgrouping" />
+    <Anchor
+      Name="allowfiltering" />
+    <Anchor
+      Name="frozen" />
+  </Anchors>
+  <Keywords>
+    <IndexCacheEntry
+      Term="format tables"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+    <IndexCacheEntry
+      Term="tables, formatting"
+      Conditions=""
+      LocalConditions=""
+      Position="4" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

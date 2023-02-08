@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="385" MadCap:lastWidth="624" MadCap:disableMasterStylesheet="true" MadCap:tocPath="The ProModel Data Object" MadCap:medium="print" MadCap:InPreviewMode="false" MadCap:PreloadImages="false" MadCap:RuntimeFileType="Topic" MadCap:TargetType="PDF">
+    <head><title>SetIntFieldValue</title>
+        <link href="file:///C:/_git/ProModel.Documentation/ActiveX/ActiveX 2014/ActiveX 2014, 06-18-2014/Output/anelson/Temporary/ActiveX2014Print/ActiveX2014Print_50DDC0F7/Resources/Stylesheets/Promodel.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h2 class="statements" MadCap:xrefTargetName="SetIntFieldValue"><a MadCap:generatedBookmark="TOC" name="SetIntFieldValue"></a><a name="C-01_2914010915_473687"></a>
+            <MadCap:keyword term="SetIntFieldValue;ProModel Data Object:SetIntFieldValue" />SetIntFieldValue</h2>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Syntax</span><span class="_Override" style="font-weight: bold;">:  </span>SetIntFieldValue <span class="_Override" style="color: #0000ff;">RecordType, FieldIndex, FieldValue</span></p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Description</span><span class="_Override" style="font-weight: bold;">:  </span>Changes the value for the specified integer field of the selected record.</p>
+        <p class="p"><span class="Lower_Label" style="font-weight: bold;">Parameters</span><b>:</b> <![CDATA[  ]]></p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">RecordType</span> (Long)  The Record Type (Table Number) of the table you wish to work with.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldIndex</span> (Long)  The Field Index (Column Number) of the field you wish to make changes to.</p>
+        <p class="objects"><span class="_Override" style="color: #0000ff;">FieldValue</span> (Long)  The integer (long) value you want to place in the specified field.</p>
+        <p class="p"><span class="_Override" style="font-weight: bold;">Example:</span>The following example loads the mfg_cost model, then sets its default time unit to Hours (it was Minutes).</p>
+        <p class="objects">Sub Time2Hours()</p>
+        <p class="objects2">	Dim pmObject As ProModel.CProModel</p>
+        <p class="objects2">	Dim pmDataObject As ProModel.CProModelData</p>
+        <p class="objects2">	Dim TimeUnit As Long</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmObject = CreateObject("ProModel")</p>
+        <p class="objects2">	Set pmDataObject = CreateObject("ProModelData")</p>
+        <p class="objects2">	pmObject.LoadModel "mfg_cost.mod"</p>
+        <p class="objects2">	pmDataObject.Populate</p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	TimeUnit = 3   '(Hours)</p>
+        <p class="objects2">	pmDataObject.SelectMainRecordByIndex 18, 1</p>
+        <p class="objects2" style="font-weight: bold;">	pmDataObject.SetIntFieldValue <span class="_Override" style="color: #0000ff;">18, 2, TimeUnit</span></p>
+        <p class="objects2">&#160;</p>
+        <p class="objects2">	Set pmDataObject = Nothing</p>
+        <p class="objects2">	Set pmObject = Nothing</p>
+        <p class="objects">End Sub</p>
+    </body>
+</html>
